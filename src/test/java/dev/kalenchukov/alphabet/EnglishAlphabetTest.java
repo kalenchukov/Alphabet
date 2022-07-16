@@ -46,7 +46,7 @@ public class EnglishAlphabetTest
 	}
 
 	/**
-	 * Проверяет буквы в алфавите.
+	 * Проверяет получение букв алфавита.
 	 */
 	@Test
 	public void testGetLetters()
@@ -63,6 +63,70 @@ public class EnglishAlphabetTest
 
 		assertArrayEquals(letters, ALPHABET.getLetters());
 	}
+
+	/**
+	 * Проверяет получение среза букв алфавита.
+	 */
+	@Test
+	public void testGetLettersRange()
+	{
+		Character[] letters1 = new Character[] {
+			'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I',
+			'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R',
+			'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z',
+
+			'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i',
+			'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r',
+			's', 't', 'u', 'v', 'w', 'x', 'y', 'z'
+		};
+
+		Character[] letters2 = new Character[] {
+			'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I',
+			'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R',
+			'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
+		};
+
+		Character[] letters3 = new Character[] {
+			'A', 'B', 'C'
+		};
+
+		Character[] letters4 = new Character[] {
+			'A'
+		};
+
+		assertArrayEquals(letters1, ALPHABET.getLetters(1, 52));
+		assertArrayEquals(letters2, ALPHABET.getLetters(1, 26));
+		assertArrayEquals(letters3, ALPHABET.getLetters(1, 3));
+		assertArrayEquals(letters4, ALPHABET.getLetters(1, 1));
+	}
+
+	/**
+	 * Проверяет получение среза букв алфавита выходящего за минимальную границу.
+	 */
+	@Test(expected = IndexOutOfBoundsException.class)
+	public void testGetLettersRangeOutOfBoundsMin()
+	{
+		ALPHABET.getLetters(0, 26);
+	}
+
+	/**
+	 * Проверяет получение среза букв алфавита выходящего за максимальную границу.
+	 */
+	@Test(expected = IndexOutOfBoundsException.class)
+	public void testGetLettersRangeOutOfBoundsMax()
+	{
+		ALPHABET.getLetters(1, 53);
+	}
+
+	/**
+	 * Проверяет получение среза букв алфавита с инвертированной границей.
+	 */
+	@Test(expected = IllegalArgumentException.class)
+	public void testGetLettersRangeInversion()
+	{
+		ALPHABET.getLetters(26, 20);
+	}
+
 
 	/**
 	 * Проверяет прописные буквы в алфавите.

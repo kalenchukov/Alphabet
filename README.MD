@@ -22,6 +22,18 @@ alphabet.getLetters();
 */
 ```
 
+### Получение среза букв алфавита
+```java
+Alphabetical alphabet = new RussianAlphabet();
+alphabet.getLetters(1, 3);
+/*
+Результат выполнения:
+[
+    А, Б, В
+]
+*/
+```
+
 Аналог в виде константы:
 ```java
 RussianAlphabet.LETTERS;

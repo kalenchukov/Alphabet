@@ -9,6 +9,7 @@ package dev.kalenchukov.alphabet;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.Arrays;
 import java.util.Objects;
 
 /**
@@ -40,6 +41,27 @@ public abstract class AbstractAlphabet implements Alphabetical
 	public Character @NotNull [] getLetters()
 	{
 		return this.letters;
+	}
+
+	/**
+	 * @see Alphabetical#getLetters(Integer, Integer)
+	 */
+	@NotNull
+	@Override
+	public Character @NotNull [] getLetters(@NotNull final Integer from, @NotNull final Integer to)
+	{
+		Objects.requireNonNull(from);
+		Objects.requireNonNull(to);
+
+		if (from > to) {
+			throw new IllegalArgumentException();
+		}
+
+		if (from < 1 || to > this.letters.length) {
+			throw new IndexOutOfBoundsException();
+		}
+
+		return Arrays.copyOfRange(this.letters, from - 1, to);
 	}
 
 	/**

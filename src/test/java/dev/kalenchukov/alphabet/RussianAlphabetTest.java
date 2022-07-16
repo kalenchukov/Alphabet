@@ -9,6 +9,7 @@ package dev.kalenchukov.alphabet;
 import org.jetbrains.annotations.NotNull;
 import org.junit.Test;
 
+import java.util.Arrays;
 import java.util.Optional;
 
 import static org.junit.Assert.*;
@@ -46,7 +47,7 @@ public class RussianAlphabetTest
 	}
 
 	/**
-	 * Проверяет буквы в алфавите.
+	 * Проверяет получение букв алфавита.
 	 */
 	@Test
 	public void testGetLetters()
@@ -64,6 +65,72 @@ public class RussianAlphabetTest
 		};
 
 		assertArrayEquals(letters, ALPHABET.getLetters());
+	}
+
+	/**
+	 * Проверяет получение среза букв алфавита.
+	 */
+	@Test
+	public void testGetLettersRange()
+	{
+		Character[] letters1 = new Character[] {
+			'А', 'Б', 'В', 'Г', 'Д', 'Е', 'Ё', 'Ж', 'З',
+			'И', 'Й', 'К', 'Л', 'М', 'Н', 'О', 'П', 'Р',
+			'С', 'Т', 'У', 'Ф', 'Х', 'Ц', 'Ч', 'Ш', 'Щ',
+			'Ъ', 'Ы', 'Ь', 'Э', 'Ю', 'Я',
+
+			'а', 'б', 'в', 'г', 'д', 'е', 'ё', 'ж', 'з',
+			'и', 'й', 'к', 'л', 'м', 'н', 'о', 'п', 'р',
+			'с', 'т', 'у', 'ф', 'х', 'ц', 'ч', 'ш', 'щ',
+			'ъ', 'ы', 'ь', 'э', 'ю', 'я'
+		};
+
+		Character[] letters2 = new Character[] {
+			'А', 'Б', 'В', 'Г', 'Д', 'Е', 'Ё', 'Ж', 'З',
+			'И', 'Й', 'К', 'Л', 'М', 'Н', 'О', 'П', 'Р',
+			'С', 'Т', 'У', 'Ф', 'Х', 'Ц', 'Ч', 'Ш', 'Щ',
+			'Ъ', 'Ы', 'Ь', 'Э', 'Ю', 'Я'
+		};
+
+		Character[] letters3 = new Character[] {
+			'А', 'Б', 'В'
+		};
+
+		Character[] letters4 = new Character[] {
+			'А'
+		};
+
+		assertArrayEquals(letters1, ALPHABET.getLetters(1, 66));
+		assertArrayEquals(letters2, ALPHABET.getLetters(1, 33));
+		assertArrayEquals(letters3, ALPHABET.getLetters(1, 3));
+		assertArrayEquals(letters4, ALPHABET.getLetters(1, 1));
+	}
+
+	/**
+	 * Проверяет получение среза букв алфавита выходящего за минимальную границу.
+	 */
+	@Test(expected = IndexOutOfBoundsException.class)
+	public void testGetLettersRangeOutOfBoundsMin()
+	{
+		ALPHABET.getLetters(0, 33);
+	}
+
+	/**
+	 * Проверяет получение среза букв алфавита выходящего за максимальную границу.
+	 */
+	@Test(expected = IndexOutOfBoundsException.class)
+	public void testGetLettersRangeOutOfBoundsMax()
+	{
+		ALPHABET.getLetters(1, 67);
+	}
+
+	/**
+	 * Проверяет получение среза букв алфавита с инвертированной границей.
+	 */
+	@Test(expected = IllegalArgumentException.class)
+	public void testGetLettersRangeInversion()
+	{
+		ALPHABET.getLetters(33, 20);
 	}
 
 	/**
