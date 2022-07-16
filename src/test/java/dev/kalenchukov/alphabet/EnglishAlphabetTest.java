@@ -144,6 +144,58 @@ public class EnglishAlphabetTest
 	}
 
 	/**
+	 * Проверяет получение среза прописных букв алфавита.
+	 */
+	@Test
+	public void testGetLettersUpperCaseRange()
+	{
+		Character[] letters1 = new Character[] {
+			'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I',
+			'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R',
+			'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
+		};
+
+		Character[] letters2 = new Character[] {
+			'A', 'B', 'C'
+		};
+
+		Character[] letters3 = new Character[] {
+			'A'
+		};
+
+		assertArrayEquals(letters1, ALPHABET.getLettersUpperCase(1, 26));
+		assertArrayEquals(letters2, ALPHABET.getLettersUpperCase(1, 3));
+		assertArrayEquals(letters3, ALPHABET.getLettersUpperCase(1, 1));
+	}
+
+	/**
+	 * Проверяет получение среза прописных букв алфавита выходящего за минимальную границу.
+	 */
+	@Test(expected = IndexOutOfBoundsException.class)
+	public void testGetLettersRangeUpperCaseOutOfBoundsMin()
+	{
+		ALPHABET.getLettersUpperCase(0, 26);
+	}
+
+	/**
+	 * Проверяет получение среза прописных букв алфавита выходящего за максимальную границу.
+	 */
+	@Test(expected = IndexOutOfBoundsException.class)
+	public void testGetLettersRangeUpperCaseOutOfBoundsMax()
+	{
+		ALPHABET.getLettersUpperCase(1, 27);
+	}
+
+	/**
+	 * Проверяет получение среза прописных букв алфавита с инвертированной границей.
+	 */
+	@Test(expected = IllegalArgumentException.class)
+	public void testGetLettersRangeUpperCaseInversion()
+	{
+		ALPHABET.getLettersUpperCase(23, 20);
+	}
+
+	/**
 	 * Проверяет строчные буквы в алфавите.
 	 */
 	@Test
@@ -156,6 +208,58 @@ public class EnglishAlphabetTest
 		};
 
 		assertArrayEquals(lettersLowerCase, ALPHABET.getLettersLowerCase());
+	}
+
+	/**
+	 * Проверяет получение среза строчных букв алфавита.
+	 */
+	@Test
+	public void testGetLettersLowerCaseRange()
+	{
+		Character[] letters1 = new Character[] {
+			'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i',
+			'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r',
+			's', 't', 'u', 'v', 'w', 'x', 'y', 'z'
+		};
+
+		Character[] letters2 = new Character[] {
+			'a', 'b', 'c'
+		};
+
+		Character[] letters3 = new Character[] {
+			'a'
+		};
+
+		assertArrayEquals(letters1, ALPHABET.getLettersLowerCase(1, 26));
+		assertArrayEquals(letters2, ALPHABET.getLettersLowerCase(1, 3));
+		assertArrayEquals(letters3, ALPHABET.getLettersLowerCase(1, 1));
+	}
+
+	/**
+	 * Проверяет получение среза строчных букв алфавита выходящего за минимальную границу.
+	 */
+	@Test(expected = IndexOutOfBoundsException.class)
+	public void testGetLettersRangeLowerCaseOutOfBoundsMin()
+	{
+		ALPHABET.getLettersLowerCase(0, 26);
+	}
+
+	/**
+	 * Проверяет получение среза строчных букв алфавита выходящего за максимальную границу.
+	 */
+	@Test(expected = IndexOutOfBoundsException.class)
+	public void testGetLettersRangeLowerCaseOutOfBoundsMax()
+	{
+		ALPHABET.getLettersLowerCase(1, 27);
+	}
+
+	/**
+	 * Проверяет получение среза строчных букв алфавита с инвертированной границей.
+	 */
+	@Test(expected = IllegalArgumentException.class)
+	public void testGetLettersRangeLowerCaseInversion()
+	{
+		ALPHABET.getLettersLowerCase(23, 20);
 	}
 
 	/**

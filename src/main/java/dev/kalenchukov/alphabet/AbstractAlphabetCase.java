@@ -56,6 +56,19 @@ public abstract class AbstractAlphabetCase extends AbstractAlphabet implements A
 	}
 
 	/**
+	 * @see AlphabeticalCase#getLettersUpperCase(Integer, Integer)
+	 */
+	@NotNull
+	@Override
+	public Character @NotNull [] getLettersUpperCase(@NotNull final Integer from, @NotNull final Integer to)
+	{
+		Objects.requireNonNull(from);
+		Objects.requireNonNull(to);
+
+		return super.getLetters(this.lettersUpperCase, from, to);
+	}
+
+	/**
 	 * @see AlphabeticalCase#getLettersLowerCase()
 	 */
 	@NotNull
@@ -63,6 +76,19 @@ public abstract class AbstractAlphabetCase extends AbstractAlphabet implements A
 	public Character @NotNull [] getLettersLowerCase()
 	{
 		return this.lettersLowerCase;
+	}
+
+	/**
+	 * @see AlphabeticalCase#getLettersLowerCase(Integer, Integer)
+	 */
+	@NotNull
+	@Override
+	public Character @NotNull [] getLettersLowerCase(@NotNull final Integer from, @NotNull final Integer to)
+	{
+		Objects.requireNonNull(from);
+		Objects.requireNonNull(to);
+
+		return super.getLetters(this.lettersLowerCase, from, to);
 	}
 
 	/**
@@ -120,7 +146,14 @@ public abstract class AbstractAlphabetCase extends AbstractAlphabet implements A
 	{
 		Objects.requireNonNull(position);
 
-		return super.getLetter(this.lettersUpperCase, position);
+		try
+		{
+			return super.getLetters(this.lettersUpperCase, position, position)[0];
+		}
+		catch (IllegalArgumentException | IndexOutOfBoundsException exception)
+		{
+			return null;
+		}
 	}
 
 	/**
@@ -132,6 +165,13 @@ public abstract class AbstractAlphabetCase extends AbstractAlphabet implements A
 	{
 		Objects.requireNonNull(position);
 
-		return super.getLetter(this.lettersLowerCase, position);
+		try
+		{
+			return super.getLetters(this.lettersLowerCase, position, position)[0];
+		}
+		catch (IllegalArgumentException | IndexOutOfBoundsException exception)
+		{
+			return null;
+		}
 	}
 }

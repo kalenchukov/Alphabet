@@ -28,8 +28,8 @@ public interface Alphabetical
 	 * @param from Начальная позиция букв в алфавите.
 	 * @param to Конечная позиция букв в алфавите.
 	 * @return Массив из среза букв алфавита.
-	 * @throws IllegalArgumentException Если заданная граница {@code from} больше {@code to}.
-	 * @throws IndexOutOfBoundsException Если границы {@code from} или {@code to} выходят за пределы алфавита.
+	 * @throws IllegalArgumentException Если начальная позиция {@code from} больше {@code to}.
+	 * @throws IndexOutOfBoundsException Если позиция {@code from} или {@code to} выходят за пределы алфавита.
 	 */
 	@NotNull
 	Character @NotNull [] getLetters(@NotNull Integer from, @NotNull Integer to);

@@ -22,6 +22,11 @@ alphabet.getLetters();
 */
 ```
 
+Аналог в виде константы:
+```java
+RussianAlphabet.LETTERS;
+```
+
 ### Получение среза букв алфавита
 ```java
 Alphabetical alphabet = new RussianAlphabet();
@@ -32,11 +37,6 @@ alphabet.getLetters(1, 3);
     А, Б, В
 ]
 */
-```
-
-Аналог в виде константы:
-```java
-RussianAlphabet.LETTERS;
 ```
 
 ### Получение прописных букв алфавита
@@ -58,6 +58,18 @@ alphabet.getLettersUpperCase();
 RussianAlphabet.LETTERS_UPPER_CASE;
 ```
 
+### Получение среза прописных букв алфавита
+```java
+AlphabeticalCase alphabet = new RussianAlphabet();
+alphabet.getLettersUpperCase(1, 3);
+/*
+Результат выполнения:
+[
+    А, Б, В
+]
+*/
+```
+
 ### Получение строчных букв алфавита
 ```java
 AlphabeticalCase alphabet = new RussianAlphabet();
@@ -75,6 +87,18 @@ alphabet.getLettersLowerCase();
 Аналог в виде константы:
 ```java
 RussianAlphabet.LETTERS_LOWER_CASE;
+```
+
+### Получение среза строчных букв алфавита
+```java
+AlphabeticalCase alphabet = new RussianAlphabet();
+alphabet.getLettersLowerCase(1, 3);
+/*
+Результат выполнения:
+[
+     а, б, в
+]
+*/
 ```
 
 ### Проверка принадлежности буквы к алфавиту

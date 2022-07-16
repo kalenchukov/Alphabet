@@ -53,15 +53,46 @@ public abstract class AbstractAlphabet implements Alphabetical
 		Objects.requireNonNull(from);
 		Objects.requireNonNull(to);
 
+		return this.getLetters(this.letters, from, to);
+	}
+
+	@NotNull
+	protected Character @NotNull [] getLetters(@NotNull final Character @NotNull [] alphabet,
+											   @NotNull final Integer from,
+											   @NotNull final Integer to)
+	{
+		Objects.requireNonNull(alphabet);
+		Objects.requireNonNull(from);
+		Objects.requireNonNull(to);
+
 		if (from > to) {
 			throw new IllegalArgumentException();
 		}
 
-		if (from < 1 || to > this.letters.length) {
+		if (from < 1 || to > alphabet.length) {
 			throw new IndexOutOfBoundsException();
 		}
 
-		return Arrays.copyOfRange(this.letters, from - 1, to);
+		return Arrays.copyOfRange(alphabet, from - 1, to);
+	}
+
+	/**
+	 * @see Alphabetical#getLetter(Integer)
+	 */
+	@Nullable
+	@Override
+	public Character getLetter(@NotNull final Integer position)
+	{
+		Objects.requireNonNull(position);
+
+		try
+		{
+			return this.getLetters(this.letters, position, position)[0];
+		}
+		catch (IllegalArgumentException | IndexOutOfBoundsException exception)
+		{
+			return null;
+		}
 	}
 
 	/**
@@ -92,30 +123,5 @@ public abstract class AbstractAlphabet implements Alphabetical
 		}
 
 		return null;
-	}
-
-	/**
-	 * @see Alphabetical#getLetter(Integer)
-	 */
-	@Nullable
-	@Override
-	public Character getLetter(@NotNull final Integer position)
-	{
-		Objects.requireNonNull(position);
-
-		return this.getLetter(this.letters, position);
-	}
-
-	@Nullable
-	protected Character getLetter(@NotNull final Character @NotNull [] alphabet, @NotNull final Integer position)
-	{
-		Objects.requireNonNull(position);
-		Objects.requireNonNull(alphabet);
-
-		if (position < 1 || position > alphabet.length) {
-			return null;
-		}
-
-		return alphabet[position - 1];
 	}
 }

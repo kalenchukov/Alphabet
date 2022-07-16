@@ -23,12 +23,36 @@ public interface AlphabeticalCase extends Alphabetical
 	Character @NotNull [] getLettersUpperCase();
 
 	/**
+	 * Возвращает срез прописных букв алфавита.
+	 *
+	 * @param from Начальная позиция букв в алфавите.
+	 * @param to Конечная позиция букв в алфавите.
+	 * @return Массив из среза прописных букв алфавита.
+	 * @throws IllegalArgumentException Если начальная позиция {@code from} больше {@code to}.
+	 * @throws IndexOutOfBoundsException Если позиция {@code from} или {@code to} выходят за пределы алфавита.
+	 */
+	@NotNull
+	Character @NotNull [] getLettersUpperCase(@NotNull Integer from, @NotNull Integer to);
+
+	/**
 	 * Возвращает строчные буквы алфавита.
 	 *
 	 * @return Массив строчных букв алфавита.
 	 */
 	@NotNull
 	Character @NotNull [] getLettersLowerCase();
+
+	/**
+	 * Возвращает срез строчных букв алфавита.
+	 *
+	 * @param from Начальная позиция букв в алфавите.
+	 * @param to Конечная позиция букв в алфавите.
+	 * @return Массив из среза строчных букв алфавита.
+	 * @throws IllegalArgumentException Если начальная позиция {@code from} больше {@code to}.
+	 * @throws IndexOutOfBoundsException Если позиция {@code from} или {@code to} выходят за пределы алфавита.
+	 */
+	@NotNull
+	Character @NotNull [] getLettersLowerCase(@NotNull Integer from, @NotNull Integer to);
 
 	/**
 	 * Возвращает прописную букву алфавита.
