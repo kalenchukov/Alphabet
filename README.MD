@@ -130,9 +130,16 @@ alphabet.getPositionLetter('ё');
 // Результат выполнения: 7
 ```
 
-### Получение буквы по позиции в алфавите
+### Получение прописной буквы по позиции в алфавите
 ```java
 AlphabeticalCase alphabet = new RussianAlphabet();
 alphabet.getLetterUpperCase(29);
 // Результат выполнения: Ы
+```
+
+### Получение строчной буквы по позиции в алфавите
+```java
+AlphabeticalCase alphabet = new RussianAlphabet();
+alphabet.getLetterLowerCase(29);
+// Результат выполнения: ы
 ```
