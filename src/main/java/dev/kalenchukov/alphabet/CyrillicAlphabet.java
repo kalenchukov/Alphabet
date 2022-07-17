@@ -8,9 +8,6 @@ package dev.kalenchukov.alphabet;
 
 import org.jetbrains.annotations.NotNull;
 
-import java.util.Arrays;
-import java.util.stream.Stream;
-
 /**
  * Класс кириллического алфавита.
  */

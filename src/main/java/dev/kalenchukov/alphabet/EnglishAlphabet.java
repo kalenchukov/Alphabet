@@ -8,9 +8,6 @@ package dev.kalenchukov.alphabet;
 
 import org.jetbrains.annotations.NotNull;
 
-import java.util.Arrays;
-import java.util.stream.Stream;
-
 /**
  * Класс английского алфавита.
  */
@@ -44,11 +41,17 @@ public class EnglishAlphabet extends AbstractAlphabetCase
 	 * Коды букв в Unicode.
 	 */
 	@NotNull
-	public static final Character @NotNull [] LETTERS =
-		Stream.concat(
-			Arrays.stream(LETTERS_UPPER_CASE),
-			Arrays.stream(LETTERS_LOWER_CASE)
-		).toArray(Character[]::new);
+	public static final Character @NotNull [] LETTERS = new Character[] {
+		'\u0041', '\u0061', '\u0042', '\u0062', '\u0043', '\u0063',
+		'\u0044', '\u0064', '\u0045', '\u0065', '\u0046', '\u0066',
+		'\u0047', '\u0067', '\u0048', '\u0068', '\u0049', '\u0069',
+		'\u004A', '\u006A', '\u004B', '\u006B', '\u004C', '\u006C',
+		'\u004D', '\u006D', '\u004E', '\u006E', '\u004F', '\u006F',
+		'\u0050', '\u0070', '\u0051', '\u0071', '\u0052', '\u0072',
+		'\u0053', '\u0073', '\u0054', '\u0074', '\u0055', '\u0075',
+		'\u0056', '\u0076', '\u0057', '\u0077', '\u0058', '\u0078',
+		'\u0059', '\u0079', '\u005A', '\u007A'
+	};
 
 	/**
 	 * Конструктор для {@code EnglishAlphabet}.

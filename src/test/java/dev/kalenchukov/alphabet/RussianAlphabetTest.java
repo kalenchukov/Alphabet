@@ -9,7 +9,6 @@ package dev.kalenchukov.alphabet;
 import org.jetbrains.annotations.NotNull;
 import org.junit.Test;
 
-import java.util.Arrays;
 import java.util.Optional;
 
 import static org.junit.Assert.*;
@@ -17,7 +16,10 @@ import static org.junit.Assert.*;
 public class RussianAlphabetTest
 {
 	@NotNull
-	public static final AlphabeticalCase ALPHABET = new RussianAlphabet();
+	public static final Alphabetical ALPHABET = new RussianAlphabet();
+
+	@NotNull
+	public static final AlphabeticalCase ALPHABET_CASE = new RussianAlphabet();
 
 	/**
 	 * Проверяет количество букв в алфавите.
@@ -34,7 +36,7 @@ public class RussianAlphabetTest
 	@Test
 	public void testGetLettersUpperCaseCount()
 	{
-		assertEquals(33, ALPHABET.getLettersUpperCase().length);
+		assertEquals(33, ALPHABET_CASE.getLettersUpperCase().length);
 	}
 
 	/**
@@ -43,7 +45,7 @@ public class RussianAlphabetTest
 	@Test
 	public void testGetLettersLowerCaseCount()
 	{
-		assertEquals(33, ALPHABET.getLettersLowerCase().length);
+		assertEquals(33, ALPHABET_CASE.getLettersLowerCase().length);
 	}
 
 	/**
@@ -53,15 +55,13 @@ public class RussianAlphabetTest
 	public void testGetLetters()
 	{
 		Character[] letters = new Character[] {
-			'А', 'Б', 'В', 'Г', 'Д', 'Е', 'Ё', 'Ж', 'З',
-			'И', 'Й', 'К', 'Л', 'М', 'Н', 'О', 'П', 'Р',
-			'С', 'Т', 'У', 'Ф', 'Х', 'Ц', 'Ч', 'Ш', 'Щ',
-			'Ъ', 'Ы', 'Ь', 'Э', 'Ю', 'Я',
-
-			'а', 'б', 'в', 'г', 'д', 'е', 'ё', 'ж', 'з',
-			'и', 'й', 'к', 'л', 'м', 'н', 'о', 'п', 'р',
-			'с', 'т', 'у', 'ф', 'х', 'ц', 'ч', 'ш', 'щ',
-			'ъ', 'ы', 'ь', 'э', 'ю', 'я'
+			'А', 'а', 'Б', 'б', 'В', 'в', 'Г', 'г', 'Д', 'д',
+			'Е', 'е', 'Ё', 'ё', 'Ж', 'ж', 'З', 'з', 'И', 'и',
+			'Й', 'й', 'К', 'к', 'Л', 'л', 'М', 'м', 'Н', 'н',
+			'О', 'о', 'П', 'п', 'Р', 'р', 'С', 'с', 'Т', 'т',
+			'У', 'у', 'Ф', 'ф', 'Х', 'х', 'Ц', 'ц', 'Ч', 'ч',
+			'Ш', 'ш', 'Щ', 'щ', 'Ъ', 'ъ', 'Ы', 'ы', 'Ь', 'ь',
+			'Э', 'э', 'Ю', 'ю', 'Я', 'я'
 		};
 
 		assertArrayEquals(letters, ALPHABET.getLetters());
@@ -74,26 +74,24 @@ public class RussianAlphabetTest
 	public void testGetLettersRange()
 	{
 		Character[] letters1 = new Character[] {
-			'А', 'Б', 'В', 'Г', 'Д', 'Е', 'Ё', 'Ж', 'З',
-			'И', 'Й', 'К', 'Л', 'М', 'Н', 'О', 'П', 'Р',
-			'С', 'Т', 'У', 'Ф', 'Х', 'Ц', 'Ч', 'Ш', 'Щ',
-			'Ъ', 'Ы', 'Ь', 'Э', 'Ю', 'Я',
-
-			'а', 'б', 'в', 'г', 'д', 'е', 'ё', 'ж', 'з',
-			'и', 'й', 'к', 'л', 'м', 'н', 'о', 'п', 'р',
-			'с', 'т', 'у', 'ф', 'х', 'ц', 'ч', 'ш', 'щ',
-			'ъ', 'ы', 'ь', 'э', 'ю', 'я'
+			'А', 'а', 'Б', 'б', 'В', 'в', 'Г', 'г', 'Д', 'д',
+			'Е', 'е', 'Ё', 'ё', 'Ж', 'ж', 'З', 'з', 'И', 'и',
+			'Й', 'й', 'К', 'к', 'Л', 'л', 'М', 'м', 'Н', 'н',
+			'О', 'о', 'П', 'п', 'Р', 'р', 'С', 'с', 'Т', 'т',
+			'У', 'у', 'Ф', 'ф', 'Х', 'х', 'Ц', 'ц', 'Ч', 'ч',
+			'Ш', 'ш', 'Щ', 'щ', 'Ъ', 'ъ', 'Ы', 'ы', 'Ь', 'ь',
+			'Э', 'э', 'Ю', 'ю', 'Я', 'я'
 		};
 
 		Character[] letters2 = new Character[] {
-			'А', 'Б', 'В', 'Г', 'Д', 'Е', 'Ё', 'Ж', 'З',
-			'И', 'Й', 'К', 'Л', 'М', 'Н', 'О', 'П', 'Р',
-			'С', 'Т', 'У', 'Ф', 'Х', 'Ц', 'Ч', 'Ш', 'Щ',
-			'Ъ', 'Ы', 'Ь', 'Э', 'Ю', 'Я'
+			'А', 'а', 'Б', 'б', 'В', 'в', 'Г', 'г', 'Д', 'д',
+			'Е', 'е', 'Ё', 'ё', 'Ж', 'ж', 'З', 'з', 'И', 'и',
+			'Й', 'й', 'К', 'к', 'Л', 'л', 'М', 'м', 'Н', 'н',
+			'О', 'о', 'П'
 		};
 
 		Character[] letters3 = new Character[] {
-			'А', 'Б', 'В'
+			'А', 'а', 'Б'
 		};
 
 		Character[] letters4 = new Character[] {
@@ -146,7 +144,7 @@ public class RussianAlphabetTest
 			'Ъ', 'Ы', 'Ь', 'Э', 'Ю', 'Я'
 		};
 
-		assertArrayEquals(lettersUpperCase, ALPHABET.getLettersUpperCase());
+		assertArrayEquals(lettersUpperCase, ALPHABET_CASE.getLettersUpperCase());
 	}
 
 	/**
@@ -170,9 +168,9 @@ public class RussianAlphabetTest
 			'А'
 		};
 
-		assertArrayEquals(letters1, ALPHABET.getLettersUpperCase(1, 33));
-		assertArrayEquals(letters2, ALPHABET.getLettersUpperCase(1, 3));
-		assertArrayEquals(letters3, ALPHABET.getLettersUpperCase(1, 1));
+		assertArrayEquals(letters1, ALPHABET_CASE.getLettersUpperCase(1, 33));
+		assertArrayEquals(letters2, ALPHABET_CASE.getLettersUpperCase(1, 3));
+		assertArrayEquals(letters3, ALPHABET_CASE.getLettersUpperCase(1, 1));
 	}
 
 	/**
@@ -181,7 +179,7 @@ public class RussianAlphabetTest
 	@Test(expected = IndexOutOfBoundsException.class)
 	public void testGetLettersRangeUpperCaseOutOfBoundsMin()
 	{
-		ALPHABET.getLettersUpperCase(0, 33);
+		ALPHABET_CASE.getLettersUpperCase(0, 33);
 	}
 
 	/**
@@ -190,7 +188,7 @@ public class RussianAlphabetTest
 	@Test(expected = IndexOutOfBoundsException.class)
 	public void testGetLettersRangeUpperCaseOutOfBoundsMax()
 	{
-		ALPHABET.getLettersUpperCase(1, 34);
+		ALPHABET_CASE.getLettersUpperCase(1, 34);
 	}
 
 	/**
@@ -199,7 +197,7 @@ public class RussianAlphabetTest
 	@Test(expected = IllegalArgumentException.class)
 	public void testGetLettersRangeUpperCaseInversion()
 	{
-		ALPHABET.getLettersUpperCase(30, 20);
+		ALPHABET_CASE.getLettersUpperCase(30, 20);
 	}
 
 	/**
@@ -215,7 +213,7 @@ public class RussianAlphabetTest
 			'ъ', 'ы', 'ь', 'э', 'ю', 'я'
 		};
 
-		assertArrayEquals(lettersLowerCase, ALPHABET.getLettersLowerCase());
+		assertArrayEquals(lettersLowerCase, ALPHABET_CASE.getLettersLowerCase());
 	}
 
 	/**
@@ -239,9 +237,9 @@ public class RussianAlphabetTest
 			'а'
 		};
 
-		assertArrayEquals(letters1, ALPHABET.getLettersLowerCase(1, 33));
-		assertArrayEquals(letters2, ALPHABET.getLettersLowerCase(1, 3));
-		assertArrayEquals(letters3, ALPHABET.getLettersLowerCase(1, 1));
+		assertArrayEquals(letters1, ALPHABET_CASE.getLettersLowerCase(1, 33));
+		assertArrayEquals(letters2, ALPHABET_CASE.getLettersLowerCase(1, 3));
+		assertArrayEquals(letters3, ALPHABET_CASE.getLettersLowerCase(1, 1));
 	}
 
 	/**
@@ -250,7 +248,7 @@ public class RussianAlphabetTest
 	@Test(expected = IndexOutOfBoundsException.class)
 	public void testGetLettersRangeLowerCaseOutOfBoundsMin()
 	{
-		ALPHABET.getLettersLowerCase(0, 33);
+		ALPHABET_CASE.getLettersLowerCase(0, 33);
 	}
 
 	/**
@@ -259,7 +257,7 @@ public class RussianAlphabetTest
 	@Test(expected = IndexOutOfBoundsException.class)
 	public void testGetLettersRangeLowerCaseOutOfBoundsMax()
 	{
-		ALPHABET.getLettersLowerCase(1, 34);
+		ALPHABET_CASE.getLettersLowerCase(1, 34);
 	}
 
 	/**
@@ -268,7 +266,7 @@ public class RussianAlphabetTest
 	@Test(expected = IllegalArgumentException.class)
 	public void testGetLettersRangeLowerCaseInversion()
 	{
-		ALPHABET.getLettersLowerCase(30, 20);
+		ALPHABET_CASE.getLettersLowerCase(30, 20);
 	}
 
 	/**
@@ -281,10 +279,10 @@ public class RussianAlphabetTest
 	}
 
 	/**
-	 * Проверяет позиции прописных букв в алфавите.
+	 * Проверяет позиции букв в алфавите.
 	 */
 	@Test
-	public void testGetPositionLetterUpperCase()
+	public void testGetPositionLetter()
 	{
 		assertEquals(Optional.of(1), Optional.ofNullable(ALPHABET.getPositionLetter('А')));
 		assertEquals(Optional.of(2), Optional.ofNullable(ALPHABET.getPositionLetter('Б')));
@@ -319,14 +317,7 @@ public class RussianAlphabetTest
 		assertEquals(Optional.of(31), Optional.ofNullable(ALPHABET.getPositionLetter('Э')));
 		assertEquals(Optional.of(32), Optional.ofNullable(ALPHABET.getPositionLetter('Ю')));
 		assertEquals(Optional.of(33), Optional.ofNullable(ALPHABET.getPositionLetter('Я')));
-	}
 
-	/**
-	 * Проверяет позиции строчных букв в алфавите.
-	 */
-	@Test
-	public void testGetPositionLetterLowerCase()
-	{
 		assertEquals(Optional.of(1), Optional.ofNullable(ALPHABET.getPositionLetter('а')));
 		assertEquals(Optional.of(2), Optional.ofNullable(ALPHABET.getPositionLetter('б')));
 		assertEquals(Optional.of(3), Optional.ofNullable(ALPHABET.getPositionLetter('в')));
@@ -363,85 +354,159 @@ public class RussianAlphabetTest
 	}
 
 	/**
+	 * Проверяет букву по позиции в алфавите.
+	 */
+	@Test
+	public void testGetLetter()
+	{
+		assertEquals(Optional.of('А'), Optional.ofNullable(ALPHABET.getLetter(1)));
+		assertEquals(Optional.of('а'), Optional.ofNullable(ALPHABET.getLetter(2)));
+		assertEquals(Optional.of('Б'), Optional.ofNullable(ALPHABET.getLetter(3)));
+		assertEquals(Optional.of('б'), Optional.ofNullable(ALPHABET.getLetter(4)));
+		assertEquals(Optional.of('В'), Optional.ofNullable(ALPHABET.getLetter(5)));
+		assertEquals(Optional.of('в'), Optional.ofNullable(ALPHABET.getLetter(6)));
+		assertEquals(Optional.of('Г'), Optional.ofNullable(ALPHABET.getLetter(7)));
+		assertEquals(Optional.of('г'), Optional.ofNullable(ALPHABET.getLetter(8)));
+		assertEquals(Optional.of('Д'), Optional.ofNullable(ALPHABET.getLetter(9)));
+		assertEquals(Optional.of('д'), Optional.ofNullable(ALPHABET.getLetter(10)));
+		assertEquals(Optional.of('Е'), Optional.ofNullable(ALPHABET.getLetter(11)));
+		assertEquals(Optional.of('е'), Optional.ofNullable(ALPHABET.getLetter(12)));
+		assertEquals(Optional.of('Ё'), Optional.ofNullable(ALPHABET.getLetter(13)));
+		assertEquals(Optional.of('ё'), Optional.ofNullable(ALPHABET.getLetter(14)));
+		assertEquals(Optional.of('Ж'), Optional.ofNullable(ALPHABET.getLetter(15)));
+		assertEquals(Optional.of('ж'), Optional.ofNullable(ALPHABET.getLetter(16)));
+		assertEquals(Optional.of('З'), Optional.ofNullable(ALPHABET.getLetter(17)));
+		assertEquals(Optional.of('з'), Optional.ofNullable(ALPHABET.getLetter(18)));
+		assertEquals(Optional.of('И'), Optional.ofNullable(ALPHABET.getLetter(19)));
+		assertEquals(Optional.of('и'), Optional.ofNullable(ALPHABET.getLetter(20)));
+		assertEquals(Optional.of('Й'), Optional.ofNullable(ALPHABET.getLetter(21)));
+		assertEquals(Optional.of('й'), Optional.ofNullable(ALPHABET.getLetter(22)));
+		assertEquals(Optional.of('К'), Optional.ofNullable(ALPHABET.getLetter(23)));
+		assertEquals(Optional.of('к'), Optional.ofNullable(ALPHABET.getLetter(24)));
+		assertEquals(Optional.of('Л'), Optional.ofNullable(ALPHABET.getLetter(25)));
+		assertEquals(Optional.of('л'), Optional.ofNullable(ALPHABET.getLetter(26)));
+		assertEquals(Optional.of('М'), Optional.ofNullable(ALPHABET.getLetter(27)));
+		assertEquals(Optional.of('м'), Optional.ofNullable(ALPHABET.getLetter(28)));
+		assertEquals(Optional.of('Н'), Optional.ofNullable(ALPHABET.getLetter(29)));
+		assertEquals(Optional.of('н'), Optional.ofNullable(ALPHABET.getLetter(30)));
+		assertEquals(Optional.of('О'), Optional.ofNullable(ALPHABET.getLetter(31)));
+		assertEquals(Optional.of('о'), Optional.ofNullable(ALPHABET.getLetter(32)));
+		assertEquals(Optional.of('П'), Optional.ofNullable(ALPHABET.getLetter(33)));
+		assertEquals(Optional.of('п'), Optional.ofNullable(ALPHABET.getLetter(34)));
+		assertEquals(Optional.of('Р'), Optional.ofNullable(ALPHABET.getLetter(35)));
+		assertEquals(Optional.of('р'), Optional.ofNullable(ALPHABET.getLetter(36)));
+		assertEquals(Optional.of('С'), Optional.ofNullable(ALPHABET.getLetter(37)));
+		assertEquals(Optional.of('с'), Optional.ofNullable(ALPHABET.getLetter(38)));
+		assertEquals(Optional.of('Т'), Optional.ofNullable(ALPHABET.getLetter(39)));
+		assertEquals(Optional.of('т'), Optional.ofNullable(ALPHABET.getLetter(40)));
+		assertEquals(Optional.of('У'), Optional.ofNullable(ALPHABET.getLetter(41)));
+		assertEquals(Optional.of('у'), Optional.ofNullable(ALPHABET.getLetter(42)));
+		assertEquals(Optional.of('Ф'), Optional.ofNullable(ALPHABET.getLetter(43)));
+		assertEquals(Optional.of('ф'), Optional.ofNullable(ALPHABET.getLetter(44)));
+		assertEquals(Optional.of('Х'), Optional.ofNullable(ALPHABET.getLetter(45)));
+		assertEquals(Optional.of('х'), Optional.ofNullable(ALPHABET.getLetter(46)));
+		assertEquals(Optional.of('Ц'), Optional.ofNullable(ALPHABET.getLetter(47)));
+		assertEquals(Optional.of('ц'), Optional.ofNullable(ALPHABET.getLetter(48)));
+		assertEquals(Optional.of('Ч'), Optional.ofNullable(ALPHABET.getLetter(49)));
+		assertEquals(Optional.of('ч'), Optional.ofNullable(ALPHABET.getLetter(50)));
+		assertEquals(Optional.of('Ш'), Optional.ofNullable(ALPHABET.getLetter(51)));
+		assertEquals(Optional.of('ш'), Optional.ofNullable(ALPHABET.getLetter(52)));
+		assertEquals(Optional.of('Щ'), Optional.ofNullable(ALPHABET.getLetter(53)));
+		assertEquals(Optional.of('щ'), Optional.ofNullable(ALPHABET.getLetter(54)));
+		assertEquals(Optional.of('Ъ'), Optional.ofNullable(ALPHABET.getLetter(55)));
+		assertEquals(Optional.of('ъ'), Optional.ofNullable(ALPHABET.getLetter(56)));
+		assertEquals(Optional.of('Ы'), Optional.ofNullable(ALPHABET.getLetter(57)));
+		assertEquals(Optional.of('ы'), Optional.ofNullable(ALPHABET.getLetter(58)));
+		assertEquals(Optional.of('Ь'), Optional.ofNullable(ALPHABET.getLetter(59)));
+		assertEquals(Optional.of('ь'), Optional.ofNullable(ALPHABET.getLetter(60)));
+		assertEquals(Optional.of('Э'), Optional.ofNullable(ALPHABET.getLetter(61)));
+		assertEquals(Optional.of('э'), Optional.ofNullable(ALPHABET.getLetter(62)));
+		assertEquals(Optional.of('Ю'), Optional.ofNullable(ALPHABET.getLetter(63)));
+		assertEquals(Optional.of('ю'), Optional.ofNullable(ALPHABET.getLetter(64)));
+		assertEquals(Optional.of('Я'), Optional.ofNullable(ALPHABET.getLetter(65)));
+		assertEquals(Optional.of('я'), Optional.ofNullable(ALPHABET.getLetter(66)));
+	}
+
+	/**
 	 * Проверяет прописную букву по позиции в алфавите.
 	 */
 	@Test
-	public void testGetLetterUpperCasePosition()
+	public void testGetLetterUpperCase()
 	{
-		assertEquals(Optional.of('А'), Optional.ofNullable(ALPHABET.getLetterUpperCase(1)));
-		assertEquals(Optional.of('Б'), Optional.ofNullable(ALPHABET.getLetterUpperCase(2)));
-		assertEquals(Optional.of('В'), Optional.ofNullable(ALPHABET.getLetterUpperCase(3)));
-		assertEquals(Optional.of('Г'), Optional.ofNullable(ALPHABET.getLetterUpperCase(4)));
-		assertEquals(Optional.of('Д'), Optional.ofNullable(ALPHABET.getLetterUpperCase(5)));
-		assertEquals(Optional.of('Е'), Optional.ofNullable(ALPHABET.getLetterUpperCase(6)));
-		assertEquals(Optional.of('Ё'), Optional.ofNullable(ALPHABET.getLetterUpperCase(7)));
-		assertEquals(Optional.of('Ж'), Optional.ofNullable(ALPHABET.getLetterUpperCase(8)));
-		assertEquals(Optional.of('З'), Optional.ofNullable(ALPHABET.getLetterUpperCase(9)));
-		assertEquals(Optional.of('И'), Optional.ofNullable(ALPHABET.getLetterUpperCase(10)));
-		assertEquals(Optional.of('Й'), Optional.ofNullable(ALPHABET.getLetterUpperCase(11)));
-		assertEquals(Optional.of('К'), Optional.ofNullable(ALPHABET.getLetterUpperCase(12)));
-		assertEquals(Optional.of('Л'), Optional.ofNullable(ALPHABET.getLetterUpperCase(13)));
-		assertEquals(Optional.of('М'), Optional.ofNullable(ALPHABET.getLetterUpperCase(14)));
-		assertEquals(Optional.of('Н'), Optional.ofNullable(ALPHABET.getLetterUpperCase(15)));
-		assertEquals(Optional.of('О'), Optional.ofNullable(ALPHABET.getLetterUpperCase(16)));
-		assertEquals(Optional.of('П'), Optional.ofNullable(ALPHABET.getLetterUpperCase(17)));
-		assertEquals(Optional.of('Р'), Optional.ofNullable(ALPHABET.getLetterUpperCase(18)));
-		assertEquals(Optional.of('С'), Optional.ofNullable(ALPHABET.getLetterUpperCase(19)));
-		assertEquals(Optional.of('Т'), Optional.ofNullable(ALPHABET.getLetterUpperCase(20)));
-		assertEquals(Optional.of('У'), Optional.ofNullable(ALPHABET.getLetterUpperCase(21)));
-		assertEquals(Optional.of('Ф'), Optional.ofNullable(ALPHABET.getLetterUpperCase(22)));
-		assertEquals(Optional.of('Х'), Optional.ofNullable(ALPHABET.getLetterUpperCase(23)));
-		assertEquals(Optional.of('Ц'), Optional.ofNullable(ALPHABET.getLetterUpperCase(24)));
-		assertEquals(Optional.of('Ч'), Optional.ofNullable(ALPHABET.getLetterUpperCase(25)));
-		assertEquals(Optional.of('Ш'), Optional.ofNullable(ALPHABET.getLetterUpperCase(26)));
-		assertEquals(Optional.of('Щ'), Optional.ofNullable(ALPHABET.getLetterUpperCase(27)));
-		assertEquals(Optional.of('Ъ'), Optional.ofNullable(ALPHABET.getLetterUpperCase(28)));
-		assertEquals(Optional.of('Ы'), Optional.ofNullable(ALPHABET.getLetterUpperCase(29)));
-		assertEquals(Optional.of('Ь'), Optional.ofNullable(ALPHABET.getLetterUpperCase(30)));
-		assertEquals(Optional.of('Э'), Optional.ofNullable(ALPHABET.getLetterUpperCase(31)));
-		assertEquals(Optional.of('Ю'), Optional.ofNullable(ALPHABET.getLetterUpperCase(32)));
-		assertEquals(Optional.of('Я'), Optional.ofNullable(ALPHABET.getLetterUpperCase(33)));
+		assertEquals(Optional.of('А'), Optional.ofNullable(ALPHABET_CASE.getLetterUpperCase(1)));
+		assertEquals(Optional.of('Б'), Optional.ofNullable(ALPHABET_CASE.getLetterUpperCase(2)));
+		assertEquals(Optional.of('В'), Optional.ofNullable(ALPHABET_CASE.getLetterUpperCase(3)));
+		assertEquals(Optional.of('Г'), Optional.ofNullable(ALPHABET_CASE.getLetterUpperCase(4)));
+		assertEquals(Optional.of('Д'), Optional.ofNullable(ALPHABET_CASE.getLetterUpperCase(5)));
+		assertEquals(Optional.of('Е'), Optional.ofNullable(ALPHABET_CASE.getLetterUpperCase(6)));
+		assertEquals(Optional.of('Ё'), Optional.ofNullable(ALPHABET_CASE.getLetterUpperCase(7)));
+		assertEquals(Optional.of('Ж'), Optional.ofNullable(ALPHABET_CASE.getLetterUpperCase(8)));
+		assertEquals(Optional.of('З'), Optional.ofNullable(ALPHABET_CASE.getLetterUpperCase(9)));
+		assertEquals(Optional.of('И'), Optional.ofNullable(ALPHABET_CASE.getLetterUpperCase(10)));
+		assertEquals(Optional.of('Й'), Optional.ofNullable(ALPHABET_CASE.getLetterUpperCase(11)));
+		assertEquals(Optional.of('К'), Optional.ofNullable(ALPHABET_CASE.getLetterUpperCase(12)));
+		assertEquals(Optional.of('Л'), Optional.ofNullable(ALPHABET_CASE.getLetterUpperCase(13)));
+		assertEquals(Optional.of('М'), Optional.ofNullable(ALPHABET_CASE.getLetterUpperCase(14)));
+		assertEquals(Optional.of('Н'), Optional.ofNullable(ALPHABET_CASE.getLetterUpperCase(15)));
+		assertEquals(Optional.of('О'), Optional.ofNullable(ALPHABET_CASE.getLetterUpperCase(16)));
+		assertEquals(Optional.of('П'), Optional.ofNullable(ALPHABET_CASE.getLetterUpperCase(17)));
+		assertEquals(Optional.of('Р'), Optional.ofNullable(ALPHABET_CASE.getLetterUpperCase(18)));
+		assertEquals(Optional.of('С'), Optional.ofNullable(ALPHABET_CASE.getLetterUpperCase(19)));
+		assertEquals(Optional.of('Т'), Optional.ofNullable(ALPHABET_CASE.getLetterUpperCase(20)));
+		assertEquals(Optional.of('У'), Optional.ofNullable(ALPHABET_CASE.getLetterUpperCase(21)));
+		assertEquals(Optional.of('Ф'), Optional.ofNullable(ALPHABET_CASE.getLetterUpperCase(22)));
+		assertEquals(Optional.of('Х'), Optional.ofNullable(ALPHABET_CASE.getLetterUpperCase(23)));
+		assertEquals(Optional.of('Ц'), Optional.ofNullable(ALPHABET_CASE.getLetterUpperCase(24)));
+		assertEquals(Optional.of('Ч'), Optional.ofNullable(ALPHABET_CASE.getLetterUpperCase(25)));
+		assertEquals(Optional.of('Ш'), Optional.ofNullable(ALPHABET_CASE.getLetterUpperCase(26)));
+		assertEquals(Optional.of('Щ'), Optional.ofNullable(ALPHABET_CASE.getLetterUpperCase(27)));
+		assertEquals(Optional.of('Ъ'), Optional.ofNullable(ALPHABET_CASE.getLetterUpperCase(28)));
+		assertEquals(Optional.of('Ы'), Optional.ofNullable(ALPHABET_CASE.getLetterUpperCase(29)));
+		assertEquals(Optional.of('Ь'), Optional.ofNullable(ALPHABET_CASE.getLetterUpperCase(30)));
+		assertEquals(Optional.of('Э'), Optional.ofNullable(ALPHABET_CASE.getLetterUpperCase(31)));
+		assertEquals(Optional.of('Ю'), Optional.ofNullable(ALPHABET_CASE.getLetterUpperCase(32)));
+		assertEquals(Optional.of('Я'), Optional.ofNullable(ALPHABET_CASE.getLetterUpperCase(33)));
 	}
 
 	/**
 	 * Проверяет строчную букву по позиции в алфавите.
 	 */
 	@Test
-	public void testGetLetterLowerCasePosition()
+	public void testGetLetterLowerCase()
 	{
-		assertEquals(Optional.of('а'), Optional.ofNullable(ALPHABET.getLetterLowerCase(1)));
-		assertEquals(Optional.of('б'), Optional.ofNullable(ALPHABET.getLetterLowerCase(2)));
-		assertEquals(Optional.of('в'), Optional.ofNullable(ALPHABET.getLetterLowerCase(3)));
-		assertEquals(Optional.of('г'), Optional.ofNullable(ALPHABET.getLetterLowerCase(4)));
-		assertEquals(Optional.of('д'), Optional.ofNullable(ALPHABET.getLetterLowerCase(5)));
-		assertEquals(Optional.of('е'), Optional.ofNullable(ALPHABET.getLetterLowerCase(6)));
-		assertEquals(Optional.of('ё'), Optional.ofNullable(ALPHABET.getLetterLowerCase(7)));
-		assertEquals(Optional.of('ж'), Optional.ofNullable(ALPHABET.getLetterLowerCase(8)));
-		assertEquals(Optional.of('з'), Optional.ofNullable(ALPHABET.getLetterLowerCase(9)));
-		assertEquals(Optional.of('и'), Optional.ofNullable(ALPHABET.getLetterLowerCase(10)));
-		assertEquals(Optional.of('й'), Optional.ofNullable(ALPHABET.getLetterLowerCase(11)));
-		assertEquals(Optional.of('к'), Optional.ofNullable(ALPHABET.getLetterLowerCase(12)));
-		assertEquals(Optional.of('л'), Optional.ofNullable(ALPHABET.getLetterLowerCase(13)));
-		assertEquals(Optional.of('м'), Optional.ofNullable(ALPHABET.getLetterLowerCase(14)));
-		assertEquals(Optional.of('н'), Optional.ofNullable(ALPHABET.getLetterLowerCase(15)));
-		assertEquals(Optional.of('о'), Optional.ofNullable(ALPHABET.getLetterLowerCase(16)));
-		assertEquals(Optional.of('п'), Optional.ofNullable(ALPHABET.getLetterLowerCase(17)));
-		assertEquals(Optional.of('р'), Optional.ofNullable(ALPHABET.getLetterLowerCase(18)));
-		assertEquals(Optional.of('с'), Optional.ofNullable(ALPHABET.getLetterLowerCase(19)));
-		assertEquals(Optional.of('т'), Optional.ofNullable(ALPHABET.getLetterLowerCase(20)));
-		assertEquals(Optional.of('у'), Optional.ofNullable(ALPHABET.getLetterLowerCase(21)));
-		assertEquals(Optional.of('ф'), Optional.ofNullable(ALPHABET.getLetterLowerCase(22)));
-		assertEquals(Optional.of('х'), Optional.ofNullable(ALPHABET.getLetterLowerCase(23)));
-		assertEquals(Optional.of('ц'), Optional.ofNullable(ALPHABET.getLetterLowerCase(24)));
-		assertEquals(Optional.of('ч'), Optional.ofNullable(ALPHABET.getLetterLowerCase(25)));
-		assertEquals(Optional.of('ш'), Optional.ofNullable(ALPHABET.getLetterLowerCase(26)));
-		assertEquals(Optional.of('щ'), Optional.ofNullable(ALPHABET.getLetterLowerCase(27)));
-		assertEquals(Optional.of('ъ'), Optional.ofNullable(ALPHABET.getLetterLowerCase(28)));
-		assertEquals(Optional.of('ы'), Optional.ofNullable(ALPHABET.getLetterLowerCase(29)));
-		assertEquals(Optional.of('ь'), Optional.ofNullable(ALPHABET.getLetterLowerCase(30)));
-		assertEquals(Optional.of('э'), Optional.ofNullable(ALPHABET.getLetterLowerCase(31)));
-		assertEquals(Optional.of('ю'), Optional.ofNullable(ALPHABET.getLetterLowerCase(32)));
-		assertEquals(Optional.of('я'), Optional.ofNullable(ALPHABET.getLetterLowerCase(33)));
+		assertEquals(Optional.of('а'), Optional.ofNullable(ALPHABET_CASE.getLetterLowerCase(1)));
+		assertEquals(Optional.of('б'), Optional.ofNullable(ALPHABET_CASE.getLetterLowerCase(2)));
+		assertEquals(Optional.of('в'), Optional.ofNullable(ALPHABET_CASE.getLetterLowerCase(3)));
+		assertEquals(Optional.of('г'), Optional.ofNullable(ALPHABET_CASE.getLetterLowerCase(4)));
+		assertEquals(Optional.of('д'), Optional.ofNullable(ALPHABET_CASE.getLetterLowerCase(5)));
+		assertEquals(Optional.of('е'), Optional.ofNullable(ALPHABET_CASE.getLetterLowerCase(6)));
+		assertEquals(Optional.of('ё'), Optional.ofNullable(ALPHABET_CASE.getLetterLowerCase(7)));
+		assertEquals(Optional.of('ж'), Optional.ofNullable(ALPHABET_CASE.getLetterLowerCase(8)));
+		assertEquals(Optional.of('з'), Optional.ofNullable(ALPHABET_CASE.getLetterLowerCase(9)));
+		assertEquals(Optional.of('и'), Optional.ofNullable(ALPHABET_CASE.getLetterLowerCase(10)));
+		assertEquals(Optional.of('й'), Optional.ofNullable(ALPHABET_CASE.getLetterLowerCase(11)));
+		assertEquals(Optional.of('к'), Optional.ofNullable(ALPHABET_CASE.getLetterLowerCase(12)));
+		assertEquals(Optional.of('л'), Optional.ofNullable(ALPHABET_CASE.getLetterLowerCase(13)));
+		assertEquals(Optional.of('м'), Optional.ofNullable(ALPHABET_CASE.getLetterLowerCase(14)));
+		assertEquals(Optional.of('н'), Optional.ofNullable(ALPHABET_CASE.getLetterLowerCase(15)));
+		assertEquals(Optional.of('о'), Optional.ofNullable(ALPHABET_CASE.getLetterLowerCase(16)));
+		assertEquals(Optional.of('п'), Optional.ofNullable(ALPHABET_CASE.getLetterLowerCase(17)));
+		assertEquals(Optional.of('р'), Optional.ofNullable(ALPHABET_CASE.getLetterLowerCase(18)));
+		assertEquals(Optional.of('с'), Optional.ofNullable(ALPHABET_CASE.getLetterLowerCase(19)));
+		assertEquals(Optional.of('т'), Optional.ofNullable(ALPHABET_CASE.getLetterLowerCase(20)));
+		assertEquals(Optional.of('у'), Optional.ofNullable(ALPHABET_CASE.getLetterLowerCase(21)));
+		assertEquals(Optional.of('ф'), Optional.ofNullable(ALPHABET_CASE.getLetterLowerCase(22)));
+		assertEquals(Optional.of('х'), Optional.ofNullable(ALPHABET_CASE.getLetterLowerCase(23)));
+		assertEquals(Optional.of('ц'), Optional.ofNullable(ALPHABET_CASE.getLetterLowerCase(24)));
+		assertEquals(Optional.of('ч'), Optional.ofNullable(ALPHABET_CASE.getLetterLowerCase(25)));
+		assertEquals(Optional.of('ш'), Optional.ofNullable(ALPHABET_CASE.getLetterLowerCase(26)));
+		assertEquals(Optional.of('щ'), Optional.ofNullable(ALPHABET_CASE.getLetterLowerCase(27)));
+		assertEquals(Optional.of('ъ'), Optional.ofNullable(ALPHABET_CASE.getLetterLowerCase(28)));
+		assertEquals(Optional.of('ы'), Optional.ofNullable(ALPHABET_CASE.getLetterLowerCase(29)));
+		assertEquals(Optional.of('ь'), Optional.ofNullable(ALPHABET_CASE.getLetterLowerCase(30)));
+		assertEquals(Optional.of('э'), Optional.ofNullable(ALPHABET_CASE.getLetterLowerCase(31)));
+		assertEquals(Optional.of('ю'), Optional.ofNullable(ALPHABET_CASE.getLetterLowerCase(32)));
+		assertEquals(Optional.of('я'), Optional.ofNullable(ALPHABET_CASE.getLetterLowerCase(33)));
 	}
 
 	/**
@@ -533,39 +598,39 @@ public class RussianAlphabetTest
 	@Test
 	public void testIsLetterUpperCase()
 	{
-		assertTrue(ALPHABET.isLetterUpperCase('А'));
-		assertTrue(ALPHABET.isLetterUpperCase('Б'));
-		assertTrue(ALPHABET.isLetterUpperCase('В'));
-		assertTrue(ALPHABET.isLetterUpperCase('Г'));
-		assertTrue(ALPHABET.isLetterUpperCase('Д'));
-		assertTrue(ALPHABET.isLetterUpperCase('Е'));
-		assertTrue(ALPHABET.isLetterUpperCase('Ё'));
-		assertTrue(ALPHABET.isLetterUpperCase('Ж'));
-		assertTrue(ALPHABET.isLetterUpperCase('З'));
-		assertTrue(ALPHABET.isLetterUpperCase('И'));
-		assertTrue(ALPHABET.isLetterUpperCase('Й'));
-		assertTrue(ALPHABET.isLetterUpperCase('К'));
-		assertTrue(ALPHABET.isLetterUpperCase('Л'));
-		assertTrue(ALPHABET.isLetterUpperCase('М'));
-		assertTrue(ALPHABET.isLetterUpperCase('Н'));
-		assertTrue(ALPHABET.isLetterUpperCase('О'));
-		assertTrue(ALPHABET.isLetterUpperCase('П'));
-		assertTrue(ALPHABET.isLetterUpperCase('Р'));
-		assertTrue(ALPHABET.isLetterUpperCase('С'));
-		assertTrue(ALPHABET.isLetterUpperCase('Т'));
-		assertTrue(ALPHABET.isLetterUpperCase('У'));
-		assertTrue(ALPHABET.isLetterUpperCase('Ф'));
-		assertTrue(ALPHABET.isLetterUpperCase('Х'));
-		assertTrue(ALPHABET.isLetterUpperCase('Ц'));
-		assertTrue(ALPHABET.isLetterUpperCase('Ч'));
-		assertTrue(ALPHABET.isLetterUpperCase('Ш'));
-		assertTrue(ALPHABET.isLetterUpperCase('Щ'));
-		assertTrue(ALPHABET.isLetterUpperCase('Ъ'));
-		assertTrue(ALPHABET.isLetterUpperCase('Ы'));
-		assertTrue(ALPHABET.isLetterUpperCase('Ь'));
-		assertTrue(ALPHABET.isLetterUpperCase('Э'));
-		assertTrue(ALPHABET.isLetterUpperCase('Ю'));
-		assertTrue(ALPHABET.isLetterUpperCase('Я'));
+		assertTrue(ALPHABET_CASE.isLetterUpperCase('А'));
+		assertTrue(ALPHABET_CASE.isLetterUpperCase('Б'));
+		assertTrue(ALPHABET_CASE.isLetterUpperCase('В'));
+		assertTrue(ALPHABET_CASE.isLetterUpperCase('Г'));
+		assertTrue(ALPHABET_CASE.isLetterUpperCase('Д'));
+		assertTrue(ALPHABET_CASE.isLetterUpperCase('Е'));
+		assertTrue(ALPHABET_CASE.isLetterUpperCase('Ё'));
+		assertTrue(ALPHABET_CASE.isLetterUpperCase('Ж'));
+		assertTrue(ALPHABET_CASE.isLetterUpperCase('З'));
+		assertTrue(ALPHABET_CASE.isLetterUpperCase('И'));
+		assertTrue(ALPHABET_CASE.isLetterUpperCase('Й'));
+		assertTrue(ALPHABET_CASE.isLetterUpperCase('К'));
+		assertTrue(ALPHABET_CASE.isLetterUpperCase('Л'));
+		assertTrue(ALPHABET_CASE.isLetterUpperCase('М'));
+		assertTrue(ALPHABET_CASE.isLetterUpperCase('Н'));
+		assertTrue(ALPHABET_CASE.isLetterUpperCase('О'));
+		assertTrue(ALPHABET_CASE.isLetterUpperCase('П'));
+		assertTrue(ALPHABET_CASE.isLetterUpperCase('Р'));
+		assertTrue(ALPHABET_CASE.isLetterUpperCase('С'));
+		assertTrue(ALPHABET_CASE.isLetterUpperCase('Т'));
+		assertTrue(ALPHABET_CASE.isLetterUpperCase('У'));
+		assertTrue(ALPHABET_CASE.isLetterUpperCase('Ф'));
+		assertTrue(ALPHABET_CASE.isLetterUpperCase('Х'));
+		assertTrue(ALPHABET_CASE.isLetterUpperCase('Ц'));
+		assertTrue(ALPHABET_CASE.isLetterUpperCase('Ч'));
+		assertTrue(ALPHABET_CASE.isLetterUpperCase('Ш'));
+		assertTrue(ALPHABET_CASE.isLetterUpperCase('Щ'));
+		assertTrue(ALPHABET_CASE.isLetterUpperCase('Ъ'));
+		assertTrue(ALPHABET_CASE.isLetterUpperCase('Ы'));
+		assertTrue(ALPHABET_CASE.isLetterUpperCase('Ь'));
+		assertTrue(ALPHABET_CASE.isLetterUpperCase('Э'));
+		assertTrue(ALPHABET_CASE.isLetterUpperCase('Ю'));
+		assertTrue(ALPHABET_CASE.isLetterUpperCase('Я'));
 	}
 
 	/**
@@ -574,7 +639,7 @@ public class RussianAlphabetTest
 	@Test
 	public void testIsLetterUpperCaseBad()
 	{
-		assertFalse(ALPHABET.isLetterUpperCase('ж'));
+		assertFalse(ALPHABET_CASE.isLetterUpperCase('ж'));
 	}
 
 	/**
@@ -583,39 +648,39 @@ public class RussianAlphabetTest
 	@Test
 	public void testIsLetterLowerCase()
 	{
-		assertTrue(ALPHABET.isLetterLowerCase('а'));
-		assertTrue(ALPHABET.isLetterLowerCase('б'));
-		assertTrue(ALPHABET.isLetterLowerCase('в'));
-		assertTrue(ALPHABET.isLetterLowerCase('г'));
-		assertTrue(ALPHABET.isLetterLowerCase('д'));
-		assertTrue(ALPHABET.isLetterLowerCase('е'));
-		assertTrue(ALPHABET.isLetterLowerCase('ё'));
-		assertTrue(ALPHABET.isLetterLowerCase('ж'));
-		assertTrue(ALPHABET.isLetterLowerCase('з'));
-		assertTrue(ALPHABET.isLetterLowerCase('и'));
-		assertTrue(ALPHABET.isLetterLowerCase('й'));
-		assertTrue(ALPHABET.isLetterLowerCase('к'));
-		assertTrue(ALPHABET.isLetterLowerCase('л'));
-		assertTrue(ALPHABET.isLetterLowerCase('м'));
-		assertTrue(ALPHABET.isLetterLowerCase('н'));
-		assertTrue(ALPHABET.isLetterLowerCase('о'));
-		assertTrue(ALPHABET.isLetterLowerCase('п'));
-		assertTrue(ALPHABET.isLetterLowerCase('р'));
-		assertTrue(ALPHABET.isLetterLowerCase('с'));
-		assertTrue(ALPHABET.isLetterLowerCase('т'));
-		assertTrue(ALPHABET.isLetterLowerCase('у'));
-		assertTrue(ALPHABET.isLetterLowerCase('ф'));
-		assertTrue(ALPHABET.isLetterLowerCase('х'));
-		assertTrue(ALPHABET.isLetterLowerCase('ц'));
-		assertTrue(ALPHABET.isLetterLowerCase('ч'));
-		assertTrue(ALPHABET.isLetterLowerCase('ш'));
-		assertTrue(ALPHABET.isLetterLowerCase('щ'));
-		assertTrue(ALPHABET.isLetterLowerCase('ъ'));
-		assertTrue(ALPHABET.isLetterLowerCase('ы'));
-		assertTrue(ALPHABET.isLetterLowerCase('ь'));
-		assertTrue(ALPHABET.isLetterLowerCase('э'));
-		assertTrue(ALPHABET.isLetterLowerCase('ю'));
-		assertTrue(ALPHABET.isLetterLowerCase('я'));
+		assertTrue(ALPHABET_CASE.isLetterLowerCase('а'));
+		assertTrue(ALPHABET_CASE.isLetterLowerCase('б'));
+		assertTrue(ALPHABET_CASE.isLetterLowerCase('в'));
+		assertTrue(ALPHABET_CASE.isLetterLowerCase('г'));
+		assertTrue(ALPHABET_CASE.isLetterLowerCase('д'));
+		assertTrue(ALPHABET_CASE.isLetterLowerCase('е'));
+		assertTrue(ALPHABET_CASE.isLetterLowerCase('ё'));
+		assertTrue(ALPHABET_CASE.isLetterLowerCase('ж'));
+		assertTrue(ALPHABET_CASE.isLetterLowerCase('з'));
+		assertTrue(ALPHABET_CASE.isLetterLowerCase('и'));
+		assertTrue(ALPHABET_CASE.isLetterLowerCase('й'));
+		assertTrue(ALPHABET_CASE.isLetterLowerCase('к'));
+		assertTrue(ALPHABET_CASE.isLetterLowerCase('л'));
+		assertTrue(ALPHABET_CASE.isLetterLowerCase('м'));
+		assertTrue(ALPHABET_CASE.isLetterLowerCase('н'));
+		assertTrue(ALPHABET_CASE.isLetterLowerCase('о'));
+		assertTrue(ALPHABET_CASE.isLetterLowerCase('п'));
+		assertTrue(ALPHABET_CASE.isLetterLowerCase('р'));
+		assertTrue(ALPHABET_CASE.isLetterLowerCase('с'));
+		assertTrue(ALPHABET_CASE.isLetterLowerCase('т'));
+		assertTrue(ALPHABET_CASE.isLetterLowerCase('у'));
+		assertTrue(ALPHABET_CASE.isLetterLowerCase('ф'));
+		assertTrue(ALPHABET_CASE.isLetterLowerCase('х'));
+		assertTrue(ALPHABET_CASE.isLetterLowerCase('ц'));
+		assertTrue(ALPHABET_CASE.isLetterLowerCase('ч'));
+		assertTrue(ALPHABET_CASE.isLetterLowerCase('ш'));
+		assertTrue(ALPHABET_CASE.isLetterLowerCase('щ'));
+		assertTrue(ALPHABET_CASE.isLetterLowerCase('ъ'));
+		assertTrue(ALPHABET_CASE.isLetterLowerCase('ы'));
+		assertTrue(ALPHABET_CASE.isLetterLowerCase('ь'));
+		assertTrue(ALPHABET_CASE.isLetterLowerCase('э'));
+		assertTrue(ALPHABET_CASE.isLetterLowerCase('ю'));
+		assertTrue(ALPHABET_CASE.isLetterLowerCase('я'));
 	}
 
 	/**
@@ -624,7 +689,7 @@ public class RussianAlphabetTest
 	@Test
 	public void testIsLetterLowerCaseBad()
 	{
-		assertFalse(ALPHABET.isLetterLowerCase('Э'));
+		assertFalse(ALPHABET_CASE.isLetterLowerCase('Э'));
 	}
 
 }

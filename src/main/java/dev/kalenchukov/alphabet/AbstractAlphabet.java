@@ -56,6 +56,35 @@ public abstract class AbstractAlphabet implements Alphabetical
 		return this.getLetters(this.letters, from, to);
 	}
 
+	/**
+	 * @see Alphabetical#getLetter(Integer)
+	 */
+	@Nullable
+	@Override
+	public Character getLetter(@NotNull final Integer position)
+	{
+		Objects.requireNonNull(position);
+
+		try
+		{
+			return this.getLetters(this.letters, position, position)[0];
+		}
+		catch (IllegalArgumentException | IndexOutOfBoundsException exception)
+		{
+			return null;
+		}
+	}
+
+	/**
+	 * Возвращает срез букв алфавита.
+	 *
+	 * @param alphabet Алфавит.
+	 * @param from Начальная позиция букв в алфавите.
+	 * @param to Конечная позиция букв в алфавите.
+	 * @return Массив из среза букв алфавита.
+	 * @throws IllegalArgumentException Если начальная позиция {@code from} больше {@code to}.
+	 * @throws IndexOutOfBoundsException Если позиция {@code from} или {@code to} выходят за пределы алфавита.
+	 */
 	@NotNull
 	protected Character @NotNull [] getLetters(@NotNull final Character @NotNull [] alphabet,
 											   @NotNull final Integer from,
@@ -77,25 +106,6 @@ public abstract class AbstractAlphabet implements Alphabetical
 	}
 
 	/**
-	 * @see Alphabetical#getLetter(Integer)
-	 */
-	@Nullable
-	@Override
-	public Character getLetter(@NotNull final Integer position)
-	{
-		Objects.requireNonNull(position);
-
-		try
-		{
-			return this.getLetters(this.letters, position, position)[0];
-		}
-		catch (IllegalArgumentException | IndexOutOfBoundsException exception)
-		{
-			return null;
-		}
-	}
-
-	/**
 	 * @see Alphabetical#isLetter(Character)
 	 */
 	@Override
@@ -103,7 +113,7 @@ public abstract class AbstractAlphabet implements Alphabetical
 	{
 		Objects.requireNonNull(letter);
 
-		return this.getPositionLetter(letter) != null;
+		return this.getPositionLetter(this.letters, letter) != null;
 	}
 
 	/**
@@ -115,9 +125,24 @@ public abstract class AbstractAlphabet implements Alphabetical
 	{
 		Objects.requireNonNull(letter);
 
-		for (int position = 0; position < this.letters.length; position++)
+		return this.getPositionLetter(this.letters, letter);
+	}
+
+	/**
+	 * Возвращает позицию буквы в алфавите.
+	 *
+	 * @param alphabet Алфавит.
+	 * @param letter Буква.
+	 * @return Позицию буквы в алфавите.
+	 */
+	@Nullable
+	protected Integer getPositionLetter(@NotNull final Character @NotNull [] alphabet, @NotNull final Character letter)
+	{
+		Objects.requireNonNull(letter);
+
+		for (int position = 0; position < alphabet.length; position++)
 		{
-			if (this.letters[position].equals(letter)) {
+			if (alphabet[position].equals(letter)) {
 				return position + 1;
 			}
 		}

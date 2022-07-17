@@ -99,9 +99,7 @@ public abstract class AbstractAlphabetCase extends AbstractAlphabet implements A
 	{
 		Objects.requireNonNull(letter);
 
-		Integer position = super.getPositionLetter(letter);
-
-		return position != null && position <= (super.letters.length / 2);
+		return super.getPositionLetter(this.lettersUpperCase, letter) != null;
 	}
 
 	/**
@@ -112,9 +110,7 @@ public abstract class AbstractAlphabetCase extends AbstractAlphabet implements A
 	{
 		Objects.requireNonNull(letter);
 
-		Integer position = super.getPositionLetter(letter);
-
-		return position != null && position > (super.letters.length / 2);
+		return super.getPositionLetter(this.lettersLowerCase, letter) != null;
 	}
 
 	/**
@@ -126,15 +122,13 @@ public abstract class AbstractAlphabetCase extends AbstractAlphabet implements A
 	{
 		Objects.requireNonNull(letter);
 
-		Integer position = super.getPositionLetter(letter);
+		Integer position = super.getPositionLetter(this.lettersLowerCase, letter);
 
-		int alphabetLength = super.letters.length / 2;
-
-		if (position != null && position > alphabetLength) {
-			return position - alphabetLength;
+		if (position != null) {
+			return position;
 		}
 
-		return position;
+		return super.getPositionLetter(this.lettersUpperCase, letter);
 	}
 
 	/**
