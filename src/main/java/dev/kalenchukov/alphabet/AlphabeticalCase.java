@@ -9,6 +9,8 @@ package dev.kalenchukov.alphabet;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.List;
+
 /**
  * Интерфейс для реализации алфавита с прописными и строчными буквами.
  */
@@ -17,42 +19,41 @@ public interface AlphabeticalCase extends Alphabetical
 	/**
 	 * Возвращает прописные буквы алфавита.
 	 *
-	 * @return Массив прописных букв алфавита.
+	 * @return Коллекция прописных букв алфавита.
 	 */
-	@NotNull
-	Character @NotNull [] getLettersUpperCase();
+	@NotNull List<@NotNull Character> getLettersUpperCase();
 
 	/**
 	 * Возвращает срез прописных букв алфавита.
 	 *
 	 * @param from Начальная позиция букв в алфавите.
 	 * @param to Конечная позиция букв в алфавите.
-	 * @return Массив из среза прописных букв алфавита.
+	 * @return Коллекция из среза прописных букв алфавита.
 	 * @throws IllegalArgumentException Если начальная позиция {@code from} больше {@code to}.
 	 * @throws IndexOutOfBoundsException Если позиция {@code from} или {@code to} выходят за пределы алфавита.
 	 */
 	@NotNull
-	Character @NotNull [] getLettersUpperCase(@NotNull Integer from, @NotNull Integer to);
+	List<@NotNull Character> getLettersUpperCase(@NotNull Integer from, @NotNull Integer to);
 
 	/**
 	 * Возвращает строчные буквы алфавита.
 	 *
-	 * @return Массив строчных букв алфавита.
+	 * @return Коллекция строчных букв алфавита.
 	 */
 	@NotNull
-	Character @NotNull [] getLettersLowerCase();
+	List<@NotNull Character> getLettersLowerCase();
 
 	/**
 	 * Возвращает срез строчных букв алфавита.
 	 *
 	 * @param from Начальная позиция букв в алфавите.
 	 * @param to Конечная позиция букв в алфавите.
-	 * @return Массив из среза строчных букв алфавита.
+	 * @return Коллекция из среза строчных букв алфавита.
 	 * @throws IllegalArgumentException Если начальная позиция {@code from} больше {@code to}.
 	 * @throws IndexOutOfBoundsException Если позиция {@code from} или {@code to} выходят за пределы алфавита.
 	 */
 	@NotNull
-	Character @NotNull [] getLettersLowerCase(@NotNull Integer from, @NotNull Integer to);
+	List<@NotNull Character> getLettersLowerCase(@NotNull Integer from, @NotNull Integer to);
 
 	/**
 	 * Возвращает прописную букву алфавита.

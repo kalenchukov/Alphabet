@@ -9,6 +9,7 @@ package dev.kalenchukov.alphabet;
 import org.jetbrains.annotations.NotNull;
 import org.junit.Test;
 
+import java.util.List;
 import java.util.Optional;
 
 import static org.junit.Assert.*;
@@ -27,7 +28,7 @@ public class EnglishAlphabetTest
 	@Test
 	public void testGetLettersCount()
 	{
-		assertEquals(52, ALPHABET.getLetters().length);
+		assertEquals(52, ALPHABET.getLetters().size());
 	}
 
 	/**
@@ -36,7 +37,7 @@ public class EnglishAlphabetTest
 	@Test
 	public void testGetLettersUpperCaseCount()
 	{
-		assertEquals(26, ALPHABET_CASE.getLettersUpperCase().length);
+		assertEquals(26, ALPHABET_CASE.getLettersUpperCase().size());
 	}
 
 	/**
@@ -45,7 +46,7 @@ public class EnglishAlphabetTest
 	@Test
 	public void testGetLettersLowerCaseCount()
 	{
-		assertEquals(26, ALPHABET_CASE.getLettersLowerCase().length);
+		assertEquals(26, ALPHABET_CASE.getLettersLowerCase().size());
 	}
 
 	/**
@@ -54,16 +55,16 @@ public class EnglishAlphabetTest
 	@Test
 	public void testGetLetters()
 	{
-		Character[] letters = new Character[] {
+		List<Character> letters = List.of(
 			'A', 'a', 'B', 'b', 'C', 'c', 'D', 'd', 'E', 'e',
 			'F', 'f', 'G', 'g', 'H', 'h', 'I', 'i', 'J', 'j',
 			'K', 'k', 'L', 'l', 'M', 'm', 'N', 'n', 'O', 'o',
 			'P', 'p', 'Q', 'q', 'R', 'r', 'S', 's', 'T', 't',
 			'U', 'u', 'V', 'v', 'W', 'w', 'X', 'x', 'Y', 'y',
 			'Z', 'z'
-		};
+		);
 
-		assertArrayEquals(letters, ALPHABET.getLetters());
+		assertTrue(letters.containsAll(ALPHABET.getLetters()));
 	}
 
 	/**
@@ -72,33 +73,33 @@ public class EnglishAlphabetTest
 	@Test
 	public void testGetLettersRange()
 	{
-		Character[] letters1 = new Character[] {
+		List<Character> letters1 = List.of(
 			'A', 'a', 'B', 'b', 'C', 'c', 'D', 'd', 'E', 'e',
 			'F', 'f', 'G', 'g', 'H', 'h', 'I', 'i', 'J', 'j',
 			'K', 'k', 'L', 'l', 'M', 'm', 'N', 'n', 'O', 'o',
 			'P', 'p', 'Q', 'q', 'R', 'r', 'S', 's', 'T', 't',
 			'U', 'u', 'V', 'v', 'W', 'w', 'X', 'x', 'Y', 'y',
 			'Z', 'z'
-		};
+		);
 
-		Character[] letters2 = new Character[] {
+		List<Character> letters2 = List.of(
 			'A', 'a', 'B', 'b', 'C', 'c', 'D', 'd', 'E', 'e',
 			'F', 'f', 'G', 'g', 'H', 'h', 'I', 'i', 'J', 'j',
 			'K', 'k', 'L', 'l', 'M', 'm'
-		};
+		);
 
-		Character[] letters3 = new Character[] {
+		List<Character> letters3 = List.of(
 			'A', 'a', 'B'
-		};
+		);
 
-		Character[] letters4 = new Character[] {
+		List<Character> letters4 = List.of(
 			'A'
-		};
+		);
 
-		assertArrayEquals(letters1, ALPHABET.getLetters(1, 52));
-		assertArrayEquals(letters2, ALPHABET.getLetters(1, 26));
-		assertArrayEquals(letters3, ALPHABET.getLetters(1, 3));
-		assertArrayEquals(letters4, ALPHABET.getLetters(1, 1));
+		assertTrue(letters1.containsAll(ALPHABET.getLetters(1, 52)));
+		assertTrue(letters2.containsAll(ALPHABET.getLetters(1, 26)));
+		assertTrue(letters3.containsAll(ALPHABET.getLetters(1, 3)));
+		assertTrue(letters4.containsAll(ALPHABET.getLetters(1, 1)));
 	}
 
 	/**
@@ -135,13 +136,13 @@ public class EnglishAlphabetTest
 	@Test
 	public void testGetLettersUpperCase()
 	{
-		Character[] lettersUpperCase = new Character[] {
+		List<Character> lettersUpperCase = List.of(
 			'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I',
 			'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R',
 			'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
-		};
+		);
 
-		assertArrayEquals(lettersUpperCase, ALPHABET_CASE.getLettersUpperCase());
+		assertTrue(lettersUpperCase.containsAll(ALPHABET_CASE.getLettersUpperCase()));
 	}
 
 	/**
@@ -150,23 +151,23 @@ public class EnglishAlphabetTest
 	@Test
 	public void testGetLettersUpperCaseRange()
 	{
-		Character[] letters1 = new Character[] {
+		List<Character> letters1 = List.of(
 			'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I',
 			'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R',
 			'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
-		};
+		);
 
-		Character[] letters2 = new Character[] {
+		List<Character> letters2 = List.of(
 			'A', 'B', 'C'
-		};
+		);
 
-		Character[] letters3 = new Character[] {
+		List<Character> letters3 = List.of(
 			'A'
-		};
+		);
 
-		assertArrayEquals(letters1, ALPHABET_CASE.getLettersUpperCase(1, 26));
-		assertArrayEquals(letters2, ALPHABET_CASE.getLettersUpperCase(1, 3));
-		assertArrayEquals(letters3, ALPHABET_CASE.getLettersUpperCase(1, 1));
+		assertTrue(letters1.containsAll(ALPHABET_CASE.getLettersUpperCase(1, 26)));
+		assertTrue(letters2.containsAll(ALPHABET_CASE.getLettersUpperCase(1, 3)));
+		assertTrue(letters3.containsAll(ALPHABET_CASE.getLettersUpperCase(1, 1)));
 	}
 
 	/**
@@ -202,13 +203,13 @@ public class EnglishAlphabetTest
 	@Test
 	public void testGetLettersLowerCase()
 	{
-		Character[] lettersLowerCase = new Character[] {
+		List<Character> lettersLowerCase = List.of(
 			'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i',
 			'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r',
 			's', 't', 'u', 'v', 'w', 'x', 'y', 'z'
-		};
+		);
 
-		assertArrayEquals(lettersLowerCase, ALPHABET_CASE.getLettersLowerCase());
+		assertTrue(lettersLowerCase.containsAll(ALPHABET_CASE.getLettersLowerCase()));
 	}
 
 	/**
@@ -217,23 +218,23 @@ public class EnglishAlphabetTest
 	@Test
 	public void testGetLettersLowerCaseRange()
 	{
-		Character[] letters1 = new Character[] {
+		List<Character> letters1 = List.of(
 			'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i',
 			'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r',
 			's', 't', 'u', 'v', 'w', 'x', 'y', 'z'
-		};
+		);
 
-		Character[] letters2 = new Character[] {
+		List<Character> letters2 = List.of(
 			'a', 'b', 'c'
-		};
+		);
 
-		Character[] letters3 = new Character[] {
+		List<Character> letters3 = List.of(
 			'a'
-		};
+		);
 
-		assertArrayEquals(letters1, ALPHABET_CASE.getLettersLowerCase(1, 26));
-		assertArrayEquals(letters2, ALPHABET_CASE.getLettersLowerCase(1, 3));
-		assertArrayEquals(letters3, ALPHABET_CASE.getLettersLowerCase(1, 1));
+		assertTrue(letters1.containsAll(ALPHABET_CASE.getLettersLowerCase(1, 26)));
+		assertTrue(letters2.containsAll(ALPHABET_CASE.getLettersLowerCase(1, 3)));
+		assertTrue(letters3.containsAll(ALPHABET_CASE.getLettersLowerCase(1, 1)));
 	}
 
 	/**

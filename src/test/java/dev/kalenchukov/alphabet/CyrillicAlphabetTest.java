@@ -9,6 +9,7 @@ package dev.kalenchukov.alphabet;
 import org.jetbrains.annotations.NotNull;
 import org.junit.Test;
 
+import java.util.List;
 import java.util.Optional;
 
 import static org.junit.Assert.*;
@@ -24,7 +25,7 @@ public class CyrillicAlphabetTest
 	@Test
 	public void testGetLettersCount()
 	{
-		assertEquals(43, ALPHABET.getLetters().length);
+		assertEquals(43, ALPHABET.getLetters().size());
 	}
 
 	/**
@@ -33,14 +34,14 @@ public class CyrillicAlphabetTest
 	@Test
 	public void testGetLetters()
 	{
-		Character[] letters = new Character[] {
+		List<Character> letters = List.of(
 			'А', 'Б', 'В', 'Г', 'Д', 'Е', 'Ж', 'Ѕ', 'З', 'И', 'І',
 			'К', 'Л', 'М', 'Н', 'О', 'П', 'Р', 'С', 'Т', 'Ꙋ', 'Ф',
 			'Х', 'Ѡ', 'Ц', 'Ч', 'Ш', 'Щ', 'Ъ', 'Ы', 'Ь', 'Ѣ', 'Ю',
 			'Ꙗ', 'Ѥ', 'Ѧ', 'Ѫ', 'Ѩ', 'Ѭ', 'Ѯ', 'Ѱ', 'Ѳ', 'Ѵ'
-		};
+		);
 
-		assertArrayEquals(letters, ALPHABET.getLetters());
+		assertTrue(letters.containsAll(ALPHABET.getLetters()));
 	}
 
 	/**
@@ -49,24 +50,24 @@ public class CyrillicAlphabetTest
 	@Test
 	public void testGetLettersRange()
 	{
-		Character[] letters1 = new Character[] {
+		List<Character> letters1 = List.of(
 			'А', 'Б', 'В', 'Г', 'Д', 'Е', 'Ж', 'Ѕ', 'З', 'И', 'І',
 			'К', 'Л', 'М', 'Н', 'О', 'П', 'Р', 'С', 'Т', 'Ꙋ', 'Ф',
 			'Х', 'Ѡ', 'Ц', 'Ч', 'Ш', 'Щ', 'Ъ', 'Ы', 'Ь', 'Ѣ', 'Ю',
 			'Ꙗ', 'Ѥ', 'Ѧ', 'Ѫ', 'Ѩ', 'Ѭ', 'Ѯ', 'Ѱ', 'Ѳ', 'Ѵ'
-		};
+		);
 
-		Character[] letters2 = new Character[] {
+		List<Character> letters2 = List.of(
 			'А', 'Б', 'В'
-		};
+		);
 
-		Character[] letters3 = new Character[] {
+		List<Character> letters3 = List.of(
 			'А'
-		};
+		);
 
-		assertArrayEquals(letters1, ALPHABET.getLetters(1, 43));
-		assertArrayEquals(letters2, ALPHABET.getLetters(1, 3));
-		assertArrayEquals(letters3, ALPHABET.getLetters(1, 1));
+		assertTrue(letters1.containsAll(ALPHABET.getLetters(1, 43)));
+		assertTrue(letters2.containsAll(ALPHABET.getLetters(1, 3)));
+		assertTrue(letters3.containsAll(ALPHABET.getLetters(1, 1)));
 	}
 
 	/**

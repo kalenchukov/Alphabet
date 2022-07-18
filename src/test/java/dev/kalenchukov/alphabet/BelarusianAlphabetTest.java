@@ -9,6 +9,7 @@ package dev.kalenchukov.alphabet;
 import org.jetbrains.annotations.NotNull;
 import org.junit.Test;
 
+import java.util.List;
 import java.util.Optional;
 
 import static org.junit.Assert.*;
@@ -27,7 +28,7 @@ public class BelarusianAlphabetTest
 	@Test
 	public void testGetLettersCount()
 	{
-		assertEquals(64, ALPHABET.getLetters().length);
+		assertEquals(64, ALPHABET.getLetters().size());
 	}
 
 	/**
@@ -36,7 +37,7 @@ public class BelarusianAlphabetTest
 	@Test
 	public void testGetLettersUpperCaseCount()
 	{
-		assertEquals(32, ALPHABET_CASE.getLettersUpperCase().length);
+		assertEquals(32, ALPHABET_CASE.getLettersUpperCase().size());
 	}
 
 	/**
@@ -45,7 +46,7 @@ public class BelarusianAlphabetTest
 	@Test
 	public void testGetLettersLowerCaseCount()
 	{
-		assertEquals(32, ALPHABET_CASE.getLettersLowerCase().length);
+		assertEquals(32, ALPHABET_CASE.getLettersLowerCase().size());
 	}
 
 	/**
@@ -54,7 +55,7 @@ public class BelarusianAlphabetTest
 	@Test
 	public void testGetLetters()
 	{
-		Character[] letters = new Character[] {
+		List<Character> letters = List.of(
 			'А', 'а', 'Б', 'б', 'В', 'в', 'Г', 'г', 'Д', 'д',
 			'Е', 'е', 'Ё', 'ё', 'Ж', 'ж', 'З', 'з', 'І', 'і',
 			'Й', 'й', 'К', 'к', 'Л', 'л', 'М', 'м', 'Н', 'н',
@@ -62,9 +63,9 @@ public class BelarusianAlphabetTest
 			'У', 'у', 'Ў', 'ў', 'Ф', 'ф', 'Х', 'х', 'Ц', 'ц',
 			'Ч', 'ч', 'Ш', 'ш', 'Ы', 'ы', 'Ь', 'ь', 'Э', 'э',
 			'Ю', 'ю', 'Я', 'я'
-		};
+		);
 
-		assertArrayEquals(letters, ALPHABET.getLetters());
+		assertTrue(letters.containsAll(ALPHABET.getLetters()));
 	}
 
 	/**
@@ -73,7 +74,7 @@ public class BelarusianAlphabetTest
 	@Test
 	public void testGetLettersRange()
 	{
-		Character[] letters1 = new Character[] {
+		List<Character> letters1 = List.of(
 			'А', 'а', 'Б', 'б', 'В', 'в', 'Г', 'г', 'Д', 'д',
 			'Е', 'е', 'Ё', 'ё', 'Ж', 'ж', 'З', 'з', 'І', 'і',
 			'Й', 'й', 'К', 'к', 'Л', 'л', 'М', 'м', 'Н', 'н',
@@ -81,27 +82,27 @@ public class BelarusianAlphabetTest
 			'У', 'у', 'Ў', 'ў', 'Ф', 'ф', 'Х', 'х', 'Ц', 'ц',
 			'Ч', 'ч', 'Ш', 'ш', 'Ы', 'ы', 'Ь', 'ь', 'Э', 'э',
 			'Ю', 'ю', 'Я', 'я'
-		};
+		);
 
-		Character[] letters2 = new Character[] {
+		List<Character> letters2 = List.of(
 			'А', 'а', 'Б', 'б', 'В', 'в', 'Г', 'г', 'Д', 'д',
 			'Е', 'е', 'Ё', 'ё', 'Ж', 'ж', 'З', 'з', 'І', 'і',
 			'Й', 'й', 'К', 'к', 'Л', 'л', 'М', 'м', 'Н', 'н',
 			'О', 'о', 'П'
-		};
+		);
 
-		Character[] letters3 = new Character[] {
+		List<Character> letters3 = List.of(
 			'А', 'а', 'Б'
-		};
+		);
 
-		Character[] letters4 = new Character[] {
+		List<Character> letters4 = List.of(
 			'А'
-		};
+		);
 
-		assertArrayEquals(letters1, ALPHABET.getLetters(1, 64));
-		assertArrayEquals(letters2, ALPHABET.getLetters(1, 33));
-		assertArrayEquals(letters3, ALPHABET.getLetters(1, 3));
-		assertArrayEquals(letters4, ALPHABET.getLetters(1, 1));
+		assertTrue(letters1.containsAll(ALPHABET.getLetters(1, 64)));
+		assertTrue(letters2.containsAll(ALPHABET.getLetters(1, 33)));
+		assertTrue(letters3.containsAll(ALPHABET.getLetters(1, 3)));
+		assertTrue(letters4.containsAll(ALPHABET.getLetters(1, 1)));
 	}
 
 	/**
@@ -137,14 +138,14 @@ public class BelarusianAlphabetTest
 	@Test
 	public void testGetLettersUpperCase()
 	{
-		Character[] lettersUpperCase = new Character[] {
+		List<Character> lettersUpperCase = List.of(
 			'А', 'Б', 'В', 'Г', 'Д', 'Е', 'Ё', 'Ж', 'З',
 			'І', 'Й', 'К', 'Л', 'М', 'Н', 'О', 'П', 'Р',
 			'С', 'Т', 'У', 'Ў', 'Ф', 'Х', 'Ц', 'Ч', 'Ш',
 			'Ы', 'Ь', 'Э', 'Ю', 'Я'
-		};
+		);
 
-		assertArrayEquals(lettersUpperCase, ALPHABET_CASE.getLettersUpperCase());
+		assertTrue(lettersUpperCase.containsAll(ALPHABET_CASE.getLettersUpperCase()));
 	}
 
 	/**
@@ -153,24 +154,24 @@ public class BelarusianAlphabetTest
 	@Test
 	public void testGetLettersUpperCaseRange()
 	{
-		Character[] letters1 = new Character[] {
+		List<Character> letters1 = List.of(
 			'А', 'Б', 'В', 'Г', 'Д', 'Е', 'Ё', 'Ж', 'З',
 			'І', 'Й', 'К', 'Л', 'М', 'Н', 'О', 'П', 'Р',
 			'С', 'Т', 'У', 'Ў', 'Ф', 'Х', 'Ц', 'Ч', 'Ш',
 			'Ы', 'Ь', 'Э', 'Ю', 'Я'
-		};
+		);
 
-		Character[] letters2 = new Character[] {
+		List<Character> letters2 = List.of(
 			'А', 'Б', 'В'
-		};
+		);
 
-		Character[] letters3 = new Character[] {
+		List<Character> letters3 = List.of(
 			'А'
-		};
+		);
 
-		assertArrayEquals(letters1, ALPHABET_CASE.getLettersUpperCase(1, 32));
-		assertArrayEquals(letters2, ALPHABET_CASE.getLettersUpperCase(1, 3));
-		assertArrayEquals(letters3, ALPHABET_CASE.getLettersUpperCase(1, 1));
+		assertTrue(letters1.containsAll(ALPHABET_CASE.getLettersUpperCase(1, 32)));
+		assertTrue(letters2.containsAll(ALPHABET_CASE.getLettersUpperCase(1, 3)));
+		assertTrue(letters3.containsAll(ALPHABET_CASE.getLettersUpperCase(1, 1)));
 	}
 
 	/**
@@ -206,14 +207,14 @@ public class BelarusianAlphabetTest
 	@Test
 	public void testGetLettersLowerCase()
 	{
-		Character[] lettersLowerCase = new Character[] {
+		List<Character> lettersLowerCase = List.of(
 			'а', 'б', 'в', 'г', 'д', 'е', 'ё', 'ж', 'з',
 			'і', 'й', 'к', 'л', 'м', 'н', 'о', 'п', 'р',
 			'с', 'т', 'у', 'ў', 'ф', 'х', 'ц', 'ч', 'ш',
 			'ы', 'ь', 'э', 'ю', 'я'
-		};
+		);
 
-		assertArrayEquals(lettersLowerCase, ALPHABET_CASE.getLettersLowerCase());
+		assertTrue(lettersLowerCase.containsAll(ALPHABET_CASE.getLettersLowerCase()));
 	}
 
 	/**
@@ -222,24 +223,24 @@ public class BelarusianAlphabetTest
 	@Test
 	public void testGetLettersLowerCaseRange()
 	{
-		Character[] letters1 = new Character[] {
+		List<Character> letters1 = List.of(
 			'а', 'б', 'в', 'г', 'д', 'е', 'ё', 'ж', 'з',
 			'і', 'й', 'к', 'л', 'м', 'н', 'о', 'п', 'р',
 			'с', 'т', 'у', 'ў', 'ф', 'х', 'ц', 'ч', 'ш',
 			'ы', 'ь', 'э', 'ю', 'я'
-		};
+		);
 
-		Character[] letters2 = new Character[] {
+		List<Character> letters2 = List.of(
 			'а', 'б', 'в'
-		};
+		);
 
-		Character[] letters3 = new Character[] {
+		List<Character> letters3 = List.of(
 			'а'
-		};
+		);
 
-		assertArrayEquals(letters1, ALPHABET_CASE.getLettersLowerCase(1, 32));
-		assertArrayEquals(letters2, ALPHABET_CASE.getLettersLowerCase(1, 3));
-		assertArrayEquals(letters3, ALPHABET_CASE.getLettersLowerCase(1, 1));
+		assertTrue(letters1.containsAll(ALPHABET_CASE.getLettersLowerCase(1, 32)));
+		assertTrue(letters2.containsAll(ALPHABET_CASE.getLettersLowerCase(1, 3)));
+		assertTrue(letters3.containsAll(ALPHABET_CASE.getLettersLowerCase(1, 1)));
 	}
 
 	/**

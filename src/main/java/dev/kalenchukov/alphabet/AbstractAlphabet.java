@@ -10,6 +10,7 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.Arrays;
+import java.util.List;
 import java.util.Objects;
 
 /**
@@ -21,14 +22,14 @@ public abstract class AbstractAlphabet implements Alphabetical
 	 * Буквы алфавита.
 	 */
 	@NotNull
-	protected final Character @NotNull [] letters;
+	protected final List<@NotNull Character> letters;
 
 	/**
 	 * Конструктор для {@code AbstractAlphabet}.
 	 *
 	 * @param letters Буквы алфавита.
 	 */
-	protected AbstractAlphabet(@NotNull final Character @NotNull [] letters)
+	protected AbstractAlphabet(@NotNull final List<@NotNull Character> letters)
 	{
 		this.letters = Objects.requireNonNull(letters);
 	}
@@ -38,7 +39,7 @@ public abstract class AbstractAlphabet implements Alphabetical
 	 */
 	@NotNull
 	@Override
-	public Character @NotNull [] getLetters()
+	public List<@NotNull Character> getLetters()
 	{
 		return this.letters;
 	}
@@ -48,7 +49,7 @@ public abstract class AbstractAlphabet implements Alphabetical
 	 */
 	@NotNull
 	@Override
-	public Character @NotNull [] getLetters(@NotNull final Integer from, @NotNull final Integer to)
+	public List<@NotNull Character> getLetters(@NotNull final Integer from, @NotNull final Integer to)
 	{
 		Objects.requireNonNull(from);
 		Objects.requireNonNull(to);
@@ -67,7 +68,7 @@ public abstract class AbstractAlphabet implements Alphabetical
 
 		try
 		{
-			return this.getLetters(this.letters, position, position)[0];
+			return this.getLetters(this.letters, position, position).get(0);
 		}
 		catch (IllegalArgumentException | IndexOutOfBoundsException exception)
 		{
@@ -81,14 +82,14 @@ public abstract class AbstractAlphabet implements Alphabetical
 	 * @param alphabet Алфавит.
 	 * @param from Начальная позиция букв в алфавите.
 	 * @param to Конечная позиция букв в алфавите.
-	 * @return Массив из среза букв алфавита.
+	 * @return Коллекция из среза букв алфавита.
 	 * @throws IllegalArgumentException Если начальная позиция {@code from} больше {@code to}.
 	 * @throws IndexOutOfBoundsException Если позиция {@code from} или {@code to} выходят за пределы алфавита.
 	 */
 	@NotNull
-	protected Character @NotNull [] getLetters(@NotNull final Character @NotNull [] alphabet,
-											   @NotNull final Integer from,
-											   @NotNull final Integer to)
+	protected List<@NotNull Character> getLetters(@NotNull final List<@NotNull Character> alphabet,
+												  @NotNull final Integer from,
+												  @NotNull final Integer to)
 	{
 		Objects.requireNonNull(alphabet);
 		Objects.requireNonNull(from);
@@ -98,11 +99,11 @@ public abstract class AbstractAlphabet implements Alphabetical
 			throw new IllegalArgumentException();
 		}
 
-		if (from < 1 || to > alphabet.length) {
+		if (from < 1 || to > alphabet.size()) {
 			throw new IndexOutOfBoundsException();
 		}
 
-		return Arrays.copyOfRange(alphabet, from - 1, to);
+		return alphabet.subList(from - 1, to);
 	}
 
 	/**
@@ -136,13 +137,13 @@ public abstract class AbstractAlphabet implements Alphabetical
 	 * @return Позицию буквы в алфавите.
 	 */
 	@Nullable
-	protected Integer getPositionLetter(@NotNull final Character @NotNull [] alphabet, @NotNull final Character letter)
+	protected Integer getPositionLetter(@NotNull final List<@NotNull Character> alphabet, @NotNull final Character letter)
 	{
 		Objects.requireNonNull(letter);
 
-		for (int position = 0; position < alphabet.length; position++)
+		for (int position = 0; position < alphabet.size(); position++)
 		{
-			if (alphabet[position].equals(letter)) {
+			if (alphabet.get(position).equals(letter)) {
 				return position + 1;
 			}
 		}

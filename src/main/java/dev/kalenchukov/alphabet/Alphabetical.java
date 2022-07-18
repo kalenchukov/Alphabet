@@ -9,6 +9,8 @@ package dev.kalenchukov.alphabet;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.List;
+
 /**
  * Интерфейс для реализации алфавита.
  */
@@ -17,22 +19,21 @@ public interface Alphabetical
 	/**
 	 * Возвращает буквы алфавита.
 	 *
-	 * @return Массив букв алфавита.
+	 * @return Коллекция букв алфавита.
 	 */
-	@NotNull
-	Character @NotNull [] getLetters();
+	@NotNull List<@NotNull Character> getLetters();
 
 	/**
 	 * Возвращает срез букв алфавита.
 	 *
 	 * @param from Начальная позиция букв в алфавите.
 	 * @param to Конечная позиция букв в алфавите.
-	 * @return Массив из среза букв алфавита.
+	 * @return Коллекция из среза букв алфавита.
 	 * @throws IllegalArgumentException Если начальная позиция {@code from} больше {@code to}.
 	 * @throws IndexOutOfBoundsException Если позиция {@code from} или {@code to} выходят за пределы алфавита.
 	 */
 	@NotNull
-	Character @NotNull [] getLetters(@NotNull Integer from, @NotNull Integer to);
+	List<@NotNull Character> getLetters(@NotNull Integer from, @NotNull Integer to);
 
 	/**
 	 * Возвращает позицию буквы в алфавите.

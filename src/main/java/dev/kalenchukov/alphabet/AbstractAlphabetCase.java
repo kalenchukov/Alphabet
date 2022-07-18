@@ -9,6 +9,7 @@ package dev.kalenchukov.alphabet;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.List;
 import java.util.Objects;
 
 /**
@@ -20,13 +21,13 @@ public abstract class AbstractAlphabetCase extends AbstractAlphabet implements A
 	 * Прописные буквы алфавита.
 	 */
 	@NotNull
-	protected final Character @NotNull [] lettersUpperCase;
+	protected final List<@NotNull Character> lettersUpperCase;
 
 	/**
 	 * Строчные буквы алфавита.
 	 */
 	@NotNull
-	protected final Character @NotNull [] lettersLowerCase;
+	protected final List<@NotNull Character> lettersLowerCase;
 
 	/**
 	 * Конструктор для {@code AbstractAlphabetCase}.
@@ -35,9 +36,9 @@ public abstract class AbstractAlphabetCase extends AbstractAlphabet implements A
 	 * @param lettersUpperCase Прописные буквы алфавита.
 	 * @param lettersLowerCase Строчные буквы алфавита.
 	 */
-	protected AbstractAlphabetCase(@NotNull final Character @NotNull [] letters,
-								   @NotNull final Character @NotNull [] lettersUpperCase,
-								   @NotNull final Character @NotNull [] lettersLowerCase)
+	protected AbstractAlphabetCase(@NotNull final List<@NotNull Character> letters,
+								   @NotNull final List<@NotNull Character> lettersUpperCase,
+								   @NotNull final List<@NotNull Character> lettersLowerCase)
 	{
 		super(letters);
 
@@ -50,7 +51,7 @@ public abstract class AbstractAlphabetCase extends AbstractAlphabet implements A
 	 */
 	@NotNull
 	@Override
-	public Character @NotNull [] getLettersUpperCase()
+	public List<@NotNull Character> getLettersUpperCase()
 	{
 		return this.lettersUpperCase;
 	}
@@ -60,7 +61,7 @@ public abstract class AbstractAlphabetCase extends AbstractAlphabet implements A
 	 */
 	@NotNull
 	@Override
-	public Character @NotNull [] getLettersUpperCase(@NotNull final Integer from, @NotNull final Integer to)
+	public List<@NotNull Character> getLettersUpperCase(@NotNull final Integer from, @NotNull final Integer to)
 	{
 		Objects.requireNonNull(from);
 		Objects.requireNonNull(to);
@@ -73,7 +74,7 @@ public abstract class AbstractAlphabetCase extends AbstractAlphabet implements A
 	 */
 	@NotNull
 	@Override
-	public Character @NotNull [] getLettersLowerCase()
+	public List<@NotNull Character> getLettersLowerCase()
 	{
 		return this.lettersLowerCase;
 	}
@@ -83,7 +84,7 @@ public abstract class AbstractAlphabetCase extends AbstractAlphabet implements A
 	 */
 	@NotNull
 	@Override
-	public Character @NotNull [] getLettersLowerCase(@NotNull final Integer from, @NotNull final Integer to)
+	public List<@NotNull Character> getLettersLowerCase(@NotNull final Integer from, @NotNull final Integer to)
 	{
 		Objects.requireNonNull(from);
 		Objects.requireNonNull(to);
@@ -142,7 +143,7 @@ public abstract class AbstractAlphabetCase extends AbstractAlphabet implements A
 
 		try
 		{
-			return super.getLetters(this.lettersUpperCase, position, position)[0];
+			return super.getLetters(this.lettersUpperCase, position, position).get(0);
 		}
 		catch (IllegalArgumentException | IndexOutOfBoundsException exception)
 		{
@@ -161,7 +162,7 @@ public abstract class AbstractAlphabetCase extends AbstractAlphabet implements A
 
 		try
 		{
-			return super.getLetters(this.lettersLowerCase, position, position)[0];
+			return super.getLetters(this.lettersLowerCase, position, position).get(0);
 		}
 		catch (IllegalArgumentException | IndexOutOfBoundsException exception)
 		{

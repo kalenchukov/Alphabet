@@ -9,6 +9,7 @@ package dev.kalenchukov.alphabet;
 import org.jetbrains.annotations.NotNull;
 import org.junit.Test;
 
+import java.util.List;
 import java.util.Optional;
 
 import static org.junit.Assert.*;
@@ -27,7 +28,7 @@ public class GreekAlphabetTest
 	@Test
 	public void testGetLettersCount()
 	{
-		assertEquals(49, ALPHABET.getLetters().length);
+		assertEquals(49, ALPHABET.getLetters().size());
 	}
 
 	/**
@@ -36,7 +37,7 @@ public class GreekAlphabetTest
 	@Test
 	public void testGetLettersUpperCaseCount()
 	{
-		assertEquals(24, ALPHABET_CASE.getLettersUpperCase().length);
+		assertEquals(24, ALPHABET_CASE.getLettersUpperCase().size());
 	}
 
 	/**
@@ -45,7 +46,7 @@ public class GreekAlphabetTest
 	@Test
 	public void testGetLettersLowerCaseCount()
 	{
-		assertEquals(25, ALPHABET_CASE.getLettersLowerCase().length);
+		assertEquals(25, ALPHABET_CASE.getLettersLowerCase().size());
 	}
 
 	/**
@@ -54,16 +55,16 @@ public class GreekAlphabetTest
 	@Test
 	public void testGetLetters()
 	{
-		Character[] letters = new Character[] {
+		List<Character> letters = List.of(
 			'Α', 'α', 'Β', 'β', 'Γ', 'γ', 'Δ', 'δ', 'Ε', 'ε',
 			'Ζ', 'ζ', 'Η', 'η', 'Θ', 'θ', 'Ι', 'ι', 'Κ', 'κ',
 			'Λ', 'λ', 'Μ', 'μ', 'Ν', 'ν', 'Ξ', 'ξ', 'Ο', 'ο',
 			'Π', 'π', 'Ρ', 'ρ', 'Σ', 'σ', 'ς', 'Τ', 'τ', 'Υ',
 			'υ', 'Φ', 'φ', 'Χ', 'χ', 'Ψ', 'ψ', 'Ω', 'ω'
 
-		};
+		);
 
-		assertArrayEquals(letters, ALPHABET.getLetters());
+		assertTrue(letters.containsAll(ALPHABET.getLetters()));
 	}
 
 	/**
@@ -72,33 +73,33 @@ public class GreekAlphabetTest
 	@Test
 	public void testGetLettersRange()
 	{
-		Character[] letters1 = new Character[] {
+		List<Character> letters1 = List.of(
 			'Α', 'α', 'Β', 'β', 'Γ', 'γ', 'Δ', 'δ', 'Ε', 'ε',
 			'Ζ', 'ζ', 'Η', 'η', 'Θ', 'θ', 'Ι', 'ι', 'Κ', 'κ',
 			'Λ', 'λ', 'Μ', 'μ', 'Ν', 'ν', 'Ξ', 'ξ', 'Ο', 'ο',
 			'Π', 'π', 'Ρ', 'ρ', 'Σ', 'σ', 'ς', 'Τ', 'τ', 'Υ',
 			'υ', 'Φ', 'φ', 'Χ', 'χ', 'Ψ', 'ψ', 'Ω', 'ω'
-		};
+		);
 
-		Character[] letters2 = new Character[] {
+		List<Character> letters2 = List.of(
 			'Α', 'α', 'Β', 'β', 'Γ', 'γ', 'Δ', 'δ', 'Ε', 'ε',
 			'Ζ', 'ζ', 'Η', 'η', 'Θ', 'θ', 'Ι', 'ι', 'Κ', 'κ',
 			'Λ', 'λ', 'Μ', 'μ', 'Ν', 'ν', 'Ξ', 'ξ', 'Ο', 'ο',
 			'Π', 'π', 'Ρ'
-		};
+		);
 
-		Character[] letters3 = new Character[] {
+		List<Character> letters3 = List.of(
 			'Α', 'α', 'Β'
-		};
+		);
 
-		Character[] letters4 = new Character[] {
+		List<Character> letters4 = List.of(
 			'Α'
-		};
+		);
 
-		assertArrayEquals(letters1, ALPHABET.getLetters(1, 49));
-		assertArrayEquals(letters2, ALPHABET.getLetters(1, 33));
-		assertArrayEquals(letters3, ALPHABET.getLetters(1, 3));
-		assertArrayEquals(letters4, ALPHABET.getLetters(1, 1));
+		assertTrue(letters1.containsAll(ALPHABET.getLetters(1, 49)));
+		assertTrue(letters2.containsAll(ALPHABET.getLetters(1, 33)));
+		assertTrue(letters3.containsAll(ALPHABET.getLetters(1, 3)));
+		assertTrue(letters4.containsAll(ALPHABET.getLetters(1, 1)));
 	}
 
 	/**
@@ -134,13 +135,13 @@ public class GreekAlphabetTest
 	@Test
 	public void testGetLettersUpperCase()
 	{
-		Character[] lettersUpperCase = new Character[] {
+		List<Character> lettersUpperCase = List.of(
 			'Α', 'Β', 'Γ', 'Δ', 'Ε', 'Ζ', 'Η', 'Θ', 'Ι',
 			'Κ', 'Λ', 'Μ', 'Ν', 'Ξ', 'Ο', 'Π', 'Ρ', 'Σ',
 			'Τ', 'Υ', 'Φ', 'Χ', 'Ψ', 'Ω'
-		};
+		);
 
-		assertArrayEquals(lettersUpperCase, ALPHABET_CASE.getLettersUpperCase());
+		assertTrue(lettersUpperCase.containsAll(ALPHABET_CASE.getLettersUpperCase()));
 	}
 
 	/**
@@ -149,23 +150,23 @@ public class GreekAlphabetTest
 	@Test
 	public void testGetLettersUpperCaseRange()
 	{
-		Character[] letters1 = new Character[] {
+		List<Character> letters1 = List.of(
 			'Α', 'Β', 'Γ', 'Δ', 'Ε', 'Ζ', 'Η', 'Θ', 'Ι',
 			'Κ', 'Λ', 'Μ', 'Ν', 'Ξ', 'Ο', 'Π', 'Ρ', 'Σ',
 			'Τ', 'Υ', 'Φ', 'Χ', 'Ψ', 'Ω'
-		};
+		);
 
-		Character[] letters2 = new Character[] {
+		List<Character> letters2 = List.of(
 			'Α', 'Β', 'Γ'
-		};
+		);
 
-		Character[] letters3 = new Character[] {
+		List<Character> letters3 = List.of(
 			'Α'
-		};
+		);
 
-		assertArrayEquals(letters1, ALPHABET_CASE.getLettersUpperCase(1, 24));
-		assertArrayEquals(letters2, ALPHABET_CASE.getLettersUpperCase(1, 3));
-		assertArrayEquals(letters3, ALPHABET_CASE.getLettersUpperCase(1, 1));
+		assertTrue(letters1.containsAll(ALPHABET_CASE.getLettersUpperCase(1, 24)));
+		assertTrue(letters2.containsAll(ALPHABET_CASE.getLettersUpperCase(1, 3)));
+		assertTrue(letters3.containsAll(ALPHABET_CASE.getLettersUpperCase(1, 1)));
 	}
 
 	/**
@@ -201,13 +202,13 @@ public class GreekAlphabetTest
 	@Test
 	public void testGetLettersLowerCase()
 	{
-		Character[] lettersLowerCase = new Character[] {
+		List<Character> lettersLowerCase = List.of(
 			'α', 'β', 'γ', 'δ', 'ε', 'ζ', 'η', 'θ', 'ι',
 			'κ', 'λ', 'μ', 'ν', 'ξ', 'ο', 'π', 'ρ', 'σ',
 			'ς', 'τ', 'υ', 'φ', 'χ', 'ψ', 'ω'
-		};
+		);
 
-		assertArrayEquals(lettersLowerCase, ALPHABET_CASE.getLettersLowerCase());
+		assertTrue(lettersLowerCase.containsAll(ALPHABET_CASE.getLettersLowerCase()));
 	}
 
 	/**
@@ -216,23 +217,23 @@ public class GreekAlphabetTest
 	@Test
 	public void testGetLettersLowerCaseRange()
 	{
-		Character[] letters1 = new Character[] {
+		List<Character> letters1 = List.of(
 			'α', 'β', 'γ', 'δ', 'ε', 'ζ', 'η', 'θ', 'ι',
 			'κ', 'λ', 'μ', 'ν', 'ξ', 'ο', 'π', 'ρ', 'σ',
 			'ς', 'τ', 'υ', 'φ', 'χ', 'ψ', 'ω'
-		};
+		);
 
-		Character[] letters2 = new Character[] {
+		List<Character> letters2 = List.of(
 			'α', 'β', 'γ'
-		};
+		);
 
-		Character[] letters3 = new Character[] {
+		List<Character> letters3 = List.of(
 			'α'
-		};
+		);
 
-		assertArrayEquals(letters1, ALPHABET_CASE.getLettersLowerCase(1, 25));
-		assertArrayEquals(letters2, ALPHABET_CASE.getLettersLowerCase(1, 3));
-		assertArrayEquals(letters3, ALPHABET_CASE.getLettersLowerCase(1, 1));
+		assertTrue(letters1.containsAll(ALPHABET_CASE.getLettersLowerCase(1, 25)));
+		assertTrue(letters2.containsAll(ALPHABET_CASE.getLettersLowerCase(1, 3)));
+		assertTrue(letters3.containsAll(ALPHABET_CASE.getLettersLowerCase(1, 1)));
 	}
 
 	/**
