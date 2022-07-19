@@ -7,6 +7,7 @@
 package dev.kalenchukov.alphabet;
 
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Unmodifiable;
 
 import java.util.List;
 
@@ -18,6 +19,7 @@ public class CyrillicAlphabet extends AbstractAlphabet
 	/**
 	 * Коды букв в Unicode.
 	 */
+	@Unmodifiable
 	@NotNull
 	public static final List<@NotNull Character> LETTERS = List.of(
 		'\u0410', '\u0411', '\u0412', '\u0413', '\u0414', '\u0415', '\u0416', '\u0405', '\u0417',

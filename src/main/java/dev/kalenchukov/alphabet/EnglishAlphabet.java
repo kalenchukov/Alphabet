@@ -7,6 +7,7 @@
 package dev.kalenchukov.alphabet;
 
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Unmodifiable;
 
 import java.util.List;
 
@@ -18,6 +19,7 @@ public class EnglishAlphabet extends AbstractAlphabetCase
 	/**
 	 * Коды прописных букв в Unicode.
 	 */
+	@Unmodifiable
 	@NotNull
 	public static final List<@NotNull Character> LETTERS_UPPER_CASE = List.of(
 		'\u0041', '\u0042', '\u0043', '\u0044', '\u0045', '\u0046',
@@ -30,6 +32,7 @@ public class EnglishAlphabet extends AbstractAlphabetCase
 	/**
 	 * Коды строчных букв в Unicode.
 	 */
+	@Unmodifiable
 	@NotNull
 	public static final List<@NotNull Character> LETTERS_LOWER_CASE = List.of(
 		'\u0061', '\u0062', '\u0063', '\u0064', '\u0065', '\u0066',
@@ -42,6 +45,7 @@ public class EnglishAlphabet extends AbstractAlphabetCase
 	/**
 	 * Коды букв в Unicode.
 	 */
+	@Unmodifiable
 	@NotNull
 	public static final List<@NotNull Character> LETTERS = List.of(
 		'\u0041', '\u0061', '\u0042', '\u0062', '\u0043', '\u0063',

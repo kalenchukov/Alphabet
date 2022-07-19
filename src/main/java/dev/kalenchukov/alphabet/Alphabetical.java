@@ -8,7 +8,7 @@ package dev.kalenchukov.alphabet;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import org.jetbrains.annotations.UnmodifiableView;
+import org.jetbrains.annotations.Unmodifiable;
 
 import java.util.List;
 
@@ -22,7 +22,7 @@ public interface Alphabetical
 	 *
 	 * @return Коллекция букв алфавита.
 	 */
-	@UnmodifiableView
+	@Unmodifiable
 	@NotNull
 	List<@NotNull Character> getLetters();
 
@@ -35,7 +35,7 @@ public interface Alphabetical
 	 * @throws IllegalArgumentException Если начальная позиция {@code from} больше {@code to}.
 	 * @throws IndexOutOfBoundsException Если позиция {@code from} или {@code to} выходят за пределы алфавита.
 	 */
-	@UnmodifiableView
+	@Unmodifiable
 	@NotNull
 	List<@NotNull Character> getLetters(@NotNull Integer from, @NotNull Integer to);
 

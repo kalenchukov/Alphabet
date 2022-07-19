@@ -7,6 +7,7 @@
 package dev.kalenchukov.alphabet;
 
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Unmodifiable;
 
 import java.util.List;
 
@@ -18,6 +19,7 @@ public class RussianAlphabet extends AbstractAlphabetCase
 	/**
 	 * Коды прописных букв в Unicode.
 	 */
+	@Unmodifiable
 	@NotNull
 	public static final List<@NotNull Character> LETTERS_UPPER_CASE = List.of(
 		'\u0410', '\u0411', '\u0412', '\u0413', '\u0414', '\u0415',
@@ -31,6 +33,7 @@ public class RussianAlphabet extends AbstractAlphabetCase
 	/**
 	 * Коды строчных букв в Unicode.
 	 */
+	@Unmodifiable
 	@NotNull
 	public static final List<@NotNull Character> LETTERS_LOWER_CASE = List.of(
 		'\u0430', '\u0431', '\u0432', '\u0433', '\u0434', '\u0435',
@@ -44,6 +47,7 @@ public class RussianAlphabet extends AbstractAlphabetCase
 	/**
 	 * Коды букв в Unicode.
 	 */
+	@Unmodifiable
 	@NotNull
 	public static final List<@NotNull Character> LETTERS = List.of(
 		'\u0410', '\u0430', '\u0411', '\u0431', '\u0412', '\u0432',

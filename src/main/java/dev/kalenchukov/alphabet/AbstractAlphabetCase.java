@@ -8,7 +8,7 @@ package dev.kalenchukov.alphabet;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import org.jetbrains.annotations.UnmodifiableView;
+import org.jetbrains.annotations.Unmodifiable;
 
 import java.util.Collections;
 import java.util.List;
@@ -51,7 +51,7 @@ public abstract class AbstractAlphabetCase extends AbstractAlphabet implements A
 	/**
 	 * @see AlphabeticalCase#getLettersUpperCase()
 	 */
-	@UnmodifiableView
+	@Unmodifiable
 	@NotNull
 	@Override
 	public List<@NotNull Character> getLettersUpperCase()
@@ -62,7 +62,7 @@ public abstract class AbstractAlphabetCase extends AbstractAlphabet implements A
 	/**
 	 * @see AlphabeticalCase#getLettersUpperCase(Integer, Integer)
 	 */
-	@UnmodifiableView
+	@Unmodifiable
 	@NotNull
 	@Override
 	public List<@NotNull Character> getLettersUpperCase(@NotNull final Integer from, @NotNull final Integer to)
@@ -76,7 +76,7 @@ public abstract class AbstractAlphabetCase extends AbstractAlphabet implements A
 	/**
 	 * @see AlphabeticalCase#getLettersLowerCase()
 	 */
-	@UnmodifiableView
+	@Unmodifiable
 	@NotNull
 	@Override
 	public List<@NotNull Character> getLettersLowerCase()
@@ -87,7 +87,7 @@ public abstract class AbstractAlphabetCase extends AbstractAlphabet implements A
 	/**
 	 * @see AlphabeticalCase#getLettersLowerCase(Integer, Integer)
 	 */
-	@UnmodifiableView
+	@Unmodifiable
 	@NotNull
 	@Override
 	public List<@NotNull Character> getLettersLowerCase(@NotNull final Integer from, @NotNull final Integer to)
