@@ -85,7 +85,7 @@ public interface AlphabeticalCase extends Alphabetical
 	 * @param letter Буква.
 	 * @return {@code True} если буква принадлежит алфавиту прописных букв, иначе {@code false}.
 	 */
-	boolean isLetterUpperCase(@NotNull final Character letter);
+	boolean hasLetterUpperCase(@NotNull final Character letter);
 
 	/**
 	 * Проверяет принадлежность буквы к алфавиту строчных букв.
@@ -93,5 +93,5 @@ public interface AlphabeticalCase extends Alphabetical
 	 * @param letter Буква.
 	 * @return {@code True} если буква принадлежит алфавиту строчных букв, иначе {@code false}.
 	 */
-	boolean isLetterLowerCase(@NotNull final Character letter);
+	boolean hasLetterLowerCase(@NotNull final Character letter);
 }

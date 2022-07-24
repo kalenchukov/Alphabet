@@ -212,59 +212,59 @@ public class CyrillicAlphabetTest
 	 * Проверяет принадлежность буквы к алфавиту.
 	 */
 	@Test
-	public void testIsLetter()
+	public void testHasLetter()
 	{
-		assertTrue(ALPHABET.isLetter('А'));
-		assertTrue(ALPHABET.isLetter('Б'));
-		assertTrue(ALPHABET.isLetter('В'));
-		assertTrue(ALPHABET.isLetter('Г'));
-		assertTrue(ALPHABET.isLetter('Д'));
-		assertTrue(ALPHABET.isLetter('Е'));
-		assertTrue(ALPHABET.isLetter('Ж'));
-		assertTrue(ALPHABET.isLetter('Ѕ'));
-		assertTrue(ALPHABET.isLetter('З'));
-		assertTrue(ALPHABET.isLetter('И'));
-		assertTrue(ALPHABET.isLetter('І'));
-		assertTrue(ALPHABET.isLetter('К'));
-		assertTrue(ALPHABET.isLetter('Л'));
-		assertTrue(ALPHABET.isLetter('М'));
-		assertTrue(ALPHABET.isLetter('Н'));
-		assertTrue(ALPHABET.isLetter('О'));
-		assertTrue(ALPHABET.isLetter('П'));
-		assertTrue(ALPHABET.isLetter('Р'));
-		assertTrue(ALPHABET.isLetter('С'));
-		assertTrue(ALPHABET.isLetter('Т'));
-		assertTrue(ALPHABET.isLetter('Ꙋ'));
-		assertTrue(ALPHABET.isLetter('Ф'));
-		assertTrue(ALPHABET.isLetter('Х'));
-		assertTrue(ALPHABET.isLetter('Ѡ'));
-		assertTrue(ALPHABET.isLetter('Ц'));
-		assertTrue(ALPHABET.isLetter('Ч'));
-		assertTrue(ALPHABET.isLetter('Ш'));
-		assertTrue(ALPHABET.isLetter('Щ'));
-		assertTrue(ALPHABET.isLetter('Ъ'));
-		assertTrue(ALPHABET.isLetter('Ы'));
-		assertTrue(ALPHABET.isLetter('Ь'));
-		assertTrue(ALPHABET.isLetter('Ѣ'));
-		assertTrue(ALPHABET.isLetter('Ю'));
-		assertTrue(ALPHABET.isLetter('Ꙗ'));
-		assertTrue(ALPHABET.isLetter('Ѥ'));
-		assertTrue(ALPHABET.isLetter('Ѧ'));
-		assertTrue(ALPHABET.isLetter('Ѫ'));
-		assertTrue(ALPHABET.isLetter('Ѩ'));
-		assertTrue(ALPHABET.isLetter('Ѭ'));
-		assertTrue(ALPHABET.isLetter('Ѯ'));
-		assertTrue(ALPHABET.isLetter('Ѱ'));
-		assertTrue(ALPHABET.isLetter('Ѳ'));
-		assertTrue(ALPHABET.isLetter('Ѵ'));
+		assertTrue(ALPHABET.hasLetter('А'));
+		assertTrue(ALPHABET.hasLetter('Б'));
+		assertTrue(ALPHABET.hasLetter('В'));
+		assertTrue(ALPHABET.hasLetter('Г'));
+		assertTrue(ALPHABET.hasLetter('Д'));
+		assertTrue(ALPHABET.hasLetter('Е'));
+		assertTrue(ALPHABET.hasLetter('Ж'));
+		assertTrue(ALPHABET.hasLetter('Ѕ'));
+		assertTrue(ALPHABET.hasLetter('З'));
+		assertTrue(ALPHABET.hasLetter('И'));
+		assertTrue(ALPHABET.hasLetter('І'));
+		assertTrue(ALPHABET.hasLetter('К'));
+		assertTrue(ALPHABET.hasLetter('Л'));
+		assertTrue(ALPHABET.hasLetter('М'));
+		assertTrue(ALPHABET.hasLetter('Н'));
+		assertTrue(ALPHABET.hasLetter('О'));
+		assertTrue(ALPHABET.hasLetter('П'));
+		assertTrue(ALPHABET.hasLetter('Р'));
+		assertTrue(ALPHABET.hasLetter('С'));
+		assertTrue(ALPHABET.hasLetter('Т'));
+		assertTrue(ALPHABET.hasLetter('Ꙋ'));
+		assertTrue(ALPHABET.hasLetter('Ф'));
+		assertTrue(ALPHABET.hasLetter('Х'));
+		assertTrue(ALPHABET.hasLetter('Ѡ'));
+		assertTrue(ALPHABET.hasLetter('Ц'));
+		assertTrue(ALPHABET.hasLetter('Ч'));
+		assertTrue(ALPHABET.hasLetter('Ш'));
+		assertTrue(ALPHABET.hasLetter('Щ'));
+		assertTrue(ALPHABET.hasLetter('Ъ'));
+		assertTrue(ALPHABET.hasLetter('Ы'));
+		assertTrue(ALPHABET.hasLetter('Ь'));
+		assertTrue(ALPHABET.hasLetter('Ѣ'));
+		assertTrue(ALPHABET.hasLetter('Ю'));
+		assertTrue(ALPHABET.hasLetter('Ꙗ'));
+		assertTrue(ALPHABET.hasLetter('Ѥ'));
+		assertTrue(ALPHABET.hasLetter('Ѧ'));
+		assertTrue(ALPHABET.hasLetter('Ѫ'));
+		assertTrue(ALPHABET.hasLetter('Ѩ'));
+		assertTrue(ALPHABET.hasLetter('Ѭ'));
+		assertTrue(ALPHABET.hasLetter('Ѯ'));
+		assertTrue(ALPHABET.hasLetter('Ѱ'));
+		assertTrue(ALPHABET.hasLetter('Ѳ'));
+		assertTrue(ALPHABET.hasLetter('Ѵ'));
 	}
 
 	/**
 	 * Проверяет принадлежность не принадлежащей буквы к алфавиту.
 	 */
 	@Test
-	public void testIsLetterBad()
+	public void testHasLetterBad()
 	{
-		assertFalse(ALPHABET.isLetter('Q'));
+		assertFalse(ALPHABET.hasLetter('Q'));
 	}
 }

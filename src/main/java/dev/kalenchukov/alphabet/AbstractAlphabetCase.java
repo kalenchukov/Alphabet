@@ -99,10 +99,10 @@ public abstract class AbstractAlphabetCase extends AbstractAlphabet implements A
 	}
 
 	/**
-	 * @see AlphabeticalCase#isLetterUpperCase(Character)
+	 * @see AlphabeticalCase#hasLetterUpperCase(Character)
 	 */
 	@Override
-	public boolean isLetterUpperCase(@NotNull final Character letter)
+	public boolean hasLetterUpperCase(@NotNull final Character letter)
 	{
 		Objects.requireNonNull(letter);
 
@@ -110,10 +110,10 @@ public abstract class AbstractAlphabetCase extends AbstractAlphabet implements A
 	}
 
 	/**
-	 * @see AlphabeticalCase#isLetterLowerCase(Character)
+	 * @see AlphabeticalCase#hasLetterLowerCase(Character)
 	 */
 	@Override
-	public boolean isLetterLowerCase(@NotNull final Character letter)
+	public boolean hasLetterLowerCase(@NotNull final Character letter)
 	{
 		Objects.requireNonNull(letter);
 

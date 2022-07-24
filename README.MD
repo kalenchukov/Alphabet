@@ -107,21 +107,21 @@ alphabet.getLettersLowerCase(1, 3);
 ### Проверка принадлежности буквы к алфавиту
 ```java
 AlphabeticalCase alphabet = new RussianAlphabet();
-alphabet.isLetter('ё');
+alphabet.hasLetter('ё');
 // Результат выполнения: true
 ```
 
 ### Проверка принадлежности буквы к алфавиту прописных букв
 ```java
 AlphabeticalCase alphabet = new RussianAlphabet();
-alphabet.isLetterUpeerCase('Я');
+alphabet.hasLetterUpeerCase('Я');
 // Результат выполнения: true
 ```
 
 ### Проверка принадлежности буквы к алфавиту строчных букв
 ```java
 AlphabeticalCase alphabet = new RussianAlphabet();
-alphabet.isLetterLowerCase('ъ');
+alphabet.hasLetterLowerCase('ъ');
 // Результат выполнения: true
 ```
 

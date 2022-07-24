@@ -111,10 +111,10 @@ public abstract class AbstractAlphabet implements Alphabetical
 	}
 
 	/**
-	 * @see Alphabetical#isLetter(Character)
+	 * @see Alphabetical#hasLetter(Character)
 	 */
 	@Override
-	public boolean isLetter(@NotNull final Character letter)
+	public boolean hasLetter(@NotNull final Character letter)
 	{
 		Objects.requireNonNull(letter);
 

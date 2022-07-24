@@ -63,5 +63,5 @@ public interface Alphabetical
 	 * @param letter Буква.
 	 * @return {@code True} если буква принадлежит алфавиту, иначе {@code false}.
 	 */
-	boolean isLetter(@NotNull final Character letter);
+	boolean hasLetter(@NotNull final Character letter);
 }

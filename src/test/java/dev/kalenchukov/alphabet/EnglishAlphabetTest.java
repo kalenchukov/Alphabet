@@ -466,155 +466,155 @@ public class EnglishAlphabetTest
 	 * Проверяет принадлежность буквы к алфавиту.
 	 */
 	@Test
-	public void testIsLetter()
+	public void testHasLetter()
 	{
-		assertTrue(ALPHABET.isLetter('A'));
-		assertTrue(ALPHABET.isLetter('B'));
-		assertTrue(ALPHABET.isLetter('C'));
-		assertTrue(ALPHABET.isLetter('D'));
-		assertTrue(ALPHABET.isLetter('E'));
-		assertTrue(ALPHABET.isLetter('F'));
-		assertTrue(ALPHABET.isLetter('G'));
-		assertTrue(ALPHABET.isLetter('H'));
-		assertTrue(ALPHABET.isLetter('I'));
-		assertTrue(ALPHABET.isLetter('J'));
-		assertTrue(ALPHABET.isLetter('K'));
-		assertTrue(ALPHABET.isLetter('L'));
-		assertTrue(ALPHABET.isLetter('M'));
-		assertTrue(ALPHABET.isLetter('N'));
-		assertTrue(ALPHABET.isLetter('O'));
-		assertTrue(ALPHABET.isLetter('P'));
-		assertTrue(ALPHABET.isLetter('Q'));
-		assertTrue(ALPHABET.isLetter('R'));
-		assertTrue(ALPHABET.isLetter('S'));
-		assertTrue(ALPHABET.isLetter('T'));
-		assertTrue(ALPHABET.isLetter('U'));
-		assertTrue(ALPHABET.isLetter('V'));
-		assertTrue(ALPHABET.isLetter('W'));
-		assertTrue(ALPHABET.isLetter('X'));
-		assertTrue(ALPHABET.isLetter('Y'));
-		assertTrue(ALPHABET.isLetter('Z'));
-		assertTrue(ALPHABET.isLetter('a'));
-		assertTrue(ALPHABET.isLetter('b'));
-		assertTrue(ALPHABET.isLetter('c'));
-		assertTrue(ALPHABET.isLetter('d'));
-		assertTrue(ALPHABET.isLetter('e'));
-		assertTrue(ALPHABET.isLetter('f'));
-		assertTrue(ALPHABET.isLetter('g'));
-		assertTrue(ALPHABET.isLetter('h'));
-		assertTrue(ALPHABET.isLetter('i'));
-		assertTrue(ALPHABET.isLetter('j'));
-		assertTrue(ALPHABET.isLetter('k'));
-		assertTrue(ALPHABET.isLetter('l'));
-		assertTrue(ALPHABET.isLetter('m'));
-		assertTrue(ALPHABET.isLetter('n'));
-		assertTrue(ALPHABET.isLetter('o'));
-		assertTrue(ALPHABET.isLetter('p'));
-		assertTrue(ALPHABET.isLetter('q'));
-		assertTrue(ALPHABET.isLetter('r'));
-		assertTrue(ALPHABET.isLetter('s'));
-		assertTrue(ALPHABET.isLetter('t'));
-		assertTrue(ALPHABET.isLetter('u'));
-		assertTrue(ALPHABET.isLetter('v'));
-		assertTrue(ALPHABET.isLetter('w'));
-		assertTrue(ALPHABET.isLetter('x'));
-		assertTrue(ALPHABET.isLetter('y'));
-		assertTrue(ALPHABET.isLetter('z'));
+		assertTrue(ALPHABET.hasLetter('A'));
+		assertTrue(ALPHABET.hasLetter('B'));
+		assertTrue(ALPHABET.hasLetter('C'));
+		assertTrue(ALPHABET.hasLetter('D'));
+		assertTrue(ALPHABET.hasLetter('E'));
+		assertTrue(ALPHABET.hasLetter('F'));
+		assertTrue(ALPHABET.hasLetter('G'));
+		assertTrue(ALPHABET.hasLetter('H'));
+		assertTrue(ALPHABET.hasLetter('I'));
+		assertTrue(ALPHABET.hasLetter('J'));
+		assertTrue(ALPHABET.hasLetter('K'));
+		assertTrue(ALPHABET.hasLetter('L'));
+		assertTrue(ALPHABET.hasLetter('M'));
+		assertTrue(ALPHABET.hasLetter('N'));
+		assertTrue(ALPHABET.hasLetter('O'));
+		assertTrue(ALPHABET.hasLetter('P'));
+		assertTrue(ALPHABET.hasLetter('Q'));
+		assertTrue(ALPHABET.hasLetter('R'));
+		assertTrue(ALPHABET.hasLetter('S'));
+		assertTrue(ALPHABET.hasLetter('T'));
+		assertTrue(ALPHABET.hasLetter('U'));
+		assertTrue(ALPHABET.hasLetter('V'));
+		assertTrue(ALPHABET.hasLetter('W'));
+		assertTrue(ALPHABET.hasLetter('X'));
+		assertTrue(ALPHABET.hasLetter('Y'));
+		assertTrue(ALPHABET.hasLetter('Z'));
+		assertTrue(ALPHABET.hasLetter('a'));
+		assertTrue(ALPHABET.hasLetter('b'));
+		assertTrue(ALPHABET.hasLetter('c'));
+		assertTrue(ALPHABET.hasLetter('d'));
+		assertTrue(ALPHABET.hasLetter('e'));
+		assertTrue(ALPHABET.hasLetter('f'));
+		assertTrue(ALPHABET.hasLetter('g'));
+		assertTrue(ALPHABET.hasLetter('h'));
+		assertTrue(ALPHABET.hasLetter('i'));
+		assertTrue(ALPHABET.hasLetter('j'));
+		assertTrue(ALPHABET.hasLetter('k'));
+		assertTrue(ALPHABET.hasLetter('l'));
+		assertTrue(ALPHABET.hasLetter('m'));
+		assertTrue(ALPHABET.hasLetter('n'));
+		assertTrue(ALPHABET.hasLetter('o'));
+		assertTrue(ALPHABET.hasLetter('p'));
+		assertTrue(ALPHABET.hasLetter('q'));
+		assertTrue(ALPHABET.hasLetter('r'));
+		assertTrue(ALPHABET.hasLetter('s'));
+		assertTrue(ALPHABET.hasLetter('t'));
+		assertTrue(ALPHABET.hasLetter('u'));
+		assertTrue(ALPHABET.hasLetter('v'));
+		assertTrue(ALPHABET.hasLetter('w'));
+		assertTrue(ALPHABET.hasLetter('x'));
+		assertTrue(ALPHABET.hasLetter('y'));
+		assertTrue(ALPHABET.hasLetter('z'));
 	}
 
 	/**
 	 * Проверяет принадлежность не принадлежащей буквы к алфавиту.
 	 */
 	@Test
-	public void testIsLetterBad()
+	public void testHasLetterBad()
 	{
-		assertFalse(ALPHABET.isLetter('Ы'));
+		assertFalse(ALPHABET.hasLetter('Ы'));
 	}
 
 	/**
 	 * Проверяет принадлежность буквы к алфавиту прописных букв.
 	 */
 	@Test
-	public void testIsLetterUpperCase()
+	public void testHasLetterUpperCase()
 	{
-		assertTrue(ALPHABET_CASE.isLetterUpperCase('A'));
-		assertTrue(ALPHABET_CASE.isLetterUpperCase('B'));
-		assertTrue(ALPHABET_CASE.isLetterUpperCase('C'));
-		assertTrue(ALPHABET_CASE.isLetterUpperCase('D'));
-		assertTrue(ALPHABET_CASE.isLetterUpperCase('E'));
-		assertTrue(ALPHABET_CASE.isLetterUpperCase('F'));
-		assertTrue(ALPHABET_CASE.isLetterUpperCase('G'));
-		assertTrue(ALPHABET_CASE.isLetterUpperCase('H'));
-		assertTrue(ALPHABET_CASE.isLetterUpperCase('I'));
-		assertTrue(ALPHABET_CASE.isLetterUpperCase('J'));
-		assertTrue(ALPHABET_CASE.isLetterUpperCase('K'));
-		assertTrue(ALPHABET_CASE.isLetterUpperCase('L'));
-		assertTrue(ALPHABET_CASE.isLetterUpperCase('M'));
-		assertTrue(ALPHABET_CASE.isLetterUpperCase('N'));
-		assertTrue(ALPHABET_CASE.isLetterUpperCase('O'));
-		assertTrue(ALPHABET_CASE.isLetterUpperCase('P'));
-		assertTrue(ALPHABET_CASE.isLetterUpperCase('Q'));
-		assertTrue(ALPHABET_CASE.isLetterUpperCase('R'));
-		assertTrue(ALPHABET_CASE.isLetterUpperCase('S'));
-		assertTrue(ALPHABET_CASE.isLetterUpperCase('T'));
-		assertTrue(ALPHABET_CASE.isLetterUpperCase('U'));
-		assertTrue(ALPHABET_CASE.isLetterUpperCase('V'));
-		assertTrue(ALPHABET_CASE.isLetterUpperCase('W'));
-		assertTrue(ALPHABET_CASE.isLetterUpperCase('X'));
-		assertTrue(ALPHABET_CASE.isLetterUpperCase('Y'));
-		assertTrue(ALPHABET_CASE.isLetterUpperCase('Z'));
+		assertTrue(ALPHABET_CASE.hasLetterUpperCase('A'));
+		assertTrue(ALPHABET_CASE.hasLetterUpperCase('B'));
+		assertTrue(ALPHABET_CASE.hasLetterUpperCase('C'));
+		assertTrue(ALPHABET_CASE.hasLetterUpperCase('D'));
+		assertTrue(ALPHABET_CASE.hasLetterUpperCase('E'));
+		assertTrue(ALPHABET_CASE.hasLetterUpperCase('F'));
+		assertTrue(ALPHABET_CASE.hasLetterUpperCase('G'));
+		assertTrue(ALPHABET_CASE.hasLetterUpperCase('H'));
+		assertTrue(ALPHABET_CASE.hasLetterUpperCase('I'));
+		assertTrue(ALPHABET_CASE.hasLetterUpperCase('J'));
+		assertTrue(ALPHABET_CASE.hasLetterUpperCase('K'));
+		assertTrue(ALPHABET_CASE.hasLetterUpperCase('L'));
+		assertTrue(ALPHABET_CASE.hasLetterUpperCase('M'));
+		assertTrue(ALPHABET_CASE.hasLetterUpperCase('N'));
+		assertTrue(ALPHABET_CASE.hasLetterUpperCase('O'));
+		assertTrue(ALPHABET_CASE.hasLetterUpperCase('P'));
+		assertTrue(ALPHABET_CASE.hasLetterUpperCase('Q'));
+		assertTrue(ALPHABET_CASE.hasLetterUpperCase('R'));
+		assertTrue(ALPHABET_CASE.hasLetterUpperCase('S'));
+		assertTrue(ALPHABET_CASE.hasLetterUpperCase('T'));
+		assertTrue(ALPHABET_CASE.hasLetterUpperCase('U'));
+		assertTrue(ALPHABET_CASE.hasLetterUpperCase('V'));
+		assertTrue(ALPHABET_CASE.hasLetterUpperCase('W'));
+		assertTrue(ALPHABET_CASE.hasLetterUpperCase('X'));
+		assertTrue(ALPHABET_CASE.hasLetterUpperCase('Y'));
+		assertTrue(ALPHABET_CASE.hasLetterUpperCase('Z'));
 	}
 
 	/**
 	 * Проверяет принадлежность не принадлежащей буквы к алфавиту прописных букв.
 	 */
 	@Test
-	public void testIsLetterUpperCaseBad()
+	public void testHasLetterUpperCaseBad()
 	{
-		assertFalse(ALPHABET_CASE.isLetterUpperCase('x'));
+		assertFalse(ALPHABET_CASE.hasLetterUpperCase('x'));
 	}
 
 	/**
 	 * Проверяет принадлежность буквы к алфавиту строчных букв.
 	 */
 	@Test
-	public void testIsLetterLowerCase()
+	public void testHasLetterLowerCase()
 	{
-		assertTrue(ALPHABET_CASE.isLetterLowerCase('a'));
-		assertTrue(ALPHABET_CASE.isLetterLowerCase('b'));
-		assertTrue(ALPHABET_CASE.isLetterLowerCase('c'));
-		assertTrue(ALPHABET_CASE.isLetterLowerCase('d'));
-		assertTrue(ALPHABET_CASE.isLetterLowerCase('e'));
-		assertTrue(ALPHABET_CASE.isLetterLowerCase('f'));
-		assertTrue(ALPHABET_CASE.isLetterLowerCase('g'));
-		assertTrue(ALPHABET_CASE.isLetterLowerCase('h'));
-		assertTrue(ALPHABET_CASE.isLetterLowerCase('i'));
-		assertTrue(ALPHABET_CASE.isLetterLowerCase('j'));
-		assertTrue(ALPHABET_CASE.isLetterLowerCase('k'));
-		assertTrue(ALPHABET_CASE.isLetterLowerCase('l'));
-		assertTrue(ALPHABET_CASE.isLetterLowerCase('m'));
-		assertTrue(ALPHABET_CASE.isLetterLowerCase('n'));
-		assertTrue(ALPHABET_CASE.isLetterLowerCase('o'));
-		assertTrue(ALPHABET_CASE.isLetterLowerCase('p'));
-		assertTrue(ALPHABET_CASE.isLetterLowerCase('q'));
-		assertTrue(ALPHABET_CASE.isLetterLowerCase('r'));
-		assertTrue(ALPHABET_CASE.isLetterLowerCase('s'));
-		assertTrue(ALPHABET_CASE.isLetterLowerCase('t'));
-		assertTrue(ALPHABET_CASE.isLetterLowerCase('u'));
-		assertTrue(ALPHABET_CASE.isLetterLowerCase('v'));
-		assertTrue(ALPHABET_CASE.isLetterLowerCase('w'));
-		assertTrue(ALPHABET_CASE.isLetterLowerCase('x'));
-		assertTrue(ALPHABET_CASE.isLetterLowerCase('y'));
-		assertTrue(ALPHABET_CASE.isLetterLowerCase('z'));
+		assertTrue(ALPHABET_CASE.hasLetterLowerCase('a'));
+		assertTrue(ALPHABET_CASE.hasLetterLowerCase('b'));
+		assertTrue(ALPHABET_CASE.hasLetterLowerCase('c'));
+		assertTrue(ALPHABET_CASE.hasLetterLowerCase('d'));
+		assertTrue(ALPHABET_CASE.hasLetterLowerCase('e'));
+		assertTrue(ALPHABET_CASE.hasLetterLowerCase('f'));
+		assertTrue(ALPHABET_CASE.hasLetterLowerCase('g'));
+		assertTrue(ALPHABET_CASE.hasLetterLowerCase('h'));
+		assertTrue(ALPHABET_CASE.hasLetterLowerCase('i'));
+		assertTrue(ALPHABET_CASE.hasLetterLowerCase('j'));
+		assertTrue(ALPHABET_CASE.hasLetterLowerCase('k'));
+		assertTrue(ALPHABET_CASE.hasLetterLowerCase('l'));
+		assertTrue(ALPHABET_CASE.hasLetterLowerCase('m'));
+		assertTrue(ALPHABET_CASE.hasLetterLowerCase('n'));
+		assertTrue(ALPHABET_CASE.hasLetterLowerCase('o'));
+		assertTrue(ALPHABET_CASE.hasLetterLowerCase('p'));
+		assertTrue(ALPHABET_CASE.hasLetterLowerCase('q'));
+		assertTrue(ALPHABET_CASE.hasLetterLowerCase('r'));
+		assertTrue(ALPHABET_CASE.hasLetterLowerCase('s'));
+		assertTrue(ALPHABET_CASE.hasLetterLowerCase('t'));
+		assertTrue(ALPHABET_CASE.hasLetterLowerCase('u'));
+		assertTrue(ALPHABET_CASE.hasLetterLowerCase('v'));
+		assertTrue(ALPHABET_CASE.hasLetterLowerCase('w'));
+		assertTrue(ALPHABET_CASE.hasLetterLowerCase('x'));
+		assertTrue(ALPHABET_CASE.hasLetterLowerCase('y'));
+		assertTrue(ALPHABET_CASE.hasLetterLowerCase('z'));
 	}
 
 	/**
 	 * Проверяет принадлежность не принадлежащей буквы к алфавиту строчных букв.
 	 */
 	@Test
-	public void testIsLetterLowerCaseBad()
+	public void testHasLetterLowerCaseBad()
 	{
-		assertFalse(ALPHABET_CASE.isLetterLowerCase('Z'));
+		assertFalse(ALPHABET_CASE.hasLetterLowerCase('Z'));
 	}
 
 }
