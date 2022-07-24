@@ -80,6 +80,24 @@ public interface AlphabeticalCase extends Alphabetical
 	Character getLetterLowerCase(@NotNull Integer position);
 
 	/**
+	 * Возвращает позицию прописной буквы в алфавите.
+	 *
+	 * @param letter Буква.
+	 * @return Позицию прописной буквы в алфавите или {@code null} если буквы нет в алфавите.
+	 */
+	@Nullable
+	Integer getPositionUpperCase(@NotNull Character letter);
+
+	/**
+	 * Возвращает позицию прописной буквы в алфавите.
+	 *
+	 * @param letter Буква.
+	 * @return Позицию прописной буквы в алфавите или {@code null} если буквы нет в алфавите.
+	 */
+	@Nullable
+	Integer getPositionLowerCase(@NotNull Character letter);
+
+	/**
 	 * Проверяет принадлежность буквы к алфавиту прописных букв.
 	 *
 	 * @param letter Буква.

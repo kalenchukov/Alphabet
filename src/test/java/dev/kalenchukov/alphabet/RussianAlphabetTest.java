@@ -286,72 +286,153 @@ public class RussianAlphabetTest
 	public void testGetPosition()
 	{
 		assertEquals(Optional.of(1), Optional.ofNullable(ALPHABET.getPosition('А')));
-		assertEquals(Optional.of(2), Optional.ofNullable(ALPHABET.getPosition('Б')));
-		assertEquals(Optional.of(3), Optional.ofNullable(ALPHABET.getPosition('В')));
-		assertEquals(Optional.of(4), Optional.ofNullable(ALPHABET.getPosition('Г')));
-		assertEquals(Optional.of(5), Optional.ofNullable(ALPHABET.getPosition('Д')));
-		assertEquals(Optional.of(6), Optional.ofNullable(ALPHABET.getPosition('Е')));
-		assertEquals(Optional.of(7), Optional.ofNullable(ALPHABET.getPosition('Ё')));
-		assertEquals(Optional.of(8), Optional.ofNullable(ALPHABET.getPosition('Ж')));
-		assertEquals(Optional.of(9), Optional.ofNullable(ALPHABET.getPosition('З')));
-		assertEquals(Optional.of(10), Optional.ofNullable(ALPHABET.getPosition('И')));
-		assertEquals(Optional.of(11), Optional.ofNullable(ALPHABET.getPosition('Й')));
-		assertEquals(Optional.of(12), Optional.ofNullable(ALPHABET.getPosition('К')));
-		assertEquals(Optional.of(13), Optional.ofNullable(ALPHABET.getPosition('Л')));
-		assertEquals(Optional.of(14), Optional.ofNullable(ALPHABET.getPosition('М')));
-		assertEquals(Optional.of(15), Optional.ofNullable(ALPHABET.getPosition('Н')));
-		assertEquals(Optional.of(16), Optional.ofNullable(ALPHABET.getPosition('О')));
-		assertEquals(Optional.of(17), Optional.ofNullable(ALPHABET.getPosition('П')));
-		assertEquals(Optional.of(18), Optional.ofNullable(ALPHABET.getPosition('Р')));
-		assertEquals(Optional.of(19), Optional.ofNullable(ALPHABET.getPosition('С')));
-		assertEquals(Optional.of(20), Optional.ofNullable(ALPHABET.getPosition('Т')));
-		assertEquals(Optional.of(21), Optional.ofNullable(ALPHABET.getPosition('У')));
-		assertEquals(Optional.of(22), Optional.ofNullable(ALPHABET.getPosition('Ф')));
-		assertEquals(Optional.of(23), Optional.ofNullable(ALPHABET.getPosition('Х')));
-		assertEquals(Optional.of(24), Optional.ofNullable(ALPHABET.getPosition('Ц')));
-		assertEquals(Optional.of(25), Optional.ofNullable(ALPHABET.getPosition('Ч')));
-		assertEquals(Optional.of(26), Optional.ofNullable(ALPHABET.getPosition('Ш')));
-		assertEquals(Optional.of(27), Optional.ofNullable(ALPHABET.getPosition('Щ')));
-		assertEquals(Optional.of(28), Optional.ofNullable(ALPHABET.getPosition('Ъ')));
-		assertEquals(Optional.of(29), Optional.ofNullable(ALPHABET.getPosition('Ы')));
-		assertEquals(Optional.of(30), Optional.ofNullable(ALPHABET.getPosition('Ь')));
-		assertEquals(Optional.of(31), Optional.ofNullable(ALPHABET.getPosition('Э')));
-		assertEquals(Optional.of(32), Optional.ofNullable(ALPHABET.getPosition('Ю')));
-		assertEquals(Optional.of(33), Optional.ofNullable(ALPHABET.getPosition('Я')));
+		assertEquals(Optional.of(2), Optional.ofNullable(ALPHABET.getPosition('а')));
+		assertEquals(Optional.of(3), Optional.ofNullable(ALPHABET.getPosition('Б')));
+		assertEquals(Optional.of(4), Optional.ofNullable(ALPHABET.getPosition('б')));
+		assertEquals(Optional.of(5), Optional.ofNullable(ALPHABET.getPosition('В')));
+		assertEquals(Optional.of(6), Optional.ofNullable(ALPHABET.getPosition('в')));
+		assertEquals(Optional.of(7), Optional.ofNullable(ALPHABET.getPosition('Г')));
+		assertEquals(Optional.of(8), Optional.ofNullable(ALPHABET.getPosition('г')));
+		assertEquals(Optional.of(9), Optional.ofNullable(ALPHABET.getPosition('Д')));
+		assertEquals(Optional.of(10), Optional.ofNullable(ALPHABET.getPosition('д')));
+		assertEquals(Optional.of(11), Optional.ofNullable(ALPHABET.getPosition('Е')));
+		assertEquals(Optional.of(12), Optional.ofNullable(ALPHABET.getPosition('е')));
+		assertEquals(Optional.of(13), Optional.ofNullable(ALPHABET.getPosition('Ё')));
+		assertEquals(Optional.of(14), Optional.ofNullable(ALPHABET.getPosition('ё')));
+		assertEquals(Optional.of(15), Optional.ofNullable(ALPHABET.getPosition('Ж')));
+		assertEquals(Optional.of(16), Optional.ofNullable(ALPHABET.getPosition('ж')));
+		assertEquals(Optional.of(17), Optional.ofNullable(ALPHABET.getPosition('З')));
+		assertEquals(Optional.of(18), Optional.ofNullable(ALPHABET.getPosition('з')));
+		assertEquals(Optional.of(19), Optional.ofNullable(ALPHABET.getPosition('И')));
+		assertEquals(Optional.of(20), Optional.ofNullable(ALPHABET.getPosition('и')));
+		assertEquals(Optional.of(21), Optional.ofNullable(ALPHABET.getPosition('Й')));
+		assertEquals(Optional.of(22), Optional.ofNullable(ALPHABET.getPosition('й')));
+		assertEquals(Optional.of(23), Optional.ofNullable(ALPHABET.getPosition('К')));
+		assertEquals(Optional.of(24), Optional.ofNullable(ALPHABET.getPosition('к')));
+		assertEquals(Optional.of(25), Optional.ofNullable(ALPHABET.getPosition('Л')));
+		assertEquals(Optional.of(26), Optional.ofNullable(ALPHABET.getPosition('л')));
+		assertEquals(Optional.of(27), Optional.ofNullable(ALPHABET.getPosition('М')));
+		assertEquals(Optional.of(28), Optional.ofNullable(ALPHABET.getPosition('м')));
+		assertEquals(Optional.of(29), Optional.ofNullable(ALPHABET.getPosition('Н')));
+		assertEquals(Optional.of(30), Optional.ofNullable(ALPHABET.getPosition('н')));
+		assertEquals(Optional.of(31), Optional.ofNullable(ALPHABET.getPosition('О')));
+		assertEquals(Optional.of(32), Optional.ofNullable(ALPHABET.getPosition('о')));
+		assertEquals(Optional.of(33), Optional.ofNullable(ALPHABET.getPosition('П')));
+		assertEquals(Optional.of(34), Optional.ofNullable(ALPHABET.getPosition('п')));
+		assertEquals(Optional.of(35), Optional.ofNullable(ALPHABET.getPosition('Р')));
+		assertEquals(Optional.of(36), Optional.ofNullable(ALPHABET.getPosition('р')));
+		assertEquals(Optional.of(37), Optional.ofNullable(ALPHABET.getPosition('С')));
+		assertEquals(Optional.of(38), Optional.ofNullable(ALPHABET.getPosition('с')));
+		assertEquals(Optional.of(39), Optional.ofNullable(ALPHABET.getPosition('Т')));
+		assertEquals(Optional.of(40), Optional.ofNullable(ALPHABET.getPosition('т')));
+		assertEquals(Optional.of(41), Optional.ofNullable(ALPHABET.getPosition('У')));
+		assertEquals(Optional.of(42), Optional.ofNullable(ALPHABET.getPosition('у')));
+		assertEquals(Optional.of(43), Optional.ofNullable(ALPHABET.getPosition('Ф')));
+		assertEquals(Optional.of(44), Optional.ofNullable(ALPHABET.getPosition('ф')));
+		assertEquals(Optional.of(45), Optional.ofNullable(ALPHABET.getPosition('Х')));
+		assertEquals(Optional.of(46), Optional.ofNullable(ALPHABET.getPosition('х')));
+		assertEquals(Optional.of(47), Optional.ofNullable(ALPHABET.getPosition('Ц')));
+		assertEquals(Optional.of(48), Optional.ofNullable(ALPHABET.getPosition('ц')));
+		assertEquals(Optional.of(49), Optional.ofNullable(ALPHABET.getPosition('Ч')));
+		assertEquals(Optional.of(50), Optional.ofNullable(ALPHABET.getPosition('ч')));
+		assertEquals(Optional.of(51), Optional.ofNullable(ALPHABET.getPosition('Ш')));
+		assertEquals(Optional.of(52), Optional.ofNullable(ALPHABET.getPosition('ш')));
+		assertEquals(Optional.of(53), Optional.ofNullable(ALPHABET.getPosition('Щ')));
+		assertEquals(Optional.of(54), Optional.ofNullable(ALPHABET.getPosition('щ')));
+		assertEquals(Optional.of(55), Optional.ofNullable(ALPHABET.getPosition('Ъ')));
+		assertEquals(Optional.of(56), Optional.ofNullable(ALPHABET.getPosition('ъ')));
+		assertEquals(Optional.of(57), Optional.ofNullable(ALPHABET.getPosition('Ы')));
+		assertEquals(Optional.of(58), Optional.ofNullable(ALPHABET.getPosition('ы')));
+		assertEquals(Optional.of(59), Optional.ofNullable(ALPHABET.getPosition('Ь')));
+		assertEquals(Optional.of(60), Optional.ofNullable(ALPHABET.getPosition('ь')));
+		assertEquals(Optional.of(61), Optional.ofNullable(ALPHABET.getPosition('Э')));
+		assertEquals(Optional.of(62), Optional.ofNullable(ALPHABET.getPosition('э')));
+		assertEquals(Optional.of(63), Optional.ofNullable(ALPHABET.getPosition('Ю')));
+		assertEquals(Optional.of(64), Optional.ofNullable(ALPHABET.getPosition('ю')));
+		assertEquals(Optional.of(65), Optional.ofNullable(ALPHABET.getPosition('Я')));
+		assertEquals(Optional.of(66), Optional.ofNullable(ALPHABET.getPosition('я')));
+	}
 
-		assertEquals(Optional.of(1), Optional.ofNullable(ALPHABET.getPosition('а')));
-		assertEquals(Optional.of(2), Optional.ofNullable(ALPHABET.getPosition('б')));
-		assertEquals(Optional.of(3), Optional.ofNullable(ALPHABET.getPosition('в')));
-		assertEquals(Optional.of(4), Optional.ofNullable(ALPHABET.getPosition('г')));
-		assertEquals(Optional.of(5), Optional.ofNullable(ALPHABET.getPosition('д')));
-		assertEquals(Optional.of(6), Optional.ofNullable(ALPHABET.getPosition('е')));
-		assertEquals(Optional.of(7), Optional.ofNullable(ALPHABET.getPosition('ё')));
-		assertEquals(Optional.of(8), Optional.ofNullable(ALPHABET.getPosition('ж')));
-		assertEquals(Optional.of(9), Optional.ofNullable(ALPHABET.getPosition('з')));
-		assertEquals(Optional.of(10), Optional.ofNullable(ALPHABET.getPosition('и')));
-		assertEquals(Optional.of(11), Optional.ofNullable(ALPHABET.getPosition('й')));
-		assertEquals(Optional.of(12), Optional.ofNullable(ALPHABET.getPosition('к')));
-		assertEquals(Optional.of(13), Optional.ofNullable(ALPHABET.getPosition('л')));
-		assertEquals(Optional.of(14), Optional.ofNullable(ALPHABET.getPosition('м')));
-		assertEquals(Optional.of(15), Optional.ofNullable(ALPHABET.getPosition('н')));
-		assertEquals(Optional.of(16), Optional.ofNullable(ALPHABET.getPosition('о')));
-		assertEquals(Optional.of(17), Optional.ofNullable(ALPHABET.getPosition('п')));
-		assertEquals(Optional.of(18), Optional.ofNullable(ALPHABET.getPosition('р')));
-		assertEquals(Optional.of(19), Optional.ofNullable(ALPHABET.getPosition('с')));
-		assertEquals(Optional.of(20), Optional.ofNullable(ALPHABET.getPosition('т')));
-		assertEquals(Optional.of(21), Optional.ofNullable(ALPHABET.getPosition('у')));
-		assertEquals(Optional.of(22), Optional.ofNullable(ALPHABET.getPosition('ф')));
-		assertEquals(Optional.of(23), Optional.ofNullable(ALPHABET.getPosition('х')));
-		assertEquals(Optional.of(24), Optional.ofNullable(ALPHABET.getPosition('ц')));
-		assertEquals(Optional.of(25), Optional.ofNullable(ALPHABET.getPosition('ч')));
-		assertEquals(Optional.of(26), Optional.ofNullable(ALPHABET.getPosition('ш')));
-		assertEquals(Optional.of(27), Optional.ofNullable(ALPHABET.getPosition('щ')));
-		assertEquals(Optional.of(28), Optional.ofNullable(ALPHABET.getPosition('ъ')));
-		assertEquals(Optional.of(29), Optional.ofNullable(ALPHABET.getPosition('ы')));
-		assertEquals(Optional.of(30), Optional.ofNullable(ALPHABET.getPosition('ь')));
-		assertEquals(Optional.of(31), Optional.ofNullable(ALPHABET.getPosition('э')));
-		assertEquals(Optional.of(32), Optional.ofNullable(ALPHABET.getPosition('ю')));
-		assertEquals(Optional.of(33), Optional.ofNullable(ALPHABET.getPosition('я')));
+	/**
+	 * Проверяет позиции прописных букв в алфавите.
+	 */
+	@Test
+	public void testGetPositionUpperCase()
+	{
+		assertEquals(Optional.of(1), Optional.ofNullable(ALPHABET_CASE.getPositionUpperCase('А')));
+		assertEquals(Optional.of(2), Optional.ofNullable(ALPHABET_CASE.getPositionUpperCase('Б')));
+		assertEquals(Optional.of(3), Optional.ofNullable(ALPHABET_CASE.getPositionUpperCase('В')));
+		assertEquals(Optional.of(4), Optional.ofNullable(ALPHABET_CASE.getPositionUpperCase('Г')));
+		assertEquals(Optional.of(5), Optional.ofNullable(ALPHABET_CASE.getPositionUpperCase('Д')));
+		assertEquals(Optional.of(6), Optional.ofNullable(ALPHABET_CASE.getPositionUpperCase('Е')));
+		assertEquals(Optional.of(7), Optional.ofNullable(ALPHABET_CASE.getPositionUpperCase('Ё')));
+		assertEquals(Optional.of(8), Optional.ofNullable(ALPHABET_CASE.getPositionUpperCase('Ж')));
+		assertEquals(Optional.of(9), Optional.ofNullable(ALPHABET_CASE.getPositionUpperCase('З')));
+		assertEquals(Optional.of(10), Optional.ofNullable(ALPHABET_CASE.getPositionUpperCase('И')));
+		assertEquals(Optional.of(11), Optional.ofNullable(ALPHABET_CASE.getPositionUpperCase('Й')));
+		assertEquals(Optional.of(12), Optional.ofNullable(ALPHABET_CASE.getPositionUpperCase('К')));
+		assertEquals(Optional.of(13), Optional.ofNullable(ALPHABET_CASE.getPositionUpperCase('Л')));
+		assertEquals(Optional.of(14), Optional.ofNullable(ALPHABET_CASE.getPositionUpperCase('М')));
+		assertEquals(Optional.of(15), Optional.ofNullable(ALPHABET_CASE.getPositionUpperCase('Н')));
+		assertEquals(Optional.of(16), Optional.ofNullable(ALPHABET_CASE.getPositionUpperCase('О')));
+		assertEquals(Optional.of(17), Optional.ofNullable(ALPHABET_CASE.getPositionUpperCase('П')));
+		assertEquals(Optional.of(18), Optional.ofNullable(ALPHABET_CASE.getPositionUpperCase('Р')));
+		assertEquals(Optional.of(19), Optional.ofNullable(ALPHABET_CASE.getPositionUpperCase('С')));
+		assertEquals(Optional.of(20), Optional.ofNullable(ALPHABET_CASE.getPositionUpperCase('Т')));
+		assertEquals(Optional.of(21), Optional.ofNullable(ALPHABET_CASE.getPositionUpperCase('У')));
+		assertEquals(Optional.of(22), Optional.ofNullable(ALPHABET_CASE.getPositionUpperCase('Ф')));
+		assertEquals(Optional.of(23), Optional.ofNullable(ALPHABET_CASE.getPositionUpperCase('Х')));
+		assertEquals(Optional.of(24), Optional.ofNullable(ALPHABET_CASE.getPositionUpperCase('Ц')));
+		assertEquals(Optional.of(25), Optional.ofNullable(ALPHABET_CASE.getPositionUpperCase('Ч')));
+		assertEquals(Optional.of(26), Optional.ofNullable(ALPHABET_CASE.getPositionUpperCase('Ш')));
+		assertEquals(Optional.of(27), Optional.ofNullable(ALPHABET_CASE.getPositionUpperCase('Щ')));
+		assertEquals(Optional.of(28), Optional.ofNullable(ALPHABET_CASE.getPositionUpperCase('Ъ')));
+		assertEquals(Optional.of(29), Optional.ofNullable(ALPHABET_CASE.getPositionUpperCase('Ы')));
+		assertEquals(Optional.of(30), Optional.ofNullable(ALPHABET_CASE.getPositionUpperCase('Ь')));
+		assertEquals(Optional.of(31), Optional.ofNullable(ALPHABET_CASE.getPositionUpperCase('Э')));
+		assertEquals(Optional.of(32), Optional.ofNullable(ALPHABET_CASE.getPositionUpperCase('Ю')));
+		assertEquals(Optional.of(33), Optional.ofNullable(ALPHABET_CASE.getPositionUpperCase('Я')));
+	}
+
+	/**
+	 * Проверяет позиции строчных букв в алфавите.
+	 */
+	@Test
+	public void testGetPositionLowerCase()
+	{
+		assertEquals(Optional.of(1), Optional.ofNullable(ALPHABET_CASE.getPositionLowerCase('а')));
+		assertEquals(Optional.of(2), Optional.ofNullable(ALPHABET_CASE.getPositionLowerCase('б')));
+		assertEquals(Optional.of(3), Optional.ofNullable(ALPHABET_CASE.getPositionLowerCase('в')));
+		assertEquals(Optional.of(4), Optional.ofNullable(ALPHABET_CASE.getPositionLowerCase('г')));
+		assertEquals(Optional.of(5), Optional.ofNullable(ALPHABET_CASE.getPositionLowerCase('д')));
+		assertEquals(Optional.of(6), Optional.ofNullable(ALPHABET_CASE.getPositionLowerCase('е')));
+		assertEquals(Optional.of(7), Optional.ofNullable(ALPHABET_CASE.getPositionLowerCase('ё')));
+		assertEquals(Optional.of(8), Optional.ofNullable(ALPHABET_CASE.getPositionLowerCase('ж')));
+		assertEquals(Optional.of(9), Optional.ofNullable(ALPHABET_CASE.getPositionLowerCase('з')));
+		assertEquals(Optional.of(10), Optional.ofNullable(ALPHABET_CASE.getPositionLowerCase('и')));
+		assertEquals(Optional.of(11), Optional.ofNullable(ALPHABET_CASE.getPositionLowerCase('й')));
+		assertEquals(Optional.of(12), Optional.ofNullable(ALPHABET_CASE.getPositionLowerCase('к')));
+		assertEquals(Optional.of(13), Optional.ofNullable(ALPHABET_CASE.getPositionLowerCase('л')));
+		assertEquals(Optional.of(14), Optional.ofNullable(ALPHABET_CASE.getPositionLowerCase('м')));
+		assertEquals(Optional.of(15), Optional.ofNullable(ALPHABET_CASE.getPositionLowerCase('н')));
+		assertEquals(Optional.of(16), Optional.ofNullable(ALPHABET_CASE.getPositionLowerCase('о')));
+		assertEquals(Optional.of(17), Optional.ofNullable(ALPHABET_CASE.getPositionLowerCase('п')));
+		assertEquals(Optional.of(18), Optional.ofNullable(ALPHABET_CASE.getPositionLowerCase('р')));
+		assertEquals(Optional.of(19), Optional.ofNullable(ALPHABET_CASE.getPositionLowerCase('с')));
+		assertEquals(Optional.of(20), Optional.ofNullable(ALPHABET_CASE.getPositionLowerCase('т')));
+		assertEquals(Optional.of(21), Optional.ofNullable(ALPHABET_CASE.getPositionLowerCase('у')));
+		assertEquals(Optional.of(22), Optional.ofNullable(ALPHABET_CASE.getPositionLowerCase('ф')));
+		assertEquals(Optional.of(23), Optional.ofNullable(ALPHABET_CASE.getPositionLowerCase('х')));
+		assertEquals(Optional.of(24), Optional.ofNullable(ALPHABET_CASE.getPositionLowerCase('ц')));
+		assertEquals(Optional.of(25), Optional.ofNullable(ALPHABET_CASE.getPositionLowerCase('ч')));
+		assertEquals(Optional.of(26), Optional.ofNullable(ALPHABET_CASE.getPositionLowerCase('ш')));
+		assertEquals(Optional.of(27), Optional.ofNullable(ALPHABET_CASE.getPositionLowerCase('щ')));
+		assertEquals(Optional.of(28), Optional.ofNullable(ALPHABET_CASE.getPositionLowerCase('ъ')));
+		assertEquals(Optional.of(29), Optional.ofNullable(ALPHABET_CASE.getPositionLowerCase('ы')));
+		assertEquals(Optional.of(30), Optional.ofNullable(ALPHABET_CASE.getPositionLowerCase('ь')));
+		assertEquals(Optional.of(31), Optional.ofNullable(ALPHABET_CASE.getPositionLowerCase('э')));
+		assertEquals(Optional.of(32), Optional.ofNullable(ALPHABET_CASE.getPositionLowerCase('ю')));
+		assertEquals(Optional.of(33), Optional.ofNullable(ALPHABET_CASE.getPositionLowerCase('я')));
 	}
 
 	/**

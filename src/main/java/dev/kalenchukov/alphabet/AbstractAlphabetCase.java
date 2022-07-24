@@ -121,21 +121,27 @@ public abstract class AbstractAlphabetCase extends AbstractAlphabet implements A
 	}
 
 	/**
-	 * @see Alphabetical#getPosition(Character)
+	 * @see AlphabeticalCase#getPositionUpperCase(Character)
 	 */
 	@Nullable
 	@Override
-	public Integer getPosition(@NotNull final Character letter)
+	public Integer getPositionUpperCase(@NotNull final Character letter)
 	{
 		Objects.requireNonNull(letter);
 
-		Integer position = super.getPosition(this.lettersLowerCase, letter);
-
-		if (position != null) {
-			return position;
-		}
-
 		return super.getPosition(this.lettersUpperCase, letter);
+	}
+
+	/**
+	 * @see AlphabeticalCase#getPositionLowerCase(Character)
+	 */
+	@Nullable
+	@Override
+	public Integer getPositionLowerCase(@NotNull final Character letter)
+	{
+		Objects.requireNonNull(letter);
+
+		return super.getPosition(this.lettersLowerCase, letter);
 	}
 
 	/**
