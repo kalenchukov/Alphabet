@@ -267,67 +267,67 @@ public class GreekAlphabetTest
 	 * Проверяет позицию несуществующей буквы в алфавите.
 	 */
 	@Test
-	public void testGetPositionLetterBadLetter()
+	public void testGetPositionBadLetter()
 	{
-		assertNull(ALPHABET.getPositionLetter('й'));
+		assertNull(ALPHABET.getPosition('й'));
 	}
 
 	/**
 	 * Проверяет позиции букв в алфавите.
 	 */
 	@Test
-	public void testGetPositionLetter()
+	public void testGetPosition()
 	{
-		assertEquals(Optional.of(1), Optional.ofNullable(ALPHABET.getPositionLetter('Α')));
-		assertEquals(Optional.of(2), Optional.ofNullable(ALPHABET.getPositionLetter('Β')));
-		assertEquals(Optional.of(3), Optional.ofNullable(ALPHABET.getPositionLetter('Γ')));
-		assertEquals(Optional.of(4), Optional.ofNullable(ALPHABET.getPositionLetter('Δ')));
-		assertEquals(Optional.of(5), Optional.ofNullable(ALPHABET.getPositionLetter('Ε')));
-		assertEquals(Optional.of(6), Optional.ofNullable(ALPHABET.getPositionLetter('Ζ')));
-		assertEquals(Optional.of(7), Optional.ofNullable(ALPHABET.getPositionLetter('Η')));
-		assertEquals(Optional.of(8), Optional.ofNullable(ALPHABET.getPositionLetter('Θ')));
-		assertEquals(Optional.of(9), Optional.ofNullable(ALPHABET.getPositionLetter('Ι')));
-		assertEquals(Optional.of(10), Optional.ofNullable(ALPHABET.getPositionLetter('Κ')));
-		assertEquals(Optional.of(11), Optional.ofNullable(ALPHABET.getPositionLetter('Λ')));
-		assertEquals(Optional.of(12), Optional.ofNullable(ALPHABET.getPositionLetter('Μ')));
-		assertEquals(Optional.of(13), Optional.ofNullable(ALPHABET.getPositionLetter('Ν')));
-		assertEquals(Optional.of(14), Optional.ofNullable(ALPHABET.getPositionLetter('Ξ')));
-		assertEquals(Optional.of(15), Optional.ofNullable(ALPHABET.getPositionLetter('Ο')));
-		assertEquals(Optional.of(16), Optional.ofNullable(ALPHABET.getPositionLetter('Π')));
-		assertEquals(Optional.of(17), Optional.ofNullable(ALPHABET.getPositionLetter('Ρ')));
-		assertEquals(Optional.of(18), Optional.ofNullable(ALPHABET.getPositionLetter('Σ')));
-		assertEquals(Optional.of(19), Optional.ofNullable(ALPHABET.getPositionLetter('Τ')));
-		assertEquals(Optional.of(20), Optional.ofNullable(ALPHABET.getPositionLetter('Υ')));
-		assertEquals(Optional.of(21), Optional.ofNullable(ALPHABET.getPositionLetter('Φ')));
-		assertEquals(Optional.of(22), Optional.ofNullable(ALPHABET.getPositionLetter('Χ')));
-		assertEquals(Optional.of(23), Optional.ofNullable(ALPHABET.getPositionLetter('Ψ')));
-		assertEquals(Optional.of(24), Optional.ofNullable(ALPHABET.getPositionLetter('Ω')));
+		assertEquals(Optional.of(1), Optional.ofNullable(ALPHABET.getPosition('Α')));
+		assertEquals(Optional.of(2), Optional.ofNullable(ALPHABET.getPosition('Β')));
+		assertEquals(Optional.of(3), Optional.ofNullable(ALPHABET.getPosition('Γ')));
+		assertEquals(Optional.of(4), Optional.ofNullable(ALPHABET.getPosition('Δ')));
+		assertEquals(Optional.of(5), Optional.ofNullable(ALPHABET.getPosition('Ε')));
+		assertEquals(Optional.of(6), Optional.ofNullable(ALPHABET.getPosition('Ζ')));
+		assertEquals(Optional.of(7), Optional.ofNullable(ALPHABET.getPosition('Η')));
+		assertEquals(Optional.of(8), Optional.ofNullable(ALPHABET.getPosition('Θ')));
+		assertEquals(Optional.of(9), Optional.ofNullable(ALPHABET.getPosition('Ι')));
+		assertEquals(Optional.of(10), Optional.ofNullable(ALPHABET.getPosition('Κ')));
+		assertEquals(Optional.of(11), Optional.ofNullable(ALPHABET.getPosition('Λ')));
+		assertEquals(Optional.of(12), Optional.ofNullable(ALPHABET.getPosition('Μ')));
+		assertEquals(Optional.of(13), Optional.ofNullable(ALPHABET.getPosition('Ν')));
+		assertEquals(Optional.of(14), Optional.ofNullable(ALPHABET.getPosition('Ξ')));
+		assertEquals(Optional.of(15), Optional.ofNullable(ALPHABET.getPosition('Ο')));
+		assertEquals(Optional.of(16), Optional.ofNullable(ALPHABET.getPosition('Π')));
+		assertEquals(Optional.of(17), Optional.ofNullable(ALPHABET.getPosition('Ρ')));
+		assertEquals(Optional.of(18), Optional.ofNullable(ALPHABET.getPosition('Σ')));
+		assertEquals(Optional.of(19), Optional.ofNullable(ALPHABET.getPosition('Τ')));
+		assertEquals(Optional.of(20), Optional.ofNullable(ALPHABET.getPosition('Υ')));
+		assertEquals(Optional.of(21), Optional.ofNullable(ALPHABET.getPosition('Φ')));
+		assertEquals(Optional.of(22), Optional.ofNullable(ALPHABET.getPosition('Χ')));
+		assertEquals(Optional.of(23), Optional.ofNullable(ALPHABET.getPosition('Ψ')));
+		assertEquals(Optional.of(24), Optional.ofNullable(ALPHABET.getPosition('Ω')));
 
-		assertEquals(Optional.of(1), Optional.ofNullable(ALPHABET.getPositionLetter('α')));
-		assertEquals(Optional.of(2), Optional.ofNullable(ALPHABET.getPositionLetter('β')));
-		assertEquals(Optional.of(3), Optional.ofNullable(ALPHABET.getPositionLetter('γ')));
-		assertEquals(Optional.of(4), Optional.ofNullable(ALPHABET.getPositionLetter('δ')));
-		assertEquals(Optional.of(5), Optional.ofNullable(ALPHABET.getPositionLetter('ε')));
-		assertEquals(Optional.of(6), Optional.ofNullable(ALPHABET.getPositionLetter('ζ')));
-		assertEquals(Optional.of(7), Optional.ofNullable(ALPHABET.getPositionLetter('η')));
-		assertEquals(Optional.of(8), Optional.ofNullable(ALPHABET.getPositionLetter('θ')));
-		assertEquals(Optional.of(9), Optional.ofNullable(ALPHABET.getPositionLetter('ι')));
-		assertEquals(Optional.of(10), Optional.ofNullable(ALPHABET.getPositionLetter('κ')));
-		assertEquals(Optional.of(11), Optional.ofNullable(ALPHABET.getPositionLetter('λ')));
-		assertEquals(Optional.of(12), Optional.ofNullable(ALPHABET.getPositionLetter('μ')));
-		assertEquals(Optional.of(13), Optional.ofNullable(ALPHABET.getPositionLetter('ν')));
-		assertEquals(Optional.of(14), Optional.ofNullable(ALPHABET.getPositionLetter('ξ')));
-		assertEquals(Optional.of(15), Optional.ofNullable(ALPHABET.getPositionLetter('ο')));
-		assertEquals(Optional.of(16), Optional.ofNullable(ALPHABET.getPositionLetter('π')));
-		assertEquals(Optional.of(17), Optional.ofNullable(ALPHABET.getPositionLetter('ρ')));
-		assertEquals(Optional.of(18), Optional.ofNullable(ALPHABET.getPositionLetter('σ')));
-		assertEquals(Optional.of(19), Optional.ofNullable(ALPHABET.getPositionLetter('ς')));
-		assertEquals(Optional.of(20), Optional.ofNullable(ALPHABET.getPositionLetter('τ')));
-		assertEquals(Optional.of(21), Optional.ofNullable(ALPHABET.getPositionLetter('υ')));
-		assertEquals(Optional.of(22), Optional.ofNullable(ALPHABET.getPositionLetter('φ')));
-		assertEquals(Optional.of(23), Optional.ofNullable(ALPHABET.getPositionLetter('χ')));
-		assertEquals(Optional.of(24), Optional.ofNullable(ALPHABET.getPositionLetter('ψ')));
-		assertEquals(Optional.of(25), Optional.ofNullable(ALPHABET.getPositionLetter('ω')));
+		assertEquals(Optional.of(1), Optional.ofNullable(ALPHABET.getPosition('α')));
+		assertEquals(Optional.of(2), Optional.ofNullable(ALPHABET.getPosition('β')));
+		assertEquals(Optional.of(3), Optional.ofNullable(ALPHABET.getPosition('γ')));
+		assertEquals(Optional.of(4), Optional.ofNullable(ALPHABET.getPosition('δ')));
+		assertEquals(Optional.of(5), Optional.ofNullable(ALPHABET.getPosition('ε')));
+		assertEquals(Optional.of(6), Optional.ofNullable(ALPHABET.getPosition('ζ')));
+		assertEquals(Optional.of(7), Optional.ofNullable(ALPHABET.getPosition('η')));
+		assertEquals(Optional.of(8), Optional.ofNullable(ALPHABET.getPosition('θ')));
+		assertEquals(Optional.of(9), Optional.ofNullable(ALPHABET.getPosition('ι')));
+		assertEquals(Optional.of(10), Optional.ofNullable(ALPHABET.getPosition('κ')));
+		assertEquals(Optional.of(11), Optional.ofNullable(ALPHABET.getPosition('λ')));
+		assertEquals(Optional.of(12), Optional.ofNullable(ALPHABET.getPosition('μ')));
+		assertEquals(Optional.of(13), Optional.ofNullable(ALPHABET.getPosition('ν')));
+		assertEquals(Optional.of(14), Optional.ofNullable(ALPHABET.getPosition('ξ')));
+		assertEquals(Optional.of(15), Optional.ofNullable(ALPHABET.getPosition('ο')));
+		assertEquals(Optional.of(16), Optional.ofNullable(ALPHABET.getPosition('π')));
+		assertEquals(Optional.of(17), Optional.ofNullable(ALPHABET.getPosition('ρ')));
+		assertEquals(Optional.of(18), Optional.ofNullable(ALPHABET.getPosition('σ')));
+		assertEquals(Optional.of(19), Optional.ofNullable(ALPHABET.getPosition('ς')));
+		assertEquals(Optional.of(20), Optional.ofNullable(ALPHABET.getPosition('τ')));
+		assertEquals(Optional.of(21), Optional.ofNullable(ALPHABET.getPosition('υ')));
+		assertEquals(Optional.of(22), Optional.ofNullable(ALPHABET.getPosition('φ')));
+		assertEquals(Optional.of(23), Optional.ofNullable(ALPHABET.getPosition('χ')));
+		assertEquals(Optional.of(24), Optional.ofNullable(ALPHABET.getPosition('ψ')));
+		assertEquals(Optional.of(25), Optional.ofNullable(ALPHABET.getPosition('ω')));
 	}
 
 	/**

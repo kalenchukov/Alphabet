@@ -128,7 +128,7 @@ alphabet.hasLetterLowerCase('ъ');
 ### Получение позиции буквы в алфавите
 ```java
 AlphabeticalCase alphabet = new RussianAlphabet();
-alphabet.getPositionLetter('ё');
+alphabet.getPosition('ё');
 // Результат выполнения: 7
 ```
 

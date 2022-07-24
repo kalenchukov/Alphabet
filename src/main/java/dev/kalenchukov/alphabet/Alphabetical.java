@@ -46,7 +46,7 @@ public interface Alphabetical
 	 * @return Позицию буквы в алфавите или {@code null} если буквы нет в алфавите.
 	 */
 	@Nullable
-	Integer getPositionLetter(@NotNull Character letter);
+	Integer getPosition(@NotNull Character letter);
 
 	/**
 	 * Возвращает букву алфавита.

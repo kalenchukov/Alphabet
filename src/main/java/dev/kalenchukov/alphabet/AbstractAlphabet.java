@@ -118,19 +118,19 @@ public abstract class AbstractAlphabet implements Alphabetical
 	{
 		Objects.requireNonNull(letter);
 
-		return this.getPositionLetter(this.letters, letter) != null;
+		return this.getPosition(this.letters, letter) != null;
 	}
 
 	/**
-	 * @see Alphabetical#getPositionLetter(Character)
+	 * @see Alphabetical#getPosition(Character)
 	 */
 	@Nullable
 	@Override
-	public Integer getPositionLetter(@NotNull final Character letter)
+	public Integer getPosition(@NotNull final Character letter)
 	{
 		Objects.requireNonNull(letter);
 
-		return this.getPositionLetter(this.letters, letter);
+		return this.getPosition(this.letters, letter);
 	}
 
 	/**
@@ -141,7 +141,7 @@ public abstract class AbstractAlphabet implements Alphabetical
 	 * @return Позицию буквы в алфавите.
 	 */
 	@Nullable
-	protected Integer getPositionLetter(@NotNull final List<@NotNull Character> alphabet, @NotNull final Character letter)
+	protected Integer getPosition(@NotNull final List<@NotNull Character> alphabet, @NotNull final Character letter)
 	{
 		Objects.requireNonNull(letter);
 
