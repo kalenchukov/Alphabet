@@ -267,4 +267,57 @@ public class CyrillicAlphabetTest
 	{
 		assertFalse(ALPHABET.hasLetter('Q'));
 	}
+
+	/**
+	 * Проверяет буквы алфавита в обратном порядке.
+	 */
+	@Test
+	public void testGetLettersReverse()
+	{
+		List<Character> letters = ALPHABET.getLettersReverse();
+
+		assertEquals(Optional.of('А'), Optional.ofNullable(letters.get(42)));
+		assertEquals(Optional.of('Б'), Optional.ofNullable(letters.get(41)));
+		assertEquals(Optional.of('В'), Optional.ofNullable(letters.get(40)));
+		assertEquals(Optional.of('Г'), Optional.ofNullable(letters.get(39)));
+		assertEquals(Optional.of('Д'), Optional.ofNullable(letters.get(38)));
+		assertEquals(Optional.of('Е'), Optional.ofNullable(letters.get(37)));
+		assertEquals(Optional.of('Ж'), Optional.ofNullable(letters.get(36)));
+		assertEquals(Optional.of('Ѕ'), Optional.ofNullable(letters.get(35)));
+		assertEquals(Optional.of('З'), Optional.ofNullable(letters.get(34)));
+		assertEquals(Optional.of('И'), Optional.ofNullable(letters.get(33)));
+		assertEquals(Optional.of('І'), Optional.ofNullable(letters.get(32)));
+		assertEquals(Optional.of('К'), Optional.ofNullable(letters.get(31)));
+		assertEquals(Optional.of('Л'), Optional.ofNullable(letters.get(30)));
+		assertEquals(Optional.of('М'), Optional.ofNullable(letters.get(29)));
+		assertEquals(Optional.of('Н'), Optional.ofNullable(letters.get(28)));
+		assertEquals(Optional.of('О'), Optional.ofNullable(letters.get(27)));
+		assertEquals(Optional.of('П'), Optional.ofNullable(letters.get(26)));
+		assertEquals(Optional.of('Р'), Optional.ofNullable(letters.get(25)));
+		assertEquals(Optional.of('С'), Optional.ofNullable(letters.get(24)));
+		assertEquals(Optional.of('Т'), Optional.ofNullable(letters.get(23)));
+		assertEquals(Optional.of('Ꙋ'), Optional.ofNullable(letters.get(22)));
+		assertEquals(Optional.of('Ф'), Optional.ofNullable(letters.get(21)));
+		assertEquals(Optional.of('Х'), Optional.ofNullable(letters.get(20)));
+		assertEquals(Optional.of('Ѡ'), Optional.ofNullable(letters.get(19)));
+		assertEquals(Optional.of('Ц'), Optional.ofNullable(letters.get(18)));
+		assertEquals(Optional.of('Ч'), Optional.ofNullable(letters.get(17)));
+		assertEquals(Optional.of('Ш'), Optional.ofNullable(letters.get(16)));
+		assertEquals(Optional.of('Щ'), Optional.ofNullable(letters.get(15)));
+		assertEquals(Optional.of('Ъ'), Optional.ofNullable(letters.get(14)));
+		assertEquals(Optional.of('Ы'), Optional.ofNullable(letters.get(13)));
+		assertEquals(Optional.of('Ь'), Optional.ofNullable(letters.get(12)));
+		assertEquals(Optional.of('Ѣ'), Optional.ofNullable(letters.get(11)));
+		assertEquals(Optional.of('Ю'), Optional.ofNullable(letters.get(10)));
+		assertEquals(Optional.of('Ꙗ'), Optional.ofNullable(letters.get(9)));
+		assertEquals(Optional.of('Ѥ'), Optional.ofNullable(letters.get(8)));
+		assertEquals(Optional.of('Ѧ'), Optional.ofNullable(letters.get(7)));
+		assertEquals(Optional.of('Ѫ'), Optional.ofNullable(letters.get(6)));
+		assertEquals(Optional.of('Ѩ'), Optional.ofNullable(letters.get(5)));
+		assertEquals(Optional.of('Ѭ'), Optional.ofNullable(letters.get(4)));
+		assertEquals(Optional.of('Ѯ'), Optional.ofNullable(letters.get(3)));
+		assertEquals(Optional.of('Ѱ'), Optional.ofNullable(letters.get(2)));
+		assertEquals(Optional.of('Ѳ'), Optional.ofNullable(letters.get(1)));
+		assertEquals(Optional.of('Ѵ'), Optional.ofNullable(letters.get(0)));
+	}
 }

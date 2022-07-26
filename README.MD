@@ -30,6 +30,23 @@ alphabet.getLetters();
 RussianAlphabet.LETTERS;
 ```
 
+### Получение букв алфавита в обратном порядке
+```java
+Alphabetical alphabet = new RussianAlphabet();
+alphabet.getLettersReverse();
+/*
+Результат выполнения:
+[
+    я, Я, ю, Ю, э, Э, ь, Ь, ы, Ы, ъ, Ъ,
+    щ, Щ, ш, Ш, ч, Ч, ц, Ц, х, Х, ф, Ф, 
+    у, У, т, Т, с, С, р, Р, п, П, о, О, 
+    н, Н, м, М, л, Л, к, К, й, Й, и, И, 
+    з, З, ж, Ж, ё, Ё, е, Е, д, Д, г, Г, 
+    в, В, б, Б, а, А
+]
+*/
+```
+
 ### Получение среза букв алфавита
 ```java
 Alphabetical alphabet = new RussianAlphabet();
@@ -61,6 +78,20 @@ alphabet.getLettersUpperCase();
 RussianAlphabet.LETTERS_UPPER_CASE;
 ```
 
+### Получение прописных букв алфавита в обратном порядке
+```java
+AlphabeticalCase alphabet = new RussianAlphabet();
+alphabet.getLettersReverseUpperCase();
+/*
+Результат выполнения:
+[
+    Я, Ю, Э, Ь, Ы, Ъ, Щ, Ш, Ч, Ц, Х, 
+    Ф, У, Т, С, Р, П, О, Н, М, Л, К, 
+    Й, И, З, Ж, Ё, Е, Д, Г, В, Б, А
+]
+*/
+```
+
 ### Получение среза прописных букв алфавита
 ```java
 AlphabeticalCase alphabet = new RussianAlphabet();
@@ -90,6 +121,20 @@ alphabet.getLettersLowerCase();
 Аналог в виде константы:
 ```java
 RussianAlphabet.LETTERS_LOWER_CASE;
+```
+
+### Получение строчных букв алфавита в обратном порядке
+```java
+AlphabeticalCase alphabet = new RussianAlphabet();
+alphabet.getLettersReverseLowerCase();
+/*
+Результат выполнения:
+[
+    я, ю, э, ь, ы, ъ, щ, ш, ч, ц, х, 
+    ф, у, т, с, р, п, о, н, м, л, к, 
+    й, и, з, ж, ё, е, д, г, в, б, а
+]
+*/
 ```
 
 ### Получение среза строчных букв алфавита

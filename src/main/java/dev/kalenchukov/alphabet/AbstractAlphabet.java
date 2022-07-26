@@ -10,6 +10,7 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jetbrains.annotations.Unmodifiable;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
@@ -153,5 +154,34 @@ public abstract class AbstractAlphabet implements Alphabetical
 		}
 
 		return null;
+	}
+
+	/**
+	 * @see Alphabetical#getLettersReverse()
+	 */
+	@NotNull
+	@Unmodifiable
+	@Override
+	public List<@NotNull Character> getLettersReverse()
+	{
+		return Collections.unmodifiableList(this.getLettersReverse(this.letters));
+	}
+
+	/**
+	 * Возвращает буквы алфавита в обратном порядке.
+	 *
+	 * @param alphabet Алфавит.
+	 * @return Коллекция букв алфавита.
+	 */
+	@NotNull
+	protected List<@NotNull Character> getLettersReverse(@NotNull final List<@NotNull Character> alphabet)
+	{
+		List<Character> alphabetReverse = new ArrayList<>(alphabet.size());
+
+		for (int i = alphabet.size() - 1; i >= 0; i--) {
+			alphabetReverse.add(alphabet.get(i));
+		}
+
+		return alphabetReverse;
 	}
 }

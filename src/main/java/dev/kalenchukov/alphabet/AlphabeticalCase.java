@@ -112,4 +112,22 @@ public interface AlphabeticalCase extends Alphabetical
 	 * @return {@code True} если буква принадлежит алфавиту строчных букв, иначе {@code false}.
 	 */
 	boolean hasLetterLowerCase(@NotNull final Character letter);
+
+	/**
+	 * Возвращает прописные буквы алфавита в обратном порядке.
+	 *
+	 * @return Коллекция прописных букв алфавита.
+	 */
+	@Unmodifiable
+	@NotNull
+	List<@NotNull Character> getLettersReverseUpperCase();
+
+	/**
+	 * Возвращает строчные буквы алфавита в обратном порядке.
+	 *
+	 * @return Коллекция строчных букв алфавита.
+	 */
+	@Unmodifiable
+	@NotNull
+	List<@NotNull Character> getLettersReverseLowerCase();
 }

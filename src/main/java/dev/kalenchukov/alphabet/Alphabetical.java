@@ -64,4 +64,13 @@ public interface Alphabetical
 	 * @return {@code True} если буква принадлежит алфавиту, иначе {@code false}.
 	 */
 	boolean hasLetter(@NotNull final Character letter);
+
+	/**
+	 * Возвращает буквы алфавита в обратном порядке.
+	 *
+	 * @return Коллекция букв алфавита.
+	 */
+	@Unmodifiable
+	@NotNull
+	List<@NotNull Character> getLettersReverse();
 }

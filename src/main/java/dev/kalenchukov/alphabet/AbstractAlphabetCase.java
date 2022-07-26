@@ -181,4 +181,26 @@ public abstract class AbstractAlphabetCase extends AbstractAlphabet implements A
 			return null;
 		}
 	}
+
+	/**
+	 * @see AlphabeticalCase#getLettersReverseUpperCase()
+	 */
+	@Unmodifiable
+	@NotNull
+	@Override
+	public List<@NotNull Character> getLettersReverseUpperCase()
+	{
+		return Collections.unmodifiableList(super.getLettersReverse(this.lettersUpperCase));
+	}
+
+	/**
+	 * @see AlphabeticalCase#getLettersReverseLowerCase()
+	 */
+	@Unmodifiable
+	@NotNull
+	@Override
+	public List<@NotNull Character> getLettersReverseLowerCase()
+	{
+		return Collections.unmodifiableList(super.getLettersReverse(this.lettersLowerCase));
+	}
 }
