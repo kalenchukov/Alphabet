@@ -24,7 +24,7 @@ public abstract class AbstractAlphabet implements Alphabetical
 	 * Буквы алфавита.
 	 */
 	@NotNull
-	protected final List<@NotNull Character> letters;
+	private final List<@NotNull Character> letters;
 
 	/**
 	 * Конструктор для {@code AbstractAlphabet}.

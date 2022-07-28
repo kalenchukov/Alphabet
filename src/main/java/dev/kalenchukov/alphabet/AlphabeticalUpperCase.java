@@ -7,9 +7,9 @@
 package dev.kalenchukov.alphabet;
 
 /**
- * Интерфейс для реализации регистровых алфавитов.
+ * Интерфейс для реализации алфавита прописных букв.
  */
-public interface AlphabeticalCase extends Alphabetical
+public interface AlphabeticalUpperCase extends Alphabetical
 {
 
 }

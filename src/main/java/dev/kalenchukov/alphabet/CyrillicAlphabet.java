@@ -12,7 +12,7 @@ import org.jetbrains.annotations.Unmodifiable;
 import java.util.List;
 
 /**
- * Класс кириллического алфавита.
+ * Класс букв кириллического алфавита.
  */
 public class CyrillicAlphabet extends AbstractAlphabet
 {
@@ -34,6 +34,6 @@ public class CyrillicAlphabet extends AbstractAlphabet
 	 */
 	public CyrillicAlphabet()
 	{
-		super(LETTERS);
+		super(CyrillicAlphabet.LETTERS);
 	}
 }

@@ -8,6 +8,8 @@
 * Английский
 * Греческий
 
+## Буквы алфавита
+
 ### Получение букв алфавита
 ```java
 Alphabetical alphabet = new RussianAlphabet();
@@ -59,10 +61,33 @@ alphabet.getLetters(1, 3);
 */
 ```
 
+### Проверка принадлежности буквы к алфавиту
+```java
+Alphabetical alphabet = new RussianAlphabet();
+alphabet.hasLetter('ё');
+// Результат выполнения: true
+```
+
+### Получение буквы по позиции в алфавите
+```java
+Alphabetical alphabet = new RussianAlphabet();
+alphabet.getLetter(29);
+// Результат выполнения: с
+```
+
+### Получение позиции буквы в алфавите
+```java
+Alphabetical alphabet = new RussianAlphabet();
+alphabet.getPosition('ё');
+// Результат выполнения: 14
+```
+
+## Прописные буквы алфавита
+
 ### Получение прописных букв алфавита
 ```java
-AlphabeticalCase alphabet = new RussianAlphabet();
-alphabet.getLettersUpperCase();
+Alphabetical alphabet = new RussianAlphabet.UpperCase();
+alphabet.getLetters();
 /*
 Результат выполнения:
 [
@@ -75,13 +100,13 @@ alphabet.getLettersUpperCase();
 
 Аналог в виде константы:
 ```java
-RussianAlphabet.LETTERS_UPPER_CASE;
+RussianAlphabet.UpperCase.LETTERS;
 ```
 
 ### Получение прописных букв алфавита в обратном порядке
 ```java
-AlphabeticalCase alphabet = new RussianAlphabet();
-alphabet.getLettersReverseUpperCase();
+Alphabetical alphabet = new RussianAlphabet.UpperCase();
+alphabet.getLettersReverse();
 /*
 Результат выполнения:
 [
@@ -94,8 +119,8 @@ alphabet.getLettersReverseUpperCase();
 
 ### Получение среза прописных букв алфавита
 ```java
-AlphabeticalCase alphabet = new RussianAlphabet();
-alphabet.getLettersUpperCase(1, 3);
+Alphabetical alphabet = new RussianAlphabet.UpperCase();
+alphabet.getLetters(1, 3);
 /*
 Результат выполнения:
 [
@@ -104,10 +129,33 @@ alphabet.getLettersUpperCase(1, 3);
 */
 ```
 
+### Проверка принадлежности буквы к алфавиту прописных букв
+```java
+Alphabetical alphabet = new RussianAlphabet.UpeerCase();
+alphabet.hasLetter('Я');
+// Результат выполнения: true
+```
+
+### Получение прописной буквы по позиции в алфавите
+```java
+Alphabetical alphabet = new RussianAlphabet.UpperCase();
+alphabet.getLetter(29);
+// Результат выполнения: Ы
+```
+
+### Получение позиции буквы в алфавите
+```java
+Alphabetical alphabet = new RussianAlphabet.UpperCase();
+alphabet.getPosition('Ё');
+// Результат выполнения: 7
+```
+
+## Строчные буквы алфавита
+
 ### Получение строчных букв алфавита
 ```java
-AlphabeticalCase alphabet = new RussianAlphabet();
-alphabet.getLettersLowerCase();
+Alphabetical alphabet = new RussianAlphabet.LowerCase();
+alphabet.getLetters();
 /*
 Результат выполнения:
 [
@@ -120,13 +168,13 @@ alphabet.getLettersLowerCase();
 
 Аналог в виде константы:
 ```java
-RussianAlphabet.LETTERS_LOWER_CASE;
+RussianAlphabet.LowerCase.LETTERS;
 ```
 
 ### Получение строчных букв алфавита в обратном порядке
 ```java
-AlphabeticalCase alphabet = new RussianAlphabet();
-alphabet.getLettersReverseLowerCase();
+Alphabetical alphabet = new RussianAlphabet.LowerCase();
+alphabet.getLettersReverse();
 /*
 Результат выполнения:
 [
@@ -139,8 +187,8 @@ alphabet.getLettersReverseLowerCase();
 
 ### Получение среза строчных букв алфавита
 ```java
-AlphabeticalCase alphabet = new RussianAlphabet();
-alphabet.getLettersLowerCase(1, 3);
+Alphabetical alphabet = new RussianAlphabet.LowerCase();
+alphabet.getLetters(1, 3);
 /*
 Результат выполнения:
 [
@@ -149,44 +197,23 @@ alphabet.getLettersLowerCase(1, 3);
 */
 ```
 
-### Проверка принадлежности буквы к алфавиту
-```java
-AlphabeticalCase alphabet = new RussianAlphabet();
-alphabet.hasLetter('ё');
-// Результат выполнения: true
-```
-
-### Проверка принадлежности буквы к алфавиту прописных букв
-```java
-AlphabeticalCase alphabet = new RussianAlphabet();
-alphabet.hasLetterUpeerCase('Я');
-// Результат выполнения: true
-```
-
 ### Проверка принадлежности буквы к алфавиту строчных букв
 ```java
-AlphabeticalCase alphabet = new RussianAlphabet();
-alphabet.hasLetterLowerCase('ъ');
+Alphabetical alphabet = new RussianAlphabet.LowerCase();
+alphabet.hasLetter('ъ');
 // Результат выполнения: true
-```
-
-### Получение позиции буквы в алфавите
-```java
-AlphabeticalCase alphabet = new RussianAlphabet();
-alphabet.getPosition('ё');
-// Результат выполнения: 7
-```
-
-### Получение прописной буквы по позиции в алфавите
-```java
-AlphabeticalCase alphabet = new RussianAlphabet();
-alphabet.getLetterUpperCase(29);
-// Результат выполнения: Ы
 ```
 
 ### Получение строчной буквы по позиции в алфавите
 ```java
-AlphabeticalCase alphabet = new RussianAlphabet();
-alphabet.getLetterLowerCase(29);
+Alphabetical alphabet = new RussianAlphabet.LowerCase();
+alphabet.getLetter(29);
 // Результат выполнения: ы
+```
+
+### Получение позиции буквы в алфавите
+```java
+Alphabetical alphabet = new RussianAlphabet.LowerCase();
+alphabet.getPosition('ё');
+// Результат выполнения: 7
 ```

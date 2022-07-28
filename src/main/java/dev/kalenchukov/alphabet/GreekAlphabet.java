@@ -12,35 +12,10 @@ import org.jetbrains.annotations.Unmodifiable;
 import java.util.List;
 
 /**
- * Класс греческого алфавита.
+ * Класс букв греческого алфавита.
  */
-public class GreekAlphabet extends AbstractAlphabetCase
+public class GreekAlphabet extends AbstractAlphabet implements AlphabeticalCase
 {
-	/**
-	 * Коды прописных букв в Unicode.
-	 */
-	@Unmodifiable
-	@NotNull
-	public static final List<@NotNull Character> LETTERS_UPPER_CASE = List.of(
-		'\u0391', '\u0392', '\u0393', '\u0394', '\u0395', '\u0396',
-		'\u0397', '\u0398', '\u0399', '\u039A', '\u039B', '\u039C',
-		'\u039D', '\u039E', '\u039F', '\u03A0', '\u03A1', '\u03A3',
-		'\u03A4', '\u03A5', '\u03A6', '\u03A7', '\u03A8', '\u03A9'
-	);
-
-	/**
-	 * Коды строчных букв в Unicode.
-	 */
-	@Unmodifiable
-	@NotNull
-	public static final List<@NotNull Character> LETTERS_LOWER_CASE = List.of(
-		'\u03B1', '\u03B2', '\u03B3', '\u03B4', '\u03B5', '\u03B6',
-		'\u03B7', '\u03B8', '\u03B9', '\u03BA', '\u03BB', '\u03BC',
-		'\u03BD', '\u03BE', '\u03BF', '\u03C0', '\u03C1', '\u03C3',
-		'\u03C2', '\u03C4', '\u03C5', '\u03C6', '\u03C7', '\u03C8',
-		'\u03C9'
-	);
-
 	/**
 	 * Коды букв в Unicode.
 	 */
@@ -63,6 +38,59 @@ public class GreekAlphabet extends AbstractAlphabetCase
 	 */
 	public GreekAlphabet()
 	{
-		super(LETTERS, LETTERS_UPPER_CASE, LETTERS_LOWER_CASE);
+		super(GreekAlphabet.LETTERS);
+	}
+
+	/**
+	 * Класс прописных букв греческого алфавита.
+	 */
+	public static class UpperCase extends AbstractAlphabet implements AlphabeticalUpperCase
+	{
+		/**
+		 * Коды прописных букв в Unicode.
+		 */
+		@Unmodifiable
+		@NotNull
+		public static final List<@NotNull Character> LETTERS = List.of(
+			'\u0391', '\u0392', '\u0393', '\u0394', '\u0395', '\u0396',
+			'\u0397', '\u0398', '\u0399', '\u039A', '\u039B', '\u039C',
+			'\u039D', '\u039E', '\u039F', '\u03A0', '\u03A1', '\u03A3',
+			'\u03A4', '\u03A5', '\u03A6', '\u03A7', '\u03A8', '\u03A9'
+		);
+
+		/**
+		 * Конструктор для {@code GreekAlphabet.UpperCase}.
+		 */
+		public UpperCase()
+		{
+			super(GreekAlphabet.UpperCase.LETTERS);
+		}
+	}
+
+	/**
+	 * Класс строчных букв греческого алфавита.
+	 */
+	public static class LowerCase extends AbstractAlphabet implements AlphabeticalLowerCase
+	{
+		/**
+		 * Коды строчных букв в Unicode.
+		 */
+		@Unmodifiable
+		@NotNull
+		public static final List<@NotNull Character> LETTERS = List.of(
+			'\u03B1', '\u03B2', '\u03B3', '\u03B4', '\u03B5', '\u03B6',
+			'\u03B7', '\u03B8', '\u03B9', '\u03BA', '\u03BB', '\u03BC',
+			'\u03BD', '\u03BE', '\u03BF', '\u03C0', '\u03C1', '\u03C3',
+			'\u03C2', '\u03C4', '\u03C5', '\u03C6', '\u03C7', '\u03C8',
+			'\u03C9'
+		);
+
+		/**
+		 * Конструктор для {@code GreekAlphabet.LowerCase}.
+		 */
+		public LowerCase()
+		{
+			super(GreekAlphabet.LowerCase.LETTERS);
+		}
 	}
 }
