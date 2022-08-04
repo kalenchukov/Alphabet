@@ -1,16 +1,21 @@
 # Alphabet
+
 Алфавиты языков мира.
 
 ### Список поддерживаемых алфавитов
+
 * Русский
 * Белорусский
 * Кириллица
 * Английский
 * Греческий
 
-## Буквы алфавита
+## Использование
 
-### Получение букв алфавита
+### Буквы алфавита
+
+#### Получение букв алфавита
+
 ```java
 Alphabetical alphabet = new RussianAlphabet();
 alphabet.getLetters();
@@ -28,11 +33,13 @@ alphabet.getLetters();
 ```
 
 Аналог в виде константы:
+
 ```java
 RussianAlphabet.LETTERS;
 ```
 
-### Получение букв алфавита в обратном порядке
+#### Получение букв алфавита в обратном порядке
+
 ```java
 Alphabetical alphabet = new RussianAlphabet();
 alphabet.getLettersReverse();
@@ -49,7 +56,8 @@ alphabet.getLettersReverse();
 */
 ```
 
-### Получение среза букв алфавита
+#### Получение среза букв алфавита
+
 ```java
 Alphabetical alphabet = new RussianAlphabet();
 alphabet.getLetters(1, 3);
@@ -61,30 +69,34 @@ alphabet.getLetters(1, 3);
 */
 ```
 
-### Проверка принадлежности буквы к алфавиту
+#### Проверка принадлежности буквы к алфавиту
+
 ```java
 Alphabetical alphabet = new RussianAlphabet();
 alphabet.hasLetter('ё');
 // Результат выполнения: true
 ```
 
-### Получение буквы по позиции в алфавите
+#### Получение буквы по позиции в алфавите
+
 ```java
 Alphabetical alphabet = new RussianAlphabet();
 alphabet.getLetter(29);
 // Результат выполнения: с
 ```
 
-### Получение позиции буквы в алфавите
+#### Получение позиции буквы в алфавите
+
 ```java
 Alphabetical alphabet = new RussianAlphabet();
 alphabet.getPosition('ё');
 // Результат выполнения: 14
 ```
 
-## Прописные буквы алфавита
+### Прописные буквы алфавита
 
-### Получение прописных букв алфавита
+#### Получение прописных букв алфавита
+
 ```java
 Alphabetical alphabet = new RussianAlphabet.UpperCase();
 alphabet.getLetters();
@@ -99,11 +111,13 @@ alphabet.getLetters();
 ```
 
 Аналог в виде константы:
+
 ```java
 RussianAlphabet.UpperCase.LETTERS;
 ```
 
-### Получение прописных букв алфавита в обратном порядке
+#### Получение прописных букв алфавита в обратном порядке
+
 ```java
 Alphabetical alphabet = new RussianAlphabet.UpperCase();
 alphabet.getLettersReverse();
@@ -117,7 +131,8 @@ alphabet.getLettersReverse();
 */
 ```
 
-### Получение среза прописных букв алфавита
+#### Получение среза прописных букв алфавита
+
 ```java
 Alphabetical alphabet = new RussianAlphabet.UpperCase();
 alphabet.getLetters(1, 3);
@@ -129,30 +144,34 @@ alphabet.getLetters(1, 3);
 */
 ```
 
-### Проверка принадлежности буквы к алфавиту прописных букв
+#### Проверка принадлежности буквы к алфавиту прописных букв
+
 ```java
 Alphabetical alphabet = new RussianAlphabet.UpeerCase();
 alphabet.hasLetter('Я');
 // Результат выполнения: true
 ```
 
-### Получение прописной буквы по позиции в алфавите
+#### Получение прописной буквы по позиции в алфавите
+
 ```java
 Alphabetical alphabet = new RussianAlphabet.UpperCase();
 alphabet.getLetter(29);
 // Результат выполнения: Ы
 ```
 
-### Получение позиции буквы в алфавите
+#### Получение позиции буквы в алфавите
+
 ```java
 Alphabetical alphabet = new RussianAlphabet.UpperCase();
 alphabet.getPosition('Ё');
 // Результат выполнения: 7
 ```
 
-## Строчные буквы алфавита
+### Строчные буквы алфавита
 
-### Получение строчных букв алфавита
+#### Получение строчных букв алфавита
+
 ```java
 Alphabetical alphabet = new RussianAlphabet.LowerCase();
 alphabet.getLetters();
@@ -167,11 +186,13 @@ alphabet.getLetters();
 ```
 
 Аналог в виде константы:
+
 ```java
 RussianAlphabet.LowerCase.LETTERS;
 ```
 
-### Получение строчных букв алфавита в обратном порядке
+#### Получение строчных букв алфавита в обратном порядке
+
 ```java
 Alphabetical alphabet = new RussianAlphabet.LowerCase();
 alphabet.getLettersReverse();
@@ -185,7 +206,8 @@ alphabet.getLettersReverse();
 */
 ```
 
-### Получение среза строчных букв алфавита
+#### Получение среза строчных букв алфавита
+
 ```java
 Alphabetical alphabet = new RussianAlphabet.LowerCase();
 alphabet.getLetters(1, 3);
@@ -197,23 +219,46 @@ alphabet.getLetters(1, 3);
 */
 ```
 
-### Проверка принадлежности буквы к алфавиту строчных букв
+#### Проверка принадлежности буквы к алфавиту строчных букв
+
 ```java
 Alphabetical alphabet = new RussianAlphabet.LowerCase();
 alphabet.hasLetter('ъ');
 // Результат выполнения: true
 ```
 
-### Получение строчной буквы по позиции в алфавите
+#### Получение строчной буквы по позиции в алфавите
+
 ```java
 Alphabetical alphabet = new RussianAlphabet.LowerCase();
 alphabet.getLetter(29);
 // Результат выполнения: ы
 ```
 
-### Получение позиции буквы в алфавите
+#### Получение позиции буквы в алфавите
+
 ```java
 Alphabetical alphabet = new RussianAlphabet.LowerCase();
 alphabet.getPosition('ё');
 // Результат выполнения: 7
 ```
+
+## Установка
+
+Для установки этого проекта, введите в терминале:
+
+```bash
+git clone https://github.com/kalenchukov/Alphabet.git
+```
+
+## Версии
+
+Доступные [версии](https://github.com/kalenchukov/Alphabet/releases).
+
+## Авторы
+
+[Алексей Каленчуков](https://github.com/kalenchukov)
+
+## Лицензия
+
+[MIT](https://opensource.org/licenses/MIT)
