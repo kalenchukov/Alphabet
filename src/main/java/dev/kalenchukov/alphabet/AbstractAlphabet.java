@@ -161,7 +161,13 @@ public abstract class AbstractAlphabet implements Alphabetical
 	@Override
 	public List<@NotNull Character> getLettersReverse()
 	{
-		return Collections.unmodifiableList(this.getLettersReverse(this.letters));
+		List<Character> alphabetReverse = new ArrayList<>(this.letters.size());
+
+		for (int i = this.letters.size() - 1; i >= 0; i--) {
+			alphabetReverse.add(this.letters.get(i));
+		}
+
+		return Collections.unmodifiableList(alphabetReverse);
 	}
 
 	/**
@@ -189,23 +195,5 @@ public abstract class AbstractAlphabet implements Alphabetical
 		}
 
 		return Collections.unmodifiableList(letters);
-	}
-
-	/**
-	 * Возвращает буквы алфавита в обратном порядке.
-	 *
-	 * @param alphabet Алфавит.
-	 * @return Коллекция букв алфавита.
-	 */
-	@NotNull
-	protected List<@NotNull Character> getLettersReverse(@NotNull final List<@NotNull Character> alphabet)
-	{
-		List<Character> alphabetReverse = new ArrayList<>(alphabet.size());
-
-		for (int i = alphabet.size() - 1; i >= 0; i--) {
-			alphabetReverse.add(alphabet.get(i));
-		}
-
-		return alphabetReverse;
 	}
 }
