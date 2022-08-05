@@ -180,6 +180,9 @@ public abstract class AbstractAlphabet implements Alphabetical
 		return string.toString();
 	}
 
+	/**
+	 * @see Object#toString()
+	 */
 	@Override
 	@NotNull
 	public String toString()

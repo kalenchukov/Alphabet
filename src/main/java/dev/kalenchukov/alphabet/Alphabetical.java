@@ -84,7 +84,7 @@ public interface Alphabetical
 	boolean hasLetter(@NotNull final Character letter);
 
 	/**
-	 * Преобразовывает буквы алфавита в строку.
+	 * Возвращает строковое представление букв алфавита.
 	 *
 	 * @param separator Разделитель букв.
 	 * @return Строку из букв алфавита.
