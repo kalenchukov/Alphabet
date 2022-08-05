@@ -55,7 +55,15 @@ public abstract class AbstractAlphabet implements Alphabetical
 		Objects.requireNonNull(from);
 		Objects.requireNonNull(to);
 
-		return this.getLetters(this.letters, from, to);
+		if (from > to) {
+			throw new IllegalArgumentException();
+		}
+
+		if (from < 1 || to > this.letters.size()) {
+			throw new IndexOutOfBoundsException();
+		}
+
+		return Collections.unmodifiableList(this.letters.subList(from - 1, to));
 	}
 
 	/**
@@ -69,43 +77,12 @@ public abstract class AbstractAlphabet implements Alphabetical
 
 		try
 		{
-			return this.getLetters(this.letters, position, position).get(0);
+			return this.getLetters(position, position).get(0);
 		}
 		catch (IllegalArgumentException | IndexOutOfBoundsException exception)
 		{
 			return null;
 		}
-	}
-
-	/**
-	 * Возвращает срез букв алфавита.
-	 *
-	 * @param alphabet Алфавит.
-	 * @param from Начальная позиция букв в алфавите.
-	 * @param to Конечная позиция букв в алфавите.
-	 * @return Коллекция из среза букв алфавита.
-	 * @throws IllegalArgumentException Если начальная позиция {@code from} больше {@code to}.
-	 * @throws IndexOutOfBoundsException Если позиция {@code from} или {@code to} выходят за пределы алфавита.
-	 */
-	@Unmodifiable
-	@NotNull
-	protected List<@NotNull Character> getLetters(@NotNull final List<@NotNull Character> alphabet,
-												  @NotNull final Integer from,
-												  @NotNull final Integer to)
-	{
-		Objects.requireNonNull(alphabet);
-		Objects.requireNonNull(from);
-		Objects.requireNonNull(to);
-
-		if (from > to) {
-			throw new IllegalArgumentException();
-		}
-
-		if (from < 1 || to > alphabet.size()) {
-			throw new IndexOutOfBoundsException();
-		}
-
-		return Collections.unmodifiableList(alphabet.subList(from - 1, to));
 	}
 
 	/**
