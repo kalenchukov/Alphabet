@@ -233,4 +233,26 @@ public class GreekAlphabetLowerCaseTest
 	{
 		assertFalse(ALPHABET.hasLetter('Β'));
 	}
+
+	/**
+	 * Проверяет преобразование алфавита в строку с использованием разделителя.
+	 */
+	@Test
+	public void testToStringSeparator()
+	{
+		String string = "α,β,γ,δ,ε,ζ,η,θ,ι,κ,λ,μ,ν,ξ,ο,π,ρ,σ,ς,τ,υ,φ,χ,ψ,ω";
+
+		assertEquals(string, ALPHABET.toString(","));
+	}
+
+	/**
+	 * Проверяет преобразование алфавита в строку.
+	 */
+	@Test
+	public void testToString()
+	{
+		String string = "αβγδεζηθικλμνξοπρσςτυφχψω";
+
+		assertEquals(string, ALPHABET.toString());
+	}
 }

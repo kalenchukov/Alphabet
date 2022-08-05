@@ -236,4 +236,26 @@ public class EnglishAlphabetUpperCaseTest
 	{
 		assertFalse(ALPHABET.hasLetter('x'));
 	}
+
+	/**
+	 * Проверяет преобразование алфавита в строку с использованием разделителя.
+	 */
+	@Test
+	public void testToStringSeparator()
+	{
+		String string = "A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z";
+
+		assertEquals(string, ALPHABET.toString(","));
+	}
+
+	/**
+	 * Проверяет преобразование алфавита в строку.
+	 */
+	@Test
+	public void testToString()
+	{
+		String string = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+		assertEquals(string, ALPHABET.toString());
+	}
 }

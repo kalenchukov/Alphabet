@@ -446,4 +446,28 @@ public class RussianAlphabetTest
 	{
 		assertFalse(ALPHABET.hasLetter('W'));
 	}
+
+	/**
+	 * Проверяет преобразование алфавита в строку с использованием разделителя.
+	 */
+	@Test
+	public void testToStringSeparator()
+	{
+		String string = "А,а,Б,б,В,в,Г,г,Д,д,Е,е,Ё,ё,Ж,ж,З,з,И,и," +
+			"Й,й,К,к,Л,л,М,м,Н,н,О,о,П,п,Р,р,С,с,Т,т,У,у,Ф,ф,Х,х," +
+			"Ц,ц,Ч,ч,Ш,ш,Щ,щ,Ъ,ъ,Ы,ы,Ь,ь,Э,э,Ю,ю,Я,я";
+
+		assertEquals(string, ALPHABET.toString(","));
+	}
+
+	/**
+	 * Проверяет преобразование алфавита в строку.
+	 */
+	@Test
+	public void testToString()
+	{
+		String string = "АаБбВвГгДдЕеЁёЖжЗзИиЙйКкЛлМмНнОоПпРрСсТтУуФфХхЦцЧчШшЩщЪъЫыЬьЭэЮюЯя";
+
+		assertEquals(string, ALPHABET.toString());
+	}
 }

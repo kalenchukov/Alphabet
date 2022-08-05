@@ -158,4 +158,32 @@ public abstract class AbstractAlphabet implements Alphabetical
 
 		return Collections.unmodifiableList(letters);
 	}
+
+	/**
+	 * @see Alphabetical#toString(String)
+	 */
+	@Override
+	@NotNull
+	public String toString(@NotNull final String separator)
+	{
+		StringBuilder string = new StringBuilder();
+
+		for (int index = 0; index < this.letters.size(); index++)
+		{
+			string.append(this.letters.get(index));
+
+			if (index != this.letters.size() - 1) {
+				string.append(separator);
+			}
+		}
+
+		return string.toString();
+	}
+
+	@Override
+	@NotNull
+	public String toString()
+	{
+		return this.toString("");
+	}
 }

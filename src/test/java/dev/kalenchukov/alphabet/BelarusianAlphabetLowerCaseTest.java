@@ -257,4 +257,26 @@ public class BelarusianAlphabetLowerCaseTest
 	{
 		assertFalse(ALPHABET.hasLetter('Ў'));
 	}
+
+	/**
+	 * Проверяет преобразование алфавита в строку с использованием разделителя.
+	 */
+	@Test
+	public void testToStringSeparator()
+	{
+		String string = "а,б,в,г,д,е,ё,ж,з,і,й,к,л,м,н,о,п,р,с,т,у,ў,ф,х,ц,ч,ш,ы,ь,э,ю,я";
+
+		assertEquals(string, ALPHABET.toString(","));
+	}
+
+	/**
+	 * Проверяет преобразование алфавита в строку.
+	 */
+	@Test
+	public void testToString()
+	{
+		String string = "абвгдеёжзійклмнопрстуўфхцчшыьэюя";
+
+		assertEquals(string, ALPHABET.toString());
+	}
 }

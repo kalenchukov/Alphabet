@@ -236,4 +236,26 @@ public class EnglishAlphabetLowerCaseTest
 	{
 		assertFalse(ALPHABET.hasLetter('Z'));
 	}
+
+	/**
+	 * Проверяет преобразование алфавита в строку с использованием разделителя.
+	 */
+	@Test
+	public void testToStringSeparator()
+	{
+		String string = "a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z";
+
+		assertEquals(string, ALPHABET.toString(","));
+	}
+
+	/**
+	 * Проверяет преобразование алфавита в строку.
+	 */
+	@Test
+	public void testToString()
+	{
+		String string = "abcdefghijklmnopqrstuvwxyz";
+
+		assertEquals(string, ALPHABET.toString());
+	}
 }

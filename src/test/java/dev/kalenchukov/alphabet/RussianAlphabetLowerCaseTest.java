@@ -294,4 +294,26 @@ public class RussianAlphabetLowerCaseTest
 	{
 		assertFalse(ALPHABET.hasLetter('Э'));
 	}
+
+	/**
+	 * Проверяет преобразование алфавита в строку с использованием разделителя.
+	 */
+	@Test
+	public void testToStringSeparator()
+	{
+		String string = "а,б,в,г,д,е,ё,ж,з,и,й,к,л,м,н,о,п,р,с,т,у,ф,х,ц,ч,ш,щ,ъ,ы,ь,э,ю,я";
+
+		assertEquals(string, ALPHABET.toString(","));
+	}
+
+	/**
+	 * Проверяет преобразование алфавита в строку.
+	 */
+	@Test
+	public void testToString()
+	{
+		String string = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя";
+
+		assertEquals(string, ALPHABET.toString());
+	}
 }

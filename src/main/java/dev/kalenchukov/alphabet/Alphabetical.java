@@ -82,4 +82,12 @@ public interface Alphabetical
 	 * @return {@code True} если буква принадлежит алфавиту, иначе {@code false}.
 	 */
 	boolean hasLetter(@NotNull final Character letter);
+
+	/**
+	 * Преобразовывает буквы алфавита в строку.
+	 *
+	 * @param separator Разделитель букв.
+	 * @return Строку из букв алфавита.
+	 */
+	String toString(@NotNull final String separator);
 }

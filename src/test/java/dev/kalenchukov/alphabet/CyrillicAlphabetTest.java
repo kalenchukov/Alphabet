@@ -288,4 +288,26 @@ public class CyrillicAlphabetTest
 	{
 		assertFalse(ALPHABET.hasLetter('Q'));
 	}
+
+	/**
+	 * Проверяет преобразование алфавита в строку с использованием разделителя.
+	 */
+	@Test
+	public void testToStringSeparator()
+	{
+		String string = "А,Б,В,Г,Д,Е,Ж,Ѕ,З,И,І,К,Л,М,Н,О,П,Р,С,Т,Ꙋ,Ф,Х,Ѡ,Ц,Ч,Ш,Щ,Ъ,Ы,Ь,Ѣ,Ю,Ꙗ,Ѥ,Ѧ,Ѫ,Ѩ,Ѭ,Ѯ,Ѱ,Ѳ,Ѵ";
+
+		assertEquals(string, ALPHABET.toString(","));
+	}
+
+	/**
+	 * Проверяет преобразование алфавита в строку.
+	 */
+	@Test
+	public void testToString()
+	{
+		String string = "АБВГДЕЖЅЗИІКЛМНОПРСТꙊФХѠЦЧШЩЪЫЬѢЮꙖѤѦѪѨѬѮѰѲѴ";
+
+		assertEquals(string, ALPHABET.toString());
+	}
 }
