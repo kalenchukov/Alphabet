@@ -116,7 +116,7 @@ public abstract class AbstractAlphabet implements Alphabetical
 	{
 		Objects.requireNonNull(letter);
 
-		return this.getPosition(this.letters, letter) != null;
+		return this.getPosition(letter) != null;
 	}
 
 	/**
@@ -128,24 +128,9 @@ public abstract class AbstractAlphabet implements Alphabetical
 	{
 		Objects.requireNonNull(letter);
 
-		return this.getPosition(this.letters, letter);
-	}
-
-	/**
-	 * Возвращает позицию буквы в алфавите.
-	 *
-	 * @param alphabet Алфавит.
-	 * @param letter Буква.
-	 * @return Позицию буквы в алфавите.
-	 */
-	@Nullable
-	protected Integer getPosition(@NotNull final List<@NotNull Character> alphabet, @NotNull final Character letter)
-	{
-		Objects.requireNonNull(letter);
-
-		for (int position = 0; position < alphabet.size(); position++)
+		for (int position = 0; position < this.letters.size(); position++)
 		{
-			if (alphabet.get(position).equals(letter)) {
+			if (this.letters.get(position).equals(letter)) {
 				return position + 1;
 			}
 		}
