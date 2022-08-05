@@ -9,6 +9,7 @@ package dev.kalenchukov.alphabet;
 import org.jetbrains.annotations.NotNull;
 import org.junit.Test;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
@@ -89,6 +90,21 @@ public class EnglishAlphabetUpperCaseTest
 		assertEquals(Optional.of('X'), Optional.ofNullable(letters.get(2)));
 		assertEquals(Optional.of('Y'), Optional.ofNullable(letters.get(1)));
 		assertEquals(Optional.of('Z'), Optional.ofNullable(letters.get(0)));
+	}
+
+	/**
+	 * Проверяет получение букв алфавита в перемешанном порядке.
+	 */
+	@Test
+	public void testGetLettersShuffle()
+	{
+		List<Character> letters = List.of(
+			'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I',
+			'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R',
+			'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
+		);
+
+		assertFalse(Arrays.equals(letters.toArray(), ALPHABET.getLettersShuffle().toArray()));
 	}
 
 	/**

@@ -9,6 +9,7 @@ package dev.kalenchukov.alphabet;
 import org.jetbrains.annotations.NotNull;
 import org.junit.Test;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
@@ -135,6 +136,23 @@ public class GreekAlphabetTest
 		assertEquals(Optional.of('ψ'), Optional.ofNullable(letters.get(2)));
 		assertEquals(Optional.of('Ω'), Optional.ofNullable(letters.get(1)));
 		assertEquals(Optional.of('ω'), Optional.ofNullable(letters.get(0)));
+	}
+
+	/**
+	 * Проверяет получение букв алфавита в перемешанном порядке.
+	 */
+	@Test
+	public void testGetLettersShuffle()
+	{
+		List<Character> letters = List.of(
+			'Α', 'α', 'Β', 'β', 'Γ', 'γ', 'Δ', 'δ', 'Ε', 'ε',
+			'Ζ', 'ζ', 'Η', 'η', 'Θ', 'θ', 'Ι', 'ι', 'Κ', 'κ',
+			'Λ', 'λ', 'Μ', 'μ', 'Ν', 'ν', 'Ξ', 'ξ', 'Ο', 'ο',
+			'Π', 'π', 'Ρ', 'ρ', 'Σ', 'σ', 'ς', 'Τ', 'τ', 'Υ',
+			'υ', 'Φ', 'φ', 'Χ', 'χ', 'Ψ', 'ψ', 'Ω', 'ω'
+		);
+
+		assertFalse(Arrays.equals(letters.toArray(), ALPHABET.getLettersShuffle().toArray()));
 	}
 
 	/**

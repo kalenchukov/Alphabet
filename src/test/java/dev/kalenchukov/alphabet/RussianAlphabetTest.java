@@ -9,6 +9,7 @@ package dev.kalenchukov.alphabet;
 import org.jetbrains.annotations.NotNull;
 import org.junit.Test;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
@@ -169,6 +170,25 @@ public class RussianAlphabetTest
 		assertEquals(Optional.of('ю'), Optional.ofNullable(letters.get(2)));
 		assertEquals(Optional.of('Я'), Optional.ofNullable(letters.get(1)));
 		assertEquals(Optional.of('я'), Optional.ofNullable(letters.get(0)));
+	}
+
+	/**
+	 * Проверяет получение букв алфавита в перемешанном порядке.
+	 */
+	@Test
+	public void testGetLettersShuffle()
+	{
+		List<Character> letters = List.of(
+			'А', 'а', 'Б', 'б', 'В', 'в', 'Г', 'г', 'Д', 'д',
+			'Е', 'е', 'Ё', 'ё', 'Ж', 'ж', 'З', 'з', 'И', 'и',
+			'Й', 'й', 'К', 'к', 'Л', 'л', 'М', 'м', 'Н', 'н',
+			'О', 'о', 'П', 'п', 'Р', 'р', 'С', 'с', 'Т', 'т',
+			'У', 'у', 'Ф', 'ф', 'Х', 'х', 'Ц', 'ц', 'Ч', 'ч',
+			'Ш', 'ш', 'Щ', 'щ', 'Ъ', 'ъ', 'Ы', 'ы', 'Ь', 'ь',
+			'Э', 'э', 'Ю', 'ю', 'Я', 'я'
+		);
+
+		assertFalse(Arrays.equals(letters.toArray(), ALPHABET.getLettersShuffle().toArray()));
 	}
 
 	/**

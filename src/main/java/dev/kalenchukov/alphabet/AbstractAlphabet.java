@@ -10,10 +10,7 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jetbrains.annotations.Unmodifiable;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 
 /**
  * Класс абстрактного алфавита.
@@ -165,6 +162,33 @@ public abstract class AbstractAlphabet implements Alphabetical
 	public List<@NotNull Character> getLettersReverse()
 	{
 		return Collections.unmodifiableList(this.getLettersReverse(this.letters));
+	}
+
+	/**
+	 * @see Alphabetical#getLettersShuffle()
+	 */
+	@NotNull
+	@Unmodifiable
+	@Override
+	public List<@NotNull Character> getLettersShuffle()
+	{
+		final int coefficientShuffle = (int) (this.letters.size() * 2.5);
+
+		List<Character> letters = new ArrayList<>(this.letters);
+		Random random = new Random();
+
+		for (int iterationShuffle = 0; iterationShuffle < coefficientShuffle; iterationShuffle++)
+		{
+			int indexFrom = random.nextInt(this.letters.size());
+			int indexIn = random.nextInt(this.letters.size());
+
+			final char charTemp = letters.get(indexIn);
+
+			letters.set(indexIn, letters.get(indexFrom));
+			letters.set(indexFrom, charTemp);
+		}
+
+		return Collections.unmodifiableList(letters);
 	}
 
 	/**

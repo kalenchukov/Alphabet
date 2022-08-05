@@ -9,6 +9,7 @@ package dev.kalenchukov.alphabet;
 import org.jetbrains.annotations.NotNull;
 import org.junit.Test;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
@@ -101,6 +102,22 @@ public class BelarusianAlphabetUpperCaseTest
 		assertEquals(Optional.of('Э'), Optional.ofNullable(letters.get(2)));
 		assertEquals(Optional.of('Ю'), Optional.ofNullable(letters.get(1)));
 		assertEquals(Optional.of('Я'), Optional.ofNullable(letters.get(0)));
+	}
+
+	/**
+	 * Проверяет получение букв алфавита в перемешанном порядке.
+	 */
+	@Test
+	public void testGetLettersShuffle()
+	{
+		List<Character> letters = List.of(
+			'А', 'Б', 'В', 'Г', 'Д', 'Е', 'Ё', 'Ж', 'З',
+			'І', 'Й', 'К', 'Л', 'М', 'Н', 'О', 'П', 'Р',
+			'С', 'Т', 'У', 'Ў', 'Ф', 'Х', 'Ц', 'Ч', 'Ш',
+			'Ы', 'Ь', 'Э', 'Ю', 'Я'
+		);
+
+		assertFalse(Arrays.equals(letters.toArray(), ALPHABET.getLettersShuffle().toArray()));
 	}
 
 	/**
