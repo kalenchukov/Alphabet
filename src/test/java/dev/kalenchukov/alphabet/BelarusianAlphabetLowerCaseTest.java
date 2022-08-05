@@ -26,40 +26,14 @@ public class BelarusianAlphabetLowerCaseTest
 	@Test
 	public void testGetLetters()
 	{
-		List<Character> letters = ALPHABET.getLetters();
+		List<Character> letters = List.of(
+			'а', 'б', 'в', 'г', 'д', 'е', 'ё', 'ж', 'з',
+			'і', 'й', 'к', 'л', 'м', 'н', 'о', 'п', 'р',
+			'с', 'т', 'у', 'ў', 'ф', 'х', 'ц', 'ч', 'ш',
+			'ы', 'ь', 'э', 'ю', 'я'
+		);
 
-		assertEquals(Optional.of('а'), Optional.ofNullable(letters.get(0)));
-		assertEquals(Optional.of('б'), Optional.ofNullable(letters.get(1)));
-		assertEquals(Optional.of('в'), Optional.ofNullable(letters.get(2)));
-		assertEquals(Optional.of('г'), Optional.ofNullable(letters.get(3)));
-		assertEquals(Optional.of('д'), Optional.ofNullable(letters.get(4)));
-		assertEquals(Optional.of('е'), Optional.ofNullable(letters.get(5)));
-		assertEquals(Optional.of('ё'), Optional.ofNullable(letters.get(6)));
-		assertEquals(Optional.of('ж'), Optional.ofNullable(letters.get(7)));
-		assertEquals(Optional.of('з'), Optional.ofNullable(letters.get(8)));
-		assertEquals(Optional.of('і'), Optional.ofNullable(letters.get(9)));
-		assertEquals(Optional.of('й'), Optional.ofNullable(letters.get(10)));
-		assertEquals(Optional.of('к'), Optional.ofNullable(letters.get(11)));
-		assertEquals(Optional.of('л'), Optional.ofNullable(letters.get(12)));
-		assertEquals(Optional.of('м'), Optional.ofNullable(letters.get(13)));
-		assertEquals(Optional.of('н'), Optional.ofNullable(letters.get(14)));
-		assertEquals(Optional.of('о'), Optional.ofNullable(letters.get(15)));
-		assertEquals(Optional.of('п'), Optional.ofNullable(letters.get(16)));
-		assertEquals(Optional.of('р'), Optional.ofNullable(letters.get(17)));
-		assertEquals(Optional.of('с'), Optional.ofNullable(letters.get(18)));
-		assertEquals(Optional.of('т'), Optional.ofNullable(letters.get(19)));
-		assertEquals(Optional.of('у'), Optional.ofNullable(letters.get(20)));
-		assertEquals(Optional.of('ў'), Optional.ofNullable(letters.get(21)));
-		assertEquals(Optional.of('ф'), Optional.ofNullable(letters.get(22)));
-		assertEquals(Optional.of('х'), Optional.ofNullable(letters.get(23)));
-		assertEquals(Optional.of('ц'), Optional.ofNullable(letters.get(24)));
-		assertEquals(Optional.of('ч'), Optional.ofNullable(letters.get(25)));
-		assertEquals(Optional.of('ш'), Optional.ofNullable(letters.get(26)));
-		assertEquals(Optional.of('ы'), Optional.ofNullable(letters.get(27)));
-		assertEquals(Optional.of('ь'), Optional.ofNullable(letters.get(28)));
-		assertEquals(Optional.of('э'), Optional.ofNullable(letters.get(29)));
-		assertEquals(Optional.of('ю'), Optional.ofNullable(letters.get(30)));
-		assertEquals(Optional.of('я'), Optional.ofNullable(letters.get(31)));
+		assertArrayEquals(letters.toArray(), ALPHABET.getLetters().toArray());
 	}
 
 	/**
@@ -68,40 +42,13 @@ public class BelarusianAlphabetLowerCaseTest
 	@Test
 	public void testGetLettersReverse()
 	{
-		List<Character> letters = ALPHABET.getLettersReverse();
+		List<Character> letters = List.of(
+			'я', 'ю', 'э', 'ь', 'ы', 'ш', 'ч', 'ц', 'х', 'ф',
+			'ў', 'у', 'т', 'с', 'р', 'п', 'о', 'н', 'м', 'л', 'к', 'й',
+			'і', 'з', 'ж', 'ё', 'е', 'д', 'г', 'в', 'б', 'а'
+		);
 
-		assertEquals(Optional.of('а'), Optional.ofNullable(letters.get(31)));
-		assertEquals(Optional.of('б'), Optional.ofNullable(letters.get(30)));
-		assertEquals(Optional.of('в'), Optional.ofNullable(letters.get(29)));
-		assertEquals(Optional.of('г'), Optional.ofNullable(letters.get(28)));
-		assertEquals(Optional.of('д'), Optional.ofNullable(letters.get(27)));
-		assertEquals(Optional.of('е'), Optional.ofNullable(letters.get(26)));
-		assertEquals(Optional.of('ё'), Optional.ofNullable(letters.get(25)));
-		assertEquals(Optional.of('ж'), Optional.ofNullable(letters.get(24)));
-		assertEquals(Optional.of('з'), Optional.ofNullable(letters.get(23)));
-		assertEquals(Optional.of('і'), Optional.ofNullable(letters.get(22)));
-		assertEquals(Optional.of('й'), Optional.ofNullable(letters.get(21)));
-		assertEquals(Optional.of('к'), Optional.ofNullable(letters.get(20)));
-		assertEquals(Optional.of('л'), Optional.ofNullable(letters.get(19)));
-		assertEquals(Optional.of('м'), Optional.ofNullable(letters.get(18)));
-		assertEquals(Optional.of('н'), Optional.ofNullable(letters.get(17)));
-		assertEquals(Optional.of('о'), Optional.ofNullable(letters.get(16)));
-		assertEquals(Optional.of('п'), Optional.ofNullable(letters.get(15)));
-		assertEquals(Optional.of('р'), Optional.ofNullable(letters.get(14)));
-		assertEquals(Optional.of('с'), Optional.ofNullable(letters.get(13)));
-		assertEquals(Optional.of('т'), Optional.ofNullable(letters.get(12)));
-		assertEquals(Optional.of('у'), Optional.ofNullable(letters.get(11)));
-		assertEquals(Optional.of('ў'), Optional.ofNullable(letters.get(10)));
-		assertEquals(Optional.of('ф'), Optional.ofNullable(letters.get(9)));
-		assertEquals(Optional.of('х'), Optional.ofNullable(letters.get(8)));
-		assertEquals(Optional.of('ц'), Optional.ofNullable(letters.get(7)));
-		assertEquals(Optional.of('ч'), Optional.ofNullable(letters.get(6)));
-		assertEquals(Optional.of('ш'), Optional.ofNullable(letters.get(5)));
-		assertEquals(Optional.of('ы'), Optional.ofNullable(letters.get(4)));
-		assertEquals(Optional.of('ь'), Optional.ofNullable(letters.get(3)));
-		assertEquals(Optional.of('э'), Optional.ofNullable(letters.get(2)));
-		assertEquals(Optional.of('ю'), Optional.ofNullable(letters.get(1)));
-		assertEquals(Optional.of('я'), Optional.ofNullable(letters.get(0)));
+		assertArrayEquals(letters.toArray(), ALPHABET.getLettersReverse().toArray());
 	}
 
 	/**
@@ -141,9 +88,9 @@ public class BelarusianAlphabetLowerCaseTest
 			'а'
 		);
 
-		assertTrue(letters1.containsAll(ALPHABET.getLetters(1, 32)));
-		assertTrue(letters2.containsAll(ALPHABET.getLetters(1, 3)));
-		assertTrue(letters3.containsAll(ALPHABET.getLetters(1, 1)));
+		assertArrayEquals(letters1.toArray(), ALPHABET.getLetters(1, 32).toArray());
+		assertArrayEquals(letters2.toArray(), ALPHABET.getLetters(1, 3).toArray());
+		assertArrayEquals(letters3.toArray(), ALPHABET.getLetters(1, 1).toArray());
 	}
 
 	/**

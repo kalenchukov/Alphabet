@@ -26,60 +26,16 @@ public class EnglishAlphabetTest
 	@Test
 	public void testGetLetters()
 	{
-		List<Character> letters = ALPHABET.getLetters();
+		List<Character> letters = List.of(
+			'A', 'a', 'B', 'b', 'C', 'c', 'D', 'd', 'E', 'e',
+			'F', 'f', 'G', 'g', 'H', 'h', 'I', 'i', 'J', 'j',
+			'K', 'k', 'L', 'l', 'M', 'm', 'N', 'n', 'O', 'o',
+			'P', 'p', 'Q', 'q', 'R', 'r', 'S', 's', 'T', 't',
+			'U', 'u', 'V', 'v', 'W', 'w', 'X', 'x', 'Y', 'y',
+			'Z', 'z'
+		);
 
-		assertEquals(Optional.of('A'), Optional.ofNullable(letters.get(0)));
-		assertEquals(Optional.of('a'), Optional.ofNullable(letters.get(1)));
-		assertEquals(Optional.of('B'), Optional.ofNullable(letters.get(2)));
-		assertEquals(Optional.of('b'), Optional.ofNullable(letters.get(3)));
-		assertEquals(Optional.of('C'), Optional.ofNullable(letters.get(4)));
-		assertEquals(Optional.of('c'), Optional.ofNullable(letters.get(5)));
-		assertEquals(Optional.of('D'), Optional.ofNullable(letters.get(6)));
-		assertEquals(Optional.of('d'), Optional.ofNullable(letters.get(7)));
-		assertEquals(Optional.of('E'), Optional.ofNullable(letters.get(8)));
-		assertEquals(Optional.of('e'), Optional.ofNullable(letters.get(9)));
-		assertEquals(Optional.of('F'), Optional.ofNullable(letters.get(10)));
-		assertEquals(Optional.of('f'), Optional.ofNullable(letters.get(11)));
-		assertEquals(Optional.of('G'), Optional.ofNullable(letters.get(12)));
-		assertEquals(Optional.of('g'), Optional.ofNullable(letters.get(13)));
-		assertEquals(Optional.of('H'), Optional.ofNullable(letters.get(14)));
-		assertEquals(Optional.of('h'), Optional.ofNullable(letters.get(15)));
-		assertEquals(Optional.of('I'), Optional.ofNullable(letters.get(16)));
-		assertEquals(Optional.of('i'), Optional.ofNullable(letters.get(17)));
-		assertEquals(Optional.of('J'), Optional.ofNullable(letters.get(18)));
-		assertEquals(Optional.of('j'), Optional.ofNullable(letters.get(19)));
-		assertEquals(Optional.of('K'), Optional.ofNullable(letters.get(20)));
-		assertEquals(Optional.of('k'), Optional.ofNullable(letters.get(21)));
-		assertEquals(Optional.of('L'), Optional.ofNullable(letters.get(22)));
-		assertEquals(Optional.of('l'), Optional.ofNullable(letters.get(23)));
-		assertEquals(Optional.of('M'), Optional.ofNullable(letters.get(24)));
-		assertEquals(Optional.of('m'), Optional.ofNullable(letters.get(25)));
-		assertEquals(Optional.of('N'), Optional.ofNullable(letters.get(26)));
-		assertEquals(Optional.of('n'), Optional.ofNullable(letters.get(27)));
-		assertEquals(Optional.of('O'), Optional.ofNullable(letters.get(28)));
-		assertEquals(Optional.of('o'), Optional.ofNullable(letters.get(29)));
-		assertEquals(Optional.of('P'), Optional.ofNullable(letters.get(30)));
-		assertEquals(Optional.of('p'), Optional.ofNullable(letters.get(31)));
-		assertEquals(Optional.of('Q'), Optional.ofNullable(letters.get(32)));
-		assertEquals(Optional.of('q'), Optional.ofNullable(letters.get(33)));
-		assertEquals(Optional.of('R'), Optional.ofNullable(letters.get(34)));
-		assertEquals(Optional.of('r'), Optional.ofNullable(letters.get(35)));
-		assertEquals(Optional.of('S'), Optional.ofNullable(letters.get(36)));
-		assertEquals(Optional.of('s'), Optional.ofNullable(letters.get(37)));
-		assertEquals(Optional.of('T'), Optional.ofNullable(letters.get(38)));
-		assertEquals(Optional.of('t'), Optional.ofNullable(letters.get(39)));
-		assertEquals(Optional.of('U'), Optional.ofNullable(letters.get(40)));
-		assertEquals(Optional.of('u'), Optional.ofNullable(letters.get(41)));
-		assertEquals(Optional.of('V'), Optional.ofNullable(letters.get(42)));
-		assertEquals(Optional.of('v'), Optional.ofNullable(letters.get(43)));
-		assertEquals(Optional.of('W'), Optional.ofNullable(letters.get(44)));
-		assertEquals(Optional.of('w'), Optional.ofNullable(letters.get(45)));
-		assertEquals(Optional.of('X'), Optional.ofNullable(letters.get(46)));
-		assertEquals(Optional.of('x'), Optional.ofNullable(letters.get(47)));
-		assertEquals(Optional.of('Y'), Optional.ofNullable(letters.get(48)));
-		assertEquals(Optional.of('y'), Optional.ofNullable(letters.get(49)));
-		assertEquals(Optional.of('Z'), Optional.ofNullable(letters.get(50)));
-		assertEquals(Optional.of('z'), Optional.ofNullable(letters.get(51)));
+		assertArrayEquals(letters.toArray(), ALPHABET.getLetters().toArray());
 	}
 
 	/**
@@ -88,60 +44,15 @@ public class EnglishAlphabetTest
 	@Test
 	public void testGetLettersReverse()
 	{
-		List<Character> letters = ALPHABET.getLettersReverse();
+		List<Character> letters = List.of(
+			'z', 'Z', 'y', 'Y', 'x', 'X', 'w', 'W', 'v', 'V',
+			'u', 'U', 't', 'T', 's', 'S', 'r', 'R', 'q', 'Q', 'p', 'P',
+			'o', 'O', 'n', 'N', 'm', 'M', 'l', 'L', 'k', 'K', 'j', 'J',
+			'i', 'I', 'h', 'H', 'g', 'G', 'f', 'F', 'e', 'E', 'd', 'D',
+			'c', 'C', 'b', 'B', 'a', 'A'
+		);
 
-		assertEquals(Optional.of('A'), Optional.ofNullable(letters.get(51)));
-		assertEquals(Optional.of('a'), Optional.ofNullable(letters.get(50)));
-		assertEquals(Optional.of('B'), Optional.ofNullable(letters.get(49)));
-		assertEquals(Optional.of('b'), Optional.ofNullable(letters.get(48)));
-		assertEquals(Optional.of('C'), Optional.ofNullable(letters.get(47)));
-		assertEquals(Optional.of('c'), Optional.ofNullable(letters.get(46)));
-		assertEquals(Optional.of('D'), Optional.ofNullable(letters.get(45)));
-		assertEquals(Optional.of('d'), Optional.ofNullable(letters.get(44)));
-		assertEquals(Optional.of('E'), Optional.ofNullable(letters.get(43)));
-		assertEquals(Optional.of('e'), Optional.ofNullable(letters.get(42)));
-		assertEquals(Optional.of('F'), Optional.ofNullable(letters.get(41)));
-		assertEquals(Optional.of('f'), Optional.ofNullable(letters.get(40)));
-		assertEquals(Optional.of('G'), Optional.ofNullable(letters.get(39)));
-		assertEquals(Optional.of('g'), Optional.ofNullable(letters.get(38)));
-		assertEquals(Optional.of('H'), Optional.ofNullable(letters.get(37)));
-		assertEquals(Optional.of('h'), Optional.ofNullable(letters.get(36)));
-		assertEquals(Optional.of('I'), Optional.ofNullable(letters.get(35)));
-		assertEquals(Optional.of('i'), Optional.ofNullable(letters.get(34)));
-		assertEquals(Optional.of('J'), Optional.ofNullable(letters.get(33)));
-		assertEquals(Optional.of('j'), Optional.ofNullable(letters.get(32)));
-		assertEquals(Optional.of('K'), Optional.ofNullable(letters.get(31)));
-		assertEquals(Optional.of('k'), Optional.ofNullable(letters.get(30)));
-		assertEquals(Optional.of('L'), Optional.ofNullable(letters.get(29)));
-		assertEquals(Optional.of('l'), Optional.ofNullable(letters.get(28)));
-		assertEquals(Optional.of('M'), Optional.ofNullable(letters.get(27)));
-		assertEquals(Optional.of('m'), Optional.ofNullable(letters.get(26)));
-		assertEquals(Optional.of('N'), Optional.ofNullable(letters.get(25)));
-		assertEquals(Optional.of('n'), Optional.ofNullable(letters.get(24)));
-		assertEquals(Optional.of('O'), Optional.ofNullable(letters.get(23)));
-		assertEquals(Optional.of('o'), Optional.ofNullable(letters.get(22)));
-		assertEquals(Optional.of('P'), Optional.ofNullable(letters.get(21)));
-		assertEquals(Optional.of('p'), Optional.ofNullable(letters.get(20)));
-		assertEquals(Optional.of('Q'), Optional.ofNullable(letters.get(19)));
-		assertEquals(Optional.of('q'), Optional.ofNullable(letters.get(18)));
-		assertEquals(Optional.of('R'), Optional.ofNullable(letters.get(17)));
-		assertEquals(Optional.of('r'), Optional.ofNullable(letters.get(16)));
-		assertEquals(Optional.of('S'), Optional.ofNullable(letters.get(15)));
-		assertEquals(Optional.of('s'), Optional.ofNullable(letters.get(14)));
-		assertEquals(Optional.of('T'), Optional.ofNullable(letters.get(13)));
-		assertEquals(Optional.of('t'), Optional.ofNullable(letters.get(12)));
-		assertEquals(Optional.of('U'), Optional.ofNullable(letters.get(11)));
-		assertEquals(Optional.of('u'), Optional.ofNullable(letters.get(10)));
-		assertEquals(Optional.of('V'), Optional.ofNullable(letters.get(9)));
-		assertEquals(Optional.of('v'), Optional.ofNullable(letters.get(8)));
-		assertEquals(Optional.of('W'), Optional.ofNullable(letters.get(7)));
-		assertEquals(Optional.of('w'), Optional.ofNullable(letters.get(6)));
-		assertEquals(Optional.of('X'), Optional.ofNullable(letters.get(5)));
-		assertEquals(Optional.of('x'), Optional.ofNullable(letters.get(4)));
-		assertEquals(Optional.of('Y'), Optional.ofNullable(letters.get(3)));
-		assertEquals(Optional.of('y'), Optional.ofNullable(letters.get(2)));
-		assertEquals(Optional.of('Z'), Optional.ofNullable(letters.get(1)));
-		assertEquals(Optional.of('z'), Optional.ofNullable(letters.get(0)));
+		assertArrayEquals(letters.toArray(), ALPHABET.getLettersReverse().toArray());
 	}
 
 	/**
@@ -191,10 +102,10 @@ public class EnglishAlphabetTest
 			'A'
 		);
 
-		assertTrue(letters1.containsAll(ALPHABET.getLetters(1, 52)));
-		assertTrue(letters2.containsAll(ALPHABET.getLetters(1, 26)));
-		assertTrue(letters3.containsAll(ALPHABET.getLetters(1, 3)));
-		assertTrue(letters4.containsAll(ALPHABET.getLetters(1, 1)));
+		assertArrayEquals(letters1.toArray(), ALPHABET.getLetters(1, 52).toArray());
+		assertArrayEquals(letters2.toArray(), ALPHABET.getLetters(1, 26).toArray());
+		assertArrayEquals(letters3.toArray(), ALPHABET.getLetters(1, 3).toArray());
+		assertArrayEquals(letters4.toArray(), ALPHABET.getLetters(1, 1).toArray());
 	}
 
 	/**

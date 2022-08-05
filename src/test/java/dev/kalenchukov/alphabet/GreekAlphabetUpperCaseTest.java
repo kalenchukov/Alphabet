@@ -26,32 +26,13 @@ public class GreekAlphabetUpperCaseTest
 	@Test
 	public void testGetLetters()
 	{
-		List<Character> letters = ALPHABET.getLetters();
+		List<Character> letters = List.of(
+			'Α', 'Β', 'Γ', 'Δ', 'Ε', 'Ζ', 'Η', 'Θ', 'Ι',
+			'Κ', 'Λ', 'Μ', 'Ν', 'Ξ', 'Ο', 'Π', 'Ρ', 'Σ',
+			'Τ', 'Υ', 'Φ', 'Χ', 'Ψ', 'Ω'
+		);
 
-		assertEquals(Optional.of('Α'), Optional.ofNullable(letters.get(0)));
-		assertEquals(Optional.of('Β'), Optional.ofNullable(letters.get(1)));
-		assertEquals(Optional.of('Γ'), Optional.ofNullable(letters.get(2)));
-		assertEquals(Optional.of('Δ'), Optional.ofNullable(letters.get(3)));
-		assertEquals(Optional.of('Ε'), Optional.ofNullable(letters.get(4)));
-		assertEquals(Optional.of('Ζ'), Optional.ofNullable(letters.get(5)));
-		assertEquals(Optional.of('Η'), Optional.ofNullable(letters.get(6)));
-		assertEquals(Optional.of('Θ'), Optional.ofNullable(letters.get(7)));
-		assertEquals(Optional.of('Ι'), Optional.ofNullable(letters.get(8)));
-		assertEquals(Optional.of('Κ'), Optional.ofNullable(letters.get(9)));
-		assertEquals(Optional.of('Λ'), Optional.ofNullable(letters.get(10)));
-		assertEquals(Optional.of('Μ'), Optional.ofNullable(letters.get(11)));
-		assertEquals(Optional.of('Ν'), Optional.ofNullable(letters.get(12)));
-		assertEquals(Optional.of('Ξ'), Optional.ofNullable(letters.get(13)));
-		assertEquals(Optional.of('Ο'), Optional.ofNullable(letters.get(14)));
-		assertEquals(Optional.of('Π'), Optional.ofNullable(letters.get(15)));
-		assertEquals(Optional.of('Ρ'), Optional.ofNullable(letters.get(16)));
-		assertEquals(Optional.of('Σ'), Optional.ofNullable(letters.get(17)));
-		assertEquals(Optional.of('Τ'), Optional.ofNullable(letters.get(18)));
-		assertEquals(Optional.of('Υ'), Optional.ofNullable(letters.get(19)));
-		assertEquals(Optional.of('Φ'), Optional.ofNullable(letters.get(20)));
-		assertEquals(Optional.of('Χ'), Optional.ofNullable(letters.get(21)));
-		assertEquals(Optional.of('Ψ'), Optional.ofNullable(letters.get(22)));
-		assertEquals(Optional.of('Ω'), Optional.ofNullable(letters.get(23)));
+		assertArrayEquals(letters.toArray(), ALPHABET.getLetters().toArray());
 	}
 
 	/**
@@ -60,7 +41,13 @@ public class GreekAlphabetUpperCaseTest
 	@Test
 	public void testGetLettersReverse()
 	{
-		List<Character> letters = ALPHABET.getLettersReverse();
+		List<Character> letters = List.of(
+			'Ω', 'Ψ', 'Χ', 'Φ', 'Υ', 'Τ', 'Σ', 'Ρ', 'Π', 'Ο',
+			'Ξ', 'Ν', 'Μ', 'Λ', 'Κ', 'Ι', 'Θ', 'Η', 'Ζ', 'Ε', 'Δ', 'Γ',
+			'Β', 'Α'
+		);
+
+		assertArrayEquals(letters.toArray(), ALPHABET.getLettersReverse().toArray());
 
 		assertEquals(Optional.of('Α'), Optional.ofNullable(letters.get(23)));
 		assertEquals(Optional.of('Β'), Optional.ofNullable(letters.get(22)));
@@ -123,9 +110,9 @@ public class GreekAlphabetUpperCaseTest
 			'Α'
 		);
 
-		assertTrue(letters1.containsAll(ALPHABET.getLetters(1, 24)));
-		assertTrue(letters2.containsAll(ALPHABET.getLetters(1, 3)));
-		assertTrue(letters3.containsAll(ALPHABET.getLetters(1, 1)));
+		assertArrayEquals(letters1.toArray(), ALPHABET.getLetters(1, 24).toArray());
+		assertArrayEquals(letters2.toArray(), ALPHABET.getLetters(1, 3).toArray());
+		assertArrayEquals(letters3.toArray(), ALPHABET.getLetters(1, 1).toArray());
 	}
 
 	/**

@@ -26,41 +26,14 @@ public class RussianAlphabetUpperCaseTest
 	@Test
 	public void testGetLetters()
 	{
-		List<Character> letters = ALPHABET.getLetters();
+		List<Character> letters = List.of(
+			'А', 'Б', 'В', 'Г', 'Д', 'Е', 'Ё', 'Ж', 'З',
+			'И', 'Й', 'К', 'Л', 'М', 'Н', 'О', 'П', 'Р',
+			'С', 'Т', 'У', 'Ф', 'Х', 'Ц', 'Ч', 'Ш', 'Щ',
+			'Ъ', 'Ы', 'Ь', 'Э', 'Ю', 'Я'
+		);
 
-		assertEquals(Optional.of('А'), Optional.ofNullable(letters.get(0)));
-		assertEquals(Optional.of('Б'), Optional.ofNullable(letters.get(1)));
-		assertEquals(Optional.of('В'), Optional.ofNullable(letters.get(2)));
-		assertEquals(Optional.of('Г'), Optional.ofNullable(letters.get(3)));
-		assertEquals(Optional.of('Д'), Optional.ofNullable(letters.get(4)));
-		assertEquals(Optional.of('Е'), Optional.ofNullable(letters.get(5)));
-		assertEquals(Optional.of('Ё'), Optional.ofNullable(letters.get(6)));
-		assertEquals(Optional.of('Ж'), Optional.ofNullable(letters.get(7)));
-		assertEquals(Optional.of('З'), Optional.ofNullable(letters.get(8)));
-		assertEquals(Optional.of('И'), Optional.ofNullable(letters.get(9)));
-		assertEquals(Optional.of('Й'), Optional.ofNullable(letters.get(10)));
-		assertEquals(Optional.of('К'), Optional.ofNullable(letters.get(11)));
-		assertEquals(Optional.of('Л'), Optional.ofNullable(letters.get(12)));
-		assertEquals(Optional.of('М'), Optional.ofNullable(letters.get(13)));
-		assertEquals(Optional.of('Н'), Optional.ofNullable(letters.get(14)));
-		assertEquals(Optional.of('О'), Optional.ofNullable(letters.get(15)));
-		assertEquals(Optional.of('П'), Optional.ofNullable(letters.get(16)));
-		assertEquals(Optional.of('Р'), Optional.ofNullable(letters.get(17)));
-		assertEquals(Optional.of('С'), Optional.ofNullable(letters.get(18)));
-		assertEquals(Optional.of('Т'), Optional.ofNullable(letters.get(19)));
-		assertEquals(Optional.of('У'), Optional.ofNullable(letters.get(20)));
-		assertEquals(Optional.of('Ф'), Optional.ofNullable(letters.get(21)));
-		assertEquals(Optional.of('Х'), Optional.ofNullable(letters.get(22)));
-		assertEquals(Optional.of('Ц'), Optional.ofNullable(letters.get(23)));
-		assertEquals(Optional.of('Ч'), Optional.ofNullable(letters.get(24)));
-		assertEquals(Optional.of('Ш'), Optional.ofNullable(letters.get(25)));
-		assertEquals(Optional.of('Щ'), Optional.ofNullable(letters.get(26)));
-		assertEquals(Optional.of('Ъ'), Optional.ofNullable(letters.get(27)));
-		assertEquals(Optional.of('Ы'), Optional.ofNullable(letters.get(28)));
-		assertEquals(Optional.of('Ь'), Optional.ofNullable(letters.get(29)));
-		assertEquals(Optional.of('Э'), Optional.ofNullable(letters.get(30)));
-		assertEquals(Optional.of('Ю'), Optional.ofNullable(letters.get(31)));
-		assertEquals(Optional.of('Я'), Optional.ofNullable(letters.get(32)));
+		assertArrayEquals(letters.toArray(), ALPHABET.getLetters().toArray());
 	}
 
 	/**
@@ -69,41 +42,13 @@ public class RussianAlphabetUpperCaseTest
 	@Test
 	public void testGetLettersReverse()
 	{
-		List<Character> letters = ALPHABET.getLettersReverse();
+		List<Character> letters = List.of(
+			'Я', 'Ю', 'Э', 'Ь', 'Ы', 'Ъ', 'Щ', 'Ш', 'Ч', 'Ц',
+			'Х', 'Ф', 'У', 'Т', 'С', 'Р', 'П', 'О', 'Н', 'М', 'Л', 'К',
+			'Й', 'И', 'З', 'Ж', 'Ё', 'Е', 'Д', 'Г', 'В', 'Б', 'А'
+		);
 
-		assertEquals(Optional.of('А'), Optional.ofNullable(letters.get(32)));
-		assertEquals(Optional.of('Б'), Optional.ofNullable(letters.get(31)));
-		assertEquals(Optional.of('В'), Optional.ofNullable(letters.get(30)));
-		assertEquals(Optional.of('Г'), Optional.ofNullable(letters.get(29)));
-		assertEquals(Optional.of('Д'), Optional.ofNullable(letters.get(28)));
-		assertEquals(Optional.of('Е'), Optional.ofNullable(letters.get(27)));
-		assertEquals(Optional.of('Ё'), Optional.ofNullable(letters.get(26)));
-		assertEquals(Optional.of('Ж'), Optional.ofNullable(letters.get(25)));
-		assertEquals(Optional.of('З'), Optional.ofNullable(letters.get(24)));
-		assertEquals(Optional.of('И'), Optional.ofNullable(letters.get(23)));
-		assertEquals(Optional.of('Й'), Optional.ofNullable(letters.get(22)));
-		assertEquals(Optional.of('К'), Optional.ofNullable(letters.get(21)));
-		assertEquals(Optional.of('Л'), Optional.ofNullable(letters.get(20)));
-		assertEquals(Optional.of('М'), Optional.ofNullable(letters.get(19)));
-		assertEquals(Optional.of('Н'), Optional.ofNullable(letters.get(18)));
-		assertEquals(Optional.of('О'), Optional.ofNullable(letters.get(17)));
-		assertEquals(Optional.of('П'), Optional.ofNullable(letters.get(16)));
-		assertEquals(Optional.of('Р'), Optional.ofNullable(letters.get(15)));
-		assertEquals(Optional.of('С'), Optional.ofNullable(letters.get(14)));
-		assertEquals(Optional.of('Т'), Optional.ofNullable(letters.get(13)));
-		assertEquals(Optional.of('У'), Optional.ofNullable(letters.get(12)));
-		assertEquals(Optional.of('Ф'), Optional.ofNullable(letters.get(11)));
-		assertEquals(Optional.of('Х'), Optional.ofNullable(letters.get(10)));
-		assertEquals(Optional.of('Ц'), Optional.ofNullable(letters.get(9)));
-		assertEquals(Optional.of('Ч'), Optional.ofNullable(letters.get(8)));
-		assertEquals(Optional.of('Ш'), Optional.ofNullable(letters.get(7)));
-		assertEquals(Optional.of('Щ'), Optional.ofNullable(letters.get(6)));
-		assertEquals(Optional.of('Ъ'), Optional.ofNullable(letters.get(5)));
-		assertEquals(Optional.of('Ы'), Optional.ofNullable(letters.get(4)));
-		assertEquals(Optional.of('Ь'), Optional.ofNullable(letters.get(3)));
-		assertEquals(Optional.of('Э'), Optional.ofNullable(letters.get(2)));
-		assertEquals(Optional.of('Ю'), Optional.ofNullable(letters.get(1)));
-		assertEquals(Optional.of('Я'), Optional.ofNullable(letters.get(0)));
+		assertArrayEquals(letters.toArray(), ALPHABET.getLettersReverse().toArray());
 	}
 
 	/**
@@ -143,9 +88,9 @@ public class RussianAlphabetUpperCaseTest
 			'А'
 		);
 
-		assertTrue(letters1.containsAll(ALPHABET.getLetters(1, 33)));
-		assertTrue(letters2.containsAll(ALPHABET.getLetters(1, 3)));
-		assertTrue(letters3.containsAll(ALPHABET.getLetters(1, 1)));
+		assertArrayEquals(letters1.toArray(), ALPHABET.getLetters(1, 33).toArray());
+		assertArrayEquals(letters2.toArray(), ALPHABET.getLetters(1, 3).toArray());
+		assertArrayEquals(letters3.toArray(), ALPHABET.getLetters(1, 1).toArray());
 	}
 
 	/**

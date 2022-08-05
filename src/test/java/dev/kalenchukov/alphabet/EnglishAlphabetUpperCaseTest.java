@@ -26,34 +26,13 @@ public class EnglishAlphabetUpperCaseTest
 	@Test
 	public void testGetLetters()
 	{
-		List<Character> letters = ALPHABET.getLetters();
+		List<Character> letters = List.of(
+			'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I',
+			'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R',
+			'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
+		);
 
-		assertEquals(Optional.of('A'), Optional.ofNullable(letters.get(0)));
-		assertEquals(Optional.of('B'), Optional.ofNullable(letters.get(1)));
-		assertEquals(Optional.of('C'), Optional.ofNullable(letters.get(2)));
-		assertEquals(Optional.of('D'), Optional.ofNullable(letters.get(3)));
-		assertEquals(Optional.of('E'), Optional.ofNullable(letters.get(4)));
-		assertEquals(Optional.of('F'), Optional.ofNullable(letters.get(5)));
-		assertEquals(Optional.of('G'), Optional.ofNullable(letters.get(6)));
-		assertEquals(Optional.of('H'), Optional.ofNullable(letters.get(7)));
-		assertEquals(Optional.of('I'), Optional.ofNullable(letters.get(8)));
-		assertEquals(Optional.of('J'), Optional.ofNullable(letters.get(9)));
-		assertEquals(Optional.of('K'), Optional.ofNullable(letters.get(10)));
-		assertEquals(Optional.of('L'), Optional.ofNullable(letters.get(11)));
-		assertEquals(Optional.of('M'), Optional.ofNullable(letters.get(12)));
-		assertEquals(Optional.of('N'), Optional.ofNullable(letters.get(13)));
-		assertEquals(Optional.of('O'), Optional.ofNullable(letters.get(14)));
-		assertEquals(Optional.of('P'), Optional.ofNullable(letters.get(15)));
-		assertEquals(Optional.of('Q'), Optional.ofNullable(letters.get(16)));
-		assertEquals(Optional.of('R'), Optional.ofNullable(letters.get(17)));
-		assertEquals(Optional.of('S'), Optional.ofNullable(letters.get(18)));
-		assertEquals(Optional.of('T'), Optional.ofNullable(letters.get(19)));
-		assertEquals(Optional.of('U'), Optional.ofNullable(letters.get(20)));
-		assertEquals(Optional.of('V'), Optional.ofNullable(letters.get(21)));
-		assertEquals(Optional.of('W'), Optional.ofNullable(letters.get(22)));
-		assertEquals(Optional.of('X'), Optional.ofNullable(letters.get(23)));
-		assertEquals(Optional.of('Y'), Optional.ofNullable(letters.get(24)));
-		assertEquals(Optional.of('Z'), Optional.ofNullable(letters.get(25)));
+		assertArrayEquals(letters.toArray(), ALPHABET.getLetters().toArray());
 	}
 
 	/**
@@ -62,34 +41,13 @@ public class EnglishAlphabetUpperCaseTest
 	@Test
 	public void testGetLettersReverse()
 	{
-		List<Character> letters = ALPHABET.getLettersReverse();
+		List<Character> letters = List.of(
+			'Z', 'Y', 'X', 'W', 'V', 'U', 'T', 'S', 'R', 'Q',
+			'P', 'O', 'N', 'M', 'L', 'K', 'J', 'I', 'H', 'G', 'F', 'E',
+			'D', 'C', 'B', 'A'
+		);
 
-		assertEquals(Optional.of('A'), Optional.ofNullable(letters.get(25)));
-		assertEquals(Optional.of('B'), Optional.ofNullable(letters.get(24)));
-		assertEquals(Optional.of('C'), Optional.ofNullable(letters.get(23)));
-		assertEquals(Optional.of('D'), Optional.ofNullable(letters.get(22)));
-		assertEquals(Optional.of('E'), Optional.ofNullable(letters.get(21)));
-		assertEquals(Optional.of('F'), Optional.ofNullable(letters.get(20)));
-		assertEquals(Optional.of('G'), Optional.ofNullable(letters.get(19)));
-		assertEquals(Optional.of('H'), Optional.ofNullable(letters.get(18)));
-		assertEquals(Optional.of('I'), Optional.ofNullable(letters.get(17)));
-		assertEquals(Optional.of('J'), Optional.ofNullable(letters.get(16)));
-		assertEquals(Optional.of('K'), Optional.ofNullable(letters.get(15)));
-		assertEquals(Optional.of('L'), Optional.ofNullable(letters.get(14)));
-		assertEquals(Optional.of('M'), Optional.ofNullable(letters.get(13)));
-		assertEquals(Optional.of('N'), Optional.ofNullable(letters.get(12)));
-		assertEquals(Optional.of('O'), Optional.ofNullable(letters.get(11)));
-		assertEquals(Optional.of('P'), Optional.ofNullable(letters.get(10)));
-		assertEquals(Optional.of('Q'), Optional.ofNullable(letters.get(9)));
-		assertEquals(Optional.of('R'), Optional.ofNullable(letters.get(8)));
-		assertEquals(Optional.of('S'), Optional.ofNullable(letters.get(7)));
-		assertEquals(Optional.of('T'), Optional.ofNullable(letters.get(6)));
-		assertEquals(Optional.of('U'), Optional.ofNullable(letters.get(5)));
-		assertEquals(Optional.of('V'), Optional.ofNullable(letters.get(4)));
-		assertEquals(Optional.of('W'), Optional.ofNullable(letters.get(3)));
-		assertEquals(Optional.of('X'), Optional.ofNullable(letters.get(2)));
-		assertEquals(Optional.of('Y'), Optional.ofNullable(letters.get(1)));
-		assertEquals(Optional.of('Z'), Optional.ofNullable(letters.get(0)));
+		assertArrayEquals(letters.toArray(), ALPHABET.getLettersReverse().toArray());
 	}
 
 	/**
@@ -127,9 +85,9 @@ public class EnglishAlphabetUpperCaseTest
 			'A'
 		);
 
-		assertTrue(letters1.containsAll(ALPHABET.getLetters(1, 26)));
-		assertTrue(letters2.containsAll(ALPHABET.getLetters(1, 3)));
-		assertTrue(letters3.containsAll(ALPHABET.getLetters(1, 1)));
+		assertArrayEquals(letters1.toArray(), ALPHABET.getLetters(1, 26).toArray());
+		assertArrayEquals(letters2.toArray(), ALPHABET.getLetters(1, 3).toArray());
+		assertArrayEquals(letters3.toArray(), ALPHABET.getLetters(1, 1).toArray());
 	}
 
 	/**
