@@ -296,6 +296,22 @@ public class RussianAlphabetLowerCaseTest
 	}
 
 	/**
+	 * Проверяет преобразование алфавита в массив.
+	 */
+	@Test
+	public void testToArray()
+	{
+		List<Character> letters = List.of(
+			'а', 'б', 'в', 'г', 'д', 'е', 'ё', 'ж', 'з',
+			'и', 'й', 'к', 'л', 'м', 'н', 'о', 'п', 'р',
+			'с', 'т', 'у', 'ф', 'х', 'ц', 'ч', 'ш', 'щ',
+			'ъ', 'ы', 'ь', 'э', 'ю', 'я'
+		);
+
+		assertArrayEquals(letters.toArray(), ALPHABET.toArray());
+	}
+
+	/**
 	 * Проверяет преобразование алфавита в строку с использованием разделителя.
 	 */
 	@Test

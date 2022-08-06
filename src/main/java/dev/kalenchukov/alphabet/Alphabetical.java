@@ -84,10 +84,19 @@ public interface Alphabetical
 	boolean hasLetter(@NotNull final Character letter);
 
 	/**
+	 * Возвращает массив из букв алфавита.
+	 *
+	 * @return Массив.
+	 */
+	@NotNull
+	Character @NotNull [] toArray();
+
+	/**
 	 * Возвращает строковое представление букв алфавита.
 	 *
 	 * @param separator Разделитель букв.
 	 * @return Строку из букв алфавита.
 	 */
+	@NotNull
 	String toString(@NotNull final String separator);
 }

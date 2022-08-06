@@ -259,6 +259,22 @@ public class BelarusianAlphabetUpperCaseTest
 	}
 
 	/**
+	 * Проверяет преобразование алфавита в массив.
+	 */
+	@Test
+	public void testToArray()
+	{
+		List<Character> letters = List.of(
+			'А', 'Б', 'В', 'Г', 'Д', 'Е', 'Ё', 'Ж', 'З',
+			'І', 'Й', 'К', 'Л', 'М', 'Н', 'О', 'П', 'Р',
+			'С', 'Т', 'У', 'Ў', 'Ф', 'Х', 'Ц', 'Ч', 'Ш',
+			'Ы', 'Ь', 'Э', 'Ю', 'Я'
+		);
+
+		assertArrayEquals(letters.toArray(), ALPHABET.toArray());
+	}
+
+	/**
 	 * Проверяет преобразование алфавита в строку с использованием разделителя.
 	 */
 	@Test

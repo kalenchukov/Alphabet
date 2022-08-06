@@ -160,6 +160,16 @@ public abstract class AbstractAlphabet implements Alphabetical
 	}
 
 	/**
+	 * @see Alphabetical#toArray()
+	 */
+	@NotNull
+	@Override
+	public Character @NotNull [] toArray()
+	{
+		return this.letters.toArray(Character[]::new);
+	}
+
+	/**
 	 * @see Alphabetical#toString(String)
 	 */
 	@Override

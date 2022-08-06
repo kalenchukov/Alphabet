@@ -238,6 +238,21 @@ public class EnglishAlphabetLowerCaseTest
 	}
 
 	/**
+	 * Проверяет преобразование алфавита в массив.
+	 */
+	@Test
+	public void testToArray()
+	{
+		List<Character> letters = List.of(
+			'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i',
+			'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r',
+			's', 't', 'u', 'v', 'w', 'x', 'y', 'z'
+		);
+
+		assertArrayEquals(letters.toArray(), ALPHABET.toArray());
+	}
+
+	/**
 	 * Проверяет преобразование алфавита в строку с использованием разделителя.
 	 */
 	@Test

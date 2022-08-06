@@ -257,6 +257,21 @@ public class GreekAlphabetUpperCaseTest
 	}
 
 	/**
+	 * Проверяет преобразование алфавита в массив.
+	 */
+	@Test
+	public void testToArray()
+	{
+		List<Character> letters = List.of(
+			'Α', 'Β', 'Γ', 'Δ', 'Ε', 'Ζ', 'Η', 'Θ', 'Ι',
+			'Κ', 'Λ', 'Μ', 'Ν', 'Ξ', 'Ο', 'Π', 'Ρ', 'Σ',
+			'Τ', 'Υ', 'Φ', 'Χ', 'Ψ', 'Ω'
+		);
+
+		assertArrayEquals(letters.toArray(), ALPHABET.toArray());
+	}
+
+	/**
 	 * Проверяет преобразование алфавита в строку с использованием разделителя.
 	 */
 	@Test

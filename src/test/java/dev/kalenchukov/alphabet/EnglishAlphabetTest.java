@@ -335,6 +335,24 @@ public class EnglishAlphabetTest
 	}
 
 	/**
+	 * Проверяет преобразование алфавита в массив.
+	 */
+	@Test
+	public void testToArray()
+	{
+		List<Character> letters = List.of(
+			'A', 'a', 'B', 'b', 'C', 'c', 'D', 'd', 'E', 'e',
+			'F', 'f', 'G', 'g', 'H', 'h', 'I', 'i', 'J', 'j',
+			'K', 'k', 'L', 'l', 'M', 'm', 'N', 'n', 'O', 'o',
+			'P', 'p', 'Q', 'q', 'R', 'r', 'S', 's', 'T', 't',
+			'U', 'u', 'V', 'v', 'W', 'w', 'X', 'x', 'Y', 'y',
+			'Z', 'z'
+		);
+
+		assertArrayEquals(letters.toArray(), ALPHABET.toArray());
+	}
+
+	/**
 	 * Проверяет преобразование алфавита в строку с использованием разделителя.
 	 */
 	@Test

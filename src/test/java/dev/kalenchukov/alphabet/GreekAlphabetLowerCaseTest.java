@@ -235,6 +235,21 @@ public class GreekAlphabetLowerCaseTest
 	}
 
 	/**
+	 * Проверяет преобразование алфавита в массив.
+	 */
+	@Test
+	public void testToArray()
+	{
+		List<Character> letters = List.of(
+			'α', 'β', 'γ', 'δ', 'ε', 'ζ', 'η', 'θ', 'ι',
+			'κ', 'λ', 'μ', 'ν', 'ξ', 'ο', 'π', 'ρ', 'σ',
+			'ς', 'τ', 'υ', 'φ', 'χ', 'ψ', 'ω'
+		);
+
+		assertArrayEquals(letters.toArray(), ALPHABET.toArray());
+	}
+
+	/**
 	 * Проверяет преобразование алфавита в строку с использованием разделителя.
 	 */
 	@Test
