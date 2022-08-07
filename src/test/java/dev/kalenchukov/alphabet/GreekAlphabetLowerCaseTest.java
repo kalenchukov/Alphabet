@@ -154,7 +154,7 @@ public class GreekAlphabetLowerCaseTest
 	 * Проверяет позицию несуществующей буквы в алфавите.
 	 */
 	@Test
-	public void testGetPositionBadLetter()
+	public void testGetPositionNotLetter()
 	{
 		assertNull(ALPHABET.getPosition('W'));
 	}
@@ -196,42 +196,42 @@ public class GreekAlphabetLowerCaseTest
 	 * Проверяет принадлежность буквы к алфавиту.
 	 */
 	@Test
-	public void testHasLetter()
+	public void testContains()
 	{
-		assertTrue(ALPHABET.hasLetter('α'));
-		assertTrue(ALPHABET.hasLetter('β'));
-		assertTrue(ALPHABET.hasLetter('γ'));
-		assertTrue(ALPHABET.hasLetter('δ'));
-		assertTrue(ALPHABET.hasLetter('ε'));
-		assertTrue(ALPHABET.hasLetter('ζ'));
-		assertTrue(ALPHABET.hasLetter('η'));
-		assertTrue(ALPHABET.hasLetter('θ'));
-		assertTrue(ALPHABET.hasLetter('ι'));
-		assertTrue(ALPHABET.hasLetter('κ'));
-		assertTrue(ALPHABET.hasLetter('λ'));
-		assertTrue(ALPHABET.hasLetter('μ'));
-		assertTrue(ALPHABET.hasLetter('ν'));
-		assertTrue(ALPHABET.hasLetter('ξ'));
-		assertTrue(ALPHABET.hasLetter('ο'));
-		assertTrue(ALPHABET.hasLetter('π'));
-		assertTrue(ALPHABET.hasLetter('ρ'));
-		assertTrue(ALPHABET.hasLetter('σ'));
-		assertTrue(ALPHABET.hasLetter('ς'));
-		assertTrue(ALPHABET.hasLetter('τ'));
-		assertTrue(ALPHABET.hasLetter('υ'));
-		assertTrue(ALPHABET.hasLetter('φ'));
-		assertTrue(ALPHABET.hasLetter('χ'));
-		assertTrue(ALPHABET.hasLetter('ψ'));
-		assertTrue(ALPHABET.hasLetter('ω'));
+		assertTrue(ALPHABET.contains('α'));
+		assertTrue(ALPHABET.contains('β'));
+		assertTrue(ALPHABET.contains('γ'));
+		assertTrue(ALPHABET.contains('δ'));
+		assertTrue(ALPHABET.contains('ε'));
+		assertTrue(ALPHABET.contains('ζ'));
+		assertTrue(ALPHABET.contains('η'));
+		assertTrue(ALPHABET.contains('θ'));
+		assertTrue(ALPHABET.contains('ι'));
+		assertTrue(ALPHABET.contains('κ'));
+		assertTrue(ALPHABET.contains('λ'));
+		assertTrue(ALPHABET.contains('μ'));
+		assertTrue(ALPHABET.contains('ν'));
+		assertTrue(ALPHABET.contains('ξ'));
+		assertTrue(ALPHABET.contains('ο'));
+		assertTrue(ALPHABET.contains('π'));
+		assertTrue(ALPHABET.contains('ρ'));
+		assertTrue(ALPHABET.contains('σ'));
+		assertTrue(ALPHABET.contains('ς'));
+		assertTrue(ALPHABET.contains('τ'));
+		assertTrue(ALPHABET.contains('υ'));
+		assertTrue(ALPHABET.contains('φ'));
+		assertTrue(ALPHABET.contains('χ'));
+		assertTrue(ALPHABET.contains('ψ'));
+		assertTrue(ALPHABET.contains('ω'));
 	}
 
 	/**
 	 * Проверяет принадлежность не принадлежащей буквы к алфавиту.
 	 */
 	@Test
-	public void testHasLetterBad()
+	public void testContainsNot()
 	{
-		assertFalse(ALPHABET.hasLetter('Β'));
+		assertFalse(ALPHABET.contains('Β'));
 	}
 
 	/**

@@ -155,7 +155,7 @@ public class EnglishAlphabetLowerCaseTest
 	 * Проверяет позицию несуществующей буквы в алфавите.
 	 */
 	@Test
-	public void testGetPositionBadLetter()
+	public void testGetPositionNotLetter()
 	{
 		assertNull(ALPHABET.getPosition('Ё'));
 	}
@@ -198,43 +198,43 @@ public class EnglishAlphabetLowerCaseTest
 	 * Проверяет принадлежность буквы к алфавиту.
 	 */
 	@Test
-	public void testHasLetter()
+	public void testContains()
 	{
-		assertTrue(ALPHABET.hasLetter('a'));
-		assertTrue(ALPHABET.hasLetter('b'));
-		assertTrue(ALPHABET.hasLetter('c'));
-		assertTrue(ALPHABET.hasLetter('d'));
-		assertTrue(ALPHABET.hasLetter('e'));
-		assertTrue(ALPHABET.hasLetter('f'));
-		assertTrue(ALPHABET.hasLetter('g'));
-		assertTrue(ALPHABET.hasLetter('h'));
-		assertTrue(ALPHABET.hasLetter('i'));
-		assertTrue(ALPHABET.hasLetter('j'));
-		assertTrue(ALPHABET.hasLetter('k'));
-		assertTrue(ALPHABET.hasLetter('l'));
-		assertTrue(ALPHABET.hasLetter('m'));
-		assertTrue(ALPHABET.hasLetter('n'));
-		assertTrue(ALPHABET.hasLetter('o'));
-		assertTrue(ALPHABET.hasLetter('p'));
-		assertTrue(ALPHABET.hasLetter('q'));
-		assertTrue(ALPHABET.hasLetter('r'));
-		assertTrue(ALPHABET.hasLetter('s'));
-		assertTrue(ALPHABET.hasLetter('t'));
-		assertTrue(ALPHABET.hasLetter('u'));
-		assertTrue(ALPHABET.hasLetter('v'));
-		assertTrue(ALPHABET.hasLetter('w'));
-		assertTrue(ALPHABET.hasLetter('x'));
-		assertTrue(ALPHABET.hasLetter('y'));
-		assertTrue(ALPHABET.hasLetter('z'));
+		assertTrue(ALPHABET.contains('a'));
+		assertTrue(ALPHABET.contains('b'));
+		assertTrue(ALPHABET.contains('c'));
+		assertTrue(ALPHABET.contains('d'));
+		assertTrue(ALPHABET.contains('e'));
+		assertTrue(ALPHABET.contains('f'));
+		assertTrue(ALPHABET.contains('g'));
+		assertTrue(ALPHABET.contains('h'));
+		assertTrue(ALPHABET.contains('i'));
+		assertTrue(ALPHABET.contains('j'));
+		assertTrue(ALPHABET.contains('k'));
+		assertTrue(ALPHABET.contains('l'));
+		assertTrue(ALPHABET.contains('m'));
+		assertTrue(ALPHABET.contains('n'));
+		assertTrue(ALPHABET.contains('o'));
+		assertTrue(ALPHABET.contains('p'));
+		assertTrue(ALPHABET.contains('q'));
+		assertTrue(ALPHABET.contains('r'));
+		assertTrue(ALPHABET.contains('s'));
+		assertTrue(ALPHABET.contains('t'));
+		assertTrue(ALPHABET.contains('u'));
+		assertTrue(ALPHABET.contains('v'));
+		assertTrue(ALPHABET.contains('w'));
+		assertTrue(ALPHABET.contains('x'));
+		assertTrue(ALPHABET.contains('y'));
+		assertTrue(ALPHABET.contains('z'));
 	}
 
 	/**
 	 * Проверяет принадлежность не принадлежащей буквы к алфавиту.
 	 */
 	@Test
-	public void testHasLetterBad()
+	public void testContainsNot()
 	{
-		assertFalse(ALPHABET.hasLetter('Z'));
+		assertFalse(ALPHABET.contains('Z'));
 	}
 
 	/**

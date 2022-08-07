@@ -122,7 +122,7 @@ public class CyrillicAlphabetTest
 	 * Проверяет позицию несуществующей буквы в алфавите.
 	 */
 	@Test
-	public void testGetPositionBadLetter()
+	public void testGetPositionNotLetter()
 	{
 		assertNull(ALPHABET.getPosition('J'));
 	}
@@ -233,60 +233,60 @@ public class CyrillicAlphabetTest
 	 * Проверяет принадлежность буквы к алфавиту.
 	 */
 	@Test
-	public void testHasLetter()
+	public void testContains()
 	{
-		assertTrue(ALPHABET.hasLetter('А'));
-		assertTrue(ALPHABET.hasLetter('Б'));
-		assertTrue(ALPHABET.hasLetter('В'));
-		assertTrue(ALPHABET.hasLetter('Г'));
-		assertTrue(ALPHABET.hasLetter('Д'));
-		assertTrue(ALPHABET.hasLetter('Е'));
-		assertTrue(ALPHABET.hasLetter('Ж'));
-		assertTrue(ALPHABET.hasLetter('Ѕ'));
-		assertTrue(ALPHABET.hasLetter('З'));
-		assertTrue(ALPHABET.hasLetter('И'));
-		assertTrue(ALPHABET.hasLetter('І'));
-		assertTrue(ALPHABET.hasLetter('К'));
-		assertTrue(ALPHABET.hasLetter('Л'));
-		assertTrue(ALPHABET.hasLetter('М'));
-		assertTrue(ALPHABET.hasLetter('Н'));
-		assertTrue(ALPHABET.hasLetter('О'));
-		assertTrue(ALPHABET.hasLetter('П'));
-		assertTrue(ALPHABET.hasLetter('Р'));
-		assertTrue(ALPHABET.hasLetter('С'));
-		assertTrue(ALPHABET.hasLetter('Т'));
-		assertTrue(ALPHABET.hasLetter('Ꙋ'));
-		assertTrue(ALPHABET.hasLetter('Ф'));
-		assertTrue(ALPHABET.hasLetter('Х'));
-		assertTrue(ALPHABET.hasLetter('Ѡ'));
-		assertTrue(ALPHABET.hasLetter('Ц'));
-		assertTrue(ALPHABET.hasLetter('Ч'));
-		assertTrue(ALPHABET.hasLetter('Ш'));
-		assertTrue(ALPHABET.hasLetter('Щ'));
-		assertTrue(ALPHABET.hasLetter('Ъ'));
-		assertTrue(ALPHABET.hasLetter('Ы'));
-		assertTrue(ALPHABET.hasLetter('Ь'));
-		assertTrue(ALPHABET.hasLetter('Ѣ'));
-		assertTrue(ALPHABET.hasLetter('Ю'));
-		assertTrue(ALPHABET.hasLetter('Ꙗ'));
-		assertTrue(ALPHABET.hasLetter('Ѥ'));
-		assertTrue(ALPHABET.hasLetter('Ѧ'));
-		assertTrue(ALPHABET.hasLetter('Ѫ'));
-		assertTrue(ALPHABET.hasLetter('Ѩ'));
-		assertTrue(ALPHABET.hasLetter('Ѭ'));
-		assertTrue(ALPHABET.hasLetter('Ѯ'));
-		assertTrue(ALPHABET.hasLetter('Ѱ'));
-		assertTrue(ALPHABET.hasLetter('Ѳ'));
-		assertTrue(ALPHABET.hasLetter('Ѵ'));
+		assertTrue(ALPHABET.contains('А'));
+		assertTrue(ALPHABET.contains('Б'));
+		assertTrue(ALPHABET.contains('В'));
+		assertTrue(ALPHABET.contains('Г'));
+		assertTrue(ALPHABET.contains('Д'));
+		assertTrue(ALPHABET.contains('Е'));
+		assertTrue(ALPHABET.contains('Ж'));
+		assertTrue(ALPHABET.contains('Ѕ'));
+		assertTrue(ALPHABET.contains('З'));
+		assertTrue(ALPHABET.contains('И'));
+		assertTrue(ALPHABET.contains('І'));
+		assertTrue(ALPHABET.contains('К'));
+		assertTrue(ALPHABET.contains('Л'));
+		assertTrue(ALPHABET.contains('М'));
+		assertTrue(ALPHABET.contains('Н'));
+		assertTrue(ALPHABET.contains('О'));
+		assertTrue(ALPHABET.contains('П'));
+		assertTrue(ALPHABET.contains('Р'));
+		assertTrue(ALPHABET.contains('С'));
+		assertTrue(ALPHABET.contains('Т'));
+		assertTrue(ALPHABET.contains('Ꙋ'));
+		assertTrue(ALPHABET.contains('Ф'));
+		assertTrue(ALPHABET.contains('Х'));
+		assertTrue(ALPHABET.contains('Ѡ'));
+		assertTrue(ALPHABET.contains('Ц'));
+		assertTrue(ALPHABET.contains('Ч'));
+		assertTrue(ALPHABET.contains('Ш'));
+		assertTrue(ALPHABET.contains('Щ'));
+		assertTrue(ALPHABET.contains('Ъ'));
+		assertTrue(ALPHABET.contains('Ы'));
+		assertTrue(ALPHABET.contains('Ь'));
+		assertTrue(ALPHABET.contains('Ѣ'));
+		assertTrue(ALPHABET.contains('Ю'));
+		assertTrue(ALPHABET.contains('Ꙗ'));
+		assertTrue(ALPHABET.contains('Ѥ'));
+		assertTrue(ALPHABET.contains('Ѧ'));
+		assertTrue(ALPHABET.contains('Ѫ'));
+		assertTrue(ALPHABET.contains('Ѩ'));
+		assertTrue(ALPHABET.contains('Ѭ'));
+		assertTrue(ALPHABET.contains('Ѯ'));
+		assertTrue(ALPHABET.contains('Ѱ'));
+		assertTrue(ALPHABET.contains('Ѳ'));
+		assertTrue(ALPHABET.contains('Ѵ'));
 	}
 
 	/**
 	 * Проверяет принадлежность не принадлежащей буквы к алфавиту.
 	 */
 	@Test
-	public void testHasLetterBad()
+	public void testContainsNot()
 	{
-		assertFalse(ALPHABET.hasLetter('Q'));
+		assertFalse(ALPHABET.contains('Q'));
 	}
 
 	/**

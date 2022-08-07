@@ -76,12 +76,12 @@ public interface Alphabetical
 	Character getLetter(@NotNull Integer position);
 
 	/**
-	 * Проверяет принадлежность буквы к алфавиту.
+	 * Проверяет содержание буквы в алфавите.
 	 *
 	 * @param letter Буква.
-	 * @return {@code True} если буква принадлежит алфавиту, иначе {@code false}.
+	 * @return {@code True}, если буква содержится в алфавите, иначе {@code false}.
 	 */
-	boolean hasLetter(@NotNull final Character letter);
+	boolean contains(@NotNull final Character letter);
 
 	/**
 	 * Возвращает массив из букв алфавита.

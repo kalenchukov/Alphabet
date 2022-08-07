@@ -91,7 +91,7 @@ alphabet.getLetters(1, 3);
 
 ```java
 Alphabetical alphabet = new RussianAlphabet();
-alphabet.hasLetter('ё');
+alphabet.contains('ё');
 // Результат выполнения: true
 ```
 
@@ -166,7 +166,7 @@ alphabet.getLetters(1, 3);
 
 ```java
 Alphabetical alphabet = new RussianAlphabet.UpeerCase();
-alphabet.hasLetter('Я');
+alphabet.contains('Я');
 // Результат выполнения: true
 ```
 
@@ -241,7 +241,7 @@ alphabet.getLetters(1, 3);
 
 ```java
 Alphabetical alphabet = new RussianAlphabet.LowerCase();
-alphabet.hasLetter('ъ');
+alphabet.contains('ъ');
 // Результат выполнения: true
 ```
 
