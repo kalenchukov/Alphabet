@@ -38,6 +38,19 @@ alphabet.get();
 RussianAlphabet.LETTERS;
 ```
 
+#### Получение среза букв алфавита
+
+```java
+Alphabetical alphabet = new RussianAlphabet();
+alphabet.get(1, 3);
+/*
+Результат выполнения:
+[
+    А, а, Б
+]
+*/
+```
+
 #### Получение букв алфавита в обратном порядке
 
 ```java
@@ -74,15 +87,15 @@ alphabet.getShuffle();
 */
 ```
 
-#### Получение среза букв алфавита
+#### Получение случайных букв алфавита
 
 ```java
 Alphabetical alphabet = new RussianAlphabet();
-alphabet.get(1, 3);
+alphabet.getRundom();
 /*
 Результат выполнения:
 [
-    А, а, Б
+    Р, м, я, М, й, Ы, Й, Г, Б, Т
 ]
 */
 ```
@@ -134,6 +147,19 @@ alphabet.get();
 RussianAlphabet.UpperCase.LETTERS;
 ```
 
+#### Получение среза прописных букв алфавита
+
+```java
+Alphabetical alphabet = new RussianAlphabet.UpperCase();
+alphabet.get(1, 3);
+/*
+Результат выполнения:
+[
+    А, Б, В
+]
+*/
+```
+
 #### Получение прописных букв алфавита в обратном порядке
 
 ```java
@@ -149,15 +175,28 @@ alphabet.getReverse();
 */
 ```
 
-#### Получение среза прописных букв алфавита
+#### Получение прописных букв алфавита в перемешанном порядке
 
 ```java
 Alphabetical alphabet = new RussianAlphabet.UpperCase();
-alphabet.get(1, 3);
+alphabet.getShuffle();
 /*
 Результат выполнения:
 [
-    А, Б, В
+    Л, Й, Ж, Д, О, Т, Б, Ц, Ф, Ь, Э, Ы, З, Ю, А, Ш, Щ, С, Р, В, Х, К, Ъ, М, Е, Н, Ё, И, У, Ч, П, Г, Я
+]
+*/
+```
+
+#### Получение случайных прописных букв алфавита
+
+```java
+Alphabetical alphabet = new RussianAlphabet.UpperCase();
+alphabet.getRundom();
+/*
+Результат выполнения:
+[
+    Ё, Ф, О, Ш, Г, С, Щ, У, Щ, Д
 ]
 */
 ```
@@ -209,6 +248,19 @@ alphabet.get();
 RussianAlphabet.LowerCase.LETTERS;
 ```
 
+#### Получение среза строчных букв алфавита
+
+```java
+Alphabetical alphabet = new RussianAlphabet.LowerCase();
+alphabet.get(1, 3);
+/*
+Результат выполнения:
+[
+     а, б, в
+]
+*/
+```
+
 #### Получение строчных букв алфавита в обратном порядке
 
 ```java
@@ -224,15 +276,28 @@ alphabet.getReverse();
 */
 ```
 
-#### Получение среза строчных букв алфавита
+#### Получение строчных букв алфавита в перемешанном порядке
 
 ```java
 Alphabetical alphabet = new RussianAlphabet.LowerCase();
-alphabet.get(1, 3);
+alphabet.getShuffle();
 /*
 Результат выполнения:
 [
-     а, б, в
+    б, д, у, ё, ф, с, з, х, п, э, о, р, л, я, щ, к, ю, й, т, ы, а, н, ъ, г, ц, м, ш, ь, и, ж, е, ч, в
+]
+*/
+```
+
+#### Получение случайных строчных букв алфавита
+
+```java
+Alphabetical alphabet = new RussianAlphabet.LowerCase();
+alphabet.getRundom();
+/*
+Результат выполнения:
+[
+    щ, ц, н, э, й, р, е, н, х, н
 ]
 */
 ```

@@ -179,6 +179,18 @@ public class GreekAlphabetTest
 	}
 
 	/**
+	 * Проверяет получение букв в случайном порядке.
+	 */
+	@Test
+	public void testGetRandom()
+	{
+		assertEquals(0, ALPHABET.getRandom(0).size());
+		assertEquals(1, ALPHABET.getRandom(1).size());
+		assertEquals(20, ALPHABET.getRandom(20).size());
+		assertEquals(100, ALPHABET.getRandom(100).size());
+	}
+
+	/**
 	 * Проверяет преобразование алфавита в массив.
 	 */
 	@Test

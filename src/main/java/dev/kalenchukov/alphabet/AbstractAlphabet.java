@@ -8,6 +8,7 @@ package dev.kalenchukov.alphabet;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+import org.jetbrains.annotations.Range;
 import org.jetbrains.annotations.Unmodifiable;
 
 import java.util.*;
@@ -71,7 +72,7 @@ public abstract class AbstractAlphabet implements Alphabetical
 	 */
 	@Nullable
 	@Override
-	public Character getLetter(@NotNull final Integer position)
+	public Character getLetter(@NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer position)
 	{
 		Objects.requireNonNull(position);
 
@@ -154,6 +155,29 @@ public abstract class AbstractAlphabet implements Alphabetical
 
 			letters.set(indexIn, letters.get(indexFrom));
 			letters.set(indexFrom, charTemp);
+		}
+
+		return Collections.unmodifiableList(letters);
+	}
+
+	/**
+	 * @see Alphabetical#getRandom(Integer)
+	 */
+	@Unmodifiable
+	@NotNull
+	@Override
+	public List<@NotNull Character> getRandom(@NotNull @Range(from = 0, to = Integer.MAX_VALUE) final Integer count)
+	{
+		Objects.requireNonNull(count);
+
+		List<Character> letters = new ArrayList<>(count);
+		Random random = new Random();
+
+		for (int iteration = 1; iteration <= count; iteration++)
+		{
+			final int rnd = random.nextInt(this.letters.size()) + 1;
+
+			letters.add(this.getLetter(rnd));
 		}
 
 		return Collections.unmodifiableList(letters);

@@ -8,6 +8,7 @@ package dev.kalenchukov.alphabet;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+import org.jetbrains.annotations.Range;
 import org.jetbrains.annotations.Unmodifiable;
 
 import java.util.List;
@@ -37,7 +38,8 @@ public interface Alphabetical
 	 */
 	@Unmodifiable
 	@NotNull
-	List<@NotNull Character> get(@NotNull Integer from, @NotNull Integer to);
+	List<@NotNull Character> get(@NotNull @Range(from = 1, to = Integer.MAX_VALUE) Integer from,
+								 @NotNull @Range(from = 1, to = Integer.MAX_VALUE) Integer to);
 
 	/**
 	 * Возвращает буквы алфавита в обратном порядке.
@@ -58,6 +60,15 @@ public interface Alphabetical
 	List<@NotNull Character> getShuffle();
 
 	/**
+	 * Возвращает случайные буквы алфавита.
+	 *
+	 * @return Коллекция букв алфавита.
+	 */
+	@Unmodifiable
+	@NotNull
+	List<@NotNull Character> getRandom(@NotNull @Range(from = 0, to = Integer.MAX_VALUE) Integer count);
+
+	/**
 	 * Возвращает позицию буквы в алфавите.
 	 *
 	 * @param letter Буква.
@@ -73,7 +84,7 @@ public interface Alphabetical
 	 * @return Буква алфавита или {@code null} если буквы в позиции нет.
 	 */
 	@Nullable
-	Character getLetter(@NotNull Integer position);
+	Character getLetter(@NotNull @Range(from = 0, to = Integer.MAX_VALUE) Integer position);
 
 	/**
 	 * Проверяет содержание буквы в алфавите.
