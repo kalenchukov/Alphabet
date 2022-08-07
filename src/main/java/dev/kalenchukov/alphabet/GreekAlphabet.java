@@ -57,7 +57,7 @@ public class GreekAlphabet extends AbstractAlphabet implements AlphabeticalCase
 			return true;
 		}
 
-		if (this.getClass() != obj.getClass()) {
+		if (!this.getClass().equals(obj.getClass())) {
 			return false;
 		}
 
@@ -118,7 +118,7 @@ public class GreekAlphabet extends AbstractAlphabet implements AlphabeticalCase
 				return true;
 			}
 
-			if (this.getClass() != obj.getClass()) {
+			if (!this.getClass().equals(obj.getClass())) {
 				return false;
 			}
 
@@ -181,7 +181,7 @@ public class GreekAlphabet extends AbstractAlphabet implements AlphabeticalCase
 				return true;
 			}
 
-			if (this.getClass() != obj.getClass()) {
+			if (!this.getClass().equals(obj.getClass())) {
 				return false;
 			}
 

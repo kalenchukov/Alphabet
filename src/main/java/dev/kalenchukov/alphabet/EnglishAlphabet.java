@@ -57,7 +57,7 @@ public class EnglishAlphabet extends AbstractAlphabet implements AlphabeticalCas
 			return true;
 		}
 
-		if (this.getClass() != obj.getClass()) {
+		if (!this.getClass().equals(obj.getClass())) {
 			return false;
 		}
 
@@ -119,7 +119,7 @@ public class EnglishAlphabet extends AbstractAlphabet implements AlphabeticalCas
 				return true;
 			}
 
-			if (this.getClass() != obj.getClass()) {
+			if (!this.getClass().equals(obj.getClass())) {
 				return false;
 			}
 
@@ -182,7 +182,7 @@ public class EnglishAlphabet extends AbstractAlphabet implements AlphabeticalCas
 				return true;
 			}
 
-			if (this.getClass() != obj.getClass()) {
+			if (!this.getClass().equals(obj.getClass())) {
 				return false;
 			}
 
