@@ -205,55 +205,7 @@ public class GreekAlphabetTest
 	@Test
 	public void testGetLetter()
 	{
-		assertEquals(Optional.of('Α'), Optional.ofNullable(ALPHABET.getLetter(1)));
-		assertEquals(Optional.of('α'), Optional.ofNullable(ALPHABET.getLetter(2)));
-		assertEquals(Optional.of('Β'), Optional.ofNullable(ALPHABET.getLetter(3)));
-		assertEquals(Optional.of('β'), Optional.ofNullable(ALPHABET.getLetter(4)));
-		assertEquals(Optional.of('Γ'), Optional.ofNullable(ALPHABET.getLetter(5)));
-		assertEquals(Optional.of('γ'), Optional.ofNullable(ALPHABET.getLetter(6)));
-		assertEquals(Optional.of('Δ'), Optional.ofNullable(ALPHABET.getLetter(7)));
-		assertEquals(Optional.of('δ'), Optional.ofNullable(ALPHABET.getLetter(8)));
-		assertEquals(Optional.of('Ε'), Optional.ofNullable(ALPHABET.getLetter(9)));
-		assertEquals(Optional.of('ε'), Optional.ofNullable(ALPHABET.getLetter(10)));
-		assertEquals(Optional.of('Ζ'), Optional.ofNullable(ALPHABET.getLetter(11)));
-		assertEquals(Optional.of('ζ'), Optional.ofNullable(ALPHABET.getLetter(12)));
-		assertEquals(Optional.of('Η'), Optional.ofNullable(ALPHABET.getLetter(13)));
-		assertEquals(Optional.of('η'), Optional.ofNullable(ALPHABET.getLetter(14)));
-		assertEquals(Optional.of('Θ'), Optional.ofNullable(ALPHABET.getLetter(15)));
 		assertEquals(Optional.of('θ'), Optional.ofNullable(ALPHABET.getLetter(16)));
-		assertEquals(Optional.of('Ι'), Optional.ofNullable(ALPHABET.getLetter(17)));
-		assertEquals(Optional.of('ι'), Optional.ofNullable(ALPHABET.getLetter(18)));
-		assertEquals(Optional.of('Κ'), Optional.ofNullable(ALPHABET.getLetter(19)));
-		assertEquals(Optional.of('κ'), Optional.ofNullable(ALPHABET.getLetter(20)));
-		assertEquals(Optional.of('Λ'), Optional.ofNullable(ALPHABET.getLetter(21)));
-		assertEquals(Optional.of('λ'), Optional.ofNullable(ALPHABET.getLetter(22)));
-		assertEquals(Optional.of('Μ'), Optional.ofNullable(ALPHABET.getLetter(23)));
-		assertEquals(Optional.of('μ'), Optional.ofNullable(ALPHABET.getLetter(24)));
-		assertEquals(Optional.of('Ν'), Optional.ofNullable(ALPHABET.getLetter(25)));
-		assertEquals(Optional.of('ν'), Optional.ofNullable(ALPHABET.getLetter(26)));
-		assertEquals(Optional.of('Ξ'), Optional.ofNullable(ALPHABET.getLetter(27)));
-		assertEquals(Optional.of('ξ'), Optional.ofNullable(ALPHABET.getLetter(28)));
-		assertEquals(Optional.of('Ο'), Optional.ofNullable(ALPHABET.getLetter(29)));
-		assertEquals(Optional.of('ο'), Optional.ofNullable(ALPHABET.getLetter(30)));
-		assertEquals(Optional.of('Π'), Optional.ofNullable(ALPHABET.getLetter(31)));
-		assertEquals(Optional.of('π'), Optional.ofNullable(ALPHABET.getLetter(32)));
-		assertEquals(Optional.of('Ρ'), Optional.ofNullable(ALPHABET.getLetter(33)));
-		assertEquals(Optional.of('ρ'), Optional.ofNullable(ALPHABET.getLetter(34)));
-		assertEquals(Optional.of('Σ'), Optional.ofNullable(ALPHABET.getLetter(35)));
-		assertEquals(Optional.of('σ'), Optional.ofNullable(ALPHABET.getLetter(36)));
-		assertEquals(Optional.of('ς'), Optional.ofNullable(ALPHABET.getLetter(37)));
-		assertEquals(Optional.of('Τ'), Optional.ofNullable(ALPHABET.getLetter(38)));
-		assertEquals(Optional.of('τ'), Optional.ofNullable(ALPHABET.getLetter(39)));
-		assertEquals(Optional.of('Υ'), Optional.ofNullable(ALPHABET.getLetter(40)));
-		assertEquals(Optional.of('υ'), Optional.ofNullable(ALPHABET.getLetter(41)));
-		assertEquals(Optional.of('Φ'), Optional.ofNullable(ALPHABET.getLetter(42)));
-		assertEquals(Optional.of('φ'), Optional.ofNullable(ALPHABET.getLetter(43)));
-		assertEquals(Optional.of('Χ'), Optional.ofNullable(ALPHABET.getLetter(44)));
-		assertEquals(Optional.of('χ'), Optional.ofNullable(ALPHABET.getLetter(45)));
-		assertEquals(Optional.of('Ψ'), Optional.ofNullable(ALPHABET.getLetter(46)));
-		assertEquals(Optional.of('ψ'), Optional.ofNullable(ALPHABET.getLetter(47)));
-		assertEquals(Optional.of('Ω'), Optional.ofNullable(ALPHABET.getLetter(48)));
-		assertEquals(Optional.of('ω'), Optional.ofNullable(ALPHABET.getLetter(49)));
 	}
 
 	/**

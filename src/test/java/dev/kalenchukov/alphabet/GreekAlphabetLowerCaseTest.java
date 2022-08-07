@@ -165,31 +165,7 @@ public class GreekAlphabetLowerCaseTest
 	@Test
 	public void testGetLetter()
 	{
-		assertEquals(Optional.of('α'), Optional.ofNullable(ALPHABET.getLetter(1)));
-		assertEquals(Optional.of('β'), Optional.ofNullable(ALPHABET.getLetter(2)));
-		assertEquals(Optional.of('γ'), Optional.ofNullable(ALPHABET.getLetter(3)));
-		assertEquals(Optional.of('δ'), Optional.ofNullable(ALPHABET.getLetter(4)));
-		assertEquals(Optional.of('ε'), Optional.ofNullable(ALPHABET.getLetter(5)));
-		assertEquals(Optional.of('ζ'), Optional.ofNullable(ALPHABET.getLetter(6)));
-		assertEquals(Optional.of('η'), Optional.ofNullable(ALPHABET.getLetter(7)));
-		assertEquals(Optional.of('θ'), Optional.ofNullable(ALPHABET.getLetter(8)));
-		assertEquals(Optional.of('ι'), Optional.ofNullable(ALPHABET.getLetter(9)));
-		assertEquals(Optional.of('κ'), Optional.ofNullable(ALPHABET.getLetter(10)));
-		assertEquals(Optional.of('λ'), Optional.ofNullable(ALPHABET.getLetter(11)));
-		assertEquals(Optional.of('μ'), Optional.ofNullable(ALPHABET.getLetter(12)));
-		assertEquals(Optional.of('ν'), Optional.ofNullable(ALPHABET.getLetter(13)));
 		assertEquals(Optional.of('ξ'), Optional.ofNullable(ALPHABET.getLetter(14)));
-		assertEquals(Optional.of('ο'), Optional.ofNullable(ALPHABET.getLetter(15)));
-		assertEquals(Optional.of('π'), Optional.ofNullable(ALPHABET.getLetter(16)));
-		assertEquals(Optional.of('ρ'), Optional.ofNullable(ALPHABET.getLetter(17)));
-		assertEquals(Optional.of('σ'), Optional.ofNullable(ALPHABET.getLetter(18)));
-		assertEquals(Optional.of('ς'), Optional.ofNullable(ALPHABET.getLetter(19)));
-		assertEquals(Optional.of('τ'), Optional.ofNullable(ALPHABET.getLetter(20)));
-		assertEquals(Optional.of('υ'), Optional.ofNullable(ALPHABET.getLetter(21)));
-		assertEquals(Optional.of('φ'), Optional.ofNullable(ALPHABET.getLetter(22)));
-		assertEquals(Optional.of('χ'), Optional.ofNullable(ALPHABET.getLetter(23)));
-		assertEquals(Optional.of('ψ'), Optional.ofNullable(ALPHABET.getLetter(24)));
-		assertEquals(Optional.of('ω'), Optional.ofNullable(ALPHABET.getLetter(25)));
 	}
 
 	/**

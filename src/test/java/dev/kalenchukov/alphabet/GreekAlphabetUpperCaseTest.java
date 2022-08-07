@@ -189,30 +189,7 @@ public class GreekAlphabetUpperCaseTest
 	@Test
 	public void testGetLetter()
 	{
-		assertEquals(Optional.of('Α'), Optional.ofNullable(ALPHABET.getLetter(1)));
-		assertEquals(Optional.of('Β'), Optional.ofNullable(ALPHABET.getLetter(2)));
-		assertEquals(Optional.of('Γ'), Optional.ofNullable(ALPHABET.getLetter(3)));
-		assertEquals(Optional.of('Δ'), Optional.ofNullable(ALPHABET.getLetter(4)));
-		assertEquals(Optional.of('Ε'), Optional.ofNullable(ALPHABET.getLetter(5)));
-		assertEquals(Optional.of('Ζ'), Optional.ofNullable(ALPHABET.getLetter(6)));
-		assertEquals(Optional.of('Η'), Optional.ofNullable(ALPHABET.getLetter(7)));
-		assertEquals(Optional.of('Θ'), Optional.ofNullable(ALPHABET.getLetter(8)));
-		assertEquals(Optional.of('Ι'), Optional.ofNullable(ALPHABET.getLetter(9)));
-		assertEquals(Optional.of('Κ'), Optional.ofNullable(ALPHABET.getLetter(10)));
-		assertEquals(Optional.of('Λ'), Optional.ofNullable(ALPHABET.getLetter(11)));
-		assertEquals(Optional.of('Μ'), Optional.ofNullable(ALPHABET.getLetter(12)));
-		assertEquals(Optional.of('Ν'), Optional.ofNullable(ALPHABET.getLetter(13)));
 		assertEquals(Optional.of('Ξ'), Optional.ofNullable(ALPHABET.getLetter(14)));
-		assertEquals(Optional.of('Ο'), Optional.ofNullable(ALPHABET.getLetter(15)));
-		assertEquals(Optional.of('Π'), Optional.ofNullable(ALPHABET.getLetter(16)));
-		assertEquals(Optional.of('Ρ'), Optional.ofNullable(ALPHABET.getLetter(17)));
-		assertEquals(Optional.of('Σ'), Optional.ofNullable(ALPHABET.getLetter(18)));
-		assertEquals(Optional.of('Τ'), Optional.ofNullable(ALPHABET.getLetter(19)));
-		assertEquals(Optional.of('Υ'), Optional.ofNullable(ALPHABET.getLetter(20)));
-		assertEquals(Optional.of('Φ'), Optional.ofNullable(ALPHABET.getLetter(21)));
-		assertEquals(Optional.of('Χ'), Optional.ofNullable(ALPHABET.getLetter(22)));
-		assertEquals(Optional.of('Ψ'), Optional.ofNullable(ALPHABET.getLetter(23)));
-		assertEquals(Optional.of('Ω'), Optional.ofNullable(ALPHABET.getLetter(24)));
 	}
 
 	/**

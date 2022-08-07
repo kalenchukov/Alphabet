@@ -166,31 +166,6 @@ public class EnglishAlphabetUpperCaseTest
 	@Test
 	public void testGetLetter()
 	{
-		assertEquals(Optional.of('A'), Optional.ofNullable(ALPHABET.getLetter(1)));
-		assertEquals(Optional.of('B'), Optional.ofNullable(ALPHABET.getLetter(2)));
-		assertEquals(Optional.of('C'), Optional.ofNullable(ALPHABET.getLetter(3)));
-		assertEquals(Optional.of('D'), Optional.ofNullable(ALPHABET.getLetter(4)));
-		assertEquals(Optional.of('E'), Optional.ofNullable(ALPHABET.getLetter(5)));
-		assertEquals(Optional.of('F'), Optional.ofNullable(ALPHABET.getLetter(6)));
-		assertEquals(Optional.of('G'), Optional.ofNullable(ALPHABET.getLetter(7)));
-		assertEquals(Optional.of('H'), Optional.ofNullable(ALPHABET.getLetter(8)));
-		assertEquals(Optional.of('I'), Optional.ofNullable(ALPHABET.getLetter(9)));
-		assertEquals(Optional.of('J'), Optional.ofNullable(ALPHABET.getLetter(10)));
-		assertEquals(Optional.of('K'), Optional.ofNullable(ALPHABET.getLetter(11)));
-		assertEquals(Optional.of('L'), Optional.ofNullable(ALPHABET.getLetter(12)));
-		assertEquals(Optional.of('M'), Optional.ofNullable(ALPHABET.getLetter(13)));
-		assertEquals(Optional.of('N'), Optional.ofNullable(ALPHABET.getLetter(14)));
-		assertEquals(Optional.of('O'), Optional.ofNullable(ALPHABET.getLetter(15)));
-		assertEquals(Optional.of('P'), Optional.ofNullable(ALPHABET.getLetter(16)));
-		assertEquals(Optional.of('Q'), Optional.ofNullable(ALPHABET.getLetter(17)));
-		assertEquals(Optional.of('R'), Optional.ofNullable(ALPHABET.getLetter(18)));
-		assertEquals(Optional.of('S'), Optional.ofNullable(ALPHABET.getLetter(19)));
-		assertEquals(Optional.of('T'), Optional.ofNullable(ALPHABET.getLetter(20)));
-		assertEquals(Optional.of('U'), Optional.ofNullable(ALPHABET.getLetter(21)));
-		assertEquals(Optional.of('V'), Optional.ofNullable(ALPHABET.getLetter(22)));
-		assertEquals(Optional.of('W'), Optional.ofNullable(ALPHABET.getLetter(23)));
-		assertEquals(Optional.of('X'), Optional.ofNullable(ALPHABET.getLetter(24)));
-		assertEquals(Optional.of('Y'), Optional.ofNullable(ALPHABET.getLetter(25)));
 		assertEquals(Optional.of('Z'), Optional.ofNullable(ALPHABET.getLetter(26)));
 	}
 
