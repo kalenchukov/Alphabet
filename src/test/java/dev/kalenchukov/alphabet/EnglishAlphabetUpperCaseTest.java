@@ -54,7 +54,7 @@ public class EnglishAlphabetUpperCaseTest
 	 * Проверяет получение букв алфавита в перемешанном порядке.
 	 */
 	@Test
-	public void testGetLettersShuffle()
+	public void testGetShuffle()
 	{
 		List<Character> letters = List.of(
 			'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I',
@@ -62,7 +62,7 @@ public class EnglishAlphabetUpperCaseTest
 			'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
 		);
 
-		assertFalse(Arrays.equals(letters.toArray(), ALPHABET.getLettersShuffle().toArray()));
+		assertFalse(Arrays.equals(letters.toArray(), ALPHABET.getShuffle().toArray()));
 	}
 
 	/**

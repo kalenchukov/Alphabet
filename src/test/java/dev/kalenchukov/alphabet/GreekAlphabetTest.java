@@ -58,7 +58,7 @@ public class GreekAlphabetTest
 	 * Проверяет получение букв алфавита в перемешанном порядке.
 	 */
 	@Test
-	public void testGetLettersShuffle()
+	public void testGetShuffle()
 	{
 		List<Character> letters = List.of(
 			'Α', 'α', 'Β', 'β', 'Γ', 'γ', 'Δ', 'δ', 'Ε', 'ε',
@@ -68,7 +68,7 @@ public class GreekAlphabetTest
 			'υ', 'Φ', 'φ', 'Χ', 'χ', 'Ψ', 'ψ', 'Ω', 'ω'
 		);
 
-		assertFalse(Arrays.equals(letters.toArray(), ALPHABET.getLettersShuffle().toArray()));
+		assertFalse(Arrays.equals(letters.toArray(), ALPHABET.getShuffle().toArray()));
 	}
 
 	/**

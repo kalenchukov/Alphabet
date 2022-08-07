@@ -133,12 +133,12 @@ public abstract class AbstractAlphabet implements Alphabetical
 	}
 
 	/**
-	 * @see Alphabetical#getLettersShuffle()
+	 * @see Alphabetical#getShuffle()
 	 */
 	@NotNull
 	@Unmodifiable
 	@Override
-	public List<@NotNull Character> getLettersShuffle()
+	public List<@NotNull Character> getShuffle()
 	{
 		final int coefficientShuffle = (int) (this.letters.size() * 2.5);
 

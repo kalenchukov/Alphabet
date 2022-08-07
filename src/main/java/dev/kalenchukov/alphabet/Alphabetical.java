@@ -55,7 +55,7 @@ public interface Alphabetical
 	 */
 	@Unmodifiable
 	@NotNull
-	List<@NotNull Character> getLettersShuffle();
+	List<@NotNull Character> getShuffle();
 
 	/**
 	 * Возвращает позицию буквы в алфавите.

@@ -53,7 +53,7 @@ public class CyrillicAlphabetTest
 	 * Проверяет получение букв алфавита в перемешанном порядке.
 	 */
 	@Test
-	public void testGetLettersShuffle()
+	public void testGetShuffle()
 	{
 		List<Character> letters = List.of(
 			'А', 'Б', 'В', 'Г', 'Д', 'Е', 'Ж', 'Ѕ', 'З', 'И', 'І',
@@ -62,7 +62,7 @@ public class CyrillicAlphabetTest
 			'Ꙗ', 'Ѥ', 'Ѧ', 'Ѫ', 'Ѩ', 'Ѭ', 'Ѯ', 'Ѱ', 'Ѳ', 'Ѵ'
 		);
 
-		assertFalse(Arrays.equals(letters.toArray(), ALPHABET.getLettersShuffle().toArray()));
+		assertFalse(Arrays.equals(letters.toArray(), ALPHABET.getShuffle().toArray()));
 	}
 
 	/**

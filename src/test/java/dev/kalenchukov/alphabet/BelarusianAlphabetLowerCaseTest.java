@@ -55,7 +55,7 @@ public class BelarusianAlphabetLowerCaseTest
 	 * Проверяет получение букв алфавита в перемешанном порядке.
 	 */
 	@Test
-	public void testGetLettersShuffle()
+	public void testGetShuffle()
 	{
 		List<Character> letters = List.of(
 			'а', 'б', 'в', 'г', 'д', 'е', 'ё', 'ж', 'з',
@@ -64,7 +64,7 @@ public class BelarusianAlphabetLowerCaseTest
 			'ы', 'ь', 'э', 'ю', 'я'
 		);
 
-		assertFalse(Arrays.equals(letters.toArray(), ALPHABET.getLettersShuffle().toArray()));
+		assertFalse(Arrays.equals(letters.toArray(), ALPHABET.getShuffle().toArray()));
 	}
 
 	/**

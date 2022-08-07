@@ -60,7 +60,7 @@ alphabet.getReverse();
 
 ```java
 Alphabetical alphabet = new RussianAlphabet();
-alphabet.getLettersShuffle();
+alphabet.getShuffle();
 /*
 Результат выполнения:
 [
