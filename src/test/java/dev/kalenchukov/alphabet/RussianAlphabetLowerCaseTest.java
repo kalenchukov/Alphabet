@@ -332,4 +332,32 @@ public class RussianAlphabetLowerCaseTest
 
 		assertEquals(string, ALPHABET.toString());
 	}
+
+	/**
+	 * Проверка сравнения объектов.
+	 */
+	@Test
+	public void testEquals()
+	{
+		assertFalse(ALPHABET.equals(null));
+
+		assertTrue(ALPHABET.equals(ALPHABET));
+
+		assertFalse(ALPHABET.equals(new EnglishAlphabet.LowerCase()));
+
+		assertTrue(ALPHABET.equals(new RussianAlphabet.LowerCase()));
+	}
+
+	/**
+	 * Проверка хэш-кода.
+	 */
+	@Test
+	public void testHashCode()
+	{
+		assertEquals(ALPHABET.hashCode(), ALPHABET.hashCode());
+
+		assertEquals(ALPHABET.hashCode(), new RussianAlphabet.LowerCase().hashCode());
+
+		assertNotEquals(ALPHABET.hashCode(), new EnglishAlphabet.LowerCase().hashCode());
+	}
 }

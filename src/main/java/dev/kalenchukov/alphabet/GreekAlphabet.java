@@ -7,9 +7,11 @@
 package dev.kalenchukov.alphabet;
 
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import org.jetbrains.annotations.Unmodifiable;
 
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Класс букв греческого алфавита.
@@ -42,6 +44,42 @@ public class GreekAlphabet extends AbstractAlphabet implements AlphabeticalCase
 	}
 
 	/**
+	 * @see Object#equals(Object)
+	 */
+	@Override
+	public boolean equals(@Nullable final Object obj)
+	{
+		if (obj == null) {
+			return false;
+		}
+
+		if (this == obj) {
+			return true;
+		}
+
+		if (this.getClass() != obj.getClass()) {
+			return false;
+		}
+
+		final GreekAlphabet alphabet = (GreekAlphabet) obj;
+
+		if (!Objects.equals(GreekAlphabet.LETTERS, alphabet.getLetters())) {
+			return false;
+		}
+
+		return true;
+	}
+
+	/**
+	 * @see Object#hashCode()
+	 */
+	@Override
+	public int hashCode()
+	{
+		return GreekAlphabet.LETTERS.hashCode();
+	}
+
+	/**
 	 * Класс прописных букв греческого алфавита.
 	 */
 	public static class UpperCase extends AbstractAlphabet implements AlphabeticalUpperCase
@@ -64,6 +102,42 @@ public class GreekAlphabet extends AbstractAlphabet implements AlphabeticalCase
 		public UpperCase()
 		{
 			super(GreekAlphabet.UpperCase.LETTERS);
+		}
+
+		/**
+		 * @see Object#equals(Object)
+		 */
+		@Override
+		public boolean equals(@Nullable final Object obj)
+		{
+			if (obj == null) {
+				return false;
+			}
+
+			if (this == obj) {
+				return true;
+			}
+
+			if (this.getClass() != obj.getClass()) {
+				return false;
+			}
+
+			final GreekAlphabet.UpperCase alphabet = (GreekAlphabet.UpperCase) obj;
+
+			if (!Objects.equals(GreekAlphabet.UpperCase.LETTERS, alphabet.getLetters())) {
+				return false;
+			}
+
+			return true;
+		}
+
+		/**
+		 * @see Object#hashCode()
+		 */
+		@Override
+		public int hashCode()
+		{
+			return GreekAlphabet.LETTERS.hashCode();
 		}
 	}
 
@@ -91,6 +165,42 @@ public class GreekAlphabet extends AbstractAlphabet implements AlphabeticalCase
 		public LowerCase()
 		{
 			super(GreekAlphabet.LowerCase.LETTERS);
+		}
+
+		/**
+		 * @see Object#equals(Object)
+		 */
+		@Override
+		public boolean equals(@Nullable final Object obj)
+		{
+			if (obj == null) {
+				return false;
+			}
+
+			if (this == obj) {
+				return true;
+			}
+
+			if (this.getClass() != obj.getClass()) {
+				return false;
+			}
+
+			final GreekAlphabet.LowerCase alphabet = (GreekAlphabet.LowerCase) obj;
+
+			if (!Objects.equals(GreekAlphabet.LowerCase.LETTERS, alphabet.getLetters())) {
+				return false;
+			}
+
+			return true;
+		}
+
+		/**
+		 * @see Object#hashCode()
+		 */
+		@Override
+		public int hashCode()
+		{
+			return GreekAlphabet.LETTERS.hashCode();
 		}
 	}
 }

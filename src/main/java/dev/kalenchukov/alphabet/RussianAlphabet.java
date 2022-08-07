@@ -7,9 +7,11 @@
 package dev.kalenchukov.alphabet;
 
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import org.jetbrains.annotations.Unmodifiable;
 
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Класс букв русского алфавита.
@@ -44,6 +46,42 @@ public class RussianAlphabet extends AbstractAlphabet implements AlphabeticalCas
 	}
 
 	/**
+	 * @see Object#equals(Object)
+	 */
+	@Override
+	public boolean equals(@Nullable final Object obj)
+	{
+		if (obj == null) {
+			return false;
+		}
+
+		if (this == obj) {
+			return true;
+		}
+
+		if (this.getClass() != obj.getClass()) {
+			return false;
+		}
+
+		final RussianAlphabet alphabet = (RussianAlphabet) obj;
+
+		if (!Objects.equals(RussianAlphabet.LETTERS, alphabet.getLetters())) {
+			return false;
+		}
+
+		return true;
+	}
+
+	/**
+	 * @see Object#hashCode()
+	 */
+	@Override
+	public int hashCode()
+	{
+		return RussianAlphabet.LETTERS.hashCode();
+	}
+
+	/**
 	 * Класс прописных букв русского алфавита.
 	 */
 	public static class UpperCase extends AbstractAlphabet implements AlphabeticalUpperCase
@@ -68,6 +106,42 @@ public class RussianAlphabet extends AbstractAlphabet implements AlphabeticalCas
 		public UpperCase()
 		{
 			super(RussianAlphabet.UpperCase.LETTERS);
+		}
+
+		/**
+		 * @see Object#equals(Object)
+		 */
+		@Override
+		public boolean equals(@Nullable final Object obj)
+		{
+			if (obj == null) {
+				return false;
+			}
+
+			if (this == obj) {
+				return true;
+			}
+
+			if (this.getClass() != obj.getClass()) {
+				return false;
+			}
+
+			final RussianAlphabet.UpperCase alphabet = (RussianAlphabet.UpperCase) obj;
+
+			if (!Objects.equals(RussianAlphabet.UpperCase.LETTERS, alphabet.getLetters())) {
+				return false;
+			}
+
+			return true;
+		}
+
+		/**
+		 * @see Object#hashCode()
+		 */
+		@Override
+		public int hashCode()
+		{
+			return RussianAlphabet.LETTERS.hashCode();
 		}
 	}
 
@@ -96,6 +170,42 @@ public class RussianAlphabet extends AbstractAlphabet implements AlphabeticalCas
 		public LowerCase()
 		{
 			super(RussianAlphabet.LowerCase.LETTERS);
+		}
+
+		/**
+		 * @see Object#equals(Object)
+		 */
+		@Override
+		public boolean equals(@Nullable final Object obj)
+		{
+			if (obj == null) {
+				return false;
+			}
+
+			if (this == obj) {
+				return true;
+			}
+
+			if (this.getClass() != obj.getClass()) {
+				return false;
+			}
+
+			final RussianAlphabet.LowerCase alphabet = (RussianAlphabet.LowerCase) obj;
+
+			if (!Objects.equals(RussianAlphabet.LowerCase.LETTERS, alphabet.getLetters())) {
+				return false;
+			}
+
+			return true;
+		}
+
+		/**
+		 * @see Object#hashCode()
+		 */
+		@Override
+		public int hashCode()
+		{
+			return RussianAlphabet.LETTERS.hashCode();
 		}
 	}
 }

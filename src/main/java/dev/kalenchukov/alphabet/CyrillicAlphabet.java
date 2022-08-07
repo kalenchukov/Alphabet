@@ -7,9 +7,11 @@
 package dev.kalenchukov.alphabet;
 
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import org.jetbrains.annotations.Unmodifiable;
 
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Класс букв кириллического алфавита.
@@ -35,5 +37,41 @@ public class CyrillicAlphabet extends AbstractAlphabet
 	public CyrillicAlphabet()
 	{
 		super(CyrillicAlphabet.LETTERS);
+	}
+
+	/**
+	 * @see Object#equals(Object)
+	 */
+	@Override
+	public boolean equals(@Nullable final Object obj)
+	{
+		if (obj == null) {
+			return false;
+		}
+
+		if (this == obj) {
+			return true;
+		}
+
+		if (this.getClass() != obj.getClass()) {
+			return false;
+		}
+
+		final CyrillicAlphabet alphabet = (CyrillicAlphabet) obj;
+
+		if (!Objects.equals(CyrillicAlphabet.LETTERS, alphabet.getLetters())) {
+			return false;
+		}
+
+		return true;
+	}
+
+	/**
+	 * @see Object#hashCode()
+	 */
+	@Override
+	public int hashCode()
+	{
+		return CyrillicAlphabet.LETTERS.hashCode();
 	}
 }

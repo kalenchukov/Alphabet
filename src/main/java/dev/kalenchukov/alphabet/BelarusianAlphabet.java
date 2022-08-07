@@ -7,9 +7,11 @@
 package dev.kalenchukov.alphabet;
 
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import org.jetbrains.annotations.Unmodifiable;
 
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Класс букв белорусского алфавита.
@@ -44,6 +46,42 @@ public class BelarusianAlphabet extends AbstractAlphabet implements Alphabetical
 	}
 
 	/**
+	 * @see Object#equals(Object)
+	 */
+	@Override
+	public boolean equals(@Nullable final Object obj)
+	{
+		if (obj == null) {
+			return false;
+		}
+
+		if (this == obj) {
+			return true;
+		}
+
+		if (this.getClass() != obj.getClass()) {
+			return false;
+		}
+
+		final BelarusianAlphabet alphabet = (BelarusianAlphabet) obj;
+
+		if (!Objects.equals(BelarusianAlphabet.LETTERS, alphabet.getLetters())) {
+			return false;
+		}
+
+		return true;
+	}
+
+	/**
+	 * @see Object#hashCode()
+	 */
+	@Override
+	public int hashCode()
+	{
+		return BelarusianAlphabet.LETTERS.hashCode();
+	}
+
+	/**
 	 * Класс прописных букв белорусского алфавита.
 	 */
 	public static class UpperCase extends AbstractAlphabet implements AlphabeticalUpperCase
@@ -68,6 +106,42 @@ public class BelarusianAlphabet extends AbstractAlphabet implements Alphabetical
 		public UpperCase()
 		{
 			super(BelarusianAlphabet.UpperCase.LETTERS);
+		}
+
+		/**
+		 * @see Object#equals(Object)
+		 */
+		@Override
+		public boolean equals(@Nullable final Object obj)
+		{
+			if (obj == null) {
+				return false;
+			}
+
+			if (this == obj) {
+				return true;
+			}
+
+			if (this.getClass() != obj.getClass()) {
+				return false;
+			}
+
+			final BelarusianAlphabet.UpperCase alphabet = (BelarusianAlphabet.UpperCase) obj;
+
+			if (!Objects.equals(BelarusianAlphabet.UpperCase.LETTERS, alphabet.getLetters())) {
+				return false;
+			}
+
+			return true;
+		}
+
+		/**
+		 * @see Object#hashCode()
+		 */
+		@Override
+		public int hashCode()
+		{
+			return BelarusianAlphabet.LETTERS.hashCode();
 		}
 	}
 
@@ -96,6 +170,42 @@ public class BelarusianAlphabet extends AbstractAlphabet implements Alphabetical
 		public LowerCase()
 		{
 			super(BelarusianAlphabet.LowerCase.LETTERS);
+		}
+
+		/**
+		 * @see Object#equals(Object)
+		 */
+		@Override
+		public boolean equals(@Nullable final Object obj)
+		{
+			if (obj == null) {
+				return false;
+			}
+
+			if (this == obj) {
+				return true;
+			}
+
+			if (this.getClass() != obj.getClass()) {
+				return false;
+			}
+
+			final BelarusianAlphabet.LowerCase alphabet = (BelarusianAlphabet.LowerCase) obj;
+
+			if (!Objects.equals(BelarusianAlphabet.LowerCase.LETTERS, alphabet.getLetters())) {
+				return false;
+			}
+
+			return true;
+		}
+
+		/**
+		 * @see Object#hashCode()
+		 */
+		@Override
+		public int hashCode()
+		{
+			return BelarusianAlphabet.LETTERS.hashCode();
 		}
 	}
 }

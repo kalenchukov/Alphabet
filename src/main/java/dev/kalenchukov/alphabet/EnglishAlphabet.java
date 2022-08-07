@@ -7,9 +7,11 @@
 package dev.kalenchukov.alphabet;
 
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import org.jetbrains.annotations.Unmodifiable;
 
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Класс букв английского алфавита.
@@ -42,6 +44,42 @@ public class EnglishAlphabet extends AbstractAlphabet implements AlphabeticalCas
 	}
 
 	/**
+	 * @see Object#equals(Object)
+	 */
+	@Override
+	public boolean equals(@Nullable final Object obj)
+	{
+		if (obj == null) {
+			return false;
+		}
+
+		if (this == obj) {
+			return true;
+		}
+
+		if (this.getClass() != obj.getClass()) {
+			return false;
+		}
+
+		final EnglishAlphabet alphabet = (EnglishAlphabet) obj;
+
+		if (!Objects.equals(EnglishAlphabet.LETTERS, alphabet.getLetters())) {
+			return false;
+		}
+
+		return true;
+	}
+
+	/**
+	 * @see Object#hashCode()
+	 */
+	@Override
+	public int hashCode()
+	{
+		return EnglishAlphabet.LETTERS.hashCode();
+	}
+
+	/**
 	 * Класс прописных букв английского алфавита.
 	 */
 	public static class UpperCase extends AbstractAlphabet implements AlphabeticalUpperCase
@@ -65,6 +103,42 @@ public class EnglishAlphabet extends AbstractAlphabet implements AlphabeticalCas
 		public UpperCase()
 		{
 			super(EnglishAlphabet.UpperCase.LETTERS);
+		}
+
+		/**
+		 * @see Object#equals(Object)
+		 */
+		@Override
+		public boolean equals(@Nullable final Object obj)
+		{
+			if (obj == null) {
+				return false;
+			}
+
+			if (this == obj) {
+				return true;
+			}
+
+			if (this.getClass() != obj.getClass()) {
+				return false;
+			}
+
+			final EnglishAlphabet.UpperCase alphabet = (EnglishAlphabet.UpperCase) obj;
+
+			if (!Objects.equals(EnglishAlphabet.UpperCase.LETTERS, alphabet.getLetters())) {
+				return false;
+			}
+
+			return true;
+		}
+
+		/**
+		 * @see Object#hashCode()
+		 */
+		@Override
+		public int hashCode()
+		{
+			return EnglishAlphabet.LETTERS.hashCode();
 		}
 	}
 
@@ -92,6 +166,42 @@ public class EnglishAlphabet extends AbstractAlphabet implements AlphabeticalCas
 		public LowerCase()
 		{
 			super(EnglishAlphabet.LowerCase.LETTERS);
+		}
+
+		/**
+		 * @see Object#equals(Object)
+		 */
+		@Override
+		public boolean equals(@Nullable final Object obj)
+		{
+			if (obj == null) {
+				return false;
+			}
+
+			if (this == obj) {
+				return true;
+			}
+
+			if (this.getClass() != obj.getClass()) {
+				return false;
+			}
+
+			final EnglishAlphabet.LowerCase alphabet = (EnglishAlphabet.LowerCase) obj;
+
+			if (!Objects.equals(EnglishAlphabet.LowerCase.LETTERS, alphabet.getLetters())) {
+				return false;
+			}
+
+			return true;
+		}
+
+		/**
+		 * @see Object#hashCode()
+		 */
+		@Override
+		public int hashCode()
+		{
+			return EnglishAlphabet.LETTERS.hashCode();
 		}
 	}
 }
