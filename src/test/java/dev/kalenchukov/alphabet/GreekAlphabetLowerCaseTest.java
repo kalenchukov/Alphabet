@@ -240,13 +240,13 @@ public class GreekAlphabetLowerCaseTest
 	@Test
 	public void testToArray()
 	{
-		List<Character> letters = List.of(
+		Character[] letters = new Character[]{
 			'α', 'β', 'γ', 'δ', 'ε', 'ζ', 'η', 'θ', 'ι',
 			'κ', 'λ', 'μ', 'ν', 'ξ', 'ο', 'π', 'ρ', 'σ',
 			'ς', 'τ', 'υ', 'φ', 'χ', 'ψ', 'ω'
-		);
+		};
 
-		assertArrayEquals(letters.toArray(), ALPHABET.toArray());
+		assertArrayEquals(letters, ALPHABET.toArray());
 	}
 
 	/**

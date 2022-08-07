@@ -267,14 +267,14 @@ public class RussianAlphabetUpperCaseTest
 	@Test
 	public void testToArray()
 	{
-		List<Character> letters = List.of(
+		Character[] letters = new Character[]{
 			'А', 'Б', 'В', 'Г', 'Д', 'Е', 'Ё', 'Ж', 'З',
 			'И', 'Й', 'К', 'Л', 'М', 'Н', 'О', 'П', 'Р',
 			'С', 'Т', 'У', 'Ф', 'Х', 'Ц', 'Ч', 'Ш', 'Щ',
 			'Ъ', 'Ы', 'Ь', 'Э', 'Ю', 'Я'
-		);
+		};
 
-		assertArrayEquals(letters.toArray(), ALPHABET.toArray());
+		assertArrayEquals(letters, ALPHABET.toArray());
 	}
 
 	/**

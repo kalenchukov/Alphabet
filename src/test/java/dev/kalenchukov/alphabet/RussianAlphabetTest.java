@@ -453,7 +453,7 @@ public class RussianAlphabetTest
 	@Test
 	public void testToArray()
 	{
-		List<Character> letters = List.of(
+		Character[] letters = new Character[]{
 			'А', 'а', 'Б', 'б', 'В', 'в', 'Г', 'г', 'Д', 'д',
 			'Е', 'е', 'Ё', 'ё', 'Ж', 'ж', 'З', 'з', 'И', 'и',
 			'Й', 'й', 'К', 'к', 'Л', 'л', 'М', 'м', 'Н', 'н',
@@ -461,9 +461,9 @@ public class RussianAlphabetTest
 			'У', 'у', 'Ф', 'ф', 'Х', 'х', 'Ц', 'ц', 'Ч', 'ч',
 			'Ш', 'ш', 'Щ', 'щ', 'Ъ', 'ъ', 'Ы', 'ы', 'Ь', 'ь',
 			'Э', 'э', 'Ю', 'ю', 'Я', 'я'
-		);
+		};
 
-		assertArrayEquals(letters.toArray(), ALPHABET.toArray());
+		assertArrayEquals(letters, ALPHABET.toArray());
 	}
 
 	/**

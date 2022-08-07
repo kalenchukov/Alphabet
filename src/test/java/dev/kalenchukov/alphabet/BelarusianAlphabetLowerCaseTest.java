@@ -264,14 +264,14 @@ public class BelarusianAlphabetLowerCaseTest
 	@Test
 	public void testToArray()
 	{
-		List<Character> letters = List.of(
+		Character[] letters = new Character[]{
 			'а', 'б', 'в', 'г', 'д', 'е', 'ё', 'ж', 'з',
 			'і', 'й', 'к', 'л', 'м', 'н', 'о', 'п', 'р',
 			'с', 'т', 'у', 'ў', 'ф', 'х', 'ц', 'ч', 'ш',
 			'ы', 'ь', 'э', 'ю', 'я'
-		);
+		};
 
-		assertArrayEquals(letters.toArray(), ALPHABET.toArray());
+		assertArrayEquals(letters, ALPHABET.toArray());
 	}
 
 	/**

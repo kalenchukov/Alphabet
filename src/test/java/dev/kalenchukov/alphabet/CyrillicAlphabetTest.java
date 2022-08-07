@@ -295,14 +295,14 @@ public class CyrillicAlphabetTest
 	@Test
 	public void testToArray()
 	{
-		List<Character> letters = List.of(
+		Character[] letters = new Character[]{
 			'А', 'Б', 'В', 'Г', 'Д', 'Е', 'Ж', 'Ѕ', 'З', 'И', 'І',
 			'К', 'Л', 'М', 'Н', 'О', 'П', 'Р', 'С', 'Т', 'Ꙋ', 'Ф',
 			'Х', 'Ѡ', 'Ц', 'Ч', 'Ш', 'Щ', 'Ъ', 'Ы', 'Ь', 'Ѣ', 'Ю',
 			'Ꙗ', 'Ѥ', 'Ѧ', 'Ѫ', 'Ѩ', 'Ѭ', 'Ѯ', 'Ѱ', 'Ѳ', 'Ѵ'
-		);
+		};
 
-		assertArrayEquals(letters.toArray(), ALPHABET.toArray());
+		assertArrayEquals(letters, ALPHABET.toArray());
 	}
 
 	/**

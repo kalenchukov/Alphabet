@@ -243,13 +243,13 @@ public class EnglishAlphabetUpperCaseTest
 	@Test
 	public void testToArray()
 	{
-		List<Character> letters = List.of(
+		Character[] letters = new Character[]{
 			'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I',
 			'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R',
 			'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
-		);
+		};
 
-		assertArrayEquals(letters.toArray(), ALPHABET.toArray());
+		assertArrayEquals(letters, ALPHABET.toArray());
 	}
 
 	/**

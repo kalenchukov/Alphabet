@@ -264,14 +264,14 @@ public class BelarusianAlphabetUpperCaseTest
 	@Test
 	public void testToArray()
 	{
-		List<Character> letters = List.of(
+		Character[] letters = new Character[]{
 			'А', 'Б', 'В', 'Г', 'Д', 'Е', 'Ё', 'Ж', 'З',
 			'І', 'Й', 'К', 'Л', 'М', 'Н', 'О', 'П', 'Р',
 			'С', 'Т', 'У', 'Ў', 'Ф', 'Х', 'Ц', 'Ч', 'Ш',
 			'Ы', 'Ь', 'Э', 'Ю', 'Я'
-		);
+		};
 
-		assertArrayEquals(letters.toArray(), ALPHABET.toArray());
+		assertArrayEquals(letters, ALPHABET.toArray());
 	}
 
 	/**
