@@ -221,30 +221,7 @@ public class GreekAlphabetUpperCaseTest
 	@Test
 	public void testContains()
 	{
-		assertTrue(ALPHABET.contains('Α'));
-		assertTrue(ALPHABET.contains('Β'));
-		assertTrue(ALPHABET.contains('Γ'));
-		assertTrue(ALPHABET.contains('Δ'));
-		assertTrue(ALPHABET.contains('Ε'));
-		assertTrue(ALPHABET.contains('Ζ'));
-		assertTrue(ALPHABET.contains('Η'));
-		assertTrue(ALPHABET.contains('Θ'));
-		assertTrue(ALPHABET.contains('Ι'));
-		assertTrue(ALPHABET.contains('Κ'));
-		assertTrue(ALPHABET.contains('Λ'));
-		assertTrue(ALPHABET.contains('Μ'));
-		assertTrue(ALPHABET.contains('Ν'));
-		assertTrue(ALPHABET.contains('Ξ'));
-		assertTrue(ALPHABET.contains('Ο'));
-		assertTrue(ALPHABET.contains('Π'));
-		assertTrue(ALPHABET.contains('Ρ'));
 		assertTrue(ALPHABET.contains('Σ'));
-		assertTrue(ALPHABET.contains('Τ'));
-		assertTrue(ALPHABET.contains('Υ'));
-		assertTrue(ALPHABET.contains('Φ'));
-		assertTrue(ALPHABET.contains('Χ'));
-		assertTrue(ALPHABET.contains('Ψ'));
-		assertTrue(ALPHABET.contains('Ω'));
 	}
 
 	/**

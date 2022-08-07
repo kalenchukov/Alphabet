@@ -215,38 +215,7 @@ public class BelarusianAlphabetLowerCaseTest
 	@Test
 	public void testContains()
 	{
-		assertTrue(ALPHABET.contains('а'));
-		assertTrue(ALPHABET.contains('б'));
-		assertTrue(ALPHABET.contains('в'));
-		assertTrue(ALPHABET.contains('г'));
-		assertTrue(ALPHABET.contains('д'));
-		assertTrue(ALPHABET.contains('е'));
-		assertTrue(ALPHABET.contains('ё'));
-		assertTrue(ALPHABET.contains('ж'));
-		assertTrue(ALPHABET.contains('з'));
-		assertTrue(ALPHABET.contains('і'));
-		assertTrue(ALPHABET.contains('й'));
-		assertTrue(ALPHABET.contains('к'));
-		assertTrue(ALPHABET.contains('л'));
-		assertTrue(ALPHABET.contains('м'));
-		assertTrue(ALPHABET.contains('н'));
-		assertTrue(ALPHABET.contains('о'));
 		assertTrue(ALPHABET.contains('п'));
-		assertTrue(ALPHABET.contains('р'));
-		assertTrue(ALPHABET.contains('с'));
-		assertTrue(ALPHABET.contains('т'));
-		assertTrue(ALPHABET.contains('у'));
-		assertTrue(ALPHABET.contains('ў'));
-		assertTrue(ALPHABET.contains('ф'));
-		assertTrue(ALPHABET.contains('х'));
-		assertTrue(ALPHABET.contains('ц'));
-		assertTrue(ALPHABET.contains('ч'));
-		assertTrue(ALPHABET.contains('ш'));
-		assertTrue(ALPHABET.contains('ы'));
-		assertTrue(ALPHABET.contains('ь'));
-		assertTrue(ALPHABET.contains('э'));
-		assertTrue(ALPHABET.contains('ю'));
-		assertTrue(ALPHABET.contains('я'));
 	}
 
 	/**

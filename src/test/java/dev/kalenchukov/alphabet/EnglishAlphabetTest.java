@@ -271,58 +271,7 @@ public class EnglishAlphabetTest
 	@Test
 	public void testContains()
 	{
-		assertTrue(ALPHABET.contains('A'));
-		assertTrue(ALPHABET.contains('B'));
-		assertTrue(ALPHABET.contains('C'));
-		assertTrue(ALPHABET.contains('D'));
-		assertTrue(ALPHABET.contains('E'));
-		assertTrue(ALPHABET.contains('F'));
-		assertTrue(ALPHABET.contains('G'));
-		assertTrue(ALPHABET.contains('H'));
-		assertTrue(ALPHABET.contains('I'));
-		assertTrue(ALPHABET.contains('J'));
-		assertTrue(ALPHABET.contains('K'));
 		assertTrue(ALPHABET.contains('L'));
-		assertTrue(ALPHABET.contains('M'));
-		assertTrue(ALPHABET.contains('N'));
-		assertTrue(ALPHABET.contains('O'));
-		assertTrue(ALPHABET.contains('P'));
-		assertTrue(ALPHABET.contains('Q'));
-		assertTrue(ALPHABET.contains('R'));
-		assertTrue(ALPHABET.contains('S'));
-		assertTrue(ALPHABET.contains('T'));
-		assertTrue(ALPHABET.contains('U'));
-		assertTrue(ALPHABET.contains('V'));
-		assertTrue(ALPHABET.contains('W'));
-		assertTrue(ALPHABET.contains('X'));
-		assertTrue(ALPHABET.contains('Y'));
-		assertTrue(ALPHABET.contains('Z'));
-		assertTrue(ALPHABET.contains('a'));
-		assertTrue(ALPHABET.contains('b'));
-		assertTrue(ALPHABET.contains('c'));
-		assertTrue(ALPHABET.contains('d'));
-		assertTrue(ALPHABET.contains('e'));
-		assertTrue(ALPHABET.contains('f'));
-		assertTrue(ALPHABET.contains('g'));
-		assertTrue(ALPHABET.contains('h'));
-		assertTrue(ALPHABET.contains('i'));
-		assertTrue(ALPHABET.contains('j'));
-		assertTrue(ALPHABET.contains('k'));
-		assertTrue(ALPHABET.contains('l'));
-		assertTrue(ALPHABET.contains('m'));
-		assertTrue(ALPHABET.contains('n'));
-		assertTrue(ALPHABET.contains('o'));
-		assertTrue(ALPHABET.contains('p'));
-		assertTrue(ALPHABET.contains('q'));
-		assertTrue(ALPHABET.contains('r'));
-		assertTrue(ALPHABET.contains('s'));
-		assertTrue(ALPHABET.contains('t'));
-		assertTrue(ALPHABET.contains('u'));
-		assertTrue(ALPHABET.contains('v'));
-		assertTrue(ALPHABET.contains('w'));
-		assertTrue(ALPHABET.contains('x'));
-		assertTrue(ALPHABET.contains('y'));
-		assertTrue(ALPHABET.contains('z'));
 	}
 
 	/**

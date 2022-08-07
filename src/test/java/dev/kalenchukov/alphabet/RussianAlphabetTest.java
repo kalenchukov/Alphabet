@@ -370,72 +370,7 @@ public class RussianAlphabetTest
 	@Test
 	public void testContains()
 	{
-		assertTrue(ALPHABET.contains('А'));
-		assertTrue(ALPHABET.contains('Б'));
-		assertTrue(ALPHABET.contains('В'));
-		assertTrue(ALPHABET.contains('Г'));
-		assertTrue(ALPHABET.contains('Д'));
-		assertTrue(ALPHABET.contains('Е'));
-		assertTrue(ALPHABET.contains('Ё'));
-		assertTrue(ALPHABET.contains('Ж'));
-		assertTrue(ALPHABET.contains('З'));
-		assertTrue(ALPHABET.contains('И'));
-		assertTrue(ALPHABET.contains('Й'));
-		assertTrue(ALPHABET.contains('К'));
-		assertTrue(ALPHABET.contains('Л'));
-		assertTrue(ALPHABET.contains('М'));
-		assertTrue(ALPHABET.contains('Н'));
-		assertTrue(ALPHABET.contains('О'));
-		assertTrue(ALPHABET.contains('П'));
-		assertTrue(ALPHABET.contains('Р'));
-		assertTrue(ALPHABET.contains('С'));
-		assertTrue(ALPHABET.contains('Т'));
 		assertTrue(ALPHABET.contains('У'));
-		assertTrue(ALPHABET.contains('Ф'));
-		assertTrue(ALPHABET.contains('Х'));
-		assertTrue(ALPHABET.contains('Ц'));
-		assertTrue(ALPHABET.contains('Ч'));
-		assertTrue(ALPHABET.contains('Ш'));
-		assertTrue(ALPHABET.contains('Щ'));
-		assertTrue(ALPHABET.contains('Ъ'));
-		assertTrue(ALPHABET.contains('Ы'));
-		assertTrue(ALPHABET.contains('Ь'));
-		assertTrue(ALPHABET.contains('Э'));
-		assertTrue(ALPHABET.contains('Ю'));
-		assertTrue(ALPHABET.contains('Я'));
-		assertTrue(ALPHABET.contains('а'));
-		assertTrue(ALPHABET.contains('б'));
-		assertTrue(ALPHABET.contains('в'));
-		assertTrue(ALPHABET.contains('г'));
-		assertTrue(ALPHABET.contains('д'));
-		assertTrue(ALPHABET.contains('е'));
-		assertTrue(ALPHABET.contains('ё'));
-		assertTrue(ALPHABET.contains('ж'));
-		assertTrue(ALPHABET.contains('з'));
-		assertTrue(ALPHABET.contains('и'));
-		assertTrue(ALPHABET.contains('й'));
-		assertTrue(ALPHABET.contains('к'));
-		assertTrue(ALPHABET.contains('л'));
-		assertTrue(ALPHABET.contains('м'));
-		assertTrue(ALPHABET.contains('н'));
-		assertTrue(ALPHABET.contains('о'));
-		assertTrue(ALPHABET.contains('п'));
-		assertTrue(ALPHABET.contains('р'));
-		assertTrue(ALPHABET.contains('с'));
-		assertTrue(ALPHABET.contains('т'));
-		assertTrue(ALPHABET.contains('у'));
-		assertTrue(ALPHABET.contains('ф'));
-		assertTrue(ALPHABET.contains('х'));
-		assertTrue(ALPHABET.contains('ц'));
-		assertTrue(ALPHABET.contains('ч'));
-		assertTrue(ALPHABET.contains('ш'));
-		assertTrue(ALPHABET.contains('щ'));
-		assertTrue(ALPHABET.contains('ъ'));
-		assertTrue(ALPHABET.contains('ы'));
-		assertTrue(ALPHABET.contains('ь'));
-		assertTrue(ALPHABET.contains('э'));
-		assertTrue(ALPHABET.contains('ю'));
-		assertTrue(ALPHABET.contains('я'));
 	}
 
 	/**

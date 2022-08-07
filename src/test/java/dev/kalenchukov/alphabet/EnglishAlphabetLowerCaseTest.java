@@ -200,32 +200,7 @@ public class EnglishAlphabetLowerCaseTest
 	@Test
 	public void testContains()
 	{
-		assertTrue(ALPHABET.contains('a'));
-		assertTrue(ALPHABET.contains('b'));
-		assertTrue(ALPHABET.contains('c'));
-		assertTrue(ALPHABET.contains('d'));
-		assertTrue(ALPHABET.contains('e'));
-		assertTrue(ALPHABET.contains('f'));
-		assertTrue(ALPHABET.contains('g'));
-		assertTrue(ALPHABET.contains('h'));
-		assertTrue(ALPHABET.contains('i'));
-		assertTrue(ALPHABET.contains('j'));
-		assertTrue(ALPHABET.contains('k'));
-		assertTrue(ALPHABET.contains('l'));
 		assertTrue(ALPHABET.contains('m'));
-		assertTrue(ALPHABET.contains('n'));
-		assertTrue(ALPHABET.contains('o'));
-		assertTrue(ALPHABET.contains('p'));
-		assertTrue(ALPHABET.contains('q'));
-		assertTrue(ALPHABET.contains('r'));
-		assertTrue(ALPHABET.contains('s'));
-		assertTrue(ALPHABET.contains('t'));
-		assertTrue(ALPHABET.contains('u'));
-		assertTrue(ALPHABET.contains('v'));
-		assertTrue(ALPHABET.contains('w'));
-		assertTrue(ALPHABET.contains('x'));
-		assertTrue(ALPHABET.contains('y'));
-		assertTrue(ALPHABET.contains('z'));
 	}
 
 	/**

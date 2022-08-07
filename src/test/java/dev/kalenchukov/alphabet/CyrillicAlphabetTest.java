@@ -235,49 +235,7 @@ public class CyrillicAlphabetTest
 	@Test
 	public void testContains()
 	{
-		assertTrue(ALPHABET.contains('А'));
-		assertTrue(ALPHABET.contains('Б'));
-		assertTrue(ALPHABET.contains('В'));
-		assertTrue(ALPHABET.contains('Г'));
-		assertTrue(ALPHABET.contains('Д'));
-		assertTrue(ALPHABET.contains('Е'));
-		assertTrue(ALPHABET.contains('Ж'));
-		assertTrue(ALPHABET.contains('Ѕ'));
-		assertTrue(ALPHABET.contains('З'));
-		assertTrue(ALPHABET.contains('И'));
-		assertTrue(ALPHABET.contains('І'));
-		assertTrue(ALPHABET.contains('К'));
-		assertTrue(ALPHABET.contains('Л'));
-		assertTrue(ALPHABET.contains('М'));
-		assertTrue(ALPHABET.contains('Н'));
-		assertTrue(ALPHABET.contains('О'));
-		assertTrue(ALPHABET.contains('П'));
-		assertTrue(ALPHABET.contains('Р'));
-		assertTrue(ALPHABET.contains('С'));
-		assertTrue(ALPHABET.contains('Т'));
-		assertTrue(ALPHABET.contains('Ꙋ'));
-		assertTrue(ALPHABET.contains('Ф'));
-		assertTrue(ALPHABET.contains('Х'));
-		assertTrue(ALPHABET.contains('Ѡ'));
-		assertTrue(ALPHABET.contains('Ц'));
-		assertTrue(ALPHABET.contains('Ч'));
-		assertTrue(ALPHABET.contains('Ш'));
-		assertTrue(ALPHABET.contains('Щ'));
-		assertTrue(ALPHABET.contains('Ъ'));
-		assertTrue(ALPHABET.contains('Ы'));
-		assertTrue(ALPHABET.contains('Ь'));
-		assertTrue(ALPHABET.contains('Ѣ'));
-		assertTrue(ALPHABET.contains('Ю'));
-		assertTrue(ALPHABET.contains('Ꙗ'));
-		assertTrue(ALPHABET.contains('Ѥ'));
-		assertTrue(ALPHABET.contains('Ѧ'));
-		assertTrue(ALPHABET.contains('Ѫ'));
-		assertTrue(ALPHABET.contains('Ѩ'));
-		assertTrue(ALPHABET.contains('Ѭ'));
-		assertTrue(ALPHABET.contains('Ѯ'));
 		assertTrue(ALPHABET.contains('Ѱ'));
-		assertTrue(ALPHABET.contains('Ѳ'));
-		assertTrue(ALPHABET.contains('Ѵ'));
 	}
 
 	/**

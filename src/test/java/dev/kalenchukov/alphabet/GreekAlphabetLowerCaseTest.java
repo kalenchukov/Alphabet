@@ -198,31 +198,7 @@ public class GreekAlphabetLowerCaseTest
 	@Test
 	public void testContains()
 	{
-		assertTrue(ALPHABET.contains('α'));
-		assertTrue(ALPHABET.contains('β'));
-		assertTrue(ALPHABET.contains('γ'));
-		assertTrue(ALPHABET.contains('δ'));
-		assertTrue(ALPHABET.contains('ε'));
-		assertTrue(ALPHABET.contains('ζ'));
-		assertTrue(ALPHABET.contains('η'));
 		assertTrue(ALPHABET.contains('θ'));
-		assertTrue(ALPHABET.contains('ι'));
-		assertTrue(ALPHABET.contains('κ'));
-		assertTrue(ALPHABET.contains('λ'));
-		assertTrue(ALPHABET.contains('μ'));
-		assertTrue(ALPHABET.contains('ν'));
-		assertTrue(ALPHABET.contains('ξ'));
-		assertTrue(ALPHABET.contains('ο'));
-		assertTrue(ALPHABET.contains('π'));
-		assertTrue(ALPHABET.contains('ρ'));
-		assertTrue(ALPHABET.contains('σ'));
-		assertTrue(ALPHABET.contains('ς'));
-		assertTrue(ALPHABET.contains('τ'));
-		assertTrue(ALPHABET.contains('υ'));
-		assertTrue(ALPHABET.contains('φ'));
-		assertTrue(ALPHABET.contains('χ'));
-		assertTrue(ALPHABET.contains('ψ'));
-		assertTrue(ALPHABET.contains('ω'));
 	}
 
 	/**
