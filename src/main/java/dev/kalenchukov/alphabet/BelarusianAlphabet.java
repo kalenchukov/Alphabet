@@ -65,7 +65,7 @@ public class BelarusianAlphabet extends AbstractAlphabet implements Alphabetical
 
 		final BelarusianAlphabet alphabet = (BelarusianAlphabet) obj;
 
-		if (!Objects.equals(BelarusianAlphabet.LETTERS, alphabet.getLetters())) {
+		if (!Objects.equals(BelarusianAlphabet.LETTERS, alphabet.get())) {
 			return false;
 		}
 
@@ -128,7 +128,7 @@ public class BelarusianAlphabet extends AbstractAlphabet implements Alphabetical
 
 			final BelarusianAlphabet.UpperCase alphabet = (BelarusianAlphabet.UpperCase) obj;
 
-			if (!Objects.equals(BelarusianAlphabet.UpperCase.LETTERS, alphabet.getLetters())) {
+			if (!Objects.equals(BelarusianAlphabet.UpperCase.LETTERS, alphabet.get())) {
 				return false;
 			}
 
@@ -192,7 +192,7 @@ public class BelarusianAlphabet extends AbstractAlphabet implements Alphabetical
 
 			final BelarusianAlphabet.LowerCase alphabet = (BelarusianAlphabet.LowerCase) obj;
 
-			if (!Objects.equals(BelarusianAlphabet.LowerCase.LETTERS, alphabet.getLetters())) {
+			if (!Objects.equals(BelarusianAlphabet.LowerCase.LETTERS, alphabet.get())) {
 				return false;
 			}
 

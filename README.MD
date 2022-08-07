@@ -18,7 +18,7 @@
 
 ```java
 Alphabetical alphabet = new RussianAlphabet();
-alphabet.getLetters();
+alphabet.get();
 /*
 Результат выполнения:
 [
@@ -78,7 +78,7 @@ alphabet.getShuffle();
 
 ```java
 Alphabetical alphabet = new RussianAlphabet();
-alphabet.getLetters(1, 3);
+alphabet.get(1, 3);
 /*
 Результат выполнения:
 [
@@ -117,7 +117,7 @@ alphabet.getPosition('ё');
 
 ```java
 Alphabetical alphabet = new RussianAlphabet.UpperCase();
-alphabet.getLetters();
+alphabet.get();
 /*
 Результат выполнения:
 [
@@ -153,7 +153,7 @@ alphabet.getReverse();
 
 ```java
 Alphabetical alphabet = new RussianAlphabet.UpperCase();
-alphabet.getLetters(1, 3);
+alphabet.get(1, 3);
 /*
 Результат выполнения:
 [
@@ -192,7 +192,7 @@ alphabet.getPosition('Ё');
 
 ```java
 Alphabetical alphabet = new RussianAlphabet.LowerCase();
-alphabet.getLetters();
+alphabet.get();
 /*
 Результат выполнения:
 [
@@ -228,7 +228,7 @@ alphabet.getReverse();
 
 ```java
 Alphabetical alphabet = new RussianAlphabet.LowerCase();
-alphabet.getLetters(1, 3);
+alphabet.get(1, 3);
 /*
 Результат выполнения:
 [

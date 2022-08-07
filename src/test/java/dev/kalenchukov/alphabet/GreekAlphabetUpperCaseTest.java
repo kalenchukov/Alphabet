@@ -24,7 +24,7 @@ public class GreekAlphabetUpperCaseTest
 	 * Проверяет буквы в алфавите.
 	 */
 	@Test
-	public void testGetLetters()
+	public void testGet()
 	{
 		List<Character> letters = List.of(
 			'Α', 'Β', 'Γ', 'Δ', 'Ε', 'Ζ', 'Η', 'Θ', 'Ι',
@@ -32,7 +32,7 @@ public class GreekAlphabetUpperCaseTest
 			'Τ', 'Υ', 'Φ', 'Χ', 'Ψ', 'Ω'
 		);
 
-		assertArrayEquals(letters.toArray(), ALPHABET.getLetters().toArray());
+		assertArrayEquals(letters.toArray(), ALPHABET.get().toArray());
 	}
 
 	/**
@@ -94,7 +94,7 @@ public class GreekAlphabetUpperCaseTest
 	 * Проверяет получение среза букв алфавита.
 	 */
 	@Test
-	public void testGetLettersRange()
+	public void testGetRange()
 	{
 		List<Character> letters1 = List.of(
 			'Α', 'Β', 'Γ', 'Δ', 'Ε', 'Ζ', 'Η', 'Θ', 'Ι',
@@ -110,36 +110,36 @@ public class GreekAlphabetUpperCaseTest
 			'Α'
 		);
 
-		assertArrayEquals(letters1.toArray(), ALPHABET.getLetters(1, 24).toArray());
-		assertArrayEquals(letters2.toArray(), ALPHABET.getLetters(1, 3).toArray());
-		assertArrayEquals(letters3.toArray(), ALPHABET.getLetters(1, 1).toArray());
+		assertArrayEquals(letters1.toArray(), ALPHABET.get(1, 24).toArray());
+		assertArrayEquals(letters2.toArray(), ALPHABET.get(1, 3).toArray());
+		assertArrayEquals(letters3.toArray(), ALPHABET.get(1, 1).toArray());
 	}
 
 	/**
 	 * Проверяет получение среза букв алфавита выходящего за минимальную границу.
 	 */
 	@Test(expected = IndexOutOfBoundsException.class)
-	public void testGetLettersRangeOutOfBoundsMin()
+	public void testGetRangeOutOfBoundsMin()
 	{
-		ALPHABET.getLetters(0, 24);
+		ALPHABET.get(0, 24);
 	}
 
 	/**
 	 * Проверяет получение среза букв алфавита выходящего за максимальную границу.
 	 */
 	@Test(expected = IndexOutOfBoundsException.class)
-	public void testGetLettersRangeOutOfBoundsMax()
+	public void testGetRangeOutOfBoundsMax()
 	{
-		ALPHABET.getLetters(1, 25);
+		ALPHABET.get(1, 25);
 	}
 
 	/**
 	 * Проверяет получение среза букв алфавита с инвертированной границей.
 	 */
 	@Test(expected = IllegalArgumentException.class)
-	public void testGetLettersRangeInversion()
+	public void testGetRangeInversion()
 	{
-		ALPHABET.getLetters(21, 14);
+		ALPHABET.get(21, 14);
 	}
 
 	/**

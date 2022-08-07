@@ -34,23 +34,23 @@ public abstract class AbstractAlphabet implements Alphabetical
 	}
 
 	/**
-	 * @see Alphabetical#getLetters()
+	 * @see Alphabetical#get()
 	 */
 	@Unmodifiable
 	@NotNull
 	@Override
-	public List<@NotNull Character> getLetters()
+	public List<@NotNull Character> get()
 	{
 		return Collections.unmodifiableList(this.letters);
 	}
 
 	/**
-	 * @see Alphabetical#getLetters(Integer, Integer)
+	 * @see Alphabetical#get(Integer, Integer)
 	 */
 	@Unmodifiable
 	@NotNull
 	@Override
-	public List<@NotNull Character> getLetters(@NotNull final Integer from, @NotNull final Integer to)
+	public List<@NotNull Character> get(@NotNull final Integer from, @NotNull final Integer to)
 	{
 		Objects.requireNonNull(from);
 		Objects.requireNonNull(to);
@@ -77,7 +77,7 @@ public abstract class AbstractAlphabet implements Alphabetical
 
 		try
 		{
-			return this.getLetters(position, position).get(0);
+			return this.get(position, position).get(0);
 		}
 		catch (IllegalArgumentException | IndexOutOfBoundsException exception)
 		{

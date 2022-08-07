@@ -24,7 +24,7 @@ public interface Alphabetical
 	 */
 	@Unmodifiable
 	@NotNull
-	List<@NotNull Character> getLetters();
+	List<@NotNull Character> get();
 
 	/**
 	 * Возвращает срез букв алфавита.
@@ -37,7 +37,7 @@ public interface Alphabetical
 	 */
 	@Unmodifiable
 	@NotNull
-	List<@NotNull Character> getLetters(@NotNull Integer from, @NotNull Integer to);
+	List<@NotNull Character> get(@NotNull Integer from, @NotNull Integer to);
 
 	/**
 	 * Возвращает буквы алфавита в обратном порядке.

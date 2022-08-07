@@ -24,7 +24,7 @@ public class EnglishAlphabetTest
 	 * Проверяет получение букв алфавита.
 	 */
 	@Test
-	public void testGetLetters()
+	public void testGet()
 	{
 		List<Character> letters = List.of(
 			'A', 'a', 'B', 'b', 'C', 'c', 'D', 'd', 'E', 'e',
@@ -35,7 +35,7 @@ public class EnglishAlphabetTest
 			'Z', 'z'
 		);
 
-		assertArrayEquals(letters.toArray(), ALPHABET.getLetters().toArray());
+		assertArrayEquals(letters.toArray(), ALPHABET.get().toArray());
 	}
 
 	/**
@@ -77,7 +77,7 @@ public class EnglishAlphabetTest
 	 * Проверяет получение среза букв алфавита.
 	 */
 	@Test
-	public void testGetLettersRange()
+	public void testGetRange()
 	{
 		List<Character> letters1 = List.of(
 			'A', 'a', 'B', 'b', 'C', 'c', 'D', 'd', 'E', 'e',
@@ -102,37 +102,37 @@ public class EnglishAlphabetTest
 			'A'
 		);
 
-		assertArrayEquals(letters1.toArray(), ALPHABET.getLetters(1, 52).toArray());
-		assertArrayEquals(letters2.toArray(), ALPHABET.getLetters(1, 26).toArray());
-		assertArrayEquals(letters3.toArray(), ALPHABET.getLetters(1, 3).toArray());
-		assertArrayEquals(letters4.toArray(), ALPHABET.getLetters(1, 1).toArray());
+		assertArrayEquals(letters1.toArray(), ALPHABET.get(1, 52).toArray());
+		assertArrayEquals(letters2.toArray(), ALPHABET.get(1, 26).toArray());
+		assertArrayEquals(letters3.toArray(), ALPHABET.get(1, 3).toArray());
+		assertArrayEquals(letters4.toArray(), ALPHABET.get(1, 1).toArray());
 	}
 
 	/**
 	 * Проверяет получение среза букв алфавита выходящего за минимальную границу.
 	 */
 	@Test(expected = IndexOutOfBoundsException.class)
-	public void testGetLettersRangeOutOfBoundsMin()
+	public void testGetRangeOutOfBoundsMin()
 	{
-		ALPHABET.getLetters(0, 26);
+		ALPHABET.get(0, 26);
 	}
 
 	/**
 	 * Проверяет получение среза букв алфавита выходящего за максимальную границу.
 	 */
 	@Test(expected = IndexOutOfBoundsException.class)
-	public void testGetLettersRangeOutOfBoundsMax()
+	public void testGetRangeOutOfBoundsMax()
 	{
-		ALPHABET.getLetters(1, 53);
+		ALPHABET.get(1, 53);
 	}
 
 	/**
 	 * Проверяет получение среза букв алфавита с инвертированной границей.
 	 */
 	@Test(expected = IllegalArgumentException.class)
-	public void testGetLettersRangeInversion()
+	public void testGetRangeInversion()
 	{
-		ALPHABET.getLetters(26, 20);
+		ALPHABET.get(26, 20);
 	}
 
 

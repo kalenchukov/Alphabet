@@ -24,7 +24,7 @@ public class RussianAlphabetLowerCaseTest
 	 * Проверяет буквы в алфавите.
 	 */
 	@Test
-	public void testGetLetters()
+	public void testGet()
 	{
 		List<Character> letters = List.of(
 			'а', 'б', 'в', 'г', 'д', 'е', 'ё', 'ж', 'з',
@@ -33,7 +33,7 @@ public class RussianAlphabetLowerCaseTest
 			'ъ', 'ы', 'ь', 'э', 'ю', 'я'
 		);
 
-		assertArrayEquals(letters.toArray(), ALPHABET.getLetters().toArray());
+		assertArrayEquals(letters.toArray(), ALPHABET.get().toArray());
 	}
 
 	/**
@@ -105,7 +105,7 @@ public class RussianAlphabetLowerCaseTest
 	 * Проверяет получение среза букв алфавита.
 	 */
 	@Test
-	public void testGetLettersRange()
+	public void testGetRange()
 	{
 		List<Character> letters1 = List.of(
 			'а', 'б', 'в', 'г', 'д', 'е', 'ё', 'ж', 'з',
@@ -122,36 +122,36 @@ public class RussianAlphabetLowerCaseTest
 			'а'
 		);
 
-		assertArrayEquals(letters1.toArray(), ALPHABET.getLetters(1, 33).toArray());
-		assertArrayEquals(letters2.toArray(), ALPHABET.getLetters(1, 3).toArray());
-		assertArrayEquals(letters3.toArray(), ALPHABET.getLetters(1, 1).toArray());
+		assertArrayEquals(letters1.toArray(), ALPHABET.get(1, 33).toArray());
+		assertArrayEquals(letters2.toArray(), ALPHABET.get(1, 3).toArray());
+		assertArrayEquals(letters3.toArray(), ALPHABET.get(1, 1).toArray());
 	}
 
 	/**
 	 * Проверяет получение среза букв алфавита выходящего за минимальную границу.
 	 */
 	@Test(expected = IndexOutOfBoundsException.class)
-	public void testGetLettersRangeOutOfBoundsMin()
+	public void testGetRangeOutOfBoundsMin()
 	{
-		ALPHABET.getLetters(0, 33);
+		ALPHABET.get(0, 33);
 	}
 
 	/**
 	 * Проверяет получение среза букв алфавита выходящего за максимальную границу.
 	 */
 	@Test(expected = IndexOutOfBoundsException.class)
-	public void testGetLettersRangeOutOfBoundsMax()
+	public void testGetRangeOutOfBoundsMax()
 	{
-		ALPHABET.getLetters(1, 34);
+		ALPHABET.get(1, 34);
 	}
 
 	/**
 	 * Проверяет получение среза букв алфавита с инвертированной границей.
 	 */
 	@Test(expected = IllegalArgumentException.class)
-	public void testGetLettersRangeInversion()
+	public void testGetRangeInversion()
 	{
-		ALPHABET.getLetters(30, 20);
+		ALPHABET.get(30, 20);
 	}
 
 	/**
