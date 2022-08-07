@@ -116,12 +116,12 @@ public abstract class AbstractAlphabet implements Alphabetical
 	}
 
 	/**
-	 * @see Alphabetical#getLettersReverse()
+	 * @see Alphabetical#getReverse()
 	 */
 	@NotNull
 	@Unmodifiable
 	@Override
-	public List<@NotNull Character> getLettersReverse()
+	public List<@NotNull Character> getReverse()
 	{
 		List<Character> alphabetReverse = new ArrayList<>(this.letters.size());
 

@@ -42,7 +42,7 @@ RussianAlphabet.LETTERS;
 
 ```java
 Alphabetical alphabet = new RussianAlphabet();
-alphabet.getLettersReverse();
+alphabet.getReverse();
 /*
 Результат выполнения:
 [
@@ -138,7 +138,7 @@ RussianAlphabet.UpperCase.LETTERS;
 
 ```java
 Alphabetical alphabet = new RussianAlphabet.UpperCase();
-alphabet.getLettersReverse();
+alphabet.getReverse();
 /*
 Результат выполнения:
 [
@@ -213,7 +213,7 @@ RussianAlphabet.LowerCase.LETTERS;
 
 ```java
 Alphabetical alphabet = new RussianAlphabet.LowerCase();
-alphabet.getLettersReverse();
+alphabet.getReverse();
 /*
 Результат выполнения:
 [

@@ -46,7 +46,7 @@ public interface Alphabetical
 	 */
 	@Unmodifiable
 	@NotNull
-	List<@NotNull Character> getLettersReverse();
+	List<@NotNull Character> getReverse();
 
 	/**
 	 * Возвращает буквы алфавита в перемешанном порядке.

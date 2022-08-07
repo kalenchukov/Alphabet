@@ -40,7 +40,7 @@ public class BelarusianAlphabetLowerCaseTest
 	 * Проверяет буквы алфавита в обратном порядке.
 	 */
 	@Test
-	public void testGetLettersReverse()
+	public void testGetReverse()
 	{
 		List<Character> letters = List.of(
 			'я', 'ю', 'э', 'ь', 'ы', 'ш', 'ч', 'ц', 'х', 'ф',
@@ -48,7 +48,7 @@ public class BelarusianAlphabetLowerCaseTest
 			'і', 'з', 'ж', 'ё', 'е', 'д', 'г', 'в', 'б', 'а'
 		);
 
-		assertArrayEquals(letters.toArray(), ALPHABET.getLettersReverse().toArray());
+		assertArrayEquals(letters.toArray(), ALPHABET.getReverse().toArray());
 	}
 
 	/**

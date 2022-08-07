@@ -43,7 +43,7 @@ public class RussianAlphabetTest
 	 * Проверяет буквы алфавита в обратном порядке.
 	 */
 	@Test
-	public void testGetLettersReverse()
+	public void testGetReverse()
 	{
 		List<Character> letters = List.of(
 			'я', 'Я', 'ю', 'Ю', 'э', 'Э', 'ь', 'Ь', 'ы', 'Ы',
@@ -54,7 +54,7 @@ public class RussianAlphabetTest
 			'г', 'Г', 'в', 'В', 'б', 'Б', 'а', 'А'
 		);
 
-		assertArrayEquals(letters.toArray(), ALPHABET.getLettersReverse().toArray());
+		assertArrayEquals(letters.toArray(), ALPHABET.getReverse().toArray());
 
 		assertEquals(Optional.of('А'), Optional.ofNullable(letters.get(65)));
 		assertEquals(Optional.of('а'), Optional.ofNullable(letters.get(64)));

@@ -40,13 +40,13 @@ public class CyrillicAlphabetTest
 	 * Проверяет буквы алфавита в обратном порядке.
 	 */
 	@Test
-	public void testGetLettersReverse()
+	public void testGetReverse()
 	{
 		List<Character> letters = List.of(
 			'Ѵ', 'Ѳ', 'Ѱ', 'Ѯ', 'Ѭ', 'Ѩ', 'Ѫ', 'Ѧ', 'Ѥ', 'Ꙗ', 'Ю', 'Ѣ', 'Ь', 'Ы', 'Ъ', 'Щ', 'Ш', 'Ч', 'Ц', 'Ѡ', 'Х', 'Ф', 'Ꙋ', 'Т', 'С', 'Р', 'П', 'О', 'Н', 'М', 'Л', 'К', 'І', 'И', 'З', 'Ѕ', 'Ж', 'Е', 'Д', 'Г', 'В', 'Б', 'А'
 		);
 
-		assertArrayEquals(letters.toArray(), ALPHABET.getLettersReverse().toArray());
+		assertArrayEquals(letters.toArray(), ALPHABET.getReverse().toArray());
 	}
 
 	/**

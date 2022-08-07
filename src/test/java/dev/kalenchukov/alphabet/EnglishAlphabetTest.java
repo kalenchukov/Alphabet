@@ -42,7 +42,7 @@ public class EnglishAlphabetTest
 	 * Проверяет буквы алфавита в обратном порядке.
 	 */
 	@Test
-	public void testGetLettersReverse()
+	public void testGetReverse()
 	{
 		List<Character> letters = List.of(
 			'z', 'Z', 'y', 'Y', 'x', 'X', 'w', 'W', 'v', 'V',
@@ -52,7 +52,7 @@ public class EnglishAlphabetTest
 			'c', 'C', 'b', 'B', 'a', 'A'
 		);
 
-		assertArrayEquals(letters.toArray(), ALPHABET.getLettersReverse().toArray());
+		assertArrayEquals(letters.toArray(), ALPHABET.getReverse().toArray());
 	}
 
 	/**

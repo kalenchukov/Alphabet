@@ -43,13 +43,13 @@ public class BelarusianAlphabetTest
 	 * Проверяет буквы алфавита в обратном порядке.
 	 */
 	@Test
-	public void testGetLettersReverse()
+	public void testGetReverse()
 	{
 		List<Character> letters = List.of(
 			'я', 'Я', 'ю', 'Ю', 'э', 'Э', 'ь', 'Ь', 'ы', 'Ы', 'ш', 'Ш', 'ч', 'Ч', 'ц', 'Ц', 'х', 'Х', 'ф', 'Ф', 'ў', 'Ў', 'у', 'У', 'т', 'Т', 'с', 'С', 'р', 'Р', 'п', 'П', 'о', 'О', 'н', 'Н', 'м', 'М', 'л', 'Л', 'к', 'К', 'й', 'Й', 'і', 'І', 'з', 'З', 'ж', 'Ж', 'ё', 'Ё', 'е', 'Е', 'д', 'Д', 'г', 'Г', 'в', 'В', 'б', 'Б', 'а', 'А'
 		);
 
-		assertArrayEquals(letters.toArray(), ALPHABET.getLettersReverse().toArray());
+		assertArrayEquals(letters.toArray(), ALPHABET.getReverse().toArray());
 	}
 
 	/**

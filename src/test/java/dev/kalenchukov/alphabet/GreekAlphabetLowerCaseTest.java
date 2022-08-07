@@ -39,7 +39,7 @@ public class GreekAlphabetLowerCaseTest
 	 * Проверяет буквы алфавита в обратном порядке.
 	 */
 	@Test
-	public void testGetLettersReverse()
+	public void testGetReverse()
 	{
 		List<Character> letters = List.of(
 			'ω', 'ψ', 'χ', 'φ', 'υ', 'τ', 'ς', 'σ', 'ρ', 'π',
@@ -47,7 +47,7 @@ public class GreekAlphabetLowerCaseTest
 			'γ', 'β', 'α'
 		);
 
-		assertArrayEquals(letters.toArray(), ALPHABET.getLettersReverse().toArray());
+		assertArrayEquals(letters.toArray(), ALPHABET.getReverse().toArray());
 	}
 
 	/**
