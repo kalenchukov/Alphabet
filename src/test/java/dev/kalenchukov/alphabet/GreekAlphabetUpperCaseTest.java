@@ -148,30 +148,7 @@ public class GreekAlphabetUpperCaseTest
 	@Test
 	public void testGetPosition()
 	{
-		assertEquals(Optional.of(1), Optional.ofNullable(ALPHABET.getPosition('Α')));
-		assertEquals(Optional.of(2), Optional.ofNullable(ALPHABET.getPosition('Β')));
-		assertEquals(Optional.of(3), Optional.ofNullable(ALPHABET.getPosition('Γ')));
-		assertEquals(Optional.of(4), Optional.ofNullable(ALPHABET.getPosition('Δ')));
-		assertEquals(Optional.of(5), Optional.ofNullable(ALPHABET.getPosition('Ε')));
-		assertEquals(Optional.of(6), Optional.ofNullable(ALPHABET.getPosition('Ζ')));
-		assertEquals(Optional.of(7), Optional.ofNullable(ALPHABET.getPosition('Η')));
-		assertEquals(Optional.of(8), Optional.ofNullable(ALPHABET.getPosition('Θ')));
-		assertEquals(Optional.of(9), Optional.ofNullable(ALPHABET.getPosition('Ι')));
-		assertEquals(Optional.of(10), Optional.ofNullable(ALPHABET.getPosition('Κ')));
-		assertEquals(Optional.of(11), Optional.ofNullable(ALPHABET.getPosition('Λ')));
-		assertEquals(Optional.of(12), Optional.ofNullable(ALPHABET.getPosition('Μ')));
-		assertEquals(Optional.of(13), Optional.ofNullable(ALPHABET.getPosition('Ν')));
-		assertEquals(Optional.of(14), Optional.ofNullable(ALPHABET.getPosition('Ξ')));
-		assertEquals(Optional.of(15), Optional.ofNullable(ALPHABET.getPosition('Ο')));
-		assertEquals(Optional.of(16), Optional.ofNullable(ALPHABET.getPosition('Π')));
-		assertEquals(Optional.of(17), Optional.ofNullable(ALPHABET.getPosition('Ρ')));
-		assertEquals(Optional.of(18), Optional.ofNullable(ALPHABET.getPosition('Σ')));
-		assertEquals(Optional.of(19), Optional.ofNullable(ALPHABET.getPosition('Τ')));
-		assertEquals(Optional.of(20), Optional.ofNullable(ALPHABET.getPosition('Υ')));
-		assertEquals(Optional.of(21), Optional.ofNullable(ALPHABET.getPosition('Φ')));
-		assertEquals(Optional.of(22), Optional.ofNullable(ALPHABET.getPosition('Χ')));
 		assertEquals(Optional.of(23), Optional.ofNullable(ALPHABET.getPosition('Ψ')));
-		assertEquals(Optional.of(24), Optional.ofNullable(ALPHABET.getPosition('Ω')));
 	}
 
 	/**

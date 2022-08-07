@@ -160,39 +160,7 @@ public class RussianAlphabetLowerCaseTest
 	@Test
 	public void testGetPosition()
 	{
-		assertEquals(Optional.of(1), Optional.ofNullable(ALPHABET.getPosition('а')));
-		assertEquals(Optional.of(2), Optional.ofNullable(ALPHABET.getPosition('б')));
-		assertEquals(Optional.of(3), Optional.ofNullable(ALPHABET.getPosition('в')));
-		assertEquals(Optional.of(4), Optional.ofNullable(ALPHABET.getPosition('г')));
-		assertEquals(Optional.of(5), Optional.ofNullable(ALPHABET.getPosition('д')));
-		assertEquals(Optional.of(6), Optional.ofNullable(ALPHABET.getPosition('е')));
-		assertEquals(Optional.of(7), Optional.ofNullable(ALPHABET.getPosition('ё')));
-		assertEquals(Optional.of(8), Optional.ofNullable(ALPHABET.getPosition('ж')));
-		assertEquals(Optional.of(9), Optional.ofNullable(ALPHABET.getPosition('з')));
-		assertEquals(Optional.of(10), Optional.ofNullable(ALPHABET.getPosition('и')));
-		assertEquals(Optional.of(11), Optional.ofNullable(ALPHABET.getPosition('й')));
-		assertEquals(Optional.of(12), Optional.ofNullable(ALPHABET.getPosition('к')));
-		assertEquals(Optional.of(13), Optional.ofNullable(ALPHABET.getPosition('л')));
-		assertEquals(Optional.of(14), Optional.ofNullable(ALPHABET.getPosition('м')));
-		assertEquals(Optional.of(15), Optional.ofNullable(ALPHABET.getPosition('н')));
-		assertEquals(Optional.of(16), Optional.ofNullable(ALPHABET.getPosition('о')));
-		assertEquals(Optional.of(17), Optional.ofNullable(ALPHABET.getPosition('п')));
-		assertEquals(Optional.of(18), Optional.ofNullable(ALPHABET.getPosition('р')));
-		assertEquals(Optional.of(19), Optional.ofNullable(ALPHABET.getPosition('с')));
-		assertEquals(Optional.of(20), Optional.ofNullable(ALPHABET.getPosition('т')));
-		assertEquals(Optional.of(21), Optional.ofNullable(ALPHABET.getPosition('у')));
-		assertEquals(Optional.of(22), Optional.ofNullable(ALPHABET.getPosition('ф')));
-		assertEquals(Optional.of(23), Optional.ofNullable(ALPHABET.getPosition('х')));
-		assertEquals(Optional.of(24), Optional.ofNullable(ALPHABET.getPosition('ц')));
-		assertEquals(Optional.of(25), Optional.ofNullable(ALPHABET.getPosition('ч')));
-		assertEquals(Optional.of(26), Optional.ofNullable(ALPHABET.getPosition('ш')));
 		assertEquals(Optional.of(27), Optional.ofNullable(ALPHABET.getPosition('щ')));
-		assertEquals(Optional.of(28), Optional.ofNullable(ALPHABET.getPosition('ъ')));
-		assertEquals(Optional.of(29), Optional.ofNullable(ALPHABET.getPosition('ы')));
-		assertEquals(Optional.of(30), Optional.ofNullable(ALPHABET.getPosition('ь')));
-		assertEquals(Optional.of(31), Optional.ofNullable(ALPHABET.getPosition('э')));
-		assertEquals(Optional.of(32), Optional.ofNullable(ALPHABET.getPosition('ю')));
-		assertEquals(Optional.of(33), Optional.ofNullable(ALPHABET.getPosition('я')));
 	}
 
 	/**

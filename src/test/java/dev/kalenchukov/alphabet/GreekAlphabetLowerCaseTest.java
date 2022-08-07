@@ -123,31 +123,7 @@ public class GreekAlphabetLowerCaseTest
 	@Test
 	public void testGetPosition()
 	{
-		assertEquals(Optional.of(1), Optional.ofNullable(ALPHABET.getPosition('α')));
-		assertEquals(Optional.of(2), Optional.ofNullable(ALPHABET.getPosition('β')));
-		assertEquals(Optional.of(3), Optional.ofNullable(ALPHABET.getPosition('γ')));
-		assertEquals(Optional.of(4), Optional.ofNullable(ALPHABET.getPosition('δ')));
-		assertEquals(Optional.of(5), Optional.ofNullable(ALPHABET.getPosition('ε')));
-		assertEquals(Optional.of(6), Optional.ofNullable(ALPHABET.getPosition('ζ')));
-		assertEquals(Optional.of(7), Optional.ofNullable(ALPHABET.getPosition('η')));
-		assertEquals(Optional.of(8), Optional.ofNullable(ALPHABET.getPosition('θ')));
-		assertEquals(Optional.of(9), Optional.ofNullable(ALPHABET.getPosition('ι')));
-		assertEquals(Optional.of(10), Optional.ofNullable(ALPHABET.getPosition('κ')));
-		assertEquals(Optional.of(11), Optional.ofNullable(ALPHABET.getPosition('λ')));
-		assertEquals(Optional.of(12), Optional.ofNullable(ALPHABET.getPosition('μ')));
-		assertEquals(Optional.of(13), Optional.ofNullable(ALPHABET.getPosition('ν')));
-		assertEquals(Optional.of(14), Optional.ofNullable(ALPHABET.getPosition('ξ')));
-		assertEquals(Optional.of(15), Optional.ofNullable(ALPHABET.getPosition('ο')));
-		assertEquals(Optional.of(16), Optional.ofNullable(ALPHABET.getPosition('π')));
-		assertEquals(Optional.of(17), Optional.ofNullable(ALPHABET.getPosition('ρ')));
-		assertEquals(Optional.of(18), Optional.ofNullable(ALPHABET.getPosition('σ')));
-		assertEquals(Optional.of(19), Optional.ofNullable(ALPHABET.getPosition('ς')));
-		assertEquals(Optional.of(20), Optional.ofNullable(ALPHABET.getPosition('τ')));
 		assertEquals(Optional.of(21), Optional.ofNullable(ALPHABET.getPosition('υ')));
-		assertEquals(Optional.of(22), Optional.ofNullable(ALPHABET.getPosition('φ')));
-		assertEquals(Optional.of(23), Optional.ofNullable(ALPHABET.getPosition('χ')));
-		assertEquals(Optional.of(24), Optional.ofNullable(ALPHABET.getPosition('ψ')));
-		assertEquals(Optional.of(25), Optional.ofNullable(ALPHABET.getPosition('ω')));
 	}
 
 	/**

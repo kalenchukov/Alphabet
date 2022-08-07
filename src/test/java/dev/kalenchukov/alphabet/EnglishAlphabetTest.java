@@ -151,58 +151,7 @@ public class EnglishAlphabetTest
 	@Test
 	public void testGetPosition()
 	{
-		assertEquals(Optional.of(1), Optional.ofNullable(ALPHABET.getPosition('A')));
-		assertEquals(Optional.of(2), Optional.ofNullable(ALPHABET.getPosition('a')));
-		assertEquals(Optional.of(3), Optional.ofNullable(ALPHABET.getPosition('B')));
-		assertEquals(Optional.of(4), Optional.ofNullable(ALPHABET.getPosition('b')));
-		assertEquals(Optional.of(5), Optional.ofNullable(ALPHABET.getPosition('C')));
-		assertEquals(Optional.of(6), Optional.ofNullable(ALPHABET.getPosition('c')));
-		assertEquals(Optional.of(7), Optional.ofNullable(ALPHABET.getPosition('D')));
-		assertEquals(Optional.of(8), Optional.ofNullable(ALPHABET.getPosition('d')));
-		assertEquals(Optional.of(9), Optional.ofNullable(ALPHABET.getPosition('E')));
-		assertEquals(Optional.of(10), Optional.ofNullable(ALPHABET.getPosition('e')));
 		assertEquals(Optional.of(11), Optional.ofNullable(ALPHABET.getPosition('F')));
-		assertEquals(Optional.of(12), Optional.ofNullable(ALPHABET.getPosition('f')));
-		assertEquals(Optional.of(13), Optional.ofNullable(ALPHABET.getPosition('G')));
-		assertEquals(Optional.of(14), Optional.ofNullable(ALPHABET.getPosition('g')));
-		assertEquals(Optional.of(15), Optional.ofNullable(ALPHABET.getPosition('H')));
-		assertEquals(Optional.of(16), Optional.ofNullable(ALPHABET.getPosition('h')));
-		assertEquals(Optional.of(17), Optional.ofNullable(ALPHABET.getPosition('I')));
-		assertEquals(Optional.of(18), Optional.ofNullable(ALPHABET.getPosition('i')));
-		assertEquals(Optional.of(19), Optional.ofNullable(ALPHABET.getPosition('J')));
-		assertEquals(Optional.of(20), Optional.ofNullable(ALPHABET.getPosition('j')));
-		assertEquals(Optional.of(21), Optional.ofNullable(ALPHABET.getPosition('K')));
-		assertEquals(Optional.of(22), Optional.ofNullable(ALPHABET.getPosition('k')));
-		assertEquals(Optional.of(23), Optional.ofNullable(ALPHABET.getPosition('L')));
-		assertEquals(Optional.of(24), Optional.ofNullable(ALPHABET.getPosition('l')));
-		assertEquals(Optional.of(25), Optional.ofNullable(ALPHABET.getPosition('M')));
-		assertEquals(Optional.of(26), Optional.ofNullable(ALPHABET.getPosition('m')));
-		assertEquals(Optional.of(27), Optional.ofNullable(ALPHABET.getPosition('N')));
-		assertEquals(Optional.of(28), Optional.ofNullable(ALPHABET.getPosition('n')));
-		assertEquals(Optional.of(29), Optional.ofNullable(ALPHABET.getPosition('O')));
-		assertEquals(Optional.of(30), Optional.ofNullable(ALPHABET.getPosition('o')));
-		assertEquals(Optional.of(31), Optional.ofNullable(ALPHABET.getPosition('P')));
-		assertEquals(Optional.of(32), Optional.ofNullable(ALPHABET.getPosition('p')));
-		assertEquals(Optional.of(33), Optional.ofNullable(ALPHABET.getPosition('Q')));
-		assertEquals(Optional.of(34), Optional.ofNullable(ALPHABET.getPosition('q')));
-		assertEquals(Optional.of(35), Optional.ofNullable(ALPHABET.getPosition('R')));
-		assertEquals(Optional.of(36), Optional.ofNullable(ALPHABET.getPosition('r')));
-		assertEquals(Optional.of(37), Optional.ofNullable(ALPHABET.getPosition('S')));
-		assertEquals(Optional.of(38), Optional.ofNullable(ALPHABET.getPosition('s')));
-		assertEquals(Optional.of(39), Optional.ofNullable(ALPHABET.getPosition('T')));
-		assertEquals(Optional.of(40), Optional.ofNullable(ALPHABET.getPosition('t')));
-		assertEquals(Optional.of(41), Optional.ofNullable(ALPHABET.getPosition('U')));
-		assertEquals(Optional.of(42), Optional.ofNullable(ALPHABET.getPosition('u')));
-		assertEquals(Optional.of(43), Optional.ofNullable(ALPHABET.getPosition('V')));
-		assertEquals(Optional.of(44), Optional.ofNullable(ALPHABET.getPosition('v')));
-		assertEquals(Optional.of(45), Optional.ofNullable(ALPHABET.getPosition('W')));
-		assertEquals(Optional.of(46), Optional.ofNullable(ALPHABET.getPosition('w')));
-		assertEquals(Optional.of(47), Optional.ofNullable(ALPHABET.getPosition('X')));
-		assertEquals(Optional.of(48), Optional.ofNullable(ALPHABET.getPosition('x')));
-		assertEquals(Optional.of(49), Optional.ofNullable(ALPHABET.getPosition('Y')));
-		assertEquals(Optional.of(50), Optional.ofNullable(ALPHABET.getPosition('y')));
-		assertEquals(Optional.of(51), Optional.ofNullable(ALPHABET.getPosition('Z')));
-		assertEquals(Optional.of(52), Optional.ofNullable(ALPHABET.getPosition('z')));
 	}
 
 	/**
