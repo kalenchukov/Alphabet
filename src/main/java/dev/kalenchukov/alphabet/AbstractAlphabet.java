@@ -106,11 +106,8 @@ public abstract class AbstractAlphabet implements Alphabetical
 	{
 		Objects.requireNonNull(letter);
 
-		for (int position = 0; position < this.letters.size(); position++)
-		{
-			if (this.letters.get(position).equals(letter)) {
-				return position + 1;
-			}
+		if (this.letters.contains(letter)) {
+			return this.letters.indexOf(letter) + 1;
 		}
 
 		return null;
