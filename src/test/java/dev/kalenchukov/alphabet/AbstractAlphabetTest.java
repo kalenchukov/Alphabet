@@ -208,12 +208,21 @@ public class AbstractAlphabetTest
 	}
 
 	/**
-	 * Проверяет букву по позиции в алфавите.
+	 * Проверяет присутствующую букву.
 	 */
 	@Test
 	public void testGetLetter()
 	{
 		assertEquals(Optional.of('м'), Optional.ofNullable(ALPHABET.getLetter(28)));
+	}
+
+	/**
+	 * Проверяет отсутствующую букву.
+	 */
+	@Test
+	public void testGetLetterNot()
+	{
+		assertNull(ALPHABET.getLetter(0));
 	}
 
 	/**

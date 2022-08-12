@@ -76,12 +76,10 @@ public abstract class AbstractAlphabet implements Alphabetical
 	{
 		Objects.requireNonNull(position);
 
-		try
-		{
-			return this.get(position, position).get(0);
+		try {
+			return this.letters.get(position - 1);
 		}
-		catch (IllegalArgumentException | IndexOutOfBoundsException exception)
-		{
+		catch (IndexOutOfBoundsException exception) {
 			return null;
 		}
 	}
