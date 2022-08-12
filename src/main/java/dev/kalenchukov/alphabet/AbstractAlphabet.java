@@ -141,12 +141,12 @@ public abstract class AbstractAlphabet implements Alphabetical
 	@Override
 	public List<@NotNull Character> getShuffle()
 	{
-		final int coefficientShuffle = (int) (this.letters.size() * 2.5);
+		final int coefficient = (int) (this.letters.size() * 2.5);
 
 		List<Character> letters = new ArrayList<>(this.letters);
 		Random random = new Random();
 
-		for (int iterationShuffle = 0; iterationShuffle < coefficientShuffle; iterationShuffle++)
+		for (int iterationShuffle = 0; iterationShuffle < coefficient; iterationShuffle++)
 		{
 			int indexFrom = random.nextInt(this.letters.size());
 			int indexIn = random.nextInt(this.letters.size());
@@ -181,6 +181,30 @@ public abstract class AbstractAlphabet implements Alphabetical
 		}
 
 		return Collections.unmodifiableList(letters);
+	}
+
+	/**
+	 * @see Alphabetical#statistics(String)
+	 */
+	@NotNull
+	@Override
+	public Map<@NotNull Character, @NotNull Integer> statistics(@NotNull final String string)
+	{
+		Map<Character, Integer> statistics = new HashMap<>(this.letters.size());
+
+		this.letters.forEach(letter -> statistics.put(letter, 0));
+
+		final Character[] symbols = string.chars()
+										  .mapToObj(i -> (char) i)
+										  .toArray(Character[]::new);
+
+		Arrays.stream(symbols).forEach(symbol -> {
+			if (statistics.containsKey(symbol)) {
+				statistics.put(symbol, statistics.get(symbol) + 1);
+			}
+		});
+
+		return statistics;
 	}
 
 	/**

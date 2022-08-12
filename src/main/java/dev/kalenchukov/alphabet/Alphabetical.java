@@ -12,6 +12,7 @@ import org.jetbrains.annotations.Range;
 import org.jetbrains.annotations.Unmodifiable;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * Интерфейс для реализации алфавита.
@@ -85,6 +86,19 @@ public interface Alphabetical
 	 */
 	@Nullable
 	Character getLetter(@NotNull @Range(from = 0, to = Integer.MAX_VALUE) Integer position);
+
+	/**
+	 * Подсчитывает количество вхождений каждой буквы в строку.
+	 *
+	 * @param string Строка.
+	 * @return Коллекцию из букв и количества вхождений.<br>
+	 * <ul>
+	 *     <li>Ket - буква</li>
+	 *     <li>Value - количество вхождений</li>
+	 * </ul>
+	 */
+	@NotNull
+	Map<@NotNull Character, @NotNull Integer> statistics(@NotNull final String string);
 
 	/**
 	 * Проверяет содержание буквы в алфавите.
