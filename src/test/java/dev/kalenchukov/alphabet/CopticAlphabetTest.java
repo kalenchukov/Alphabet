@@ -1,0 +1,86 @@
+/*
+ * Copyright 2022 Алексей Каленчуков
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+package dev.kalenchukov.alphabet;
+
+import org.jetbrains.annotations.NotNull;
+import org.junit.Test;
+
+import java.util.List;
+
+import static org.junit.Assert.*;
+
+public class CopticAlphabetTest
+{
+	@NotNull
+	public static final Alphabetical ALPHABET = new CopticAlphabet();
+
+	/**
+	 * Проверяет получение букв алфавита.
+	 */
+	@Test
+	public void testGet()
+	{
+		List<Character> letters = List.of(
+			'Ⲁ', 'ⲁ', 'Ⲃ', 'ⲃ', 'Ⲅ', 'ⲅ', 
+			'Ⲇ', 'ⲇ', 'Ⲉ', 'ⲉ', 'Ⲋ', 'ⲋ', 
+			'Ⲍ', 'ⲍ', 'Ⲏ', 'ⲏ', 'Ⲑ', 'ⲑ', 
+			'Ⲓ', 'ⲓ', 'Ⲕ', 'ⲕ', 'Ⲗ', 'ⲗ', 
+			'Ⲙ', 'ⲙ', 'Ⲛ', 'ⲛ', 'Ⲝ', 'ⲝ', 
+			'Ⲟ', 'ⲟ', 'Ⲡ', 'ⲡ', 'Ⲣ', 'ⲣ', 
+			'Ⲥ', 'ⲥ', 'Ⲧ', 'ⲧ', 'Ⲩ', 'ⲩ', 
+			'Ⲫ', 'ⲫ', 'Ⲭ', 'ⲭ', 'Ⲯ', 'ⲯ', 
+			'Ⲱ', 'ⲱ', 'Ⲳ', 'ⲳ', 'Ⲵ', 'ⲵ', 
+			'Ⲷ', 'ⲷ', 'Ⲹ', 'ⲹ', 'Ⲻ', 'ⲻ', 
+			'Ⲽ', 'ⲽ', 'Ⲿ', 'ⲿ', 'Ⳁ', 'ⳁ', 
+			'Ⳃ', 'ⳃ', 'Ⳅ', 'ⳅ', 'Ⳇ', 'ⳇ', 
+			'Ⳉ', 'ⳉ', 'Ⳋ', 'ⳋ', 'Ⳍ', 'ⳍ', 
+			'Ⳏ', 'ⳏ', 'Ⳑ', 'ⳑ', 'Ⳓ', 'ⳓ', 
+			'Ⳕ', 'ⳕ', 'Ⳗ', 'ⳗ', 'Ⳙ', 'ⳙ', 
+			'Ⳛ', 'ⳛ'
+		);
+
+		assertArrayEquals(letters.toArray(), ALPHABET.get().toArray());
+	}
+
+	/**
+	 * Проверка сравнения объектов.
+	 */
+	@Test
+	public void testEquals()
+	{
+		assertFalse(ALPHABET.equals(null));
+
+		assertTrue(ALPHABET.equals(ALPHABET));
+
+		assertFalse(ALPHABET.equals(new RussianAlphabet()));
+
+		assertTrue(ALPHABET.equals(new CopticAlphabet()));
+	}
+
+	/**
+	 * Проверка хэш-кода.
+	 */
+	@Test
+	public void testHashCode()
+	{
+		assertEquals(ALPHABET.hashCode(), ALPHABET.hashCode());
+
+		assertEquals(ALPHABET.hashCode(), new CopticAlphabet().hashCode());
+
+		assertNotEquals(ALPHABET.hashCode(), new RussianAlphabet().hashCode());
+	}
+}
