@@ -178,7 +178,7 @@ alphabet.getShuffle();
 
 ```java
 Alphabetical alphabet = new RussianAlphabet();
-alphabet.getRundom();
+alphabet.getRundom(10);
 /*
 Результат выполнения:
 [
@@ -209,6 +209,40 @@ alphabet.getLetter(29);
 Alphabetical alphabet = new RussianAlphabet();
 alphabet.getPosition('ё');
 // Результат выполнения: 14
+```
+
+#### Получение букв алфавита в виде массива
+
+```java
+Alphabetical alphabet = new RussianAlphabet();
+alphabet.toArray();
+/*
+Результат выполнения:
+[
+    А, а, Б, б, В, в, Г, г, Д, д, Е, е, 
+    Ё, ё, Ж, ж, З, з, И, и, Й, й, К, к, 
+    Л, л, М, м, Н, н, О, о, П, п, Р, р, 
+    С, с, Т, т, У, у, Ф, ф, Х, х, Ц, ц, 
+    Ч, ч, Ш, ш, Щ, щ, Ъ, ъ, Ы, ы, Ь, ь, 
+    Э, э, Ю, ю, Я, я
+]
+*/
+```
+
+#### Получение букв алфавита в виде строки с разделителем
+
+```java
+Alphabetical alphabet = new RussianAlphabet();
+alphabet.toString(",");
+// Результат выполнения: А,а,Б,б,В,в,Г,г,Д,д,Е,е,Ё,ё,Ж,ж,З,з,И,и,Й,й,К,к,Л,л,М,м,Н,н,О,о,П,п,Р,р,С,с,Т,т,У,у,Ф,ф,Х,х,Ц,ц,Ч,ч,Ш,ш,Щ,щ,Ъ,ъ,Ы,ы,Ь,ь,Э,э,Ю,ю,Я,я
+```
+
+#### Получение букв алфавита в виде строки
+
+```java
+Alphabetical alphabet = new RussianAlphabet();
+alphabet.toString();
+// Результат выполнения: АаБбВвГгДдЕеЁёЖжЗзИиЙйКкЛлМмНнОоПпРрСсТтУуФфХхЦцЧчШшЩщЪъЫыЬьЭэЮюЯя
 ```
 
 ### Прописные буквы алфавита
@@ -279,7 +313,7 @@ alphabet.getShuffle();
 
 ```java
 Alphabetical alphabet = new RussianAlphabet.UpperCase();
-alphabet.getRundom();
+alphabet.getRundom(10);
 /*
 Результат выполнения:
 [
@@ -304,12 +338,43 @@ alphabet.getLetter(29);
 // Результат выполнения: Ы
 ```
 
-#### Получение позиции буквы в алфавите
+#### Получение позиции прописной буквы в алфавите
 
 ```java
 Alphabetical alphabet = new RussianAlphabet.UpperCase();
 alphabet.getPosition('Ё');
 // Результат выполнения: 7
+```
+
+#### Получение прописных букв алфавита в виде массива
+
+```java
+Alphabetical alphabet = new RussianAlphabet.UpperCase();
+alphabet.toArray();
+/*
+Результат выполнения:
+[
+    А, Б, В, Г, Д, Е, Ё, Ж, З, И, Й, К, 
+    Л, М, Н, О, П, Р, С, Т, У, Ф, Х, Ц, 
+    Ч, Ш, Щ, Ъ, Ы, Ь, Э, Ю, Я, я
+]
+*/
+```
+
+#### Получение прописных букв алфавита в виде строки с разделителем
+
+```java
+Alphabetical alphabet = new RussianAlphabet.UpperCase();
+alphabet.toString(",");
+// Результат выполнения: А,Б,В,Г,Д,Е,Ё,Ж,З,И,Й,К,Л,М,Н,О,П,Р,С,Т,У,Ф,Х,Ц,Ч,Ш,Щ,Ъ,Ы,Ь,Э,Ю,Я
+```
+
+#### Получение прописных букв алфавита в виде строки
+
+```java
+Alphabetical alphabet = new RussianAlphabet.UpperCase();
+alphabet.toString();
+// Результат выполнения: АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ
 ```
 
 ### Строчные буквы алфавита
@@ -380,7 +445,7 @@ alphabet.getShuffle();
 
 ```java
 Alphabetical alphabet = new RussianAlphabet.LowerCase();
-alphabet.getRundom();
+alphabet.getRundom(10);
 /*
 Результат выполнения:
 [
@@ -405,7 +470,7 @@ alphabet.getLetter(29);
 // Результат выполнения: ы
 ```
 
-#### Получение позиции буквы в алфавите
+#### Получение позиции строчной буквы в алфавите
 
 ```java
 Alphabetical alphabet = new RussianAlphabet.LowerCase();
@@ -413,38 +478,35 @@ alphabet.getPosition('ё');
 // Результат выполнения: 7
 ```
 
-#### Получение букв алфавита в виде массива
+#### Получение строчных букв алфавита в виде массива
 
 ```java
-Alphabetical alphabet = new RussianAlphabet();
+Alphabetical alphabet = new RussianAlphabet.LowerCase();
 alphabet.toArray();
 /*
 Результат выполнения:
 [
-    А, а, Б, б, В, в, Г, г, Д, д, Е, е, 
-    Ё, ё, Ж, ж, З, з, И, и, Й, й, К, к, 
-    Л, л, М, м, Н, н, О, о, П, п, Р, р, 
-    С, с, Т, т, У, у, Ф, ф, Х, х, Ц, ц, 
-    Ч, ч, Ш, ш, Щ, щ, Ъ, ъ, Ы, ы, Ь, ь, 
-    Э, э, Ю, ю, Я, я
+    а, б, в, г, д, е, ё, ж, з, и, й, к, 
+    л, м, н, о, п, р, с, т, у, ф, х, ц, 
+    ч, ш, щ, ъ, ы, ь, э, ю, я
 ]
 */
 ```
 
-#### Получение букв алфавита в виде строки с разделителем
+#### Получение строчных букв алфавита в виде строки с разделителем
 
 ```java
-Alphabetical alphabet = new RussianAlphabet();
+Alphabetical alphabet = new RussianAlphabet.LowerCase();
 alphabet.toString(",");
-// Результат выполнения: А,а,Б,б,В,в,Г,г,Д,д,Е,е,Ё,ё,Ж,ж,З,з,И,и,Й,й,К,к,Л,л,М,м,Н,н,О,о,П,п,Р,р,С,с,Т,т,У,у,Ф,ф,Х,х,Ц,ц,Ч,ч,Ш,ш,Щ,щ,Ъ,ъ,Ы,ы,Ь,ь,Э,э,Ю,ю,Я,я
+// Результат выполнения: а,б,в,г,д,е,ё,ж,з,и,й,к,л,м,н,о,п,р,с,т,у,ф,х,ц,ч,ш,щ,ъ,ы,ь,э,ю,я
 ```
 
-#### Получение букв алфавита в виде строки
+#### Получение строчных букв алфавита в виде строки
 
 ```java
-Alphabetical alphabet = new RussianAlphabet();
+Alphabetical alphabet = new RussianAlphabet.LowerCase();
 alphabet.toString();
-// Результат выполнения: АаБбВвГгДдЕеЁёЖжЗзИиЙйКкЛлМмНнОоПпРрСсТтУуФфХхЦцЧчШшЩщЪъЫыЬьЭэЮюЯя
+// Результат выполнения: абвгдеёжзийклмнопрстуфхцчшщъыьэюя
 ```
 
 ## Установка
