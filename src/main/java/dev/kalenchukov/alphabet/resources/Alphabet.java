@@ -484,6 +484,7 @@ public enum Alphabet
 	 * @return Название константы.
 	 */
 	@NotNull
+	@Override
 	public String toString()
 	{
 		return this.name().replace('_', ' ');
