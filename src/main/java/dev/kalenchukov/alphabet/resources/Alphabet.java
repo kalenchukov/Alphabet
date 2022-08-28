@@ -452,7 +452,7 @@ public enum Alphabet
 	YI_SYLLABLES(new YiSyllablesAlphabet());
 
 	/**
-	 * 0000000000.
+	 * Алфавит.
 	 */
 	@NotNull
 	private final Alphabetical alphabet;
@@ -476,5 +476,16 @@ public enum Alphabet
 	public Alphabetical getAlphabet()
 	{
 		return this.alphabet;
+	}
+
+	/**
+	 * Возвращает название константы.
+	 *
+	 * @return Название константы.
+	 */
+	@NotNull
+	public String toString()
+	{
+		return this.name().replace('_', ' ');
 	}
 }
