@@ -108,11 +108,8 @@ public abstract class AbstractAlphabet implements Alphabetical
 			return false;
 		}
 
-		final Character[] symbols = string.chars()
-										  .mapToObj(i -> (char) i)
-										  .toArray(Character[]::new);
-
-		return Arrays.stream(symbols).allMatch(this.letters::contains);
+		return Arrays.stream(this.stringToArrayCharacter(string))
+					 .allMatch(this.letters::contains);
 	}
 
 	/**
@@ -127,11 +124,8 @@ public abstract class AbstractAlphabet implements Alphabetical
 			return false;
 		}
 
-		final Character[] symbols = string.chars()
-										  .mapToObj(i -> (char) i)
-										  .toArray(Character[]::new);
-
-		return Arrays.stream(symbols).anyMatch(this.letters::contains);
+		return Arrays.stream(this.stringToArrayCharacter(string))
+					 .anyMatch(this.letters::contains);
 	}
 
 	/**
@@ -146,11 +140,8 @@ public abstract class AbstractAlphabet implements Alphabetical
 			return false;
 		}
 
-		final Character[] symbols = string.chars()
-										  .mapToObj(i -> (char) i)
-										  .toArray(Character[]::new);
-
-		return Arrays.stream(symbols).noneMatch(this.letters::contains);
+		return Arrays.stream(this.stringToArrayCharacter(string))
+					 .noneMatch(this.letters::contains);
 	}
 
 	/**
@@ -258,15 +249,12 @@ public abstract class AbstractAlphabet implements Alphabetical
 
 		this.letters.forEach(letter -> statistics.put(letter, 0));
 
-		final Character[] symbols = string.chars()
-										  .mapToObj(i -> (char) i)
-										  .toArray(Character[]::new);
-
-		Arrays.stream(symbols).forEach(symbol -> {
-			if (statistics.containsKey(symbol)) {
-				statistics.put(symbol, statistics.get(symbol) + 1);
-			}
-		});
+		Arrays.stream(this.stringToArrayCharacter(string))
+			  .forEach(symbol -> {
+					if (statistics.containsKey(symbol)) {
+						statistics.put(symbol, statistics.get(symbol) + 1);
+					}
+			  });
 
 		return statistics;
 	}
@@ -310,5 +298,19 @@ public abstract class AbstractAlphabet implements Alphabetical
 	public String toString()
 	{
 		return this.toString("");
+	}
+
+	/**
+	 * Преобразовывает строку в массив символов.
+	 *
+	 * @param string Строка.
+	 * @return Массив символов.
+	 */
+	@NotNull
+	private Character @NotNull [] stringToArrayCharacter(@NotNull final String string)
+	{
+		return string.chars()
+					 .mapToObj(i -> (char) i)
+					 .toArray(Character[]::new);
 	}
 }
