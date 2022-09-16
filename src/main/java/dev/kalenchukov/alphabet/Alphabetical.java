@@ -111,6 +111,14 @@ public interface Alphabetical
 	Map<@NotNull Character, @NotNull Integer> statistics(@NotNull final String string);
 
 	/**
+	 * Проверяет принадлежность всех букв алфавиту.
+	 *
+	 * @param string Строка.
+	 * @return {@code True}, если все буквы принадлежат алфавиту, иначе {@code false}.
+	 */
+	boolean allMatch(@NotNull final String string);
+
+	/**
 	 * Проверяет содержание буквы в алфавите.
 	 *
 	 * @param letter Буква.

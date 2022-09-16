@@ -236,6 +236,28 @@ public class AbstractAlphabetTest
 	}
 
 	/**
+	 * Проверяет принадлежность всех букв алфавиту.
+	 */
+	@Test
+	public void testAllMatch()
+	{
+		assertTrue(ALPHABET.allMatch("Камчатка"));
+	}
+
+	/**
+	 * Проверяет принадлежность не всех букв алфавиту.
+	 */
+	@Test
+	public void testAllMatchNot()
+	{
+		assertFalse(ALPHABET.allMatch(""));
+		assertFalse(ALPHABET.allMatch("Kino"));
+		assertFalse(ALPHABET.allMatch("КиноW"));
+		assertFalse(ALPHABET.allMatch("Кино Камчатка"));
+		assertFalse(ALPHABET.allMatch("KinoКамчатка"));
+	}
+
+	/**
 	 * Проверяет принадлежность буквы к алфавиту.
 	 */
 	@Test

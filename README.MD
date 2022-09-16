@@ -195,6 +195,14 @@ alphabet.contains('ё');
 // Результат выполнения: true
 ```
 
+#### Проверка принадлежности всех букв алфавиту
+
+```java
+Alphabetical alphabet = new RussianAlphabet();
+alphabet.allMatch("Камчатка");
+// Результат выполнения: true
+```
+
 #### Получение буквы по позиции в алфавите
 
 ```java
