@@ -354,6 +354,30 @@ alphabet.contains('Я');
 // Результат выполнения: true
 ```
 
+#### Проверка принадлежности всех букв алфавиту прописных букв
+
+```java
+Alphabetical alphabet = new RussianAlphabet.UpperCase();
+alphabet.allMatch("КАМЧАТКА");
+// Результат выполнения: true
+```
+
+#### Проверка принадлежности хотя бы одной буквы алфавиту прописных букв
+
+```java
+Alphabetical alphabet = new RussianAlphabet.UpperCase();
+alphabet.anyMatch("ДОЖДЬ ДЛЯ НАС");
+// Результат выполнения: true
+```
+
+#### Проверка не принадлежности всех букв алфавиту прописных букв
+
+```java
+Alphabetical alphabet = new RussianAlphabet.UpperCase();
+alphabet.noneMatch("KAMCHATKA");
+// Результат выполнения: true
+```
+
 #### Получение прописной буквы по позиции в алфавите
 
 ```java
@@ -483,6 +507,30 @@ alphabet.getRundom(10);
 ```java
 Alphabetical alphabet = new RussianAlphabet.LowerCase();
 alphabet.contains('ъ');
+// Результат выполнения: true
+```
+
+#### Проверка принадлежности всех букв алфавиту строчных букв
+
+```java
+Alphabetical alphabet = new RussianAlphabet.UpperCase();
+alphabet.allMatch("камчатка");
+// Результат выполнения: true
+```
+
+#### Проверка принадлежности хотя бы одной буквы алфавиту строчных букв
+
+```java
+Alphabetical alphabet = new RussianAlphabet.UpperCase();
+alphabet.anyMatch("дождь для нас");
+// Результат выполнения: true
+```
+
+#### Проверка не принадлежности всех букв алфавиту строчных букв
+
+```java
+Alphabetical alphabet = new RussianAlphabet.UpperCase();
+alphabet.noneMatch("kamchatka");
 // Результат выполнения: true
 ```
 
