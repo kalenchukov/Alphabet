@@ -277,6 +277,25 @@ public class AbstractAlphabetTest
 	}
 
 	/**
+	 * Проверяет корректные данные.
+	 */
+	@Test
+	public void testNoneMatch()
+	{
+		assertTrue(ALPHABET.noneMatch("Kamchatka"));
+	}
+
+	/**
+	 * Проверяет некорректные данные.
+	 */
+	@Test
+	public void testNoneMatchNot()
+	{
+		assertFalse(ALPHABET.noneMatch(""));
+		assertFalse(ALPHABET.noneMatch("KinoЪ"));
+	}
+
+	/**
 	 * Проверяет принадлежность буквы к алфавиту.
 	 */
 	@Test

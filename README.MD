@@ -211,6 +211,14 @@ alphabet.anyMatch("Дождь для нас");
 // Результат выполнения: true
 ```
 
+#### Проверка не принадлежности всех букв алфавиту
+
+```java
+Alphabetical alphabet = new RussianAlphabet();
+alphabet.noneMatch("Kamchatka");
+// Результат выполнения: true
+```
+
 #### Получение буквы по позиции в алфавите
 
 ```java

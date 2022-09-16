@@ -135,6 +135,25 @@ public abstract class AbstractAlphabet implements Alphabetical
 	}
 
 	/**
+	 * @see Alphabetical#noneMatch(String)
+	 */
+	@Override
+	public boolean noneMatch(@NotNull final String string)
+	{
+		Objects.requireNonNull(string);
+
+		if (string.isEmpty()) {
+			return false;
+		}
+
+		final Character[] symbols = string.chars()
+										  .mapToObj(i -> (char) i)
+										  .toArray(Character[]::new);
+
+		return Arrays.stream(symbols).noneMatch(this.letters::contains);
+	}
+
+	/**
 	 * @see Alphabetical#contains(Character)
 	 */
 	@Override
