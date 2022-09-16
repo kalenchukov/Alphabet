@@ -119,6 +119,14 @@ public interface Alphabetical
 	boolean allMatch(@NotNull final String string);
 
 	/**
+	 * Проверяет принадлежность хотя бы одной буквы алфавиту.
+	 *
+	 * @param string Строка.
+	 * @return {@code True}, если хотя бы одна буква принадлежит алфавиту, иначе {@code false}.
+	 */
+	boolean anyMatch(@NotNull final String string);
+
+	/**
 	 * Проверяет содержание буквы в алфавите.
 	 *
 	 * @param letter Буква.

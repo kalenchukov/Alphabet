@@ -236,7 +236,7 @@ public class AbstractAlphabetTest
 	}
 
 	/**
-	 * Проверяет принадлежность всех букв алфавиту.
+	 * Проверяет корректные данные.
 	 */
 	@Test
 	public void testAllMatch()
@@ -245,7 +245,7 @@ public class AbstractAlphabetTest
 	}
 
 	/**
-	 * Проверяет принадлежность не всех букв алфавиту.
+	 * Проверяет некорректные данные.
 	 */
 	@Test
 	public void testAllMatchNot()
@@ -255,6 +255,25 @@ public class AbstractAlphabetTest
 		assertFalse(ALPHABET.allMatch("КиноW"));
 		assertFalse(ALPHABET.allMatch("Кино Камчатка"));
 		assertFalse(ALPHABET.allMatch("KinoКамчатка"));
+	}
+
+	/**
+	 * Проверяет корректные данные.
+	 */
+	@Test
+	public void testAnyMatch()
+	{
+		assertTrue(ALPHABET.anyMatch("Дождь для нас"));
+	}
+
+	/**
+	 * Проверяет некорректные данные.
+	 */
+	@Test
+	public void testAnyMatchNot()
+	{
+		assertFalse(ALPHABET.anyMatch(""));
+		assertFalse(ALPHABET.anyMatch("Kino"));
 	}
 
 	/**

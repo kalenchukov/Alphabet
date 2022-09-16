@@ -96,6 +96,9 @@ public abstract class AbstractAlphabet implements Alphabetical
 		}
 	}
 
+	/**
+	 * @see Alphabetical#allMatch(String)
+	 */
 	@Override
 	public boolean allMatch(@NotNull final String string)
 	{
@@ -110,6 +113,25 @@ public abstract class AbstractAlphabet implements Alphabetical
 										  .toArray(Character[]::new);
 
 		return Arrays.stream(symbols).allMatch(this.letters::contains);
+	}
+
+	/**
+	 * @see Alphabetical#anyMatch(String)
+	 */
+	@Override
+	public boolean anyMatch(@NotNull final String string)
+	{
+		Objects.requireNonNull(string);
+
+		if (string.isEmpty()) {
+			return false;
+		}
+
+		final Character[] symbols = string.chars()
+										  .mapToObj(i -> (char) i)
+										  .toArray(Character[]::new);
+
+		return Arrays.stream(symbols).anyMatch(this.letters::contains);
 	}
 
 	/**
