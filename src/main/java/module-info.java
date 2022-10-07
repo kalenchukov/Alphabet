@@ -1,3 +1,6 @@
+/**
+ * Определяет API для работы с алфавитами языков мира.
+ */
 module dev.kalenchukov.alphabet
 {
 	requires org.jetbrains.annotations;
