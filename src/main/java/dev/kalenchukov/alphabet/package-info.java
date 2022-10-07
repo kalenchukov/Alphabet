@@ -14,4 +14,7 @@
  * limitations under the License.
  */
 
+/**
+ * Предоставляет классы, необходимые для исполнения цели модуля.
+ */
 package dev.kalenchukov.alphabet;

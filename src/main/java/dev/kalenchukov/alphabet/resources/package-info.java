@@ -4,4 +4,7 @@
  * E-mail: mailto:aleksey.kalenchukov@yandex.ru
  */
 
+/**
+ * Предоставляет перечисления, необходимые для определения типов.
+ */
 package dev.kalenchukov.alphabet.resources;
