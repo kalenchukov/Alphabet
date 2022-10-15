@@ -73,6 +73,7 @@ public interface Alphabetical
 	/**
 	 * Возвращает случайные буквы алфавита.
 	 *
+	 * @param count Количество букв.
 	 * @return Коллекция букв алфавита.
 	 */
 	@Unmodifiable
