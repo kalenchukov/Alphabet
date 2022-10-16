@@ -109,7 +109,7 @@ public interface Alphabetical
 	 * </ul>
 	 */
 	@NotNull
-	Map<@NotNull Character, @NotNull Integer> statistics(@NotNull final String string);
+	Map<@NotNull Character, @NotNull Integer> statistics(@NotNull String string);
 
 	/**
 	 * Проверяет принадлежность всех букв алфавиту.
@@ -117,7 +117,7 @@ public interface Alphabetical
 	 * @param string Строка.
 	 * @return {@code True}, если все буквы принадлежат алфавиту, иначе {@code false}.
 	 */
-	boolean allMatch(@NotNull final String string);
+	boolean allMatch(@NotNull String string);
 
 	/**
 	 * Проверяет принадлежность хотя бы одной буквы алфавиту.
@@ -125,7 +125,7 @@ public interface Alphabetical
 	 * @param string Строка.
 	 * @return {@code True}, если хотя бы одна буква принадлежит алфавиту, иначе {@code false}.
 	 */
-	boolean anyMatch(@NotNull final String string);
+	boolean anyMatch(@NotNull String string);
 
 	/**
 	 * Проверяет не принадлежность всех букв алфавиту.
@@ -133,7 +133,7 @@ public interface Alphabetical
 	 * @param string Строка.
 	 * @return {@code True}, если все буквы не принадлежат алфавиту, иначе {@code false}.
 	 */
-	boolean noneMatch(@NotNull final String string);
+	boolean noneMatch(@NotNull String string);
 
 	/**
 	 * Проверяет содержание буквы в алфавите.
@@ -141,7 +141,7 @@ public interface Alphabetical
 	 * @param letter Буква.
 	 * @return {@code True}, если буква содержится в алфавите, иначе {@code false}.
 	 */
-	boolean contains(@NotNull final Character letter);
+	boolean contains(@NotNull Character letter);
 
 	/**
 	 * Возвращает массив из букв алфавита.
@@ -158,5 +158,5 @@ public interface Alphabetical
 	 * @return Строку из букв алфавита.
 	 */
 	@NotNull
-	String toString(@NotNull final String separator);
+	String toString(@NotNull String separator);
 }
