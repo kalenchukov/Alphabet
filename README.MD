@@ -581,14 +581,6 @@ alphabet.toString();
 // Результат выполнения: абвгдеёжзийклмнопрстуфхцчшщъыьэюя
 ```
 
-## Установка
-
-Для установки этого проекта, введите в терминале:
-
-```bash
-git clone https://github.com/kalenchukov/Alphabet.git
-```
-
 ## Версии
 
 Доступные [версии](https://github.com/kalenchukov/Alphabet/releases).
