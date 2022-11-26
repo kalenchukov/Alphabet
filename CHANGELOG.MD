@@ -3,7 +3,9 @@
 ## vX.X.X - XX.XX.XXXX
 
 ### Добавлено
-*
+* Добавлен AUTHOR.MD.
+* Добавлен INSTALL.MD.
+* Добавлен CHANGELOG.MD.
 
 ### Изменено
 * Убран модификатор параметра final в Alphabetical.statistics(String).
@@ -12,6 +14,7 @@
 * Убран модификатор параметра final в Alphabetical.noneMatch(String).
 * Убран модификатор параметра final в Alphabetical.contains(Character).
 * Убран модификатор параметра final в Alphabetical.toString(String).
+* Обновлён README.MD.
 
 ### Исправлено
 *
@@ -30,7 +33,7 @@
 * Добавлен плагин maven-source в pom.xml.
 
 ### Изменено
-* Обновлён README.
+* Обновлён README.MD.
 
 ## v2.4.0 - 31.08.2022
 
@@ -128,10 +131,10 @@
 ## v2.2.0 - 07.08.2022
 
 ### Добавлено
-Добавлен метод Alphabetical.toArray().
-Добавлен метод Alphabetical.getRandom().
-Добавлен метод *Alphabet.equals(Object).
-Добавлен метод *Alphabet.hashCode().
+* Добавлен метод Alphabetical.toArray().
+* Добавлен метод Alphabetical.getRandom().
+* Добавлен метод *Alphabet.equals(Object).
+* Добавлен метод *Alphabet.hashCode().
 
 ### Изменено
 * Переименован метод Alphabetical.getLetters() -> Alphabetical.get().
@@ -142,9 +145,9 @@
 ## v2.1.0 - 05.08.2022
 
 ### Добавлено
-Добавлен метод Alphabetical.toString().
-Добавлен метод Alphabetical.toString(String).
-Добавлен метод Alphabetical.getLettersShuffle().
+* Добавлен метод Alphabetical.toString().
+* Добавлен метод Alphabetical.toString(String).
+* Добавлен метод Alphabetical.getLettersShuffle().
 
 ## v2.0.0 - 28.07.2022
 
