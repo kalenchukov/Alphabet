@@ -38,7 +38,7 @@ public abstract class AbstractAlphabet implements Alphabetical
 	/**
 	 * Конструктор для {@code AbstractAlphabet}.
 	 *
-	 * @param letters Буквы алфавита.
+	 * @param letters буквы алфавита.
 	 */
 	protected AbstractAlphabet(@NotNull final List<@NotNull Character> letters)
 	{
@@ -303,8 +303,8 @@ public abstract class AbstractAlphabet implements Alphabetical
 	/**
 	 * Преобразовывает строку в массив символов.
 	 *
-	 * @param string Строка.
-	 * @return Массив символов.
+	 * @param string строка.
+	 * @return массив символов.
 	 */
 	@NotNull
 	private Character @NotNull [] stringToArrayCharacter(@NotNull final String string)

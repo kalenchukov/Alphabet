@@ -460,7 +460,7 @@ public enum Alphabet
 	/**
 	 * Конструктор для {@code Alphabet}.
 	 *
-	 * @param alphabet Алфавит.
+	 * @param alphabet алфавит.
 	 */
 	Alphabet(@NotNull final Alphabetical alphabet)
 	{
@@ -470,7 +470,7 @@ public enum Alphabet
 	/**
 	 * Возвращает алфавит.
 	 *
-	 * @return Алфавит.
+	 * @return алфавит.
 	 */
 	@NotNull
 	public Alphabetical getAlphabet()
@@ -481,7 +481,7 @@ public enum Alphabet
 	/**
 	 * Возвращает название константы.
 	 *
-	 * @return Название константы.
+	 * @return название константы.
 	 */
 	@NotNull
 	@Override
