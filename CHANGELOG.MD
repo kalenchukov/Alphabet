@@ -1,7 +1,5 @@
 # Журнал изменений
-
 ## vX.X.X - XX.XX.XXXX
-
 ### Добавлено
 * Добавлен AUTHOR.MD.
 * Добавлен INSTALL.MD.
@@ -20,7 +18,6 @@
 *
 
 ## v2.5.0 - 16.10.2022
-
 ### Добавлено
 * Добавлен метод Alphabetical.allMatch(String).
 * Добавлен метод Alphabetical.anyMatch(String).
@@ -36,12 +33,10 @@
 * Обновлён README.MD.
 
 ## v2.4.0 - 31.08.2022
-
 ### Добавлено
 * Добавлено перечисление алфавитов Alphabet.
 
 ## v2.3.0 - 18.08.2022
-
 ### Добавлено
 * Добавлен метод Alphabetical.statistics(String).
 * Добавлен алфавит бамум.
@@ -129,7 +124,6 @@
 * Изменена лицензия.
 
 ## v2.2.0 - 07.08.2022
-
 ### Добавлено
 * Добавлен метод Alphabetical.toArray().
 * Добавлен метод Alphabetical.getRandom().
@@ -143,14 +137,12 @@
 * Переименован метод Alphabetical.hasLetter(Character) -> Alphabetical.contains(Character).
 
 ## v2.1.0 - 05.08.2022
-
 ### Добавлено
 * Добавлен метод Alphabetical.toString().
 * Добавлен метод Alphabetical.toString(String).
 * Добавлен метод Alphabetical.getLettersShuffle().
 
 ## v2.0.0 - 28.07.2022
-
 ### Добавлено
 * Добавлены методы Alphabetical.getLettersReverse*().
 
@@ -161,7 +153,6 @@
 * Массивы заменены на коллекции.
 
 ## v1.1.0 - 17.07.2022
-
 ### Добавлено
 * Добавлен греческий алфавит.
 * Добавлен белорусский алфавит.

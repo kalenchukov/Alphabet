@@ -1,9 +1,7 @@
 # Alphabet
-
 Алфавиты языков мира.
 
 ### Список поддерживаемых алфавитов
-
 * Русский
 * Белорусский
 * Кириллица
@@ -90,19 +88,14 @@
 * Нко
 
 ## Использование
-
 ### Перечисления
-
 #### Получение алфавита
-
 ```java
 Alphabet.RUSSIAN.getAlphabet();
 ```
 
 ### Буквы алфавита
-
 #### Получение букв алфавита
-
 ```java
 Alphabetical alphabet = new RussianAlphabet();
 alphabet.get();
@@ -126,7 +119,6 @@ RussianAlphabet.LETTERS;
 ```
 
 #### Получение среза букв алфавита
-
 ```java
 Alphabetical alphabet = new RussianAlphabet();
 alphabet.get(1, 3);
@@ -139,7 +131,6 @@ alphabet.get(1, 3);
 ```
 
 #### Получение букв алфавита в обратном порядке
-
 ```java
 Alphabetical alphabet = new RussianAlphabet();
 alphabet.getReverse();
@@ -157,7 +148,6 @@ alphabet.getReverse();
 ```
 
 #### Получение букв алфавита в перемешанном порядке
-
 ```java
 Alphabetical alphabet = new RussianAlphabet();
 alphabet.getShuffle();
@@ -175,7 +165,6 @@ alphabet.getShuffle();
 ```
 
 #### Получение случайных букв алфавита
-
 ```java
 Alphabetical alphabet = new RussianAlphabet();
 alphabet.getRundom(10);
@@ -188,7 +177,6 @@ alphabet.getRundom(10);
 ```
 
 #### Проверка принадлежности буквы к алфавиту
-
 ```java
 Alphabetical alphabet = new RussianAlphabet();
 alphabet.contains('ё');
@@ -196,7 +184,6 @@ alphabet.contains('ё');
 ```
 
 #### Проверка принадлежности всех букв алфавиту
-
 ```java
 Alphabetical alphabet = new RussianAlphabet();
 alphabet.allMatch("Камчатка");
@@ -204,7 +191,6 @@ alphabet.allMatch("Камчатка");
 ```
 
 #### Проверка принадлежности хотя бы одной буквы алфавиту
-
 ```java
 Alphabetical alphabet = new RussianAlphabet();
 alphabet.anyMatch("Дождь для нас");
@@ -212,7 +198,6 @@ alphabet.anyMatch("Дождь для нас");
 ```
 
 #### Проверка не принадлежности всех букв алфавиту
-
 ```java
 Alphabetical alphabet = new RussianAlphabet();
 alphabet.noneMatch("Kamchatka");
@@ -220,7 +205,6 @@ alphabet.noneMatch("Kamchatka");
 ```
 
 #### Получение буквы по позиции в алфавите
-
 ```java
 Alphabetical alphabet = new RussianAlphabet();
 alphabet.getLetter(29);
@@ -228,7 +212,6 @@ alphabet.getLetter(29);
 ```
 
 #### Получение позиции буквы в алфавите
-
 ```java
 Alphabetical alphabet = new RussianAlphabet();
 alphabet.getPosition('ё');
@@ -236,7 +219,6 @@ alphabet.getPosition('ё');
 ```
 
 #### Получение букв алфавита в виде массива
-
 ```java
 Alphabetical alphabet = new RussianAlphabet();
 alphabet.toArray();
@@ -254,7 +236,6 @@ alphabet.toArray();
 ```
 
 #### Получение букв алфавита в виде строки с разделителем
-
 ```java
 Alphabetical alphabet = new RussianAlphabet();
 alphabet.toString(",");
@@ -262,7 +243,6 @@ alphabet.toString(",");
 ```
 
 #### Получение букв алфавита в виде строки
-
 ```java
 Alphabetical alphabet = new RussianAlphabet();
 alphabet.toString();
@@ -270,9 +250,7 @@ alphabet.toString();
 ```
 
 ### Прописные буквы алфавита
-
 #### Получение прописных букв алфавита
-
 ```java
 Alphabetical alphabet = new RussianAlphabet.UpperCase();
 alphabet.get();
@@ -293,7 +271,6 @@ RussianAlphabet.UpperCase.LETTERS;
 ```
 
 #### Получение среза прописных букв алфавита
-
 ```java
 Alphabetical alphabet = new RussianAlphabet.UpperCase();
 alphabet.get(1, 3);
@@ -306,7 +283,6 @@ alphabet.get(1, 3);
 ```
 
 #### Получение прописных букв алфавита в обратном порядке
-
 ```java
 Alphabetical alphabet = new RussianAlphabet.UpperCase();
 alphabet.getReverse();
@@ -321,7 +297,6 @@ alphabet.getReverse();
 ```
 
 #### Получение прописных букв алфавита в перемешанном порядке
-
 ```java
 Alphabetical alphabet = new RussianAlphabet.UpperCase();
 alphabet.getShuffle();
@@ -334,7 +309,6 @@ alphabet.getShuffle();
 ```
 
 #### Получение случайных прописных букв алфавита
-
 ```java
 Alphabetical alphabet = new RussianAlphabet.UpperCase();
 alphabet.getRundom(10);
@@ -347,7 +321,6 @@ alphabet.getRundom(10);
 ```
 
 #### Проверка принадлежности буквы к алфавиту прописных букв
-
 ```java
 Alphabetical alphabet = new RussianAlphabet.UpeerCase();
 alphabet.contains('Я');
@@ -355,7 +328,6 @@ alphabet.contains('Я');
 ```
 
 #### Проверка принадлежности всех букв алфавиту прописных букв
-
 ```java
 Alphabetical alphabet = new RussianAlphabet.UpperCase();
 alphabet.allMatch("КАМЧАТКА");
@@ -363,7 +335,6 @@ alphabet.allMatch("КАМЧАТКА");
 ```
 
 #### Проверка принадлежности хотя бы одной буквы алфавиту прописных букв
-
 ```java
 Alphabetical alphabet = new RussianAlphabet.UpperCase();
 alphabet.anyMatch("ДОЖДЬ ДЛЯ НАС");
@@ -371,7 +342,6 @@ alphabet.anyMatch("ДОЖДЬ ДЛЯ НАС");
 ```
 
 #### Проверка не принадлежности всех букв алфавиту прописных букв
-
 ```java
 Alphabetical alphabet = new RussianAlphabet.UpperCase();
 alphabet.noneMatch("KAMCHATKA");
@@ -379,7 +349,6 @@ alphabet.noneMatch("KAMCHATKA");
 ```
 
 #### Получение прописной буквы по позиции в алфавите
-
 ```java
 Alphabetical alphabet = new RussianAlphabet.UpperCase();
 alphabet.getLetter(29);
@@ -387,7 +356,6 @@ alphabet.getLetter(29);
 ```
 
 #### Получение позиции прописной буквы в алфавите
-
 ```java
 Alphabetical alphabet = new RussianAlphabet.UpperCase();
 alphabet.getPosition('Ё');
@@ -395,7 +363,6 @@ alphabet.getPosition('Ё');
 ```
 
 #### Получение прописных букв алфавита в виде массива
-
 ```java
 Alphabetical alphabet = new RussianAlphabet.UpperCase();
 alphabet.toArray();
@@ -410,7 +377,6 @@ alphabet.toArray();
 ```
 
 #### Получение прописных букв алфавита в виде строки с разделителем
-
 ```java
 Alphabetical alphabet = new RussianAlphabet.UpperCase();
 alphabet.toString(",");
@@ -418,7 +384,6 @@ alphabet.toString(",");
 ```
 
 #### Получение прописных букв алфавита в виде строки
-
 ```java
 Alphabetical alphabet = new RussianAlphabet.UpperCase();
 alphabet.toString();
@@ -426,9 +391,7 @@ alphabet.toString();
 ```
 
 ### Строчные буквы алфавита
-
 #### Получение строчных букв алфавита
-
 ```java
 Alphabetical alphabet = new RussianAlphabet.LowerCase();
 alphabet.get();
@@ -449,7 +412,6 @@ RussianAlphabet.LowerCase.LETTERS;
 ```
 
 #### Получение среза строчных букв алфавита
-
 ```java
 Alphabetical alphabet = new RussianAlphabet.LowerCase();
 alphabet.get(1, 3);
@@ -462,7 +424,6 @@ alphabet.get(1, 3);
 ```
 
 #### Получение строчных букв алфавита в обратном порядке
-
 ```java
 Alphabetical alphabet = new RussianAlphabet.LowerCase();
 alphabet.getReverse();
@@ -477,7 +438,6 @@ alphabet.getReverse();
 ```
 
 #### Получение строчных букв алфавита в перемешанном порядке
-
 ```java
 Alphabetical alphabet = new RussianAlphabet.LowerCase();
 alphabet.getShuffle();
@@ -490,7 +450,6 @@ alphabet.getShuffle();
 ```
 
 #### Получение случайных строчных букв алфавита
-
 ```java
 Alphabetical alphabet = new RussianAlphabet.LowerCase();
 alphabet.getRundom(10);
@@ -503,7 +462,6 @@ alphabet.getRundom(10);
 ```
 
 #### Проверка принадлежности буквы к алфавиту строчных букв
-
 ```java
 Alphabetical alphabet = new RussianAlphabet.LowerCase();
 alphabet.contains('ъ');
@@ -511,7 +469,6 @@ alphabet.contains('ъ');
 ```
 
 #### Проверка принадлежности всех букв алфавиту строчных букв
-
 ```java
 Alphabetical alphabet = new RussianAlphabet.UpperCase();
 alphabet.allMatch("камчатка");
@@ -519,7 +476,6 @@ alphabet.allMatch("камчатка");
 ```
 
 #### Проверка принадлежности хотя бы одной буквы алфавиту строчных букв
-
 ```java
 Alphabetical alphabet = new RussianAlphabet.UpperCase();
 alphabet.anyMatch("дождь для нас");
@@ -527,7 +483,6 @@ alphabet.anyMatch("дождь для нас");
 ```
 
 #### Проверка не принадлежности всех букв алфавиту строчных букв
-
 ```java
 Alphabetical alphabet = new RussianAlphabet.UpperCase();
 alphabet.noneMatch("kamchatka");
@@ -535,7 +490,6 @@ alphabet.noneMatch("kamchatka");
 ```
 
 #### Получение строчной буквы по позиции в алфавите
-
 ```java
 Alphabetical alphabet = new RussianAlphabet.LowerCase();
 alphabet.getLetter(29);
@@ -543,7 +497,6 @@ alphabet.getLetter(29);
 ```
 
 #### Получение позиции строчной буквы в алфавите
-
 ```java
 Alphabetical alphabet = new RussianAlphabet.LowerCase();
 alphabet.getPosition('ё');
@@ -551,7 +504,6 @@ alphabet.getPosition('ё');
 ```
 
 #### Получение строчных букв алфавита в виде массива
-
 ```java
 Alphabetical alphabet = new RussianAlphabet.LowerCase();
 alphabet.toArray();
@@ -566,7 +518,6 @@ alphabet.toArray();
 ```
 
 #### Получение строчных букв алфавита в виде строки с разделителем
-
 ```java
 Alphabetical alphabet = new RussianAlphabet.LowerCase();
 alphabet.toString(",");
@@ -574,7 +525,6 @@ alphabet.toString(",");
 ```
 
 #### Получение строчных букв алфавита в виде строки
-
 ```java
 Alphabetical alphabet = new RussianAlphabet.LowerCase();
 alphabet.toString();
