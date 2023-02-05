@@ -1,5 +1,7 @@
 /*
- * Copyright 2022 Алексей Каленчуков
+ * Copyright © 2022-2023 Алексей Каленчуков
+ * GitHub: https://github.com/kalenchukov
+ * E-mail: mailto:aleksey.kalenchukov@yandex.ru
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
