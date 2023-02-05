@@ -19,14 +19,14 @@
 package dev.kalenchukov.alphabet;
 
 import org.jetbrains.annotations.NotNull;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class AbstractAlphabetTest
 {
@@ -177,28 +177,34 @@ public class AbstractAlphabetTest
 	/**
 	 * Проверяет получение среза букв алфавита выходящего за минимальную границу.
 	 */
-	@Test(expected = IndexOutOfBoundsException.class)
+	@Test
 	public void testGetRangeOutOfBoundsMin()
 	{
-		ALPHABET.get(0, 33);
+		assertThrows(IndexOutOfBoundsException.class, () -> {
+			ALPHABET.get(0, 33);
+		});
 	}
 
 	/**
 	 * Проверяет получение среза букв алфавита выходящего за максимальную границу.
 	 */
-	@Test(expected = IndexOutOfBoundsException.class)
+	@Test
 	public void testGetRangeOutOfBoundsMax()
 	{
-		ALPHABET.get(1, 67);
+		assertThrows(IndexOutOfBoundsException.class, () -> {
+			ALPHABET.get(1, 67);
+		});
 	}
 
 	/**
 	 * Проверяет получение среза букв алфавита с инвертированной границей.
 	 */
-	@Test(expected = IllegalArgumentException.class)
+	@Test
 	public void testGetRangeInversion()
 	{
-		ALPHABET.get(33, 20);
+		assertThrows(IllegalArgumentException.class, () -> {
+			ALPHABET.get(33, 20);
+		});
 	}
 
 	/**
