@@ -25,13 +25,16 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Класс проверки методов класса {@link HungarianAlphabet}.
+ */
 public class HungarianAlphabetTest
 {
 	@NotNull
 	public static final Alphabetical ALPHABET = new HungarianAlphabet();
 
 	/**
-	 * Проверяет получение букв алфавита.
+	 * Проверка метода {@link HungarianAlphabet#get()}.
 	 */
 	@Test
 	public void testGet()
@@ -49,7 +52,7 @@ public class HungarianAlphabetTest
 	}
 
 	/**
-	 * Проверка сравнения объектов.
+	 * Проверка метода {@link HungarianAlphabet#equals(Object)}.
 	 */
 	@Test
 	public void testEquals()
@@ -64,7 +67,7 @@ public class HungarianAlphabetTest
 	}
 
 	/**
-	 * Проверка хэш-кода.
+	 * Проверка метода {@link HungarianAlphabet#hashCode()}.
 	 */
 	@Test
 	public void testHashCode()

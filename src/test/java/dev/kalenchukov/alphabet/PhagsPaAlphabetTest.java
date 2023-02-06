@@ -25,13 +25,16 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Класс проверки методов класса {@link PhagsPaAlphabet}.
+ */
 public class PhagsPaAlphabetTest
 {
 	@NotNull
 	public static final Alphabetical ALPHABET = new PhagsPaAlphabet();
 
 	/**
-	 * Проверяет получение букв алфавита.
+	 * Проверка метода {@link PhagsPaAlphabet#get()}.
 	 */
 	@Test
 	public void testGet()
@@ -53,7 +56,7 @@ public class PhagsPaAlphabetTest
 	}
 
 	/**
-	 * Проверка сравнения объектов.
+	 * Проверка метода {@link PhagsPaAlphabet#equals(Object)}.
 	 */
 	@Test
 	public void testEquals()
@@ -68,7 +71,7 @@ public class PhagsPaAlphabetTest
 	}
 
 	/**
-	 * Проверка хэш-кода.
+	 * Проверка метода {@link PhagsPaAlphabet#hashCode()}.
 	 */
 	@Test
 	public void testHashCode()

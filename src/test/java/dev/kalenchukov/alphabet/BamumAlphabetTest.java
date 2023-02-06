@@ -25,13 +25,16 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Класс проверки методов класса {@link BamumAlphabet}.
+ */
 public class BamumAlphabetTest
 {
 	@NotNull
 	public static final Alphabetical ALPHABET = new BamumAlphabet();
 
 	/**
-	 * Проверяет получение букв алфавита.
+	 * Проверка метода {@link BamumAlphabet#get()}.
 	 */
 	@Test
 	public void testGet()
@@ -57,7 +60,7 @@ public class BamumAlphabetTest
 	}
 
 	/**
-	 * Проверка сравнения объектов.
+	 * Проверка метода {@link BamumAlphabet#equals(Object)}.
 	 */
 	@Test
 	public void testEquals()
@@ -72,7 +75,7 @@ public class BamumAlphabetTest
 	}
 
 	/**
-	 * Проверка хэш-кода.
+	 * Проверка метода {@link BamumAlphabet#hashCode()}.
 	 */
 	@Test
 	public void testHashCode()

@@ -25,13 +25,16 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Класс проверки методов класса {@link TurkishAlphabet}.
+ */
 public class TurkishAlphabetTest
 {
 	@NotNull
 	public static final Alphabetical ALPHABET = new TurkishAlphabet();
 
 	/**
-	 * Проверяет получение букв алфавита.
+	 * Проверка метода {@link TurkishAlphabet#get()}.
 	 */
 	@Test
 	public void testGet()
@@ -53,7 +56,7 @@ public class TurkishAlphabetTest
 	}
 
 	/**
-	 * Проверка сравнения объектов.
+	 * Проверка метода {@link TurkishAlphabet#equals(Object)}.
 	 */
 	@Test
 	public void testEquals()
@@ -68,7 +71,7 @@ public class TurkishAlphabetTest
 	}
 
 	/**
-	 * Проверка хэш-кода.
+	 * Проверка метода {@link TurkishAlphabet#hashCode()}.
 	 */
 	@Test
 	public void testHashCode()

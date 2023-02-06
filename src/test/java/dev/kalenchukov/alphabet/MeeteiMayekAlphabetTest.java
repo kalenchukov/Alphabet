@@ -25,13 +25,16 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Класс проверки методов класса {@link MeeteiMayekAlphabet}.
+ */
 public class MeeteiMayekAlphabetTest
 {
 	@NotNull
 	public static final Alphabetical ALPHABET = new MeeteiMayekAlphabet();
 
 	/**
-	 * Проверяет получение букв алфавита.
+	 * Проверка метода {@link MeeteiMayekAlphabet#get()}.
 	 */
 	@Test
 	public void testGet()
@@ -51,7 +54,7 @@ public class MeeteiMayekAlphabetTest
 	}
 
 	/**
-	 * Проверка сравнения объектов.
+	 * Проверка метода {@link MeeteiMayekAlphabet#equals(Object)}.
 	 */
 	@Test
 	public void testEquals()
@@ -66,7 +69,7 @@ public class MeeteiMayekAlphabetTest
 	}
 
 	/**
-	 * Проверка хэш-кода.
+	 * Проверка метода {@link MeeteiMayekAlphabet#hashCode()}.
 	 */
 	@Test
 	public void testHashCode()

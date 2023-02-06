@@ -25,13 +25,16 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Класс проверки методов класса {@link SylotiNagriAlphabet}.
+ */
 public class SylotiNagriAlphabetTest
 {
 	@NotNull
 	public static final Alphabetical ALPHABET = new SylotiNagriAlphabet();
 
 	/**
-	 * Проверяет получение букв алфавита.
+	 * Проверка метода {@link SylotiNagriAlphabet#get()}.
 	 */
 	@Test
 	public void testGet()
@@ -51,7 +54,7 @@ public class SylotiNagriAlphabetTest
 	}
 
 	/**
-	 * Проверка сравнения объектов.
+	 * Проверка метода {@link SylotiNagriAlphabet#equals(Object)}.
 	 */
 	@Test
 	public void testEquals()
@@ -66,7 +69,7 @@ public class SylotiNagriAlphabetTest
 	}
 
 	/**
-	 * Проверка хэш-кода.
+	 * Проверка метода {@link SylotiNagriAlphabet#hashCode()}.
 	 */
 	@Test
 	public void testHashCode()

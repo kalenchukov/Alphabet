@@ -25,13 +25,16 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Класс проверки методов класса {@link RejangAlphabet}.
+ */
 public class RejangAlphabetTest
 {
 	@NotNull
 	public static final Alphabetical ALPHABET = new RejangAlphabet();
 
 	/**
-	 * Проверяет получение букв алфавита.
+	 * Проверка метода {@link RejangAlphabet#get()}.
 	 */
 	@Test
 	public void testGet()
@@ -50,7 +53,7 @@ public class RejangAlphabetTest
 	}
 
 	/**
-	 * Проверка сравнения объектов.
+	 * Проверка метода {@link RejangAlphabet#equals(Object)}.
 	 */
 	@Test
 	public void testEquals()
@@ -65,7 +68,7 @@ public class RejangAlphabetTest
 	}
 
 	/**
-	 * Проверка хэш-кода.
+	 * Проверка метода {@link RejangAlphabet#hashCode()}.
 	 */
 	@Test
 	public void testHashCode()

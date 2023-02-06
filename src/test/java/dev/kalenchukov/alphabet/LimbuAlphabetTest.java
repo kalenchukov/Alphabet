@@ -25,13 +25,16 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Класс проверки методов класса {@link LimbuAlphabet}.
+ */
 public class LimbuAlphabetTest
 {
 	@NotNull
 	public static final Alphabetical ALPHABET = new LimbuAlphabet();
 
 	/**
-	 * Проверяет получение букв алфавита.
+	 * Проверка метода {@link LimbuAlphabet#get()}.
 	 */
 	@Test
 	public void testGet()
@@ -53,7 +56,7 @@ public class LimbuAlphabetTest
 	}
 
 	/**
-	 * Проверка сравнения объектов.
+	 * Проверка метода {@link LimbuAlphabet#equals(Object)}.
 	 */
 	@Test
 	public void testEquals()
@@ -68,7 +71,7 @@ public class LimbuAlphabetTest
 	}
 
 	/**
-	 * Проверка хэш-кода.
+	 * Проверка метода {@link LimbuAlphabet#hashCode()}.
 	 */
 	@Test
 	public void testHashCode()

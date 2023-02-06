@@ -25,13 +25,16 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Класс проверки методов класса {@link GurmukhiAlphabet}.
+ */
 public class GurmukhiAlphabetTest
 {
 	@NotNull
 	public static final Alphabetical ALPHABET = new GurmukhiAlphabet();
 
 	/**
-	 * Проверяет получение букв алфавита.
+	 * Проверка метода {@link GurmukhiAlphabet#get()}.
 	 */
 	@Test
 	public void testGet()
@@ -53,7 +56,7 @@ public class GurmukhiAlphabetTest
 	}
 
 	/**
-	 * Проверка сравнения объектов.
+	 * Проверка метода {@link GurmukhiAlphabet#equals(Object)}.
 	 */
 	@Test
 	public void testEquals()
@@ -68,7 +71,7 @@ public class GurmukhiAlphabetTest
 	}
 
 	/**
-	 * Проверка хэш-кода.
+	 * Проверка метода {@link GurmukhiAlphabet#hashCode()}.
 	 */
 	@Test
 	public void testHashCode()

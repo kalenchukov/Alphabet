@@ -25,13 +25,16 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Класс проверки методов класса {@link SundaneseAlphabet}.
+ */
 public class SundaneseAlphabetTest
 {
 	@NotNull
 	public static final Alphabetical ALPHABET = new SundaneseAlphabet();
 
 	/**
-	 * Проверяет получение букв алфавита.
+	 * Проверка метода {@link SundaneseAlphabet#get()}.
 	 */
 	@Test
 	public void testGet()
@@ -54,7 +57,7 @@ public class SundaneseAlphabetTest
 	}
 
 	/**
-	 * Проверка сравнения объектов.
+	 * Проверка метода {@link SundaneseAlphabet#equals(Object)}.
 	 */
 	@Test
 	public void testEquals()
@@ -69,7 +72,7 @@ public class SundaneseAlphabetTest
 	}
 
 	/**
-	 * Проверка хэш-кода.
+	 * Проверка метода {@link SundaneseAlphabet#hashCode()}.
 	 */
 	@Test
 	public void testHashCode()

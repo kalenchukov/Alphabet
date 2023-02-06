@@ -25,13 +25,16 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Класс проверки методов класса {@link TatarAlphabet.UpperCase}.
+ */
 public class TatarAlphabetUpperCaseTest
 {
 	@NotNull
 	public static final Alphabetical ALPHABET = new TatarAlphabet.UpperCase();
 
 	/**
-	 * Проверяет получение букв алфавита.
+	 * Проверка метода {@link TatarAlphabet.UpperCase#get()}.
 	 */
 	@Test
 	public void testGet()
@@ -50,7 +53,7 @@ public class TatarAlphabetUpperCaseTest
 	}
 
 	/**
-	 * Проверка сравнения объектов.
+	 * Проверка метода {@link TatarAlphabet.UpperCase#equals(Object)}.
 	 */
 	@Test
 	public void testEquals()
@@ -65,7 +68,7 @@ public class TatarAlphabetUpperCaseTest
 	}
 
 	/**
-	 * Проверка хэш-кода.
+	 * Проверка метода {@link TatarAlphabet.UpperCase#hashCode()}.
 	 */
 	@Test
 	public void testHashCode()

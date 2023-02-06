@@ -25,13 +25,16 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Класс проверки методов класса {@link SpanishAlphabet.UpperCase}.
+ */
 public class SpanishAlphabetUpperCaseTest
 {
 	@NotNull
 	public static final Alphabetical ALPHABET = new SpanishAlphabet.UpperCase();
 
 	/**
-	 * Проверяет получение букв алфавита.
+	 * Проверка метода {@link SpanishAlphabet.UpperCase#get()}.
 	 */
 	@Test
 	public void testGet()
@@ -48,7 +51,7 @@ public class SpanishAlphabetUpperCaseTest
 	}
 
 	/**
-	 * Проверка сравнения объектов.
+	 * Проверка метода {@link SpanishAlphabet.UpperCase#equals(Object)}.
 	 */
 	@Test
 	public void testEquals()
@@ -63,7 +66,7 @@ public class SpanishAlphabetUpperCaseTest
 	}
 
 	/**
-	 * Проверка хэш-кода.
+	 * Проверка метода {@link SpanishAlphabet.UpperCase#hashCode()}.
 	 */
 	@Test
 	public void testHashCode()

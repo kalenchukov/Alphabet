@@ -25,13 +25,16 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Класс проверки методов класса {@link MyanmarAlphabet}.
+ */
 public class MyanmarAlphabetTest
 {
 	@NotNull
 	public static final Alphabetical ALPHABET = new MyanmarAlphabet();
 
 	/**
-	 * Проверяет получение букв алфавита.
+	 * Проверка метода {@link MyanmarAlphabet#get()}.
 	 */
 	@Test
 	public void testGet()
@@ -59,7 +62,7 @@ public class MyanmarAlphabetTest
 	}
 
 	/**
-	 * Проверка сравнения объектов.
+	 * Проверка метода {@link MyanmarAlphabet#equals(Object)}.
 	 */
 	@Test
 	public void testEquals()
@@ -74,7 +77,7 @@ public class MyanmarAlphabetTest
 	}
 
 	/**
-	 * Проверка хэш-кода.
+	 * Проверка метода {@link MyanmarAlphabet#hashCode()}.
 	 */
 	@Test
 	public void testHashCode()

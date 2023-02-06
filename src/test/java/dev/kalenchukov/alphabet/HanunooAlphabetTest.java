@@ -25,13 +25,16 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Класс проверки методов класса {@link HanunooAlphabet}.
+ */
 public class HanunooAlphabetTest
 {
 	@NotNull
 	public static final Alphabetical ALPHABET = new HanunooAlphabet();
 
 	/**
-	 * Проверяет получение букв алфавита.
+	 * Проверка метода {@link HanunooAlphabet#get()}.
 	 */
 	@Test
 	public void testGet()
@@ -47,7 +50,7 @@ public class HanunooAlphabetTest
 	}
 
 	/**
-	 * Проверка сравнения объектов.
+	 * Проверка метода {@link HanunooAlphabet#equals(Object)}.
 	 */
 	@Test
 	public void testEquals()
@@ -62,7 +65,7 @@ public class HanunooAlphabetTest
 	}
 
 	/**
-	 * Проверка хэш-кода.
+	 * Проверка метода {@link HanunooAlphabet#hashCode()}.
 	 */
 	@Test
 	public void testHashCode()

@@ -25,13 +25,16 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Класс проверки методов класса {@link TagbanwaAlphabet}.
+ */
 public class TagbanwaAlphabetTest
 {
 	@NotNull
 	public static final Alphabetical ALPHABET = new TagbanwaAlphabet();
 
 	/**
-	 * Проверяет получение букв алфавита.
+	 * Проверка метода {@link TagbanwaAlphabet#get()}.
 	 */
 	@Test
 	public void testGet()
@@ -46,7 +49,7 @@ public class TagbanwaAlphabetTest
 	}
 
 	/**
-	 * Проверка сравнения объектов.
+	 * Проверка метода {@link TagbanwaAlphabet#equals(Object)}.
 	 */
 	@Test
 	public void testEquals()
@@ -61,7 +64,7 @@ public class TagbanwaAlphabetTest
 	}
 
 	/**
-	 * Проверка хэш-кода.
+	 * Проверка метода {@link TagbanwaAlphabet#hashCode()}.
 	 */
 	@Test
 	public void testHashCode()

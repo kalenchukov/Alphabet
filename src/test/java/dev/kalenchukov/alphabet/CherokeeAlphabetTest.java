@@ -25,13 +25,16 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Класс проверки методов класса {@link CherokeeAlphabet}.
+ */
 public class CherokeeAlphabetTest
 {
 	@NotNull
 	public static final Alphabetical ALPHABET = new CherokeeAlphabet();
 
 	/**
-	 * Проверяет получение букв алфавита.
+	 * Проверка метода {@link CherokeeAlphabet#get()}.
 	 */
 	@Test
 	public void testGet()
@@ -58,7 +61,7 @@ public class CherokeeAlphabetTest
 	}
 
 	/**
-	 * Проверка сравнения объектов.
+	 * Проверка метода {@link CherokeeAlphabet#equals(Object)}.
 	 */
 	@Test
 	public void testEquals()
@@ -73,7 +76,7 @@ public class CherokeeAlphabetTest
 	}
 
 	/**
-	 * Проверка хэш-кода.
+	 * Проверка метода {@link CherokeeAlphabet#hashCode()}.
 	 */
 	@Test
 	public void testHashCode()

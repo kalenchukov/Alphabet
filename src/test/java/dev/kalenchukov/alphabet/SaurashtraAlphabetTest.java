@@ -25,13 +25,16 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Класс проверки методов класса {@link SaurashtraAlphabet}.
+ */
 public class SaurashtraAlphabetTest
 {
 	@NotNull
 	public static final Alphabetical ALPHABET = new SaurashtraAlphabet();
 
 	/**
-	 * Проверяет получение букв алфавита.
+	 * Проверка метода {@link SaurashtraAlphabet#get()}.
 	 */
 	@Test
 	public void testGet()
@@ -52,7 +55,7 @@ public class SaurashtraAlphabetTest
 	}
 
 	/**
-	 * Проверка сравнения объектов.
+	 * Проверка метода {@link SaurashtraAlphabet#equals(Object)}.
 	 */
 	@Test
 	public void testEquals()
@@ -67,7 +70,7 @@ public class SaurashtraAlphabetTest
 	}
 
 	/**
-	 * Проверка хэш-кода.
+	 * Проверка метода {@link SaurashtraAlphabet#hashCode()}.
 	 */
 	@Test
 	public void testHashCode()

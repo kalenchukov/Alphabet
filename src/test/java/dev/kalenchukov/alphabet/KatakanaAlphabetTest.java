@@ -25,13 +25,16 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Класс проверки методов класса {@link KatakanaAlphabet}.
+ */
 public class KatakanaAlphabetTest
 {
 	@NotNull
 	public static final Alphabetical ALPHABET = new KatakanaAlphabet();
 
 	/**
-	 * Проверяет получение букв алфавита.
+	 * Проверка метода {@link KatakanaAlphabet#get()}.
 	 */
 	@Test
 	public void testGet()
@@ -51,7 +54,7 @@ public class KatakanaAlphabetTest
 	}
 
 	/**
-	 * Проверка сравнения объектов.
+	 * Проверка метода {@link KatakanaAlphabet#equals(Object)}.
 	 */
 	@Test
 	public void testEquals()
@@ -66,7 +69,7 @@ public class KatakanaAlphabetTest
 	}
 
 	/**
-	 * Проверка хэш-кода.
+	 * Проверка метода {@link KatakanaAlphabet#hashCode()}.
 	 */
 	@Test
 	public void testHashCode()

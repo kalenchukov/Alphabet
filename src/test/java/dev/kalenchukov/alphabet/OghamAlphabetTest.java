@@ -25,13 +25,16 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Класс проверки методов класса {@link OghamAlphabet}.
+ */
 public class OghamAlphabetTest
 {
 	@NotNull
 	public static final Alphabetical ALPHABET = new OghamAlphabet();
 
 	/**
-	 * Проверяет получение букв алфавита.
+	 * Проверка метода {@link OghamAlphabet#get()}.
 	 */
 	@Test
 	public void testGet()
@@ -48,7 +51,7 @@ public class OghamAlphabetTest
 	}
 
 	/**
-	 * Проверка сравнения объектов.
+	 * Проверка метода {@link OghamAlphabet#equals(Object)}.
 	 */
 	@Test
 	public void testEquals()
@@ -63,7 +66,7 @@ public class OghamAlphabetTest
 	}
 
 	/**
-	 * Проверка хэш-кода.
+	 * Проверка метода {@link OghamAlphabet#hashCode()}.
 	 */
 	@Test
 	public void testHashCode()

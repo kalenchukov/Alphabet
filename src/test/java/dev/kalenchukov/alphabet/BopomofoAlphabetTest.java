@@ -25,13 +25,16 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Класс проверки методов класса {@link BopomofoAlphabet}.
+ */
 public class BopomofoAlphabetTest
 {
 	@NotNull
 	public static final Alphabetical ALPHABET = new BopomofoAlphabet();
 
 	/**
-	 * Проверяет получение букв алфавита.
+	 * Проверка метода {@link BopomofoAlphabet#get()}.
 	 */
 	@Test
 	public void testGet()
@@ -50,7 +53,7 @@ public class BopomofoAlphabetTest
 	}
 
 	/**
-	 * Проверка сравнения объектов.
+	 * Проверка метода {@link BopomofoAlphabet#equals(Object)}.
 	 */
 	@Test
 	public void testEquals()
@@ -65,7 +68,7 @@ public class BopomofoAlphabetTest
 	}
 
 	/**
-	 * Проверка хэш-кода.
+	 * Проверка метода {@link BopomofoAlphabet#hashCode()}.
 	 */
 	@Test
 	public void testHashCode()

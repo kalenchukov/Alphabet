@@ -25,13 +25,16 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Класс проверки методов класса {@link ChineseAlphabet.UpperCase}.
+ */
 public class ChineseAlphabetUpperCaseTest
 {
 	@NotNull
 	public static final Alphabetical ALPHABET = new ChineseAlphabet.UpperCase();
 
 	/**
-	 * Проверяет получение букв алфавита.
+	 * Проверка метода {@link ChineseAlphabet.UpperCase#get()}.
 	 */
 	@Test
 	public void testGet()
@@ -48,7 +51,7 @@ public class ChineseAlphabetUpperCaseTest
 	}
 
 	/**
-	 * Проверка сравнения объектов.
+	 * Проверка метода {@link ChineseAlphabet.UpperCase#equals(Object)}.
 	 */
 	@Test
 	public void testEquals()
@@ -63,7 +66,7 @@ public class ChineseAlphabetUpperCaseTest
 	}
 
 	/**
-	 * Проверка хэш-кода.
+	 * Проверка метода {@link ChineseAlphabet.UpperCase#hashCode()}.
 	 */
 	@Test
 	public void testHashCode()

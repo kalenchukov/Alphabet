@@ -25,13 +25,16 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Класс проверки методов класса {@link SamaritanAlphabet}.
+ */
 public class SamaritanAlphabetTest
 {
 	@NotNull
 	public static final Alphabetical ALPHABET = new SamaritanAlphabet();
 
 	/**
-	 * Проверяет получение букв алфавита.
+	 * Проверка метода {@link SamaritanAlphabet#get()}.
 	 */
 	@Test
 	public void testGet()
@@ -54,7 +57,7 @@ public class SamaritanAlphabetTest
 	}
 
 	/**
-	 * Проверка сравнения объектов.
+	 * Проверка метода {@link SamaritanAlphabet#equals(Object)}.
 	 */
 	@Test
 	public void testEquals()
@@ -69,7 +72,7 @@ public class SamaritanAlphabetTest
 	}
 
 	/**
-	 * Проверка хэш-кода.
+	 * Проверка метода {@link SamaritanAlphabet#hashCode()}.
 	 */
 	@Test
 	public void testHashCode()

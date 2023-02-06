@@ -25,13 +25,16 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Класс проверки методов класса {@link MandaicAlphabet}.
+ */
 public class MandaicAlphabetTest
 {
 	@NotNull
 	public static final Alphabetical ALPHABET = new MandaicAlphabet();
 
 	/**
-	 * Проверяет получение букв алфавита.
+	 * Проверка метода {@link MandaicAlphabet#get()}.
 	 */
 	@Test
 	public void testGet()
@@ -48,7 +51,7 @@ public class MandaicAlphabetTest
 	}
 
 	/**
-	 * Проверка сравнения объектов.
+	 * Проверка метода {@link MandaicAlphabet#equals(Object)}.
 	 */
 	@Test
 	public void testEquals()
@@ -63,7 +66,7 @@ public class MandaicAlphabetTest
 	}
 
 	/**
-	 * Проверка хэш-кода.
+	 * Проверка метода {@link MandaicAlphabet#hashCode()}.
 	 */
 	@Test
 	public void testHashCode()

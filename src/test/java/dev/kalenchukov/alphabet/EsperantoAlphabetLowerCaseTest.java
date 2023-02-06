@@ -25,13 +25,16 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Класс проверки методов класса {@link EsperantoAlphabet.LowerCase}.
+ */
 public class EsperantoAlphabetLowerCaseTest
 {
 	@NotNull
 	public static final Alphabetical ALPHABET = new EsperantoAlphabet.LowerCase();
 
 	/**
-	 * Проверяет получение букв алфавита.
+	 * Проверка метода {@link EsperantoAlphabet.LowerCase#get()}.
 	 */
 	@Test
 	public void testGet()
@@ -48,7 +51,7 @@ public class EsperantoAlphabetLowerCaseTest
 	}
 
 	/**
-	 * Проверка сравнения объектов.
+	 * Проверка метода {@link EsperantoAlphabet.LowerCase#equals(Object)}.
 	 */
 	@Test
 	public void testEquals()
@@ -63,7 +66,7 @@ public class EsperantoAlphabetLowerCaseTest
 	}
 
 	/**
-	 * Проверка хэш-кода.
+	 * Проверка метода {@link EsperantoAlphabet.LowerCase#hashCode()}.
 	 */
 	@Test
 	public void testHashCode()

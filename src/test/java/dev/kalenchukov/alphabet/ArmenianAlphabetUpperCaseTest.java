@@ -25,13 +25,16 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Класс проверки методов класса {@link ArmenianAlphabet.UpperCase}.
+ */
 public class ArmenianAlphabetUpperCaseTest
 {
 	@NotNull
 	public static final Alphabetical ALPHABET = new ArmenianAlphabet.UpperCase();
 
 	/**
-	 * Проверяет получение букв алфавита.
+	 * Проверка метода {@link ArmenianAlphabet.UpperCase#get()}.
 	 */
 	@Test
 	public void testGet()
@@ -50,7 +53,7 @@ public class ArmenianAlphabetUpperCaseTest
 	}
 
 	/**
-	 * Проверка сравнения объектов.
+	 * Проверка метода {@link ArmenianAlphabet.UpperCase#equals(Object)}.
 	 */
 	@Test
 	public void testEquals()
@@ -65,7 +68,7 @@ public class ArmenianAlphabetUpperCaseTest
 	}
 
 	/**
-	 * Проверка хэш-кода.
+	 * Проверка метода {@link ArmenianAlphabet.UpperCase#hashCode()}.
 	 */
 	@Test
 	public void testHashCode()

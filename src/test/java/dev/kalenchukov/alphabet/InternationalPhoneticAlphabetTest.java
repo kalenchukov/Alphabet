@@ -25,13 +25,16 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Класс проверки методов класса {@link InternationalPhoneticAlphabet}.
+ */
 public class InternationalPhoneticAlphabetTest
 {
 	@NotNull
 	public static final Alphabetical ALPHABET = new InternationalPhoneticAlphabet();
 
 	/**
-	 * Проверяет получение букв алфавита.
+	 * Проверка метода {@link InternationalPhoneticAlphabet#get()}.
 	 */
 	@Test
 	public void testGet()
@@ -73,7 +76,7 @@ public class InternationalPhoneticAlphabetTest
 	}
 
 	/**
-	 * Проверка сравнения объектов.
+	 * Проверка метода {@link InternationalPhoneticAlphabet#equals(Object)}.
 	 */
 	@Test
 	public void testEquals()
@@ -88,7 +91,7 @@ public class InternationalPhoneticAlphabetTest
 	}
 
 	/**
-	 * Проверка хэш-кода.
+	 * Проверка метода {@link InternationalPhoneticAlphabet#hashCode()}.
 	 */
 	@Test
 	public void testHashCode()

@@ -28,13 +28,16 @@ import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Класс проверки методов класса {@link AbstractAlphabet}.
+ */
 public class AbstractAlphabetTest
 {
 	@NotNull
 	public static final Alphabetical ALPHABET = new RussianAlphabet();
 
 	/**
-	 * Проверяет буквы алфавита в обратном порядке.
+	 * Проверка метода {@link AbstractAlphabet#getReverse()}.
 	 */
 	@Test
 	public void testGetReverse()
@@ -119,7 +122,7 @@ public class AbstractAlphabetTest
 	}
 
 	/**
-	 * Проверяет получение букв алфавита в перемешанном порядке.
+	 * Проверка метода {@link AbstractAlphabet#getShuffle()}.
 	 */
 	@Test
 	public void testGetShuffle()
@@ -138,7 +141,7 @@ public class AbstractAlphabetTest
 	}
 
 	/**
-	 * Проверяет получение среза букв алфавита.
+	 * Проверка метода {@link AbstractAlphabet#get(Integer, Integer)}.
 	 */
 	@Test
 	public void testGetRange()
@@ -175,7 +178,7 @@ public class AbstractAlphabetTest
 	}
 
 	/**
-	 * Проверяет получение среза букв алфавита выходящего за минимальную границу.
+	 * Проверка метода {@link AbstractAlphabet#get(Integer, Integer)} c выходом за минимальную границу.
 	 */
 	@Test
 	public void testGetRangeOutOfBoundsMin()
@@ -186,7 +189,7 @@ public class AbstractAlphabetTest
 	}
 
 	/**
-	 * Проверяет получение среза букв алфавита выходящего за максимальную границу.
+	 * Проверка метода {@link AbstractAlphabet#get(Integer, Integer)}c выходом за максимальную границу.
 	 */
 	@Test
 	public void testGetRangeOutOfBoundsMax()
@@ -197,7 +200,7 @@ public class AbstractAlphabetTest
 	}
 
 	/**
-	 * Проверяет получение среза букв алфавита с инвертированной границей.
+	 * Проверка метода {@link AbstractAlphabet#get(Integer, Integer)} с инвертированной границей.
 	 */
 	@Test
 	public void testGetRangeInversion()
@@ -208,16 +211,16 @@ public class AbstractAlphabetTest
 	}
 
 	/**
-	 * Проверяет позицию несуществующей буквы в алфавите.
+	 * Проверка метода {@link AbstractAlphabet#getPosition(Character)} с некорректным значением.
 	 */
 	@Test
-	public void testGetPositionNotLetter()
+	public void testGetPositionNotCorrect()
 	{
 		assertNull(ALPHABET.getPosition('W'));
 	}
 
 	/**
-	 * Проверяет позиции букв в алфавите.
+	 * Проверка метода {@link AbstractAlphabet#getPosition(Character)}.
 	 */
 	@Test
 	public void testGetPosition()
@@ -226,7 +229,7 @@ public class AbstractAlphabetTest
 	}
 
 	/**
-	 * Проверяет присутствующую букву.
+	 * Проверка метода {@link AbstractAlphabet#getLetter(Integer)}.
 	 */
 	@Test
 	public void testGetLetter()
@@ -235,16 +238,16 @@ public class AbstractAlphabetTest
 	}
 
 	/**
-	 * Проверяет отсутствующую букву.
+	 * Проверка метода {@link AbstractAlphabet#getLetter(Integer)} с некорректным значением.
 	 */
 	@Test
-	public void testGetLetterNot()
+	public void testGetLetterNotCorrect()
 	{
 		assertNull(ALPHABET.getLetter(0));
 	}
 
 	/**
-	 * Проверяет корректные данные.
+	 * Проверка метода {@link AbstractAlphabet#allMatch(String)}.
 	 */
 	@Test
 	public void testAllMatch()
@@ -253,10 +256,10 @@ public class AbstractAlphabetTest
 	}
 
 	/**
-	 * Проверяет некорректные данные.
+	 * Проверка метода {@link AbstractAlphabet#allMatch(String)} с некорректным значением.
 	 */
 	@Test
-	public void testAllMatchNot()
+	public void testAllMatchNotCorrect()
 	{
 		assertFalse(ALPHABET.allMatch(""));
 		assertFalse(ALPHABET.allMatch("Kino"));
@@ -266,7 +269,7 @@ public class AbstractAlphabetTest
 	}
 
 	/**
-	 * Проверяет корректные данные.
+	 * Проверка метода {@link AbstractAlphabet#anyMatch(String)}.
 	 */
 	@Test
 	public void testAnyMatch()
@@ -275,17 +278,17 @@ public class AbstractAlphabetTest
 	}
 
 	/**
-	 * Проверяет некорректные данные.
+	 * Проверка метода {@link AbstractAlphabet#anyMatch(String)} с некорректным значением.
 	 */
 	@Test
-	public void testAnyMatchNot()
+	public void testAnyMatchNotCorrect()
 	{
 		assertFalse(ALPHABET.anyMatch(""));
 		assertFalse(ALPHABET.anyMatch("Kino"));
 	}
 
 	/**
-	 * Проверяет корректные данные.
+	 * Проверка метода {@link AbstractAlphabet#noneMatch(String)}.
 	 */
 	@Test
 	public void testNoneMatch()
@@ -294,17 +297,17 @@ public class AbstractAlphabetTest
 	}
 
 	/**
-	 * Проверяет некорректные данные.
+	 * Проверка метода {@link AbstractAlphabet#noneMatch(String)} с некорректным значением.
 	 */
 	@Test
-	public void testNoneMatchNot()
+	public void testNoneMatchNotCorrect()
 	{
 		assertFalse(ALPHABET.noneMatch(""));
 		assertFalse(ALPHABET.noneMatch("KinoЪ"));
 	}
 
 	/**
-	 * Проверяет принадлежность буквы к алфавиту.
+	 * Проверка метода {@link AbstractAlphabet#contains(Character)}.
 	 */
 	@Test
 	public void testContains()
@@ -313,16 +316,16 @@ public class AbstractAlphabetTest
 	}
 
 	/**
-	 * Проверяет принадлежность не принадлежащей буквы к алфавиту.
+	 * Проверка метода {@link AbstractAlphabet#contains(Character)} с некорректным значением.
 	 */
 	@Test
-	public void testContainsNot()
+	public void testContainsNotCorrect()
 	{
 		assertFalse(ALPHABET.contains('W'));
 	}
 
 	/**
-	 * Проверяет получение букв в случайном порядке.
+	 * Проверка метода {@link AbstractAlphabet#getRandom(Integer)}.
 	 */
 	@Test
 	public void testGetRandom()
@@ -334,7 +337,7 @@ public class AbstractAlphabetTest
 	}
 
 	/**
-	 * Проверяет преобразование алфавита в массив.
+	 * Проверка метода {@link AbstractAlphabet#toArray()}.
 	 */
 	@Test
 	public void testToArray()
@@ -353,7 +356,7 @@ public class AbstractAlphabetTest
 	}
 
 	/**
-	 * Проверяет преобразование алфавита в строку с использованием разделителя.
+	 * Проверка метода {@link AbstractAlphabet#toString(String)}.
 	 */
 	@Test
 	public void testToStringSeparator()
@@ -366,7 +369,7 @@ public class AbstractAlphabetTest
 	}
 
 	/**
-	 * Проверяет преобразование алфавита в строку.
+	 * Проверка метода {@link AbstractAlphabet#toString()}.
 	 */
 	@Test
 	public void testToString()
@@ -377,7 +380,7 @@ public class AbstractAlphabetTest
 	}
 
 	/**
-	 * Проверка с наличием букв.
+	 * Проверка метода {@link AbstractAlphabet#statistics(String)}.
 	 */
 	@Test
 	public void testStatistics()
@@ -397,10 +400,10 @@ public class AbstractAlphabetTest
 	}
 
 	/**
-	 * Проверка с отсутствием букв.
+	 * Проверка метода {@link AbstractAlphabet#statistics(String)} с некорректным значением.
 	 */
 	@Test
-	public void testStatisticsNot()
+	public void testStatisticsNotCorrect()
 	{
 		String string = """
 			И я должен прийти к девяти, на работу свою,

@@ -25,13 +25,16 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Класс проверки методов класса {@link TagalogAlphabet}.
+ */
 public class TagalogAlphabetTest
 {
 	@NotNull
 	public static final Alphabetical ALPHABET = new TagalogAlphabet();
 
 	/**
-	 * Проверяет получение букв алфавита.
+	 * Проверка метода {@link TagalogAlphabet#get()}.
 	 */
 	@Test
 	public void testGet()
@@ -47,7 +50,7 @@ public class TagalogAlphabetTest
 	}
 
 	/**
-	 * Проверка сравнения объектов.
+	 * Проверка метода {@link TagalogAlphabet#equals(Object)}.
 	 */
 	@Test
 	public void testEquals()
@@ -62,7 +65,7 @@ public class TagalogAlphabetTest
 	}
 
 	/**
-	 * Проверка хэш-кода.
+	 * Проверка метода {@link TagalogAlphabet#hashCode()}.
 	 */
 	@Test
 	public void testHashCode()

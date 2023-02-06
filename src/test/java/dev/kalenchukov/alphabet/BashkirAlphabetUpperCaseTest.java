@@ -25,13 +25,16 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Класс проверки методов класса {@link BashkirAlphabet.UpperCase}.
+ */
 public class BashkirAlphabetUpperCaseTest
 {
 	@NotNull
 	public static final Alphabetical ALPHABET = new BashkirAlphabet.UpperCase();
 
 	/**
-	 * Проверяет получение букв алфавита.
+	 * Проверка метода {@link BashkirAlphabet.UpperCase#get()}.
 	 */
 	@Test
 	public void testGet()
@@ -50,7 +53,7 @@ public class BashkirAlphabetUpperCaseTest
 	}
 
 	/**
-	 * Проверка сравнения объектов.
+	 * Проверка метода {@link BashkirAlphabet.UpperCase#equals(Object)}.
 	 */
 	@Test
 	public void testEquals()
@@ -65,7 +68,7 @@ public class BashkirAlphabetUpperCaseTest
 	}
 
 	/**
-	 * Проверка хэш-кода.
+	 * Проверка метода {@link BashkirAlphabet.UpperCase#hashCode()}.
 	 */
 	@Test
 	public void testHashCode()

@@ -25,13 +25,16 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Класс проверки методов класса {@link BuhidAlphabet}.
+ */
 public class BuhidAlphabetTest
 {
 	@NotNull
 	public static final Alphabetical ALPHABET = new BuhidAlphabet();
 
 	/**
-	 * Проверяет получение букв алфавита.
+	 * Проверка метода {@link BuhidAlphabet#get()}.
 	 */
 	@Test
 	public void testGet()
@@ -47,7 +50,7 @@ public class BuhidAlphabetTest
 	}
 
 	/**
-	 * Проверка сравнения объектов.
+	 * Проверка метода {@link BuhidAlphabet#equals(Object)}.
 	 */
 	@Test
 	public void testEquals()
@@ -62,7 +65,7 @@ public class BuhidAlphabetTest
 	}
 
 	/**
-	 * Проверка хэш-кода.
+	 * Проверка метода {@link BuhidAlphabet#hashCode()}.
 	 */
 	@Test
 	public void testHashCode()

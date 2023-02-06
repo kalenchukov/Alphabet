@@ -25,13 +25,16 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Класс проверки методов класса {@link ChamAlphabet}.
+ */
 public class ChamAlphabetTest
 {
 	@NotNull
 	public static final Alphabetical ALPHABET = new ChamAlphabet();
 
 	/**
-	 * Проверяет получение букв алфавита.
+	 * Проверка метода {@link ChamAlphabet#get()}.
 	 */
 	@Test
 	public void testGet()
@@ -55,7 +58,7 @@ public class ChamAlphabetTest
 	}
 
 	/**
-	 * Проверка сравнения объектов.
+	 * Проверка метода {@link ChamAlphabet#equals(Object)}.
 	 */
 	@Test
 	public void testEquals()
@@ -70,7 +73,7 @@ public class ChamAlphabetTest
 	}
 
 	/**
-	 * Проверка хэш-кода.
+	 * Проверка метода {@link ChamAlphabet#hashCode()}.
 	 */
 	@Test
 	public void testHashCode()

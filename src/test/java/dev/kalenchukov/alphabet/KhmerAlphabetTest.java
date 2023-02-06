@@ -25,13 +25,16 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Класс проверки методов класса {@link KhmerAlphabet}.
+ */
 public class KhmerAlphabetTest
 {
 	@NotNull
 	public static final Alphabetical ALPHABET = new KhmerAlphabet();
 
 	/**
-	 * Проверяет получение букв алфавита.
+	 * Проверка метода {@link KhmerAlphabet#get()}.
 	 */
 	@Test
 	public void testGet()
@@ -58,7 +61,7 @@ public class KhmerAlphabetTest
 	}
 
 	/**
-	 * Проверка сравнения объектов.
+	 * Проверка метода {@link KhmerAlphabet#equals(Object)}.
 	 */
 	@Test
 	public void testEquals()
@@ -73,7 +76,7 @@ public class KhmerAlphabetTest
 	}
 
 	/**
-	 * Проверка хэш-кода.
+	 * Проверка метода {@link KhmerAlphabet#hashCode()}.
 	 */
 	@Test
 	public void testHashCode()

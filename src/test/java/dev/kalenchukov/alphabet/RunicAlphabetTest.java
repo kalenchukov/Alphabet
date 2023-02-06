@@ -25,13 +25,16 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Класс проверки методов класса {@link RunicAlphabet}.
+ */
 public class RunicAlphabetTest
 {
 	@NotNull
 	public static final Alphabetical ALPHABET = new RunicAlphabet();
 
 	/**
-	 * Проверяет получение букв алфавита.
+	 * Проверка метода {@link RunicAlphabet#get()}.
 	 */
 	@Test
 	public void testGet()
@@ -58,7 +61,7 @@ public class RunicAlphabetTest
 	}
 
 	/**
-	 * Проверка сравнения объектов.
+	 * Проверка метода {@link RunicAlphabet#equals(Object)}.
 	 */
 	@Test
 	public void testEquals()
@@ -73,7 +76,7 @@ public class RunicAlphabetTest
 	}
 
 	/**
-	 * Проверка хэш-кода.
+	 * Проверка метода {@link RunicAlphabet#hashCode()}.
 	 */
 	@Test
 	public void testHashCode()
