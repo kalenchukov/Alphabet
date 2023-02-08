@@ -56,9 +56,9 @@ public class LatinAlphabetUpperCaseTest
 	@Test
 	public void testEquals()
 	{
-		assertFalse(ALPHABET.equals(null));
+		assertNotEquals(null, ALPHABET);
 
-		assertTrue(ALPHABET.equals(ALPHABET));
+		assertEquals(ALPHABET, ALPHABET);
 
 		assertFalse(ALPHABET.equals(new RussianAlphabet.UpperCase()));
 

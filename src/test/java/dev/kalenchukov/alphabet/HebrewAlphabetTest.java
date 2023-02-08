@@ -56,13 +56,13 @@ public class HebrewAlphabetTest
 	@Test
 	public void testEquals()
 	{
-		assertFalse(ALPHABET.equals(null));
+		assertNotEquals(null, ALPHABET);
 
-		assertTrue(ALPHABET.equals(ALPHABET));
+		assertEquals(ALPHABET, ALPHABET);
 
-		assertFalse(ALPHABET.equals(new RussianAlphabet()));
+		assertNotEquals(ALPHABET, new RussianAlphabet());
 
-		assertTrue(ALPHABET.equals(new HebrewAlphabet()));
+		assertEquals(ALPHABET, new HebrewAlphabet());
 	}
 
 	/**

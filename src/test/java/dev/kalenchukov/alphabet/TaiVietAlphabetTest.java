@@ -63,13 +63,13 @@ public class TaiVietAlphabetTest
 	@Test
 	public void testEquals()
 	{
-		assertFalse(ALPHABET.equals(null));
+		assertNotEquals(null, ALPHABET);
 
-		assertTrue(ALPHABET.equals(ALPHABET));
+		assertEquals(ALPHABET, ALPHABET);
 
-		assertFalse(ALPHABET.equals(new RussianAlphabet()));
+		assertNotEquals(ALPHABET, new RussianAlphabet());
 
-		assertTrue(ALPHABET.equals(new TaiVietAlphabet()));
+		assertEquals(ALPHABET, new TaiVietAlphabet());
 	}
 
 	/**

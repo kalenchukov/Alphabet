@@ -58,13 +58,13 @@ public class BelarusianAlphabetTest
 	@Test
 	public void testEquals()
 	{
-		assertFalse(ALPHABET.equals(null));
+		assertNotEquals(null, ALPHABET);
 
-		assertTrue(ALPHABET.equals(ALPHABET));
+		assertEquals(ALPHABET, ALPHABET);
 
 		assertFalse(ALPHABET.equals(new GreekAlphabet()));
 
-		assertTrue(ALPHABET.equals(new BelarusianAlphabet()));
+		assertEquals(ALPHABET, new BelarusianAlphabet());
 	}
 
 	/**
