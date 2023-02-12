@@ -78,7 +78,7 @@ public class ThaiAlphabet extends AbstractAlphabet implements AlphabeticalCase
 
 		final ThaiAlphabet alphabet = (ThaiAlphabet) obj;
 
-		if (!Objects.equals(ThaiAlphabet.LETTERS, alphabet.get())) {
+		if (!Objects.equals(this.get(), alphabet.get())) {
 			return false;
 		}
 

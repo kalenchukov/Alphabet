@@ -70,7 +70,7 @@ public class TagalogAlphabet extends AbstractAlphabet implements AlphabeticalCas
 
 		final TagalogAlphabet alphabet = (TagalogAlphabet) obj;
 
-		if (!Objects.equals(TagalogAlphabet.LETTERS, alphabet.get())) {
+		if (!Objects.equals(this.get(), alphabet.get())) {
 			return false;
 		}
 

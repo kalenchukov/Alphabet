@@ -62,7 +62,7 @@ public class BelarusianAlphabetTest
 
 		assertEquals(ALPHABET, ALPHABET);
 
-		assertFalse(ALPHABET.equals(new GreekAlphabet()));
+		assertNotEquals(ALPHABET, new GreekAlphabet());
 
 		assertEquals(ALPHABET, new BelarusianAlphabet());
 	}

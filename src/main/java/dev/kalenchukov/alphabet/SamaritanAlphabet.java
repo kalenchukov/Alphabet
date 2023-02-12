@@ -77,7 +77,7 @@ public class SamaritanAlphabet extends AbstractAlphabet implements AlphabeticalC
 
 		final SamaritanAlphabet alphabet = (SamaritanAlphabet) obj;
 
-		if (!Objects.equals(SamaritanAlphabet.LETTERS, alphabet.get())) {
+		if (!Objects.equals(this.get(), alphabet.get())) {
 			return false;
 		}
 

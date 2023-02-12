@@ -69,7 +69,7 @@ public class TagbanwaAlphabet extends AbstractAlphabet implements AlphabeticalCa
 
 		final TagbanwaAlphabet alphabet = (TagbanwaAlphabet) obj;
 
-		if (!Objects.equals(TagbanwaAlphabet.LETTERS, alphabet.get())) {
+		if (!Objects.equals(this.get(), alphabet.get())) {
 			return false;
 		}
 

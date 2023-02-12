@@ -96,7 +96,7 @@ public class InternationalPhoneticAlphabet extends AbstractAlphabet implements A
 
 		final InternationalPhoneticAlphabet alphabet = (InternationalPhoneticAlphabet) obj;
 
-		if (!Objects.equals(InternationalPhoneticAlphabet.LETTERS, alphabet.get())) {
+		if (!Objects.equals(this.get(), alphabet.get())) {
 			return false;
 		}
 
@@ -155,7 +155,7 @@ public class InternationalPhoneticAlphabet extends AbstractAlphabet implements A
 
 			final InternationalPhoneticAlphabet.UpperCase alphabet = (InternationalPhoneticAlphabet.UpperCase) obj;
 
-			if (!Objects.equals(InternationalPhoneticAlphabet.UpperCase.LETTERS, alphabet.get())) {
+			if (!Objects.equals(this.get(), alphabet.get())) {
 				return false;
 			}
 
@@ -234,7 +234,7 @@ public class InternationalPhoneticAlphabet extends AbstractAlphabet implements A
 
 			final InternationalPhoneticAlphabet.LowerCase alphabet = (InternationalPhoneticAlphabet.LowerCase) obj;
 
-			if (!Objects.equals(InternationalPhoneticAlphabet.LowerCase.LETTERS, alphabet.get())) {
+			if (!Objects.equals(this.get(), alphabet.get())) {
 				return false;
 			}
 

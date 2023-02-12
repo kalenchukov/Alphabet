@@ -79,7 +79,7 @@ public class SinhalaAlphabet extends AbstractAlphabet implements AlphabeticalCas
 
 		final SinhalaAlphabet alphabet = (SinhalaAlphabet) obj;
 
-		if (!Objects.equals(SinhalaAlphabet.LETTERS, alphabet.get())) {
+		if (!Objects.equals(this.get(), alphabet.get())) {
 			return false;
 		}
 

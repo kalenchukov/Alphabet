@@ -240,7 +240,7 @@ public class YiSyllablesAlphabet extends AbstractAlphabet implements Alphabetica
 
 		final YiSyllablesAlphabet alphabet = (YiSyllablesAlphabet) obj;
 
-		if (!Objects.equals(YiSyllablesAlphabet.LETTERS, alphabet.get())) {
+		if (!Objects.equals(this.get(), alphabet.get())) {
 			return false;
 		}
 

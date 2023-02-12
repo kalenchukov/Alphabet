@@ -79,7 +79,7 @@ public class ArmenianAlphabet extends AbstractAlphabet implements AlphabeticalCa
 
 		final ArmenianAlphabet alphabet = (ArmenianAlphabet) obj;
 
-		if (!Objects.equals(ArmenianAlphabet.LETTERS, alphabet.get())) {
+		if (!Objects.equals(this.get(), alphabet.get())) {
 			return false;
 		}
 
@@ -143,7 +143,7 @@ public class ArmenianAlphabet extends AbstractAlphabet implements AlphabeticalCa
 
 			final ArmenianAlphabet.UpperCase alphabet = (ArmenianAlphabet.UpperCase) obj;
 
-			if (!Objects.equals(ArmenianAlphabet.UpperCase.LETTERS, alphabet.get())) {
+			if (!Objects.equals(this.get(), alphabet.get())) {
 				return false;
 			}
 
@@ -208,7 +208,7 @@ public class ArmenianAlphabet extends AbstractAlphabet implements AlphabeticalCa
 
 			final ArmenianAlphabet.LowerCase alphabet = (ArmenianAlphabet.LowerCase) obj;
 
-			if (!Objects.equals(ArmenianAlphabet.LowerCase.LETTERS, alphabet.get())) {
+			if (!Objects.equals(this.get(), alphabet.get())) {
 				return false;
 			}
 

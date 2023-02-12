@@ -76,7 +76,7 @@ public class NkoAlphabet extends AbstractAlphabet implements AlphabeticalCase
 
 		final NkoAlphabet alphabet = (NkoAlphabet) obj;
 
-		if (!Objects.equals(NkoAlphabet.LETTERS, alphabet.get())) {
+		if (!Objects.equals(this.get(), alphabet.get())) {
 			return false;
 		}
 

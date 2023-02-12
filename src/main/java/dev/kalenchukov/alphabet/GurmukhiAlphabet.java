@@ -76,7 +76,7 @@ public class GurmukhiAlphabet extends AbstractAlphabet implements AlphabeticalCa
 
 		final GurmukhiAlphabet alphabet = (GurmukhiAlphabet) obj;
 
-		if (!Objects.equals(GurmukhiAlphabet.LETTERS, alphabet.get())) {
+		if (!Objects.equals(this.get(), alphabet.get())) {
 			return false;
 		}
 

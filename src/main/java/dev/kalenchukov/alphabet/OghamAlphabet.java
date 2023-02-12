@@ -71,7 +71,7 @@ public class OghamAlphabet extends AbstractAlphabet implements AlphabeticalCase
 
 		final OghamAlphabet alphabet = (OghamAlphabet) obj;
 
-		if (!Objects.equals(OghamAlphabet.LETTERS, alphabet.get())) {
+		if (!Objects.equals(this.get(), alphabet.get())) {
 			return false;
 		}
 

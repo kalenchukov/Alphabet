@@ -116,7 +116,7 @@ public class VaiAlphabet extends AbstractAlphabet implements AlphabeticalCase
 
 		final VaiAlphabet alphabet = (VaiAlphabet) obj;
 
-		if (!Objects.equals(VaiAlphabet.LETTERS, alphabet.get())) {
+		if (!Objects.equals(this.get(), alphabet.get())) {
 			return false;
 		}
 

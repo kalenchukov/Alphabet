@@ -78,7 +78,7 @@ public class ChamAlphabet extends AbstractAlphabet implements AlphabeticalCase
 
 		final ChamAlphabet alphabet = (ChamAlphabet) obj;
 
-		if (!Objects.equals(ChamAlphabet.LETTERS, alphabet.get())) {
+		if (!Objects.equals(this.get(), alphabet.get())) {
 			return false;
 		}
 

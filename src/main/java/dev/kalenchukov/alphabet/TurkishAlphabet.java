@@ -76,7 +76,7 @@ public class TurkishAlphabet extends AbstractAlphabet implements AlphabeticalCas
 
 		final TurkishAlphabet alphabet = (TurkishAlphabet) obj;
 
-		if (!Objects.equals(TurkishAlphabet.LETTERS, alphabet.get())) {
+		if (!Objects.equals(this.get(), alphabet.get())) {
 			return false;
 		}
 
@@ -138,7 +138,7 @@ public class TurkishAlphabet extends AbstractAlphabet implements AlphabeticalCas
 
 			final TurkishAlphabet.UpperCase alphabet = (TurkishAlphabet.UpperCase) obj;
 
-			if (!Objects.equals(TurkishAlphabet.UpperCase.LETTERS, alphabet.get())) {
+			if (!Objects.equals(this.get(), alphabet.get())) {
 				return false;
 			}
 
@@ -201,7 +201,7 @@ public class TurkishAlphabet extends AbstractAlphabet implements AlphabeticalCas
 
 			final TurkishAlphabet.LowerCase alphabet = (TurkishAlphabet.LowerCase) obj;
 
-			if (!Objects.equals(TurkishAlphabet.LowerCase.LETTERS, alphabet.get())) {
+			if (!Objects.equals(this.get(), alphabet.get())) {
 				return false;
 			}
 

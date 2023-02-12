@@ -76,7 +76,7 @@ public class BulgarianAlphabet extends AbstractAlphabet implements AlphabeticalC
 
 		final BulgarianAlphabet alphabet = (BulgarianAlphabet) obj;
 
-		if (!Objects.equals(BulgarianAlphabet.LETTERS, alphabet.get())) {
+		if (!Objects.equals(this.get(), alphabet.get())) {
 			return false;
 		}
 
@@ -138,7 +138,7 @@ public class BulgarianAlphabet extends AbstractAlphabet implements AlphabeticalC
 
 			final BulgarianAlphabet.UpperCase alphabet = (BulgarianAlphabet.UpperCase) obj;
 
-			if (!Objects.equals(BulgarianAlphabet.UpperCase.LETTERS, alphabet.get())) {
+			if (!Objects.equals(this.get(), alphabet.get())) {
 				return false;
 			}
 
@@ -201,7 +201,7 @@ public class BulgarianAlphabet extends AbstractAlphabet implements AlphabeticalC
 
 			final BulgarianAlphabet.LowerCase alphabet = (BulgarianAlphabet.LowerCase) obj;
 
-			if (!Objects.equals(BulgarianAlphabet.LowerCase.LETTERS, alphabet.get())) {
+			if (!Objects.equals(this.get(), alphabet.get())) {
 				return false;
 			}
 

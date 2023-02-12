@@ -81,7 +81,7 @@ public class CherokeeAlphabet extends AbstractAlphabet implements AlphabeticalCa
 
 		final CherokeeAlphabet alphabet = (CherokeeAlphabet) obj;
 
-		if (!Objects.equals(CherokeeAlphabet.LETTERS, alphabet.get())) {
+		if (!Objects.equals(this.get(), alphabet.get())) {
 			return false;
 		}
 

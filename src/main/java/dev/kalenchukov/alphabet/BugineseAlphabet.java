@@ -71,7 +71,7 @@ public class BugineseAlphabet extends AbstractAlphabet implements AlphabeticalCa
 
 		final BugineseAlphabet alphabet = (BugineseAlphabet) obj;
 
-		if (!Objects.equals(BugineseAlphabet.LETTERS, alphabet.get())) {
+		if (!Objects.equals(this.get(), alphabet.get())) {
 			return false;
 		}
 

@@ -78,7 +78,7 @@ public class InternationalPhoneticAlphabetLowerCaseTest
 
 		assertNotEquals(ALPHABET, new RussianAlphabet.LowerCase());
 
-		assertTrue(ALPHABET.equals(new InternationalPhoneticAlphabet.LowerCase()));
+		assertEquals(ALPHABET, new InternationalPhoneticAlphabet.LowerCase());;
 	}
 
 	/**

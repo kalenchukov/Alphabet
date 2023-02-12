@@ -74,7 +74,7 @@ public class KayahLiAlphabet extends AbstractAlphabet implements AlphabeticalCas
 
 		final KayahLiAlphabet alphabet = (KayahLiAlphabet) obj;
 
-		if (!Objects.equals(KayahLiAlphabet.LETTERS, alphabet.get())) {
+		if (!Objects.equals(this.get(), alphabet.get())) {
 			return false;
 		}
 

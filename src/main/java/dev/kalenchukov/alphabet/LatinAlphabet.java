@@ -75,7 +75,7 @@ public class LatinAlphabet extends AbstractAlphabet implements AlphabeticalCase
 
 		final LatinAlphabet alphabet = (LatinAlphabet) obj;
 
-		if (!Objects.equals(LatinAlphabet.LETTERS, alphabet.get())) {
+		if (!Objects.equals(this.get(), alphabet.get())) {
 			return false;
 		}
 
@@ -137,7 +137,7 @@ public class LatinAlphabet extends AbstractAlphabet implements AlphabeticalCase
 
 			final LatinAlphabet.UpperCase alphabet = (LatinAlphabet.UpperCase) obj;
 
-			if (!Objects.equals(LatinAlphabet.UpperCase.LETTERS, alphabet.get())) {
+			if (!Objects.equals(this.get(), alphabet.get())) {
 				return false;
 			}
 
@@ -200,7 +200,7 @@ public class LatinAlphabet extends AbstractAlphabet implements AlphabeticalCase
 
 			final LatinAlphabet.LowerCase alphabet = (LatinAlphabet.LowerCase) obj;
 
-			if (!Objects.equals(LatinAlphabet.LowerCase.LETTERS, alphabet.get())) {
+			if (!Objects.equals(this.get(), alphabet.get())) {
 				return false;
 			}
 

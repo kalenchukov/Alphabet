@@ -107,7 +107,7 @@ public class EthiopicAlphabet extends AbstractAlphabet implements AlphabeticalCa
 
 		final EthiopicAlphabet alphabet = (EthiopicAlphabet) obj;
 
-		if (!Objects.equals(EthiopicAlphabet.LETTERS, alphabet.get())) {
+		if (!Objects.equals(this.get(), alphabet.get())) {
 			return false;
 		}
 

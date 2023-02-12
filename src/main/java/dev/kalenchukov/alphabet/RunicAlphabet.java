@@ -81,7 +81,7 @@ public class RunicAlphabet extends AbstractAlphabet implements AlphabeticalCase
 
 		final RunicAlphabet alphabet = (RunicAlphabet) obj;
 
-		if (!Objects.equals(RunicAlphabet.LETTERS, alphabet.get())) {
+		if (!Objects.equals(this.get(), alphabet.get())) {
 			return false;
 		}
 

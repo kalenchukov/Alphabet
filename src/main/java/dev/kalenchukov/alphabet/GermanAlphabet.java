@@ -76,7 +76,7 @@ public class GermanAlphabet extends AbstractAlphabet implements AlphabeticalCase
 
 		final GermanAlphabet alphabet = (GermanAlphabet) obj;
 
-		if (!Objects.equals(GermanAlphabet.LETTERS, alphabet.get())) {
+		if (!Objects.equals(this.get(), alphabet.get())) {
 			return false;
 		}
 
@@ -138,7 +138,7 @@ public class GermanAlphabet extends AbstractAlphabet implements AlphabeticalCase
 
 			final GermanAlphabet.UpperCase alphabet = (GermanAlphabet.UpperCase) obj;
 
-			if (!Objects.equals(GermanAlphabet.UpperCase.LETTERS, alphabet.get())) {
+			if (!Objects.equals(this.get(), alphabet.get())) {
 				return false;
 			}
 
@@ -201,7 +201,7 @@ public class GermanAlphabet extends AbstractAlphabet implements AlphabeticalCase
 
 			final GermanAlphabet.LowerCase alphabet = (GermanAlphabet.LowerCase) obj;
 
-			if (!Objects.equals(GermanAlphabet.LowerCase.LETTERS, alphabet.get())) {
+			if (!Objects.equals(this.get(), alphabet.get())) {
 				return false;
 			}
 

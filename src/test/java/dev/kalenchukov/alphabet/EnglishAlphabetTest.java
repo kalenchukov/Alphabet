@@ -61,7 +61,7 @@ public class EnglishAlphabetTest
 
 		assertEquals(ALPHABET, ALPHABET);
 
-		assertFalse(ALPHABET.equals(new BelarusianAlphabet()));
+		assertNotEquals(ALPHABET, new BelarusianAlphabet());
 
 		assertEquals(ALPHABET, new EnglishAlphabet());
 	}

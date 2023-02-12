@@ -75,7 +75,7 @@ public class HangulAlphabet extends AbstractAlphabet implements AlphabeticalCase
 
 		final HangulAlphabet alphabet = (HangulAlphabet) obj;
 
-		if (!Objects.equals(HangulAlphabet.LETTERS, alphabet.get())) {
+		if (!Objects.equals(this.get(), alphabet.get())) {
 			return false;
 		}
 

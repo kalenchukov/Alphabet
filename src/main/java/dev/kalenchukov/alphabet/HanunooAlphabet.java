@@ -70,7 +70,7 @@ public class HanunooAlphabet extends AbstractAlphabet implements AlphabeticalCas
 
 		final HanunooAlphabet alphabet = (HanunooAlphabet) obj;
 
-		if (!Objects.equals(HanunooAlphabet.LETTERS, alphabet.get())) {
+		if (!Objects.equals(this.get(), alphabet.get())) {
 			return false;
 		}
 

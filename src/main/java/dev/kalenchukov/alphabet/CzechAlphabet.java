@@ -73,7 +73,7 @@ public class CzechAlphabet extends AbstractAlphabet implements AlphabeticalCase
 
 		final CzechAlphabet alphabet = (CzechAlphabet) obj;
 
-		if (!Objects.equals(CzechAlphabet.LETTERS, alphabet.get())) {
+		if (!Objects.equals(this.get(), alphabet.get())) {
 			return false;
 		}
 

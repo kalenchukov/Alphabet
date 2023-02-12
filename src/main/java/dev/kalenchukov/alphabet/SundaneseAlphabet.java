@@ -77,7 +77,7 @@ public class SundaneseAlphabet extends AbstractAlphabet implements AlphabeticalC
 
 		final SundaneseAlphabet alphabet = (SundaneseAlphabet) obj;
 
-		if (!Objects.equals(SundaneseAlphabet.LETTERS, alphabet.get())) {
+		if (!Objects.equals(this.get(), alphabet.get())) {
 			return false;
 		}
 

@@ -73,7 +73,7 @@ public class RejangAlphabet extends AbstractAlphabet implements AlphabeticalCase
 
 		final RejangAlphabet alphabet = (RejangAlphabet) obj;
 
-		if (!Objects.equals(RejangAlphabet.LETTERS, alphabet.get())) {
+		if (!Objects.equals(this.get(), alphabet.get())) {
 			return false;
 		}
 

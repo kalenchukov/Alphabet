@@ -71,7 +71,7 @@ public class HebrewAlphabet extends AbstractAlphabet implements AlphabeticalCase
 
 		final HebrewAlphabet alphabet = (HebrewAlphabet) obj;
 
-		if (!Objects.equals(HebrewAlphabet.LETTERS, alphabet.get())) {
+		if (!Objects.equals(this.get(), alphabet.get())) {
 			return false;
 		}
 

@@ -71,7 +71,7 @@ public class CyrillicAlphabet extends AbstractAlphabet
 
 		final CyrillicAlphabet alphabet = (CyrillicAlphabet) obj;
 
-		if (!Objects.equals(CyrillicAlphabet.LETTERS, alphabet.get())) {
+		if (!Objects.equals(this.get(), alphabet.get())) {
 			return false;
 		}
 

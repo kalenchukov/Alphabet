@@ -74,7 +74,7 @@ public class MeeteiMayekAlphabet extends AbstractAlphabet implements Alphabetica
 
 		final MeeteiMayekAlphabet alphabet = (MeeteiMayekAlphabet) obj;
 
-		if (!Objects.equals(MeeteiMayekAlphabet.LETTERS, alphabet.get())) {
+		if (!Objects.equals(this.get(), alphabet.get())) {
 			return false;
 		}
 

@@ -79,7 +79,7 @@ public class TatarAlphabet extends AbstractAlphabet implements AlphabeticalCase
 
 		final TatarAlphabet alphabet = (TatarAlphabet) obj;
 
-		if (!Objects.equals(TatarAlphabet.LETTERS, alphabet.get())) {
+		if (!Objects.equals(this.get(), alphabet.get())) {
 			return false;
 		}
 
@@ -143,7 +143,7 @@ public class TatarAlphabet extends AbstractAlphabet implements AlphabeticalCase
 
 			final TatarAlphabet.UpperCase alphabet = (TatarAlphabet.UpperCase) obj;
 
-			if (!Objects.equals(TatarAlphabet.UpperCase.LETTERS, alphabet.get())) {
+			if (!Objects.equals(this.get(), alphabet.get())) {
 				return false;
 			}
 
@@ -208,7 +208,7 @@ public class TatarAlphabet extends AbstractAlphabet implements AlphabeticalCase
 
 			final TatarAlphabet.LowerCase alphabet = (TatarAlphabet.LowerCase) obj;
 
-			if (!Objects.equals(TatarAlphabet.LowerCase.LETTERS, alphabet.get())) {
+			if (!Objects.equals(this.get(), alphabet.get())) {
 				return false;
 			}
 

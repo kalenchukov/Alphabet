@@ -70,7 +70,7 @@ public class SyriacAlphabet extends AbstractAlphabet implements AlphabeticalCase
 
 		final SyriacAlphabet alphabet = (SyriacAlphabet) obj;
 
-		if (!Objects.equals(SyriacAlphabet.LETTERS, alphabet.get())) {
+		if (!Objects.equals(this.get(), alphabet.get())) {
 			return false;
 		}
 

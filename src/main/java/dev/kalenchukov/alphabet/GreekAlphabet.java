@@ -75,7 +75,7 @@ public class GreekAlphabet extends AbstractAlphabet implements AlphabeticalCase
 
 		final GreekAlphabet alphabet = (GreekAlphabet) obj;
 
-		if (!Objects.equals(GreekAlphabet.LETTERS, alphabet.get())) {
+		if (!Objects.equals(this.get(), alphabet.get())) {
 			return false;
 		}
 
@@ -136,7 +136,7 @@ public class GreekAlphabet extends AbstractAlphabet implements AlphabeticalCase
 
 			final GreekAlphabet.UpperCase alphabet = (GreekAlphabet.UpperCase) obj;
 
-			if (!Objects.equals(GreekAlphabet.UpperCase.LETTERS, alphabet.get())) {
+			if (!Objects.equals(this.get(), alphabet.get())) {
 				return false;
 			}
 
@@ -199,7 +199,7 @@ public class GreekAlphabet extends AbstractAlphabet implements AlphabeticalCase
 
 			final GreekAlphabet.LowerCase alphabet = (GreekAlphabet.LowerCase) obj;
 
-			if (!Objects.equals(GreekAlphabet.LowerCase.LETTERS, alphabet.get())) {
+			if (!Objects.equals(this.get(), alphabet.get())) {
 				return false;
 			}
 

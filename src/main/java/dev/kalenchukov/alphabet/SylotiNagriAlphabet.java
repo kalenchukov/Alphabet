@@ -74,7 +74,7 @@ public class SylotiNagriAlphabet extends AbstractAlphabet implements Alphabetica
 
 		final SylotiNagriAlphabet alphabet = (SylotiNagriAlphabet) obj;
 
-		if (!Objects.equals(SylotiNagriAlphabet.LETTERS, alphabet.get())) {
+		if (!Objects.equals(this.get(), alphabet.get())) {
 			return false;
 		}
 

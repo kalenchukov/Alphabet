@@ -72,7 +72,7 @@ public class TibetanAlphabet extends AbstractAlphabet implements AlphabeticalCas
 
 		final TibetanAlphabet alphabet = (TibetanAlphabet) obj;
 
-		if (!Objects.equals(TibetanAlphabet.LETTERS, alphabet.get())) {
+		if (!Objects.equals(this.get(), alphabet.get())) {
 			return false;
 		}
 

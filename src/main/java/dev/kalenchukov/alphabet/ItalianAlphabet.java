@@ -73,7 +73,7 @@ public class ItalianAlphabet extends AbstractAlphabet implements AlphabeticalCas
 
 		final ItalianAlphabet alphabet = (ItalianAlphabet) obj;
 
-		if (!Objects.equals(ItalianAlphabet.LETTERS, alphabet.get())) {
+		if (!Objects.equals(this.get(), alphabet.get())) {
 			return false;
 		}
 
@@ -134,7 +134,7 @@ public class ItalianAlphabet extends AbstractAlphabet implements AlphabeticalCas
 
 			final ItalianAlphabet.UpperCase alphabet = (ItalianAlphabet.UpperCase) obj;
 
-			if (!Objects.equals(ItalianAlphabet.UpperCase.LETTERS, alphabet.get())) {
+			if (!Objects.equals(this.get(), alphabet.get())) {
 				return false;
 			}
 
@@ -196,7 +196,7 @@ public class ItalianAlphabet extends AbstractAlphabet implements AlphabeticalCas
 
 			final ItalianAlphabet.LowerCase alphabet = (ItalianAlphabet.LowerCase) obj;
 
-			if (!Objects.equals(ItalianAlphabet.LowerCase.LETTERS, alphabet.get())) {
+			if (!Objects.equals(this.get(), alphabet.get())) {
 				return false;
 			}
 

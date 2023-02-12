@@ -76,7 +76,7 @@ public class PhagsPaAlphabet extends AbstractAlphabet implements AlphabeticalCas
 
 		final PhagsPaAlphabet alphabet = (PhagsPaAlphabet) obj;
 
-		if (!Objects.equals(PhagsPaAlphabet.LETTERS, alphabet.get())) {
+		if (!Objects.equals(this.get(), alphabet.get())) {
 			return false;
 		}
 

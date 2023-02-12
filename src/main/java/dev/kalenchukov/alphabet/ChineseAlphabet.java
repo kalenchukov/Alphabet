@@ -75,7 +75,7 @@ public class ChineseAlphabet extends AbstractAlphabet implements AlphabeticalCas
 
 		final ChineseAlphabet alphabet = (ChineseAlphabet) obj;
 
-		if (!Objects.equals(ChineseAlphabet.LETTERS, alphabet.get())) {
+		if (!Objects.equals(this.get(), alphabet.get())) {
 			return false;
 		}
 
@@ -137,7 +137,7 @@ public class ChineseAlphabet extends AbstractAlphabet implements AlphabeticalCas
 
 			final ChineseAlphabet.UpperCase alphabet = (ChineseAlphabet.UpperCase) obj;
 
-			if (!Objects.equals(ChineseAlphabet.UpperCase.LETTERS, alphabet.get())) {
+			if (!Objects.equals(this.get(), alphabet.get())) {
 				return false;
 			}
 
@@ -200,7 +200,7 @@ public class ChineseAlphabet extends AbstractAlphabet implements AlphabeticalCas
 
 			final ChineseAlphabet.LowerCase alphabet = (ChineseAlphabet.LowerCase) obj;
 
-			if (!Objects.equals(ChineseAlphabet.LowerCase.LETTERS, alphabet.get())) {
+			if (!Objects.equals(this.get(), alphabet.get())) {
 				return false;
 			}
 

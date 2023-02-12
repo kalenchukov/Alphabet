@@ -79,7 +79,7 @@ public class MalayalamAlphabet extends AbstractAlphabet implements AlphabeticalC
 
 		final MalayalamAlphabet alphabet = (MalayalamAlphabet) obj;
 
-		if (!Objects.equals(MalayalamAlphabet.LETTERS, alphabet.get())) {
+		if (!Objects.equals(this.get(), alphabet.get())) {
 			return false;
 		}
 

@@ -76,7 +76,7 @@ public class TifinaghAlphabet extends AbstractAlphabet implements AlphabeticalCa
 
 		final TifinaghAlphabet alphabet = (TifinaghAlphabet) obj;
 
-		if (!Objects.equals(TifinaghAlphabet.LETTERS, alphabet.get())) {
+		if (!Objects.equals(this.get(), alphabet.get())) {
 			return false;
 		}
 

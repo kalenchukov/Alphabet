@@ -72,7 +72,7 @@ public class TaiLeAlphabet extends AbstractAlphabet implements AlphabeticalCase
 
 		final TaiLeAlphabet alphabet = (TaiLeAlphabet) obj;
 
-		if (!Objects.equals(TaiLeAlphabet.LETTERS, alphabet.get())) {
+		if (!Objects.equals(this.get(), alphabet.get())) {
 			return false;
 		}
 

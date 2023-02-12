@@ -79,7 +79,7 @@ public class DevanagariAlphabet extends AbstractAlphabet implements Alphabetical
 
 		final DevanagariAlphabet alphabet = (DevanagariAlphabet) obj;
 
-		if (!Objects.equals(DevanagariAlphabet.LETTERS, alphabet.get())) {
+		if (!Objects.equals(this.get(), alphabet.get())) {
 			return false;
 		}
 

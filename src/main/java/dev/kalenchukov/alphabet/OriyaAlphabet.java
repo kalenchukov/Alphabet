@@ -75,7 +75,7 @@ public class OriyaAlphabet extends AbstractAlphabet implements AlphabeticalCase
 
 		final OriyaAlphabet alphabet = (OriyaAlphabet) obj;
 
-		if (!Objects.equals(OriyaAlphabet.LETTERS, alphabet.get())) {
+		if (!Objects.equals(this.get(), alphabet.get())) {
 			return false;
 		}
 

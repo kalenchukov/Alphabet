@@ -78,7 +78,7 @@ public class TeluguAlphabet extends AbstractAlphabet implements AlphabeticalCase
 
 		final TeluguAlphabet alphabet = (TeluguAlphabet) obj;
 
-		if (!Objects.equals(TeluguAlphabet.LETTERS, alphabet.get())) {
+		if (!Objects.equals(this.get(), alphabet.get())) {
 			return false;
 		}
 

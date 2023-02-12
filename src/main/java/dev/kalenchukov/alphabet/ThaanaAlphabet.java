@@ -75,7 +75,7 @@ public class ThaanaAlphabet extends AbstractAlphabet implements AlphabeticalCase
 
 		final ThaanaAlphabet alphabet = (ThaanaAlphabet) obj;
 
-		if (!Objects.equals(ThaanaAlphabet.LETTERS, alphabet.get())) {
+		if (!Objects.equals(this.get(), alphabet.get())) {
 			return false;
 		}
 

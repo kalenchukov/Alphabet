@@ -74,7 +74,7 @@ public class OlChikiAlphabet extends AbstractAlphabet implements AlphabeticalCas
 
 		final OlChikiAlphabet alphabet = (OlChikiAlphabet) obj;
 
-		if (!Objects.equals(OlChikiAlphabet.LETTERS, alphabet.get())) {
+		if (!Objects.equals(this.get(), alphabet.get())) {
 			return false;
 		}
 

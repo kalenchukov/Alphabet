@@ -59,9 +59,9 @@ public class BelarusianAlphabetUpperCaseTest
 
 		assertEquals(ALPHABET, ALPHABET);
 
-		assertFalse(ALPHABET.equals(new GreekAlphabet.UpperCase()));
+		assertNotEquals(ALPHABET, new GreekAlphabet.UpperCase());;
 
-		assertTrue(ALPHABET.equals(new BelarusianAlphabet.UpperCase()));
+		assertEquals(ALPHABET, new BelarusianAlphabet.UpperCase());;
 	}
 
 	/**

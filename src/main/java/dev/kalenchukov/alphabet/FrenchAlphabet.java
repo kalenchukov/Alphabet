@@ -75,7 +75,7 @@ public class FrenchAlphabet extends AbstractAlphabet implements AlphabeticalCase
 
 		final FrenchAlphabet alphabet = (FrenchAlphabet) obj;
 
-		if (!Objects.equals(FrenchAlphabet.LETTERS, alphabet.get())) {
+		if (!Objects.equals(this.get(), alphabet.get())) {
 			return false;
 		}
 
@@ -137,7 +137,7 @@ public class FrenchAlphabet extends AbstractAlphabet implements AlphabeticalCase
 
 			final FrenchAlphabet.UpperCase alphabet = (FrenchAlphabet.UpperCase) obj;
 
-			if (!Objects.equals(FrenchAlphabet.UpperCase.LETTERS, alphabet.get())) {
+			if (!Objects.equals(this.get(), alphabet.get())) {
 				return false;
 			}
 
@@ -200,7 +200,7 @@ public class FrenchAlphabet extends AbstractAlphabet implements AlphabeticalCase
 
 			final FrenchAlphabet.LowerCase alphabet = (FrenchAlphabet.LowerCase) obj;
 
-			if (!Objects.equals(FrenchAlphabet.LowerCase.LETTERS, alphabet.get())) {
+			if (!Objects.equals(this.get(), alphabet.get())) {
 				return false;
 			}
 

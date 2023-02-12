@@ -64,7 +64,7 @@ public class BashkirAlphabetLowerCaseTest
 
 		assertNotEquals(ALPHABET, new RussianAlphabet.LowerCase());
 
-		assertTrue(ALPHABET.equals(new BashkirAlphabet.LowerCase()));
+		assertEquals(ALPHABET, new BashkirAlphabet.LowerCase());;
 	}
 
 	/**

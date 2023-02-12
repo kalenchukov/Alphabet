@@ -70,7 +70,7 @@ public class BuhidAlphabet extends AbstractAlphabet implements AlphabeticalCase
 
 		final BuhidAlphabet alphabet = (BuhidAlphabet) obj;
 
-		if (!Objects.equals(BuhidAlphabet.LETTERS, alphabet.get())) {
+		if (!Objects.equals(this.get(), alphabet.get())) {
 			return false;
 		}
 

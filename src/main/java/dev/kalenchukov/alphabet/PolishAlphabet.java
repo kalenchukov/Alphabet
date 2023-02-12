@@ -77,7 +77,7 @@ public class PolishAlphabet extends AbstractAlphabet implements AlphabeticalCase
 
 		final PolishAlphabet alphabet = (PolishAlphabet) obj;
 
-		if (!Objects.equals(PolishAlphabet.LETTERS, alphabet.get())) {
+		if (!Objects.equals(this.get(), alphabet.get())) {
 			return false;
 		}
 
@@ -140,7 +140,7 @@ public class PolishAlphabet extends AbstractAlphabet implements AlphabeticalCase
 
 			final PolishAlphabet.UpperCase alphabet = (PolishAlphabet.UpperCase) obj;
 
-			if (!Objects.equals(PolishAlphabet.UpperCase.LETTERS, alphabet.get())) {
+			if (!Objects.equals(this.get(), alphabet.get())) {
 				return false;
 			}
 
@@ -204,7 +204,7 @@ public class PolishAlphabet extends AbstractAlphabet implements AlphabeticalCase
 
 			final PolishAlphabet.LowerCase alphabet = (PolishAlphabet.LowerCase) obj;
 
-			if (!Objects.equals(PolishAlphabet.LowerCase.LETTERS, alphabet.get())) {
+			if (!Objects.equals(this.get(), alphabet.get())) {
 				return false;
 			}
 

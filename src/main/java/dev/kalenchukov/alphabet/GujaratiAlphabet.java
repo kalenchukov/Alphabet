@@ -74,7 +74,7 @@ public class GujaratiAlphabet extends AbstractAlphabet implements AlphabeticalCa
 
 		final GujaratiAlphabet alphabet = (GujaratiAlphabet) obj;
 
-		if (!Objects.equals(GujaratiAlphabet.LETTERS, alphabet.get())) {
+		if (!Objects.equals(this.get(), alphabet.get())) {
 			return false;
 		}
 

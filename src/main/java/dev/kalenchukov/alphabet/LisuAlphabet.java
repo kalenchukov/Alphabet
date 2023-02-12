@@ -73,7 +73,7 @@ public class LisuAlphabet extends AbstractAlphabet implements AlphabeticalCase
 
 		final LisuAlphabet alphabet = (LisuAlphabet) obj;
 
-		if (!Objects.equals(LisuAlphabet.LETTERS, alphabet.get())) {
+		if (!Objects.equals(this.get(), alphabet.get())) {
 			return false;
 		}
 

@@ -75,7 +75,7 @@ public class BatakAlphabet extends AbstractAlphabet implements AlphabeticalCase
 
 		final BatakAlphabet alphabet = (BatakAlphabet) obj;
 
-		if (!Objects.equals(BatakAlphabet.LETTERS, alphabet.get())) {
+		if (!Objects.equals(this.get(), alphabet.get())) {
 			return false;
 		}
 

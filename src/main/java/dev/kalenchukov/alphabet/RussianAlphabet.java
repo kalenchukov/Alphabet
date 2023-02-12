@@ -77,7 +77,7 @@ public class RussianAlphabet extends AbstractAlphabet implements AlphabeticalCas
 
 		final RussianAlphabet alphabet = (RussianAlphabet) obj;
 
-		if (!Objects.equals(RussianAlphabet.LETTERS, alphabet.get())) {
+		if (!Objects.equals(this.get(), alphabet.get())) {
 			return false;
 		}
 
@@ -140,7 +140,7 @@ public class RussianAlphabet extends AbstractAlphabet implements AlphabeticalCas
 
 			final RussianAlphabet.UpperCase alphabet = (RussianAlphabet.UpperCase) obj;
 
-			if (!Objects.equals(RussianAlphabet.UpperCase.LETTERS, alphabet.get())) {
+			if (!Objects.equals(this.get(), alphabet.get())) {
 				return false;
 			}
 
@@ -204,7 +204,7 @@ public class RussianAlphabet extends AbstractAlphabet implements AlphabeticalCas
 
 			final RussianAlphabet.LowerCase alphabet = (RussianAlphabet.LowerCase) obj;
 
-			if (!Objects.equals(RussianAlphabet.LowerCase.LETTERS, alphabet.get())) {
+			if (!Objects.equals(this.get(), alphabet.get())) {
 				return false;
 			}
 

@@ -82,7 +82,7 @@ public class MyanmarAlphabet extends AbstractAlphabet implements AlphabeticalCas
 
 		final MyanmarAlphabet alphabet = (MyanmarAlphabet) obj;
 
-		if (!Objects.equals(MyanmarAlphabet.LETTERS, alphabet.get())) {
+		if (!Objects.equals(this.get(), alphabet.get())) {
 			return false;
 		}
 

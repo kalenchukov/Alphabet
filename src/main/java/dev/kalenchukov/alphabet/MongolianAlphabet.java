@@ -72,7 +72,7 @@ public class MongolianAlphabet extends AbstractAlphabet implements AlphabeticalC
 
 		final MongolianAlphabet alphabet = (MongolianAlphabet) obj;
 
-		if (!Objects.equals(MongolianAlphabet.LETTERS, alphabet.get())) {
+		if (!Objects.equals(this.get(), alphabet.get())) {
 			return false;
 		}
 

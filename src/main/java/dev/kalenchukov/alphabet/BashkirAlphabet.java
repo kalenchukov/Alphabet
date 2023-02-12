@@ -80,7 +80,7 @@ public class BashkirAlphabet extends AbstractAlphabet implements AlphabeticalCas
 
 		final BashkirAlphabet alphabet = (BashkirAlphabet) obj;
 
-		if (!Objects.equals(BashkirAlphabet.LETTERS, alphabet.get())) {
+		if (!Objects.equals(this.get(), alphabet.get())) {
 			return false;
 		}
 
@@ -144,7 +144,7 @@ public class BashkirAlphabet extends AbstractAlphabet implements AlphabeticalCas
 
 			final BashkirAlphabet.UpperCase alphabet = (BashkirAlphabet.UpperCase) obj;
 
-			if (!Objects.equals(BashkirAlphabet.UpperCase.LETTERS, alphabet.get())) {
+			if (!Objects.equals(this.get(), alphabet.get())) {
 				return false;
 			}
 
@@ -209,7 +209,7 @@ public class BashkirAlphabet extends AbstractAlphabet implements AlphabeticalCas
 
 			final BashkirAlphabet.LowerCase alphabet = (BashkirAlphabet.LowerCase) obj;
 
-			if (!Objects.equals(BashkirAlphabet.LowerCase.LETTERS, alphabet.get())) {
+			if (!Objects.equals(this.get(), alphabet.get())) {
 				return false;
 			}
 

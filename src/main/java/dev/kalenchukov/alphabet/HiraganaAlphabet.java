@@ -78,7 +78,7 @@ public class HiraganaAlphabet extends AbstractAlphabet implements AlphabeticalCa
 
 		final HiraganaAlphabet alphabet = (HiraganaAlphabet) obj;
 
-		if (!Objects.equals(HiraganaAlphabet.LETTERS, alphabet.get())) {
+		if (!Objects.equals(this.get(), alphabet.get())) {
 			return false;
 		}
 

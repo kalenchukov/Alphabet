@@ -74,7 +74,7 @@ public class GlagoliticAlphabet extends AbstractAlphabet implements Alphabetical
 
 		final GlagoliticAlphabet alphabet = (GlagoliticAlphabet) obj;
 
-		if (!Objects.equals(GlagoliticAlphabet.LETTERS, alphabet.get())) {
+		if (!Objects.equals(this.get(), alphabet.get())) {
 			return false;
 		}
 

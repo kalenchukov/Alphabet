@@ -74,7 +74,7 @@ public class LaoAlphabet extends AbstractAlphabet implements AlphabeticalCase
 
 		final LaoAlphabet alphabet = (LaoAlphabet) obj;
 
-		if (!Objects.equals(LaoAlphabet.LETTERS, alphabet.get())) {
+		if (!Objects.equals(this.get(), alphabet.get())) {
 			return false;
 		}
 

@@ -62,9 +62,9 @@ public class ArmenianAlphabetUpperCaseTest
 
 		assertEquals(ALPHABET, ALPHABET);
 
-		assertFalse(ALPHABET.equals(new RussianAlphabet.UpperCase()));
+		assertNotEquals(ALPHABET, new RussianAlphabet.UpperCase());;
 
-		assertTrue(ALPHABET.equals(new ArmenianAlphabet.UpperCase()));
+		assertEquals(ALPHABET, new ArmenianAlphabet.UpperCase());;
 	}
 
 	/**

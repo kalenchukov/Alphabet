@@ -80,7 +80,7 @@ public class KazakhAlphabet extends AbstractAlphabet implements AlphabeticalCase
 
 		final KazakhAlphabet alphabet = (KazakhAlphabet) obj;
 
-		if (!Objects.equals(KazakhAlphabet.LETTERS, alphabet.get())) {
+		if (!Objects.equals(this.get(), alphabet.get())) {
 			return false;
 		}
 
@@ -144,7 +144,7 @@ public class KazakhAlphabet extends AbstractAlphabet implements AlphabeticalCase
 
 			final KazakhAlphabet.UpperCase alphabet = (KazakhAlphabet.UpperCase) obj;
 
-			if (!Objects.equals(KazakhAlphabet.UpperCase.LETTERS, alphabet.get())) {
+			if (!Objects.equals(this.get(), alphabet.get())) {
 				return false;
 			}
 
@@ -209,7 +209,7 @@ public class KazakhAlphabet extends AbstractAlphabet implements AlphabeticalCase
 
 			final KazakhAlphabet.LowerCase alphabet = (KazakhAlphabet.LowerCase) obj;
 
-			if (!Objects.equals(KazakhAlphabet.LowerCase.LETTERS, alphabet.get())) {
+			if (!Objects.equals(this.get(), alphabet.get())) {
 				return false;
 			}
 

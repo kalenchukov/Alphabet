@@ -77,7 +77,7 @@ public class KannadaAlphabet extends AbstractAlphabet implements AlphabeticalCas
 
 		final KannadaAlphabet alphabet = (KannadaAlphabet) obj;
 
-		if (!Objects.equals(KannadaAlphabet.LETTERS, alphabet.get())) {
+		if (!Objects.equals(this.get(), alphabet.get())) {
 			return false;
 		}
 

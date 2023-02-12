@@ -62,7 +62,7 @@ public class LatinAlphabetLowerCaseTest
 
 		assertNotEquals(ALPHABET, new RussianAlphabet.LowerCase());
 
-		assertTrue(ALPHABET.equals(new LatinAlphabet.LowerCase()));
+		assertEquals(ALPHABET, new LatinAlphabet.LowerCase());;
 	}
 
 	/**

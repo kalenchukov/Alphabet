@@ -72,7 +72,7 @@ public class GeorgianAlphabet extends AbstractAlphabet implements AlphabeticalCa
 
 		final GeorgianAlphabet alphabet = (GeorgianAlphabet) obj;
 
-		if (!Objects.equals(GeorgianAlphabet.LETTERS, alphabet.get())) {
+		if (!Objects.equals(this.get(), alphabet.get())) {
 			return false;
 		}
 

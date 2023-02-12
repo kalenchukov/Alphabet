@@ -78,7 +78,7 @@ public class NewTaiLueAlphabet extends AbstractAlphabet implements AlphabeticalC
 
 		final NewTaiLueAlphabet alphabet = (NewTaiLueAlphabet) obj;
 
-		if (!Objects.equals(NewTaiLueAlphabet.LETTERS, alphabet.get())) {
+		if (!Objects.equals(this.get(), alphabet.get())) {
 			return false;
 		}
 

@@ -75,7 +75,7 @@ public class SpanishAlphabet extends AbstractAlphabet implements AlphabeticalCas
 
 		final SpanishAlphabet alphabet = (SpanishAlphabet) obj;
 
-		if (!Objects.equals(SpanishAlphabet.LETTERS, alphabet.get())) {
+		if (!Objects.equals(this.get(), alphabet.get())) {
 			return false;
 		}
 
@@ -137,7 +137,7 @@ public class SpanishAlphabet extends AbstractAlphabet implements AlphabeticalCas
 
 			final SpanishAlphabet.UpperCase alphabet = (SpanishAlphabet.UpperCase) obj;
 
-			if (!Objects.equals(SpanishAlphabet.UpperCase.LETTERS, alphabet.get())) {
+			if (!Objects.equals(this.get(), alphabet.get())) {
 				return false;
 			}
 
@@ -200,7 +200,7 @@ public class SpanishAlphabet extends AbstractAlphabet implements AlphabeticalCas
 
 			final SpanishAlphabet.LowerCase alphabet = (SpanishAlphabet.LowerCase) obj;
 
-			if (!Objects.equals(SpanishAlphabet.LowerCase.LETTERS, alphabet.get())) {
+			if (!Objects.equals(this.get(), alphabet.get())) {
 				return false;
 			}
 

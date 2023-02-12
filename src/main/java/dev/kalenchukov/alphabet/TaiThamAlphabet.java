@@ -76,7 +76,7 @@ public class TaiThamAlphabet extends AbstractAlphabet implements AlphabeticalCas
 
 		final TaiThamAlphabet alphabet = (TaiThamAlphabet) obj;
 
-		if (!Objects.equals(TaiThamAlphabet.LETTERS, alphabet.get())) {
+		if (!Objects.equals(this.get(), alphabet.get())) {
 			return false;
 		}
 

@@ -82,7 +82,7 @@ public class CopticAlphabet extends AbstractAlphabet implements AlphabeticalCase
 
 		final CopticAlphabet alphabet = (CopticAlphabet) obj;
 
-		if (!Objects.equals(CopticAlphabet.LETTERS, alphabet.get())) {
+		if (!Objects.equals(this.get(), alphabet.get())) {
 			return false;
 		}
 
@@ -147,7 +147,7 @@ public class CopticAlphabet extends AbstractAlphabet implements AlphabeticalCase
 
 			final CopticAlphabet.UpperCase alphabet = (CopticAlphabet.UpperCase) obj;
 
-			if (!Objects.equals(CopticAlphabet.UpperCase.LETTERS, alphabet.get())) {
+			if (!Objects.equals(this.get(), alphabet.get())) {
 				return false;
 			}
 
@@ -213,7 +213,7 @@ public class CopticAlphabet extends AbstractAlphabet implements AlphabeticalCase
 
 			final CopticAlphabet.LowerCase alphabet = (CopticAlphabet.LowerCase) obj;
 
-			if (!Objects.equals(CopticAlphabet.LowerCase.LETTERS, alphabet.get())) {
+			if (!Objects.equals(this.get(), alphabet.get())) {
 				return false;
 			}
 

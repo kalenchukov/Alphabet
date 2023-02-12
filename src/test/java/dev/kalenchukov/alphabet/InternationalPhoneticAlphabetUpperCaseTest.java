@@ -57,9 +57,9 @@ public class InternationalPhoneticAlphabetUpperCaseTest
 
 		assertEquals(ALPHABET, ALPHABET);
 
-		assertFalse(ALPHABET.equals(new RussianAlphabet.UpperCase()));
+		assertNotEquals(ALPHABET, new RussianAlphabet.UpperCase());;
 
-		assertTrue(ALPHABET.equals(new InternationalPhoneticAlphabet.UpperCase()));
+		assertEquals(ALPHABET, new InternationalPhoneticAlphabet.UpperCase());;
 	}
 
 	/**

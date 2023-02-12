@@ -75,7 +75,7 @@ public class EnglishAlphabet extends AbstractAlphabet implements AlphabeticalCas
 
 		final EnglishAlphabet alphabet = (EnglishAlphabet) obj;
 
-		if (!Objects.equals(EnglishAlphabet.LETTERS, alphabet.get())) {
+		if (!Objects.equals(this.get(), alphabet.get())) {
 			return false;
 		}
 
@@ -137,7 +137,7 @@ public class EnglishAlphabet extends AbstractAlphabet implements AlphabeticalCas
 
 			final EnglishAlphabet.UpperCase alphabet = (EnglishAlphabet.UpperCase) obj;
 
-			if (!Objects.equals(EnglishAlphabet.UpperCase.LETTERS, alphabet.get())) {
+			if (!Objects.equals(this.get(), alphabet.get())) {
 				return false;
 			}
 
@@ -200,7 +200,7 @@ public class EnglishAlphabet extends AbstractAlphabet implements AlphabeticalCas
 
 			final EnglishAlphabet.LowerCase alphabet = (EnglishAlphabet.LowerCase) obj;
 
-			if (!Objects.equals(EnglishAlphabet.LowerCase.LETTERS, alphabet.get())) {
+			if (!Objects.equals(this.get(), alphabet.get())) {
 				return false;
 			}
 

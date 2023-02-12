@@ -60,9 +60,9 @@ public class LatinAlphabetUpperCaseTest
 
 		assertEquals(ALPHABET, ALPHABET);
 
-		assertFalse(ALPHABET.equals(new RussianAlphabet.UpperCase()));
+		assertNotEquals(ALPHABET, new RussianAlphabet.UpperCase());;
 
-		assertTrue(ALPHABET.equals(new LatinAlphabet.UpperCase()));
+		assertEquals(ALPHABET, new LatinAlphabet.UpperCase());;
 	}
 
 	/**

@@ -80,7 +80,7 @@ public class BamumAlphabet extends AbstractAlphabet implements AlphabeticalCase
 
 		final BamumAlphabet alphabet = (BamumAlphabet) obj;
 
-		if (!Objects.equals(BamumAlphabet.LETTERS, alphabet.get())) {
+		if (!Objects.equals(this.get(), alphabet.get())) {
 			return false;
 		}
 

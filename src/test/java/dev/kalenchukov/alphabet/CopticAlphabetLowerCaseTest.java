@@ -65,7 +65,7 @@ public class CopticAlphabetLowerCaseTest
 
 		assertNotEquals(ALPHABET, new RussianAlphabet.LowerCase());
 
-		assertTrue(ALPHABET.equals(new CopticAlphabet.LowerCase()));
+		assertEquals(ALPHABET, new CopticAlphabet.LowerCase());;
 	}
 
 	/**

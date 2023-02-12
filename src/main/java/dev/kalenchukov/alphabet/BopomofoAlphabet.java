@@ -73,7 +73,7 @@ public class BopomofoAlphabet extends AbstractAlphabet implements AlphabeticalCa
 
 		final BopomofoAlphabet alphabet = (BopomofoAlphabet) obj;
 
-		if (!Objects.equals(BopomofoAlphabet.LETTERS, alphabet.get())) {
+		if (!Objects.equals(this.get(), alphabet.get())) {
 			return false;
 		}
 

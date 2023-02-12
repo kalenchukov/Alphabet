@@ -76,7 +76,7 @@ public class LimbuAlphabet extends AbstractAlphabet implements AlphabeticalCase
 
 		final LimbuAlphabet alphabet = (LimbuAlphabet) obj;
 
-		if (!Objects.equals(LimbuAlphabet.LETTERS, alphabet.get())) {
+		if (!Objects.equals(this.get(), alphabet.get())) {
 			return false;
 		}
 

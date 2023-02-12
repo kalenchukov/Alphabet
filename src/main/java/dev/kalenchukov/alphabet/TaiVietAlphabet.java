@@ -78,7 +78,7 @@ public class TaiVietAlphabet extends AbstractAlphabet implements AlphabeticalCas
 
 		final TaiVietAlphabet alphabet = (TaiVietAlphabet) obj;
 
-		if (!Objects.equals(TaiVietAlphabet.LETTERS, alphabet.get())) {
+		if (!Objects.equals(this.get(), alphabet.get())) {
 			return false;
 		}
 

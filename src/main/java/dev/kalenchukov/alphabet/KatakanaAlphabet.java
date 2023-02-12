@@ -74,7 +74,7 @@ public class KatakanaAlphabet extends AbstractAlphabet implements AlphabeticalCa
 
 		final KatakanaAlphabet alphabet = (KatakanaAlphabet) obj;
 
-		if (!Objects.equals(KatakanaAlphabet.LETTERS, alphabet.get())) {
+		if (!Objects.equals(this.get(), alphabet.get())) {
 			return false;
 		}
 

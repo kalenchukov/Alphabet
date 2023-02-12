@@ -77,7 +77,7 @@ public class UkrainianAlphabet extends AbstractAlphabet implements AlphabeticalC
 
 		final UkrainianAlphabet alphabet = (UkrainianAlphabet) obj;
 
-		if (!Objects.equals(UkrainianAlphabet.LETTERS, alphabet.get())) {
+		if (!Objects.equals(this.get(), alphabet.get())) {
 			return false;
 		}
 
@@ -140,7 +140,7 @@ public class UkrainianAlphabet extends AbstractAlphabet implements AlphabeticalC
 
 			final UkrainianAlphabet.UpperCase alphabet = (UkrainianAlphabet.UpperCase) obj;
 
-			if (!Objects.equals(UkrainianAlphabet.UpperCase.LETTERS, alphabet.get())) {
+			if (!Objects.equals(this.get(), alphabet.get())) {
 				return false;
 			}
 
@@ -204,7 +204,7 @@ public class UkrainianAlphabet extends AbstractAlphabet implements AlphabeticalC
 
 			final UkrainianAlphabet.LowerCase alphabet = (UkrainianAlphabet.LowerCase) obj;
 
-			if (!Objects.equals(UkrainianAlphabet.LowerCase.LETTERS, alphabet.get())) {
+			if (!Objects.equals(this.get(), alphabet.get())) {
 				return false;
 			}
 

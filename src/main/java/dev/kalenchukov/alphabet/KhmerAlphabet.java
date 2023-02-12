@@ -81,7 +81,7 @@ public class KhmerAlphabet extends AbstractAlphabet implements AlphabeticalCase
 
 		final KhmerAlphabet alphabet = (KhmerAlphabet) obj;
 
-		if (!Objects.equals(KhmerAlphabet.LETTERS, alphabet.get())) {
+		if (!Objects.equals(this.get(), alphabet.get())) {
 			return false;
 		}
 

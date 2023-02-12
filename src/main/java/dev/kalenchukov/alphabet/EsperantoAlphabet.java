@@ -76,7 +76,7 @@ public class EsperantoAlphabet extends AbstractAlphabet implements AlphabeticalC
 
 		final EsperantoAlphabet alphabet = (EsperantoAlphabet) obj;
 
-		if (!Objects.equals(EsperantoAlphabet.LETTERS, alphabet.get())) {
+		if (!Objects.equals(this.get(), alphabet.get())) {
 			return false;
 		}
 
@@ -138,7 +138,7 @@ public class EsperantoAlphabet extends AbstractAlphabet implements AlphabeticalC
 
 			final EsperantoAlphabet.UpperCase alphabet = (EsperantoAlphabet.UpperCase) obj;
 
-			if (!Objects.equals(EsperantoAlphabet.UpperCase.LETTERS, alphabet.get())) {
+			if (!Objects.equals(this.get(), alphabet.get())) {
 				return false;
 			}
 
@@ -201,7 +201,7 @@ public class EsperantoAlphabet extends AbstractAlphabet implements AlphabeticalC
 
 			final EsperantoAlphabet.LowerCase alphabet = (EsperantoAlphabet.LowerCase) obj;
 
-			if (!Objects.equals(EsperantoAlphabet.LowerCase.LETTERS, alphabet.get())) {
+			if (!Objects.equals(this.get(), alphabet.get())) {
 				return false;
 			}
 

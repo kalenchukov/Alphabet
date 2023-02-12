@@ -76,7 +76,7 @@ public class LepchaAlphabet extends AbstractAlphabet implements AlphabeticalCase
 
 		final LepchaAlphabet alphabet = (LepchaAlphabet) obj;
 
-		if (!Objects.equals(LepchaAlphabet.LETTERS, alphabet.get())) {
+		if (!Objects.equals(this.get(), alphabet.get())) {
 			return false;
 		}
 

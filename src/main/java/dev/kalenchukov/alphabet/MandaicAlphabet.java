@@ -71,7 +71,7 @@ public class MandaicAlphabet extends AbstractAlphabet implements AlphabeticalCas
 
 		final MandaicAlphabet alphabet = (MandaicAlphabet) obj;
 
-		if (!Objects.equals(MandaicAlphabet.LETTERS, alphabet.get())) {
+		if (!Objects.equals(this.get(), alphabet.get())) {
 			return false;
 		}
 

@@ -79,7 +79,7 @@ public class BalineseAlphabet extends AbstractAlphabet implements AlphabeticalCa
 
 		final BalineseAlphabet alphabet = (BalineseAlphabet) obj;
 
-		if (!Objects.equals(BalineseAlphabet.LETTERS, alphabet.get())) {
+		if (!Objects.equals(this.get(), alphabet.get())) {
 			return false;
 		}
 

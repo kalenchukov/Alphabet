@@ -58,9 +58,9 @@ public class EnglishAlphabetLowerCaseTest
 
 		assertEquals(ALPHABET, ALPHABET);
 
-		assertFalse(ALPHABET.equals(new BelarusianAlphabet.LowerCase()));
+		assertNotEquals(ALPHABET, new BelarusianAlphabet.LowerCase());;
 
-		assertTrue(ALPHABET.equals(new EnglishAlphabet.LowerCase()));
+		assertEquals(ALPHABET, new EnglishAlphabet.LowerCase());;
 	}
 
 	/**

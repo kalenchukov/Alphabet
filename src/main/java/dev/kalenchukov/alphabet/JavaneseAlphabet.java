@@ -79,7 +79,7 @@ public class JavaneseAlphabet extends AbstractAlphabet implements AlphabeticalCa
 
 		final JavaneseAlphabet alphabet = (JavaneseAlphabet) obj;
 
-		if (!Objects.equals(JavaneseAlphabet.LETTERS, alphabet.get())) {
+		if (!Objects.equals(this.get(), alphabet.get())) {
 			return false;
 		}
 

@@ -75,7 +75,7 @@ public class SaurashtraAlphabet extends AbstractAlphabet implements Alphabetical
 
 		final SaurashtraAlphabet alphabet = (SaurashtraAlphabet) obj;
 
-		if (!Objects.equals(SaurashtraAlphabet.LETTERS, alphabet.get())) {
+		if (!Objects.equals(this.get(), alphabet.get())) {
 			return false;
 		}
 

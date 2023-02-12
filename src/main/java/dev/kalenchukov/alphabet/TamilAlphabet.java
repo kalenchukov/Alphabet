@@ -74,7 +74,7 @@ public class TamilAlphabet extends AbstractAlphabet implements AlphabeticalCase
 
 		final TamilAlphabet alphabet = (TamilAlphabet) obj;
 
-		if (!Objects.equals(TamilAlphabet.LETTERS, alphabet.get())) {
+		if (!Objects.equals(this.get(), alphabet.get())) {
 			return false;
 		}
 

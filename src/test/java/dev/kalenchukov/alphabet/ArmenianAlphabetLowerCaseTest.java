@@ -64,7 +64,7 @@ public class ArmenianAlphabetLowerCaseTest
 
 		assertNotEquals(ALPHABET, new RussianAlphabet.LowerCase());
 
-		assertTrue(ALPHABET.equals(new ArmenianAlphabet.LowerCase()));
+		assertEquals(ALPHABET, new ArmenianAlphabet.LowerCase());;
 	}
 
 	/**

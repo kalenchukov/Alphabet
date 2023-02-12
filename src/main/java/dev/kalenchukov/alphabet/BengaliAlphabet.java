@@ -75,7 +75,7 @@ public class BengaliAlphabet extends AbstractAlphabet implements AlphabeticalCas
 
 		final BengaliAlphabet alphabet = (BengaliAlphabet) obj;
 
-		if (!Objects.equals(BengaliAlphabet.LETTERS, alphabet.get())) {
+		if (!Objects.equals(this.get(), alphabet.get())) {
 			return false;
 		}
 

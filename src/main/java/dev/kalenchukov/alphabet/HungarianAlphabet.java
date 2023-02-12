@@ -72,7 +72,7 @@ public class HungarianAlphabet extends AbstractAlphabet implements AlphabeticalC
 
 		final HungarianAlphabet alphabet = (HungarianAlphabet) obj;
 
-		if (!Objects.equals(HungarianAlphabet.LETTERS, alphabet.get())) {
+		if (!Objects.equals(this.get(), alphabet.get())) {
 			return false;
 		}
 

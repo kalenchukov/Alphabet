@@ -83,7 +83,7 @@ public class ArabAlphabet extends AbstractAlphabet implements AlphabeticalCase
 
 		final ArabAlphabet alphabet = (ArabAlphabet) obj;
 
-		if (!Objects.equals(ArabAlphabet.LETTERS, alphabet.get())) {
+		if (!Objects.equals(this.get(), alphabet.get())) {
 			return false;
 		}
 

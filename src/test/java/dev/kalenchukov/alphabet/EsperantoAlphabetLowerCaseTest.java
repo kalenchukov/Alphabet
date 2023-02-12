@@ -62,7 +62,7 @@ public class EsperantoAlphabetLowerCaseTest
 
 		assertNotEquals(ALPHABET, new RussianAlphabet.LowerCase());
 
-		assertTrue(ALPHABET.equals(new EsperantoAlphabet.LowerCase()));
+		assertEquals(ALPHABET, new EsperantoAlphabet.LowerCase());;
 	}
 
 	/**
