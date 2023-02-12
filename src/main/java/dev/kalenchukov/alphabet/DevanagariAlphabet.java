@@ -60,7 +60,7 @@ public class DevanagariAlphabet extends AbstractAlphabet implements Alphabetical
 	}
 
 	/**
-	 * @see Object#equals(Object)
+	 * @see Alphabetical#equals(Object)
 	 */
 	@Override
 	public boolean equals(@Nullable final Object obj)

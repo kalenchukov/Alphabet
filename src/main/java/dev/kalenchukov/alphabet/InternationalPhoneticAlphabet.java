@@ -77,7 +77,7 @@ public class InternationalPhoneticAlphabet extends AbstractAlphabet implements A
 	}
 
 	/**
-	 * @see Object#equals(Object)
+	 * @see Alphabetical#equals(Object)
 	 */
 	@Override
 	public boolean equals(@Nullable final Object obj)
@@ -136,7 +136,7 @@ public class InternationalPhoneticAlphabet extends AbstractAlphabet implements A
 		}
 
 		/**
-		 * @see Object#equals(Object)
+		 * @see Alphabetical#equals(Object)
 		 */
 		@Override
 		public boolean equals(@Nullable final Object obj)
@@ -215,7 +215,7 @@ public class InternationalPhoneticAlphabet extends AbstractAlphabet implements A
 		}
 
 		/**
-		 * @see Object#equals(Object)
+		 * @see Alphabetical#equals(Object)
 		 */
 		@Override
 		public boolean equals(@Nullable final Object obj)

@@ -26,13 +26,13 @@ import static org.junit.jupiter.api.Assertions.*;
 /**
  * Класс проверки констант и методов перечисления {@link Alphabet}.
  */
-class AlphabetTest
+public class AlphabetTest
 {
 	/**
 	 * Проверка метода {@link Alphabet#getAlphabet()}.
 	 */
 	@Test
-	void getAlphabet()
+	public void getAlphabet()
 	{
 		assertEquals(new RussianAlphabet(), Alphabet.RUSSIAN.getAlphabet());
 	}
@@ -41,7 +41,7 @@ class AlphabetTest
 	 * Проверка метода {@link Alphabet#toString()}.
 	 */
 	@Test
-	void testToString()
+	public void testToString()
 	{
 		assertEquals("SYLOTI NAGRI", Alphabet.SYLOTI_NAGRI.toString());
 	}

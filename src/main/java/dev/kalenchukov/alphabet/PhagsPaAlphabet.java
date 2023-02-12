@@ -57,7 +57,7 @@ public class PhagsPaAlphabet extends AbstractAlphabet implements AlphabeticalCas
 	}
 
 	/**
-	 * @see Object#equals(Object)
+	 * @see Alphabetical#equals(Object)
 	 */
 	@Override
 	public boolean equals(@Nullable final Object obj)

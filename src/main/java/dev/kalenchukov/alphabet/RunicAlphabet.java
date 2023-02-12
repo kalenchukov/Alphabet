@@ -62,7 +62,7 @@ public class RunicAlphabet extends AbstractAlphabet implements AlphabeticalCase
 	}
 
 	/**
-	 * @see Object#equals(Object)
+	 * @see Alphabetical#equals(Object)
 	 */
 	@Override
 	public boolean equals(@Nullable final Object obj)

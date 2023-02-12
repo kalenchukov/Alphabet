@@ -179,6 +179,11 @@ public interface Alphabetical
 	Character @NotNull [] toArray();
 
 	/**
+	 * @see Object#equals(Object)
+	 */
+	boolean equals(@Nullable Object obj);
+
+	/**
 	 * Возвращает строковое представление букв алфавита.
 	 *
 	 * @param separator разделитель букв.

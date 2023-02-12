@@ -50,7 +50,7 @@ public class TagbanwaAlphabet extends AbstractAlphabet implements AlphabeticalCa
 	}
 
 	/**
-	 * @see Object#equals(Object)
+	 * @see Alphabetical#equals(Object)
 	 */
 	@Override
 	public boolean equals(@Nullable final Object obj)

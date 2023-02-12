@@ -4,6 +4,7 @@
 * Добавлен метод Alphabetical.isSorted(String).
 * Добавлен метод Alphabetical.isSortedAsc(String).
 * Добавлен метод Alphabetical.isSortedDesc(String).
+* Добавлен метод Alphabetical#equals(Object).
 * Добавлен AUTHOR.MD.
 * Добавлен INSTALL.MD.
 * Добавлен CHANGELOG.MD.

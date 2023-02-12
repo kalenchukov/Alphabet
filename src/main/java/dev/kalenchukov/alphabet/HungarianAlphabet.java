@@ -53,7 +53,7 @@ public class HungarianAlphabet extends AbstractAlphabet implements AlphabeticalC
 	}
 
 	/**
-	 * @see Object#equals(Object)
+	 * @see Alphabetical#equals(Object)
 	 */
 	@Override
 	public boolean equals(@Nullable final Object obj)

@@ -52,7 +52,7 @@ public class CyrillicAlphabet extends AbstractAlphabet
 	}
 
 	/**
-	 * @see Object#equals(Object)
+	 * @see Alphabetical#equals(Object)
 	 */
 	@Override
 	public boolean equals(@Nullable final Object obj)
