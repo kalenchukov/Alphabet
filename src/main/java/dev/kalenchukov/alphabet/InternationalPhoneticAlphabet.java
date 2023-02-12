@@ -109,7 +109,7 @@ public class InternationalPhoneticAlphabet extends AbstractAlphabet implements A
 	@Override
 	public int hashCode()
 	{
-		return InternationalPhoneticAlphabet.LETTERS.hashCode();
+		return this.get().hashCode();
 	}
 
 	/**
@@ -168,7 +168,7 @@ public class InternationalPhoneticAlphabet extends AbstractAlphabet implements A
 		@Override
 		public int hashCode()
 		{
-			return InternationalPhoneticAlphabet.LETTERS.hashCode();
+			return this.get().hashCode();
 		}
 	}
 
@@ -247,7 +247,7 @@ public class InternationalPhoneticAlphabet extends AbstractAlphabet implements A
 		@Override
 		public int hashCode()
 		{
-			return InternationalPhoneticAlphabet.LETTERS.hashCode();
+			return this.get().hashCode();
 		}
 	}
 }

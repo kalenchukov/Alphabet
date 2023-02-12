@@ -94,6 +94,6 @@ public class RunicAlphabet extends AbstractAlphabet implements AlphabeticalCase
 	@Override
 	public int hashCode()
 	{
-		return RunicAlphabet.LETTERS.hashCode();
+		return this.get().hashCode();
 	}
 }

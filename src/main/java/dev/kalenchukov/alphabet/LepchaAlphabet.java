@@ -89,6 +89,6 @@ public class LepchaAlphabet extends AbstractAlphabet implements AlphabeticalCase
 	@Override
 	public int hashCode()
 	{
-		return LepchaAlphabet.LETTERS.hashCode();
+		return this.get().hashCode();
 	}
 }

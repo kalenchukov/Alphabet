@@ -84,6 +84,6 @@ public class BugineseAlphabet extends AbstractAlphabet implements AlphabeticalCa
 	@Override
 	public int hashCode()
 	{
-		return BugineseAlphabet.LETTERS.hashCode();
+		return this.get().hashCode();
 	}
 }

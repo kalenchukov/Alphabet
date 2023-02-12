@@ -89,7 +89,7 @@ public class GermanAlphabet extends AbstractAlphabet implements AlphabeticalCase
 	@Override
 	public int hashCode()
 	{
-		return GermanAlphabet.LETTERS.hashCode();
+		return this.get().hashCode();
 	}
 
 	/**
@@ -151,7 +151,7 @@ public class GermanAlphabet extends AbstractAlphabet implements AlphabeticalCase
 		@Override
 		public int hashCode()
 		{
-			return GermanAlphabet.LETTERS.hashCode();
+			return this.get().hashCode();
 		}
 	}
 
@@ -214,7 +214,7 @@ public class GermanAlphabet extends AbstractAlphabet implements AlphabeticalCase
 		@Override
 		public int hashCode()
 		{
-			return GermanAlphabet.LETTERS.hashCode();
+			return this.get().hashCode();
 		}
 	}
 }

@@ -92,6 +92,6 @@ public class BalineseAlphabet extends AbstractAlphabet implements AlphabeticalCa
 	@Override
 	public int hashCode()
 	{
-		return BalineseAlphabet.LETTERS.hashCode();
+		return this.get().hashCode();
 	}
 }

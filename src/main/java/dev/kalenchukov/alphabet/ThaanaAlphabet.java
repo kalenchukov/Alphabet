@@ -88,6 +88,6 @@ public class ThaanaAlphabet extends AbstractAlphabet implements AlphabeticalCase
 	@Override
 	public int hashCode()
 	{
-		return ThaanaAlphabet.LETTERS.hashCode();
+		return this.get().hashCode();
 	}
 }

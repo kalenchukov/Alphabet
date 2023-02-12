@@ -92,6 +92,6 @@ public class JavaneseAlphabet extends AbstractAlphabet implements AlphabeticalCa
 	@Override
 	public int hashCode()
 	{
-		return JavaneseAlphabet.LETTERS.hashCode();
+		return this.get().hashCode();
 	}
 }

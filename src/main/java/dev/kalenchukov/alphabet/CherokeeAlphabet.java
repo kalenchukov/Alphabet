@@ -94,6 +94,6 @@ public class CherokeeAlphabet extends AbstractAlphabet implements AlphabeticalCa
 	@Override
 	public int hashCode()
 	{
-		return CherokeeAlphabet.LETTERS.hashCode();
+		return this.get().hashCode();
 	}
 }

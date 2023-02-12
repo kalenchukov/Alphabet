@@ -88,7 +88,7 @@ public class SpanishAlphabet extends AbstractAlphabet implements AlphabeticalCas
 	@Override
 	public int hashCode()
 	{
-		return SpanishAlphabet.LETTERS.hashCode();
+		return this.get().hashCode();
 	}
 
 	/**
@@ -150,7 +150,7 @@ public class SpanishAlphabet extends AbstractAlphabet implements AlphabeticalCas
 		@Override
 		public int hashCode()
 		{
-			return SpanishAlphabet.LETTERS.hashCode();
+			return this.get().hashCode();
 		}
 	}
 
@@ -213,7 +213,7 @@ public class SpanishAlphabet extends AbstractAlphabet implements AlphabeticalCas
 		@Override
 		public int hashCode()
 		{
-			return SpanishAlphabet.LETTERS.hashCode();
+			return this.get().hashCode();
 		}
 	}
 }

@@ -87,6 +87,6 @@ public class GujaratiAlphabet extends AbstractAlphabet implements AlphabeticalCa
 	@Override
 	public int hashCode()
 	{
-		return GujaratiAlphabet.LETTERS.hashCode();
+		return this.get().hashCode();
 	}
 }

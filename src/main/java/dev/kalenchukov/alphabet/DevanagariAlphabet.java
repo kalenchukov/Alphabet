@@ -92,6 +92,6 @@ public class DevanagariAlphabet extends AbstractAlphabet implements Alphabetical
 	@Override
 	public int hashCode()
 	{
-		return DevanagariAlphabet.LETTERS.hashCode();
+		return this.get().hashCode();
 	}
 }

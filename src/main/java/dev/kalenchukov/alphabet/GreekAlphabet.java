@@ -88,7 +88,7 @@ public class GreekAlphabet extends AbstractAlphabet implements AlphabeticalCase
 	@Override
 	public int hashCode()
 	{
-		return GreekAlphabet.LETTERS.hashCode();
+		return this.get().hashCode();
 	}
 
 	/**
@@ -149,7 +149,7 @@ public class GreekAlphabet extends AbstractAlphabet implements AlphabeticalCase
 		@Override
 		public int hashCode()
 		{
-			return GreekAlphabet.LETTERS.hashCode();
+			return this.get().hashCode();
 		}
 	}
 
@@ -212,7 +212,7 @@ public class GreekAlphabet extends AbstractAlphabet implements AlphabeticalCase
 		@Override
 		public int hashCode()
 		{
-			return GreekAlphabet.LETTERS.hashCode();
+			return this.get().hashCode();
 		}
 	}
 }

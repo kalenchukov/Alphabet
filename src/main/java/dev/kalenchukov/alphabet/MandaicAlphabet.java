@@ -84,6 +84,6 @@ public class MandaicAlphabet extends AbstractAlphabet implements AlphabeticalCas
 	@Override
 	public int hashCode()
 	{
-		return MandaicAlphabet.LETTERS.hashCode();
+		return this.get().hashCode();
 	}
 }

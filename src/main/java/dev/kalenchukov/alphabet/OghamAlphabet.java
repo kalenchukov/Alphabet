@@ -84,6 +84,6 @@ public class OghamAlphabet extends AbstractAlphabet implements AlphabeticalCase
 	@Override
 	public int hashCode()
 	{
-		return OghamAlphabet.LETTERS.hashCode();
+		return this.get().hashCode();
 	}
 }

@@ -87,6 +87,6 @@ public class SylotiNagriAlphabet extends AbstractAlphabet implements Alphabetica
 	@Override
 	public int hashCode()
 	{
-		return SylotiNagriAlphabet.LETTERS.hashCode();
+		return this.get().hashCode();
 	}
 }

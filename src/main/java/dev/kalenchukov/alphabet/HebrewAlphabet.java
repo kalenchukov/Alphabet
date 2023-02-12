@@ -84,6 +84,6 @@ public class HebrewAlphabet extends AbstractAlphabet implements AlphabeticalCase
 	@Override
 	public int hashCode()
 	{
-		return HebrewAlphabet.LETTERS.hashCode();
+		return this.get().hashCode();
 	}
 }

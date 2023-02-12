@@ -92,6 +92,6 @@ public class SinhalaAlphabet extends AbstractAlphabet implements AlphabeticalCas
 	@Override
 	public int hashCode()
 	{
-		return SinhalaAlphabet.LETTERS.hashCode();
+		return this.get().hashCode();
 	}
 }

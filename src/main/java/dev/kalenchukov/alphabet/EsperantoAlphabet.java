@@ -89,7 +89,7 @@ public class EsperantoAlphabet extends AbstractAlphabet implements AlphabeticalC
 	@Override
 	public int hashCode()
 	{
-		return EsperantoAlphabet.LETTERS.hashCode();
+		return this.get().hashCode();
 	}
 
 	/**
@@ -151,7 +151,7 @@ public class EsperantoAlphabet extends AbstractAlphabet implements AlphabeticalC
 		@Override
 		public int hashCode()
 		{
-			return EsperantoAlphabet.LETTERS.hashCode();
+			return this.get().hashCode();
 		}
 	}
 
@@ -214,7 +214,7 @@ public class EsperantoAlphabet extends AbstractAlphabet implements AlphabeticalC
 		@Override
 		public int hashCode()
 		{
-			return EsperantoAlphabet.LETTERS.hashCode();
+			return this.get().hashCode();
 		}
 	}
 }

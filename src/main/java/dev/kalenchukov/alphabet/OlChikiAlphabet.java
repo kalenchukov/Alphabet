@@ -87,6 +87,6 @@ public class OlChikiAlphabet extends AbstractAlphabet implements AlphabeticalCas
 	@Override
 	public int hashCode()
 	{
-		return OlChikiAlphabet.LETTERS.hashCode();
+		return this.get().hashCode();
 	}
 }

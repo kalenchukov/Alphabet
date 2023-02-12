@@ -92,7 +92,7 @@ public class ArmenianAlphabet extends AbstractAlphabet implements AlphabeticalCa
 	@Override
 	public int hashCode()
 	{
-		return ArmenianAlphabet.LETTERS.hashCode();
+		return this.get().hashCode();
 	}
 
 	/**
@@ -156,7 +156,7 @@ public class ArmenianAlphabet extends AbstractAlphabet implements AlphabeticalCa
 		@Override
 		public int hashCode()
 		{
-			return ArmenianAlphabet.LETTERS.hashCode();
+			return this.get().hashCode();
 		}
 	}
 
@@ -221,7 +221,7 @@ public class ArmenianAlphabet extends AbstractAlphabet implements AlphabeticalCa
 		@Override
 		public int hashCode()
 		{
-			return ArmenianAlphabet.LETTERS.hashCode();
+			return this.get().hashCode();
 		}
 	}
 }

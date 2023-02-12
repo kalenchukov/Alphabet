@@ -88,6 +88,6 @@ public class BatakAlphabet extends AbstractAlphabet implements AlphabeticalCase
 	@Override
 	public int hashCode()
 	{
-		return BatakAlphabet.LETTERS.hashCode();
+		return this.get().hashCode();
 	}
 }

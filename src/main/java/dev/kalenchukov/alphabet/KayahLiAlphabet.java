@@ -87,6 +87,6 @@ public class KayahLiAlphabet extends AbstractAlphabet implements AlphabeticalCas
 	@Override
 	public int hashCode()
 	{
-		return KayahLiAlphabet.LETTERS.hashCode();
+		return this.get().hashCode();
 	}
 }

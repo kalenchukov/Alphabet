@@ -92,7 +92,7 @@ public class TatarAlphabet extends AbstractAlphabet implements AlphabeticalCase
 	@Override
 	public int hashCode()
 	{
-		return TatarAlphabet.LETTERS.hashCode();
+		return this.get().hashCode();
 	}
 
 	/**
@@ -156,7 +156,7 @@ public class TatarAlphabet extends AbstractAlphabet implements AlphabeticalCase
 		@Override
 		public int hashCode()
 		{
-			return TatarAlphabet.LETTERS.hashCode();
+			return this.get().hashCode();
 		}
 	}
 
@@ -221,7 +221,7 @@ public class TatarAlphabet extends AbstractAlphabet implements AlphabeticalCase
 		@Override
 		public int hashCode()
 		{
-			return TatarAlphabet.LETTERS.hashCode();
+			return this.get().hashCode();
 		}
 	}
 }

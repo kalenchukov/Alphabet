@@ -87,6 +87,6 @@ public class KatakanaAlphabet extends AbstractAlphabet implements AlphabeticalCa
 	@Override
 	public int hashCode()
 	{
-		return KatakanaAlphabet.LETTERS.hashCode();
+		return this.get().hashCode();
 	}
 }

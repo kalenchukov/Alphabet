@@ -82,6 +82,6 @@ public class TagbanwaAlphabet extends AbstractAlphabet implements AlphabeticalCa
 	@Override
 	public int hashCode()
 	{
-		return TagbanwaAlphabet.LETTERS.hashCode();
+		return this.get().hashCode();
 	}
 }

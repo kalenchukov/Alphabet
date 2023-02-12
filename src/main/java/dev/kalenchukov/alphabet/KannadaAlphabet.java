@@ -90,6 +90,6 @@ public class KannadaAlphabet extends AbstractAlphabet implements AlphabeticalCas
 	@Override
 	public int hashCode()
 	{
-		return KannadaAlphabet.LETTERS.hashCode();
+		return this.get().hashCode();
 	}
 }

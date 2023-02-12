@@ -88,7 +88,7 @@ public class FrenchAlphabet extends AbstractAlphabet implements AlphabeticalCase
 	@Override
 	public int hashCode()
 	{
-		return FrenchAlphabet.LETTERS.hashCode();
+		return this.get().hashCode();
 	}
 
 	/**
@@ -150,7 +150,7 @@ public class FrenchAlphabet extends AbstractAlphabet implements AlphabeticalCase
 		@Override
 		public int hashCode()
 		{
-			return FrenchAlphabet.LETTERS.hashCode();
+			return this.get().hashCode();
 		}
 	}
 
@@ -213,7 +213,7 @@ public class FrenchAlphabet extends AbstractAlphabet implements AlphabeticalCase
 		@Override
 		public int hashCode()
 		{
-			return FrenchAlphabet.LETTERS.hashCode();
+			return this.get().hashCode();
 		}
 	}
 }

@@ -89,6 +89,6 @@ public class NkoAlphabet extends AbstractAlphabet implements AlphabeticalCase
 	@Override
 	public int hashCode()
 	{
-		return NkoAlphabet.LETTERS.hashCode();
+		return this.get().hashCode();
 	}
 }

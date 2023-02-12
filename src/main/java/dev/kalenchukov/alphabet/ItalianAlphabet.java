@@ -86,7 +86,7 @@ public class ItalianAlphabet extends AbstractAlphabet implements AlphabeticalCas
 	@Override
 	public int hashCode()
 	{
-		return ItalianAlphabet.LETTERS.hashCode();
+		return this.get().hashCode();
 	}
 
 	/**
@@ -147,7 +147,7 @@ public class ItalianAlphabet extends AbstractAlphabet implements AlphabeticalCas
 		@Override
 		public int hashCode()
 		{
-			return ItalianAlphabet.LETTERS.hashCode();
+			return this.get().hashCode();
 		}
 	}
 
@@ -209,7 +209,7 @@ public class ItalianAlphabet extends AbstractAlphabet implements AlphabeticalCas
 		@Override
 		public int hashCode()
 		{
-			return ItalianAlphabet.LETTERS.hashCode();
+			return this.get().hashCode();
 		}
 	}
 }

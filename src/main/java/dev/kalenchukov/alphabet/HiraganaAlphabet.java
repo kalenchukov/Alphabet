@@ -91,6 +91,6 @@ public class HiraganaAlphabet extends AbstractAlphabet implements AlphabeticalCa
 	@Override
 	public int hashCode()
 	{
-		return HiraganaAlphabet.LETTERS.hashCode();
+		return this.get().hashCode();
 	}
 }

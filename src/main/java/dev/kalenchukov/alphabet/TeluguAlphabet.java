@@ -91,6 +91,6 @@ public class TeluguAlphabet extends AbstractAlphabet implements AlphabeticalCase
 	@Override
 	public int hashCode()
 	{
-		return TeluguAlphabet.LETTERS.hashCode();
+		return this.get().hashCode();
 	}
 }

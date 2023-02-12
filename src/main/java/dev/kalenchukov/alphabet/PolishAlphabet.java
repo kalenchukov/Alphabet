@@ -90,7 +90,7 @@ public class PolishAlphabet extends AbstractAlphabet implements AlphabeticalCase
 	@Override
 	public int hashCode()
 	{
-		return PolishAlphabet.LETTERS.hashCode();
+		return this.get().hashCode();
 	}
 
 	/**
@@ -153,7 +153,7 @@ public class PolishAlphabet extends AbstractAlphabet implements AlphabeticalCase
 		@Override
 		public int hashCode()
 		{
-			return PolishAlphabet.LETTERS.hashCode();
+			return this.get().hashCode();
 		}
 	}
 
@@ -217,7 +217,7 @@ public class PolishAlphabet extends AbstractAlphabet implements AlphabeticalCase
 		@Override
 		public int hashCode()
 		{
-			return PolishAlphabet.LETTERS.hashCode();
+			return this.get().hashCode();
 		}
 	}
 }

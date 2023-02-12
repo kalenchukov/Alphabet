@@ -91,6 +91,6 @@ public class ThaiAlphabet extends AbstractAlphabet implements AlphabeticalCase
 	@Override
 	public int hashCode()
 	{
-		return ThaiAlphabet.LETTERS.hashCode();
+		return this.get().hashCode();
 	}
 }

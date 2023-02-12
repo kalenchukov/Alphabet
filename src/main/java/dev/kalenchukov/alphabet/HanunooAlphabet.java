@@ -83,6 +83,6 @@ public class HanunooAlphabet extends AbstractAlphabet implements AlphabeticalCas
 	@Override
 	public int hashCode()
 	{
-		return HanunooAlphabet.LETTERS.hashCode();
+		return this.get().hashCode();
 	}
 }

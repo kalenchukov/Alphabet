@@ -91,6 +91,6 @@ public class ChamAlphabet extends AbstractAlphabet implements AlphabeticalCase
 	@Override
 	public int hashCode()
 	{
-		return ChamAlphabet.LETTERS.hashCode();
+		return this.get().hashCode();
 	}
 }

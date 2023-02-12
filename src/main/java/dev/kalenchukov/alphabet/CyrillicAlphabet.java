@@ -84,6 +84,6 @@ public class CyrillicAlphabet extends AbstractAlphabet
 	@Override
 	public int hashCode()
 	{
-		return CyrillicAlphabet.LETTERS.hashCode();
+		return this.get().hashCode();
 	}
 }

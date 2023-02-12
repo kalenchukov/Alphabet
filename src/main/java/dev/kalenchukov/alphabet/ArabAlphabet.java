@@ -96,6 +96,6 @@ public class ArabAlphabet extends AbstractAlphabet implements AlphabeticalCase
 	@Override
 	public int hashCode()
 	{
-		return ArabAlphabet.LETTERS.hashCode();
+		return this.get().hashCode();
 	}
 }

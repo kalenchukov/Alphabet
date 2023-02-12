@@ -89,7 +89,7 @@ public class TurkishAlphabet extends AbstractAlphabet implements AlphabeticalCas
 	@Override
 	public int hashCode()
 	{
-		return TurkishAlphabet.LETTERS.hashCode();
+		return this.get().hashCode();
 	}
 
 	/**
@@ -151,7 +151,7 @@ public class TurkishAlphabet extends AbstractAlphabet implements AlphabeticalCas
 		@Override
 		public int hashCode()
 		{
-			return TurkishAlphabet.LETTERS.hashCode();
+			return this.get().hashCode();
 		}
 	}
 
@@ -214,7 +214,7 @@ public class TurkishAlphabet extends AbstractAlphabet implements AlphabeticalCas
 		@Override
 		public int hashCode()
 		{
-			return TurkishAlphabet.LETTERS.hashCode();
+			return this.get().hashCode();
 		}
 	}
 }

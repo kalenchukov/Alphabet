@@ -88,6 +88,6 @@ public class OriyaAlphabet extends AbstractAlphabet implements AlphabeticalCase
 	@Override
 	public int hashCode()
 	{
-		return OriyaAlphabet.LETTERS.hashCode();
+		return this.get().hashCode();
 	}
 }

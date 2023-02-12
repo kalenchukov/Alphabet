@@ -90,7 +90,7 @@ public class UkrainianAlphabet extends AbstractAlphabet implements AlphabeticalC
 	@Override
 	public int hashCode()
 	{
-		return UkrainianAlphabet.LETTERS.hashCode();
+		return this.get().hashCode();
 	}
 
 	/**
@@ -153,7 +153,7 @@ public class UkrainianAlphabet extends AbstractAlphabet implements AlphabeticalC
 		@Override
 		public int hashCode()
 		{
-			return UkrainianAlphabet.LETTERS.hashCode();
+			return this.get().hashCode();
 		}
 	}
 
@@ -217,7 +217,7 @@ public class UkrainianAlphabet extends AbstractAlphabet implements AlphabeticalC
 		@Override
 		public int hashCode()
 		{
-			return UkrainianAlphabet.LETTERS.hashCode();
+			return this.get().hashCode();
 		}
 	}
 }

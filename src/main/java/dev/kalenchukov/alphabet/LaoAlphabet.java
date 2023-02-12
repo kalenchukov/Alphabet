@@ -87,6 +87,6 @@ public class LaoAlphabet extends AbstractAlphabet implements AlphabeticalCase
 	@Override
 	public int hashCode()
 	{
-		return LaoAlphabet.LETTERS.hashCode();
+		return this.get().hashCode();
 	}
 }

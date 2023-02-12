@@ -85,6 +85,6 @@ public class GeorgianAlphabet extends AbstractAlphabet implements AlphabeticalCa
 	@Override
 	public int hashCode()
 	{
-		return GeorgianAlphabet.LETTERS.hashCode();
+		return this.get().hashCode();
 	}
 }

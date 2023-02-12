@@ -90,7 +90,7 @@ public class RussianAlphabet extends AbstractAlphabet implements AlphabeticalCas
 	@Override
 	public int hashCode()
 	{
-		return RussianAlphabet.LETTERS.hashCode();
+		return this.get().hashCode();
 	}
 
 	/**
@@ -153,7 +153,7 @@ public class RussianAlphabet extends AbstractAlphabet implements AlphabeticalCas
 		@Override
 		public int hashCode()
 		{
-			return RussianAlphabet.LETTERS.hashCode();
+			return this.get().hashCode();
 		}
 	}
 
@@ -217,7 +217,7 @@ public class RussianAlphabet extends AbstractAlphabet implements AlphabeticalCas
 		@Override
 		public int hashCode()
 		{
-			return RussianAlphabet.LETTERS.hashCode();
+			return this.get().hashCode();
 		}
 	}
 }

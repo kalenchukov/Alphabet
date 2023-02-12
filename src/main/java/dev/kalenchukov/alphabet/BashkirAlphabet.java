@@ -93,7 +93,7 @@ public class BashkirAlphabet extends AbstractAlphabet implements AlphabeticalCas
 	@Override
 	public int hashCode()
 	{
-		return BashkirAlphabet.LETTERS.hashCode();
+		return this.get().hashCode();
 	}
 
 	/**
@@ -157,7 +157,7 @@ public class BashkirAlphabet extends AbstractAlphabet implements AlphabeticalCas
 		@Override
 		public int hashCode()
 		{
-			return BashkirAlphabet.LETTERS.hashCode();
+			return this.get().hashCode();
 		}
 	}
 
@@ -222,7 +222,7 @@ public class BashkirAlphabet extends AbstractAlphabet implements AlphabeticalCas
 		@Override
 		public int hashCode()
 		{
-			return BashkirAlphabet.LETTERS.hashCode();
+			return this.get().hashCode();
 		}
 	}
 }

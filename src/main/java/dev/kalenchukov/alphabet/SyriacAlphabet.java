@@ -83,6 +83,6 @@ public class SyriacAlphabet extends AbstractAlphabet implements AlphabeticalCase
 	@Override
 	public int hashCode()
 	{
-		return SyriacAlphabet.LETTERS.hashCode();
+		return this.get().hashCode();
 	}
 }

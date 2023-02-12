@@ -83,6 +83,6 @@ public class BuhidAlphabet extends AbstractAlphabet implements AlphabeticalCase
 	@Override
 	public int hashCode()
 	{
-		return BuhidAlphabet.LETTERS.hashCode();
+		return this.get().hashCode();
 	}
 }

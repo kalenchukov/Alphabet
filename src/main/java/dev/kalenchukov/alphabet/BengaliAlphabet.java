@@ -88,6 +88,6 @@ public class BengaliAlphabet extends AbstractAlphabet implements AlphabeticalCas
 	@Override
 	public int hashCode()
 	{
-		return BengaliAlphabet.LETTERS.hashCode();
+		return this.get().hashCode();
 	}
 }

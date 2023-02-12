@@ -90,7 +90,7 @@ public class BelarusianAlphabet extends AbstractAlphabet implements Alphabetical
 	@Override
 	public int hashCode()
 	{
-		return BelarusianAlphabet.LETTERS.hashCode();
+		return this.get().hashCode();
 	}
 
 	/**
@@ -153,7 +153,7 @@ public class BelarusianAlphabet extends AbstractAlphabet implements Alphabetical
 		@Override
 		public int hashCode()
 		{
-			return BelarusianAlphabet.LETTERS.hashCode();
+			return this.get().hashCode();
 		}
 	}
 
@@ -217,7 +217,7 @@ public class BelarusianAlphabet extends AbstractAlphabet implements Alphabetical
 		@Override
 		public int hashCode()
 		{
-			return BelarusianAlphabet.LETTERS.hashCode();
+			return this.get().hashCode();
 		}
 	}
 }

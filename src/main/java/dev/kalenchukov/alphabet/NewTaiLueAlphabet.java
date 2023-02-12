@@ -91,6 +91,6 @@ public class NewTaiLueAlphabet extends AbstractAlphabet implements AlphabeticalC
 	@Override
 	public int hashCode()
 	{
-		return NewTaiLueAlphabet.LETTERS.hashCode();
+		return this.get().hashCode();
 	}
 }

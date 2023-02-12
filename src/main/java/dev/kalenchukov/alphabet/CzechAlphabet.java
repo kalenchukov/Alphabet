@@ -86,6 +86,6 @@ public class CzechAlphabet extends AbstractAlphabet implements AlphabeticalCase
 	@Override
 	public int hashCode()
 	{
-		return CzechAlphabet.LETTERS.hashCode();
+		return this.get().hashCode();
 	}
 }

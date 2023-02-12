@@ -85,6 +85,6 @@ public class MongolianAlphabet extends AbstractAlphabet implements AlphabeticalC
 	@Override
 	public int hashCode()
 	{
-		return MongolianAlphabet.LETTERS.hashCode();
+		return this.get().hashCode();
 	}
 }

@@ -89,6 +89,6 @@ public class PhagsPaAlphabet extends AbstractAlphabet implements AlphabeticalCas
 	@Override
 	public int hashCode()
 	{
-		return PhagsPaAlphabet.LETTERS.hashCode();
+		return this.get().hashCode();
 	}
 }

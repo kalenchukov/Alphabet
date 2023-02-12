@@ -89,6 +89,6 @@ public class LimbuAlphabet extends AbstractAlphabet implements AlphabeticalCase
 	@Override
 	public int hashCode()
 	{
-		return LimbuAlphabet.LETTERS.hashCode();
+		return this.get().hashCode();
 	}
 }

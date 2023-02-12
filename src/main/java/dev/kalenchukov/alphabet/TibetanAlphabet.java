@@ -85,6 +85,6 @@ public class TibetanAlphabet extends AbstractAlphabet implements AlphabeticalCas
 	@Override
 	public int hashCode()
 	{
-		return TibetanAlphabet.LETTERS.hashCode();
+		return this.get().hashCode();
 	}
 }

@@ -85,6 +85,6 @@ public class HungarianAlphabet extends AbstractAlphabet implements AlphabeticalC
 	@Override
 	public int hashCode()
 	{
-		return HungarianAlphabet.LETTERS.hashCode();
+		return this.get().hashCode();
 	}
 }

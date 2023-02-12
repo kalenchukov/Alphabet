@@ -89,6 +89,6 @@ public class GurmukhiAlphabet extends AbstractAlphabet implements AlphabeticalCa
 	@Override
 	public int hashCode()
 	{
-		return GurmukhiAlphabet.LETTERS.hashCode();
+		return this.get().hashCode();
 	}
 }

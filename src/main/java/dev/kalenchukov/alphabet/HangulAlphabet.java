@@ -88,6 +88,6 @@ public class HangulAlphabet extends AbstractAlphabet implements AlphabeticalCase
 	@Override
 	public int hashCode()
 	{
-		return HangulAlphabet.LETTERS.hashCode();
+		return this.get().hashCode();
 	}
 }

@@ -85,6 +85,6 @@ public class TaiLeAlphabet extends AbstractAlphabet implements AlphabeticalCase
 	@Override
 	public int hashCode()
 	{
-		return TaiLeAlphabet.LETTERS.hashCode();
+		return this.get().hashCode();
 	}
 }

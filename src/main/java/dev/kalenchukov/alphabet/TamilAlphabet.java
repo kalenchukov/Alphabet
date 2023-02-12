@@ -87,6 +87,6 @@ public class TamilAlphabet extends AbstractAlphabet implements AlphabeticalCase
 	@Override
 	public int hashCode()
 	{
-		return TamilAlphabet.LETTERS.hashCode();
+		return this.get().hashCode();
 	}
 }

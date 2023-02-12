@@ -92,6 +92,6 @@ public class MalayalamAlphabet extends AbstractAlphabet implements AlphabeticalC
 	@Override
 	public int hashCode()
 	{
-		return MalayalamAlphabet.LETTERS.hashCode();
+		return this.get().hashCode();
 	}
 }

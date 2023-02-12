@@ -93,6 +93,6 @@ public class BamumAlphabet extends AbstractAlphabet implements AlphabeticalCase
 	@Override
 	public int hashCode()
 	{
-		return BamumAlphabet.LETTERS.hashCode();
+		return this.get().hashCode();
 	}
 }

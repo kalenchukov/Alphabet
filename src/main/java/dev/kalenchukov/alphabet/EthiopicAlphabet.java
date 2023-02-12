@@ -120,6 +120,6 @@ public class EthiopicAlphabet extends AbstractAlphabet implements AlphabeticalCa
 	@Override
 	public int hashCode()
 	{
-		return EthiopicAlphabet.LETTERS.hashCode();
+		return this.get().hashCode();
 	}
 }

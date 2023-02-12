@@ -90,6 +90,6 @@ public class SundaneseAlphabet extends AbstractAlphabet implements AlphabeticalC
 	@Override
 	public int hashCode()
 	{
-		return SundaneseAlphabet.LETTERS.hashCode();
+		return this.get().hashCode();
 	}
 }

@@ -89,6 +89,6 @@ public class TifinaghAlphabet extends AbstractAlphabet implements AlphabeticalCa
 	@Override
 	public int hashCode()
 	{
-		return TifinaghAlphabet.LETTERS.hashCode();
+		return this.get().hashCode();
 	}
 }

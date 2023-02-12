@@ -87,6 +87,6 @@ public class MeeteiMayekAlphabet extends AbstractAlphabet implements Alphabetica
 	@Override
 	public int hashCode()
 	{
-		return MeeteiMayekAlphabet.LETTERS.hashCode();
+		return this.get().hashCode();
 	}
 }

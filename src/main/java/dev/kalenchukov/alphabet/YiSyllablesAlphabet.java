@@ -253,6 +253,6 @@ public class YiSyllablesAlphabet extends AbstractAlphabet implements Alphabetica
 	@Override
 	public int hashCode()
 	{
-		return YiSyllablesAlphabet.LETTERS.hashCode();
+		return this.get().hashCode();
 	}
 }

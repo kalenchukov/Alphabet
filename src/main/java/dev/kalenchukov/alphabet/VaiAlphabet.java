@@ -129,6 +129,6 @@ public class VaiAlphabet extends AbstractAlphabet implements AlphabeticalCase
 	@Override
 	public int hashCode()
 	{
-		return VaiAlphabet.LETTERS.hashCode();
+		return this.get().hashCode();
 	}
 }

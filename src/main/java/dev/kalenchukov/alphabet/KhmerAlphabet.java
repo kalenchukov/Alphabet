@@ -94,6 +94,6 @@ public class KhmerAlphabet extends AbstractAlphabet implements AlphabeticalCase
 	@Override
 	public int hashCode()
 	{
-		return KhmerAlphabet.LETTERS.hashCode();
+		return this.get().hashCode();
 	}
 }

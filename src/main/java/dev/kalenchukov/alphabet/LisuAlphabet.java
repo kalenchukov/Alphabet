@@ -86,6 +86,6 @@ public class LisuAlphabet extends AbstractAlphabet implements AlphabeticalCase
 	@Override
 	public int hashCode()
 	{
-		return LisuAlphabet.LETTERS.hashCode();
+		return this.get().hashCode();
 	}
 }

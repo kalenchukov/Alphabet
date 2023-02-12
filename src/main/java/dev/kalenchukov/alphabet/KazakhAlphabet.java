@@ -93,7 +93,7 @@ public class KazakhAlphabet extends AbstractAlphabet implements AlphabeticalCase
 	@Override
 	public int hashCode()
 	{
-		return KazakhAlphabet.LETTERS.hashCode();
+		return this.get().hashCode();
 	}
 
 	/**
@@ -157,7 +157,7 @@ public class KazakhAlphabet extends AbstractAlphabet implements AlphabeticalCase
 		@Override
 		public int hashCode()
 		{
-			return KazakhAlphabet.LETTERS.hashCode();
+			return this.get().hashCode();
 		}
 	}
 
@@ -222,7 +222,7 @@ public class KazakhAlphabet extends AbstractAlphabet implements AlphabeticalCase
 		@Override
 		public int hashCode()
 		{
-			return KazakhAlphabet.LETTERS.hashCode();
+			return this.get().hashCode();
 		}
 	}
 }

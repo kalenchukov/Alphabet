@@ -86,6 +86,6 @@ public class RejangAlphabet extends AbstractAlphabet implements AlphabeticalCase
 	@Override
 	public int hashCode()
 	{
-		return RejangAlphabet.LETTERS.hashCode();
+		return this.get().hashCode();
 	}
 }
