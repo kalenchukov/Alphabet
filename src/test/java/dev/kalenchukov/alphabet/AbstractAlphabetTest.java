@@ -20,6 +20,8 @@ package dev.kalenchukov.alphabet;
 
 import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
 
 import java.util.Arrays;
 import java.util.List;
@@ -334,6 +336,34 @@ public class AbstractAlphabetTest
 		assertEquals(1, ALPHABET.getRandom(1).size());
 		assertEquals(20, ALPHABET.getRandom(20).size());
 		assertEquals(100, ALPHABET.getRandom(100).size());
+	}
+
+	/**
+	 * Проверка метода {@link AbstractAlphabet#isSortedAsc(String)}.
+	 */
+	@ParameterizedTest
+	@ValueSource(strings = {
+		"а", "аб", "ааббвв", "еёжз", "ЕЁЖЗ", "АбвгДеЁ",
+		"АаБбВвГгДдЕеЁёЖжЗзИиЙйКкЛлМмНнОоПпРрСсТтУуФфХхЦцЧчШшЩщЪъЫыЬьЭэЮюЯя",
+		"АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ",
+		"абвгдеёжзийклмнопрстуфхцчшщъыьэюя"
+	})
+	public void testIsSortedAsc(String value)
+	{
+		assertTrue(ALPHABET.isSortedAsc(value));
+	}
+
+	/**
+	 * Проверка метода {@link AbstractAlphabet#isSortedAsc(String)} с некорректным значением.
+	 */
+	@ParameterizedTest
+	@ValueSource(strings = {
+		"", "0", "ба", "Ба", "абв1где",
+		"ЯяАаБбВвГгДдЕеЁёЖжЗзИиЙйКкЛлМмНнОоПпРрСсТтУуФфХхЦцЧчШшЩщЪъЫыЬьЭэЮю"
+	})
+	public void testIsSortedAscNotCorrect(String value)
+	{
+		assertFalse(ALPHABET.isSortedAsc(value));
 	}
 
 	/**

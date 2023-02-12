@@ -1,6 +1,7 @@
 # Журнал изменений
 ## vX.X.X - XX.XX.XXXX
 ### Добавлено
+* Добавлен метод Alphabetical.isSortedAsc(String).
 * Добавлен AUTHOR.MD.
 * Добавлен INSTALL.MD.
 * Добавлен CHANGELOG.MD.
