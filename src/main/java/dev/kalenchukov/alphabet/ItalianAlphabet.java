@@ -81,7 +81,7 @@ public class ItalianAlphabet extends AbstractAlphabet implements AlphabeticalCas
 	}
 
 	/**
-	 * @see Object#hashCode()
+	 * @see Alphabetical#hashCode()
 	 */
 	@Override
 	public int hashCode()
@@ -142,7 +142,7 @@ public class ItalianAlphabet extends AbstractAlphabet implements AlphabeticalCas
 		}
 
 		/**
-		 * @see Object#hashCode()
+		 * @see Alphabetical#hashCode()
 		 */
 		@Override
 		public int hashCode()
@@ -204,7 +204,7 @@ public class ItalianAlphabet extends AbstractAlphabet implements AlphabeticalCas
 		}
 
 		/**
-		 * @see Object#hashCode()
+		 * @see Alphabetical#hashCode()
 		 */
 		@Override
 		public int hashCode()

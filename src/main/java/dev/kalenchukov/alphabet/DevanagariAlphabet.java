@@ -87,7 +87,7 @@ public class DevanagariAlphabet extends AbstractAlphabet implements Alphabetical
 	}
 
 	/**
-	 * @see Object#hashCode()
+	 * @see Alphabetical#hashCode()
 	 */
 	@Override
 	public int hashCode()

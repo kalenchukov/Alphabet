@@ -79,7 +79,7 @@ public class MandaicAlphabet extends AbstractAlphabet implements AlphabeticalCas
 	}
 
 	/**
-	 * @see Object#hashCode()
+	 * @see Alphabetical#hashCode()
 	 */
 	@Override
 	public int hashCode()

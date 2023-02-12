@@ -184,6 +184,11 @@ public interface Alphabetical
 	boolean equals(@Nullable Object obj);
 
 	/**
+	 * @see Object#hashCode()
+	 */
+	int hashCode();
+
+	/**
 	 * Возвращает строковое представление букв алфавита.
 	 *
 	 * @param separator разделитель букв.

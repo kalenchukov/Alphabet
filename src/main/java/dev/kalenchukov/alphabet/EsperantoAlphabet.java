@@ -84,7 +84,7 @@ public class EsperantoAlphabet extends AbstractAlphabet implements AlphabeticalC
 	}
 
 	/**
-	 * @see Object#hashCode()
+	 * @see Alphabetical#hashCode()
 	 */
 	@Override
 	public int hashCode()
@@ -146,7 +146,7 @@ public class EsperantoAlphabet extends AbstractAlphabet implements AlphabeticalC
 		}
 
 		/**
-		 * @see Object#hashCode()
+		 * @see Alphabetical#hashCode()
 		 */
 		@Override
 		public int hashCode()
@@ -209,7 +209,7 @@ public class EsperantoAlphabet extends AbstractAlphabet implements AlphabeticalC
 		}
 
 		/**
-		 * @see Object#hashCode()
+		 * @see Alphabetical#hashCode()
 		 */
 		@Override
 		public int hashCode()

@@ -104,7 +104,7 @@ public class InternationalPhoneticAlphabet extends AbstractAlphabet implements A
 	}
 
 	/**
-	 * @see Object#hashCode()
+	 * @see Alphabetical#hashCode()
 	 */
 	@Override
 	public int hashCode()
@@ -163,7 +163,7 @@ public class InternationalPhoneticAlphabet extends AbstractAlphabet implements A
 		}
 
 		/**
-		 * @see Object#hashCode()
+		 * @see Alphabetical#hashCode()
 		 */
 		@Override
 		public int hashCode()
@@ -242,7 +242,7 @@ public class InternationalPhoneticAlphabet extends AbstractAlphabet implements A
 		}
 
 		/**
-		 * @see Object#hashCode()
+		 * @see Alphabetical#hashCode()
 		 */
 		@Override
 		public int hashCode()

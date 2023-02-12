@@ -89,7 +89,7 @@ public class CherokeeAlphabet extends AbstractAlphabet implements AlphabeticalCa
 	}
 
 	/**
-	 * @see Object#hashCode()
+	 * @see Alphabetical#hashCode()
 	 */
 	@Override
 	public int hashCode()

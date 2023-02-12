@@ -85,7 +85,7 @@ public class BelarusianAlphabet extends AbstractAlphabet implements Alphabetical
 	}
 
 	/**
-	 * @see Object#hashCode()
+	 * @see Alphabetical#hashCode()
 	 */
 	@Override
 	public int hashCode()
@@ -148,7 +148,7 @@ public class BelarusianAlphabet extends AbstractAlphabet implements Alphabetical
 		}
 
 		/**
-		 * @see Object#hashCode()
+		 * @see Alphabetical#hashCode()
 		 */
 		@Override
 		public int hashCode()
@@ -212,7 +212,7 @@ public class BelarusianAlphabet extends AbstractAlphabet implements Alphabetical
 		}
 
 		/**
-		 * @see Object#hashCode()
+		 * @see Alphabetical#hashCode()
 		 */
 		@Override
 		public int hashCode()

@@ -80,7 +80,7 @@ public class HungarianAlphabet extends AbstractAlphabet implements AlphabeticalC
 	}
 
 	/**
-	 * @see Object#hashCode()
+	 * @see Alphabetical#hashCode()
 	 */
 	@Override
 	public int hashCode()

@@ -84,7 +84,7 @@ public class LepchaAlphabet extends AbstractAlphabet implements AlphabeticalCase
 	}
 
 	/**
-	 * @see Object#hashCode()
+	 * @see Alphabetical#hashCode()
 	 */
 	@Override
 	public int hashCode()

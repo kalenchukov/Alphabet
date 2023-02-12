@@ -88,7 +88,7 @@ public class KazakhAlphabet extends AbstractAlphabet implements AlphabeticalCase
 	}
 
 	/**
-	 * @see Object#hashCode()
+	 * @see Alphabetical#hashCode()
 	 */
 	@Override
 	public int hashCode()
@@ -152,7 +152,7 @@ public class KazakhAlphabet extends AbstractAlphabet implements AlphabeticalCase
 		}
 
 		/**
-		 * @see Object#hashCode()
+		 * @see Alphabetical#hashCode()
 		 */
 		@Override
 		public int hashCode()
@@ -217,7 +217,7 @@ public class KazakhAlphabet extends AbstractAlphabet implements AlphabeticalCase
 		}
 
 		/**
-		 * @see Object#hashCode()
+		 * @see Alphabetical#hashCode()
 		 */
 		@Override
 		public int hashCode()

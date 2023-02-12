@@ -79,7 +79,7 @@ public class CyrillicAlphabet extends AbstractAlphabet
 	}
 
 	/**
-	 * @see Object#hashCode()
+	 * @see Alphabetical#hashCode()
 	 */
 	@Override
 	public int hashCode()

@@ -85,7 +85,7 @@ public class SundaneseAlphabet extends AbstractAlphabet implements AlphabeticalC
 	}
 
 	/**
-	 * @see Object#hashCode()
+	 * @see Alphabetical#hashCode()
 	 */
 	@Override
 	public int hashCode()

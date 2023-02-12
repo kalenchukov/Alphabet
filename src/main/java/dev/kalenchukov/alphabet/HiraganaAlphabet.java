@@ -86,7 +86,7 @@ public class HiraganaAlphabet extends AbstractAlphabet implements AlphabeticalCa
 	}
 
 	/**
-	 * @see Object#hashCode()
+	 * @see Alphabetical#hashCode()
 	 */
 	@Override
 	public int hashCode()

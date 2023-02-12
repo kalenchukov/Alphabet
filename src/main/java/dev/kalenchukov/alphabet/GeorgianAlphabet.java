@@ -80,7 +80,7 @@ public class GeorgianAlphabet extends AbstractAlphabet implements AlphabeticalCa
 	}
 
 	/**
-	 * @see Object#hashCode()
+	 * @see Alphabetical#hashCode()
 	 */
 	@Override
 	public int hashCode()

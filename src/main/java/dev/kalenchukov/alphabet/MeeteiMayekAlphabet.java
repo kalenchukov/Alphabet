@@ -82,7 +82,7 @@ public class MeeteiMayekAlphabet extends AbstractAlphabet implements Alphabetica
 	}
 
 	/**
-	 * @see Object#hashCode()
+	 * @see Alphabetical#hashCode()
 	 */
 	@Override
 	public int hashCode()

@@ -80,7 +80,7 @@ public class MongolianAlphabet extends AbstractAlphabet implements AlphabeticalC
 	}
 
 	/**
-	 * @see Object#hashCode()
+	 * @see Alphabetical#hashCode()
 	 */
 	@Override
 	public int hashCode()
