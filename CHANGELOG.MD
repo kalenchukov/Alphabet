@@ -6,6 +6,7 @@
 * Добавлен метод Alphabetical.isSortedDesc(String).
 * Добавлен метод Alphabetical.equals(Object).
 * Добавлен метод Alphabetical.hashCode().
+* Добавлен метод Alphabetical.toString().
 * Добавлен AUTHOR.MD.
 * Добавлен INSTALL.MD.
 * Добавлен CHANGELOG.MD.

@@ -189,6 +189,12 @@ public interface Alphabetical
 	int hashCode();
 
 	/**
+	 * @see Object#toString()
+	 */
+	@NotNull
+	String toString();
+
+	/**
 	 * Возвращает строковое представление букв алфавита.
 	 *
 	 * @param separator разделитель букв.

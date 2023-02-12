@@ -368,7 +368,7 @@ public abstract class AbstractAlphabet implements Alphabetical
 	}
 
 	/**
-	 * @see Object#toString()
+	 * @see Alphabetical#toString()
 	 */
 	@Override
 	@NotNull
