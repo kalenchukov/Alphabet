@@ -225,6 +225,17 @@ alphabet.noneMatch("Kamchatka");
 true
 ```
 
+#### Проверка расположения букв в алфавитном порядке или обратном алфавитном порядке
+```java
+Alphabetical alphabet = new RussianAlphabet();
+alphabet.isSortedAsc("АбДеЁкЛМЯ");
+```
+
+Результат выполнения:
+```
+true
+```
+
 #### Проверка расположения букв в алфавитном порядке
 ```java
 Alphabetical alphabet = new RussianAlphabet();

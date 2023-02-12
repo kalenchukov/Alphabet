@@ -262,6 +262,17 @@ public abstract class AbstractAlphabet implements Alphabetical
 	}
 
 	/**
+	 * @see Alphabetical#isSorted(String)
+	 */
+	@Override
+	public boolean isSorted(@NotNull final String string)
+	{
+		Objects.requireNonNull(string);
+
+		return this.isSortedAsc(string) || this.isSortedDesc(string);
+	}
+
+	/**
 	 * @see Alphabetical#isSortedAsc(String)
 	 */
 	@Override

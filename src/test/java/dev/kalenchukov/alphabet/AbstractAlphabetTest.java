@@ -339,6 +339,38 @@ public class AbstractAlphabetTest
 	}
 
 	/**
+	 * Проверка метода {@link AbstractAlphabet#isSorted(String)}.
+	 */
+	@ParameterizedTest
+	@ValueSource(strings = {
+		"а", "аб", "ааббвв", "еёжз", "ЕЁЖЗ", "АбвгДеЁ", "в", "Я", "ББ", "ЁееддГб", "Лк",
+		"АаБбВвГгДдЕеЁёЖжЗзИиЙйКкЛлМмНнОоПпРрСсТтУуФфХхЦцЧчШшЩщЪъЫыЬьЭэЮюЯя",
+		"яЯюЮэЭьЬыЫъЪщЩшШчЧцЦхХфФуУтТсСрРпПоОнНмМлЛкКйЙиИзЗжЖёЁеЕдДгГвВбБаА",
+		"ЯЮЭЬЫЪЩШЧЦХФУТСРПОНМЛКЙИЗЖЁЕДГВБА",
+		"АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ",
+		"яюэьыъщшчцхфутсрпонмлкйизжёедгвба",
+		"абвгдеёжзийклмнопрстуфхцчшщъыьэюя"
+	})
+	public void testIsSorted(String value)
+	{
+		assertTrue(ALPHABET.isSorted(value));
+	}
+
+	/**
+	 * Проверка метода {@link AbstractAlphabet#isSorted(String)} с некорректным значением.
+	 */
+	@ParameterizedTest
+	@ValueSource(strings = {
+		"", "0", "абв1где", "абА", "АЁв", "едг1вба",
+		"ЯяАаБбВвГгДдЕеЁёЖжЗзИиЙйКкЛлМмНнОоПпРрСсТтУуФфХхЦцЧчШшЩщЪъЫыЬьЭэЮю",
+		"юЮэЭьЬыЫъЪщЩшШчЧцЦхХфФуУтТсСрРпПоОнНмМлЛкКйЙиИзЗжЖёЁеЕдДгГвВбБаАяЯ"
+	})
+	public void testIsSortedNotCorrect(String value)
+	{
+		assertFalse(ALPHABET.isSorted(value));
+	}
+
+	/**
 	 * Проверка метода {@link AbstractAlphabet#isSortedAsc(String)}.
 	 */
 	@ParameterizedTest

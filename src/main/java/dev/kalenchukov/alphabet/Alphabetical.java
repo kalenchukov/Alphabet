@@ -146,6 +146,15 @@ public interface Alphabetical
 	boolean contains(@NotNull Character letter);
 
 	/**
+	 * Проверяет, расположены ли буквы в алфавитном порядке или обратном алфавитном порядке.
+	 *
+	 * @param string строка.
+	 * @return {@code true}, если буквы расположены в алфавитном порядке или
+	 * обратном алфавитном порядке, иначе {@code false}.
+	 */
+	boolean isSorted(@NotNull String string);
+
+	/**
 	 * Проверяет, расположены ли буквы в алфавитном порядке.
 	 *
 	 * @param string строка.
