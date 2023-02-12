@@ -1,5 +1,5 @@
 # Журнал изменений
-## vX.X.X - XX.XX.XXXX
+## v2.6.0 - 12.02.2023
 ### Добавлено
 * Добавлен метод Alphabetical.isSorted(String).
 * Добавлен метод Alphabetical.isSortedAsc(String).
@@ -20,15 +20,12 @@
 * Убран модификатор параметра final в Alphabetical.toString(String).
 * Обновлён README.MD.
 
-### Исправлено
-*
-
 ## v2.5.0 - 16.10.2022
 ### Добавлено
 * Добавлен метод Alphabetical.allMatch(String).
 * Добавлен метод Alphabetical.anyMatch(String).
 * Добавлен метод Alphabetical.noneMatch(String).
-* Добавлен метод Alphabetical.stringToArrayCharacter(String).
+* Добавлен метод AbstractAlphabet.stringToArrayCharacter(String).
 * Добавлен плагин maven-assembly в pom.xml.
 * Добавлен плагин maven-compiler в pom.xml.
 * Добавлен плагин maven-dependency в pom.xml.
@@ -132,7 +129,7 @@
 ## v2.2.0 - 07.08.2022
 ### Добавлено
 * Добавлен метод Alphabetical.toArray().
-* Добавлен метод Alphabetical.getRandom().
+* Добавлен метод Alphabetical.getRandom(Integer).
 * Добавлен метод *Alphabet.equals(Object).
 * Добавлен метод *Alphabet.hashCode().
 
@@ -163,6 +160,6 @@
 * Добавлен греческий алфавит.
 * Добавлен белорусский алфавит.
 * Добавлен кириллический алфавит.
-* Добавлен метод AbstractAlphabet.getLetters().
-* Добавлен метод AbstractAlphabet.getLettersUpperCase().
-* Добавлен метод AbstractAlphabet.getLettersLowerCase().
+* Добавлен метод Alphabetical.getLetters().
+* Добавлен метод Alphabetical.getLettersUpperCase().
+* Добавлен метод Alphabetical.getLettersLowerCase().
