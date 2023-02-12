@@ -154,6 +154,14 @@ public interface Alphabetical
 	boolean isSortedAsc(@NotNull String string);
 
 	/**
+	 * Проверяет, расположены ли буквы в обратном алфавитном порядке.
+	 *
+	 * @param string строка.
+	 * @return {@code true}, если буквы расположены в обратном алфавитном порядке, иначе {@code false}.
+	 */
+	boolean isSortedDesc(@NotNull String string);
+
+	/**
 	 * Возвращает массив из букв алфавита.
 	 *
 	 * @return массив.

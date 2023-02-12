@@ -294,6 +294,38 @@ public abstract class AbstractAlphabet implements Alphabetical
 	}
 
 	/**
+	 * @see Alphabetical#isSortedDesc(String)
+	 */
+	@Override
+	public boolean isSortedDesc(@NotNull final String string)
+	{
+		Objects.requireNonNull(string);
+
+		if (!this.allMatch(string)) {
+			return false;
+		}
+
+		if (string.length() == 1) {
+			return true;
+		}
+
+		int lastIndex = this.letters.size() + 1;
+
+		for (char digit : string.toCharArray())
+		{
+			int nextIndex = this.letters.indexOf(digit);
+
+			if (lastIndex < nextIndex) {
+				return false;
+			}
+
+			lastIndex = nextIndex;
+		}
+
+		return true;
+	}
+
+	/**
 	 * @see Alphabetical#toArray()
 	 */
 	@NotNull

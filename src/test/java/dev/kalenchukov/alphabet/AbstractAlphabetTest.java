@@ -367,6 +367,34 @@ public class AbstractAlphabetTest
 	}
 
 	/**
+	 * Проверка метода {@link AbstractAlphabet#isSortedDesc(String)}.
+	 */
+	@ParameterizedTest
+	@ValueSource(strings = {
+		"в", "Я", "ББ", "ЁееддГб", "Лк",
+		"яЯюЮэЭьЬыЫъЪщЩшШчЧцЦхХфФуУтТсСрРпПоОнНмМлЛкКйЙиИзЗжЖёЁеЕдДгГвВбБаА",
+		"ЯЮЭЬЫЪЩШЧЦХФУТСРПОНМЛКЙИЗЖЁЕДГВБА",
+		"яюэьыъщшчцхфутсрпонмлкйизжёедгвба"
+	})
+	public void testIsSortedDesc(String value)
+	{
+		assertTrue(ALPHABET.isSortedDesc(value));
+	}
+
+	/**
+	 * Проверка метода {@link AbstractAlphabet#isSortedDesc(String)} с некорректным значением.
+	 */
+	@ParameterizedTest
+	@ValueSource(strings = {
+		"", "0", "аб", "Аб", "едг1вба",
+		"юЮэЭьЬыЫъЪщЩшШчЧцЦхХфФуУтТсСрРпПоОнНмМлЛкКйЙиИзЗжЖёЁеЕдДгГвВбБаАяЯ"
+	})
+	public void testIsSortedDescNotCorrect(String value)
+	{
+		assertFalse(ALPHABET.isSortedDesc(value));
+	}
+
+	/**
 	 * Проверка метода {@link AbstractAlphabet#toArray()}.
 	 */
 	@Test

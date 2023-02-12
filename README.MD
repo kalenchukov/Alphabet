@@ -236,6 +236,17 @@ alphabet.isSortedAsc("АбвгДеЁ");
 true
 ```
 
+#### Проверка расположения букв в обратном алфавитном порядке
+```java
+Alphabetical alphabet = new RussianAlphabet();
+alphabet.isSortedDesc("ЁеДгвбА");
+```
+
+Результат выполнения:
+```
+true
+```
+
 #### Получение буквы по позиции в алфавите
 ```java
 Alphabetical alphabet = new RussianAlphabet();
