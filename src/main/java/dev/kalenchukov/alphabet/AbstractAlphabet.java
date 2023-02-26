@@ -48,7 +48,9 @@ public abstract class AbstractAlphabet implements Alphabetical
 	}
 
 	/**
-	 * @see Alphabetical#get()
+	 * {@inheritDoc}
+	 *
+	 * @return {@inheritDoc}
 	 */
 	@Unmodifiable
 	@NotNull
@@ -59,7 +61,11 @@ public abstract class AbstractAlphabet implements Alphabetical
 	}
 
 	/**
-	 * @see Alphabetical#get(Integer, Integer)
+	 * {@inheritDoc}
+	 *
+	 * @param from {@inheritDoc}
+	 * @param to {@inheritDoc}
+	 * @return {@inheritDoc}
 	 */
 	@Unmodifiable
 	@NotNull
@@ -82,7 +88,10 @@ public abstract class AbstractAlphabet implements Alphabetical
 	}
 
 	/**
-	 * @see Alphabetical#getLetter(Integer)
+	 * {@inheritDoc}
+	 *
+	 * @param position {@inheritDoc}
+	 * @return {@inheritDoc}
 	 */
 	@Nullable
 	@Override
@@ -99,7 +108,10 @@ public abstract class AbstractAlphabet implements Alphabetical
 	}
 
 	/**
-	 * @see Alphabetical#allMatch(String)
+	 * {@inheritDoc}
+	 *
+	 * @param string {@inheritDoc}
+	 * @return {@inheritDoc}
 	 */
 	@Override
 	public boolean allMatch(@NotNull final String string)
@@ -115,7 +127,10 @@ public abstract class AbstractAlphabet implements Alphabetical
 	}
 
 	/**
-	 * @see Alphabetical#anyMatch(String)
+	 * {@inheritDoc}
+	 *
+	 * @param string {@inheritDoc}
+	 * @return {@inheritDoc}
 	 */
 	@Override
 	public boolean anyMatch(@NotNull final String string)
@@ -131,7 +146,10 @@ public abstract class AbstractAlphabet implements Alphabetical
 	}
 
 	/**
-	 * @see Alphabetical#noneMatch(String)
+	 * {@inheritDoc}
+	 *
+	 * @param string {@inheritDoc}
+	 * @return {@inheritDoc}
 	 */
 	@Override
 	public boolean noneMatch(@NotNull final String string)
@@ -147,7 +165,10 @@ public abstract class AbstractAlphabet implements Alphabetical
 	}
 
 	/**
-	 * @see Alphabetical#contains(Character)
+	 * {@inheritDoc}
+	 *
+	 * @param letter {@inheritDoc}
+	 * @return {@inheritDoc}
 	 */
 	@Override
 	public boolean contains(@NotNull final Character letter)
@@ -158,7 +179,10 @@ public abstract class AbstractAlphabet implements Alphabetical
 	}
 
 	/**
-	 * @see Alphabetical#getPosition(Character)
+	 * {@inheritDoc}
+	 *
+	 * @param letter {@inheritDoc}
+	 * @return {@inheritDoc}
 	 */
 	@Nullable
 	@Override
@@ -174,7 +198,9 @@ public abstract class AbstractAlphabet implements Alphabetical
 	}
 
 	/**
-	 * @see Alphabetical#getReverse()
+	 * {@inheritDoc}
+	 *
+	 * @return {@inheritDoc}
 	 */
 	@NotNull
 	@Unmodifiable
@@ -191,7 +217,9 @@ public abstract class AbstractAlphabet implements Alphabetical
 	}
 
 	/**
-	 * @see Alphabetical#getShuffle()
+	 * {@inheritDoc}
+	 *
+	 * @return {@inheritDoc}
 	 */
 	@NotNull
 	@Unmodifiable
@@ -218,7 +246,10 @@ public abstract class AbstractAlphabet implements Alphabetical
 	}
 
 	/**
-	 * @see Alphabetical#getRandom(Integer)
+	 * {@inheritDoc}
+	 *
+	 * @param count {@inheritDoc}
+	 * @return {@inheritDoc}
 	 */
 	@Unmodifiable
 	@NotNull
@@ -241,7 +272,10 @@ public abstract class AbstractAlphabet implements Alphabetical
 	}
 
 	/**
-	 * @see Alphabetical#statistics(String)
+	 * {@inheritDoc}
+	 *
+	 * @param string {@inheritDoc}
+	 * @return {@inheritDoc}
 	 */
 	@NotNull
 	@Override
@@ -262,7 +296,10 @@ public abstract class AbstractAlphabet implements Alphabetical
 	}
 
 	/**
-	 * @see Alphabetical#isSorted(String)
+	 * {@inheritDoc}
+	 *
+	 * @param string {@inheritDoc}
+	 * @return {@inheritDoc}
 	 */
 	@Override
 	public boolean isSorted(@NotNull final String string)
@@ -273,7 +310,10 @@ public abstract class AbstractAlphabet implements Alphabetical
 	}
 
 	/**
-	 * @see Alphabetical#isSortedAsc(String)
+	 * {@inheritDoc}
+	 *
+	 * @param string {@inheritDoc}
+	 * @return {@inheritDoc}
 	 */
 	@Override
 	public boolean isSortedAsc(@NotNull final String string)
@@ -305,7 +345,10 @@ public abstract class AbstractAlphabet implements Alphabetical
 	}
 
 	/**
-	 * @see Alphabetical#isSortedDesc(String)
+	 * {@inheritDoc}
+	 *
+	 * @param string {@inheritDoc}
+	 * @return {@inheritDoc}
 	 */
 	@Override
 	public boolean isSortedDesc(@NotNull final String string)
@@ -337,7 +380,9 @@ public abstract class AbstractAlphabet implements Alphabetical
 	}
 
 	/**
-	 * @see Alphabetical#toArray()
+	 * {@inheritDoc}
+	 *
+	 * @return {@inheritDoc}
 	 */
 	@NotNull
 	@Override
@@ -347,7 +392,10 @@ public abstract class AbstractAlphabet implements Alphabetical
 	}
 
 	/**
-	 * @see Alphabetical#toString(String)
+	 * {@inheritDoc}
+	 *
+	 * @param separator {@inheritDoc}
+	 * @return {@inheritDoc}
 	 */
 	@Override
 	@NotNull
@@ -368,7 +416,9 @@ public abstract class AbstractAlphabet implements Alphabetical
 	}
 
 	/**
-	 * @see Alphabetical#toString()
+	 * {@inheritDoc}
+	 *
+	 * @return {@inheritDoc}
 	 */
 	@Override
 	@NotNull

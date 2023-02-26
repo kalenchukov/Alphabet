@@ -61,7 +61,10 @@ public class BashkirAlphabet extends AbstractAlphabet implements AlphabeticalCas
 	}
 
 	/**
-	 * @see Alphabetical#equals(Object)
+	 * {@inheritDoc}
+	 *
+	 * @param obj {@inheritDoc}
+	 * @return {@inheritDoc}
 	 */
 	@Override
 	public boolean equals(@Nullable final Object obj)
@@ -88,7 +91,9 @@ public class BashkirAlphabet extends AbstractAlphabet implements AlphabeticalCas
 	}
 
 	/**
-	 * @see Alphabetical#hashCode()
+	 * {@inheritDoc}
+	 *
+	 * @return {@inheritDoc}
 	 */
 	@Override
 	public int hashCode()
@@ -125,7 +130,10 @@ public class BashkirAlphabet extends AbstractAlphabet implements AlphabeticalCas
 		}
 
 		/**
-		 * @see Alphabetical#equals(Object)
+		 * {@inheritDoc}
+		 *
+		 * @param obj {@inheritDoc}
+		 * @return {@inheritDoc}
 		 */
 		@Override
 		public boolean equals(@Nullable final Object obj)
@@ -152,7 +160,9 @@ public class BashkirAlphabet extends AbstractAlphabet implements AlphabeticalCas
 		}
 
 		/**
-		 * @see Alphabetical#hashCode()
+		 * {@inheritDoc}
+		 *
+		 * @return {@inheritDoc}
 		 */
 		@Override
 		public int hashCode()
@@ -190,7 +200,10 @@ public class BashkirAlphabet extends AbstractAlphabet implements AlphabeticalCas
 		}
 
 		/**
-		 * @see Alphabetical#equals(Object)
+		 * {@inheritDoc}
+		 *
+		 * @param obj {@inheritDoc}
+		 * @return {@inheritDoc}
 		 */
 		@Override
 		public boolean equals(@Nullable final Object obj)
@@ -217,7 +230,9 @@ public class BashkirAlphabet extends AbstractAlphabet implements AlphabeticalCas
 		}
 
 		/**
-		 * @see Alphabetical#hashCode()
+		 * {@inheritDoc}
+		 *
+		 * @return {@inheritDoc}
 		 */
 		@Override
 		public int hashCode()

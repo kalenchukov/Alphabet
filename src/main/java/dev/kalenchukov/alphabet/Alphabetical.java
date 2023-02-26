@@ -179,26 +179,36 @@ public interface Alphabetical
 	Character @NotNull [] toArray();
 
 	/**
+	 * Проверяет равенство объектов.
+	 *
+	 * @param obj сравниваемый объект.
+	 * @return {@code true}, если объекты равны, иначе {@code false}.
 	 * @see Object#equals(Object)
 	 */
 	boolean equals(@Nullable Object obj);
 
 	/**
+	 * Возвращает значение объекта в виде числа.
+	 *
+	 * @return число.
 	 * @see Object#hashCode()
 	 */
 	int hashCode();
 
 	/**
+	 * Возвращает значение объекта в виде строки.
+	 *
+	 * @return строку.
 	 * @see Object#toString()
 	 */
 	@NotNull
 	String toString();
 
 	/**
-	 * Возвращает строковое представление букв алфавита.
+	 * Возвращает значение объекта в виде строки.
 	 *
-	 * @param separator разделитель букв.
-	 * @return строку из букв алфавита.
+	 * @param separator разделитель.
+	 * @return строку.
 	 */
 	@NotNull
 	String toString(@NotNull String separator);
