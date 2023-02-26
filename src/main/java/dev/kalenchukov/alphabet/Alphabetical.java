@@ -106,8 +106,8 @@ public interface Alphabetical
 	 * @param string строка.
 	 * @return коллекцию из букв и количества вхождений.<br>
 	 * <ul>
-	 *     <li>Ket - буква</li>
-	 *     <li>Value - количество вхождений</li>
+	 *     <li>key - буква</li>
+	 *     <li>value - количество вхождений</li>
 	 * </ul>
 	 */
 	@NotNull
