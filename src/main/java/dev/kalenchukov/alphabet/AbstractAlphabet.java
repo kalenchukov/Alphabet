@@ -25,6 +25,7 @@ import org.jetbrains.annotations.Unmodifiable;
 
 import java.util.*;
 import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 /**
  * Класс абстрактного алфавита.
@@ -269,6 +270,27 @@ public abstract class AbstractAlphabet implements Alphabetical
 		}
 
 		return Collections.unmodifiableList(letters);
+	}
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * @param value {@inheritDoc}
+	 * @return {@inheritDoc}
+	 */
+	@NotNull
+	@Override
+	public String clear(@NotNull final String value)
+	{
+		StringBuilder string = new StringBuilder();
+
+		Stream.of(this.stringToArrayCharacter(value)).forEach(character -> {
+			if (this.letters.contains(character)) {
+				string.append(character);
+			}
+		});
+
+		return string.toString();
 	}
 
 	/**

@@ -101,6 +101,15 @@ public interface Alphabetical
 	Character getLetter(@NotNull @Range(from = 0, to = Integer.MAX_VALUE) Integer position);
 
 	/**
+	 * Возвращает строку в которой удалены все символы не принадлежащие алфавиту.
+	 *
+	 * @param value строка.
+	 * @return строку.
+	 */
+	@NotNull
+	String clear(@NotNull String value);
+
+	/**
 	 * Подсчитывает количество вхождений каждой буквы в строку.
 	 *
 	 * @param string строка.

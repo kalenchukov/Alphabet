@@ -225,10 +225,21 @@ alphabet.noneMatch("Kamchatka");
 true
 ```
 
+#### Удаляет все символы не принадлежащие алфавиту
+```java
+Alphabetical alphabet = new RussianAlphabet();
+alphabet.clear("Солнце мое, взгляни на меня - My ладонь превратилась в кулак");
+```
+
+Результат выполнения:
+```
+Солнцемоевзглянинаменяладоньпревратиласьвкулак
+```
+
 #### Проверка расположения букв в алфавитном порядке или обратном алфавитном порядке
 ```java
 Alphabetical alphabet = new RussianAlphabet();
-alphabet.isSortedAsc("АбДеЁкЛМЯ");
+alphabet.isSorted("АбДеЁкЛМЯ");
 ```
 
 Результат выполнения:

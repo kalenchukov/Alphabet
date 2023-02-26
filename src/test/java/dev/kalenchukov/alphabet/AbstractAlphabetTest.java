@@ -339,6 +339,18 @@ public class AbstractAlphabetTest
 	}
 
 	/**
+	 * Проверка метода {@link AbstractAlphabet#clear(String)}.
+	 */
+	@Test
+	public void testClear()
+	{
+		assertEquals(
+			"Солнцемоевзглянинаменяладоньпревратиласьвкулак",
+			ALPHABET.clear("Солнце мое, взгляни на меня - My ладонь превратилась в кулак")
+		);
+	}
+
+	/**
 	 * Проверка метода {@link AbstractAlphabet#isSorted(String)}.
 	 */
 	@ParameterizedTest

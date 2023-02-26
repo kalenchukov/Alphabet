@@ -1,4 +1,8 @@
 # Журнал изменений
+## vX.X.X - XX.XX.XXXX
+### Добавлено
+* Добавлен метод Alphabetical.clear(String).
+
 ## v2.6.0 - 12.02.2023
 ### Добавлено
 * Добавлен метод Alphabetical.isSorted(String).
