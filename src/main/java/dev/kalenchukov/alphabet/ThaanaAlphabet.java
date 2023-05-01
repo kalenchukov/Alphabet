@@ -27,6 +27,8 @@ import java.util.Objects;
 
 /**
  * Класс букв алфавита тана.
+ *
+ * @author Aleksey Kalenchukov
  */
 public class ThaanaAlphabet extends AbstractAlphabet implements AlphabeticalCase
 {

@@ -27,6 +27,8 @@ import java.util.Objects;
 
 /**
  * Класс букв арабского алфавита.
+ *
+ * @author Aleksey Kalenchukov
  */
 public class ArabAlphabet extends AbstractAlphabet implements AlphabeticalCase
 {

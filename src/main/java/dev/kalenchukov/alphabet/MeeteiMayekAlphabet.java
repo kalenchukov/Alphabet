@@ -27,6 +27,8 @@ import java.util.Objects;
 
 /**
  * Класс букв алфавита манипури.
+ *
+ * @author Aleksey Kalenchukov
  */
 public class MeeteiMayekAlphabet extends AbstractAlphabet implements AlphabeticalCase
 {

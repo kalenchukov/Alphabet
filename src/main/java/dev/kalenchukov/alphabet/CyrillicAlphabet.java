@@ -27,6 +27,8 @@ import java.util.Objects;
 
 /**
  * Класс букв кириллического алфавита.
+ *
+ * @author Aleksey Kalenchukov
  */
 public class CyrillicAlphabet extends AbstractAlphabet
 {

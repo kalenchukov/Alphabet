@@ -27,6 +27,8 @@ import java.util.Objects;
 
 /**
  * Класс букв чамского алфавита.
+ *
+ * @author Aleksey Kalenchukov
  */
 public class ChamAlphabet extends AbstractAlphabet implements AlphabeticalCase
 {

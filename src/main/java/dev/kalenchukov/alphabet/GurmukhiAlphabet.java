@@ -27,6 +27,8 @@ import java.util.Objects;
 
 /**
  * Класс букв алфавита гурмукхи.
+ *
+ * @author Aleksey Kalenchukov
  */
 public class GurmukhiAlphabet extends AbstractAlphabet implements AlphabeticalCase
 {

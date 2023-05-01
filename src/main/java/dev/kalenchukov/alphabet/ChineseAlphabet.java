@@ -27,6 +27,8 @@ import java.util.Objects;
 
 /**
  * Класс букв пиньинь алфавита.
+ *
+ * @author Aleksey Kalenchukov
  */
 public class ChineseAlphabet extends AbstractAlphabet implements AlphabeticalCase
 {
@@ -98,6 +100,8 @@ public class ChineseAlphabet extends AbstractAlphabet implements AlphabeticalCas
 
 	/**
 	 * Класс прописных букв пиньинь алфавита.
+	 *
+	 * @author Aleksey Kalenchukov
 	 */
 	public static class UpperCase extends AbstractAlphabet implements AlphabeticalUpperCase
 	{
@@ -166,6 +170,8 @@ public class ChineseAlphabet extends AbstractAlphabet implements AlphabeticalCas
 
 	/**
 	 * Класс строчных букв пиньинь алфавита.
+	 *
+	 * @author Aleksey Kalenchukov
 	 */
 	public static class LowerCase extends AbstractAlphabet implements AlphabeticalLowerCase
 	{

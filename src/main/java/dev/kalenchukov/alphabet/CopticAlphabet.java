@@ -27,6 +27,8 @@ import java.util.Objects;
 
 /**
  * Класс букв коптского алфавита.
+ *
+ * @author Aleksey Kalenchukov
  */
 public class CopticAlphabet extends AbstractAlphabet implements AlphabeticalCase
 {
@@ -105,6 +107,8 @@ public class CopticAlphabet extends AbstractAlphabet implements AlphabeticalCase
 
 	/**
 	 * Класс прописных букв коптского алфавита.
+	 *
+	 * @author Aleksey Kalenchukov
 	 */
 	public static class UpperCase extends AbstractAlphabet implements AlphabeticalUpperCase
 	{
@@ -176,6 +180,8 @@ public class CopticAlphabet extends AbstractAlphabet implements AlphabeticalCase
 
 	/**
 	 * Класс строчных букв коптского алфавита.
+	 *
+	 * @author Aleksey Kalenchukov
 	 */
 	public static class LowerCase extends AbstractAlphabet implements AlphabeticalLowerCase
 	{

@@ -27,6 +27,8 @@ import java.util.Objects;
 
 /**
  * Класс букв алфавита кайях ли.
+ *
+ * @author Aleksey Kalenchukov
  */
 public class KayahLiAlphabet extends AbstractAlphabet implements AlphabeticalCase
 {

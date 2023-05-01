@@ -27,6 +27,8 @@ import java.util.Objects;
 
 /**
  * Класс букв алфавита глаголицы.
+ *
+ * @author Aleksey Kalenchukov
  */
 public class GlagoliticAlphabet extends AbstractAlphabet implements AlphabeticalCase
 {

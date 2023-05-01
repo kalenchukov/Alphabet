@@ -27,6 +27,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * Класс проверки методов класса {@link PhagsPaAlphabet}.
+ *
+ * @author Aleksey Kalenchukov
  */
 public class PhagsPaAlphabetTest
 {

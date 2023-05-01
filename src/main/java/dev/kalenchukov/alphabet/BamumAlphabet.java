@@ -27,6 +27,8 @@ import java.util.Objects;
 
 /**
  * Класс букв алфавита бамум.
+ *
+ * @author Aleksey Kalenchukov
  */
 public class BamumAlphabet extends AbstractAlphabet implements AlphabeticalCase
 {

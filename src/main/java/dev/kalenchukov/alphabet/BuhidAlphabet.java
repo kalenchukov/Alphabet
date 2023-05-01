@@ -27,6 +27,8 @@ import java.util.Objects;
 
 /**
  * Класс букв алфавита бухид.
+ *
+ * @author Aleksey Kalenchukov
  */
 public class BuhidAlphabet extends AbstractAlphabet implements AlphabeticalCase
 {

@@ -27,6 +27,8 @@ import java.util.Objects;
 
 /**
  * Класс букв украинского алфавита.
+ *
+ * @author Aleksey Kalenchukov
  */
 public class UkrainianAlphabet extends AbstractAlphabet implements AlphabeticalCase
 {
@@ -100,6 +102,8 @@ public class UkrainianAlphabet extends AbstractAlphabet implements AlphabeticalC
 
 	/**
 	 * Класс прописных букв украинского алфавита.
+	 *
+	 * @author Aleksey Kalenchukov
 	 */
 	public static class UpperCase extends AbstractAlphabet implements AlphabeticalUpperCase
 	{
@@ -169,6 +173,8 @@ public class UkrainianAlphabet extends AbstractAlphabet implements AlphabeticalC
 
 	/**
 	 * Класс строчных букв украинского алфавита.
+	 *
+	 * @author Aleksey Kalenchukov
 	 */
 	public static class LowerCase extends AbstractAlphabet implements AlphabeticalLowerCase
 	{

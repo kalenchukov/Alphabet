@@ -27,6 +27,8 @@ import java.util.Objects;
 
 /**
  * Класс букв французского алфавита.
+ *
+ * @author Aleksey Kalenchukov
  */
 public class FrenchAlphabet extends AbstractAlphabet implements AlphabeticalCase
 {
@@ -98,6 +100,8 @@ public class FrenchAlphabet extends AbstractAlphabet implements AlphabeticalCase
 
 	/**
 	 * Класс прописных букв французского алфавита.
+	 *
+	 * @author Aleksey Kalenchukov
 	 */
 	public static class UpperCase extends AbstractAlphabet implements AlphabeticalUpperCase
 	{
@@ -166,6 +170,8 @@ public class FrenchAlphabet extends AbstractAlphabet implements AlphabeticalCase
 
 	/**
 	 * Класс строчных букв французского алфавита.
+	 *
+	 * @author Aleksey Kalenchukov
 	 */
 	public static class LowerCase extends AbstractAlphabet implements AlphabeticalLowerCase
 	{

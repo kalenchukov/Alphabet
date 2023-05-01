@@ -27,6 +27,8 @@ import java.util.Objects;
 
 /**
  * Класс букв огамического алфавита.
+ *
+ * @author Aleksey Kalenchukov
  */
 public class OghamAlphabet extends AbstractAlphabet implements AlphabeticalCase
 {

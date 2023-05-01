@@ -27,6 +27,8 @@ import java.util.Objects;
 
 /**
  * Класс букв кхмерского алфавита.
+ *
+ * @author Aleksey Kalenchukov
  */
 public class KhmerAlphabet extends AbstractAlphabet implements AlphabeticalCase
 {

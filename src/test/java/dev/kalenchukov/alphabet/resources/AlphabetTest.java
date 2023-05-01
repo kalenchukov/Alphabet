@@ -25,6 +25,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * Класс проверки констант и методов перечисления {@link Alphabet}.
+ *
+ * @author Aleksey Kalenchukov
  */
 public class AlphabetTest
 {

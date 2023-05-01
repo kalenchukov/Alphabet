@@ -27,6 +27,8 @@ import java.util.Objects;
 
 /**
  * Класс букв алфавита бопомофо.
+ *
+ * @author Aleksey Kalenchukov
  */
 public class BopomofoAlphabet extends AbstractAlphabet implements AlphabeticalCase
 {

@@ -27,6 +27,8 @@ import java.util.Objects;
 
 /**
  * Класс букв слогового алфавита йи.
+ *
+ * @author Aleksey Kalenchukov
  */
 public class YiSyllablesAlphabet extends AbstractAlphabet implements AlphabeticalCase
 {

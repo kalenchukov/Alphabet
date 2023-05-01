@@ -27,6 +27,8 @@ import java.util.Objects;
 
 /**
  * Класс букв нового алфавита лы.
+ *
+ * @author Aleksey Kalenchukov
  */
 public class NewTaiLueAlphabet extends AbstractAlphabet implements AlphabeticalCase
 {

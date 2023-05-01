@@ -27,6 +27,8 @@ import java.util.Objects;
 
 /**
  * Класс букв испанского алфавита.
+ *
+ * @author Aleksey Kalenchukov
  */
 public class SpanishAlphabet extends AbstractAlphabet implements AlphabeticalCase
 {
@@ -98,6 +100,8 @@ public class SpanishAlphabet extends AbstractAlphabet implements AlphabeticalCas
 
 	/**
 	 * Класс прописных букв испанского алфавита.
+	 *
+	 * @author Aleksey Kalenchukov
 	 */
 	public static class UpperCase extends AbstractAlphabet implements AlphabeticalUpperCase
 	{
@@ -166,6 +170,8 @@ public class SpanishAlphabet extends AbstractAlphabet implements AlphabeticalCas
 
 	/**
 	 * Класс строчных букв испанского алфавита.
+	 *
+	 * @author Aleksey Kalenchukov
 	 */
 	public static class LowerCase extends AbstractAlphabet implements AlphabeticalLowerCase
 	{

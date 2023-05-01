@@ -27,6 +27,8 @@ import java.util.Objects;
 
 /**
  * Класс букв бирманского алфавита.
+ *
+ * @author Aleksey Kalenchukov
  */
 public class MyanmarAlphabet extends AbstractAlphabet implements AlphabeticalCase
 {

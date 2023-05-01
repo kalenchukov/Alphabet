@@ -27,6 +27,8 @@ import java.util.Objects;
 
 /**
  * Класс букв алфавита лимбу.
+ *
+ * @author Aleksey Kalenchukov
  */
 public class LimbuAlphabet extends AbstractAlphabet implements AlphabeticalCase
 {

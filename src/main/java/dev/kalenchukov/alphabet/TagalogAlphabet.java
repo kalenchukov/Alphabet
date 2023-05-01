@@ -27,6 +27,8 @@ import java.util.Objects;
 
 /**
  * Класс букв тагальского алфавита.
+ *
+ * @author Aleksey Kalenchukov
  */
 public class TagalogAlphabet extends AbstractAlphabet implements AlphabeticalCase
 {

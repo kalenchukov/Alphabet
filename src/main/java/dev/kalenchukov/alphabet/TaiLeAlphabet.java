@@ -27,6 +27,8 @@ import java.util.Objects;
 
 /**
  * Класс букв алфавита лы.
+ *
+ * @author Aleksey Kalenchukov
  */
 public class TaiLeAlphabet extends AbstractAlphabet implements AlphabeticalCase
 {

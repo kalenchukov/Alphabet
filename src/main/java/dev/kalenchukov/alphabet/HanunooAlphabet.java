@@ -27,6 +27,8 @@ import java.util.Objects;
 
 /**
  * Класс букв алфавита хануноо.
+ *
+ * @author Aleksey Kalenchukov
  */
 public class HanunooAlphabet extends AbstractAlphabet implements AlphabeticalCase
 {

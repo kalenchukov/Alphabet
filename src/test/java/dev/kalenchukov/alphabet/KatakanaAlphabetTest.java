@@ -27,6 +27,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * Класс проверки методов класса {@link KatakanaAlphabet}.
+ *
+ * @author Aleksey Kalenchukov
  */
 public class KatakanaAlphabetTest
 {

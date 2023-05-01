@@ -27,6 +27,8 @@ import java.util.Objects;
 
 /**
  * Класс букв чешского алфавита.
+ *
+ * @author Aleksey Kalenchukov
  */
 public class CzechAlphabet extends AbstractAlphabet implements AlphabeticalCase
 {

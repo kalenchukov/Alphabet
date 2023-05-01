@@ -27,6 +27,8 @@ import java.util.Objects;
 
 /**
  * Класс букв алфавита малаялам.
+ *
+ * @author Aleksey Kalenchukov
  */
 public class MalayalamAlphabet extends AbstractAlphabet implements AlphabeticalCase
 {

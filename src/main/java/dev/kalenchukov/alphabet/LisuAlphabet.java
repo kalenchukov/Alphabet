@@ -27,6 +27,8 @@ import java.util.Objects;
 
 /**
  * Класс букв алфавита лису.
+ *
+ * @author Aleksey Kalenchukov
  */
 public class LisuAlphabet extends AbstractAlphabet implements AlphabeticalCase
 {

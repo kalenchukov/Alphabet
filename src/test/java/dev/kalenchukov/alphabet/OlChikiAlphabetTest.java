@@ -27,6 +27,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * Класс проверки методов класса {@link OlChikiAlphabet}.
+ *
+ * @author Aleksey Kalenchukov
  */
 public class OlChikiAlphabetTest
 {

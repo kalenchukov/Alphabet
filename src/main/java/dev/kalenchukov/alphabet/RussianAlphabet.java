@@ -27,6 +27,8 @@ import java.util.Objects;
 
 /**
  * Класс букв русского алфавита.
+ *
+ * @author Aleksey Kalenchukov
  */
 public class RussianAlphabet extends AbstractAlphabet implements AlphabeticalCase
 {
@@ -100,6 +102,8 @@ public class RussianAlphabet extends AbstractAlphabet implements AlphabeticalCas
 
 	/**
 	 * Класс прописных букв русского алфавита.
+	 *
+	 * @author Aleksey Kalenchukov
 	 */
 	public static class UpperCase extends AbstractAlphabet implements AlphabeticalUpperCase
 	{
@@ -169,6 +173,8 @@ public class RussianAlphabet extends AbstractAlphabet implements AlphabeticalCas
 
 	/**
 	 * Класс строчных букв русского алфавита.
+	 *
+	 * @author Aleksey Kalenchukov
 	 */
 	public static class LowerCase extends AbstractAlphabet implements AlphabeticalLowerCase
 	{

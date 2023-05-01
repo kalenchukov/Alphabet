@@ -27,6 +27,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * Класс проверки методов класса {@link GlagoliticAlphabet}.
+ *
+ * @author Aleksey Kalenchukov
  */
 public class GlagoliticAlphabetTest
 {

@@ -27,6 +27,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * Класс проверки методов класса {@link UkrainianAlphabet}.
+ *
+ * @author Aleksey Kalenchukov
  */
 public class UkrainianAlphabetTest
 {

@@ -27,6 +27,8 @@ import java.util.Objects;
 
 /**
  * Класс букв алфавита чероки.
+ *
+ * @author Aleksey Kalenchukov
  */
 public class CherokeeAlphabet extends AbstractAlphabet implements AlphabeticalCase
 {

@@ -27,6 +27,8 @@ import java.util.Objects;
 
 /**
  * Класс букв алфавита каннада.
+ *
+ * @author Aleksey Kalenchukov
  */
 public class KannadaAlphabet extends AbstractAlphabet implements AlphabeticalCase
 {

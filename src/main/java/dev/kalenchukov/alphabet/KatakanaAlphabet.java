@@ -27,6 +27,8 @@ import java.util.Objects;
 
 /**
  * Класс букв алфавита катакана.
+ *
+ * @author Aleksey Kalenchukov
  */
 public class KatakanaAlphabet extends AbstractAlphabet implements AlphabeticalCase
 {

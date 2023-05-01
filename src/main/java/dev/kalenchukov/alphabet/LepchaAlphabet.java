@@ -27,6 +27,8 @@ import java.util.Objects;
 
 /**
  * Класс букв алфавита лепча.
+ *
+ * @author Aleksey Kalenchukov
  */
 public class LepchaAlphabet extends AbstractAlphabet implements AlphabeticalCase
 {

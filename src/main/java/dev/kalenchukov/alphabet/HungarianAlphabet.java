@@ -27,6 +27,8 @@ import java.util.Objects;
 
 /**
  * Класс букв венгерского алфавита.
+ *
+ * @author Aleksey Kalenchukov
  */
 public class HungarianAlphabet extends AbstractAlphabet implements AlphabeticalCase
 {

@@ -27,6 +27,8 @@ import java.util.Objects;
 
 /**
  * Класс букв алфавита тифанаг.
+ *
+ * @author Aleksey Kalenchukov
  */
 public class TifinaghAlphabet extends AbstractAlphabet implements AlphabeticalCase
 {

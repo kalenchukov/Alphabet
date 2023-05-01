@@ -27,6 +27,8 @@ import java.util.Objects;
 
 /**
  * Класс букв польского алфавита.
+ *
+ * @author Aleksey Kalenchukov
  */
 public class PolishAlphabet extends AbstractAlphabet implements AlphabeticalCase
 {
@@ -100,6 +102,8 @@ public class PolishAlphabet extends AbstractAlphabet implements AlphabeticalCase
 
 	/**
 	 * Класс прописных букв польского алфавита.
+	 *
+	 * @author Aleksey Kalenchukov
 	 */
 	public static class UpperCase extends AbstractAlphabet implements AlphabeticalUpperCase
 	{
@@ -169,6 +173,8 @@ public class PolishAlphabet extends AbstractAlphabet implements AlphabeticalCase
 
 	/**
 	 * Класс строчных букв польского алфавита.
+	 *
+	 * @author Aleksey Kalenchukov
 	 */
 	public static class LowerCase extends AbstractAlphabet implements AlphabeticalLowerCase
 	{

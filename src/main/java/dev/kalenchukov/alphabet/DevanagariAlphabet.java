@@ -27,6 +27,8 @@ import java.util.Objects;
 
 /**
  * Класс букв алфавита деванагари.
+ *
+ * @author Aleksey Kalenchukov
  */
 public class DevanagariAlphabet extends AbstractAlphabet implements AlphabeticalCase
 {

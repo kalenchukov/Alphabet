@@ -27,6 +27,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * Класс проверки методов класса {@link ItalianAlphabet.UpperCase}.
+ *
+ * @author Aleksey Kalenchukov
  */
 public class ItalianAlphabetUpperCaseTest
 {

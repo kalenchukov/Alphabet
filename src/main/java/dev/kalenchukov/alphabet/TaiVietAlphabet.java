@@ -27,6 +27,8 @@ import java.util.Objects;
 
 /**
  * Класс букв алфавита тай-вьет.
+ *
+ * @author Aleksey Kalenchukov
  */
 public class TaiVietAlphabet extends AbstractAlphabet implements AlphabeticalCase
 {

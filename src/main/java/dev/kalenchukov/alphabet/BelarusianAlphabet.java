@@ -27,6 +27,8 @@ import java.util.Objects;
 
 /**
  * Класс букв белорусского алфавита.
+ *
+ * @author Aleksey Kalenchukov
  */
 public class BelarusianAlphabet extends AbstractAlphabet implements AlphabeticalCase
 {
@@ -100,6 +102,8 @@ public class BelarusianAlphabet extends AbstractAlphabet implements Alphabetical
 
 	/**
 	 * Класс прописных букв белорусского алфавита.
+	 *
+	 * @author Aleksey Kalenchukov
 	 */
 	public static class UpperCase extends AbstractAlphabet implements AlphabeticalUpperCase
 	{
@@ -169,6 +173,8 @@ public class BelarusianAlphabet extends AbstractAlphabet implements Alphabetical
 
 	/**
 	 * Класс строчных букв белорусского алфавита.
+	 *
+	 * @author Aleksey Kalenchukov
 	 */
 	public static class LowerCase extends AbstractAlphabet implements AlphabeticalLowerCase
 	{

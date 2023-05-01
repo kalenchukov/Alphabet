@@ -27,6 +27,8 @@ import java.util.Objects;
 
 /**
  * Класс букв армянского алфавита.
+ *
+ * @author Aleksey Kalenchukov
  */
 public class ArmenianAlphabet extends AbstractAlphabet implements AlphabeticalCase
 {
@@ -102,6 +104,8 @@ public class ArmenianAlphabet extends AbstractAlphabet implements AlphabeticalCa
 
 	/**
 	 * Класс прописных букв армянского алфавита.
+	 *
+	 * @author Aleksey Kalenchukov
 	 */
 	public static class UpperCase extends AbstractAlphabet implements AlphabeticalUpperCase
 	{
@@ -172,6 +176,8 @@ public class ArmenianAlphabet extends AbstractAlphabet implements AlphabeticalCa
 
 	/**
 	 * Класс строчных букв армянского алфавита.
+	 *
+	 * @author Aleksey Kalenchukov
 	 */
 	public static class LowerCase extends AbstractAlphabet implements AlphabeticalLowerCase
 	{
