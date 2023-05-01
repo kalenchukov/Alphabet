@@ -20,6 +20,8 @@ package dev.kalenchukov.alphabet;
 
 /**
  * Интерфейс для реализации алфавита строчных букв.
+ *
+ * @author Aleksey Kalenchukov
  */
 public interface AlphabeticalLowerCase extends Alphabetical
 {

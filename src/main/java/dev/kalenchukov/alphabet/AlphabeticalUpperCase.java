@@ -20,6 +20,8 @@ package dev.kalenchukov.alphabet;
 
 /**
  * Интерфейс для реализации алфавита прописных букв.
+ *
+ * @author Aleksey Kalenchukov
  */
 public interface AlphabeticalUpperCase extends Alphabetical
 {

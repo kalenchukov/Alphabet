@@ -28,6 +28,8 @@ import java.util.Map;
 
 /**
  * Интерфейс для реализации алфавита.
+ *
+ * @author Aleksey Kalenchukov
  */
 public interface Alphabetical
 {

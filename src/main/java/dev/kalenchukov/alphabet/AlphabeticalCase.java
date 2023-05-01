@@ -20,6 +20,8 @@ package dev.kalenchukov.alphabet;
 
 /**
  * Интерфейс для реализации регистровых алфавитов.
+ *
+ * @author Aleksey Kalenchukov
  */
 public interface AlphabeticalCase extends Alphabetical
 {
