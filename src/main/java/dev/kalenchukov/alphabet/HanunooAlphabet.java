@@ -37,7 +37,7 @@ public final class HanunooAlphabet extends AbstractAlphabet implements Alphabeti
 	 */
 	@Unmodifiable
 	@NotNull
-	public static final List<@NotNull Character> LETTERS = List.of(
+	private static final List<@NotNull Character> LETTERS = List.of(
 			'\u1720', '\u1721', '\u1722', '\u1723', '\u1724', '\u1725', 
 			'\u1726', '\u1727', '\u1728', '\u1729', '\u172A', '\u172B', 
 			'\u172C', '\u172D', '\u172E', '\u172F', '\u1730', '\u1731', 

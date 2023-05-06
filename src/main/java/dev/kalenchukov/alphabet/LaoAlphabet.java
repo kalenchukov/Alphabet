@@ -37,7 +37,7 @@ public final class LaoAlphabet extends AbstractAlphabet implements AlphabeticalC
 	 */
 	@Unmodifiable
 	@NotNull
-	public static final List<@NotNull Character> LETTERS = List.of(
+	private static final List<@NotNull Character> LETTERS = List.of(
 			'\u0E81', '\u0E82', '\u0E84', '\u0E87', '\u0E88', '\u0EAA', 
 			'\u0E8A', '\u0E8D', '\u0E94', '\u0E95', '\u0E96', '\u0E97', 
 			'\u0E99', '\u0E9A', '\u0E9B', '\u0E9C', '\u0E9D', '\u0E9E', 

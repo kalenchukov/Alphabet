@@ -37,7 +37,7 @@ public final class KhmerAlphabet extends AbstractAlphabet implements Alphabetica
 	 */
 	@Unmodifiable
 	@NotNull
-	public static final List<@NotNull Character> LETTERS = List.of(
+	private static final List<@NotNull Character> LETTERS = List.of(
 			'\u1780', '\u1781', '\u1782', '\u1783', '\u1784', '\u1785', 
 			'\u1786', '\u1787', '\u1788', '\u1789', '\u178A', '\u178B', 
 			'\u178C', '\u178D', '\u178E', '\u178F', '\u1790', '\u1791', 

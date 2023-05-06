@@ -37,7 +37,7 @@ public final class TagalogAlphabet extends AbstractAlphabet implements Alphabeti
 	 */
 	@Unmodifiable
 	@NotNull
-	public static final List<@NotNull Character> LETTERS = List.of(
+	private static final List<@NotNull Character> LETTERS = List.of(
 			'\u1700', '\u1701', '\u1702', '\u1703', '\u1704', '\u1705', 
 			'\u1706', '\u1707', '\u1708', '\u1709', '\u170A', '\u170B', 
 			'\u170C', '\u170E', '\u170F', '\u1710', '\u1711', '\u1712',

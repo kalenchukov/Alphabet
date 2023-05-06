@@ -37,7 +37,7 @@ public final class ThaanaAlphabet extends AbstractAlphabet implements Alphabetic
 	 */
 	@Unmodifiable
 	@NotNull
-	public static final List<@NotNull Character> LETTERS = List.of(
+	private static final List<@NotNull Character> LETTERS = List.of(
 			'\u0780', '\u0781', '\u0782', '\u0783', '\u0784', '\u0785', 
 			'\u0786', '\u0787', '\u0788', '\u0789', '\u078A', '\u078B', 
 			'\u078C', '\u078D', '\u078E', '\u078F', '\u0790', '\u0791', 

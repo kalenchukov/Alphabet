@@ -37,7 +37,7 @@ public final class LepchaAlphabet extends AbstractAlphabet implements Alphabetic
 	 */
 	@Unmodifiable
 	@NotNull
-	public static final List<@NotNull Character> LETTERS = List.of(
+	private static final List<@NotNull Character> LETTERS = List.of(
 			'\u1C00', '\u1C01', '\u1C02', '\u1C03', '\u1C04', '\u1C05', 
 			'\u1C06', '\u1C07', '\u1C08', '\u1C09', '\u1C0A', '\u1C0B', 
 			'\u1C0C', '\u1C0D', '\u1C0E', '\u1C0F', '\u1C10', '\u1C11', 

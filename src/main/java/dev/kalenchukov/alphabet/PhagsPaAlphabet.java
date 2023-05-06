@@ -37,7 +37,7 @@ public final class PhagsPaAlphabet extends AbstractAlphabet implements Alphabeti
 	 */
 	@Unmodifiable
 	@NotNull
-	public static final List<@NotNull Character> LETTERS = List.of(
+	private static final List<@NotNull Character> LETTERS = List.of(
 			'\uA840', '\uA841', '\uA842', '\uA843', '\uA844', '\uA845', 
 			'\uA846', '\uA847', '\uA848', '\uA849', '\uA84A', '\uA84B', 
 			'\uA84C', '\uA84D', '\uA84E', '\uA84F', '\uA850', '\uA851', 

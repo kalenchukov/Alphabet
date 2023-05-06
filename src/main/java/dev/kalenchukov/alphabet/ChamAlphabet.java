@@ -37,7 +37,7 @@ public final class ChamAlphabet extends AbstractAlphabet implements Alphabetical
 	 */
 	@Unmodifiable
 	@NotNull
-	public static final List<@NotNull Character> LETTERS = List.of(
+	private static final List<@NotNull Character> LETTERS = List.of(
 			'\uAA00', '\uAA01', '\uAA02', '\uAA03', '\uAA04', '\uAA05', 
 			'\uAA06', '\uAA07', '\uAA08', '\uAA09', '\uAA0A', '\uAA0B', 
 			'\uAA0C', '\uAA0D', '\uAA0E', '\uAA0F', '\uAA10', '\uAA11', 

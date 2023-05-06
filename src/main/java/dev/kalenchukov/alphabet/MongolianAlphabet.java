@@ -37,7 +37,7 @@ public final class MongolianAlphabet extends AbstractAlphabet implements Alphabe
 	 */
 	@Unmodifiable
 	@NotNull
-	public static final List<@NotNull Character> LETTERS = List.of(
+	private static final List<@NotNull Character> LETTERS = List.of(
 			'\u1820', '\u1821', '\u1822', '\u1823', '\u1824', '\u1825', 
 			'\u1826', '\u1827', '\u1828', '\u1829', '\u182A', '\u182B', 
 			'\u182C', '\u182D', '\u182E', '\u182F', '\u1830', '\u1831', 

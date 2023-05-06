@@ -37,7 +37,7 @@ public final class KazakhAlphabet extends AbstractAlphabet implements Alphabetic
 	 */
 	@Unmodifiable
 	@NotNull
-	public static final List<@NotNull Character> LETTERS = List.of(
+	private static final List<@NotNull Character> LETTERS = List.of(
 			'\u0410', '\u0430', '\u04D8', '\u04D9', '\u0411', '\u0431', 
 			'\u0412', '\u0432', '\u0413', '\u0433', '\u0492', '\u0493', 
 			'\u0414', '\u0434', '\u0415', '\u0435', '\u0401', '\u0451', 
@@ -115,7 +115,7 @@ public final class KazakhAlphabet extends AbstractAlphabet implements Alphabetic
 		 */
 		@Unmodifiable
 		@NotNull
-		public static final List<@NotNull Character> LETTERS = List.of(
+		private static final List<@NotNull Character> LETTERS = List.of(
 			'\u0410', '\u04D8', '\u0411', '\u0412', '\u0413', '\u0492', 
 			'\u0414', '\u0415', '\u0401', '\u0416', '\u0417', '\u0418', 
 			'\u0419', '\u041A', '\u049A', '\u041B', '\u041C', '\u041D', 
@@ -187,7 +187,7 @@ public final class KazakhAlphabet extends AbstractAlphabet implements Alphabetic
 		 */
 		@Unmodifiable
 		@NotNull
-		public static final List<@NotNull Character> LETTERS = List.of(
+		private static final List<@NotNull Character> LETTERS = List.of(
 			'\u0430', '\u04D9', '\u0431', '\u0432', '\u0433', '\u0493', 
 			'\u0434', '\u0435', '\u0451', '\u0436', '\u0437', '\u0438', 
 			'\u0439', '\u043A', '\u049B', '\u043B', '\u043C', '\u043D', 

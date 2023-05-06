@@ -37,7 +37,7 @@ public final class InternationalPhoneticAlphabet extends AbstractAlphabet implem
 	 */
 	@Unmodifiable
 	@NotNull
-	public static final List<@NotNull Character> LETTERS = List.of(
+	private static final List<@NotNull Character> LETTERS = List.of(
 			'\u0070', '\u0062', '\u0074', '\u0064', '\u0288', '\u0256', 
 			'\u0063', '\u025F', '\u006B', '\u0261', '\u0071', '\u0262', 
 			'\u0294', '\u006D', '\u0271', '\u006E', '\u0273', '\u0272', 
@@ -131,7 +131,7 @@ public final class InternationalPhoneticAlphabet extends AbstractAlphabet implem
 		 */
 		@Unmodifiable
 		@NotNull
-		public static final List<@NotNull Character> LETTERS = List.of(
+		private static final List<@NotNull Character> LETTERS = List.of(
 			'\u0262', '\u0274', '\u0299', '\u0280', '\u0281', '\u029F', 
 			'\u026A', '\u028F', '\u0276', '\u029B', '\u029C'
 		);
@@ -198,7 +198,7 @@ public final class InternationalPhoneticAlphabet extends AbstractAlphabet implem
 		 */
 		@Unmodifiable
 		@NotNull
-		public static final List<@NotNull Character> LETTERS = List.of(
+		private static final List<@NotNull Character> LETTERS = List.of(
 			'\u0070', '\u0062', '\u0074', '\u0064', '\u0288', '\u0256', 
 			'\u0063', '\u025F', '\u006B', '\u0261', '\u0071', '\u006D', 
 			'\u0271', '\u006E', '\u0273', '\u0272', '\u014B', '\u0072', 

@@ -37,7 +37,7 @@ public final class HiraganaAlphabet extends AbstractAlphabet implements Alphabet
 	 */
 	@Unmodifiable
 	@NotNull
-	public static final List<@NotNull Character> LETTERS = List.of(
+	private static final List<@NotNull Character> LETTERS = List.of(
 			'\u304B', '\u304D', '\u304F', '\u3051', '\u3053', '\u3055', 
 			'\u3057', '\u3059', '\u305B', '\u305D', '\u305F', '\u3061', 
 			'\u3064', '\u3066', '\u3068', '\u306A', '\u306B', '\u306C', 

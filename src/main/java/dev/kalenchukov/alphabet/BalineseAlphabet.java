@@ -37,7 +37,7 @@ public final class BalineseAlphabet extends AbstractAlphabet implements Alphabet
 	 */
 	@Unmodifiable
 	@NotNull
-	public static final List<@NotNull Character> LETTERS = List.of(
+	private static final List<@NotNull Character> LETTERS = List.of(
 			'\u1B05', '\u1B06', '\u1B07', '\u1B08', '\u1B09', '\u1B0A', 
 			'\u1B0B', '\u1B0C', '\u1B0D', '\u1B0E', '\u1B0F', '\u1B10', 
 			'\u1B11', '\u1B12', '\u1B13', '\u1B14', '\u1B15', '\u1B16', 

@@ -37,7 +37,7 @@ public final class GreekAlphabet extends AbstractAlphabet implements Alphabetica
 	 */
 	@Unmodifiable
 	@NotNull
-	public static final List<@NotNull Character> LETTERS = List.of(
+	private static final List<@NotNull Character> LETTERS = List.of(
 		'\u0391', '\u03B1', '\u0392', '\u03B2', '\u0393', '\u03B3',
 		'\u0394', '\u03B4', '\u0395', '\u03B5', '\u0396', '\u03B6',
 		'\u0397', '\u03B7', '\u0398', '\u03B8', '\u0399', '\u03B9',
@@ -110,7 +110,7 @@ public final class GreekAlphabet extends AbstractAlphabet implements Alphabetica
 		 */
 		@Unmodifiable
 		@NotNull
-		public static final List<@NotNull Character> LETTERS = List.of(
+		private static final List<@NotNull Character> LETTERS = List.of(
 			'\u0391', '\u0392', '\u0393', '\u0394', '\u0395', '\u0396',
 			'\u0397', '\u0398', '\u0399', '\u039A', '\u039B', '\u039C',
 			'\u039D', '\u039E', '\u039F', '\u03A0', '\u03A1', '\u03A3',
@@ -179,7 +179,7 @@ public final class GreekAlphabet extends AbstractAlphabet implements Alphabetica
 		 */
 		@Unmodifiable
 		@NotNull
-		public static final List<@NotNull Character> LETTERS = List.of(
+		private static final List<@NotNull Character> LETTERS = List.of(
 			'\u03B1', '\u03B2', '\u03B3', '\u03B4', '\u03B5', '\u03B6',
 			'\u03B7', '\u03B8', '\u03B9', '\u03BA', '\u03BB', '\u03BC',
 			'\u03BD', '\u03BE', '\u03BF', '\u03C0', '\u03C1', '\u03C3',

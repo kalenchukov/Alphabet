@@ -37,7 +37,7 @@ public final class VaiAlphabet extends AbstractAlphabet implements AlphabeticalC
 	 */
 	@Unmodifiable
 	@NotNull
-	public static final List<@NotNull Character> LETTERS = List.of(
+	private static final List<@NotNull Character> LETTERS = List.of(
 			'\uA500', '\uA501', '\uA502', '\uA503', '\uA504', '\uA505', 
 			'\uA506', '\uA507', '\uA508', '\uA509', '\uA50A', '\uA50B', 
 			'\uA50C', '\uA50D', '\uA50E', '\uA50F', '\uA510', '\uA511', 

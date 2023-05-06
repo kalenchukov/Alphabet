@@ -37,7 +37,7 @@ public final class TurkishAlphabet extends AbstractAlphabet implements Alphabeti
 	 */
 	@Unmodifiable
 	@NotNull
-	public static final List<@NotNull Character> LETTERS = List.of(
+	private static final List<@NotNull Character> LETTERS = List.of(
 			'\u0041', '\u0061', '\u0042', '\u0062', '\u0043', '\u0063', 
 			'\u00C7', '\u00E7', '\u0044', '\u0064', '\u0045', '\u0065', 
 			'\u0046', '\u0066', '\u0047', '\u0067', '\u011E', '\u011F', 
@@ -111,7 +111,7 @@ public final class TurkishAlphabet extends AbstractAlphabet implements Alphabeti
 		 */
 		@Unmodifiable
 		@NotNull
-		public static final List<@NotNull Character> LETTERS = List.of(
+		private static final List<@NotNull Character> LETTERS = List.of(
 			'\u0041', '\u0042', '\u0043', '\u00C7', '\u0044', '\u0045', 
 			'\u0046', '\u0047', '\u011E', '\u0048', '\u0049', '\u0130', 
 			'\u004A', '\u004B', '\u004C', '\u004D', '\u004E', '\u004F', 
@@ -181,7 +181,7 @@ public final class TurkishAlphabet extends AbstractAlphabet implements Alphabeti
 		 */
 		@Unmodifiable
 		@NotNull
-		public static final List<@NotNull Character> LETTERS = List.of(
+		private static final List<@NotNull Character> LETTERS = List.of(
 			'\u0061', '\u0062', '\u0063', '\u00E7', '\u0064', '\u0065', 
 			'\u0066', '\u0067', '\u011F', '\u0068', '\u0131', '\u0069', 
 			'\u006A', '\u006B', '\u006C', '\u006D', '\u006E', '\u006F', 

@@ -37,7 +37,7 @@ public final class TaiVietAlphabet extends AbstractAlphabet implements Alphabeti
 	 */
 	@Unmodifiable
 	@NotNull
-	public static final List<@NotNull Character> LETTERS = List.of(
+	private static final List<@NotNull Character> LETTERS = List.of(
 			'\uAA80', '\uAA81', '\uAA82', '\uAA83', '\uAA84', '\uAA85', 
 			'\uAA86', '\uAA87', '\uAA88', '\uAA89', '\uAA8A', '\uAA8B', 
 			'\uAA8C', '\uAA8D', '\uAA8E', '\uAA8F', '\uAA90', '\uAA91', 

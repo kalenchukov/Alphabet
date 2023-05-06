@@ -37,7 +37,7 @@ public final class KatakanaAlphabet extends AbstractAlphabet implements Alphabet
 	 */
 	@Unmodifiable
 	@NotNull
-	public static final List<@NotNull Character> LETTERS = List.of(
+	private static final List<@NotNull Character> LETTERS = List.of(
 			'\u30F3', '\u30EF', '\u30E9', '\u30E4', '\u30DE', '\u30CF', 
 			'\u30CA', '\u30BF', '\u30B5', '\u30AB', '\u30A2', '\u30EA', 
 			'\u30DF', '\u30D2', '\u30CB', '\u30C1', '\u30B7', '\u30AD', 

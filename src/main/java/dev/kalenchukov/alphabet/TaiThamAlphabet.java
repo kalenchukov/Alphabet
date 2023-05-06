@@ -37,7 +37,7 @@ public final class TaiThamAlphabet extends AbstractAlphabet implements Alphabeti
 	 */
 	@Unmodifiable
 	@NotNull
-	public static final List<@NotNull Character> LETTERS = List.of(
+	private static final List<@NotNull Character> LETTERS = List.of(
 			'\u1A20', '\u1A21', '\u1A22', '\u1A23', '\u1A24', '\u1A25', 
 			'\u1A26', '\u1A27', '\u1A28', '\u1A29', '\u1A2A', '\u1A2B', 
 			'\u1A2C', '\u1A2D', '\u1A2E', '\u1A2F', '\u1A30', '\u1A31', 

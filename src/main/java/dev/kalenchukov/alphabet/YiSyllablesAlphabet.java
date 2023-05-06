@@ -37,7 +37,7 @@ public final class YiSyllablesAlphabet extends AbstractAlphabet implements Alpha
 	 */
 	@Unmodifiable
 	@NotNull
-	public static final List<@NotNull Character> LETTERS = List.of(
+	private static final List<@NotNull Character> LETTERS = List.of(
 			'\uA000', '\uA001', '\uA002', '\uA003', '\uA004', '\uA005', 
 			'\uA006', '\uA007', '\uA008', '\uA009', '\uA00A', '\uA00B', 
 			'\uA00C', '\uA00D', '\uA00E', '\uA00F', '\uA010', '\uA011', 

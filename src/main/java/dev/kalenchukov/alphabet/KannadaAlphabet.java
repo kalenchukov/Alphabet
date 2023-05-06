@@ -37,7 +37,7 @@ public final class KannadaAlphabet extends AbstractAlphabet implements Alphabeti
 	 */
 	@Unmodifiable
 	@NotNull
-	public static final List<@NotNull Character> LETTERS = List.of(
+	private static final List<@NotNull Character> LETTERS = List.of(
 			'\u0C85', '\u0C86', '\u0C87', '\u0C88', '\u0C89', '\u0C8A', 
 			'\u0C8B', '\u0CE0', '\u0C8E', '\u0C8F', '\u0C90', '\u0C92', 
 			'\u0C93', '\u0C94', '\u0C95', '\u0C96', '\u0C97', '\u0C98', 

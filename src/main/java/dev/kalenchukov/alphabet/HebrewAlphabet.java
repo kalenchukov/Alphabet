@@ -37,7 +37,7 @@ public final class HebrewAlphabet extends AbstractAlphabet implements Alphabetic
 	 */
 	@Unmodifiable
 	@NotNull
-	public static final List<@NotNull Character> LETTERS = List.of(
+	private static final List<@NotNull Character> LETTERS = List.of(
 			'\u05D0', '\u05D1', '\u05D2', '\u05D3', '\u05D4', '\u05D5', 
 			'\u05D6', '\u05D7', '\u05D8', '\u05D9', '\u05DB', '\u05DA', 
 			'\u05DC', '\u05DE', '\u05DD', '\u05E0', '\u05DF', '\u05E1', 

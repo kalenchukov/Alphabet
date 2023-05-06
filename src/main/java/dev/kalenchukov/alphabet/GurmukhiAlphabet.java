@@ -37,7 +37,7 @@ public final class GurmukhiAlphabet extends AbstractAlphabet implements Alphabet
 	 */
 	@Unmodifiable
 	@NotNull
-	public static final List<@NotNull Character> LETTERS = List.of(
+	private static final List<@NotNull Character> LETTERS = List.of(
 			'\u0A73', '\u0A05', '\u0A72', '\u0A38', '\u0A39', '\u0A15', 
 			'\u0A16', '\u0A17', '\u0A18', '\u0A19', '\u0A1A', '\u0A1B', 
 			'\u0A1C', '\u0A1D', '\u0A1E', '\u0A1F', '\u0A20', '\u0A21', 

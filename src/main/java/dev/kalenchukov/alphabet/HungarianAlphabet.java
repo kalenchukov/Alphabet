@@ -37,7 +37,7 @@ public final class HungarianAlphabet extends AbstractAlphabet implements Alphabe
 	 */
 	@Unmodifiable
 	@NotNull
-	public static final List<@NotNull Character> LETTERS = List.of(
+	private static final List<@NotNull Character> LETTERS = List.of(
 			'\u0041', '\u00C1', '\u0042', '\u0043', '\u0044', '\u0045',
 			'\u00C9', '\u0046', '\u0047', '\u0048', '\u0049', '\u00CD',
 			'\u004A', '\u004B', '\u004C', '\u004D', '\u004E', '\u004F',

@@ -37,7 +37,7 @@ public final class PolishAlphabet extends AbstractAlphabet implements Alphabetic
 	 */
 	@Unmodifiable
 	@NotNull
-	public static final List<@NotNull Character> LETTERS = List.of(
+	private static final List<@NotNull Character> LETTERS = List.of(
 			'\u0041', '\u0061', '\u0104', '\u0105', '\u0042', '\u0062', 
 			'\u0043', '\u0063', '\u0106', '\u0107', '\u0044', '\u0064', 
 			'\u0045', '\u0065', '\u0118', '\u0119', '\u0046', '\u0066', 
@@ -112,7 +112,7 @@ public final class PolishAlphabet extends AbstractAlphabet implements Alphabetic
 		 */
 		@Unmodifiable
 		@NotNull
-		public static final List<@NotNull Character> LETTERS = List.of(
+		private static final List<@NotNull Character> LETTERS = List.of(
 			'\u0041', '\u0104', '\u0042', '\u0043', '\u0106', '\u0044', 
 			'\u0045', '\u0118', '\u0046', '\u0047', '\u0048', '\u0049', 
 			'\u004A', '\u004B', '\u004C', '\u0141', '\u004D', '\u004E', 
@@ -183,7 +183,7 @@ public final class PolishAlphabet extends AbstractAlphabet implements Alphabetic
 		 */
 		@Unmodifiable
 		@NotNull
-		public static final List<@NotNull Character> LETTERS = List.of(
+		private static final List<@NotNull Character> LETTERS = List.of(
 			'\u0061', '\u0105', '\u0062', '\u0063', '\u0107', '\u0064', 
 			'\u0065', '\u0119', '\u0066', '\u0067', '\u0068', '\u0069', 
 			'\u006A', '\u006B', '\u006C', '\u0142', '\u006D', '\u006E', 

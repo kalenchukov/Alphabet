@@ -37,7 +37,7 @@ public final class MeeteiMayekAlphabet extends AbstractAlphabet implements Alpha
 	 */
 	@Unmodifiable
 	@NotNull
-	public static final List<@NotNull Character> LETTERS = List.of(
+	private static final List<@NotNull Character> LETTERS = List.of(
 			'\uABC0', '\uABC1', '\uABC2', '\uABC3', '\uABC4', '\uABC5', 
 			'\uABC6', '\uABC7', '\uABC8', '\uABC9', '\uABCA', '\uABCB', 
 			'\uABCC', '\uABCD', '\uABCE', '\uABCF', '\uABD0', '\uABD1', 

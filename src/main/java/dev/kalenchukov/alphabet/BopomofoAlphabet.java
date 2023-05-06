@@ -37,7 +37,7 @@ public final class BopomofoAlphabet extends AbstractAlphabet implements Alphabet
 	 */
 	@Unmodifiable
 	@NotNull
-	public static final List<@NotNull Character> LETTERS = List.of(
+	private static final List<@NotNull Character> LETTERS = List.of(
 			'\u3105', '\u3106', '\u3107', '\u3108', '\u3109', '\u310A', 
 			'\u310B', '\u310C', '\u310D', '\u310E', '\u310F', '\u3110', 
 			'\u3111', '\u3112', '\u3113', '\u3114', '\u3115', '\u3116', 

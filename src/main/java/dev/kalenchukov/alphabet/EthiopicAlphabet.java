@@ -37,7 +37,7 @@ public final class EthiopicAlphabet extends AbstractAlphabet implements Alphabet
 	 */
 	@Unmodifiable
 	@NotNull
-	public static final List<@NotNull Character> LETTERS = List.of(
+	private static final List<@NotNull Character> LETTERS = List.of(
 			'\u1200', '\u1201', '\u1202', '\u1203', '\u1204', '\u1205', 
 			'\u1206', '\u1208', '\u1209', '\u120A', '\u120B', '\u120C', 
 			'\u120D', '\u120E', '\u120F', '\u1210', '\u1211', '\u1212', 
