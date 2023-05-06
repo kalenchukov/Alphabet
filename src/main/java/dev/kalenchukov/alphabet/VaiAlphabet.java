@@ -30,7 +30,7 @@ import java.util.Objects;
  *
  * @author Aleksey Kalenchukov
  */
-public class VaiAlphabet extends AbstractAlphabet implements AlphabeticalCase
+public final class VaiAlphabet extends AbstractAlphabet implements AlphabeticalCase
 {
 	/**
 	 * Коды букв в Unicode.

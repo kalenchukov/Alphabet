@@ -30,7 +30,7 @@ import java.util.Objects;
  *
  * @author Aleksey Kalenchukov
  */
-public class SyriacAlphabet extends AbstractAlphabet implements AlphabeticalCase
+public final class SyriacAlphabet extends AbstractAlphabet implements AlphabeticalCase
 {
 	/**
 	 * Коды букв в Unicode.

@@ -30,7 +30,7 @@ import java.util.Objects;
  *
  * @author Aleksey Kalenchukov
  */
-public class InternationalPhoneticAlphabet extends AbstractAlphabet implements AlphabeticalCase
+public final class InternationalPhoneticAlphabet extends AbstractAlphabet implements AlphabeticalCase
 {
 	/**
 	 * Коды букв в Unicode.
@@ -124,7 +124,7 @@ public class InternationalPhoneticAlphabet extends AbstractAlphabet implements A
 	 *
 	 * @author Aleksey Kalenchukov
 	 */
-	public static class UpperCase extends AbstractAlphabet implements AlphabeticalUpperCase
+	public static final class UpperCase extends AbstractAlphabet implements AlphabeticalUpperCase
 	{
 		/**
 		 * Коды прописных букв в Unicode.
@@ -191,7 +191,7 @@ public class InternationalPhoneticAlphabet extends AbstractAlphabet implements A
 	 *
 	 * @author Aleksey Kalenchukov
 	 */
-	public static class LowerCase extends AbstractAlphabet implements AlphabeticalLowerCase
+	public static final class LowerCase extends AbstractAlphabet implements AlphabeticalLowerCase
 	{
 		/**
 		 * Коды строчных букв в Unicode.

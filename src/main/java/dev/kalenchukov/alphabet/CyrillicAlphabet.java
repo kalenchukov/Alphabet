@@ -30,7 +30,7 @@ import java.util.Objects;
  *
  * @author Aleksey Kalenchukov
  */
-public class CyrillicAlphabet extends AbstractAlphabet
+public final class CyrillicAlphabet extends AbstractAlphabet
 {
 	/**
 	 * Коды букв в Unicode.
