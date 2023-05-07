@@ -66,6 +66,14 @@ public interface Alphabetical
 	Character get(@NotNull @Range(from = 0, to = Integer.MAX_VALUE) Integer position);
 
 	/**
+	 * Возвращает первую букву алфавита.
+	 *
+	 * @return буква алфавита.
+	 */
+	@NotNull
+	Character getFirst();
+
+	/**
 	 * Возвращает буквы алфавита в обратном порядке.
 	 *
 	 * @return коллекция букв алфавита.

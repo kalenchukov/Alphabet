@@ -291,6 +291,17 @@ alphabet.get(29);
 с
 ```
 
+#### Получение первой буквы алфавита
+```java
+Alphabetical alphabet = new RussianAlphabet();
+alphabet.getFirst();
+```
+
+Результат выполнения:
+```
+А
+```
+
 #### Получение позиции буквы в алфавите
 ```java
 Alphabetical alphabet = new RussianAlphabet();

@@ -4,6 +4,7 @@
 * Добавлен метод Alphabetical.clear(String).
 * Убрана возможность получить все буквы алфавита с помощью *Alphabet.LETTERS.
 * Переименован метод Alphabetical.getLetter(Integer) -> Alphabetical.get(Integer).
+* Добавлен метод Alphabetical.getFirst().
 
 ## v2.6.0 - 12.02.2023
 ### Добавлено

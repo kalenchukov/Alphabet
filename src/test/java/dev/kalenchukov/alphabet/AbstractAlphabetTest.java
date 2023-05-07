@@ -41,6 +41,15 @@ public class AbstractAlphabetTest
 	public static final Alphabetical ALPHABET = new RussianAlphabet();
 
 	/**
+	 * Проверка метода {@link AbstractAlphabet#getFirst()}.
+	 */
+	@Test
+	public void testGetFirst()
+	{
+		assertEquals('А', ALPHABET.getFirst());
+	}
+
+	/**
 	 * Проверка метода {@link AbstractAlphabet#getReverse()}.
 	 */
 	@Test
