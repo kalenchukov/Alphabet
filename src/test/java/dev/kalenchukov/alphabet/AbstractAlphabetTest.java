@@ -371,6 +371,18 @@ public class AbstractAlphabetTest
 	}
 
 	/**
+	 * Проверка метода {@link AbstractAlphabet#clearMatches(String)}.
+	 */
+	@Test
+	public void testClearMatches()
+	{
+		assertEquals(
+			" ,    - My    ",
+			ALPHABET.clearMatches("Солнце мое, взгляни на меня - My ладонь превратилась в кулак")
+		);
+	}
+
+	/**
 	 * Проверка метода {@link AbstractAlphabet#isSorted(String)}.
 	 */
 	@ParameterizedTest

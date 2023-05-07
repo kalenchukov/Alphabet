@@ -321,6 +321,27 @@ public abstract class AbstractAlphabet implements Alphabetical
 	/**
 	 * {@inheritDoc}
 	 *
+	 * @param value {@inheritDoc}
+	 * @return {@inheritDoc}
+	 */
+	@NotNull
+	@Override
+	public String clearMatches(@NotNull final String value)
+	{
+		StringBuilder string = new StringBuilder();
+
+		Stream.of(this.stringToArrayCharacter(value)).forEach(character -> {
+			if (!this.letters.contains(character)) {
+				string.append(character);
+			}
+		});
+
+		return string.toString();
+	}
+
+	/**
+	 * {@inheritDoc}
+	 *
 	 * @param string {@inheritDoc}
 	 * @return {@inheritDoc}
 	 */

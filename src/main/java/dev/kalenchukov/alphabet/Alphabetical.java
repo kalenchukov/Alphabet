@@ -128,6 +128,15 @@ public interface Alphabetical
 	String clearMismatches(@NotNull String value);
 
 	/**
+	 * Возвращает строку в которой удалены все символы принадлежащие алфавиту.
+	 *
+	 * @param value строка.
+	 * @return строку.
+	 */
+	@NotNull
+	String clearMatches(@NotNull String value);
+
+	/**
 	 * Подсчитывает количество вхождений каждой буквы в строку.
 	 *
 	 * @param string строка.
