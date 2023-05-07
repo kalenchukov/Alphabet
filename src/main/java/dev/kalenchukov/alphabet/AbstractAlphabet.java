@@ -305,7 +305,7 @@ public abstract class AbstractAlphabet implements Alphabetical
 	 */
 	@NotNull
 	@Override
-	public String clear(@NotNull final String value)
+	public String clearMismatches(@NotNull final String value)
 	{
 		StringBuilder string = new StringBuilder();
 

@@ -359,14 +359,14 @@ public class AbstractAlphabetTest
 	}
 
 	/**
-	 * Проверка метода {@link AbstractAlphabet#clear(String)}.
+	 * Проверка метода {@link AbstractAlphabet#clearMismatches(String)}.
 	 */
 	@Test
-	public void testClear()
+	public void testClearMismatches()
 	{
 		assertEquals(
 			"Солнцемоевзглянинаменяладоньпревратиласьвкулак",
-			ALPHABET.clear("Солнце мое, взгляни на меня - My ладонь превратилась в кулак")
+			ALPHABET.clearMismatches("Солнце мое, взгляни на меня - My ладонь превратилась в кулак")
 		);
 	}
 

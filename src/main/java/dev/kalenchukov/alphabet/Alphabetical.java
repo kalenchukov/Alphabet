@@ -125,7 +125,7 @@ public interface Alphabetical
 	 * @return строку.
 	 */
 	@NotNull
-	String clear(@NotNull String value);
+	String clearMismatches(@NotNull String value);
 
 	/**
 	 * Подсчитывает количество вхождений каждой буквы в строку.
