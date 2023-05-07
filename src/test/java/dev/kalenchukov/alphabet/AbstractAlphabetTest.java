@@ -50,6 +50,15 @@ public class AbstractAlphabetTest
 	}
 
 	/**
+	 * Проверка метода {@link AbstractAlphabet#getLast()}.
+	 */
+	@Test
+	public void testGetLast()
+	{
+		assertEquals('я', ALPHABET.getLast());
+	}
+
+	/**
 	 * Проверка метода {@link AbstractAlphabet#getReverse()}.
 	 */
 	@Test

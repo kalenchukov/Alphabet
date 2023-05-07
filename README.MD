@@ -302,6 +302,17 @@ alphabet.getFirst();
 А
 ```
 
+#### Получение последней буквы алфавита
+```java
+Alphabetical alphabet = new RussianAlphabet();
+alphabet.getLast();
+```
+
+Результат выполнения:
+```
+я
+```
+
 #### Получение позиции буквы в алфавите
 ```java
 Alphabetical alphabet = new RussianAlphabet();

@@ -124,6 +124,18 @@ public abstract class AbstractAlphabet implements Alphabetical
 	/**
 	 * {@inheritDoc}
 	 *
+	 * @return {@inheritDoc}
+	 */
+	@NotNull
+	@Override
+	public Character getLast()
+	{
+		return this.letters.get(this.letters.size() - 1);
+	}
+
+	/**
+	 * {@inheritDoc}
+	 *
 	 * @param string {@inheritDoc}
 	 * @return {@inheritDoc}
 	 */

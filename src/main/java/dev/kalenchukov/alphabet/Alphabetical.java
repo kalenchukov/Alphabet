@@ -74,6 +74,14 @@ public interface Alphabetical
 	Character getFirst();
 
 	/**
+	 * Возвращает последнюю букву алфавита.
+	 *
+	 * @return буква алфавита.
+	 */
+	@NotNull
+	Character getLast();
+
+	/**
 	 * Возвращает буквы алфавита в обратном порядке.
 	 *
 	 * @return коллекция букв алфавита.
