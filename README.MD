@@ -283,7 +283,7 @@ true
 #### Получение буквы по позиции в алфавите
 ```java
 Alphabetical alphabet = new RussianAlphabet();
-alphabet.getLetter(29);
+alphabet.get(29);
 ```
 
 Результат выполнения:

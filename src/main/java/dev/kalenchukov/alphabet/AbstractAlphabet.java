@@ -24,7 +24,6 @@ import org.jetbrains.annotations.Range;
 import org.jetbrains.annotations.Unmodifiable;
 
 import java.util.*;
-import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 /**
@@ -98,7 +97,7 @@ public abstract class AbstractAlphabet implements Alphabetical
 	 */
 	@Nullable
 	@Override
-	public Character getLetter(@NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer position)
+	public Character get(@NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer position)
 	{
 		Objects.requireNonNull(position);
 
@@ -268,7 +267,7 @@ public abstract class AbstractAlphabet implements Alphabetical
 		{
 			final int rnd = random.nextInt(this.letters.size()) + 1;
 
-			letters.add(this.getLetter(rnd));
+			letters.add(this.get(rnd));
 		}
 
 		return Collections.unmodifiableList(letters);

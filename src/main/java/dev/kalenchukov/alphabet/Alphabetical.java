@@ -57,6 +57,15 @@ public interface Alphabetical
 								 @NotNull @Range(from = 1, to = Integer.MAX_VALUE) Integer to);
 
 	/**
+	 * Возвращает букву алфавита.
+	 *
+	 * @param position позиция буквы в алфавите.
+	 * @return буква алфавита или {@code null} если буквы в позиции нет.
+	 */
+	@Nullable
+	Character get(@NotNull @Range(from = 0, to = Integer.MAX_VALUE) Integer position);
+
+	/**
 	 * Возвращает буквы алфавита в обратном порядке.
 	 *
 	 * @return коллекция букв алфавита.
@@ -92,15 +101,6 @@ public interface Alphabetical
 	 */
 	@Nullable
 	Integer getPosition(@NotNull Character letter);
-
-	/**
-	 * Возвращает букву алфавита.
-	 *
-	 * @param position позиция буквы в алфавите.
-	 * @return буква алфавита или {@code null} если буквы в позиции нет.
-	 */
-	@Nullable
-	Character getLetter(@NotNull @Range(from = 0, to = Integer.MAX_VALUE) Integer position);
 
 	/**
 	 * Возвращает строку в которой удалены все символы не принадлежащие алфавиту.

@@ -213,41 +213,41 @@ public class AbstractAlphabetTest
 			ALPHABET.get(33, 20);
 		});
 	}
-
-	/**
-	 * Проверка метода {@link AbstractAlphabet#getPosition(Character)} с некорректным значением.
-	 */
-	@Test
-	public void testGetPositionNotCorrect()
-	{
-		assertNull(ALPHABET.getPosition('W'));
-	}
-
 	/**
 	 * Проверка метода {@link AbstractAlphabet#getPosition(Character)}.
 	 */
 	@Test
-	public void testGetPosition()
+	public void testGetPositionByLetter()
 	{
 		assertEquals(Optional.of(30), Optional.ofNullable(ALPHABET.getPosition('н')));
 	}
 
 	/**
-	 * Проверка метода {@link AbstractAlphabet#getLetter(Integer)}.
+	 * Проверка метода {@link AbstractAlphabet#getPosition(Character)} с некорректным значением.
 	 */
 	@Test
-	public void testGetLetter()
+	public void testGetPositionByLetterNotCorrect()
 	{
-		assertEquals(Optional.of('м'), Optional.ofNullable(ALPHABET.getLetter(28)));
+		assertNull(ALPHABET.getPosition('W'));
+	}
+
+
+	/**
+	 * Проверка метода {@link AbstractAlphabet#get(Integer)}.
+	 */
+	@Test
+	public void testGetLetterByPosition()
+	{
+		assertEquals(Optional.of('м'), Optional.ofNullable(ALPHABET.get(28)));
 	}
 
 	/**
-	 * Проверка метода {@link AbstractAlphabet#getLetter(Integer)} с некорректным значением.
+	 * Проверка метода {@link AbstractAlphabet#get(Integer)} с некорректным значением.
 	 */
 	@Test
-	public void testGetLetterNotCorrect()
+	public void testGetLetterByPositionNotCorrect()
 	{
-		assertNull(ALPHABET.getLetter(0));
+		assertNull(ALPHABET.get(0));
 	}
 
 	/**
