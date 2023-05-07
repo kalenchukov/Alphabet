@@ -37,7 +37,7 @@ public final class LimbuAlphabet extends AbstractAlphabet implements Alphabetica
 	 */
 	@Unmodifiable
 	@NotNull
-	private static final List<@NotNull Character> LETTERS = List.of(
+	public static final List<@NotNull Character> LETTERS = List.of(
 			'\u1900', '\u1901', '\u1902', '\u1903', '\u1904', '\u1905', 
 			'\u1906', '\u1907', '\u1908', '\u1909', '\u190A', '\u190B', 
 			'\u190C', '\u190D', '\u190E', '\u190F', '\u1910', '\u1911', 

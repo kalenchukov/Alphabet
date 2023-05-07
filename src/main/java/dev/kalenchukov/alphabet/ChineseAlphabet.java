@@ -37,7 +37,7 @@ public final class ChineseAlphabet extends AbstractAlphabet implements Alphabeti
 	 */
 	@Unmodifiable
 	@NotNull
-	private static final List<@NotNull Character> LETTERS = List.of(
+	public static final List<@NotNull Character> LETTERS = List.of(
 			'\u0041', '\u0061', '\u0042', '\u0062', '\u0043', '\u0063', 
 			'\u0044', '\u0064', '\u0045', '\u0065', '\u0046', '\u0066',
 			'\u0047', '\u0067', '\u0048', '\u0068', '\u0069', '\u004A',
@@ -110,7 +110,7 @@ public final class ChineseAlphabet extends AbstractAlphabet implements Alphabeti
 		 */
 		@Unmodifiable
 		@NotNull
-		private static final List<@NotNull Character> LETTERS = List.of(
+		public static final List<@NotNull Character> LETTERS = List.of(
 			'\u0041', '\u0042', '\u0043', '\u0044', '\u0045', '\u0046', 
 			'\u0047', '\u0048', '\u004A', '\u004B', '\u004C', '\u004D', 
 			'\u004E', '\u004F', '\u0050', '\u0051', '\u0052', '\u0053', 
@@ -180,7 +180,7 @@ public final class ChineseAlphabet extends AbstractAlphabet implements Alphabeti
 		 */
 		@Unmodifiable
 		@NotNull
-		private static final List<@NotNull Character> LETTERS = List.of(
+		public static final List<@NotNull Character> LETTERS = List.of(
 			'\u0061', '\u0062', '\u0063', '\u0064', '\u0065', '\u0066', 
 			'\u0067', '\u0068', '\u0069', '\u006A', '\u006B', '\u006C', 
 			'\u006D', '\u006E', '\u006F', '\u0070', '\u0071', '\u0072', 

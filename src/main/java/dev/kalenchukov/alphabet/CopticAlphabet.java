@@ -37,7 +37,7 @@ public final class CopticAlphabet extends AbstractAlphabet implements Alphabetic
 	 */
 	@Unmodifiable
 	@NotNull
-	private static final List<@NotNull Character> LETTERS = List.of(
+	public static final List<@NotNull Character> LETTERS = List.of(
 			'\u2C80', '\u2C81', '\u2C82', '\u2C83', '\u2C84', '\u2C85', 
 			'\u2C86', '\u2C87', '\u2C88', '\u2C89', '\u2C8A', '\u2C8B', 
 			'\u2C8C', '\u2C8D', '\u2C8E', '\u2C8F', '\u2C90', '\u2C91', 
@@ -117,7 +117,7 @@ public final class CopticAlphabet extends AbstractAlphabet implements Alphabetic
 		 */
 		@Unmodifiable
 		@NotNull
-		private static final List<@NotNull Character> LETTERS = List.of(
+		public static final List<@NotNull Character> LETTERS = List.of(
 			'\u2C80', '\u2C82', '\u2C84', '\u2C86', '\u2C88', '\u2C8A', 
 			'\u2C8C', '\u2C8E', '\u2C90', '\u2C92', '\u2C94', '\u2C96', 
 			'\u2C98', '\u2C9A', '\u2C9C', '\u2C9E', '\u2CA0', '\u2CA2', 
@@ -190,7 +190,7 @@ public final class CopticAlphabet extends AbstractAlphabet implements Alphabetic
 		 */
 		@Unmodifiable
 		@NotNull
-		private static final List<@NotNull Character> LETTERS = List.of(
+		public static final List<@NotNull Character> LETTERS = List.of(
 			'\u2C81', '\u2C83', '\u2C85', '\u2C87', '\u2C89', '\u2C8B', 
 			'\u2C8D', '\u2C8F', '\u2C91', '\u2C93', '\u2C95', '\u2C97', 
 			'\u2C99', '\u2C9B', '\u2C9D', '\u2C9F', '\u2CA1', '\u2CA3', 

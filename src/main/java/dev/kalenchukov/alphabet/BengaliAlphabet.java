@@ -37,7 +37,7 @@ public final class BengaliAlphabet extends AbstractAlphabet implements Alphabeti
 	 */
 	@Unmodifiable
 	@NotNull
-	private static final List<@NotNull Character> LETTERS = List.of(
+	public static final List<@NotNull Character> LETTERS = List.of(
 			'\u0985', '\u0986', '\u0987', '\u0988', '\u0989', '\u098A', 
 			'\u098B', '\u098F', '\u0990', '\u0993', '\u0994', '\u0995', 
 			'\u0996', '\u0997', '\u0998', '\u0999', '\u099A', '\u099B', 

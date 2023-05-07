@@ -37,7 +37,7 @@ public final class CyrillicAlphabet extends AbstractAlphabet
 	 */
 	@Unmodifiable
 	@NotNull
-	private static final List<@NotNull Character> LETTERS = List.of(
+	public static final List<@NotNull Character> LETTERS = List.of(
 		'\u0410', '\u0411', '\u0412', '\u0413', '\u0414', '\u0415', '\u0416', '\u0405', '\u0417',
 		'\u0418', '\u0406', '\u041A', '\u041B', '\u041C', '\u041D', '\u041E', '\u041F', '\u0420',
 		'\u0421', '\u0422', '\uA64A', '\u0424', '\u0425', '\u0460', '\u0426', '\u0427', '\u0428',

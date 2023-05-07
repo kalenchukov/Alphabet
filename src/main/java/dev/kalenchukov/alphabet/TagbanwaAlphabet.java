@@ -37,7 +37,7 @@ public final class TagbanwaAlphabet extends AbstractAlphabet implements Alphabet
 	 */
 	@Unmodifiable
 	@NotNull
-	private static final List<@NotNull Character> LETTERS = List.of(
+	public static final List<@NotNull Character> LETTERS = List.of(
 			'\u1760', '\u1761', '\u1762', '\u1763', '\u1764', '\u1765', 
 			'\u1766', '\u1767', '\u1768', '\u1769', '\u176A', '\u176B', 
 			'\u176C', '\u176E', '\u176F', '\u1770', '\u1772', '\u1773'

@@ -37,7 +37,7 @@ public final class SyriacAlphabet extends AbstractAlphabet implements Alphabetic
 	 */
 	@Unmodifiable
 	@NotNull
-	private static final List<@NotNull Character> LETTERS = List.of(
+	public static final List<@NotNull Character> LETTERS = List.of(
 			'\u0710', '\u0712', '\u0713', '\u0715', '\u0717', '\u0718', 
 			'\u0719', '\u071A', '\u071B', '\u071D', '\u071F', '\u0720', 
 			'\u0721', '\u0722', '\u0723', '\u0725', '\u0726', '\u0728', 

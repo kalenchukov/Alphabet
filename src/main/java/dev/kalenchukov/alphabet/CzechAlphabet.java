@@ -37,7 +37,7 @@ public final class CzechAlphabet extends AbstractAlphabet implements Alphabetica
 	 */
 	@Unmodifiable
 	@NotNull
-	private static final List<@NotNull Character> LETTERS = List.of(
+	public static final List<@NotNull Character> LETTERS = List.of(
 			'\u0041', '\u00C1', '\u0042', '\u0043', '\u010C', '\u0044', 
 			'\u010E', '\u0045', '\u00C9', '\u011A', '\u0046', '\u0047', 
 			'\u0048', '\u0049', '\u00CD', '\u004A', '\u004B', '\u004C',

@@ -8,6 +8,7 @@
 * Добавлен метод Alphabetical.getLast().
 * Переименован метод Alphabetical.clear(String) -> Alphabetical.clearMismatches(String).
 * Добавлен метод Alphabetical.clearMatches().
+* Добавлена возможность получить все буквы алфавита с помощью *Alphabet.LETTERS.
 
 ## v2.6.0 - 12.02.2023
 ### Добавлено

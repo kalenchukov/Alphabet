@@ -37,7 +37,7 @@ public final class TeluguAlphabet extends AbstractAlphabet implements Alphabetic
 	 */
 	@Unmodifiable
 	@NotNull
-	private static final List<@NotNull Character> LETTERS = List.of(
+	public static final List<@NotNull Character> LETTERS = List.of(
 			'\u0C05', '\u0C06', '\u0C07', '\u0C08', '\u0C09', '\u0C0A', 
 			'\u0C0B', '\u0C60', '\u0C0E', '\u0C0F', '\u0C10', '\u0C12', 
 			'\u0C13', '\u0C14', '\u0C15', '\u0C16', '\u0C17', '\u0C18', 

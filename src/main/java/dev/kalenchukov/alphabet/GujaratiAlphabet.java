@@ -37,7 +37,7 @@ public final class GujaratiAlphabet extends AbstractAlphabet implements Alphabet
 	 */
 	@Unmodifiable
 	@NotNull
-	private static final List<@NotNull Character> LETTERS = List.of(
+	public static final List<@NotNull Character> LETTERS = List.of(
 			'\u0A95', '\u0A96', '\u0A97', '\u0A98', '\u0A99', '\u0A9A', 
 			'\u0A9B', '\u0A9C', '\u0A9D', '\u0A9E', '\u0A9F', '\u0AA0', 
 			'\u0AA1', '\u0AA2', '\u0AA3', '\u0AA4', '\u0AA5', '\u0AA6', 

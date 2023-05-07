@@ -37,7 +37,7 @@ public final class LisuAlphabet extends AbstractAlphabet implements Alphabetical
 	 */
 	@Unmodifiable
 	@NotNull
-	private static final List<@NotNull Character> LETTERS = List.of(
+	public static final List<@NotNull Character> LETTERS = List.of(
 			'\uA4D0', '\uA4D1', '\uA4D2', '\uA4D3', '\uA4D4', '\uA4D5', 
 			'\uA4D6', '\uA4D7', '\uA4D8', '\uA4D9', '\uA4DA', '\uA4DB', 
 			'\uA4DC', '\uA4DD', '\uA4DE', '\uA4DF', '\uA4E0', '\uA4E1', 

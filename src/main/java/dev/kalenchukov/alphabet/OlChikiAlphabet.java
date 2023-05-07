@@ -37,7 +37,7 @@ public final class OlChikiAlphabet extends AbstractAlphabet implements Alphabeti
 	 */
 	@Unmodifiable
 	@NotNull
-	private static final List<@NotNull Character> LETTERS = List.of(
+	public static final List<@NotNull Character> LETTERS = List.of(
 			'\u1C50', '\u1C51', '\u1C52', '\u1C53', '\u1C54', '\u1C55', 
 			'\u1C56', '\u1C57', '\u1C58', '\u1C59', '\u1C5A', '\u1C5B', 
 			'\u1C5C', '\u1C5D', '\u1C5E', '\u1C5F', '\u1C60', '\u1C61', 

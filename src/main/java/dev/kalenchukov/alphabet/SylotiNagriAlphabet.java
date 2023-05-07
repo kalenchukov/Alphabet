@@ -37,7 +37,7 @@ public final class SylotiNagriAlphabet extends AbstractAlphabet implements Alpha
 	 */
 	@Unmodifiable
 	@NotNull
-	private static final List<@NotNull Character> LETTERS = List.of(
+	public static final List<@NotNull Character> LETTERS = List.of(
 			'\uA800', '\uA801', '\uA802', '\uA803', '\uA804', '\uA805', 
 			'\uA806', '\uA807', '\uA808', '\uA809', '\uA80A', '\uA80B', 
 			'\uA80C', '\uA80D', '\uA80E', '\uA80F', '\uA810', '\uA811', 

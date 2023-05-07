@@ -130,6 +130,11 @@ alphabet.get();
 ]
 ```
 
+Аналог в виде константы:
+```
+RussianAlphabet.LETTERS;
+```
+
 #### Получение среза букв алфавита
 ```java
 Alphabetical alphabet = new RussianAlphabet();

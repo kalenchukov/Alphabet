@@ -37,7 +37,7 @@ public final class TamilAlphabet extends AbstractAlphabet implements Alphabetica
 	 */
 	@Unmodifiable
 	@NotNull
-	private static final List<@NotNull Character> LETTERS = List.of(
+	public static final List<@NotNull Character> LETTERS = List.of(
 			'\u0B85', '\u0B86', '\u0B87', '\u0B88', '\u0B89', '\u0B8A', 
 			'\u0B8E', '\u0B8F', '\u0B90', '\u0B92', '\u0B93', '\u0B94', 
 			'\u0B95', '\u0B99', '\u0B9A', '\u0B9C', '\u0B9E', '\u0B9F', 

@@ -37,7 +37,7 @@ public final class EsperantoAlphabet extends AbstractAlphabet implements Alphabe
 	 */
 	@Unmodifiable
 	@NotNull
-	private static final List<@NotNull Character> LETTERS = List.of(
+	public static final List<@NotNull Character> LETTERS = List.of(
 			'\u0041', '\u0042', '\u0043', '\u0108', '\u0044', '\u0045', 
 			'\u0046', '\u0047', '\u011C', '\u0048', '\u0124', '\u0049', 
 			'\u004A', '\u0134', '\u004B', '\u004C', '\u004D', '\u004E', 
@@ -111,7 +111,7 @@ public final class EsperantoAlphabet extends AbstractAlphabet implements Alphabe
 		 */
 		@Unmodifiable
 		@NotNull
-		private static final List<@NotNull Character> LETTERS = List.of(
+		public static final List<@NotNull Character> LETTERS = List.of(
 			'\u0041', '\u0042', '\u0043', '\u0108', '\u0044', '\u0045', 
 			'\u0046', '\u0047', '\u011C', '\u0048', '\u0124', '\u0049', 
 			'\u004A', '\u0134', '\u004B', '\u004C', '\u004D', '\u004E', 
@@ -181,7 +181,7 @@ public final class EsperantoAlphabet extends AbstractAlphabet implements Alphabe
 		 */
 		@Unmodifiable
 		@NotNull
-		private static final List<@NotNull Character> LETTERS = List.of(
+		public static final List<@NotNull Character> LETTERS = List.of(
 			'\u0061', '\u0062', '\u0063', '\u0109', '\u0064', '\u0065', 
 			'\u0066', '\u0067', '\u011D', '\u0068', '\u0125', '\u0069', 
 			'\u006A', '\u0135', '\u006B', '\u006C', '\u006D', '\u006E', 

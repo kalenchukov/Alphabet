@@ -37,7 +37,7 @@ public final class SamaritanAlphabet extends AbstractAlphabet implements Alphabe
 	 */
 	@Unmodifiable
 	@NotNull
-	private static final List<@NotNull Character> LETTERS = List.of(
+	public static final List<@NotNull Character> LETTERS = List.of(
 			'\u0800', '\u0801', '\u0802', '\u0803', '\u0804', '\u0805', 
 			'\u0806', '\u0807', '\u0808', '\u0809', '\u080A', '\u080B', 
 			'\u080C', '\u080D', '\u080E', '\u080F', '\u0810', '\u0811', 

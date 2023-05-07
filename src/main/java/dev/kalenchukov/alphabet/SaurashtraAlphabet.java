@@ -37,7 +37,7 @@ public final class SaurashtraAlphabet extends AbstractAlphabet implements Alphab
 	 */
 	@Unmodifiable
 	@NotNull
-	private static final List<@NotNull Character> LETTERS = List.of(
+	public static final List<@NotNull Character> LETTERS = List.of(
 			'\uA892', '\uA893', '\uA894', '\uA895', '\uA896', '\uA897', 
 			'\uA898', '\uA899', '\uA89A', '\uA89B', '\uA89C', '\uA89D', 
 			'\uA89E', '\uA89F', '\uA8A0', '\uA8A1', '\uA8A2', '\uA8A3', 

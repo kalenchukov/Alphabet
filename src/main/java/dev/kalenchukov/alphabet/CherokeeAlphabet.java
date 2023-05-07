@@ -37,7 +37,7 @@ public final class CherokeeAlphabet extends AbstractAlphabet implements Alphabet
 	 */
 	@Unmodifiable
 	@NotNull
-	private static final List<@NotNull Character> LETTERS = List.of(
+	public static final List<@NotNull Character> LETTERS = List.of(
 			'\u13A0', '\u13A1', '\u13A2', '\u13A3', '\u13A4', '\u13A5', 
 			'\u13A6', '\u13A7', '\u13A8', '\u13A9', '\u13AA', '\u13AB', 
 			'\u13AC', '\u13AD', '\u13AE', '\u13AF', '\u13B0', '\u13B1', 

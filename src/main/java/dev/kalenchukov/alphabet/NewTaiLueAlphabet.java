@@ -37,7 +37,7 @@ public final class NewTaiLueAlphabet extends AbstractAlphabet implements Alphabe
 	 */
 	@Unmodifiable
 	@NotNull
-	private static final List<@NotNull Character> LETTERS = List.of(
+	public static final List<@NotNull Character> LETTERS = List.of(
 			'\u1980', '\u1981', '\u1982', '\u1983', '\u1984', '\u1985', 
 			'\u1986', '\u1987', '\u1988', '\u1989', '\u198A', '\u198B', 
 			'\u198C', '\u198D', '\u198E', '\u198F', '\u1990', '\u1991', 

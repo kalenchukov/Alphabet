@@ -37,7 +37,7 @@ public final class DevanagariAlphabet extends AbstractAlphabet implements Alphab
 	 */
 	@Unmodifiable
 	@NotNull
-	private static final List<@NotNull Character> LETTERS = List.of(
+	public static final List<@NotNull Character> LETTERS = List.of(
 			'\u0915', '\u0916', '\u0917', '\u0918', '\u0919', '\u091A', 
 			'\u091B', '\u091C', '\u091D', '\u091E', '\u091F', '\u0920', 
 			'\u0921', '\u0922', '\u0923', '\u0924', '\u0925', '\u0926', 

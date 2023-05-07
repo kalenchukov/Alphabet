@@ -37,7 +37,7 @@ public final class RunicAlphabet extends AbstractAlphabet implements Alphabetica
 	 */
 	@Unmodifiable
 	@NotNull
-	private static final List<@NotNull Character> LETTERS = List.of(
+	public static final List<@NotNull Character> LETTERS = List.of(
 			'\u16A0', '\u16A1', '\u16A2', '\u16A3', '\u16A4', '\u16A5', 
 			'\u16A6', '\u16A7', '\u16A8', '\u16A9', '\u16AA', '\u16AB', 
 			'\u16AC', '\u16AD', '\u16AE', '\u16AF', '\u16B0', '\u16B1', 

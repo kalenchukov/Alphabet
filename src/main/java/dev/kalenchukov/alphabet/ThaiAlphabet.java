@@ -37,7 +37,7 @@ public final class ThaiAlphabet extends AbstractAlphabet implements Alphabetical
 	 */
 	@Unmodifiable
 	@NotNull
-	private static final List<@NotNull Character> LETTERS = List.of(
+	public static final List<@NotNull Character> LETTERS = List.of(
 			'\u0E01', '\u0E02', '\u0E03', '\u0E04', '\u0E05', '\u0E06', 
 			'\u0E07', '\u0E08', '\u0E09', '\u0E0A', '\u0E0B', '\u0E0C', 
 			'\u0E0D', '\u0E0E', '\u0E0F', '\u0E10', '\u0E11', '\u0E12', 

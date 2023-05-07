@@ -37,7 +37,7 @@ public final class JavaneseAlphabet extends AbstractAlphabet implements Alphabet
 	 */
 	@Unmodifiable
 	@NotNull
-	private static final List<@NotNull Character> LETTERS = List.of(
+	public static final List<@NotNull Character> LETTERS = List.of(
 			'\uA980', '\uA981', '\uA982', '\uA983', '\uA984', '\uA985', 
 			'\uA986', '\uA987', '\uA988', '\uA989', '\uA98A', '\uA98B', 
 			'\uA98C', '\uA98D', '\uA98E', '\uA98F', '\uA990', '\uA991', 

@@ -37,7 +37,7 @@ public final class SundaneseAlphabet extends AbstractAlphabet implements Alphabe
 	 */
 	@Unmodifiable
 	@NotNull
-	private static final List<@NotNull Character> LETTERS = List.of(
+	public static final List<@NotNull Character> LETTERS = List.of(
 			'\u1B83', '\u1B84', '\u1B85', '\u1B86', '\u1B87', '\u1B88', 
 			'\u1B89', '\u1B8A', '\u1B8B', '\u1B8C', '\u1B8D', '\u1B8E', 
 			'\u1B8F', '\u1B90', '\u1B91', '\u1B92', '\u1B93', '\u1B94', 

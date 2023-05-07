@@ -37,7 +37,7 @@ public final class TifinaghAlphabet extends AbstractAlphabet implements Alphabet
 	 */
 	@Unmodifiable
 	@NotNull
-	private static final List<@NotNull Character> LETTERS = List.of(
+	public static final List<@NotNull Character> LETTERS = List.of(
 			'\u2D30', '\u2D31', '\u2D32', '\u2D33', '\u2D34', '\u2D35', 
 			'\u2D36', '\u2D37', '\u2D38', '\u2D39', '\u2D3A', '\u2D3B', 
 			'\u2D3C', '\u2D3D', '\u2D3E', '\u2D3F', '\u2D40', '\u2D41', 

@@ -37,7 +37,7 @@ public final class TatarAlphabet extends AbstractAlphabet implements Alphabetica
 	 */
 	@Unmodifiable
 	@NotNull
-	private static final List<@NotNull Character> LETTERS = List.of(
+	public static final List<@NotNull Character> LETTERS = List.of(
 			'\u0410', '\u0430', '\u04D8', '\u04D9', '\u0411', '\u0431', 
 			'\u0412', '\u0432', '\u0413', '\u0433', '\u0414', '\u0434', 
 			'\u0415', '\u0435', '\u0401', '\u0451', '\u0416', '\u0436', 
@@ -114,7 +114,7 @@ public final class TatarAlphabet extends AbstractAlphabet implements Alphabetica
 		 */
 		@Unmodifiable
 		@NotNull
-		private static final List<@NotNull Character> LETTERS = List.of(
+		public static final List<@NotNull Character> LETTERS = List.of(
 			'\u0410', '\u04D8', '\u0411', '\u0412', '\u0413', '\u0414', 
 			'\u0415', '\u0401', '\u0416', '\u0496', '\u0417', '\u0418', 
 			'\u0419', '\u041A', '\u041B', '\u041C', '\u041D', '\u04A2', 
@@ -186,7 +186,7 @@ public final class TatarAlphabet extends AbstractAlphabet implements Alphabetica
 		 */
 		@Unmodifiable
 		@NotNull
-		private static final List<@NotNull Character> LETTERS = List.of(
+		public static final List<@NotNull Character> LETTERS = List.of(
 			'\u0430', '\u04D9', '\u0431', '\u0432', '\u0433', '\u0434', 
 			'\u0435', '\u0451', '\u0436', '\u0497', '\u0437', '\u0438', 
 			'\u0439', '\u043A', '\u043B', '\u043C', '\u043D', '\u04A3', 

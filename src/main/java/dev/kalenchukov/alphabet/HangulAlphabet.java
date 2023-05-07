@@ -37,7 +37,7 @@ public final class HangulAlphabet extends AbstractAlphabet implements Alphabetic
 	 */
 	@Unmodifiable
 	@NotNull
-	private static final List<@NotNull Character> LETTERS = List.of(
+	public static final List<@NotNull Character> LETTERS = List.of(
 			'\u3131', '\u3134', '\u3137', '\u3139', '\u3141', '\u3142', 
 			'\u3145', '\u3147', '\u3148', '\u314A', '\u314B', '\u314C', 
 			'\u314D', '\u314E', '\u314F', '\u3153', '\u3157', '\u315C', 

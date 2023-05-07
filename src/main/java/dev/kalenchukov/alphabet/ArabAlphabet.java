@@ -37,7 +37,7 @@ public final class ArabAlphabet extends AbstractAlphabet implements Alphabetical
 	 */
 	@Unmodifiable
 	@NotNull
-	private static final List<@NotNull Character> LETTERS = List.of(
+	public static final List<@NotNull Character> LETTERS = List.of(
 			'\uFE8E', '\uFE8D', '\uFE90', '\uFE92', '\uFE91', '\uFE8F', 
 			'\uFE96', '\uFE98', '\uFE97', '\uFE95', '\uFE9A', '\uFE9C', 
 			'\uFE9B', '\uFE99', '\uFE9E', '\uFEA0', '\uFE9F', '\uFE9D', 

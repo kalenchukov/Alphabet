@@ -37,7 +37,7 @@ public final class TaiLeAlphabet extends AbstractAlphabet implements Alphabetica
 	 */
 	@Unmodifiable
 	@NotNull
-	private static final List<@NotNull Character> LETTERS = List.of(
+	public static final List<@NotNull Character> LETTERS = List.of(
 			'\u1950', '\u1951', '\u1952', '\u1953', '\u1954', '\u1955', 
 			'\u1956', '\u1957', '\u1958', '\u1959', '\u195A', '\u195B', 
 			'\u195C', '\u195D', '\u195E', '\u195F', '\u1960', '\u1961', 

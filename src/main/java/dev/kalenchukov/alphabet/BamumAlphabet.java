@@ -37,7 +37,7 @@ public final class BamumAlphabet extends AbstractAlphabet implements Alphabetica
 	 */
 	@Unmodifiable
 	@NotNull
-	private static final List<@NotNull Character> LETTERS = List.of(
+	public static final List<@NotNull Character> LETTERS = List.of(
 			'\uA6A0', '\uA6A1', '\uA6A2', '\uA6A3', '\uA6A4', '\uA6A5', 
 			'\uA6A6', '\uA6A7', '\uA6A8', '\uA6A9', '\uA6AA', '\uA6AB', 
 			'\uA6AC', '\uA6AD', '\uA6AE', '\uA6AF', '\uA6B0', '\uA6B1', 

@@ -37,7 +37,7 @@ public final class UkrainianAlphabet extends AbstractAlphabet implements Alphabe
 	 */
 	@Unmodifiable
 	@NotNull
-	private static final List<@NotNull Character> LETTERS = List.of(
+	public static final List<@NotNull Character> LETTERS = List.of(
 			'\u0410', '\u0430', '\u0411', '\u0431', '\u0412', '\u0432', 
 			'\u0413', '\u0433', '\u0490', '\u0491', '\u0414', '\u0434', 
 			'\u0415', '\u0435', '\u0404', '\u0454', '\u0416', '\u0436', 
@@ -112,7 +112,7 @@ public final class UkrainianAlphabet extends AbstractAlphabet implements Alphabe
 		 */
 		@Unmodifiable
 		@NotNull
-		private static final List<@NotNull Character> LETTERS = List.of(
+		public static final List<@NotNull Character> LETTERS = List.of(
 			'\u0410', '\u0411', '\u0412', '\u0413', '\u0490', '\u0414', 
 			'\u0415', '\u0404', '\u0416', '\u0417', '\u0418', '\u0406', 
 			'\u0407', '\u0419', '\u041A', '\u041B', '\u041C', '\u041D', 
@@ -183,7 +183,7 @@ public final class UkrainianAlphabet extends AbstractAlphabet implements Alphabe
 		 */
 		@Unmodifiable
 		@NotNull
-		private static final List<@NotNull Character> LETTERS = List.of(
+		public static final List<@NotNull Character> LETTERS = List.of(
 			'\u0430', '\u0431', '\u0432', '\u0433', '\u0491', '\u0434', 
 			'\u0435', '\u0454', '\u0436', '\u0437', '\u0438', '\u0456', 
 			'\u0457', '\u0439', '\u043A', '\u043B', '\u043C', '\u043D', 

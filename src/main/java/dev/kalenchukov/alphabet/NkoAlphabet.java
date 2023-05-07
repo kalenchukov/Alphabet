@@ -37,7 +37,7 @@ public final class NkoAlphabet extends AbstractAlphabet implements AlphabeticalC
 	 */
 	@Unmodifiable
 	@NotNull
-	private static final List<@NotNull Character> LETTERS = List.of(
+	public static final List<@NotNull Character> LETTERS = List.of(
 			'\u07C0', '\u07C1', '\u07C2', '\u07C3', '\u07C4', '\u07C5', 
 			'\u07C6', '\u07C7', '\u07C8', '\u07C9', '\u07CA', '\u07CB', 
 			'\u07CC', '\u07CD', '\u07CE', '\u07CF', '\u07D0', '\u07D1', 

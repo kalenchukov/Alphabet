@@ -37,7 +37,7 @@ public final class GlagoliticAlphabet extends AbstractAlphabet implements Alphab
 	 */
 	@Unmodifiable
 	@NotNull
-	private static final List<@NotNull Character> LETTERS = List.of(
+	public static final List<@NotNull Character> LETTERS = List.of(
 			'\u2C00', '\u2C01', '\u2C02', '\u2C03', '\u2C04', '\u2C05', 
 			'\u2C06', '\u2C07', '\u2C08', '\u2C09', '\u2C0A', '\u2C0B', 
 			'\u2C0C', '\u2C0D', '\u2C0E', '\u2C0F', '\u2C10', '\u2C11', 

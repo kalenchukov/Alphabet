@@ -37,7 +37,7 @@ public final class RejangAlphabet extends AbstractAlphabet implements Alphabetic
 	 */
 	@Unmodifiable
 	@NotNull
-	private static final List<@NotNull Character> LETTERS = List.of(
+	public static final List<@NotNull Character> LETTERS = List.of(
 			'\uA930', '\uA931', '\uA932', '\uA933', '\uA934', '\uA935', 
 			'\uA936', '\uA937', '\uA938', '\uA939', '\uA93A', '\uA93B', 
 			'\uA93C', '\uA93D', '\uA93E', '\uA93F', '\uA940', '\uA941', 

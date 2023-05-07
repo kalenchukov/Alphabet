@@ -37,7 +37,7 @@ public final class BugineseAlphabet extends AbstractAlphabet implements Alphabet
 	 */
 	@Unmodifiable
 	@NotNull
-	private static final List<@NotNull Character> LETTERS = List.of(
+	public static final List<@NotNull Character> LETTERS = List.of(
 			'\u1A00', '\u1A01', '\u1A02', '\u1A03', '\u1A04', '\u1A05', 
 			'\u1A06', '\u1A07', '\u1A08', '\u1A09', '\u1A0A', '\u1A0B', 
 			'\u1A0C', '\u1A0D', '\u1A0E', '\u1A0F', '\u1A10', '\u1A11', 

@@ -37,7 +37,7 @@ public final class OriyaAlphabet extends AbstractAlphabet implements Alphabetica
 	 */
 	@Unmodifiable
 	@NotNull
-	private static final List<@NotNull Character> LETTERS = List.of(
+	public static final List<@NotNull Character> LETTERS = List.of(
 			'\u0B05', '\u0B06', '\u0B07', '\u0B08', '\u0B09', '\u0B0A', 
 			'\u0B0B', '\u0B60', '\u0B0C', '\u0B61', '\u0B0F', '\u0B10', 
 			'\u0B13', '\u0B14', '\u0B15', '\u0B16', '\u0B17', '\u0B18', 

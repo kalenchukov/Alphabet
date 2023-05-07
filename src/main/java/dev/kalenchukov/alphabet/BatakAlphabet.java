@@ -37,7 +37,7 @@ public final class BatakAlphabet extends AbstractAlphabet implements Alphabetica
 	 */
 	@Unmodifiable
 	@NotNull
-	private static final List<@NotNull Character> LETTERS = List.of(
+	public static final List<@NotNull Character> LETTERS = List.of(
 			'\u1BC0', '\u1BC1', '\u1BC2', '\u1BC3', '\u1BC4', '\u1BC5', 
 			'\u1BC6', '\u1BC7', '\u1BC8', '\u1BC9', '\u1BCA', '\u1BCB', 
 			'\u1BCC', '\u1BCD', '\u1BCE', '\u1BCF', '\u1BD0', '\u1BD1', 

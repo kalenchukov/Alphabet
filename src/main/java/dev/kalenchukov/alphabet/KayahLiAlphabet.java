@@ -37,7 +37,7 @@ public final class KayahLiAlphabet extends AbstractAlphabet implements Alphabeti
 	 */
 	@Unmodifiable
 	@NotNull
-	private static final List<@NotNull Character> LETTERS = List.of(
+	public static final List<@NotNull Character> LETTERS = List.of(
 			'\uA900', '\uA901', '\uA902', '\uA903', '\uA904', '\uA905', 
 			'\uA906', '\uA907', '\uA908', '\uA909', '\uA90A', '\uA90B', 
 			'\uA90C', '\uA90D', '\uA90E', '\uA90F', '\uA910', '\uA911', 

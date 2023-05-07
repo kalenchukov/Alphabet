@@ -37,7 +37,7 @@ public final class GeorgianAlphabet extends AbstractAlphabet implements Alphabet
 	 */
 	@Unmodifiable
 	@NotNull
-	private static final List<@NotNull Character> LETTERS = List.of(
+	public static final List<@NotNull Character> LETTERS = List.of(
 			'\u10D0', '\u10D1', '\u10D2', '\u10D3', '\u10D4', '\u10D5', 
 			'\u10D6', '\u10D7', '\u10D8', '\u10D9', '\u10DA', '\u10DB', 
 			'\u10DC', '\u10DD', '\u10DE', '\u10DF', '\u10E0', '\u10E1', 

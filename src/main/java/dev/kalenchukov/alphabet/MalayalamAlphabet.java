@@ -37,7 +37,7 @@ public final class MalayalamAlphabet extends AbstractAlphabet implements Alphabe
 	 */
 	@Unmodifiable
 	@NotNull
-	private static final List<@NotNull Character> LETTERS = List.of(
+	public static final List<@NotNull Character> LETTERS = List.of(
 			'\u0D05', '\u0D06', '\u0D07', '\u0D08', '\u0D09', '\u0D0A', 
 			'\u0D0B', '\u0D0C', '\u0D0E', '\u0D0F', '\u0D10', '\u0D12', 
 			'\u0D13', '\u0D14', '\u0D15', '\u0D16', '\u0D17', '\u0D18', 

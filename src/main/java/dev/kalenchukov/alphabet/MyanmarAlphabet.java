@@ -37,7 +37,7 @@ public final class MyanmarAlphabet extends AbstractAlphabet implements Alphabeti
 	 */
 	@Unmodifiable
 	@NotNull
-	private static final List<@NotNull Character> LETTERS = List.of(
+	public static final List<@NotNull Character> LETTERS = List.of(
 			'\u1000', '\u1001', '\u1002', '\u1003', '\u1004', '\u1005', 
 			'\u1006', '\u1007', '\u1008', '\u100A', '\u100B', '\u100C', 
 			'\u100D', '\u100E', '\u100F', '\u1010', '\u1011', '\u1012', 

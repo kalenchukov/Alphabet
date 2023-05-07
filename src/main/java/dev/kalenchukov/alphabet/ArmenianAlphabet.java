@@ -37,7 +37,7 @@ public final class ArmenianAlphabet extends AbstractAlphabet implements Alphabet
 	 */
 	@Unmodifiable
 	@NotNull
-	private static final List<@NotNull Character> LETTERS = List.of(
+	public static final List<@NotNull Character> LETTERS = List.of(
 			'\u0531', '\u0561', '\u0532', '\u0562', '\u0533', '\u0563', 
 			'\u0534', '\u0564', '\u0535', '\u0565', '\u0536', '\u0566', 
 			'\u0537', '\u0567', '\u0538', '\u0568', '\u0539', '\u0569', 
@@ -114,7 +114,7 @@ public final class ArmenianAlphabet extends AbstractAlphabet implements Alphabet
 		 */
 		@Unmodifiable
 		@NotNull
-		private static final List<@NotNull Character> LETTERS = List.of(
+		public static final List<@NotNull Character> LETTERS = List.of(
 			'\u0531', '\u0532', '\u0533', '\u0534', '\u0535', '\u0536', 
 			'\u0537', '\u0538', '\u0539', '\u053A', '\u053B', '\u053C', 
 			'\u053D', '\u053E', '\u053F', '\u0540', '\u0541', '\u0542', 
@@ -186,7 +186,7 @@ public final class ArmenianAlphabet extends AbstractAlphabet implements Alphabet
 		 */
 		@Unmodifiable
 		@NotNull
-		private static final List<@NotNull Character> LETTERS = List.of(
+		public static final List<@NotNull Character> LETTERS = List.of(
 			'\u0561', '\u0562', '\u0563', '\u0564', '\u0565', '\u0566', 
 			'\u0567', '\u0568', '\u0569', '\u056A', '\u056B', '\u056C', 
 			'\u056D', '\u056E', '\u056F', '\u0570', '\u0571', '\u0572', 
