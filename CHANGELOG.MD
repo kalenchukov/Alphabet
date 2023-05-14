@@ -2,13 +2,13 @@
 ## v2.7.0 - 14.05.2023
 ### Добавлено
 * Добавлен метод Alphabetical.clear(String).
-* Убрана возможность получить все буквы алфавита с помощью *Alphabet.LETTERS.
-* Переименован метод Alphabetical.getLetter(Integer) -> Alphabetical.get(Integer).
 * Добавлен метод Alphabetical.getFirst().
 * Добавлен метод Alphabetical.getLast().
-* Переименован метод Alphabetical.clear(String) -> Alphabetical.clearMismatches(String).
 * Добавлен метод Alphabetical.clearMatches().
-* Добавлена возможность получить все буквы алфавита с помощью *Alphabet.LETTERS.
+
+### Изменено
+* Переименован метод Alphabetical.getLetter(Integer) -> Alphabetical.get(Integer).
+* Переименован метод Alphabetical.clear(String) -> Alphabetical.clearMismatches(String).
 
 ## v2.6.0 - 12.02.2023
 ### Добавлено
