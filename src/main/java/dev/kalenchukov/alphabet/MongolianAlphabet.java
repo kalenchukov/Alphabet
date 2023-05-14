@@ -28,7 +28,7 @@ import java.util.Objects;
 /**
  * Класс букв монгольского алфавита.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public final class MongolianAlphabet extends AbstractAlphabet implements AlphabeticalCase
 {

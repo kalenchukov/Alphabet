@@ -28,7 +28,7 @@ import static org.junit.jupiter.api.Assertions.*;
 /**
  * Класс проверки методов класса {@link BugineseAlphabet}.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public class BugineseAlphabetTest
 {

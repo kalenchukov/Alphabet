@@ -28,7 +28,7 @@ import java.util.Objects;
 /**
  * Класс букв алфавита ол-чики.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public final class OlChikiAlphabet extends AbstractAlphabet implements AlphabeticalCase
 {

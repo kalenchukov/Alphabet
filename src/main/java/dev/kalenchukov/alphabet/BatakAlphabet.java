@@ -28,7 +28,7 @@ import java.util.Objects;
 /**
  * Класс букв батакского алфавита.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public final class BatakAlphabet extends AbstractAlphabet implements AlphabeticalCase
 {

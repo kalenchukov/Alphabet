@@ -28,7 +28,7 @@ import java.util.Objects;
 /**
  * Класс букв международного фонетического алфавита.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public final class InternationalPhoneticAlphabet extends AbstractAlphabet implements AlphabeticalCase
 {
@@ -122,7 +122,7 @@ public final class InternationalPhoneticAlphabet extends AbstractAlphabet implem
 	/**
 	 * Класс прописных букв международного фонетического алфавита.
 	 *
-	 * @author Aleksey Kalenchukov
+	 * @author Алексей Каленчуков
 	 */
 	public static final class UpperCase extends AbstractAlphabet implements AlphabeticalUpperCase
 	{
@@ -189,7 +189,7 @@ public final class InternationalPhoneticAlphabet extends AbstractAlphabet implem
 	/**
 	 * Класс строчных букв международного фонетического алфавита.
 	 *
-	 * @author Aleksey Kalenchukov
+	 * @author Алексей Каленчуков
 	 */
 	public static final class LowerCase extends AbstractAlphabet implements AlphabeticalLowerCase
 	{

@@ -28,7 +28,7 @@ import java.util.Objects;
 /**
  * Класс букв сингальского алфавита.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public final class SinhalaAlphabet extends AbstractAlphabet implements AlphabeticalCase
 {

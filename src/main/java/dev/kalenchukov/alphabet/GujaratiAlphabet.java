@@ -28,7 +28,7 @@ import java.util.Objects;
 /**
  * Класс букв алфавита гуджарати.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public final class GujaratiAlphabet extends AbstractAlphabet implements AlphabeticalCase
 {

@@ -28,7 +28,7 @@ import java.util.Objects;
 /**
  * Класс букв татарского алфавита.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public final class TatarAlphabet extends AbstractAlphabet implements AlphabeticalCase
 {
@@ -105,7 +105,7 @@ public final class TatarAlphabet extends AbstractAlphabet implements Alphabetica
 	/**
 	 * Класс прописных букв татарского алфавита.
 	 *
-	 * @author Aleksey Kalenchukov
+	 * @author Алексей Каленчуков
 	 */
 	public static final class UpperCase extends AbstractAlphabet implements AlphabeticalUpperCase
 	{
@@ -177,7 +177,7 @@ public final class TatarAlphabet extends AbstractAlphabet implements Alphabetica
 	/**
 	 * Класс строчных букв татарского алфавита.
 	 *
-	 * @author Aleksey Kalenchukov
+	 * @author Алексей Каленчуков
 	 */
 	public static final class LowerCase extends AbstractAlphabet implements AlphabeticalLowerCase
 	{

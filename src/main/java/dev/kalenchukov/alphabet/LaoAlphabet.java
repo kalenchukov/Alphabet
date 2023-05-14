@@ -28,7 +28,7 @@ import java.util.Objects;
 /**
  * Класс букв лаосского алфавита.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public final class LaoAlphabet extends AbstractAlphabet implements AlphabeticalCase
 {

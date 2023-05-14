@@ -28,7 +28,7 @@ import java.util.Objects;
 /**
  * Класс букв тибетского алфавита.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public final class TibetanAlphabet extends AbstractAlphabet implements AlphabeticalCase
 {

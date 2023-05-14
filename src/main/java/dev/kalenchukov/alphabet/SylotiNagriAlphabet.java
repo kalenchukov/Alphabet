@@ -28,7 +28,7 @@ import java.util.Objects;
 /**
  * Класс букв алфавита силхети нагари.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public final class SylotiNagriAlphabet extends AbstractAlphabet implements AlphabeticalCase
 {

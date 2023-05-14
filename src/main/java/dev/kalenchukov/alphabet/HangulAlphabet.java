@@ -28,7 +28,7 @@ import java.util.Objects;
 /**
  * Класс букв алфавита хангыль.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public final class HangulAlphabet extends AbstractAlphabet implements AlphabeticalCase
 {

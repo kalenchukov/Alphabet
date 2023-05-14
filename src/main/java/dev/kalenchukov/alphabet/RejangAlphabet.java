@@ -28,7 +28,7 @@ import java.util.Objects;
 /**
  * Класс букв реджангского алфавита.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public final class RejangAlphabet extends AbstractAlphabet implements AlphabeticalCase
 {

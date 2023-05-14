@@ -28,7 +28,7 @@ import java.util.Objects;
 /**
  * Класс букв алфавита хирагана.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public final class HiraganaAlphabet extends AbstractAlphabet implements AlphabeticalCase
 {

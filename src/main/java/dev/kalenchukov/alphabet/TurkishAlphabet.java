@@ -28,7 +28,7 @@ import java.util.Objects;
 /**
  * Класс букв турецкого алфавита.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public final class TurkishAlphabet extends AbstractAlphabet implements AlphabeticalCase
 {
@@ -102,7 +102,7 @@ public final class TurkishAlphabet extends AbstractAlphabet implements Alphabeti
 	/**
 	 * Класс прописных букв турецкого алфавита.
 	 *
-	 * @author Aleksey Kalenchukov
+	 * @author Алексей Каленчуков
 	 */
 	public static final class UpperCase extends AbstractAlphabet implements AlphabeticalUpperCase
 	{
@@ -172,7 +172,7 @@ public final class TurkishAlphabet extends AbstractAlphabet implements Alphabeti
 	/**
 	 * Класс строчных букв турецкого алфавита.
 	 *
-	 * @author Aleksey Kalenchukov
+	 * @author Алексей Каленчуков
 	 */
 	public static final class LowerCase extends AbstractAlphabet implements AlphabeticalLowerCase
 	{

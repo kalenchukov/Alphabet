@@ -28,7 +28,7 @@ import java.util.Objects;
 /**
  * Класс букв греческого алфавита.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public final class GreekAlphabet extends AbstractAlphabet implements AlphabeticalCase
 {
@@ -101,7 +101,7 @@ public final class GreekAlphabet extends AbstractAlphabet implements Alphabetica
 	/**
 	 * Класс прописных букв греческого алфавита.
 	 *
-	 * @author Aleksey Kalenchukov
+	 * @author Алексей Каленчуков
 	 */
 	public static final class UpperCase extends AbstractAlphabet implements AlphabeticalUpperCase
 	{
@@ -170,7 +170,7 @@ public final class GreekAlphabet extends AbstractAlphabet implements Alphabetica
 	/**
 	 * Класс строчных букв греческого алфавита.
 	 *
-	 * @author Aleksey Kalenchukov
+	 * @author Алексей Каленчуков
 	 */
 	public static final class LowerCase extends AbstractAlphabet implements AlphabeticalLowerCase
 	{

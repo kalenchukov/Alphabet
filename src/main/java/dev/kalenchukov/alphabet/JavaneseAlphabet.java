@@ -28,7 +28,7 @@ import java.util.Objects;
 /**
  * Класс букв яванского алфавита.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public final class JavaneseAlphabet extends AbstractAlphabet implements AlphabeticalCase
 {

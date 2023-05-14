@@ -28,7 +28,7 @@ import java.util.Objects;
 /**
  * Класс букв грузинского алфавита.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public final class GeorgianAlphabet extends AbstractAlphabet implements AlphabeticalCase
 {

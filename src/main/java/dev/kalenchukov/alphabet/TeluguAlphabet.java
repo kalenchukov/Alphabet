@@ -28,7 +28,7 @@ import java.util.Objects;
 /**
  * Класс букв алфавита телугу.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public final class TeluguAlphabet extends AbstractAlphabet implements AlphabeticalCase
 {

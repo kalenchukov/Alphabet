@@ -28,7 +28,7 @@ import java.util.Objects;
 /**
  * Класс букв башкирского алфавита.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public final class BashkirAlphabet extends AbstractAlphabet implements AlphabeticalCase
 {
@@ -106,7 +106,7 @@ public final class BashkirAlphabet extends AbstractAlphabet implements Alphabeti
 	/**
 	 * Класс прописных букв башкирского алфавита.
 	 *
-	 * @author Aleksey Kalenchukov
+	 * @author Алексей Каленчуков
 	 */
 	public static final class UpperCase extends AbstractAlphabet implements AlphabeticalUpperCase
 	{
@@ -178,7 +178,7 @@ public final class BashkirAlphabet extends AbstractAlphabet implements Alphabeti
 	/**
 	 * Класс строчных букв башкирского алфавита.
 	 *
-	 * @author Aleksey Kalenchukov
+	 * @author Алексей Каленчуков
 	 */
 	public static final class LowerCase extends AbstractAlphabet implements AlphabeticalLowerCase
 	{

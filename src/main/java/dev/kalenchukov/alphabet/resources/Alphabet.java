@@ -24,7 +24,7 @@ import org.jetbrains.annotations.NotNull;
 /**
  * Перечисление алфавитов.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public enum Alphabet
 {

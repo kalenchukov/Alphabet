@@ -28,7 +28,7 @@ import java.util.Objects;
 /**
  * Класс букв сунданского алфавита.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public final class SundaneseAlphabet extends AbstractAlphabet implements AlphabeticalCase
 {

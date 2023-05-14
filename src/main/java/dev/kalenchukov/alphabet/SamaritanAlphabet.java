@@ -28,7 +28,7 @@ import java.util.Objects;
 /**
  * Класс букв самаритянского алфавита.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public final class SamaritanAlphabet extends AbstractAlphabet implements AlphabeticalCase
 {

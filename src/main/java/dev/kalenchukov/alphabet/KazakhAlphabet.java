@@ -28,7 +28,7 @@ import java.util.Objects;
 /**
  * Класс букв казахского алфавита.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public final class KazakhAlphabet extends AbstractAlphabet implements AlphabeticalCase
 {
@@ -106,7 +106,7 @@ public final class KazakhAlphabet extends AbstractAlphabet implements Alphabetic
 	/**
 	 * Класс прописных букв казахского алфавита.
 	 *
-	 * @author Aleksey Kalenchukov
+	 * @author Алексей Каленчуков
 	 */
 	public static final class UpperCase extends AbstractAlphabet implements AlphabeticalUpperCase
 	{
@@ -178,7 +178,7 @@ public final class KazakhAlphabet extends AbstractAlphabet implements Alphabetic
 	/**
 	 * Класс строчных букв казахского алфавита.
 	 *
-	 * @author Aleksey Kalenchukov
+	 * @author Алексей Каленчуков
 	 */
 	public static final class LowerCase extends AbstractAlphabet implements AlphabeticalLowerCase
 	{

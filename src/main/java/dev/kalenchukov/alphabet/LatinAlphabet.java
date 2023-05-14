@@ -28,7 +28,7 @@ import java.util.Objects;
 /**
  * Класс букв латинского алфавита.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public final class LatinAlphabet extends AbstractAlphabet implements AlphabeticalCase
 {
@@ -101,7 +101,7 @@ public final class LatinAlphabet extends AbstractAlphabet implements Alphabetica
 	/**
 	 * Класс прописных букв Латинский алфавит алфавита.
 	 *
-	 * @author Aleksey Kalenchukov
+	 * @author Алексей Каленчуков
 	 */
 	public static final class UpperCase extends AbstractAlphabet implements AlphabeticalUpperCase
 	{
@@ -171,7 +171,7 @@ public final class LatinAlphabet extends AbstractAlphabet implements Alphabetica
 	/**
 	 * Класс строчных букв Латинский алфавит алфавита.
 	 *
-	 * @author Aleksey Kalenchukov
+	 * @author Алексей Каленчуков
 	 */
 	public static final class LowerCase extends AbstractAlphabet implements AlphabeticalLowerCase
 	{

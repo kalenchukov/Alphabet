@@ -28,7 +28,7 @@ import java.util.Objects;
 /**
  * Класс букв алфавита саураштра.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public final class SaurashtraAlphabet extends AbstractAlphabet implements AlphabeticalCase
 {

@@ -28,7 +28,7 @@ import java.util.Objects;
 /**
  * Класс букв алфавита нко.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public final class NkoAlphabet extends AbstractAlphabet implements AlphabeticalCase
 {

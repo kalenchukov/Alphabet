@@ -21,7 +21,7 @@ package dev.kalenchukov.alphabet;
 /**
  * Интерфейс для реализации регистровых алфавитов.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public interface AlphabeticalCase extends Alphabetical
 {

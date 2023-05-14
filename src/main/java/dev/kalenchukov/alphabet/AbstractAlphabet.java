@@ -29,7 +29,7 @@ import java.util.stream.Stream;
 /**
  * Класс абстрактного алфавита.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public abstract class AbstractAlphabet implements Alphabetical
 {

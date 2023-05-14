@@ -29,7 +29,7 @@ import java.util.Map;
 /**
  * Интерфейс для реализации алфавита.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public interface Alphabetical
 {

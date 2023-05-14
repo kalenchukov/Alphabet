@@ -28,7 +28,7 @@ import java.util.Objects;
 /**
  * Класс букв алфавита ория.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public final class OriyaAlphabet extends AbstractAlphabet implements AlphabeticalCase
 {

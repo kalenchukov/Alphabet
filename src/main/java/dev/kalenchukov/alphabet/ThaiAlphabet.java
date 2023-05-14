@@ -28,7 +28,7 @@ import java.util.Objects;
 /**
  * Класс букв тайского алфавита.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public final class ThaiAlphabet extends AbstractAlphabet implements AlphabeticalCase
 {

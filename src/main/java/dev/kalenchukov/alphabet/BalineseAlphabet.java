@@ -28,7 +28,7 @@ import java.util.Objects;
 /**
  * Класс букв балийского алфавита.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public final class BalineseAlphabet extends AbstractAlphabet implements AlphabeticalCase
 {

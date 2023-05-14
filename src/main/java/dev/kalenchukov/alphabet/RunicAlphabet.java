@@ -28,7 +28,7 @@ import java.util.Objects;
 /**
  * Класс букв германского рунического алфавита.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public final class RunicAlphabet extends AbstractAlphabet implements AlphabeticalCase
 {

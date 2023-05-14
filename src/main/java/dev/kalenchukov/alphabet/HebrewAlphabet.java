@@ -28,7 +28,7 @@ import java.util.Objects;
 /**
  * Класс букв еврейского алфавита.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public final class HebrewAlphabet extends AbstractAlphabet implements AlphabeticalCase
 {

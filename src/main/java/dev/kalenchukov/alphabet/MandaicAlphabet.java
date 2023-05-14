@@ -28,7 +28,7 @@ import java.util.Objects;
 /**
  * Класс букв мандейского алфавита.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public final class MandaicAlphabet extends AbstractAlphabet implements AlphabeticalCase
 {

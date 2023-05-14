@@ -28,7 +28,7 @@ import java.util.Objects;
 /**
  * Класс букв бугийского алфавита.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public final class BugineseAlphabet extends AbstractAlphabet implements AlphabeticalCase
 {

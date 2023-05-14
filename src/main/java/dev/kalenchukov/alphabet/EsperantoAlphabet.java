@@ -28,7 +28,7 @@ import java.util.Objects;
 /**
  * Класс букв алфавита эсперанто.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public final class EsperantoAlphabet extends AbstractAlphabet implements AlphabeticalCase
 {
@@ -102,7 +102,7 @@ public final class EsperantoAlphabet extends AbstractAlphabet implements Alphabe
 	/**
 	 * Класс прописных букв алфавита эсперанто.
 	 *
-	 * @author Aleksey Kalenchukov
+	 * @author Алексей Каленчуков
 	 */
 	public static final class UpperCase extends AbstractAlphabet implements AlphabeticalUpperCase
 	{
@@ -172,7 +172,7 @@ public final class EsperantoAlphabet extends AbstractAlphabet implements Alphabe
 	/**
 	 * Класс строчных букв алфавита эсперанто.
 	 *
-	 * @author Aleksey Kalenchukov
+	 * @author Алексей Каленчуков
 	 */
 	public static final class LowerCase extends AbstractAlphabet implements AlphabeticalLowerCase
 	{

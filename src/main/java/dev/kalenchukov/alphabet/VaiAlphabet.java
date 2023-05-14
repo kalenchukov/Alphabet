@@ -28,7 +28,7 @@ import java.util.Objects;
 /**
  * Класс букв слогового алфавита ваи.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public final class VaiAlphabet extends AbstractAlphabet implements AlphabeticalCase
 {

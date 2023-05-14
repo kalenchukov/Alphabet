@@ -28,7 +28,7 @@ import java.util.Objects;
 /**
  * Класс букв немецкого алфавита.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public final class GermanAlphabet extends AbstractAlphabet implements AlphabeticalCase
 {
@@ -102,7 +102,7 @@ public final class GermanAlphabet extends AbstractAlphabet implements Alphabetic
 	/**
 	 * Класс прописных букв немецкого алфавита.
 	 *
-	 * @author Aleksey Kalenchukov
+	 * @author Алексей Каленчуков
 	 */
 	public static final class UpperCase extends AbstractAlphabet implements AlphabeticalUpperCase
 	{
@@ -172,7 +172,7 @@ public final class GermanAlphabet extends AbstractAlphabet implements Alphabetic
 	/**
 	 * Класс строчных букв немецкого алфавита.
 	 *
-	 * @author Aleksey Kalenchukov
+	 * @author Алексей Каленчуков
 	 */
 	public static final class LowerCase extends AbstractAlphabet implements AlphabeticalLowerCase
 	{

@@ -28,7 +28,7 @@ import java.util.Objects;
 /**
  * Класс букв эфиопского алфавита.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public final class EthiopicAlphabet extends AbstractAlphabet implements AlphabeticalCase
 {

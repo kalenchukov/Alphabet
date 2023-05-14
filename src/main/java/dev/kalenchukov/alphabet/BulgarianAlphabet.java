@@ -28,7 +28,7 @@ import java.util.Objects;
 /**
  * Класс букв болгарского алфавита.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public final class BulgarianAlphabet extends AbstractAlphabet implements AlphabeticalCase
 {
@@ -102,7 +102,7 @@ public final class BulgarianAlphabet extends AbstractAlphabet implements Alphabe
 	/**
 	 * Класс прописных букв болгарского алфавита.
 	 *
-	 * @author Aleksey Kalenchukov
+	 * @author Алексей Каленчуков
 	 */
 	public static final class UpperCase extends AbstractAlphabet implements AlphabeticalUpperCase
 	{
@@ -172,7 +172,7 @@ public final class BulgarianAlphabet extends AbstractAlphabet implements Alphabe
 	/**
 	 * Класс строчных букв болгарского алфавита.
 	 *
-	 * @author Aleksey Kalenchukov
+	 * @author Алексей Каленчуков
 	 */
 	public static final class LowerCase extends AbstractAlphabet implements AlphabeticalLowerCase
 	{

@@ -28,7 +28,7 @@ import java.util.Objects;
 /**
  * Класс букв алфавита пагба-ламы.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public final class PhagsPaAlphabet extends AbstractAlphabet implements AlphabeticalCase
 {

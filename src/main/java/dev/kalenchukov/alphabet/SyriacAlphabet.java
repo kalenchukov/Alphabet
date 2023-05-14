@@ -28,7 +28,7 @@ import java.util.Objects;
 /**
  * Класс букв сирийского алфавита.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public final class SyriacAlphabet extends AbstractAlphabet implements AlphabeticalCase
 {

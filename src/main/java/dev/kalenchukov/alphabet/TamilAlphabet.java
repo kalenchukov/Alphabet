@@ -28,7 +28,7 @@ import java.util.Objects;
 /**
  * Класс букв тамильского алфавита.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public final class TamilAlphabet extends AbstractAlphabet implements AlphabeticalCase
 {

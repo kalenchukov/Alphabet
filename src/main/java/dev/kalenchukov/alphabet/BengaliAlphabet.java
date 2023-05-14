@@ -28,7 +28,7 @@ import java.util.Objects;
 /**
  * Класс букв бенгальского алфавита.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public final class BengaliAlphabet extends AbstractAlphabet implements AlphabeticalCase
 {

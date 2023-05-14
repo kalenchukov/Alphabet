@@ -28,7 +28,7 @@ import java.util.Objects;
 /**
  * Класс букв алфавита тагбанва.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public final class TagbanwaAlphabet extends AbstractAlphabet implements AlphabeticalCase
 {

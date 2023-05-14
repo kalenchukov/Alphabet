@@ -28,7 +28,7 @@ import java.util.Objects;
 /**
  * Класс букв алфавита ланна.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public final class TaiThamAlphabet extends AbstractAlphabet implements AlphabeticalCase
 {
