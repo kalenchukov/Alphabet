@@ -39,7 +39,7 @@ public class MalayalamAlphabetTest
 	 * Проверка метода {@link MalayalamAlphabet#get()}.
 	 */
 	@Test
-	public void testGet()
+	public void get()
 	{
 		List<Character> letters = List.of(
 			'അ', 'ആ', 'ഇ', 'ഈ', 'ഉ', 'ഊ', 

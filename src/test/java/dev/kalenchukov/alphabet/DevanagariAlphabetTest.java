@@ -39,7 +39,7 @@ public class DevanagariAlphabetTest
 	 * Проверка метода {@link DevanagariAlphabet#get()}.
 	 */
 	@Test
-	public void testGet()
+	public void get()
 	{
 		List<Character> letters = List.of(
 			'क', 'ख', 'ग', 'घ', 'ङ', 'च', 

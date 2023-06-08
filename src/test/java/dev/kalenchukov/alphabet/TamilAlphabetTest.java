@@ -39,7 +39,7 @@ public class TamilAlphabetTest
 	 * Проверка метода {@link TamilAlphabet#get()}.
 	 */
 	@Test
-	public void testGet()
+	public void get()
 	{
 		List<Character> letters = List.of(
 			'அ', 'ஆ', 'இ', 'ஈ', 'உ', 'ஊ', 

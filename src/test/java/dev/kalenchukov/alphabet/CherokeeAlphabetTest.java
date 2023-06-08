@@ -39,7 +39,7 @@ public class CherokeeAlphabetTest
 	 * Проверка метода {@link CherokeeAlphabet#get()}.
 	 */
 	@Test
-	public void testGet()
+	public void get()
 	{
 		List<Character> letters = List.of(
 			'Ꭰ', 'Ꭱ', 'Ꭲ', 'Ꭳ', 'Ꭴ', 'Ꭵ', 

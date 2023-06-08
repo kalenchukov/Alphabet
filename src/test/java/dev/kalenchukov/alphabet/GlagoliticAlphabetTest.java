@@ -39,7 +39,7 @@ public class GlagoliticAlphabetTest
 	 * Проверка метода {@link GlagoliticAlphabet#get()}.
 	 */
 	@Test
-	public void testGet()
+	public void get()
 	{
 		List<Character> letters = List.of(
 			'Ⰰ', 'Ⰱ', 'Ⰲ', 'Ⰳ', 'Ⰴ', 'Ⰵ', 

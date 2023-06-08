@@ -39,7 +39,7 @@ public class GreekAlphabetLowerCaseTest
 	 * Проверка метода {@link GreekAlphabet.LowerCase#get()}.
 	 */
 	@Test
-	public void testGet()
+	public void get()
 	{
 		List<Character> letters = List.of(
 			'α', 'β', 'γ', 'δ', 'ε', 'ζ', 'η', 'θ', 'ι',

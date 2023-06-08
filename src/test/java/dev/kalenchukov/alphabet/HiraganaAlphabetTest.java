@@ -39,7 +39,7 @@ public class HiraganaAlphabetTest
 	 * Проверка метода {@link HiraganaAlphabet#get()}.
 	 */
 	@Test
-	public void testGet()
+	public void get()
 	{
 		List<Character> letters = List.of(
 			'か', 'き', 'く', 'け', 'こ', 'さ', 

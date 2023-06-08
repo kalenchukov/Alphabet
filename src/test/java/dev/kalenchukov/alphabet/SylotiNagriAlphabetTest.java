@@ -39,7 +39,7 @@ public class SylotiNagriAlphabetTest
 	 * Проверка метода {@link SylotiNagriAlphabet#get()}.
 	 */
 	@Test
-	public void testGet()
+	public void get()
 	{
 		List<Character> letters = List.of(
 			'ꠀ', 'ꠁ', 'ꠂ', 'ꠃ', 'ꠄ', 'ꠅ', 

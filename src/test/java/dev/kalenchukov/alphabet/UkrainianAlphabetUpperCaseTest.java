@@ -39,7 +39,7 @@ public class UkrainianAlphabetUpperCaseTest
 	 * Проверка метода {@link UkrainianAlphabet.UpperCase#get()}.
 	 */
 	@Test
-	public void testGet()
+	public void get()
 	{
 		List<Character> letters = List.of(
 			'А', 'Б', 'В', 'Г', 'Ґ', 'Д', 

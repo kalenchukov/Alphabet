@@ -39,7 +39,7 @@ public class BulgarianAlphabetLowerCaseTest
 	 * Проверка метода {@link BulgarianAlphabet.LowerCase#get()}.
 	 */
 	@Test
-	public void testGet()
+	public void get()
 	{
 		List<Character> letters = List.of(
 			'а', 'б', 'в', 'г', 'д', 'е', 

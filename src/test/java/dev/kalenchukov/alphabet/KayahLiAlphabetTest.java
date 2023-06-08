@@ -39,7 +39,7 @@ public class KayahLiAlphabetTest
 	 * Проверка метода {@link KayahLiAlphabet#get()}.
 	 */
 	@Test
-	public void testGet()
+	public void get()
 	{
 		List<Character> letters = List.of(
 			'꤀', '꤁', '꤂', '꤃', '꤄', '꤅', 

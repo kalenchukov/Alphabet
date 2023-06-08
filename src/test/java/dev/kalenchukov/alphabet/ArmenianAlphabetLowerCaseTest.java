@@ -39,7 +39,7 @@ public class ArmenianAlphabetLowerCaseTest
 	 * Проверка метода {@link ArmenianAlphabet.LowerCase#get()}.
 	 */
 	@Test
-	public void testGet()
+	public void get()
 	{
 		List<Character> letters = List.of(
 			'ա', 'բ', 'գ', 'դ', 'ե', 'զ', 

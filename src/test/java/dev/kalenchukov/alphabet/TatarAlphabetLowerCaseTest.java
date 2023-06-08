@@ -39,7 +39,7 @@ public class TatarAlphabetLowerCaseTest
 	 * Проверка метода {@link TatarAlphabet.LowerCase#get()}.
 	 */
 	@Test
-	public void testGet()
+	public void get()
 	{
 		List<Character> letters = List.of(
 			'а', 'ә', 'б', 'в', 'г', 'д', 

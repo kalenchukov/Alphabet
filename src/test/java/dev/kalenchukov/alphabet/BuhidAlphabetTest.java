@@ -39,7 +39,7 @@ public class BuhidAlphabetTest
 	 * Проверка метода {@link BuhidAlphabet#get()}.
 	 */
 	@Test
-	public void testGet()
+	public void get()
 	{
 		List<Character> letters = List.of(
 			'ᝀ', 'ᝁ', 'ᝂ', 'ᝃ', 'ᝄ', 'ᝅ', 

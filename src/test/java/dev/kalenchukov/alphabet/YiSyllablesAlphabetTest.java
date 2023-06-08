@@ -39,7 +39,7 @@ public class YiSyllablesAlphabetTest
 	 * Проверка метода {@link YiSyllablesAlphabet#get()}.
 	 */
 	@Test
-	public void testGet()
+	public void get()
 	{
 		List<Character> letters = List.of(
 			'ꀀ', 'ꀁ', 'ꀂ', 'ꀃ', 'ꀄ', 'ꀅ', 

@@ -39,7 +39,7 @@ public class LaoAlphabetTest
 	 * Проверка метода {@link LaoAlphabet#get()}.
 	 */
 	@Test
-	public void testGet()
+	public void get()
 	{
 		List<Character> letters = List.of(
 			'ກ', 'ຂ', 'ຄ', 'ງ', 'ຈ', 'ສ', 

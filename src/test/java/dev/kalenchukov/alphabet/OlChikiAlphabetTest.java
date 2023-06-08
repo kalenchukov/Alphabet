@@ -39,7 +39,7 @@ public class OlChikiAlphabetTest
 	 * Проверка метода {@link OlChikiAlphabet#get()}.
 	 */
 	@Test
-	public void testGet()
+	public void get()
 	{
 		List<Character> letters = List.of(
 			'᱐', '᱑', '᱒', '᱓', '᱔', '᱕', 

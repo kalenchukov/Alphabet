@@ -39,7 +39,7 @@ public class PhagsPaAlphabetTest
 	 * Проверка метода {@link PhagsPaAlphabet#get()}.
 	 */
 	@Test
-	public void testGet()
+	public void get()
 	{
 		List<Character> letters = List.of(
 			'ꡀ', 'ꡁ', 'ꡂ', 'ꡃ', 'ꡄ', 'ꡅ', 

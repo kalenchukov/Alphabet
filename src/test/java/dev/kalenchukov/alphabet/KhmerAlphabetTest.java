@@ -39,7 +39,7 @@ public class KhmerAlphabetTest
 	 * Проверка метода {@link KhmerAlphabet#get()}.
 	 */
 	@Test
-	public void testGet()
+	public void get()
 	{
 		List<Character> letters = List.of(
 			'ក', 'ខ', 'គ', 'ឃ', 'ង', 'ច', 

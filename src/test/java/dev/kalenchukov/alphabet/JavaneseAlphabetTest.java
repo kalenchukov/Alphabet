@@ -39,7 +39,7 @@ public class JavaneseAlphabetTest
 	 * Проверка метода {@link JavaneseAlphabet#get()}.
 	 */
 	@Test
-	public void testGet()
+	public void get()
 	{
 		List<Character> letters = List.of(
 			'ꦀ', 'ꦁ', 'ꦂ', 'ꦃ', 'ꦄ', 'ꦅ', 

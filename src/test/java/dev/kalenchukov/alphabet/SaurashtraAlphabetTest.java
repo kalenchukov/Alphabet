@@ -39,7 +39,7 @@ public class SaurashtraAlphabetTest
 	 * Проверка метода {@link SaurashtraAlphabet#get()}.
 	 */
 	@Test
-	public void testGet()
+	public void get()
 	{
 		List<Character> letters = List.of(
 			'ꢒ', 'ꢓ', 'ꢔ', 'ꢕ', 'ꢖ', 'ꢗ', 

@@ -39,7 +39,7 @@ public class TurkishAlphabetTest
 	 * Проверка метода {@link TurkishAlphabet#get()}.
 	 */
 	@Test
-	public void testGet()
+	public void get()
 	{
 		List<Character> letters = List.of(
 			'A', 'a', 'B', 'b', 'C', 'c', 

@@ -39,7 +39,7 @@ public class TurkishAlphabetLowerCaseTest
 	 * Проверка метода {@link TurkishAlphabet.LowerCase#get()}.
 	 */
 	@Test
-	public void testGet()
+	public void get()
 	{
 		List<Character> letters = List.of(
 			'a', 'b', 'c', 'ç', 'd', 'e', 

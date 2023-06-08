@@ -39,7 +39,7 @@ public class LatinAlphabetUpperCaseTest
 	 * Проверка метода {@link LatinAlphabet.UpperCase#get()}.
 	 */
 	@Test
-	public void testGet()
+	public void get()
 	{
 		List<Character> letters = List.of(
 			'A', 'B', 'C', 'D', 'E', 'F', 

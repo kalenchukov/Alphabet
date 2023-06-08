@@ -39,7 +39,7 @@ public class GurmukhiAlphabetTest
 	 * Проверка метода {@link GurmukhiAlphabet#get()}.
 	 */
 	@Test
-	public void testGet()
+	public void get()
 	{
 		List<Character> letters = List.of(
 			'ੳ', 'ਅ', 'ੲ', 'ਸ', 'ਹ', 'ਕ', 

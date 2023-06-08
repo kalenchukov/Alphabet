@@ -39,7 +39,7 @@ public class TatarAlphabetTest
 	 * Проверка метода {@link TatarAlphabet#get()}.
 	 */
 	@Test
-	public void testGet()
+	public void get()
 	{
 		List<Character> letters = List.of(
 			'А', 'а', 'Ә', 'ә', 'Б', 'б', 

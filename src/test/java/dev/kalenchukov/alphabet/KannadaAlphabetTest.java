@@ -39,7 +39,7 @@ public class KannadaAlphabetTest
 	 * Проверка метода {@link KannadaAlphabet#get()}.
 	 */
 	@Test
-	public void testGet()
+	public void get()
 	{
 		List<Character> letters = List.of(
 			'ಅ', 'ಆ', 'ಇ', 'ಈ', 'ಉ', 'ಊ', 

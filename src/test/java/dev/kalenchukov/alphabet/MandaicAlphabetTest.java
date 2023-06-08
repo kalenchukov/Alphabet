@@ -39,7 +39,7 @@ public class MandaicAlphabetTest
 	 * Проверка метода {@link MandaicAlphabet#get()}.
 	 */
 	@Test
-	public void testGet()
+	public void get()
 	{
 		List<Character> letters = List.of(
 			'ࡀ', 'ࡁ', 'ࡂ', 'ࡃ', 'ࡄ', 'ࡅ', 

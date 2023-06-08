@@ -39,7 +39,7 @@ public class GujaratiAlphabetTest
 	 * Проверка метода {@link GujaratiAlphabet#get()}.
 	 */
 	@Test
-	public void testGet()
+	public void get()
 	{
 		List<Character> letters = List.of(
 			'ક', 'ખ', 'ગ', 'ઘ', 'ઙ', 'ચ', 

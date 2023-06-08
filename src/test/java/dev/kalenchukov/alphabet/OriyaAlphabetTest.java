@@ -39,7 +39,7 @@ public class OriyaAlphabetTest
 	 * Проверка метода {@link OriyaAlphabet#get()}.
 	 */
 	@Test
-	public void testGet()
+	public void get()
 	{
 		List<Character> letters = List.of(
 			'ଅ', 'ଆ', 'ଇ', 'ଈ', 'ଉ', 'ଊ', 

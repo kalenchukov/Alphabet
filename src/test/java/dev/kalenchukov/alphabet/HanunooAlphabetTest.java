@@ -39,7 +39,7 @@ public class HanunooAlphabetTest
 	 * Проверка метода {@link HanunooAlphabet#get()}.
 	 */
 	@Test
-	public void testGet()
+	public void get()
 	{
 		List<Character> letters = List.of(
 			'ᜠ', 'ᜡ', 'ᜢ', 'ᜣ', 'ᜤ', 'ᜥ', 

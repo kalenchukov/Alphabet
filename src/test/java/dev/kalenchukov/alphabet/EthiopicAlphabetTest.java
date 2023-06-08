@@ -39,7 +39,7 @@ public class EthiopicAlphabetTest
 	 * Проверка метода {@link EthiopicAlphabet#get()}.
 	 */
 	@Test
-	public void testGet()
+	public void get()
 	{
 		List<Character> letters = List.of(
 			'ሀ', 'ሁ', 'ሂ', 'ሃ', 'ሄ', 'ህ', 

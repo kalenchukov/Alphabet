@@ -39,7 +39,7 @@ public class MongolianAlphabetTest
 	 * Проверка метода {@link MongolianAlphabet#get()}.
 	 */
 	@Test
-	public void testGet()
+	public void get()
 	{
 		List<Character> letters = List.of(
 			'ᠠ', 'ᠡ', 'ᠢ', 'ᠣ', 'ᠤ', 'ᠥ', 

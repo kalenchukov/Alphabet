@@ -39,7 +39,7 @@ public class LepchaAlphabetTest
 	 * Проверка метода {@link LepchaAlphabet#get()}.
 	 */
 	@Test
-	public void testGet()
+	public void get()
 	{
 		List<Character> letters = List.of(
 			'ᰀ', 'ᰁ', 'ᰂ', 'ᰃ', 'ᰄ', 'ᰅ', 

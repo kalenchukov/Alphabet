@@ -39,7 +39,7 @@ public class BopomofoAlphabetTest
 	 * Проверка метода {@link BopomofoAlphabet#get()}.
 	 */
 	@Test
-	public void testGet()
+	public void get()
 	{
 		List<Character> letters = List.of(
 			'ㄅ', 'ㄆ', 'ㄇ', 'ㄈ', 'ㄉ', 'ㄊ', 

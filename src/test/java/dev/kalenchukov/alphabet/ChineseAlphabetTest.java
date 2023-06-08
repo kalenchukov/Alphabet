@@ -39,7 +39,7 @@ public class ChineseAlphabetTest
 	 * Проверка метода {@link ChineseAlphabet#get()}.
 	 */
 	@Test
-	public void testGet()
+	public void get()
 	{
 		List<Character> letters = List.of(
 			'A', 'a', 'B', 'b', 'C', 'c', 

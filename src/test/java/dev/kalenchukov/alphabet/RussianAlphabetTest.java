@@ -39,7 +39,7 @@ public class RussianAlphabetTest
 	 * Проверка метода {@link RussianAlphabet#get()}.
 	 */
 	@Test
-	public void testGet()
+	public void get()
 	{
 		List<Character> letters = List.of(
 			'А', 'а', 'Б', 'б', 'В', 'в', 'Г', 'г', 'Д', 'д',

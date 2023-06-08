@@ -39,7 +39,7 @@ public class GermanAlphabetUpperCaseTest
 	 * Проверка метода {@link GermanAlphabet.UpperCase#get()}.
 	 */
 	@Test
-	public void testGet()
+	public void get()
 	{
 		List<Character> letters = List.of(
 			'A', 'B', 'C', 'D', 'E', 'F', 

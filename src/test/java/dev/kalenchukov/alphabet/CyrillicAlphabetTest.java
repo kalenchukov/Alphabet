@@ -39,7 +39,7 @@ public class CyrillicAlphabetTest
 	 * Проверка метода {@link CyrillicAlphabet#get()}.
 	 */
 	@Test
-	public void testGet()
+	public void get()
 	{
 		List<Character> letters = List.of(
 			'А', 'Б', 'В', 'Г', 'Д', 'Е', 'Ж', 'Ѕ', 'З', 'И', 'І',

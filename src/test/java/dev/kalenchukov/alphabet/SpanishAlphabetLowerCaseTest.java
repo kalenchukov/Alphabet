@@ -39,7 +39,7 @@ public class SpanishAlphabetLowerCaseTest
 	 * Проверка метода {@link SpanishAlphabet.LowerCase#get()}.
 	 */
 	@Test
-	public void testGet()
+	public void get()
 	{
 		List<Character> letters = List.of(
 			'a', 'b', 'c', 'd', 'e', 'f', 

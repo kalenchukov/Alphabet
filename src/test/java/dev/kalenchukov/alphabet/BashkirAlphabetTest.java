@@ -39,7 +39,7 @@ public class BashkirAlphabetTest
 	 * Проверка метода {@link BashkirAlphabet#get()}.
 	 */
 	@Test
-	public void testGet()
+	public void get()
 	{
 		List<Character> letters = List.of(
 			'А', 'а', 'Б', 'б', 'В', 'в', 

@@ -39,7 +39,7 @@ public class LisuAlphabetTest
 	 * Проверка метода {@link LisuAlphabet#get()}.
 	 */
 	@Test
-	public void testGet()
+	public void get()
 	{
 		List<Character> letters = List.of(
 			'ꓐ', 'ꓑ', 'ꓒ', 'ꓓ', 'ꓔ', 'ꓕ', 

@@ -39,7 +39,7 @@ public class LimbuAlphabetTest
 	 * Проверка метода {@link LimbuAlphabet#get()}.
 	 */
 	@Test
-	public void testGet()
+	public void get()
 	{
 		List<Character> letters = List.of(
 			'ᤀ', 'ᤁ', 'ᤂ', 'ᤃ', 'ᤄ', 'ᤅ', 

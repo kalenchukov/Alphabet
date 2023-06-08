@@ -39,7 +39,7 @@ public class NkoAlphabetTest
 	 * Проверка метода {@link NkoAlphabet#get()}.
 	 */
 	@Test
-	public void testGet()
+	public void get()
 	{
 		List<Character> letters = List.of(
 			'߀', '߁', '߂', '߃', '߄', '߅', 

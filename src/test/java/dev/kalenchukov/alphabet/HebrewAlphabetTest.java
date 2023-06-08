@@ -39,7 +39,7 @@ public class HebrewAlphabetTest
 	 * Проверка метода {@link HebrewAlphabet#get()}.
 	 */
 	@Test
-	public void testGet()
+	public void get()
 	{
 		List<Character> letters = List.of(
 			'א', 'ב', 'ג', 'ד', 'ה', 'ו', 

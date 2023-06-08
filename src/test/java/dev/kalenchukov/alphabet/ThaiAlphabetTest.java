@@ -39,7 +39,7 @@ public class ThaiAlphabetTest
 	 * Проверка метода {@link ThaiAlphabet#get()}.
 	 */
 	@Test
-	public void testGet()
+	public void get()
 	{
 		List<Character> letters = List.of(
 			'ก', 'ข', 'ฃ', 'ค', 'ฅ', 'ฆ', 

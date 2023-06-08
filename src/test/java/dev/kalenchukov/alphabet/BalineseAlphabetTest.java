@@ -39,7 +39,7 @@ public class BalineseAlphabetTest
 	 * Проверка метода {@link BalineseAlphabet#get()}.
 	 */
 	@Test
-	public void testGet()
+	public void get()
 	{
 		List<Character> letters = List.of(
 			'ᬅ', 'ᬆ', 'ᬇ', 'ᬈ', 'ᬉ', 'ᬊ', 

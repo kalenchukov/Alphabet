@@ -39,7 +39,7 @@ public class TaiVietAlphabetTest
 	 * Проверка метода {@link TaiVietAlphabet#get()}.
 	 */
 	@Test
-	public void testGet()
+	public void get()
 	{
 		List<Character> letters = List.of(
 			'ꪀ', 'ꪁ', 'ꪂ', 'ꪃ', 'ꪄ', 'ꪅ', 

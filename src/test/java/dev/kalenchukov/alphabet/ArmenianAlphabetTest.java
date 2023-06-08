@@ -39,7 +39,7 @@ public class ArmenianAlphabetTest
 	 * Проверка метода {@link ArmenianAlphabet#get()}.
 	 */
 	@Test
-	public void testGet()
+	public void get()
 	{
 		List<Character> letters = List.of(
 			'Ա', 'ա', 'Բ', 'բ', 'Գ', 'գ', 

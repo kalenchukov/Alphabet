@@ -39,7 +39,7 @@ public class GreekAlphabetUpperCaseTest
 	 * Проверка метода {@link GreekAlphabet.UpperCase#get()}.
 	 */
 	@Test
-	public void testGet()
+	public void get()
 	{
 		List<Character> letters = List.of(
 			'Α', 'Β', 'Γ', 'Δ', 'Ε', 'Ζ', 'Η', 'Θ', 'Ι',

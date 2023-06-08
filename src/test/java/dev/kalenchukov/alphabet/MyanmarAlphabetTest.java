@@ -39,7 +39,7 @@ public class MyanmarAlphabetTest
 	 * Проверка метода {@link MyanmarAlphabet#get()}.
 	 */
 	@Test
-	public void testGet()
+	public void get()
 	{
 		List<Character> letters = List.of(
 			'က', 'ခ', 'ဂ', 'ဃ', 'င', 'စ', 

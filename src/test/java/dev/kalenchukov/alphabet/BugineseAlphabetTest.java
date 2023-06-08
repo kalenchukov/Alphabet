@@ -39,7 +39,7 @@ public class BugineseAlphabetTest
 	 * Проверка метода {@link BugineseAlphabet#get()}.
 	 */
 	@Test
-	public void testGet()
+	public void get()
 	{
 		List<Character> letters = List.of(
 			'ᨀ', 'ᨁ', 'ᨂ', 'ᨃ', 'ᨄ', 'ᨅ', 

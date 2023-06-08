@@ -39,7 +39,7 @@ public class BelarusianAlphabetTest
 	 * Проверка метода {@link BelarusianAlphabet#get()}.
 	 */
 	@Test
-	public void testGet()
+	public void get()
 	{
 		List<Character> letters = List.of(
 			'А', 'а', 'Б', 'б', 'В', 'в', 'Г', 'г', 'Д', 'д',

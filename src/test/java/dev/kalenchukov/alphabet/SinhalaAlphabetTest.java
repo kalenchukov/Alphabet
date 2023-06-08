@@ -39,7 +39,7 @@ public class SinhalaAlphabetTest
 	 * Проверка метода {@link SinhalaAlphabet#get()}.
 	 */
 	@Test
-	public void testGet()
+	public void get()
 	{
 		List<Character> letters = List.of(
 			'අ', 'ආ', 'ඇ', 'ඈ', 'ඉ', 'ඊ', 

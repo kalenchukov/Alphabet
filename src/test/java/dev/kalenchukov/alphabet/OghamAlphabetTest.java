@@ -39,7 +39,7 @@ public class OghamAlphabetTest
 	 * Проверка метода {@link OghamAlphabet#get()}.
 	 */
 	@Test
-	public void testGet()
+	public void get()
 	{
 		List<Character> letters = List.of(
 			' ', 'ᚁ', 'ᚂ', 'ᚃ', 'ᚄ', 'ᚅ', 

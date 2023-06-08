@@ -39,7 +39,7 @@ public class EsperantoAlphabetTest
 	 * Проверка метода {@link EsperantoAlphabet#get()}.
 	 */
 	@Test
-	public void testGet()
+	public void get()
 	{
 		List<Character> letters = List.of(
 			'A', 'B', 'C', 'Ĉ', 'D', 'E', 

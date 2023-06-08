@@ -39,7 +39,7 @@ public class MeeteiMayekAlphabetTest
 	 * Проверка метода {@link MeeteiMayekAlphabet#get()}.
 	 */
 	@Test
-	public void testGet()
+	public void get()
 	{
 		List<Character> letters = List.of(
 			'ꯀ', 'ꯁ', 'ꯂ', 'ꯃ', 'ꯄ', 'ꯅ', 

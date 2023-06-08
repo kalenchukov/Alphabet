@@ -39,7 +39,7 @@ public class BashkirAlphabetUpperCaseTest
 	 * Проверка метода {@link BashkirAlphabet.UpperCase#get()}.
 	 */
 	@Test
-	public void testGet()
+	public void get()
 	{
 		List<Character> letters = List.of(
 			'А', 'Б', 'В', 'Г', 'Ғ', 'Д', 

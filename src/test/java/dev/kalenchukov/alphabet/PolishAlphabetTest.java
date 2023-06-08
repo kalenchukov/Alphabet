@@ -39,7 +39,7 @@ public class PolishAlphabetTest
 	 * Проверка метода {@link PolishAlphabet#get()}.
 	 */
 	@Test
-	public void testGet()
+	public void get()
 	{
 		List<Character> letters = List.of(
 			'A', 'a', 'Ą', 'ą', 'B', 'b', 

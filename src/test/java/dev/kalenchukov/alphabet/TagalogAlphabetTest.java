@@ -39,7 +39,7 @@ public class TagalogAlphabetTest
 	 * Проверка метода {@link TagalogAlphabet#get()}.
 	 */
 	@Test
-	public void testGet()
+	public void get()
 	{
 		List<Character> letters = List.of(
 			'ᜀ', 'ᜁ', 'ᜂ', 'ᜃ', 'ᜄ', 'ᜅ', 

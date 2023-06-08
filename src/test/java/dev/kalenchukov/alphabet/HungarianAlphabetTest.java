@@ -39,7 +39,7 @@ public class HungarianAlphabetTest
 	 * Проверка метода {@link HungarianAlphabet#get()}.
 	 */
 	@Test
-	public void testGet()
+	public void get()
 	{
 		List<Character> letters = List.of(
 			'A', 'Á', 'B', 'C', 'D', 'E', 

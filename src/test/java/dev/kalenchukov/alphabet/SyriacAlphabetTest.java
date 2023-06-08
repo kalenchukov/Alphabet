@@ -39,7 +39,7 @@ public class SyriacAlphabetTest
 	 * Проверка метода {@link SyriacAlphabet#get()}.
 	 */
 	@Test
-	public void testGet()
+	public void get()
 	{
 		List<Character> letters = List.of(
 			'ܐ', 'ܒ', 'ܓ', 'ܕ', 'ܗ', 'ܘ', 

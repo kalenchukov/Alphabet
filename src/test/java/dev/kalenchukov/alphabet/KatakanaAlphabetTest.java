@@ -39,7 +39,7 @@ public class KatakanaAlphabetTest
 	 * Проверка метода {@link KatakanaAlphabet#get()}.
 	 */
 	@Test
-	public void testGet()
+	public void get()
 	{
 		List<Character> letters = List.of(
 			'ン', 'ワ', 'ラ', 'ヤ', 'マ', 'ハ', 

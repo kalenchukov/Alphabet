@@ -39,7 +39,7 @@ public class EnglishAlphabetTest
 	 * Проверка метода {@link EnglishAlphabet#get()}.
 	 */
 	@Test
-	public void testGet()
+	public void get()
 	{
 		List<Character> letters = List.of(
 			'A', 'a', 'B', 'b', 'C', 'c', 'D', 'd', 'E', 'e',

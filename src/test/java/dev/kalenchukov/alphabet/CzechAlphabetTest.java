@@ -39,7 +39,7 @@ public class CzechAlphabetTest
 	 * Проверка метода {@link CzechAlphabet#get()}.
 	 */
 	@Test
-	public void testGet()
+	public void get()
 	{
 		List<Character> letters = List.of(
 			'A', 'Á', 'B', 'C', 'Č', 'D', 

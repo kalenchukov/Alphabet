@@ -39,7 +39,7 @@ public class ThaanaAlphabetTest
 	 * Проверка метода {@link ThaanaAlphabet#get()}.
 	 */
 	@Test
-	public void testGet()
+	public void get()
 	{
 		List<Character> letters = List.of(
 			'ހ', 'ށ', 'ނ', 'ރ', 'ބ', 'ޅ', 

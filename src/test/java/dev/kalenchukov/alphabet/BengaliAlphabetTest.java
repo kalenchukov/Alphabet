@@ -39,7 +39,7 @@ public class BengaliAlphabetTest
 	 * Проверка метода {@link BengaliAlphabet#get()}.
 	 */
 	@Test
-	public void testGet()
+	public void get()
 	{
 		List<Character> letters = List.of(
 			'অ', 'আ', 'ই', 'ঈ', 'উ', 'ঊ', 

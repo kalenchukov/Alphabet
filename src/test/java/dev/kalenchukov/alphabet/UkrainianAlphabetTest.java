@@ -39,7 +39,7 @@ public class UkrainianAlphabetTest
 	 * Проверка метода {@link UkrainianAlphabet#get()}.
 	 */
 	@Test
-	public void testGet()
+	public void get()
 	{
 		List<Character> letters = List.of(
 			'А', 'а', 'Б', 'б', 'В', 'в', 

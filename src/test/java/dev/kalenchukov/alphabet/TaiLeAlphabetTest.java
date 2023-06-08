@@ -39,7 +39,7 @@ public class TaiLeAlphabetTest
 	 * Проверка метода {@link TaiLeAlphabet#get()}.
 	 */
 	@Test
-	public void testGet()
+	public void get()
 	{
 		List<Character> letters = List.of(
 			'ᥐ', 'ᥑ', 'ᥒ', 'ᥓ', 'ᥔ', 'ᥕ', 

@@ -44,7 +44,7 @@ public class AbstractAlphabetTest
 	 * Проверка метода {@link AbstractAlphabet#getFirst()}.
 	 */
 	@Test
-	public void testGetFirst()
+	public void getFirst()
 	{
 		assertEquals('А', ALPHABET.getFirst());
 	}
@@ -53,7 +53,7 @@ public class AbstractAlphabetTest
 	 * Проверка метода {@link AbstractAlphabet#getLast()}.
 	 */
 	@Test
-	public void testGetLast()
+	public void getLast()
 	{
 		assertEquals('я', ALPHABET.getLast());
 	}
@@ -62,7 +62,7 @@ public class AbstractAlphabetTest
 	 * Проверка метода {@link AbstractAlphabet#getReverse()}.
 	 */
 	@Test
-	public void testGetReverse()
+	public void getReverse()
 	{
 		List<Character> letters = List.of(
 			'я', 'Я', 'ю', 'Ю', 'э', 'Э', 'ь', 'Ь', 'ы', 'Ы',
@@ -147,7 +147,7 @@ public class AbstractAlphabetTest
 	 * Проверка метода {@link AbstractAlphabet#getShuffle()}.
 	 */
 	@Test
-	public void testGetShuffle()
+	public void getShuffle()
 	{
 		List<Character> letters = List.of(
 			'А', 'а', 'Б', 'б', 'В', 'в', 'Г', 'г', 'Д', 'д',
@@ -166,7 +166,7 @@ public class AbstractAlphabetTest
 	 * Проверка метода {@link AbstractAlphabet#get(Integer, Integer)}.
 	 */
 	@Test
-	public void testGetRange()
+	public void getRange()
 	{
 		List<Character> letters1 = List.of(
 			'А', 'а', 'Б', 'б', 'В', 'в', 'Г', 'г', 'Д', 'д',
@@ -203,7 +203,7 @@ public class AbstractAlphabetTest
 	 * Проверка метода {@link AbstractAlphabet#get(Integer, Integer)} c выходом за минимальную границу.
 	 */
 	@Test
-	public void testGetRangeOutOfBoundsMin()
+	public void getRangeOutOfBoundsMin()
 	{
 		assertThrows(IndexOutOfBoundsException.class, () -> {
 			ALPHABET.get(0, 33);
@@ -214,7 +214,7 @@ public class AbstractAlphabetTest
 	 * Проверка метода {@link AbstractAlphabet#get(Integer, Integer)}c выходом за максимальную границу.
 	 */
 	@Test
-	public void testGetRangeOutOfBoundsMax()
+	public void getRangeOutOfBoundsMax()
 	{
 		assertThrows(IndexOutOfBoundsException.class, () -> {
 			ALPHABET.get(1, 67);
@@ -225,7 +225,7 @@ public class AbstractAlphabetTest
 	 * Проверка метода {@link AbstractAlphabet#get(Integer, Integer)} с инвертированной границей.
 	 */
 	@Test
-	public void testGetRangeInversion()
+	public void getRangeInversion()
 	{
 		assertThrows(IllegalArgumentException.class, () -> {
 			ALPHABET.get(33, 20);
@@ -235,7 +235,7 @@ public class AbstractAlphabetTest
 	 * Проверка метода {@link AbstractAlphabet#getPosition(Character)}.
 	 */
 	@Test
-	public void testGetPositionByLetter()
+	public void getPositionByLetter()
 	{
 		assertEquals(Optional.of(30), Optional.ofNullable(ALPHABET.getPosition('н')));
 	}
@@ -244,7 +244,7 @@ public class AbstractAlphabetTest
 	 * Проверка метода {@link AbstractAlphabet#getPosition(Character)} с некорректным значением.
 	 */
 	@Test
-	public void testGetPositionByLetterNotCorrect()
+	public void getPositionByLetterNotCorrect()
 	{
 		assertNull(ALPHABET.getPosition('W'));
 	}
@@ -254,7 +254,7 @@ public class AbstractAlphabetTest
 	 * Проверка метода {@link AbstractAlphabet#get(Integer)}.
 	 */
 	@Test
-	public void testGetLetterByPosition()
+	public void getLetterByPosition()
 	{
 		assertEquals(Optional.of('м'), Optional.ofNullable(ALPHABET.get(28)));
 	}
@@ -263,7 +263,7 @@ public class AbstractAlphabetTest
 	 * Проверка метода {@link AbstractAlphabet#get(Integer)} с некорректным значением.
 	 */
 	@Test
-	public void testGetLetterByPositionNotCorrect()
+	public void getLetterByPositionNotCorrect()
 	{
 		assertNull(ALPHABET.get(0));
 	}
@@ -272,7 +272,7 @@ public class AbstractAlphabetTest
 	 * Проверка метода {@link AbstractAlphabet#allMatch(String)}.
 	 */
 	@Test
-	public void testAllMatch()
+	public void allMatch()
 	{
 		assertTrue(ALPHABET.allMatch("Камчатка"));
 	}
@@ -281,7 +281,7 @@ public class AbstractAlphabetTest
 	 * Проверка метода {@link AbstractAlphabet#allMatch(String)} с некорректным значением.
 	 */
 	@Test
-	public void testAllMatchNotCorrect()
+	public void allMatchNotCorrect()
 	{
 		assertFalse(ALPHABET.allMatch(""));
 		assertFalse(ALPHABET.allMatch("Kino"));
@@ -294,7 +294,7 @@ public class AbstractAlphabetTest
 	 * Проверка метода {@link AbstractAlphabet#anyMatch(String)}.
 	 */
 	@Test
-	public void testAnyMatch()
+	public void anyMatch()
 	{
 		assertTrue(ALPHABET.anyMatch("Дождь для нас"));
 	}
@@ -303,7 +303,7 @@ public class AbstractAlphabetTest
 	 * Проверка метода {@link AbstractAlphabet#anyMatch(String)} с некорректным значением.
 	 */
 	@Test
-	public void testAnyMatchNotCorrect()
+	public void anyMatchNotCorrect()
 	{
 		assertFalse(ALPHABET.anyMatch(""));
 		assertFalse(ALPHABET.anyMatch("Kino"));
@@ -313,7 +313,7 @@ public class AbstractAlphabetTest
 	 * Проверка метода {@link AbstractAlphabet#noneMatch(String)}.
 	 */
 	@Test
-	public void testNoneMatch()
+	public void noneMatch()
 	{
 		assertTrue(ALPHABET.noneMatch("Kamchatka"));
 	}
@@ -322,7 +322,7 @@ public class AbstractAlphabetTest
 	 * Проверка метода {@link AbstractAlphabet#noneMatch(String)} с некорректным значением.
 	 */
 	@Test
-	public void testNoneMatchNotCorrect()
+	public void noneMatchNotCorrect()
 	{
 		assertFalse(ALPHABET.noneMatch(""));
 		assertFalse(ALPHABET.noneMatch("KinoЪ"));
@@ -332,7 +332,7 @@ public class AbstractAlphabetTest
 	 * Проверка метода {@link AbstractAlphabet#contains(Character)}.
 	 */
 	@Test
-	public void testContains()
+	public void contains()
 	{
 		assertTrue(ALPHABET.contains('У'));
 	}
@@ -341,7 +341,7 @@ public class AbstractAlphabetTest
 	 * Проверка метода {@link AbstractAlphabet#contains(Character)} с некорректным значением.
 	 */
 	@Test
-	public void testContainsNotCorrect()
+	public void containsNotCorrect()
 	{
 		assertFalse(ALPHABET.contains('W'));
 	}
@@ -350,7 +350,7 @@ public class AbstractAlphabetTest
 	 * Проверка метода {@link AbstractAlphabet#getRandom(Integer)}.
 	 */
 	@Test
-	public void testGetRandom()
+	public void getRandom()
 	{
 		assertEquals(0, ALPHABET.getRandom(0).size());
 		assertEquals(1, ALPHABET.getRandom(1).size());
@@ -362,7 +362,7 @@ public class AbstractAlphabetTest
 	 * Проверка метода {@link AbstractAlphabet#clearMismatches(String)}.
 	 */
 	@Test
-	public void testClearMismatches()
+	public void clearMismatches()
 	{
 		assertEquals(
 			"Солнцемоевзглянинаменяладоньпревратиласьвкулак",
@@ -374,7 +374,7 @@ public class AbstractAlphabetTest
 	 * Проверка метода {@link AbstractAlphabet#clearMatches(String)}.
 	 */
 	@Test
-	public void testClearMatches()
+	public void clearMatches()
 	{
 		assertEquals(
 			" ,    - My    ",
@@ -395,7 +395,7 @@ public class AbstractAlphabetTest
 		"яюэьыъщшчцхфутсрпонмлкйизжёедгвба",
 		"абвгдеёжзийклмнопрстуфхцчшщъыьэюя"
 	})
-	public void testIsSorted(String value)
+	public void isSorted(String value)
 	{
 		assertTrue(ALPHABET.isSorted(value));
 	}
@@ -409,7 +409,7 @@ public class AbstractAlphabetTest
 		"ЯяАаБбВвГгДдЕеЁёЖжЗзИиЙйКкЛлМмНнОоПпРрСсТтУуФфХхЦцЧчШшЩщЪъЫыЬьЭэЮю",
 		"юЮэЭьЬыЫъЪщЩшШчЧцЦхХфФуУтТсСрРпПоОнНмМлЛкКйЙиИзЗжЖёЁеЕдДгГвВбБаАяЯ"
 	})
-	public void testIsSortedNotCorrect(String value)
+	public void isSortedNotCorrect(String value)
 	{
 		assertFalse(ALPHABET.isSorted(value));
 	}
@@ -424,7 +424,7 @@ public class AbstractAlphabetTest
 		"АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ",
 		"абвгдеёжзийклмнопрстуфхцчшщъыьэюя"
 	})
-	public void testIsSortedAsc(String value)
+	public void isSortedAsc(String value)
 	{
 		assertTrue(ALPHABET.isSortedAsc(value));
 	}
@@ -437,7 +437,7 @@ public class AbstractAlphabetTest
 		"", "0", "ба", "Ба", "абв1где",
 		"ЯяАаБбВвГгДдЕеЁёЖжЗзИиЙйКкЛлМмНнОоПпРрСсТтУуФфХхЦцЧчШшЩщЪъЫыЬьЭэЮю"
 	})
-	public void testIsSortedAscNotCorrect(String value)
+	public void isSortedAscNotCorrect(String value)
 	{
 		assertFalse(ALPHABET.isSortedAsc(value));
 	}
@@ -452,7 +452,7 @@ public class AbstractAlphabetTest
 		"ЯЮЭЬЫЪЩШЧЦХФУТСРПОНМЛКЙИЗЖЁЕДГВБА",
 		"яюэьыъщшчцхфутсрпонмлкйизжёедгвба"
 	})
-	public void testIsSortedDesc(String value)
+	public void isSortedDesc(String value)
 	{
 		assertTrue(ALPHABET.isSortedDesc(value));
 	}
@@ -465,7 +465,7 @@ public class AbstractAlphabetTest
 		"", "0", "аб", "Аб", "едг1вба",
 		"юЮэЭьЬыЫъЪщЩшШчЧцЦхХфФуУтТсСрРпПоОнНмМлЛкКйЙиИзЗжЖёЁеЕдДгГвВбБаАяЯ"
 	})
-	public void testIsSortedDescNotCorrect(String value)
+	public void isSortedDescNotCorrect(String value)
 	{
 		assertFalse(ALPHABET.isSortedDesc(value));
 	}
@@ -474,7 +474,7 @@ public class AbstractAlphabetTest
 	 * Проверка метода {@link AbstractAlphabet#toArray()}.
 	 */
 	@Test
-	public void testToArray()
+	public void toArray()
 	{
 		Character[] letters = new Character[]{
 			'А', 'а', 'Б', 'б', 'В', 'в', 'Г', 'г', 'Д', 'д',
@@ -493,7 +493,7 @@ public class AbstractAlphabetTest
 	 * Проверка метода {@link AbstractAlphabet#toString(String)}.
 	 */
 	@Test
-	public void testToStringSeparator()
+	public void toStringSeparator()
 	{
 		String string = "А,а,Б,б,В,в,Г,г,Д,д,Е,е,Ё,ё,Ж,ж,З,з,И,и," +
 			"Й,й,К,к,Л,л,М,м,Н,н,О,о,П,п,Р,р,С,с,Т,т,У,у,Ф,ф,Х,х," +
@@ -517,7 +517,7 @@ public class AbstractAlphabetTest
 	 * Проверка метода {@link AbstractAlphabet#statistics(String)}.
 	 */
 	@Test
-	public void testStatistics()
+	public void statistics()
 	{
 		String string = """
 			Дом стоит, свет горит
@@ -537,7 +537,7 @@ public class AbstractAlphabetTest
 	 * Проверка метода {@link AbstractAlphabet#statistics(String)} с некорректным значением.
 	 */
 	@Test
-	public void testStatisticsNotCorrect()
+	public void statisticsNotCorrect()
 	{
 		String string = """
 			И я должен прийти к девяти, на работу свою,

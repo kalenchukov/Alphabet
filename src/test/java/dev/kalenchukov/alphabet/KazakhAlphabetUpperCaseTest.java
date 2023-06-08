@@ -39,7 +39,7 @@ public class KazakhAlphabetUpperCaseTest
 	 * Проверка метода {@link KazakhAlphabet.UpperCase#get()}.
 	 */
 	@Test
-	public void testGet()
+	public void get()
 	{
 		List<Character> letters = List.of(
 			'А', 'Ә', 'Б', 'В', 'Г', 'Ғ', 

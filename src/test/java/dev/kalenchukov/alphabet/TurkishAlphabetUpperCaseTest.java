@@ -39,7 +39,7 @@ public class TurkishAlphabetUpperCaseTest
 	 * Проверка метода {@link TurkishAlphabet.UpperCase#get()}.
 	 */
 	@Test
-	public void testGet()
+	public void get()
 	{
 		List<Character> letters = List.of(
 			'A', 'B', 'C', 'Ç', 'D', 'E', 

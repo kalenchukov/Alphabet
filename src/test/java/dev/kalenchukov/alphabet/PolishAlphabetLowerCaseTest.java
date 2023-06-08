@@ -39,7 +39,7 @@ public class PolishAlphabetLowerCaseTest
 	 * Проверка метода {@link PolishAlphabet.LowerCase#get()}.
 	 */
 	@Test
-	public void testGet()
+	public void get()
 	{
 		List<Character> letters = List.of(
 			'a', 'ą', 'b', 'c', 'ć', 'd', 

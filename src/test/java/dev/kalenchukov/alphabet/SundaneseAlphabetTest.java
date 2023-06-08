@@ -39,7 +39,7 @@ public class SundaneseAlphabetTest
 	 * Проверка метода {@link SundaneseAlphabet#get()}.
 	 */
 	@Test
-	public void testGet()
+	public void get()
 	{
 		List<Character> letters = List.of(
 			'ᮃ', 'ᮄ', 'ᮅ', 'ᮆ', 'ᮇ', 'ᮈ', 

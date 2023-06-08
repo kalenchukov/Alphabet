@@ -39,7 +39,7 @@ public class TifinaghAlphabetTest
 	 * Проверка метода {@link TifinaghAlphabet#get()}.
 	 */
 	@Test
-	public void testGet()
+	public void get()
 	{
 		List<Character> letters = List.of(
 			'ⴰ', 'ⴱ', 'ⴲ', 'ⴳ', 'ⴴ', 'ⴵ', 

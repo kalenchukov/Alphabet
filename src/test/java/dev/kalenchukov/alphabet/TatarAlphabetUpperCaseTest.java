@@ -39,7 +39,7 @@ public class TatarAlphabetUpperCaseTest
 	 * Проверка метода {@link TatarAlphabet.UpperCase#get()}.
 	 */
 	@Test
-	public void testGet()
+	public void get()
 	{
 		List<Character> letters = List.of(
 			'А', 'Ә', 'Б', 'В', 'Г', 'Д', 

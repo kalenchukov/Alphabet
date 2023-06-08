@@ -39,7 +39,7 @@ public class ArmenianAlphabetUpperCaseTest
 	 * Проверка метода {@link ArmenianAlphabet.UpperCase#get()}.
 	 */
 	@Test
-	public void testGet()
+	public void get()
 	{
 		List<Character> letters = List.of(
 			'Ա', 'Բ', 'Գ', 'Դ', 'Ե', 'Զ', 

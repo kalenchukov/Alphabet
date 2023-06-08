@@ -39,7 +39,7 @@ public class VaiAlphabetTest
 	 * Проверка метода {@link VaiAlphabet#get()}.
 	 */
 	@Test
-	public void testGet()
+	public void get()
 	{
 		List<Character> letters = List.of(
 			'ꔀ', 'ꔁ', 'ꔂ', 'ꔃ', 'ꔄ', 'ꔅ', 

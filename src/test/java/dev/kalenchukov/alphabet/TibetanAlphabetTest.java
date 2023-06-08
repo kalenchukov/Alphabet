@@ -39,7 +39,7 @@ public class TibetanAlphabetTest
 	 * Проверка метода {@link TibetanAlphabet#get()}.
 	 */
 	@Test
-	public void testGet()
+	public void get()
 	{
 		List<Character> letters = List.of(
 			'ཀ', 'ཁ', 'ག', 'ང', 'ཅ', 'ཆ', 

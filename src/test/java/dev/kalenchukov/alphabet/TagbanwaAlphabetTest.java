@@ -39,7 +39,7 @@ public class TagbanwaAlphabetTest
 	 * Проверка метода {@link TagbanwaAlphabet#get()}.
 	 */
 	@Test
-	public void testGet()
+	public void get()
 	{
 		List<Character> letters = List.of(
 			'ᝠ', 'ᝡ', 'ᝢ', 'ᝣ', 'ᝤ', 'ᝥ', 

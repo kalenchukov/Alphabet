@@ -39,7 +39,7 @@ public class BulgarianAlphabetUpperCaseTest
 	 * Проверка метода {@link BulgarianAlphabet.UpperCase#get()}.
 	 */
 	@Test
-	public void testGet()
+	public void get()
 	{
 		List<Character> letters = List.of(
 			'А', 'Б', 'В', 'Г', 'Д', 'Е', 

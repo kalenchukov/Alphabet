@@ -39,7 +39,7 @@ public class NewTaiLueAlphabetTest
 	 * Проверка метода {@link NewTaiLueAlphabet#get()}.
 	 */
 	@Test
-	public void testGet()
+	public void get()
 	{
 		List<Character> letters = List.of(
 			'ᦀ', 'ᦁ', 'ᦂ', 'ᦃ', 'ᦄ', 'ᦅ', 

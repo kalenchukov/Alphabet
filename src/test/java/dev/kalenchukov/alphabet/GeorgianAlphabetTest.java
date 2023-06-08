@@ -39,7 +39,7 @@ public class GeorgianAlphabetTest
 	 * Проверка метода {@link GeorgianAlphabet#get()}.
 	 */
 	@Test
-	public void testGet()
+	public void get()
 	{
 		List<Character> letters = List.of(
 			'ა', 'ბ', 'გ', 'დ', 'ე', 'ვ', 

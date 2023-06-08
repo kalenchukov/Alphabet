@@ -39,7 +39,7 @@ public class CopticAlphabetLowerCaseTest
 	 * Проверка метода {@link CopticAlphabet.LowerCase#get()}.
 	 */
 	@Test
-	public void testGet()
+	public void get()
 	{
 		List<Character> letters = List.of(
 			'ⲁ', 'ⲃ', 'ⲅ', 'ⲇ', 'ⲉ', 'ⲋ', 

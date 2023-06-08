@@ -39,7 +39,7 @@ public class InternationalPhoneticAlphabetUpperCaseTest
 	 * Проверка метода {@link InternationalPhoneticAlphabet.UpperCase#get()}.
 	 */
 	@Test
-	public void testGet()
+	public void get()
 	{
 		List<Character> letters = List.of(
 			'ɢ', 'ɴ', 'ʙ', 'ʀ', 'ʁ', 'ʟ', 

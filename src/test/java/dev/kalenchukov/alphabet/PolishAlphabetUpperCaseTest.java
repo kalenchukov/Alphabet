@@ -39,7 +39,7 @@ public class PolishAlphabetUpperCaseTest
 	 * Проверка метода {@link PolishAlphabet.UpperCase#get()}.
 	 */
 	@Test
-	public void testGet()
+	public void get()
 	{
 		List<Character> letters = List.of(
 			'A', 'Ą', 'B', 'C', 'Ć', 'D', 

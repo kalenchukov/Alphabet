@@ -39,7 +39,7 @@ public class LatinAlphabetTest
 	 * Проверка метода {@link LatinAlphabet#get()}.
 	 */
 	@Test
-	public void testGet()
+	public void get()
 	{
 		List<Character> letters = List.of(
 			'A', 'a', 'B', 'b', 'C', 'c', 

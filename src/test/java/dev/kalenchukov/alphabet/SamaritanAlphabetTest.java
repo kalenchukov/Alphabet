@@ -39,7 +39,7 @@ public class SamaritanAlphabetTest
 	 * Проверка метода {@link SamaritanAlphabet#get()}.
 	 */
 	@Test
-	public void testGet()
+	public void get()
 	{
 		List<Character> letters = List.of(
 			'ࠀ', 'ࠁ', 'ࠂ', 'ࠃ', 'ࠄ', 'ࠅ', 

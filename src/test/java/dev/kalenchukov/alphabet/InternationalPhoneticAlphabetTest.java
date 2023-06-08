@@ -39,7 +39,7 @@ public class InternationalPhoneticAlphabetTest
 	 * Проверка метода {@link InternationalPhoneticAlphabet#get()}.
 	 */
 	@Test
-	public void testGet()
+	public void get()
 	{
 		List<Character> letters = List.of(
 			'p', 'b', 't', 'd', 'ʈ', 'ɖ', 

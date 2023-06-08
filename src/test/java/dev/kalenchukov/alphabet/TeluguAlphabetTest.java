@@ -39,7 +39,7 @@ public class TeluguAlphabetTest
 	 * Проверка метода {@link TeluguAlphabet#get()}.
 	 */
 	@Test
-	public void testGet()
+	public void get()
 	{
 		List<Character> letters = List.of(
 			'అ', 'ఆ', 'ఇ', 'ఈ', 'ఉ', 'ఊ', 
