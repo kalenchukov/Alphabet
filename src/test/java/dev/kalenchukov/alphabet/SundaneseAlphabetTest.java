@@ -18,7 +18,6 @@
 
 package dev.kalenchukov.alphabet;
 
-import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -32,8 +31,7 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class SundaneseAlphabetTest
 {
-	@NotNull
-	public static final Alphabetical ALPHABET = new SundaneseAlphabet();
+	private static final Alphabetical ALPHABET = new SundaneseAlphabet();
 
 	/**
 	 * Проверка метода {@link SundaneseAlphabet#get()}.
@@ -41,7 +39,7 @@ public class SundaneseAlphabetTest
 	@Test
 	public void get()
 	{
-		List<Character> letters = List.of(
+		List<Character> expected = List.of(
 			'ᮃ', 'ᮄ', 'ᮅ', 'ᮆ', 'ᮇ', 'ᮈ', 
 			'ᮉ', 'ᮊ', 'ᮋ', 'ᮌ', 'ᮍ', 'ᮎ', 
 			'ᮏ', 'ᮐ', 'ᮑ', 'ᮒ', 'ᮓ', 'ᮔ', 
@@ -55,7 +53,9 @@ public class SundaneseAlphabetTest
 			'ᮿ'
 		);
 
-		assertArrayEquals(letters.toArray(), ALPHABET.get().toArray());
+		List<Character> actual = ALPHABET.get();
+
+		assertArrayEquals(expected.toArray(), actual.toArray());
 	}
 
 	/**

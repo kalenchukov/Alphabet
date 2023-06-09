@@ -18,7 +18,6 @@
 
 package dev.kalenchukov.alphabet;
 
-import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -32,8 +31,7 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class MalayalamAlphabetTest
 {
-	@NotNull
-	public static final Alphabetical ALPHABET = new MalayalamAlphabet();
+	private static final Alphabetical ALPHABET = new MalayalamAlphabet();
 
 	/**
 	 * Проверка метода {@link MalayalamAlphabet#get()}.
@@ -41,7 +39,7 @@ public class MalayalamAlphabetTest
 	@Test
 	public void get()
 	{
-		List<Character> letters = List.of(
+		List<Character> expected = List.of(
 			'അ', 'ആ', 'ഇ', 'ഈ', 'ഉ', 'ഊ', 
 			'ഋ', 'ഌ', 'എ', 'ഏ', 'ഐ', 'ഒ', 
 			'ഓ', 'ഔ', 'ക', 'ഖ', 'ഗ', 'ഘ', 
@@ -57,7 +55,9 @@ public class MalayalamAlphabetTest
 			'ൌ', '്', 'ൎ'
 		);
 
-		assertArrayEquals(letters.toArray(), ALPHABET.get().toArray());
+		List<Character> actual = ALPHABET.get();
+
+		assertArrayEquals(expected.toArray(), actual.toArray());
 	}
 
 	/**

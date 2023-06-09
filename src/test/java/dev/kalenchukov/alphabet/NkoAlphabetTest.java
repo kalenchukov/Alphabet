@@ -18,7 +18,6 @@
 
 package dev.kalenchukov.alphabet;
 
-import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -32,8 +31,7 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class NkoAlphabetTest
 {
-	@NotNull
-	public static final Alphabetical ALPHABET = new NkoAlphabet();
+	private static final Alphabetical ALPHABET = new NkoAlphabet();
 
 	/**
 	 * Проверка метода {@link NkoAlphabet#get()}.
@@ -41,7 +39,7 @@ public class NkoAlphabetTest
 	@Test
 	public void get()
 	{
-		List<Character> letters = List.of(
+		List<Character> expected = List.of(
 			'߀', '߁', '߂', '߃', '߄', '߅', 
 			'߆', '߇', '߈', '߉', 'ߊ', 'ߋ', 
 			'ߌ', 'ߍ', 'ߎ', 'ߏ', 'ߐ', 'ߑ', 
@@ -54,7 +52,9 @@ public class NkoAlphabetTest
 			'߶', '߷', '߸', '߹', 'ߺ'
 		);
 
-		assertArrayEquals(letters.toArray(), ALPHABET.get().toArray());
+		List<Character> actual = ALPHABET.get();
+
+		assertArrayEquals(expected.toArray(), actual.toArray());
 	}
 
 	/**

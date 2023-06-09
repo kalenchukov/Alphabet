@@ -18,7 +18,6 @@
 
 package dev.kalenchukov.alphabet;
 
-import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -32,8 +31,7 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class KhmerAlphabetTest
 {
-	@NotNull
-	public static final Alphabetical ALPHABET = new KhmerAlphabet();
+	private static final Alphabetical ALPHABET = new KhmerAlphabet();
 
 	/**
 	 * Проверка метода {@link KhmerAlphabet#get()}.
@@ -41,7 +39,7 @@ public class KhmerAlphabetTest
 	@Test
 	public void get()
 	{
-		List<Character> letters = List.of(
+		List<Character> expected = List.of(
 			'ក', 'ខ', 'គ', 'ឃ', 'ង', 'ច', 
 			'ឆ', 'ជ', 'ឈ', 'ញ', 'ដ', 'ឋ', 
 			'ឌ', 'ឍ', 'ណ', 'ត', 'ថ', 'ទ', 
@@ -59,7 +57,9 @@ public class KhmerAlphabetTest
 			'៚', '៛', 'ៜ', '៝'
 		);
 
-		assertArrayEquals(letters.toArray(), ALPHABET.get().toArray());
+		List<Character> actual = ALPHABET.get();
+
+		assertArrayEquals(expected.toArray(), actual.toArray());
 	}
 
 	/**

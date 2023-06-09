@@ -18,7 +18,6 @@
 
 package dev.kalenchukov.alphabet;
 
-import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -32,8 +31,7 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class HebrewAlphabetTest
 {
-	@NotNull
-	public static final Alphabetical ALPHABET = new HebrewAlphabet();
+	private static final Alphabetical ALPHABET = new HebrewAlphabet();
 
 	/**
 	 * Проверка метода {@link HebrewAlphabet#get()}.
@@ -41,7 +39,7 @@ public class HebrewAlphabetTest
 	@Test
 	public void get()
 	{
-		List<Character> letters = List.of(
+		List<Character> expected = List.of(
 			'א', 'ב', 'ג', 'ד', 'ה', 'ו', 
 			'ז', 'ח', 'ט', 'י', 'כ', 'ך', 
 			'ל', 'מ', 'ם', 'נ', 'ן', 'ס', 
@@ -49,7 +47,9 @@ public class HebrewAlphabetTest
 			'ר', 'ש', 'ת'
 		);
 
-		assertArrayEquals(letters.toArray(), ALPHABET.get().toArray());
+		List<Character> actual = ALPHABET.get();
+
+		assertArrayEquals(expected.toArray(), actual.toArray());
 	}
 
 	/**

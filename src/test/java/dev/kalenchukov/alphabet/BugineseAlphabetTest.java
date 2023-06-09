@@ -18,7 +18,6 @@
 
 package dev.kalenchukov.alphabet;
 
-import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -32,8 +31,7 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class BugineseAlphabetTest
 {
-	@NotNull
-	public static final Alphabetical ALPHABET = new BugineseAlphabet();
+	private static final Alphabetical ALPHABET = new BugineseAlphabet();
 
 	/**
 	 * Проверка метода {@link BugineseAlphabet#get()}.
@@ -41,7 +39,7 @@ public class BugineseAlphabetTest
 	@Test
 	public void get()
 	{
-		List<Character> letters = List.of(
+		List<Character> expected = List.of(
 			'ᨀ', 'ᨁ', 'ᨂ', 'ᨃ', 'ᨄ', 'ᨅ', 
 			'ᨆ', 'ᨇ', 'ᨈ', 'ᨉ', 'ᨊ', 'ᨋ', 
 			'ᨌ', 'ᨍ', 'ᨎ', 'ᨏ', 'ᨐ', 'ᨑ', 
@@ -49,7 +47,9 @@ public class BugineseAlphabetTest
 			'ᨘ', 'ᨙ', 'ᨚ', 'ᨛ', '᨞', '᨟'
 		);
 
-		assertArrayEquals(letters.toArray(), ALPHABET.get().toArray());
+		List<Character> actual = ALPHABET.get();
+
+		assertArrayEquals(expected.toArray(), actual.toArray());
 	}
 
 	/**

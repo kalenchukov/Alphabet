@@ -18,7 +18,6 @@
 
 package dev.kalenchukov.alphabet;
 
-import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -32,8 +31,7 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class UkrainianAlphabetUpperCaseTest
 {
-	@NotNull
-	public static final Alphabetical ALPHABET = new UkrainianAlphabet.UpperCase();
+	private static final Alphabetical ALPHABET = new UkrainianAlphabet.UpperCase();
 
 	/**
 	 * Проверка метода {@link UkrainianAlphabet.UpperCase#get()}.
@@ -41,7 +39,7 @@ public class UkrainianAlphabetUpperCaseTest
 	@Test
 	public void get()
 	{
-		List<Character> letters = List.of(
+		List<Character> expected = List.of(
 			'А', 'Б', 'В', 'Г', 'Ґ', 'Д', 
 			'Е', 'Є', 'Ж', 'З', 'И', 'І', 
 			'Ї', 'Й', 'К', 'Л', 'М', 'Н', 
@@ -50,7 +48,9 @@ public class UkrainianAlphabetUpperCaseTest
 			'Ь', 'Ю', 'Я'
 		);
 
-		assertArrayEquals(letters.toArray(), ALPHABET.get().toArray());
+		List<Character> actual = ALPHABET.get();
+
+		assertArrayEquals(expected.toArray(), actual.toArray());
 	}
 
 	/**

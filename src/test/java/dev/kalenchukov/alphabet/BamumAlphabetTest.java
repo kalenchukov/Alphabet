@@ -18,7 +18,6 @@
 
 package dev.kalenchukov.alphabet;
 
-import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -32,8 +31,7 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class BamumAlphabetTest
 {
-	@NotNull
-	public static final Alphabetical ALPHABET = new BamumAlphabet();
+	private static final Alphabetical ALPHABET = new BamumAlphabet();
 
 	/**
 	 * Проверка метода {@link BamumAlphabet#get()}.
@@ -41,7 +39,7 @@ public class BamumAlphabetTest
 	@Test
 	public void get()
 	{
-		List<Character> letters = List.of(
+		List<Character> expected = List.of(
 			'ꚠ', 'ꚡ', 'ꚢ', 'ꚣ', 'ꚤ', 'ꚥ', 
 			'ꚦ', 'ꚧ', 'ꚨ', 'ꚩ', 'ꚪ', 'ꚫ', 
 			'ꚬ', 'ꚭ', 'ꚮ', 'ꚯ', 'ꚰ', 'ꚱ', 
@@ -58,7 +56,9 @@ public class BamumAlphabetTest
 			'ꛮ', 'ꛯ'
 		);
 
-		assertArrayEquals(letters.toArray(), ALPHABET.get().toArray());
+		List<Character> actual = ALPHABET.get();
+
+		assertArrayEquals(expected.toArray(), actual.toArray());
 	}
 
 	/**

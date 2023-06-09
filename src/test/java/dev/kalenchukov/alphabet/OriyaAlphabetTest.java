@@ -18,7 +18,6 @@
 
 package dev.kalenchukov.alphabet;
 
-import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -32,8 +31,7 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class OriyaAlphabetTest
 {
-	@NotNull
-	public static final Alphabetical ALPHABET = new OriyaAlphabet();
+	private static final Alphabetical ALPHABET = new OriyaAlphabet();
 
 	/**
 	 * Проверка метода {@link OriyaAlphabet#get()}.
@@ -41,7 +39,7 @@ public class OriyaAlphabetTest
 	@Test
 	public void get()
 	{
-		List<Character> letters = List.of(
+		List<Character> expected = List.of(
 			'ଅ', 'ଆ', 'ଇ', 'ଈ', 'ଉ', 'ଊ', 
 			'ଋ', 'ୠ', 'ଌ', 'ୡ', 'ଏ', 'ଐ', 
 			'ଓ', 'ଔ', 'କ', 'ଖ', 'ଗ', 'ଘ', 
@@ -53,7 +51,9 @@ public class OriyaAlphabetTest
 			'ୟ', 'ଲ'
 		);
 
-		assertArrayEquals(letters.toArray(), ALPHABET.get().toArray());
+		List<Character> actual = ALPHABET.get();
+
+		assertArrayEquals(expected.toArray(), actual.toArray());
 	}
 
 	/**

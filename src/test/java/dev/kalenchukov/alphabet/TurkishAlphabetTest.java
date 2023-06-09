@@ -18,7 +18,6 @@
 
 package dev.kalenchukov.alphabet;
 
-import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -32,8 +31,7 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class TurkishAlphabetTest
 {
-	@NotNull
-	public static final Alphabetical ALPHABET = new TurkishAlphabet();
+	private static final Alphabetical ALPHABET = new TurkishAlphabet();
 
 	/**
 	 * Проверка метода {@link TurkishAlphabet#get()}.
@@ -41,7 +39,7 @@ public class TurkishAlphabetTest
 	@Test
 	public void get()
 	{
-		List<Character> letters = List.of(
+		List<Character> expected = List.of(
 			'A', 'a', 'B', 'b', 'C', 'c', 
 			'Ç', 'ç', 'D', 'd', 'E', 'e', 
 			'F', 'f', 'G', 'g', 'Ğ', 'ğ', 
@@ -54,7 +52,9 @@ public class TurkishAlphabetTest
 			'Y', 'y', 'Z', 'z'
 		);
 
-		assertArrayEquals(letters.toArray(), ALPHABET.get().toArray());
+		List<Character> actual = ALPHABET.get();
+
+		assertArrayEquals(expected.toArray(), actual.toArray());
 	}
 
 	/**

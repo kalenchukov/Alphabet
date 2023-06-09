@@ -18,7 +18,6 @@
 
 package dev.kalenchukov.alphabet;
 
-import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -32,8 +31,7 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class PolishAlphabetTest
 {
-	@NotNull
-	public static final Alphabetical ALPHABET = new PolishAlphabet();
+	private static final Alphabetical ALPHABET = new PolishAlphabet();
 
 	/**
 	 * Проверка метода {@link PolishAlphabet#get()}.
@@ -41,7 +39,7 @@ public class PolishAlphabetTest
 	@Test
 	public void get()
 	{
-		List<Character> letters = List.of(
+		List<Character> expected = List.of(
 			'A', 'a', 'Ą', 'ą', 'B', 'b', 
 			'C', 'c', 'Ć', 'ć', 'D', 'd', 
 			'E', 'e', 'Ę', 'ę', 'F', 'f', 
@@ -55,7 +53,9 @@ public class PolishAlphabetTest
 			'Ź', 'ź', 'Ż', 'ż'
 		);
 
-		assertArrayEquals(letters.toArray(), ALPHABET.get().toArray());
+		List<Character> actual = ALPHABET.get();
+
+		assertArrayEquals(expected.toArray(), actual.toArray());
 	}
 
 	/**

@@ -18,7 +18,6 @@
 
 package dev.kalenchukov.alphabet;
 
-import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -32,8 +31,7 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class HanunooAlphabetTest
 {
-	@NotNull
-	public static final Alphabetical ALPHABET = new HanunooAlphabet();
+	private static final Alphabetical ALPHABET = new HanunooAlphabet();
 
 	/**
 	 * Проверка метода {@link HanunooAlphabet#get()}.
@@ -41,14 +39,16 @@ public class HanunooAlphabetTest
 	@Test
 	public void get()
 	{
-		List<Character> letters = List.of(
+		List<Character> expected = List.of(
 			'ᜠ', 'ᜡ', 'ᜢ', 'ᜣ', 'ᜤ', 'ᜥ', 
 			'ᜦ', 'ᜧ', 'ᜨ', 'ᜩ', 'ᜪ', 'ᜫ', 
 			'ᜬ', 'ᜭ', 'ᜮ', 'ᜯ', 'ᜰ', 'ᜱ', 
 			'ᜲ', 'ᜳ', '᜴', '᜵', '᜶'
 		);
 
-		assertArrayEquals(letters.toArray(), ALPHABET.get().toArray());
+		List<Character> actual = ALPHABET.get();
+
+		assertArrayEquals(expected.toArray(), actual.toArray());
 	}
 
 	/**

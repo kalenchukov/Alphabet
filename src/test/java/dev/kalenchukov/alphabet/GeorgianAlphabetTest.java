@@ -18,7 +18,6 @@
 
 package dev.kalenchukov.alphabet;
 
-import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -32,8 +31,7 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class GeorgianAlphabetTest
 {
-	@NotNull
-	public static final Alphabetical ALPHABET = new GeorgianAlphabet();
+	private static final Alphabetical ALPHABET = new GeorgianAlphabet();
 
 	/**
 	 * Проверка метода {@link GeorgianAlphabet#get()}.
@@ -41,7 +39,7 @@ public class GeorgianAlphabetTest
 	@Test
 	public void get()
 	{
-		List<Character> letters = List.of(
+		List<Character> expected = List.of(
 			'ა', 'ბ', 'გ', 'დ', 'ე', 'ვ', 
 			'ზ', 'თ', 'ი', 'კ', 'ლ', 'მ', 
 			'ნ', 'ო', 'პ', 'ჟ', 'რ', 'ს', 
@@ -50,7 +48,9 @@ public class GeorgianAlphabetTest
 			'ხ', 'ჯ', 'ჰ'
 		);
 
-		assertArrayEquals(letters.toArray(), ALPHABET.get().toArray());
+		List<Character> actual = ALPHABET.get();
+
+		assertArrayEquals(expected.toArray(), actual.toArray());
 	}
 
 	/**

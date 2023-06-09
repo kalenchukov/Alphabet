@@ -18,7 +18,6 @@
 
 package dev.kalenchukov.alphabet;
 
-import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -32,8 +31,7 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class ThaiAlphabetTest
 {
-	@NotNull
-	public static final Alphabetical ALPHABET = new ThaiAlphabet();
+	private static final Alphabetical ALPHABET = new ThaiAlphabet();
 
 	/**
 	 * Проверка метода {@link ThaiAlphabet#get()}.
@@ -41,7 +39,7 @@ public class ThaiAlphabetTest
 	@Test
 	public void get()
 	{
-		List<Character> letters = List.of(
+		List<Character> expected = List.of(
 			'ก', 'ข', 'ฃ', 'ค', 'ฅ', 'ฆ', 
 			'ง', 'จ', 'ฉ', 'ช', 'ซ', 'ฌ', 
 			'ญ', 'ฎ', 'ฏ', 'ฐ', 'ฑ', 'ฒ', 
@@ -56,7 +54,9 @@ public class ThaiAlphabetTest
 			'๋', '์', 'ํ', '๎', '๏'
 		);
 
-		assertArrayEquals(letters.toArray(), ALPHABET.get().toArray());
+		List<Character> actual = ALPHABET.get();
+
+		assertArrayEquals(expected.toArray(), actual.toArray());
 	}
 
 	/**

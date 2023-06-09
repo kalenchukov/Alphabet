@@ -18,7 +18,6 @@
 
 package dev.kalenchukov.alphabet;
 
-import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -32,8 +31,7 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class GermanAlphabetTest
 {
-	@NotNull
-	public static final Alphabetical ALPHABET = new GermanAlphabet();
+	private static final Alphabetical ALPHABET = new GermanAlphabet();
 
 	/**
 	 * Проверка метода {@link GermanAlphabet#get()}.
@@ -41,7 +39,7 @@ public class GermanAlphabetTest
 	@Test
 	public void get()
 	{
-		List<Character> letters = List.of(
+		List<Character> expected = List.of(
 			'A', 'a', 'B', 'b', 'C', 'c', 
 			'D', 'd', 'E', 'e', 'F', 'f', 
 			'G', 'g', 'H', 'h', 'I', 'i', 
@@ -54,7 +52,9 @@ public class GermanAlphabetTest
 			'Ö', 'ö', 'Ü', 'ü', 'ẞ', 'ß'
 		);
 
-		assertArrayEquals(letters.toArray(), ALPHABET.get().toArray());
+		List<Character> actual = ALPHABET.get();
+
+		assertArrayEquals(expected.toArray(), actual.toArray());
 	}
 
 	/**

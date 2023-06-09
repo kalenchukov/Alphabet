@@ -18,7 +18,6 @@
 
 package dev.kalenchukov.alphabet;
 
-import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -32,8 +31,7 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class ArabAlphabetTest
 {
-	@NotNull
-	public static final Alphabetical ALPHABET = new ArabAlphabet();
+	private static final Alphabetical ALPHABET = new ArabAlphabet();
 
 	/**
 	 * Проверка метода {@link ArabAlphabet#get()}.
@@ -41,7 +39,7 @@ public class ArabAlphabetTest
 	@Test
 	public void get()
 	{
-		List<Character> letters = List.of(
+		List<Character> expected = List.of(
 			'ﺎ', 'ﺍ', 'ﺐ', 'ﺒ', 'ﺑ', 'ﺏ', 
 			'ﺖ', 'ﺘ', 'ﺗ', 'ﺕ', 'ﺚ', 'ﺜ', 
 			'ﺛ', 'ﺙ', 'ﺞ', 'ﺠ', 'ﺟ', 'ﺝ', 
@@ -61,7 +59,9 @@ public class ArabAlphabetTest
 			'ﻲ', 'ﻴ', 'ﻳ', 'ﻱ'
 		);
 
-		assertArrayEquals(letters.toArray(), ALPHABET.get().toArray());
+		List<Character> actual = ALPHABET.get();
+
+		assertArrayEquals(expected.toArray(), actual.toArray());
 	}
 
 	/**

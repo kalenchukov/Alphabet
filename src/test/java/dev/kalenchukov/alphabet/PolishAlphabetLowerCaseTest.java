@@ -18,7 +18,6 @@
 
 package dev.kalenchukov.alphabet;
 
-import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -32,8 +31,7 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class PolishAlphabetLowerCaseTest
 {
-	@NotNull
-	public static final Alphabetical ALPHABET = new PolishAlphabet.LowerCase();
+	private static final Alphabetical ALPHABET = new PolishAlphabet.LowerCase();
 
 	/**
 	 * Проверка метода {@link PolishAlphabet.LowerCase#get()}.
@@ -41,7 +39,7 @@ public class PolishAlphabetLowerCaseTest
 	@Test
 	public void get()
 	{
-		List<Character> letters = List.of(
+		List<Character> expected = List.of(
 			'a', 'ą', 'b', 'c', 'ć', 'd', 
 			'e', 'ę', 'f', 'g', 'h', 'i', 
 			'j', 'k', 'l', 'ł', 'm', 'n', 
@@ -50,7 +48,9 @@ public class PolishAlphabetLowerCaseTest
 			'ź', 'ż'
 		);
 
-		assertArrayEquals(letters.toArray(), ALPHABET.get().toArray());
+		List<Character> actual = ALPHABET.get();
+
+		assertArrayEquals(expected.toArray(), actual.toArray());
 	}
 
 	/**

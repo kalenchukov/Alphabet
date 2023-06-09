@@ -18,7 +18,6 @@
 
 package dev.kalenchukov.alphabet;
 
-import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -32,8 +31,7 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class HiraganaAlphabetTest
 {
-	@NotNull
-	public static final Alphabetical ALPHABET = new HiraganaAlphabet();
+	private static final Alphabetical ALPHABET = new HiraganaAlphabet();
 
 	/**
 	 * Проверка метода {@link HiraganaAlphabet#get()}.
@@ -41,7 +39,7 @@ public class HiraganaAlphabetTest
 	@Test
 	public void get()
 	{
-		List<Character> letters = List.of(
+		List<Character> expected = List.of(
 			'か', 'き', 'く', 'け', 'こ', 'さ', 
 			'し', 'す', 'せ', 'そ', 'た', 'ち', 
 			'つ', 'て', 'と', 'な', 'に', 'ぬ', 
@@ -56,7 +54,9 @@ public class HiraganaAlphabetTest
 			'ゃ', 'ゅ', 'ょ'
 		);
 
-		assertArrayEquals(letters.toArray(), ALPHABET.get().toArray());
+		List<Character> actual = ALPHABET.get();
+
+		assertArrayEquals(expected.toArray(), actual.toArray());
 	}
 
 	/**

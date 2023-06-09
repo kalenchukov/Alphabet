@@ -18,7 +18,6 @@
 
 package dev.kalenchukov.alphabet;
 
-import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -32,8 +31,7 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class InternationalPhoneticAlphabetUpperCaseTest
 {
-	@NotNull
-	public static final Alphabetical ALPHABET = new InternationalPhoneticAlphabet.UpperCase();
+	private static final Alphabetical ALPHABET = new InternationalPhoneticAlphabet.UpperCase();
 
 	/**
 	 * Проверка метода {@link InternationalPhoneticAlphabet.UpperCase#get()}.
@@ -41,12 +39,14 @@ public class InternationalPhoneticAlphabetUpperCaseTest
 	@Test
 	public void get()
 	{
-		List<Character> letters = List.of(
+		List<Character> expected = List.of(
 			'ɢ', 'ɴ', 'ʙ', 'ʀ', 'ʁ', 'ʟ', 
 			'ɪ', 'ʏ', 'ɶ', 'ʛ', 'ʜ'
 		);
 
-		assertArrayEquals(letters.toArray(), ALPHABET.get().toArray());
+		List<Character> actual = ALPHABET.get();
+
+		assertArrayEquals(expected.toArray(), actual.toArray());
 	}
 
 	/**

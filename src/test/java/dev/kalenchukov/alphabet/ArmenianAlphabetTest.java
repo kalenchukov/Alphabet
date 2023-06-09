@@ -18,7 +18,6 @@
 
 package dev.kalenchukov.alphabet;
 
-import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -32,8 +31,7 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class ArmenianAlphabetTest
 {
-	@NotNull
-	public static final Alphabetical ALPHABET = new ArmenianAlphabet();
+	private static final Alphabetical ALPHABET = new ArmenianAlphabet();
 
 	/**
 	 * Проверка метода {@link ArmenianAlphabet#get()}.
@@ -41,7 +39,7 @@ public class ArmenianAlphabetTest
 	@Test
 	public void get()
 	{
-		List<Character> letters = List.of(
+		List<Character> expected = List.of(
 			'Ա', 'ա', 'Բ', 'բ', 'Գ', 'գ', 
 			'Դ', 'դ', 'Ե', 'ե', 'Զ', 'զ', 
 			'Է', 'է', 'Ը', 'ը', 'Թ', 'թ', 
@@ -57,7 +55,9 @@ public class ArmenianAlphabetTest
 			'Օ', 'օ', 'Ֆ', 'ֆ'
 		);
 
-		assertArrayEquals(letters.toArray(), ALPHABET.get().toArray());
+		List<Character> actual = ALPHABET.get();
+
+		assertArrayEquals(expected.toArray(), actual.toArray());
 	}
 
 	/**

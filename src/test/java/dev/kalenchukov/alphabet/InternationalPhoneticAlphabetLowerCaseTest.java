@@ -18,7 +18,6 @@
 
 package dev.kalenchukov.alphabet;
 
-import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -32,8 +31,7 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class InternationalPhoneticAlphabetLowerCaseTest
 {
-	@NotNull
-	public static final Alphabetical ALPHABET = new InternationalPhoneticAlphabet.LowerCase();
+	private static final Alphabetical ALPHABET = new InternationalPhoneticAlphabet.LowerCase();
 
 	/**
 	 * Проверка метода {@link InternationalPhoneticAlphabet.LowerCase#get()}.
@@ -41,7 +39,7 @@ public class InternationalPhoneticAlphabetLowerCaseTest
 	@Test
 	public void get()
 	{
-		List<Character> letters = List.of(
+		List<Character> expected = List.of(
 			'p', 'b', 't', 'd', 'ʈ', 'ɖ', 
 			'c', 'ɟ', 'k', 'ɡ', 'q', 'm', 
 			'ɱ', 'n', 'ɳ', 'ɲ', 'ŋ', 'r', 
@@ -65,7 +63,9 @@ public class InternationalPhoneticAlphabetLowerCaseTest
 			'ʩ', 'ʪ', 'ʫ', 'ʮ', 'ʯ'
 		);
 
-		assertArrayEquals(letters.toArray(), ALPHABET.get().toArray());
+		List<Character> actual = ALPHABET.get();
+
+		assertArrayEquals(expected.toArray(), actual.toArray());
 	}
 
 	/**

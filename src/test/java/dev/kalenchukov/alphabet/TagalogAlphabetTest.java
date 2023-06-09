@@ -18,7 +18,6 @@
 
 package dev.kalenchukov.alphabet;
 
-import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -32,8 +31,7 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class TagalogAlphabetTest
 {
-	@NotNull
-	public static final Alphabetical ALPHABET = new TagalogAlphabet();
+	private static final Alphabetical ALPHABET = new TagalogAlphabet();
 
 	/**
 	 * Проверка метода {@link TagalogAlphabet#get()}.
@@ -41,14 +39,16 @@ public class TagalogAlphabetTest
 	@Test
 	public void get()
 	{
-		List<Character> letters = List.of(
+		List<Character> expected = List.of(
 			'ᜀ', 'ᜁ', 'ᜂ', 'ᜃ', 'ᜄ', 'ᜅ', 
 			'ᜆ', 'ᜇ', 'ᜈ', 'ᜉ', 'ᜊ', 'ᜋ', 
 			'ᜌ', 'ᜎ', 'ᜏ', 'ᜐ', 'ᜑ', 'ᜒ', 
 			'ᜓ', '᜔'
 		);
 
-		assertArrayEquals(letters.toArray(), ALPHABET.get().toArray());
+		List<Character> actual = ALPHABET.get();
+
+		assertArrayEquals(expected.toArray(), actual.toArray());
 	}
 
 	/**

@@ -18,7 +18,6 @@
 
 package dev.kalenchukov.alphabet;
 
-import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -32,8 +31,7 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class EthiopicAlphabetTest
 {
-	@NotNull
-	public static final Alphabetical ALPHABET = new EthiopicAlphabet();
+	private static final Alphabetical ALPHABET = new EthiopicAlphabet();
 
 	/**
 	 * Проверка метода {@link EthiopicAlphabet#get()}.
@@ -41,7 +39,7 @@ public class EthiopicAlphabetTest
 	@Test
 	public void get()
 	{
-		List<Character> letters = List.of(
+		List<Character> expected = List.of(
 			'ሀ', 'ሁ', 'ሂ', 'ሃ', 'ሄ', 'ህ', 
 			'ሆ', 'ለ', 'ሉ', 'ሊ', 'ላ', 'ሌ', 
 			'ል', 'ሎ', 'ሏ', 'ሐ', 'ሑ', 'ሒ', 
@@ -85,7 +83,9 @@ public class EthiopicAlphabetTest
 			'፼'
 		);
 
-		assertArrayEquals(letters.toArray(), ALPHABET.get().toArray());
+		List<Character> actual = ALPHABET.get();
+
+		assertArrayEquals(expected.toArray(), actual.toArray());
 	}
 
 	/**

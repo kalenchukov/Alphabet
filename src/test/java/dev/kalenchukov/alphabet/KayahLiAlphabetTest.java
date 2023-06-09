@@ -18,7 +18,6 @@
 
 package dev.kalenchukov.alphabet;
 
-import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -32,8 +31,7 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class KayahLiAlphabetTest
 {
-	@NotNull
-	public static final Alphabetical ALPHABET = new KayahLiAlphabet();
+	private static final Alphabetical ALPHABET = new KayahLiAlphabet();
 
 	/**
 	 * Проверка метода {@link KayahLiAlphabet#get()}.
@@ -41,7 +39,7 @@ public class KayahLiAlphabetTest
 	@Test
 	public void get()
 	{
-		List<Character> letters = List.of(
+		List<Character> expected = List.of(
 			'꤀', '꤁', '꤂', '꤃', '꤄', '꤅', 
 			'꤆', '꤇', '꤈', '꤉', 'ꤊ', 'ꤋ', 
 			'ꤌ', 'ꤍ', 'ꤎ', 'ꤏ', 'ꤐ', 'ꤑ', 
@@ -52,7 +50,9 @@ public class KayahLiAlphabetTest
 			'ꤪ', '꤫', '꤬', '꤭', '꤮', '꤯'
 		);
 
-		assertArrayEquals(letters.toArray(), ALPHABET.get().toArray());
+		List<Character> actual = ALPHABET.get();
+
+		assertArrayEquals(expected.toArray(), actual.toArray());
 	}
 
 	/**

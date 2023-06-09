@@ -18,7 +18,6 @@
 
 package dev.kalenchukov.alphabet;
 
-import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -32,8 +31,7 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class SyriacAlphabetTest
 {
-	@NotNull
-	public static final Alphabetical ALPHABET = new SyriacAlphabet();
+	private static final Alphabetical ALPHABET = new SyriacAlphabet();
 
 	/**
 	 * Проверка метода {@link SyriacAlphabet#get()}.
@@ -41,14 +39,16 @@ public class SyriacAlphabetTest
 	@Test
 	public void get()
 	{
-		List<Character> letters = List.of(
+		List<Character> expected = List.of(
 			'ܐ', 'ܒ', 'ܓ', 'ܕ', 'ܗ', 'ܘ', 
 			'ܙ', 'ܚ', 'ܛ', 'ܝ', 'ܟ', 'ܠ', 
 			'ܡ', 'ܢ', 'ܣ', 'ܥ', 'ܦ', 'ܨ', 
 			'ܩ', 'ܪ', 'ܫ', 'ܬ'
 		);
 
-		assertArrayEquals(letters.toArray(), ALPHABET.get().toArray());
+		List<Character> actual = ALPHABET.get();
+
+		assertArrayEquals(expected.toArray(), actual.toArray());
 	}
 
 	/**

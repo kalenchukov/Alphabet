@@ -18,7 +18,6 @@
 
 package dev.kalenchukov.alphabet;
 
-import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -32,8 +31,7 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class SamaritanAlphabetTest
 {
-	@NotNull
-	public static final Alphabetical ALPHABET = new SamaritanAlphabet();
+	private static final Alphabetical ALPHABET = new SamaritanAlphabet();
 
 	/**
 	 * Проверка метода {@link SamaritanAlphabet#get()}.
@@ -41,7 +39,7 @@ public class SamaritanAlphabetTest
 	@Test
 	public void get()
 	{
-		List<Character> letters = List.of(
+		List<Character> expected = List.of(
 			'ࠀ', 'ࠁ', 'ࠂ', 'ࠃ', 'ࠄ', 'ࠅ', 
 			'ࠆ', 'ࠇ', 'ࠈ', 'ࠉ', 'ࠊ', 'ࠋ', 
 			'ࠌ', 'ࠍ', 'ࠎ', 'ࠏ', 'ࠐ', 'ࠑ', 
@@ -55,7 +53,9 @@ public class SamaritanAlphabetTest
 			'࠾'
 		);
 
-		assertArrayEquals(letters.toArray(), ALPHABET.get().toArray());
+		List<Character> actual = ALPHABET.get();
+
+		assertArrayEquals(expected.toArray(), actual.toArray());
 	}
 
 	/**

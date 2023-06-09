@@ -18,7 +18,6 @@
 
 package dev.kalenchukov.alphabet;
 
-import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -32,8 +31,7 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class BatakAlphabetTest
 {
-	@NotNull
-	public static final Alphabetical ALPHABET = new BatakAlphabet();
+	private static final Alphabetical ALPHABET = new BatakAlphabet();
 
 	/**
 	 * Проверка метода {@link BatakAlphabet#get()}.
@@ -41,7 +39,7 @@ public class BatakAlphabetTest
 	@Test
 	public void get()
 	{
-		List<Character> letters = List.of(
+		List<Character> expected = List.of(
 			'ᯀ', 'ᯁ', 'ᯂ', 'ᯃ', 'ᯄ', 'ᯅ', 
 			'ᯆ', 'ᯇ', 'ᯈ', 'ᯉ', 'ᯊ', 'ᯋ', 
 			'ᯌ', 'ᯍ', 'ᯎ', 'ᯏ', 'ᯐ', 'ᯑ', 
@@ -53,7 +51,9 @@ public class BatakAlphabetTest
 			'ᯰ', 'ᯱ', '᯲', '᯳'
 		);
 
-		assertArrayEquals(letters.toArray(), ALPHABET.get().toArray());
+		List<Character> actual = ALPHABET.get();
+
+		assertArrayEquals(expected.toArray(), actual.toArray());
 	}
 
 	/**

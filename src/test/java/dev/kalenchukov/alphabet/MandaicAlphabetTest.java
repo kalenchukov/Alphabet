@@ -18,7 +18,6 @@
 
 package dev.kalenchukov.alphabet;
 
-import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -32,8 +31,7 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class MandaicAlphabetTest
 {
-	@NotNull
-	public static final Alphabetical ALPHABET = new MandaicAlphabet();
+	private static final Alphabetical ALPHABET = new MandaicAlphabet();
 
 	/**
 	 * Проверка метода {@link MandaicAlphabet#get()}.
@@ -41,7 +39,7 @@ public class MandaicAlphabetTest
 	@Test
 	public void get()
 	{
-		List<Character> letters = List.of(
+		List<Character> expected = List.of(
 			'ࡀ', 'ࡁ', 'ࡂ', 'ࡃ', 'ࡄ', 'ࡅ', 
 			'ࡆ', 'ࡇ', 'ࡈ', 'ࡉ', 'ࡊ', 'ࡋ', 
 			'ࡌ', 'ࡍ', 'ࡎ', 'ࡏ', 'ࡐ', 'ࡑ', 
@@ -49,7 +47,9 @@ public class MandaicAlphabetTest
 			'ࡘ', '࡙', '࡚', '࡛', '࡞'
 		);
 
-		assertArrayEquals(letters.toArray(), ALPHABET.get().toArray());
+		List<Character> actual = ALPHABET.get();
+
+		assertArrayEquals(expected.toArray(), actual.toArray());
 	}
 
 	/**

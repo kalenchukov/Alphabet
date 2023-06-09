@@ -18,7 +18,6 @@
 
 package dev.kalenchukov.alphabet;
 
-import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -32,8 +31,7 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class HangulAlphabetTest
 {
-	@NotNull
-	public static final Alphabetical ALPHABET = new HangulAlphabet();
+	private static final Alphabetical ALPHABET = new HangulAlphabet();
 
 	/**
 	 * Проверка метода {@link HangulAlphabet#get()}.
@@ -41,7 +39,7 @@ public class HangulAlphabetTest
 	@Test
 	public void get()
 	{
-		List<Character> letters = List.of(
+		List<Character> expected = List.of(
 			'ㄱ', 'ㄴ', 'ㄷ', 'ㄹ', 'ㅁ', 'ㅂ', 
 			'ㅅ', 'ㅇ', 'ㅈ', 'ㅊ', 'ㅋ', 'ㅌ', 
 			'ㅍ', 'ㅎ', 'ㅏ', 'ㅓ', 'ㅗ', 'ㅜ', 
@@ -53,7 +51,9 @@ public class HangulAlphabetTest
 			'ㅞ', 'ㅟ', 'ㅢ'
 		);
 
-		assertArrayEquals(letters.toArray(), ALPHABET.get().toArray());
+		List<Character> actual = ALPHABET.get();
+
+		assertArrayEquals(expected.toArray(), actual.toArray());
 	}
 
 	/**

@@ -18,7 +18,6 @@
 
 package dev.kalenchukov.alphabet;
 
-import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -32,8 +31,7 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class CopticAlphabetUpperCaseTest
 {
-	@NotNull
-	public static final Alphabetical ALPHABET = new CopticAlphabet.UpperCase();
+	private static final Alphabetical ALPHABET = new CopticAlphabet.UpperCase();
 
 	/**
 	 * Проверка метода {@link CopticAlphabet.UpperCase#get()}.
@@ -41,7 +39,7 @@ public class CopticAlphabetUpperCaseTest
 	@Test
 	public void get()
 	{
-		List<Character> letters = List.of(
+		List<Character> expected = List.of(
 			'Ⲁ', 'Ⲃ', 'Ⲅ', 'Ⲇ', 'Ⲉ', 'Ⲋ', 
 			'Ⲍ', 'Ⲏ', 'Ⲑ', 'Ⲓ', 'Ⲕ', 'Ⲗ', 
 			'Ⲙ', 'Ⲛ', 'Ⲝ', 'Ⲟ', 'Ⲡ', 'Ⲣ', 
@@ -52,7 +50,9 @@ public class CopticAlphabetUpperCaseTest
 			'Ⳕ', 'Ⳗ', 'Ⳙ', 'Ⳛ'
 		);
 
-		assertArrayEquals(letters.toArray(), ALPHABET.get().toArray());
+		List<Character> actual = ALPHABET.get();
+
+		assertArrayEquals(expected.toArray(), actual.toArray());
 	}
 
 	/**

@@ -18,7 +18,6 @@
 
 package dev.kalenchukov.alphabet;
 
-import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -32,8 +31,7 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class GujaratiAlphabetTest
 {
-	@NotNull
-	public static final Alphabetical ALPHABET = new GujaratiAlphabet();
+	private static final Alphabetical ALPHABET = new GujaratiAlphabet();
 
 	/**
 	 * Проверка метода {@link GujaratiAlphabet#get()}.
@@ -41,7 +39,7 @@ public class GujaratiAlphabetTest
 	@Test
 	public void get()
 	{
-		List<Character> letters = List.of(
+		List<Character> expected = List.of(
 			'ક', 'ખ', 'ગ', 'ઘ', 'ઙ', 'ચ', 
 			'છ', 'જ', 'ઝ', 'ઞ', 'ટ', 'ઠ', 
 			'ડ', 'ઢ', 'ણ', 'ત', 'થ', 'દ', 
@@ -52,7 +50,9 @@ public class GujaratiAlphabetTest
 			'ઐ', 'ઓ', 'ઔ', '્', 'ં', 'ઃ'
 		);
 
-		assertArrayEquals(letters.toArray(), ALPHABET.get().toArray());
+		List<Character> actual = ALPHABET.get();
+
+		assertArrayEquals(expected.toArray(), actual.toArray());
 	}
 
 	/**

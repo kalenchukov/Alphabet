@@ -18,7 +18,6 @@
 
 package dev.kalenchukov.alphabet;
 
-import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -32,8 +31,7 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class EsperantoAlphabetUpperCaseTest
 {
-	@NotNull
-	public static final Alphabetical ALPHABET = new EsperantoAlphabet.UpperCase();
+	private static final Alphabetical ALPHABET = new EsperantoAlphabet.UpperCase();
 
 	/**
 	 * Проверка метода {@link EsperantoAlphabet.UpperCase#get()}.
@@ -41,7 +39,7 @@ public class EsperantoAlphabetUpperCaseTest
 	@Test
 	public void get()
 	{
-		List<Character> letters = List.of(
+		List<Character> expected = List.of(
 			'A', 'B', 'C', 'Ĉ', 'D', 'E', 
 			'F', 'G', 'Ĝ', 'H', 'Ĥ', 'I', 
 			'J', 'Ĵ', 'K', 'L', 'M', 'N', 
@@ -49,7 +47,9 @@ public class EsperantoAlphabetUpperCaseTest
 			'U', 'Ŭ', 'V', 'Z'
 		);
 
-		assertArrayEquals(letters.toArray(), ALPHABET.get().toArray());
+		List<Character> actual = ALPHABET.get();
+
+		assertArrayEquals(expected.toArray(), actual.toArray());
 	}
 
 	/**

@@ -18,7 +18,6 @@
 
 package dev.kalenchukov.alphabet;
 
-import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -32,8 +31,7 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class LatinAlphabetLowerCaseTest
 {
-	@NotNull
-	public static final Alphabetical ALPHABET = new LatinAlphabet.LowerCase();
+	private static final Alphabetical ALPHABET = new LatinAlphabet.LowerCase();
 
 	/**
 	 * Проверка метода {@link LatinAlphabet.LowerCase#get()}.
@@ -41,7 +39,7 @@ public class LatinAlphabetLowerCaseTest
 	@Test
 	public void get()
 	{
-		List<Character> letters = List.of(
+		List<Character> expected = List.of(
 			'a', 'b', 'c', 'd', 'e', 'f', 
 			'g', 'h', 'i', 'j', 'k', 'l', 
 			'm', 'n', 'o', 'p', 'q', 'r', 
@@ -49,7 +47,9 @@ public class LatinAlphabetLowerCaseTest
 			'y', 'z'
 		);
 
-		assertArrayEquals(letters.toArray(), ALPHABET.get().toArray());
+		List<Character> actual = ALPHABET.get();
+
+		assertArrayEquals(expected.toArray(), actual.toArray());
 	}
 
 	/**

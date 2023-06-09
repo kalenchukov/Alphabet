@@ -18,7 +18,6 @@
 
 package dev.kalenchukov.alphabet;
 
-import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -32,8 +31,7 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class TibetanAlphabetTest
 {
-	@NotNull
-	public static final Alphabetical ALPHABET = new TibetanAlphabet();
+	private static final Alphabetical ALPHABET = new TibetanAlphabet();
 
 	/**
 	 * Проверка метода {@link TibetanAlphabet#get()}.
@@ -41,7 +39,7 @@ public class TibetanAlphabetTest
 	@Test
 	public void get()
 	{
-		List<Character> letters = List.of(
+		List<Character> expected = List.of(
 			'ཀ', 'ཁ', 'ག', 'ང', 'ཅ', 'ཆ', 
 			'ཇ', 'ཉ', 'ཏ', 'ཐ', 'ད', 'ན', 
 			'པ', 'ཕ', 'བ', 'མ', 'ཙ', 'ཚ', 
@@ -50,7 +48,9 @@ public class TibetanAlphabetTest
 			'ཀྵ', 'ཪ', 'ཫ', 'ཬ'
 		);
 
-		assertArrayEquals(letters.toArray(), ALPHABET.get().toArray());
+		List<Character> actual = ALPHABET.get();
+
+		assertArrayEquals(expected.toArray(), actual.toArray());
 	}
 
 	/**

@@ -18,7 +18,6 @@
 
 package dev.kalenchukov.alphabet;
 
-import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -32,8 +31,7 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class GermanAlphabetUpperCaseTest
 {
-	@NotNull
-	public static final Alphabetical ALPHABET = new GermanAlphabet.UpperCase();
+	private static final Alphabetical ALPHABET = new GermanAlphabet.UpperCase();
 
 	/**
 	 * Проверка метода {@link GermanAlphabet.UpperCase#get()}.
@@ -41,7 +39,7 @@ public class GermanAlphabetUpperCaseTest
 	@Test
 	public void get()
 	{
-		List<Character> letters = List.of(
+		List<Character> expected = List.of(
 			'A', 'B', 'C', 'D', 'E', 'F', 
 			'G', 'H', 'I', 'J', 'K', 'L', 
 			'M', 'N', 'O', 'P', 'Q', 'R', 
@@ -49,7 +47,9 @@ public class GermanAlphabetUpperCaseTest
 			'Y', 'Z', 'Ä', 'Ö', 'Ü', 'ẞ'
 		);
 
-		assertArrayEquals(letters.toArray(), ALPHABET.get().toArray());
+		List<Character> actual = ALPHABET.get();
+
+		assertArrayEquals(expected.toArray(), actual.toArray());
 	}
 
 	/**

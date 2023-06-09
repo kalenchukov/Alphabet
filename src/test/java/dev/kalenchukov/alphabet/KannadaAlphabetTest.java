@@ -18,7 +18,6 @@
 
 package dev.kalenchukov.alphabet;
 
-import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -32,8 +31,7 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class KannadaAlphabetTest
 {
-	@NotNull
-	public static final Alphabetical ALPHABET = new KannadaAlphabet();
+	private static final Alphabetical ALPHABET = new KannadaAlphabet();
 
 	/**
 	 * Проверка метода {@link KannadaAlphabet#get()}.
@@ -41,7 +39,7 @@ public class KannadaAlphabetTest
 	@Test
 	public void get()
 	{
-		List<Character> letters = List.of(
+		List<Character> expected = List.of(
 			'ಅ', 'ಆ', 'ಇ', 'ಈ', 'ಉ', 'ಊ', 
 			'ಋ', 'ೠ', 'ಎ', 'ಏ', 'ಐ', 'ಒ', 
 			'ಓ', 'ಔ', 'ಕ', 'ಖ', 'ಗ', 'ಘ', 
@@ -55,7 +53,9 @@ public class KannadaAlphabetTest
 			'ೌ', '್'
 		);
 
-		assertArrayEquals(letters.toArray(), ALPHABET.get().toArray());
+		List<Character> actual = ALPHABET.get();
+
+		assertArrayEquals(expected.toArray(), actual.toArray());
 	}
 
 	/**

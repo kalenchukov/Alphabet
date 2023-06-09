@@ -18,7 +18,6 @@
 
 package dev.kalenchukov.alphabet;
 
-import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -32,8 +31,7 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class FrenchAlphabetTest
 {
-	@NotNull
-	public static final Alphabetical ALPHABET = new FrenchAlphabet();
+	private static final Alphabetical ALPHABET = new FrenchAlphabet();
 
 	/**
 	 * Проверка метода {@link FrenchAlphabet#get()}.
@@ -41,7 +39,7 @@ public class FrenchAlphabetTest
 	@Test
 	public void get()
 	{
-		List<Character> letters = List.of(
+		List<Character> expected = List.of(
 			'A', 'a', 'B', 'b', 'C', 'c', 
 			'D', 'd', 'E', 'e', 'F', 'f', 
 			'G', 'g', 'H', 'h', 'I', 'i', 
@@ -53,7 +51,9 @@ public class FrenchAlphabetTest
 			'Y', 'y', 'Z', 'z'
 		);
 
-		assertArrayEquals(letters.toArray(), ALPHABET.get().toArray());
+		List<Character> actual = ALPHABET.get();
+
+		assertArrayEquals(expected.toArray(), actual.toArray());
 	}
 
 	/**

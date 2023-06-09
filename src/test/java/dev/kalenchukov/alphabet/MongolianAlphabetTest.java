@@ -18,7 +18,6 @@
 
 package dev.kalenchukov.alphabet;
 
-import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -32,8 +31,7 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class MongolianAlphabetTest
 {
-	@NotNull
-	public static final Alphabetical ALPHABET = new MongolianAlphabet();
+	private static final Alphabetical ALPHABET = new MongolianAlphabet();
 
 	/**
 	 * Проверка метода {@link MongolianAlphabet#get()}.
@@ -41,7 +39,7 @@ public class MongolianAlphabetTest
 	@Test
 	public void get()
 	{
-		List<Character> letters = List.of(
+		List<Character> expected = List.of(
 			'ᠠ', 'ᠡ', 'ᠢ', 'ᠣ', 'ᠤ', 'ᠥ', 
 			'ᠦ', 'ᠧ', 'ᠨ', 'ᠩ', 'ᠪ', 'ᠫ', 
 			'ᠬ', 'ᠭ', 'ᠮ', 'ᠯ', 'ᠰ', 'ᠱ', 
@@ -50,7 +48,9 @@ public class MongolianAlphabetTest
 			'ᠾ', 'ᠿ', 'ᡀ', 'ᡁ', 'ᡂ'
 		);
 
-		assertArrayEquals(letters.toArray(), ALPHABET.get().toArray());
+		List<Character> actual = ALPHABET.get();
+
+		assertArrayEquals(expected.toArray(), actual.toArray());
 	}
 
 	/**

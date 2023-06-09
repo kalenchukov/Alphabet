@@ -18,7 +18,6 @@
 
 package dev.kalenchukov.alphabet;
 
-import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -32,8 +31,7 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class TeluguAlphabetTest
 {
-	@NotNull
-	public static final Alphabetical ALPHABET = new TeluguAlphabet();
+	private static final Alphabetical ALPHABET = new TeluguAlphabet();
 
 	/**
 	 * Проверка метода {@link TeluguAlphabet#get()}.
@@ -41,7 +39,7 @@ public class TeluguAlphabetTest
 	@Test
 	public void get()
 	{
-		List<Character> letters = List.of(
+		List<Character> expected = List.of(
 			'అ', 'ఆ', 'ఇ', 'ఈ', 'ఉ', 'ఊ', 
 			'ఋ', 'ౠ', 'ఎ', 'ఏ', 'ఐ', 'ఒ', 
 			'ఓ', 'ఔ', 'క', 'ఖ', 'గ', 'ఘ', 
@@ -56,7 +54,9 @@ public class TeluguAlphabetTest
 			'ౡ', 'ౢ', 'ౣ'
 		);
 
-		assertArrayEquals(letters.toArray(), ALPHABET.get().toArray());
+		List<Character> actual = ALPHABET.get();
+
+		assertArrayEquals(expected.toArray(), actual.toArray());
 	}
 
 	/**

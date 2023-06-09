@@ -18,7 +18,6 @@
 
 package dev.kalenchukov.alphabet;
 
-import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -32,8 +31,7 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class BelarusianAlphabetLowerCaseTest
 {
-	@NotNull
-	public static final Alphabetical ALPHABET = new BelarusianAlphabet.LowerCase();
+	private static final Alphabetical ALPHABET = new BelarusianAlphabet.LowerCase();
 
 	/**
 	 * Проверка метода {@link BelarusianAlphabet.LowerCase#get()}.
@@ -41,14 +39,16 @@ public class BelarusianAlphabetLowerCaseTest
 	@Test
 	public void get()
 	{
-		List<Character> letters = List.of(
+		List<Character> expected = List.of(
 			'а', 'б', 'в', 'г', 'д', 'е', 'ё', 'ж', 'з',
 			'і', 'й', 'к', 'л', 'м', 'н', 'о', 'п', 'р',
 			'с', 'т', 'у', 'ў', 'ф', 'х', 'ц', 'ч', 'ш',
 			'ы', 'ь', 'э', 'ю', 'я'
 		);
 
-		assertArrayEquals(letters.toArray(), ALPHABET.get().toArray());
+		List<Character> actual = ALPHABET.get();
+
+		assertArrayEquals(expected.toArray(), actual.toArray());
 	}
 
 	/**

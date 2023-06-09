@@ -18,7 +18,6 @@
 
 package dev.kalenchukov.alphabet;
 
-import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -32,8 +31,7 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class LaoAlphabetTest
 {
-	@NotNull
-	public static final Alphabetical ALPHABET = new LaoAlphabet();
+	private static final Alphabetical ALPHABET = new LaoAlphabet();
 
 	/**
 	 * Проверка метода {@link LaoAlphabet#get()}.
@@ -41,7 +39,7 @@ public class LaoAlphabetTest
 	@Test
 	public void get()
 	{
-		List<Character> letters = List.of(
+		List<Character> expected = List.of(
 			'ກ', 'ຂ', 'ຄ', 'ງ', 'ຈ', 'ສ', 
 			'ຊ', 'ຍ', 'ດ', 'ຕ', 'ຖ', 'ທ', 
 			'ນ', 'ບ', 'ປ', 'ຜ', 'ຝ', 'ພ', 
@@ -52,7 +50,9 @@ public class LaoAlphabetTest
 			'ໂ', 'ໃ', 'ໄ', 'ໆ'
 		);
 
-		assertArrayEquals(letters.toArray(), ALPHABET.get().toArray());
+		List<Character> actual = ALPHABET.get();
+
+		assertArrayEquals(expected.toArray(), actual.toArray());
 	}
 
 	/**

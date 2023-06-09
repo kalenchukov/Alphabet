@@ -18,7 +18,6 @@
 
 package dev.kalenchukov.alphabet;
 
-import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -32,8 +31,7 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class CzechAlphabetTest
 {
-	@NotNull
-	public static final Alphabetical ALPHABET = new CzechAlphabet();
+	private static final Alphabetical ALPHABET = new CzechAlphabet();
 
 	/**
 	 * Проверка метода {@link CzechAlphabet#get()}.
@@ -41,7 +39,7 @@ public class CzechAlphabetTest
 	@Test
 	public void get()
 	{
-		List<Character> letters = List.of(
+		List<Character> expected = List.of(
 			'A', 'Á', 'B', 'C', 'Č', 'D', 
 			'Ď', 'E', 'É', 'Ě', 'F', 'G', 
 			'H', 'I', 'Í', 'J', 'K', 'L', 
@@ -51,7 +49,9 @@ public class CzechAlphabetTest
 			'X', 'Y', 'Ý', 'Z', 'Ž'
 		);
 
-		assertArrayEquals(letters.toArray(), ALPHABET.get().toArray());
+		List<Character> actual = ALPHABET.get();
+
+		assertArrayEquals(expected.toArray(), actual.toArray());
 	}
 
 	/**

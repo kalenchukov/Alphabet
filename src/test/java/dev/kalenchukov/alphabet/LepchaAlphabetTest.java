@@ -18,7 +18,6 @@
 
 package dev.kalenchukov.alphabet;
 
-import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -32,8 +31,7 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class LepchaAlphabetTest
 {
-	@NotNull
-	public static final Alphabetical ALPHABET = new LepchaAlphabet();
+	private static final Alphabetical ALPHABET = new LepchaAlphabet();
 
 	/**
 	 * Проверка метода {@link LepchaAlphabet#get()}.
@@ -41,7 +39,7 @@ public class LepchaAlphabetTest
 	@Test
 	public void get()
 	{
-		List<Character> letters = List.of(
+		List<Character> expected = List.of(
 			'ᰀ', 'ᰁ', 'ᰂ', 'ᰃ', 'ᰄ', 'ᰅ', 
 			'ᰆ', 'ᰇ', 'ᰈ', 'ᰉ', 'ᰊ', 'ᰋ', 
 			'ᰌ', 'ᰍ', 'ᰎ', 'ᰏ', 'ᰐ', 'ᰑ', 
@@ -54,7 +52,9 @@ public class LepchaAlphabetTest
 			'ᰶ', '᰷', 'ᱍ', 'ᱎ', 'ᱏ'
 		);
 
-		assertArrayEquals(letters.toArray(), ALPHABET.get().toArray());
+		List<Character> actual = ALPHABET.get();
+
+		assertArrayEquals(expected.toArray(), actual.toArray());
 	}
 
 	/**

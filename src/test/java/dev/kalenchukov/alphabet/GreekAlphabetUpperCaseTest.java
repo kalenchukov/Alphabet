@@ -18,7 +18,6 @@
 
 package dev.kalenchukov.alphabet;
 
-import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -32,8 +31,7 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class GreekAlphabetUpperCaseTest
 {
-	@NotNull
-	public static final Alphabetical ALPHABET = new GreekAlphabet.UpperCase();
+	private static final Alphabetical ALPHABET = new GreekAlphabet.UpperCase();
 
 	/**
 	 * Проверка метода {@link GreekAlphabet.UpperCase#get()}.
@@ -41,13 +39,15 @@ public class GreekAlphabetUpperCaseTest
 	@Test
 	public void get()
 	{
-		List<Character> letters = List.of(
+		List<Character> expected = List.of(
 			'Α', 'Β', 'Γ', 'Δ', 'Ε', 'Ζ', 'Η', 'Θ', 'Ι',
 			'Κ', 'Λ', 'Μ', 'Ν', 'Ξ', 'Ο', 'Π', 'Ρ', 'Σ',
 			'Τ', 'Υ', 'Φ', 'Χ', 'Ψ', 'Ω'
 		);
 
-		assertArrayEquals(letters.toArray(), ALPHABET.get().toArray());
+		List<Character> actual = ALPHABET.get();
+
+		assertArrayEquals(expected.toArray(), actual.toArray());
 	}
 
 	/**

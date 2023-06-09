@@ -18,7 +18,6 @@
 
 package dev.kalenchukov.alphabet;
 
-import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -32,8 +31,7 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class EsperantoAlphabetTest
 {
-	@NotNull
-	public static final Alphabetical ALPHABET = new EsperantoAlphabet();
+	private static final Alphabetical ALPHABET = new EsperantoAlphabet();
 
 	/**
 	 * Проверка метода {@link EsperantoAlphabet#get()}.
@@ -41,7 +39,7 @@ public class EsperantoAlphabetTest
 	@Test
 	public void get()
 	{
-		List<Character> letters = List.of(
+		List<Character> expected = List.of(
 			'A', 'B', 'C', 'Ĉ', 'D', 'E', 
 			'F', 'G', 'Ĝ', 'H', 'Ĥ', 'I', 
 			'J', 'Ĵ', 'K', 'L', 'M', 'N', 
@@ -54,7 +52,9 @@ public class EsperantoAlphabetTest
 			'v', 'z'
 		);
 
-		assertArrayEquals(letters.toArray(), ALPHABET.get().toArray());
+		List<Character> actual = ALPHABET.get();
+
+		assertArrayEquals(expected.toArray(), actual.toArray());
 	}
 
 	/**

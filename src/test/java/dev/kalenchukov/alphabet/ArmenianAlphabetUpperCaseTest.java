@@ -18,7 +18,6 @@
 
 package dev.kalenchukov.alphabet;
 
-import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -32,8 +31,7 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class ArmenianAlphabetUpperCaseTest
 {
-	@NotNull
-	public static final Alphabetical ALPHABET = new ArmenianAlphabet.UpperCase();
+	private static final Alphabetical ALPHABET = new ArmenianAlphabet.UpperCase();
 
 	/**
 	 * Проверка метода {@link ArmenianAlphabet.UpperCase#get()}.
@@ -41,7 +39,7 @@ public class ArmenianAlphabetUpperCaseTest
 	@Test
 	public void get()
 	{
-		List<Character> letters = List.of(
+		List<Character> expected = List.of(
 			'Ա', 'Բ', 'Գ', 'Դ', 'Ե', 'Զ', 
 			'Է', 'Ը', 'Թ', 'Ժ', 'Ի', 'Լ', 
 			'Խ', 'Ծ', 'Կ', 'Հ', 'Ձ', 'Ղ', 
@@ -51,7 +49,9 @@ public class ArmenianAlphabetUpperCaseTest
 			'Օ', 'Ֆ'
 		);
 
-		assertArrayEquals(letters.toArray(), ALPHABET.get().toArray());
+		List<Character> actual = ALPHABET.get();
+
+		assertArrayEquals(expected.toArray(), actual.toArray());
 	}
 
 	/**

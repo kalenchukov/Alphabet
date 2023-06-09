@@ -18,7 +18,6 @@
 
 package dev.kalenchukov.alphabet;
 
-import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -32,8 +31,7 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class RunicAlphabetTest
 {
-	@NotNull
-	public static final Alphabetical ALPHABET = new RunicAlphabet();
+	private static final Alphabetical ALPHABET = new RunicAlphabet();
 
 	/**
 	 * Проверка метода {@link RunicAlphabet#get()}.
@@ -41,7 +39,7 @@ public class RunicAlphabetTest
 	@Test
 	public void get()
 	{
-		List<Character> letters = List.of(
+		List<Character> expected = List.of(
 			'ᚠ', 'ᚡ', 'ᚢ', 'ᚣ', 'ᚤ', 'ᚥ', 
 			'ᚦ', 'ᚧ', 'ᚨ', 'ᚩ', 'ᚪ', 'ᚫ', 
 			'ᚬ', 'ᚭ', 'ᚮ', 'ᚯ', 'ᚰ', 'ᚱ', 
@@ -59,7 +57,9 @@ public class RunicAlphabetTest
 			'ᛴ', 'ᛵ', 'ᛶ', 'ᛷ', 'ᛸ'
 		);
 
-		assertArrayEquals(letters.toArray(), ALPHABET.get().toArray());
+		List<Character> actual = ALPHABET.get();
+
+		assertArrayEquals(expected.toArray(), actual.toArray());
 	}
 
 	/**

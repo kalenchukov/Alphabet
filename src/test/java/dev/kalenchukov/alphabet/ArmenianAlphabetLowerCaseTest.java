@@ -18,7 +18,6 @@
 
 package dev.kalenchukov.alphabet;
 
-import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -32,8 +31,7 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class ArmenianAlphabetLowerCaseTest
 {
-	@NotNull
-	public static final Alphabetical ALPHABET = new ArmenianAlphabet.LowerCase();
+	private static final Alphabetical ALPHABET = new ArmenianAlphabet.LowerCase();
 
 	/**
 	 * Проверка метода {@link ArmenianAlphabet.LowerCase#get()}.
@@ -41,7 +39,7 @@ public class ArmenianAlphabetLowerCaseTest
 	@Test
 	public void get()
 	{
-		List<Character> letters = List.of(
+		List<Character> expected = List.of(
 			'ա', 'բ', 'գ', 'դ', 'ե', 'զ', 
 			'է', 'ը', 'թ', 'ժ', 'ի', 'լ', 
 			'խ', 'ծ', 'կ', 'հ', 'ձ', 'ղ', 
@@ -51,7 +49,9 @@ public class ArmenianAlphabetLowerCaseTest
 			'օ', 'ֆ'
 		);
 
-		assertArrayEquals(letters.toArray(), ALPHABET.get().toArray());
+		List<Character> actual = ALPHABET.get();
+
+		assertArrayEquals(expected.toArray(), actual.toArray());
 	}
 
 	/**

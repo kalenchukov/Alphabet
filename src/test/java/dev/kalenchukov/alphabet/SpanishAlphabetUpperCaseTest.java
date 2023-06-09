@@ -18,7 +18,6 @@
 
 package dev.kalenchukov.alphabet;
 
-import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -32,8 +31,7 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class SpanishAlphabetUpperCaseTest
 {
-	@NotNull
-	public static final Alphabetical ALPHABET = new SpanishAlphabet.UpperCase();
+	private static final Alphabetical ALPHABET = new SpanishAlphabet.UpperCase();
 
 	/**
 	 * Проверка метода {@link SpanishAlphabet.UpperCase#get()}.
@@ -41,7 +39,7 @@ public class SpanishAlphabetUpperCaseTest
 	@Test
 	public void get()
 	{
-		List<Character> letters = List.of(
+		List<Character> expected = List.of(
 			'A', 'B', 'C', 'D', 'E', 'F', 
 			'G', 'H', 'I', 'J', 'K', 'L', 
 			'M', 'N', 'Ñ', 'O', 'P', 'Q', 
@@ -49,7 +47,9 @@ public class SpanishAlphabetUpperCaseTest
 			'X', 'Y', 'Z'
 		);
 
-		assertArrayEquals(letters.toArray(), ALPHABET.get().toArray());
+		List<Character> actual = ALPHABET.get();
+
+		assertArrayEquals(expected.toArray(), actual.toArray());
 	}
 
 	/**

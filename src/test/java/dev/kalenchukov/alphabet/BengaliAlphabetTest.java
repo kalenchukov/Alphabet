@@ -18,7 +18,6 @@
 
 package dev.kalenchukov.alphabet;
 
-import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -32,8 +31,7 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class BengaliAlphabetTest
 {
-	@NotNull
-	public static final Alphabetical ALPHABET = new BengaliAlphabet();
+	private static final Alphabetical ALPHABET = new BengaliAlphabet();
 
 	/**
 	 * Проверка метода {@link BengaliAlphabet#get()}.
@@ -41,7 +39,7 @@ public class BengaliAlphabetTest
 	@Test
 	public void get()
 	{
-		List<Character> letters = List.of(
+		List<Character> expected = List.of(
 			'অ', 'আ', 'ই', 'ঈ', 'উ', 'ঊ', 
 			'ঋ', 'এ', 'ঐ', 'ও', 'ঔ', 'ক', 
 			'খ', 'গ', 'ঘ', 'ঙ', 'চ', 'ছ', 
@@ -53,7 +51,9 @@ public class BengaliAlphabetTest
 			'ং', 'ঃ', '্'
 		);
 
-		assertArrayEquals(letters.toArray(), ALPHABET.get().toArray());
+		List<Character> actual = ALPHABET.get();
+
+		assertArrayEquals(expected.toArray(), actual.toArray());
 	}
 
 	/**

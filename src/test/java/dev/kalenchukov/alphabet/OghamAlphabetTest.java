@@ -18,7 +18,6 @@
 
 package dev.kalenchukov.alphabet;
 
-import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -32,8 +31,7 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class OghamAlphabetTest
 {
-	@NotNull
-	public static final Alphabetical ALPHABET = new OghamAlphabet();
+	private static final Alphabetical ALPHABET = new OghamAlphabet();
 
 	/**
 	 * Проверка метода {@link OghamAlphabet#get()}.
@@ -41,7 +39,7 @@ public class OghamAlphabetTest
 	@Test
 	public void get()
 	{
-		List<Character> letters = List.of(
+		List<Character> expected = List.of(
 			' ', 'ᚁ', 'ᚂ', 'ᚃ', 'ᚄ', 'ᚅ', 
 			'ᚆ', 'ᚇ', 'ᚈ', 'ᚉ', 'ᚊ', 'ᚋ', 
 			'ᚌ', 'ᚍ', 'ᚎ', 'ᚏ', 'ᚐ', 'ᚑ', 
@@ -49,7 +47,9 @@ public class OghamAlphabetTest
 			'ᚘ', 'ᚙ', 'ᚚ', '᚛', '᚜'
 		);
 
-		assertArrayEquals(letters.toArray(), ALPHABET.get().toArray());
+		List<Character> actual = ALPHABET.get();
+
+		assertArrayEquals(expected.toArray(), actual.toArray());
 	}
 
 	/**

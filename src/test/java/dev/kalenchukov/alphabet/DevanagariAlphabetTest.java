@@ -18,7 +18,6 @@
 
 package dev.kalenchukov.alphabet;
 
-import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -32,8 +31,7 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class DevanagariAlphabetTest
 {
-	@NotNull
-	public static final Alphabetical ALPHABET = new DevanagariAlphabet();
+	private static final Alphabetical ALPHABET = new DevanagariAlphabet();
 
 	/**
 	 * Проверка метода {@link DevanagariAlphabet#get()}.
@@ -41,7 +39,7 @@ public class DevanagariAlphabetTest
 	@Test
 	public void get()
 	{
-		List<Character> letters = List.of(
+		List<Character> expected = List.of(
 			'क', 'ख', 'ग', 'घ', 'ङ', 'च', 
 			'छ', 'ज', 'झ', 'ञ', 'ट', 'ठ', 
 			'ड', 'ढ', 'ण', 'त', 'थ', 'द', 
@@ -57,7 +55,9 @@ public class DevanagariAlphabetTest
 			'ः', '्', 'ॅ'
 		);
 
-		assertArrayEquals(letters.toArray(), ALPHABET.get().toArray());
+		List<Character> actual = ALPHABET.get();
+
+		assertArrayEquals(expected.toArray(), actual.toArray());
 	}
 
 	/**

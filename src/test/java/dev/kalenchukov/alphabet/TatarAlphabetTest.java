@@ -18,7 +18,6 @@
 
 package dev.kalenchukov.alphabet;
 
-import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -32,8 +31,7 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class TatarAlphabetTest
 {
-	@NotNull
-	public static final Alphabetical ALPHABET = new TatarAlphabet();
+	private static final Alphabetical ALPHABET = new TatarAlphabet();
 
 	/**
 	 * Проверка метода {@link TatarAlphabet#get()}.
@@ -41,7 +39,7 @@ public class TatarAlphabetTest
 	@Test
 	public void get()
 	{
-		List<Character> letters = List.of(
+		List<Character> expected = List.of(
 			'А', 'а', 'Ә', 'ә', 'Б', 'б', 
 			'В', 'в', 'Г', 'г', 'Д', 'д', 
 			'Е', 'е', 'Ё', 'ё', 'Ж', 'ж', 
@@ -57,7 +55,9 @@ public class TatarAlphabetTest
 			'Э', 'э', 'Ю', 'ю', 'Я', 'я'
 		);
 
-		assertArrayEquals(letters.toArray(), ALPHABET.get().toArray());
+		List<Character> actual = ALPHABET.get();
+
+		assertArrayEquals(expected.toArray(), actual.toArray());
 	}
 
 	/**

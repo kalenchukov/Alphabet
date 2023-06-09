@@ -18,7 +18,6 @@
 
 package dev.kalenchukov.alphabet;
 
-import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -32,8 +31,7 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class TurkishAlphabetUpperCaseTest
 {
-	@NotNull
-	public static final Alphabetical ALPHABET = new TurkishAlphabet.UpperCase();
+	private static final Alphabetical ALPHABET = new TurkishAlphabet.UpperCase();
 
 	/**
 	 * Проверка метода {@link TurkishAlphabet.UpperCase#get()}.
@@ -41,7 +39,7 @@ public class TurkishAlphabetUpperCaseTest
 	@Test
 	public void get()
 	{
-		List<Character> letters = List.of(
+		List<Character> expected = List.of(
 			'A', 'B', 'C', 'Ç', 'D', 'E', 
 			'F', 'G', 'Ğ', 'H', 'I', 'İ', 
 			'J', 'K', 'L', 'M', 'N', 'O', 
@@ -49,7 +47,9 @@ public class TurkishAlphabetUpperCaseTest
 			'U', 'Ü', 'V', 'Y', 'Z'
 		);
 
-		assertArrayEquals(letters.toArray(), ALPHABET.get().toArray());
+		List<Character> actual = ALPHABET.get();
+
+		assertArrayEquals(expected.toArray(), actual.toArray());
 	}
 
 	/**

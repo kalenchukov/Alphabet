@@ -18,7 +18,6 @@
 
 package dev.kalenchukov.alphabet;
 
-import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -32,8 +31,7 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class KatakanaAlphabetTest
 {
-	@NotNull
-	public static final Alphabetical ALPHABET = new KatakanaAlphabet();
+	private static final Alphabetical ALPHABET = new KatakanaAlphabet();
 
 	/**
 	 * Проверка метода {@link KatakanaAlphabet#get()}.
@@ -41,7 +39,7 @@ public class KatakanaAlphabetTest
 	@Test
 	public void get()
 	{
-		List<Character> letters = List.of(
+		List<Character> expected = List.of(
 			'ン', 'ワ', 'ラ', 'ヤ', 'マ', 'ハ', 
 			'ナ', 'タ', 'サ', 'カ', 'ア', 'リ', 
 			'ミ', 'ヒ', 'ニ', 'チ', 'シ', 'キ', 
@@ -52,7 +50,9 @@ public class KatakanaAlphabetTest
 			'ト', 'ソ', 'コ', 'オ'
 		);
 
-		assertArrayEquals(letters.toArray(), ALPHABET.get().toArray());
+		List<Character> actual = ALPHABET.get();
+
+		assertArrayEquals(expected.toArray(), actual.toArray());
 	}
 
 	/**

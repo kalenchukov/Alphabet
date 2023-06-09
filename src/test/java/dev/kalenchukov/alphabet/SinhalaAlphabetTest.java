@@ -18,7 +18,6 @@
 
 package dev.kalenchukov.alphabet;
 
-import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -32,8 +31,7 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class SinhalaAlphabetTest
 {
-	@NotNull
-	public static final Alphabetical ALPHABET = new SinhalaAlphabet();
+	private static final Alphabetical ALPHABET = new SinhalaAlphabet();
 
 	/**
 	 * Проверка метода {@link SinhalaAlphabet#get()}.
@@ -41,7 +39,7 @@ public class SinhalaAlphabetTest
 	@Test
 	public void get()
 	{
-		List<Character> letters = List.of(
+		List<Character> expected = List.of(
 			'අ', 'ආ', 'ඇ', 'ඈ', 'ඉ', 'ඊ', 
 			'උ', 'ඌ', 'ඍ', 'ඎ', 'ඏ', 'ඐ', 
 			'එ', 'ඒ', 'ඓ', 'ඔ', 'ඕ', 'ඖ', 
@@ -57,7 +55,9 @@ public class SinhalaAlphabetTest
 			'ෟ', 'ෲ', 'ෳ', '෴'
 		);
 
-		assertArrayEquals(letters.toArray(), ALPHABET.get().toArray());
+		List<Character> actual = ALPHABET.get();
+
+		assertArrayEquals(expected.toArray(), actual.toArray());
 	}
 
 	/**

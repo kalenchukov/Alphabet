@@ -18,7 +18,6 @@
 
 package dev.kalenchukov.alphabet;
 
-import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -32,8 +31,7 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class UkrainianAlphabetTest
 {
-	@NotNull
-	public static final Alphabetical ALPHABET = new UkrainianAlphabet();
+	private static final Alphabetical ALPHABET = new UkrainianAlphabet();
 
 	/**
 	 * Проверка метода {@link UkrainianAlphabet#get()}.
@@ -41,7 +39,7 @@ public class UkrainianAlphabetTest
 	@Test
 	public void get()
 	{
-		List<Character> letters = List.of(
+		List<Character> expected = List.of(
 			'А', 'а', 'Б', 'б', 'В', 'в', 
 			'Г', 'г', 'Ґ', 'ґ', 'Д', 'д', 
 			'Е', 'е', 'Є', 'є', 'Ж', 'ж', 
@@ -55,7 +53,9 @@ public class UkrainianAlphabetTest
 			'Ь', 'ь', 'Ю', 'ю', 'Я', 'я'
 		);
 
-		assertArrayEquals(letters.toArray(), ALPHABET.get().toArray());
+		List<Character> actual = ALPHABET.get();
+
+		assertArrayEquals(expected.toArray(), actual.toArray());
 	}
 
 	/**

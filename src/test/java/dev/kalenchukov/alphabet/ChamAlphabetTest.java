@@ -18,7 +18,6 @@
 
 package dev.kalenchukov.alphabet;
 
-import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -32,8 +31,7 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class ChamAlphabetTest
 {
-	@NotNull
-	public static final Alphabetical ALPHABET = new ChamAlphabet();
+	private static final Alphabetical ALPHABET = new ChamAlphabet();
 
 	/**
 	 * Проверка метода {@link ChamAlphabet#get()}.
@@ -41,7 +39,7 @@ public class ChamAlphabetTest
 	@Test
 	public void get()
 	{
-		List<Character> letters = List.of(
+		List<Character> expected = List.of(
 			'ꨀ', 'ꨁ', 'ꨂ', 'ꨃ', 'ꨄ', 'ꨅ', 
 			'ꨆ', 'ꨇ', 'ꨈ', 'ꨉ', 'ꨊ', 'ꨋ', 
 			'ꨌ', 'ꨍ', 'ꨎ', 'ꨏ', 'ꨐ', 'ꨑ', 
@@ -56,7 +54,9 @@ public class ChamAlphabetTest
 			'ꩋ', 'ꩌ', 'ꩍ'
 		);
 
-		assertArrayEquals(letters.toArray(), ALPHABET.get().toArray());
+		List<Character> actual = ALPHABET.get();
+
+		assertArrayEquals(expected.toArray(), actual.toArray());
 	}
 
 	/**

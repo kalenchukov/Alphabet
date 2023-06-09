@@ -18,7 +18,6 @@
 
 package dev.kalenchukov.alphabet;
 
-import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -32,8 +31,7 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class ItalianAlphabetTest
 {
-	@NotNull
-	public static final Alphabetical ALPHABET = new ItalianAlphabet();
+	private static final Alphabetical ALPHABET = new ItalianAlphabet();
 
 	/**
 	 * Проверка метода {@link ItalianAlphabet#get()}.
@@ -41,7 +39,7 @@ public class ItalianAlphabetTest
 	@Test
 	public void get()
 	{
-		List<Character> letters = List.of(
+		List<Character> expected = List.of(
 			'A', 'a', 'B', 'b', 'C', 'c', 
 			'D', 'd', 'E', 'e', 'F', 'f', 
 			'G', 'g', 'H', 'h', 'I', 'i', 
@@ -51,7 +49,9 @@ public class ItalianAlphabetTest
 			'U', 'u', 'V', 'v'
 		);
 
-		assertArrayEquals(letters.toArray(), ALPHABET.get().toArray());
+		List<Character> actual = ALPHABET.get();
+
+		assertArrayEquals(expected.toArray(), actual.toArray());
 	}
 
 	/**

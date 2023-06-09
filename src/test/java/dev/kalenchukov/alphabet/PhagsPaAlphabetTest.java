@@ -18,7 +18,6 @@
 
 package dev.kalenchukov.alphabet;
 
-import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -32,8 +31,7 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class PhagsPaAlphabetTest
 {
-	@NotNull
-	public static final Alphabetical ALPHABET = new PhagsPaAlphabet();
+	private static final Alphabetical ALPHABET = new PhagsPaAlphabet();
 
 	/**
 	 * Проверка метода {@link PhagsPaAlphabet#get()}.
@@ -41,7 +39,7 @@ public class PhagsPaAlphabetTest
 	@Test
 	public void get()
 	{
-		List<Character> letters = List.of(
+		List<Character> expected = List.of(
 			'ꡀ', 'ꡁ', 'ꡂ', 'ꡃ', 'ꡄ', 'ꡅ', 
 			'ꡆ', 'ꡇ', 'ꡈ', 'ꡉ', 'ꡊ', 'ꡋ', 
 			'ꡌ', 'ꡍ', 'ꡎ', 'ꡏ', 'ꡐ', 'ꡑ', 
@@ -54,7 +52,9 @@ public class PhagsPaAlphabetTest
 			'꡶', '꡷'
 		);
 
-		assertArrayEquals(letters.toArray(), ALPHABET.get().toArray());
+		List<Character> actual = ALPHABET.get();
+
+		assertArrayEquals(expected.toArray(), actual.toArray());
 	}
 
 	/**

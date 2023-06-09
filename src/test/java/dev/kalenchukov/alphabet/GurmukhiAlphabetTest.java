@@ -18,7 +18,6 @@
 
 package dev.kalenchukov.alphabet;
 
-import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -32,8 +31,7 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class GurmukhiAlphabetTest
 {
-	@NotNull
-	public static final Alphabetical ALPHABET = new GurmukhiAlphabet();
+	private static final Alphabetical ALPHABET = new GurmukhiAlphabet();
 
 	/**
 	 * Проверка метода {@link GurmukhiAlphabet#get()}.
@@ -41,7 +39,7 @@ public class GurmukhiAlphabetTest
 	@Test
 	public void get()
 	{
-		List<Character> letters = List.of(
+		List<Character> expected = List.of(
 			'ੳ', 'ਅ', 'ੲ', 'ਸ', 'ਹ', 'ਕ', 
 			'ਖ', 'ਗ', 'ਘ', 'ਙ', 'ਚ', 'ਛ', 
 			'ਜ', 'ਝ', 'ਞ', 'ਟ', 'ਠ', 'ਡ', 
@@ -54,7 +52,9 @@ public class GurmukhiAlphabetTest
 			'ਃ', '੍', 'ੴ'
 		);
 
-		assertArrayEquals(letters.toArray(), ALPHABET.get().toArray());
+		List<Character> actual = ALPHABET.get();
+
+		assertArrayEquals(expected.toArray(), actual.toArray());
 	}
 
 	/**

@@ -18,7 +18,6 @@
 
 package dev.kalenchukov.alphabet;
 
-import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -32,8 +31,7 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class MyanmarAlphabetTest
 {
-	@NotNull
-	public static final Alphabetical ALPHABET = new MyanmarAlphabet();
+	private static final Alphabetical ALPHABET = new MyanmarAlphabet();
 
 	/**
 	 * Проверка метода {@link MyanmarAlphabet#get()}.
@@ -41,7 +39,7 @@ public class MyanmarAlphabetTest
 	@Test
 	public void get()
 	{
-		List<Character> letters = List.of(
+		List<Character> expected = List.of(
 			'က', 'ခ', 'ဂ', 'ဃ', 'င', 'စ', 
 			'ဆ', 'ဇ', 'ဈ', 'ည', 'ဋ', 'ဌ', 
 			'ဍ', 'ဎ', 'ဏ', 'တ', 'ထ', 'ဒ', 
@@ -60,7 +58,9 @@ public class MyanmarAlphabetTest
 			'ၛ', 'ၜ', 'ၝ', 'ၞ', 'ၟ', 'ၠ'
 		);
 
-		assertArrayEquals(letters.toArray(), ALPHABET.get().toArray());
+		List<Character> actual = ALPHABET.get();
+
+		assertArrayEquals(expected.toArray(), actual.toArray());
 	}
 
 	/**

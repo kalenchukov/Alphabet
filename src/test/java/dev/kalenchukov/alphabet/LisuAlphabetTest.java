@@ -18,7 +18,6 @@
 
 package dev.kalenchukov.alphabet;
 
-import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -32,8 +31,7 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class LisuAlphabetTest
 {
-	@NotNull
-	public static final Alphabetical ALPHABET = new LisuAlphabet();
+	private static final Alphabetical ALPHABET = new LisuAlphabet();
 
 	/**
 	 * Проверка метода {@link LisuAlphabet#get()}.
@@ -41,7 +39,7 @@ public class LisuAlphabetTest
 	@Test
 	public void get()
 	{
-		List<Character> letters = List.of(
+		List<Character> expected = List.of(
 			'ꓐ', 'ꓑ', 'ꓒ', 'ꓓ', 'ꓔ', 'ꓕ', 
 			'ꓖ', 'ꓗ', 'ꓘ', 'ꓙ', 'ꓚ', 'ꓛ', 
 			'ꓜ', 'ꓝ', 'ꓞ', 'ꓟ', 'ꓠ', 'ꓡ', 
@@ -51,7 +49,9 @@ public class LisuAlphabetTest
 			'ꓴ', 'ꓵ', 'ꓶ', 'ꓷ'
 		);
 
-		assertArrayEquals(letters.toArray(), ALPHABET.get().toArray());
+		List<Character> actual = ALPHABET.get();
+
+		assertArrayEquals(expected.toArray(), actual.toArray());
 	}
 
 	/**

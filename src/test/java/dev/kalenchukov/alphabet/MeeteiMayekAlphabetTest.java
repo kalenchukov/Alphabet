@@ -18,7 +18,6 @@
 
 package dev.kalenchukov.alphabet;
 
-import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -32,8 +31,7 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class MeeteiMayekAlphabetTest
 {
-	@NotNull
-	public static final Alphabetical ALPHABET = new MeeteiMayekAlphabet();
+	private static final Alphabetical ALPHABET = new MeeteiMayekAlphabet();
 
 	/**
 	 * Проверка метода {@link MeeteiMayekAlphabet#get()}.
@@ -41,7 +39,7 @@ public class MeeteiMayekAlphabetTest
 	@Test
 	public void get()
 	{
-		List<Character> letters = List.of(
+		List<Character> expected = List.of(
 			'ꯀ', 'ꯁ', 'ꯂ', 'ꯃ', 'ꯄ', 'ꯅ', 
 			'ꯆ', 'ꯇ', 'ꯈ', 'ꯉ', 'ꯊ', 'ꯋ', 
 			'ꯌ', 'ꯍ', 'ꯎ', 'ꯏ', 'ꯐ', 'ꯑ', 
@@ -52,7 +50,9 @@ public class MeeteiMayekAlphabetTest
 			'ꯪ', '꯫', '꯬', '꯭'
 		);
 
-		assertArrayEquals(letters.toArray(), ALPHABET.get().toArray());
+		List<Character> actual = ALPHABET.get();
+
+		assertArrayEquals(expected.toArray(), actual.toArray());
 	}
 
 	/**

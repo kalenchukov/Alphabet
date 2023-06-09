@@ -18,7 +18,6 @@
 
 package dev.kalenchukov.alphabet;
 
-import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -32,8 +31,7 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class YiSyllablesAlphabetTest
 {
-	@NotNull
-	public static final Alphabetical ALPHABET = new YiSyllablesAlphabet();
+	private static final Alphabetical ALPHABET = new YiSyllablesAlphabet();
 
 	/**
 	 * Проверка метода {@link YiSyllablesAlphabet#get()}.
@@ -41,7 +39,7 @@ public class YiSyllablesAlphabetTest
 	@Test
 	public void get()
 	{
-		List<Character> letters = List.of(
+		List<Character> expected = List.of(
 			'ꀀ', 'ꀁ', 'ꀂ', 'ꀃ', 'ꀄ', 'ꀅ', 
 			'ꀆ', 'ꀇ', 'ꀈ', 'ꀉ', 'ꀊ', 'ꀋ', 
 			'ꀌ', 'ꀍ', 'ꀎ', 'ꀏ', 'ꀐ', 'ꀑ', 
@@ -218,7 +216,9 @@ public class YiSyllablesAlphabetTest
 			'ꐎ', 'ꐏ'
 		);
 
-		assertArrayEquals(letters.toArray(), ALPHABET.get().toArray());
+		List<Character> actual = ALPHABET.get();
+
+		assertArrayEquals(expected.toArray(), actual.toArray());
 	}
 
 	/**

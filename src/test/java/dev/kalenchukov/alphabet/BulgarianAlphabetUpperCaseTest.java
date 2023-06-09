@@ -18,7 +18,6 @@
 
 package dev.kalenchukov.alphabet;
 
-import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -32,8 +31,7 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class BulgarianAlphabetUpperCaseTest
 {
-	@NotNull
-	public static final Alphabetical ALPHABET = new BulgarianAlphabet.UpperCase();
+	private static final Alphabetical ALPHABET = new BulgarianAlphabet.UpperCase();
 
 	/**
 	 * Проверка метода {@link BulgarianAlphabet.UpperCase#get()}.
@@ -41,7 +39,7 @@ public class BulgarianAlphabetUpperCaseTest
 	@Test
 	public void get()
 	{
-		List<Character> letters = List.of(
+		List<Character> expected = List.of(
 			'А', 'Б', 'В', 'Г', 'Д', 'Е', 
 			'Ж', 'З', 'И', 'Й', 'К', 'Л', 
 			'М', 'Н', 'О', 'П', 'Р', 'С', 
@@ -49,7 +47,9 @@ public class BulgarianAlphabetUpperCaseTest
 			'Ш', 'Щ', 'Ъ', 'Ь', 'Ю', 'Я'
 		);
 
-		assertArrayEquals(letters.toArray(), ALPHABET.get().toArray());
+		List<Character> actual = ALPHABET.get();
+
+		assertArrayEquals(expected.toArray(), actual.toArray());
 	}
 
 	/**

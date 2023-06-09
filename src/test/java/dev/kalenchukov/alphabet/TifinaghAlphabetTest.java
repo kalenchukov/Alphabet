@@ -18,7 +18,6 @@
 
 package dev.kalenchukov.alphabet;
 
-import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -32,8 +31,7 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class TifinaghAlphabetTest
 {
-	@NotNull
-	public static final Alphabetical ALPHABET = new TifinaghAlphabet();
+	private static final Alphabetical ALPHABET = new TifinaghAlphabet();
 
 	/**
 	 * Проверка метода {@link TifinaghAlphabet#get()}.
@@ -41,7 +39,7 @@ public class TifinaghAlphabetTest
 	@Test
 	public void get()
 	{
-		List<Character> letters = List.of(
+		List<Character> expected = List.of(
 			'ⴰ', 'ⴱ', 'ⴲ', 'ⴳ', 'ⴴ', 'ⴵ', 
 			'ⴶ', 'ⴷ', 'ⴸ', 'ⴹ', 'ⴺ', 'ⴻ', 
 			'ⴼ', 'ⴽ', 'ⴾ', 'ⴿ', 'ⵀ', 'ⵁ', 
@@ -54,7 +52,9 @@ public class TifinaghAlphabetTest
 			'ⵦ', 'ⵧ', 'ⵯ', '⵰', '⵿'
 		);
 
-		assertArrayEquals(letters.toArray(), ALPHABET.get().toArray());
+		List<Character> actual = ALPHABET.get();
+
+		assertArrayEquals(expected.toArray(), actual.toArray());
 	}
 
 	/**

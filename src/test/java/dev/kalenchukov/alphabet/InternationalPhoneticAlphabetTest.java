@@ -18,7 +18,6 @@
 
 package dev.kalenchukov.alphabet;
 
-import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -32,8 +31,7 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class InternationalPhoneticAlphabetTest
 {
-	@NotNull
-	public static final Alphabetical ALPHABET = new InternationalPhoneticAlphabet();
+	private static final Alphabetical ALPHABET = new InternationalPhoneticAlphabet();
 
 	/**
 	 * Проверка метода {@link InternationalPhoneticAlphabet#get()}.
@@ -41,7 +39,7 @@ public class InternationalPhoneticAlphabetTest
 	@Test
 	public void get()
 	{
-		List<Character> letters = List.of(
+		List<Character> expected = List.of(
 			'p', 'b', 't', 'd', 'ʈ', 'ɖ', 
 			'c', 'ɟ', 'k', 'ɡ', 'q', 'ɢ', 
 			'ʔ', 'm', 'ɱ', 'n', 'ɳ', 'ɲ', 
@@ -74,7 +72,9 @@ public class InternationalPhoneticAlphabetTest
 			'ʬ', 'ʭ', 'ʮ', 'ʯ'
 		);
 
-		assertArrayEquals(letters.toArray(), ALPHABET.get().toArray());
+		List<Character> actual = ALPHABET.get();
+
+		assertArrayEquals(expected.toArray(), actual.toArray());
 	}
 
 	/**

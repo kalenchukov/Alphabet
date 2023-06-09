@@ -18,7 +18,6 @@
 
 package dev.kalenchukov.alphabet;
 
-import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -32,8 +31,7 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class ThaanaAlphabetTest
 {
-	@NotNull
-	public static final Alphabetical ALPHABET = new ThaanaAlphabet();
+	private static final Alphabetical ALPHABET = new ThaanaAlphabet();
 
 	/**
 	 * Проверка метода {@link ThaanaAlphabet#get()}.
@@ -41,7 +39,7 @@ public class ThaanaAlphabetTest
 	@Test
 	public void get()
 	{
-		List<Character> letters = List.of(
+		List<Character> expected = List.of(
 			'ހ', 'ށ', 'ނ', 'ރ', 'ބ', 'ޅ', 
 			'ކ', 'އ', 'ވ', 'މ', 'ފ', 'ދ', 
 			'ތ', 'ލ', 'ގ', 'ޏ', 'ސ', 'ޑ', 
@@ -53,7 +51,9 @@ public class ThaanaAlphabetTest
 			'ް', 'ޱ'
 		);
 
-		assertArrayEquals(letters.toArray(), ALPHABET.get().toArray());
+		List<Character> actual = ALPHABET.get();
+
+		assertArrayEquals(expected.toArray(), actual.toArray());
 	}
 
 	/**
