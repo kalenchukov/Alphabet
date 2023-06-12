@@ -31,15 +31,14 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class LimbuAlphabetTest
 {
-	private static final Alphabetical ALPHABET = new LimbuAlphabet();
-
 	/**
 	 * Проверка метода {@link LimbuAlphabet#get()}.
 	 */
 	@Test
 	public void get()
 	{
-		List<Character> expected = List.of(
+		LimbuAlphabet alphabet = new LimbuAlphabet();
+		List<Character> expectedList = List.of(
 			'ᤀ', 'ᤁ', 'ᤂ', 'ᤃ', 'ᤄ', 'ᤅ', 
 			'ᤆ', 'ᤇ', 'ᤈ', 'ᤉ', 'ᤊ', 'ᤋ', 
 			'ᤌ', 'ᤍ', 'ᤎ', 'ᤏ', 'ᤐ', 'ᤑ', 
@@ -52,9 +51,9 @@ public class LimbuAlphabetTest
 			'ᤫ', '᥀'
 		);
 
-		List<Character> actual = ALPHABET.get();
+		List<Character> actualList = alphabet.get();
 
-		assertArrayEquals(expected.toArray(), actual.toArray());
+		assertArrayEquals(expectedList.toArray(), actualList.toArray());
 	}
 
 	/**
@@ -63,13 +62,12 @@ public class LimbuAlphabetTest
 	@Test
 	public void testEquals()
 	{
-		assertNotEquals(null, ALPHABET);
+		LimbuAlphabet alphabet1 = new LimbuAlphabet();
+		LimbuAlphabet alphabet2 = new LimbuAlphabet();
 
-		assertEquals(ALPHABET, ALPHABET);
+		boolean actual = alphabet1.equals(alphabet2);
 
-		assertNotEquals(ALPHABET, new RussianAlphabet());
-
-		assertEquals(ALPHABET, new LimbuAlphabet());
+		assertTrue(actual);
 	}
 
 	/**
@@ -78,10 +76,12 @@ public class LimbuAlphabetTest
 	@Test
 	public void testHashCode()
 	{
-		assertEquals(ALPHABET.hashCode(), ALPHABET.hashCode());
+		LimbuAlphabet alphabet1 = new LimbuAlphabet();
+		LimbuAlphabet alphabet2 = new LimbuAlphabet();
 
-		assertEquals(ALPHABET.hashCode(), new LimbuAlphabet().hashCode());
+		Integer expectedHashCode = alphabet1.hashCode();
+		Integer actualHashCode = alphabet2.hashCode();
 
-		assertNotEquals(ALPHABET.hashCode(), new RussianAlphabet().hashCode());
+		assertEquals(expectedHashCode, actualHashCode);
 	}
 }

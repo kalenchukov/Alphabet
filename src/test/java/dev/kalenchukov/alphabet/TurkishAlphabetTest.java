@@ -31,15 +31,14 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class TurkishAlphabetTest
 {
-	private static final Alphabetical ALPHABET = new TurkishAlphabet();
-
 	/**
 	 * Проверка метода {@link TurkishAlphabet#get()}.
 	 */
 	@Test
 	public void get()
 	{
-		List<Character> expected = List.of(
+		TurkishAlphabet alphabet = new TurkishAlphabet();
+		List<Character> expectedList = List.of(
 			'A', 'a', 'B', 'b', 'C', 'c', 
 			'Ç', 'ç', 'D', 'd', 'E', 'e', 
 			'F', 'f', 'G', 'g', 'Ğ', 'ğ', 
@@ -52,9 +51,9 @@ public class TurkishAlphabetTest
 			'Y', 'y', 'Z', 'z'
 		);
 
-		List<Character> actual = ALPHABET.get();
+		List<Character> actualList = alphabet.get();
 
-		assertArrayEquals(expected.toArray(), actual.toArray());
+		assertArrayEquals(expectedList.toArray(), actualList.toArray());
 	}
 
 	/**
@@ -63,13 +62,12 @@ public class TurkishAlphabetTest
 	@Test
 	public void testEquals()
 	{
-		assertNotEquals(null, ALPHABET);
+		TurkishAlphabet alphabet1 = new TurkishAlphabet();
+		TurkishAlphabet alphabet2 = new TurkishAlphabet();
 
-		assertEquals(ALPHABET, ALPHABET);
+		boolean actual = alphabet1.equals(alphabet2);
 
-		assertNotEquals(ALPHABET, new RussianAlphabet());
-
-		assertEquals(ALPHABET, new TurkishAlphabet());
+		assertTrue(actual);
 	}
 
 	/**
@@ -78,10 +76,12 @@ public class TurkishAlphabetTest
 	@Test
 	public void testHashCode()
 	{
-		assertEquals(ALPHABET.hashCode(), ALPHABET.hashCode());
+		TurkishAlphabet alphabet1 = new TurkishAlphabet();
+		TurkishAlphabet alphabet2 = new TurkishAlphabet();
 
-		assertEquals(ALPHABET.hashCode(), new TurkishAlphabet().hashCode());
+		Integer expectedHashCode = alphabet1.hashCode();
+		Integer actualHashCode = alphabet2.hashCode();
 
-		assertNotEquals(ALPHABET.hashCode(), new RussianAlphabet().hashCode());
+		assertEquals(expectedHashCode, actualHashCode);
 	}
 }

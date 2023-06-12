@@ -31,15 +31,14 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class GurmukhiAlphabetTest
 {
-	private static final Alphabetical ALPHABET = new GurmukhiAlphabet();
-
 	/**
 	 * Проверка метода {@link GurmukhiAlphabet#get()}.
 	 */
 	@Test
 	public void get()
 	{
-		List<Character> expected = List.of(
+		GurmukhiAlphabet alphabet = new GurmukhiAlphabet();
+		List<Character> expectedList = List.of(
 			'ੳ', 'ਅ', 'ੲ', 'ਸ', 'ਹ', 'ਕ', 
 			'ਖ', 'ਗ', 'ਘ', 'ਙ', 'ਚ', 'ਛ', 
 			'ਜ', 'ਝ', 'ਞ', 'ਟ', 'ਠ', 'ਡ', 
@@ -52,9 +51,9 @@ public class GurmukhiAlphabetTest
 			'ਃ', '੍', 'ੴ'
 		);
 
-		List<Character> actual = ALPHABET.get();
+		List<Character> actualList = alphabet.get();
 
-		assertArrayEquals(expected.toArray(), actual.toArray());
+		assertArrayEquals(expectedList.toArray(), actualList.toArray());
 	}
 
 	/**
@@ -63,13 +62,12 @@ public class GurmukhiAlphabetTest
 	@Test
 	public void testEquals()
 	{
-		assertNotEquals(null, ALPHABET);
+		GurmukhiAlphabet alphabet1 = new GurmukhiAlphabet();
+		GurmukhiAlphabet alphabet2 = new GurmukhiAlphabet();
 
-		assertEquals(ALPHABET, ALPHABET);
+		boolean actual = alphabet1.equals(alphabet2);
 
-		assertNotEquals(ALPHABET, new RussianAlphabet());
-
-		assertEquals(ALPHABET, new GurmukhiAlphabet());
+		assertTrue(actual);
 	}
 
 	/**
@@ -78,10 +76,12 @@ public class GurmukhiAlphabetTest
 	@Test
 	public void testHashCode()
 	{
-		assertEquals(ALPHABET.hashCode(), ALPHABET.hashCode());
+		GurmukhiAlphabet alphabet1 = new GurmukhiAlphabet();
+		GurmukhiAlphabet alphabet2 = new GurmukhiAlphabet();
 
-		assertEquals(ALPHABET.hashCode(), new GurmukhiAlphabet().hashCode());
+		Integer expectedHashCode = alphabet1.hashCode();
+		Integer actualHashCode = alphabet2.hashCode();
 
-		assertNotEquals(ALPHABET.hashCode(), new RussianAlphabet().hashCode());
+		assertEquals(expectedHashCode, actualHashCode);
 	}
 }

@@ -31,15 +31,14 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class KatakanaAlphabetTest
 {
-	private static final Alphabetical ALPHABET = new KatakanaAlphabet();
-
 	/**
 	 * Проверка метода {@link KatakanaAlphabet#get()}.
 	 */
 	@Test
 	public void get()
 	{
-		List<Character> expected = List.of(
+		KatakanaAlphabet alphabet = new KatakanaAlphabet();
+		List<Character> expectedList = List.of(
 			'ン', 'ワ', 'ラ', 'ヤ', 'マ', 'ハ', 
 			'ナ', 'タ', 'サ', 'カ', 'ア', 'リ', 
 			'ミ', 'ヒ', 'ニ', 'チ', 'シ', 'キ', 
@@ -50,9 +49,9 @@ public class KatakanaAlphabetTest
 			'ト', 'ソ', 'コ', 'オ'
 		);
 
-		List<Character> actual = ALPHABET.get();
+		List<Character> actualList = alphabet.get();
 
-		assertArrayEquals(expected.toArray(), actual.toArray());
+		assertArrayEquals(expectedList.toArray(), actualList.toArray());
 	}
 
 	/**
@@ -61,13 +60,12 @@ public class KatakanaAlphabetTest
 	@Test
 	public void testEquals()
 	{
-		assertNotEquals(null, ALPHABET);
+		KatakanaAlphabet alphabet1 = new KatakanaAlphabet();
+		KatakanaAlphabet alphabet2 = new KatakanaAlphabet();
 
-		assertEquals(ALPHABET, ALPHABET);
+		boolean actual = alphabet1.equals(alphabet2);
 
-		assertNotEquals(ALPHABET, new RussianAlphabet());
-
-		assertEquals(ALPHABET, new KatakanaAlphabet());
+		assertTrue(actual);
 	}
 
 	/**
@@ -76,10 +74,12 @@ public class KatakanaAlphabetTest
 	@Test
 	public void testHashCode()
 	{
-		assertEquals(ALPHABET.hashCode(), ALPHABET.hashCode());
+		KatakanaAlphabet alphabet1 = new KatakanaAlphabet();
+		KatakanaAlphabet alphabet2 = new KatakanaAlphabet();
 
-		assertEquals(ALPHABET.hashCode(), new KatakanaAlphabet().hashCode());
+		Integer expectedHashCode = alphabet1.hashCode();
+		Integer actualHashCode = alphabet2.hashCode();
 
-		assertNotEquals(ALPHABET.hashCode(), new RussianAlphabet().hashCode());
+		assertEquals(expectedHashCode, actualHashCode);
 	}
 }

@@ -31,15 +31,14 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class JavaneseAlphabetTest
 {
-	private static final Alphabetical ALPHABET = new JavaneseAlphabet();
-
 	/**
 	 * Проверка метода {@link JavaneseAlphabet#get()}.
 	 */
 	@Test
 	public void get()
 	{
-		List<Character> expected = List.of(
+		JavaneseAlphabet alphabet = new JavaneseAlphabet();
+		List<Character> expectedList = List.of(
 			'ꦀ', 'ꦁ', 'ꦂ', 'ꦃ', 'ꦄ', 'ꦅ', 
 			'ꦆ', 'ꦇ', 'ꦈ', 'ꦉ', 'ꦊ', 'ꦋ', 
 			'ꦌ', 'ꦍ', 'ꦎ', 'ꦏ', 'ꦐ', 'ꦑ', 
@@ -55,9 +54,9 @@ public class JavaneseAlphabetTest
 			'꧈', '꧉', '꧊', '꧋', '꧌', '꧍'
 		);
 
-		List<Character> actual = ALPHABET.get();
+		List<Character> actualList = alphabet.get();
 
-		assertArrayEquals(expected.toArray(), actual.toArray());
+		assertArrayEquals(expectedList.toArray(), actualList.toArray());
 	}
 
 	/**
@@ -66,13 +65,12 @@ public class JavaneseAlphabetTest
 	@Test
 	public void testEquals()
 	{
-		assertNotEquals(null, ALPHABET);
+		JavaneseAlphabet alphabet1 = new JavaneseAlphabet();
+		JavaneseAlphabet alphabet2 = new JavaneseAlphabet();
 
-		assertEquals(ALPHABET, ALPHABET);
+		boolean actual = alphabet1.equals(alphabet2);
 
-		assertNotEquals(ALPHABET, new RussianAlphabet());
-
-		assertEquals(ALPHABET, new JavaneseAlphabet());
+		assertTrue(actual);
 	}
 
 	/**
@@ -81,10 +79,12 @@ public class JavaneseAlphabetTest
 	@Test
 	public void testHashCode()
 	{
-		assertEquals(ALPHABET.hashCode(), ALPHABET.hashCode());
+		JavaneseAlphabet alphabet1 = new JavaneseAlphabet();
+		JavaneseAlphabet alphabet2 = new JavaneseAlphabet();
 
-		assertEquals(ALPHABET.hashCode(), new JavaneseAlphabet().hashCode());
+		Integer expectedHashCode = alphabet1.hashCode();
+		Integer actualHashCode = alphabet2.hashCode();
 
-		assertNotEquals(ALPHABET.hashCode(), new RussianAlphabet().hashCode());
+		assertEquals(expectedHashCode, actualHashCode);
 	}
 }

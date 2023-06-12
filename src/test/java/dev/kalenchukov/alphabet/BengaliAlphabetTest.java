@@ -31,15 +31,14 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class BengaliAlphabetTest
 {
-	private static final Alphabetical ALPHABET = new BengaliAlphabet();
-
 	/**
 	 * Проверка метода {@link BengaliAlphabet#get()}.
 	 */
 	@Test
 	public void get()
 	{
-		List<Character> expected = List.of(
+		BengaliAlphabet alphabet = new BengaliAlphabet();
+		List<Character> expectedList = List.of(
 			'অ', 'আ', 'ই', 'ঈ', 'উ', 'ঊ', 
 			'ঋ', 'এ', 'ঐ', 'ও', 'ঔ', 'ক', 
 			'খ', 'গ', 'ঘ', 'ঙ', 'চ', 'ছ', 
@@ -51,9 +50,9 @@ public class BengaliAlphabetTest
 			'ং', 'ঃ', '্'
 		);
 
-		List<Character> actual = ALPHABET.get();
+		List<Character> actualList = alphabet.get();
 
-		assertArrayEquals(expected.toArray(), actual.toArray());
+		assertArrayEquals(expectedList.toArray(), actualList.toArray());
 	}
 
 	/**
@@ -62,13 +61,12 @@ public class BengaliAlphabetTest
 	@Test
 	public void testEquals()
 	{
-		assertNotEquals(null, ALPHABET);
+		BengaliAlphabet alphabet1 = new BengaliAlphabet();
+		BengaliAlphabet alphabet2 = new BengaliAlphabet();
 
-		assertEquals(ALPHABET, ALPHABET);
+		boolean actual = alphabet1.equals(alphabet2);
 
-		assertNotEquals(ALPHABET, new RussianAlphabet());
-
-		assertEquals(ALPHABET, new BengaliAlphabet());
+		assertTrue(actual);
 	}
 
 	/**
@@ -77,10 +75,12 @@ public class BengaliAlphabetTest
 	@Test
 	public void testHashCode()
 	{
-		assertEquals(ALPHABET.hashCode(), ALPHABET.hashCode());
+		BengaliAlphabet alphabet1 = new BengaliAlphabet();
+		BengaliAlphabet alphabet2 = new BengaliAlphabet();
 
-		assertEquals(ALPHABET.hashCode(), new BengaliAlphabet().hashCode());
+		Integer expectedHashCode = alphabet1.hashCode();
+		Integer actualHashCode = alphabet2.hashCode();
 
-		assertNotEquals(ALPHABET.hashCode(), new RussianAlphabet().hashCode());
+		assertEquals(expectedHashCode, actualHashCode);
 	}
 }

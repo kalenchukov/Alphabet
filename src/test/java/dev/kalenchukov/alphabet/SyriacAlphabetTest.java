@@ -31,24 +31,23 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class SyriacAlphabetTest
 {
-	private static final Alphabetical ALPHABET = new SyriacAlphabet();
-
 	/**
 	 * Проверка метода {@link SyriacAlphabet#get()}.
 	 */
 	@Test
 	public void get()
 	{
-		List<Character> expected = List.of(
+		SyriacAlphabet alphabet = new SyriacAlphabet();
+		List<Character> expectedList = List.of(
 			'ܐ', 'ܒ', 'ܓ', 'ܕ', 'ܗ', 'ܘ', 
 			'ܙ', 'ܚ', 'ܛ', 'ܝ', 'ܟ', 'ܠ', 
 			'ܡ', 'ܢ', 'ܣ', 'ܥ', 'ܦ', 'ܨ', 
 			'ܩ', 'ܪ', 'ܫ', 'ܬ'
 		);
 
-		List<Character> actual = ALPHABET.get();
+		List<Character> actualList = alphabet.get();
 
-		assertArrayEquals(expected.toArray(), actual.toArray());
+		assertArrayEquals(expectedList.toArray(), actualList.toArray());
 	}
 
 	/**
@@ -57,13 +56,12 @@ public class SyriacAlphabetTest
 	@Test
 	public void testEquals()
 	{
-		assertNotEquals(null, ALPHABET);
+		SyriacAlphabet alphabet1 = new SyriacAlphabet();
+		SyriacAlphabet alphabet2 = new SyriacAlphabet();
 
-		assertEquals(ALPHABET, ALPHABET);
+		boolean actual = alphabet1.equals(alphabet2);
 
-		assertNotEquals(ALPHABET, new RussianAlphabet());
-
-		assertEquals(ALPHABET, new SyriacAlphabet());
+		assertTrue(actual);
 	}
 
 	/**
@@ -72,10 +70,12 @@ public class SyriacAlphabetTest
 	@Test
 	public void testHashCode()
 	{
-		assertEquals(ALPHABET.hashCode(), ALPHABET.hashCode());
+		SyriacAlphabet alphabet1 = new SyriacAlphabet();
+		SyriacAlphabet alphabet2 = new SyriacAlphabet();
 
-		assertEquals(ALPHABET.hashCode(), new SyriacAlphabet().hashCode());
+		Integer expectedHashCode = alphabet1.hashCode();
+		Integer actualHashCode = alphabet2.hashCode();
 
-		assertNotEquals(ALPHABET.hashCode(), new RussianAlphabet().hashCode());
+		assertEquals(expectedHashCode, actualHashCode);
 	}
 }

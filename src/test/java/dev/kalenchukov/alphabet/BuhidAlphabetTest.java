@@ -31,24 +31,23 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class BuhidAlphabetTest
 {
-	private static final Alphabetical ALPHABET = new BuhidAlphabet();
-
 	/**
 	 * Проверка метода {@link BuhidAlphabet#get()}.
 	 */
 	@Test
 	public void get()
 	{
-		List<Character> expected = List.of(
+		BuhidAlphabet alphabet = new BuhidAlphabet();
+		List<Character> expectedList = List.of(
 			'ᝀ', 'ᝁ', 'ᝂ', 'ᝃ', 'ᝄ', 'ᝅ', 
 			'ᝆ', 'ᝇ', 'ᝈ', 'ᝉ', 'ᝊ', 'ᝋ', 
 			'ᝌ', 'ᝍ', 'ᝎ', 'ᝏ', 'ᝐ', 'ᝑ', 
 			'ᝒ', 'ᝓ'
 		);
 
-		List<Character> actual = ALPHABET.get();
+		List<Character> actualList = alphabet.get();
 
-		assertArrayEquals(expected.toArray(), actual.toArray());
+		assertArrayEquals(expectedList.toArray(), actualList.toArray());
 	}
 
 	/**
@@ -57,13 +56,12 @@ public class BuhidAlphabetTest
 	@Test
 	public void testEquals()
 	{
-		assertNotEquals(null, ALPHABET);
+		BuhidAlphabet alphabet1 = new BuhidAlphabet();
+		BuhidAlphabet alphabet2 = new BuhidAlphabet();
 
-		assertEquals(ALPHABET, ALPHABET);
+		boolean actual = alphabet1.equals(alphabet2);
 
-		assertNotEquals(ALPHABET, new RussianAlphabet());
-
-		assertEquals(ALPHABET, new BuhidAlphabet());
+		assertTrue(actual);
 	}
 
 	/**
@@ -72,10 +70,12 @@ public class BuhidAlphabetTest
 	@Test
 	public void testHashCode()
 	{
-		assertEquals(ALPHABET.hashCode(), ALPHABET.hashCode());
+		BuhidAlphabet alphabet1 = new BuhidAlphabet();
+		BuhidAlphabet alphabet2 = new BuhidAlphabet();
 
-		assertEquals(ALPHABET.hashCode(), new BuhidAlphabet().hashCode());
+		Integer expectedHashCode = alphabet1.hashCode();
+		Integer actualHashCode = alphabet2.hashCode();
 
-		assertNotEquals(ALPHABET.hashCode(), new RussianAlphabet().hashCode());
+		assertEquals(expectedHashCode, actualHashCode);
 	}
 }

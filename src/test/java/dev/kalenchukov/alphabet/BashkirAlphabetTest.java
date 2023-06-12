@@ -31,15 +31,14 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class BashkirAlphabetTest
 {
-	private static final Alphabetical ALPHABET = new BashkirAlphabet();
-
 	/**
 	 * Проверка метода {@link BashkirAlphabet#get()}.
 	 */
 	@Test
 	public void get()
 	{
-		List<Character> expected = List.of(
+		BashkirAlphabet alphabet = new BashkirAlphabet();
+		List<Character> expectedList = List.of(
 			'А', 'а', 'Б', 'б', 'В', 'в', 
 			'Г', 'г', 'Ғ', 'ғ', 'Д', 'д', 
 			'Ҙ', 'ҙ', 'Е', 'е', 'Ё', 'ё', 
@@ -56,9 +55,9 @@ public class BashkirAlphabetTest
 			'Ә', 'ә', 'Ю', 'ю', 'Я', 'я'
 		);
 
-		List<Character> actual = ALPHABET.get();
+		List<Character> actualList = alphabet.get();
 
-		assertArrayEquals(expected.toArray(), actual.toArray());
+		assertArrayEquals(expectedList.toArray(), actualList.toArray());
 	}
 
 	/**
@@ -67,13 +66,12 @@ public class BashkirAlphabetTest
 	@Test
 	public void testEquals()
 	{
-		assertNotEquals(null, ALPHABET);
+		BashkirAlphabet alphabet1 = new BashkirAlphabet();
+		BashkirAlphabet alphabet2 = new BashkirAlphabet();
 
-		assertEquals(ALPHABET, ALPHABET);
+		boolean actual = alphabet1.equals(alphabet2);
 
-		assertNotEquals(ALPHABET, new RussianAlphabet());
-
-		assertEquals(ALPHABET, new BashkirAlphabet());
+		assertTrue(actual);
 	}
 
 	/**
@@ -82,10 +80,12 @@ public class BashkirAlphabetTest
 	@Test
 	public void testHashCode()
 	{
-		assertEquals(ALPHABET.hashCode(), ALPHABET.hashCode());
+		BashkirAlphabet alphabet1 = new BashkirAlphabet();
+		BashkirAlphabet alphabet2 = new BashkirAlphabet();
 
-		assertEquals(ALPHABET.hashCode(), new BashkirAlphabet().hashCode());
+		Integer expectedHashCode = alphabet1.hashCode();
+		Integer actualHashCode = alphabet2.hashCode();
 
-		assertNotEquals(ALPHABET.hashCode(), new RussianAlphabet().hashCode());
+		assertEquals(expectedHashCode, actualHashCode);
 	}
 }

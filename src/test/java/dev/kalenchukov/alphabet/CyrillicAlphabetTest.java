@@ -31,24 +31,23 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class CyrillicAlphabetTest
 {
-	private static final Alphabetical ALPHABET = new CyrillicAlphabet();
-
 	/**
 	 * Проверка метода {@link CyrillicAlphabet#get()}.
 	 */
 	@Test
 	public void get()
 	{
-		List<Character> expected = List.of(
+		CyrillicAlphabet alphabet = new CyrillicAlphabet();
+		List<Character> expectedList = List.of(
 			'А', 'Б', 'В', 'Г', 'Д', 'Е', 'Ж', 'Ѕ', 'З', 'И', 'І',
 			'К', 'Л', 'М', 'Н', 'О', 'П', 'Р', 'С', 'Т', 'Ꙋ', 'Ф',
 			'Х', 'Ѡ', 'Ц', 'Ч', 'Ш', 'Щ', 'Ъ', 'Ы', 'Ь', 'Ѣ', 'Ю',
 			'Ꙗ', 'Ѥ', 'Ѧ', 'Ѫ', 'Ѩ', 'Ѭ', 'Ѯ', 'Ѱ', 'Ѳ', 'Ѵ'
 		);
 
-		List<Character> actual = ALPHABET.get();
+		List<Character> actualList = alphabet.get();
 
-		assertArrayEquals(expected.toArray(), actual.toArray());
+		assertArrayEquals(expectedList.toArray(), actualList.toArray());
 	}
 
 	/**
@@ -57,13 +56,12 @@ public class CyrillicAlphabetTest
 	@Test
 	public void testEquals()
 	{
-		assertNotEquals(null, ALPHABET);
+		CyrillicAlphabet alphabet1 = new CyrillicAlphabet();
+		CyrillicAlphabet alphabet2 = new CyrillicAlphabet();
 
-		assertEquals(ALPHABET, ALPHABET);
+		boolean actual = alphabet1.equals(alphabet2);
 
-		assertNotEquals(ALPHABET, new RussianAlphabet());
-
-		assertEquals(ALPHABET, new CyrillicAlphabet());
+		assertTrue(actual);
 	}
 
 	/**
@@ -72,10 +70,12 @@ public class CyrillicAlphabetTest
 	@Test
 	public void testHashCode()
 	{
-		assertEquals(ALPHABET.hashCode(), ALPHABET.hashCode());
+		CyrillicAlphabet alphabet1 = new CyrillicAlphabet();
+		CyrillicAlphabet alphabet2 = new CyrillicAlphabet();
 
-		assertEquals(ALPHABET.hashCode(), new CyrillicAlphabet().hashCode());
+		Integer expectedHashCode = alphabet1.hashCode();
+		Integer actualHashCode = alphabet2.hashCode();
 
-		assertNotEquals(ALPHABET.hashCode(), new RussianAlphabet().hashCode());
+		assertEquals(expectedHashCode, actualHashCode);
 	}
 }

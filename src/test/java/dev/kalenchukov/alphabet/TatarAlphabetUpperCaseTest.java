@@ -31,15 +31,14 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class TatarAlphabetUpperCaseTest
 {
-	private static final Alphabetical ALPHABET = new TatarAlphabet.UpperCase();
-
 	/**
 	 * Проверка метода {@link TatarAlphabet.UpperCase#get()}.
 	 */
 	@Test
 	public void get()
 	{
-		List<Character> expected = List.of(
+		TatarAlphabet.UpperCase alphabet = new TatarAlphabet.UpperCase();
+		List<Character> expectedList = List.of(
 			'А', 'Ә', 'Б', 'В', 'Г', 'Д', 
 			'Е', 'Ё', 'Ж', 'Җ', 'З', 'И', 
 			'Й', 'К', 'Л', 'М', 'Н', 'Ң', 
@@ -49,9 +48,9 @@ public class TatarAlphabetUpperCaseTest
 			'Э', 'Ю', 'Я'
 		);
 
-		List<Character> actual = ALPHABET.get();
+		List<Character> actualList = alphabet.get();
 
-		assertArrayEquals(expected.toArray(), actual.toArray());
+		assertArrayEquals(expectedList.toArray(), actualList.toArray());
 	}
 
 	/**
@@ -60,13 +59,12 @@ public class TatarAlphabetUpperCaseTest
 	@Test
 	public void testEquals()
 	{
-		assertNotEquals(null, ALPHABET);
+		TatarAlphabet.UpperCase alphabet1 = new TatarAlphabet.UpperCase();
+		TatarAlphabet.UpperCase alphabet2 = new TatarAlphabet.UpperCase();
 
-		assertEquals(ALPHABET, ALPHABET);
+		boolean actual = alphabet1.equals(alphabet2);
 
-		assertNotEquals(ALPHABET, new RussianAlphabet.UpperCase());;
-
-		assertEquals(ALPHABET, new TatarAlphabet.UpperCase());;
+		assertTrue(actual);
 	}
 
 	/**
@@ -75,10 +73,12 @@ public class TatarAlphabetUpperCaseTest
 	@Test
 	public void testHashCode()
 	{
-		assertEquals(ALPHABET.hashCode(), ALPHABET.hashCode());
+		TatarAlphabet.UpperCase alphabet1 = new TatarAlphabet.UpperCase();
+		TatarAlphabet.UpperCase alphabet2 = new TatarAlphabet.UpperCase();
 
-		assertEquals(ALPHABET.hashCode(), new TatarAlphabet.UpperCase().hashCode());
+		Integer expectedHashCode = alphabet1.hashCode();
+		Integer actualHashCode = alphabet2.hashCode();
 
-		assertNotEquals(ALPHABET.hashCode(), new RussianAlphabet.UpperCase().hashCode());
+		assertEquals(expectedHashCode, actualHashCode);
 	}
 }

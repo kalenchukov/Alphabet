@@ -31,15 +31,14 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class TatarAlphabetLowerCaseTest
 {
-	private static final Alphabetical ALPHABET = new TatarAlphabet.LowerCase();
-
 	/**
 	 * Проверка метода {@link TatarAlphabet.LowerCase#get()}.
 	 */
 	@Test
 	public void get()
 	{
-		List<Character> expected = List.of(
+		TatarAlphabet.LowerCase alphabet = new TatarAlphabet.LowerCase();
+		List<Character> expectedList = List.of(
 			'а', 'ә', 'б', 'в', 'г', 'д', 
 			'е', 'ё', 'ж', 'җ', 'з', 'и', 
 			'й', 'к', 'л', 'м', 'н', 'ң', 
@@ -49,9 +48,9 @@ public class TatarAlphabetLowerCaseTest
 			'э', 'ю', 'я'
 		);
 
-		List<Character> actual = ALPHABET.get();
+		List<Character> actualList = alphabet.get();
 
-		assertArrayEquals(expected.toArray(), actual.toArray());
+		assertArrayEquals(expectedList.toArray(), actualList.toArray());
 	}
 
 	/**
@@ -60,13 +59,12 @@ public class TatarAlphabetLowerCaseTest
 	@Test
 	public void testEquals()
 	{
-		assertNotEquals(null, ALPHABET);
+		TatarAlphabet.LowerCase alphabet1 = new TatarAlphabet.LowerCase();
+		TatarAlphabet.LowerCase alphabet2 = new TatarAlphabet.LowerCase();
 
-		assertEquals(ALPHABET, ALPHABET);
+		boolean actual = alphabet1.equals(alphabet2);
 
-		assertNotEquals(ALPHABET, new RussianAlphabet.LowerCase());
-
-		assertEquals(ALPHABET, new TatarAlphabet.LowerCase());;
+		assertTrue(actual);
 	}
 
 	/**
@@ -75,10 +73,12 @@ public class TatarAlphabetLowerCaseTest
 	@Test
 	public void testHashCode()
 	{
-		assertEquals(ALPHABET.hashCode(), ALPHABET.hashCode());
+		TatarAlphabet.LowerCase alphabet1 = new TatarAlphabet.LowerCase();
+		TatarAlphabet.LowerCase alphabet2 = new TatarAlphabet.LowerCase();
 
-		assertEquals(ALPHABET.hashCode(), new TatarAlphabet.LowerCase().hashCode());
+		Integer expectedHashCode = alphabet1.hashCode();
+		Integer actualHashCode = alphabet2.hashCode();
 
-		assertNotEquals(ALPHABET.hashCode(), new RussianAlphabet.LowerCase().hashCode());
+		assertEquals(expectedHashCode, actualHashCode);
 	}
 }

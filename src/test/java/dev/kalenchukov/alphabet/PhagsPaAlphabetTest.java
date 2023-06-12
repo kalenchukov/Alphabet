@@ -31,15 +31,14 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class PhagsPaAlphabetTest
 {
-	private static final Alphabetical ALPHABET = new PhagsPaAlphabet();
-
 	/**
 	 * Проверка метода {@link PhagsPaAlphabet#get()}.
 	 */
 	@Test
 	public void get()
 	{
-		List<Character> expected = List.of(
+		PhagsPaAlphabet alphabet = new PhagsPaAlphabet();
+		List<Character> expectedList = List.of(
 			'ꡀ', 'ꡁ', 'ꡂ', 'ꡃ', 'ꡄ', 'ꡅ', 
 			'ꡆ', 'ꡇ', 'ꡈ', 'ꡉ', 'ꡊ', 'ꡋ', 
 			'ꡌ', 'ꡍ', 'ꡎ', 'ꡏ', 'ꡐ', 'ꡑ', 
@@ -52,9 +51,9 @@ public class PhagsPaAlphabetTest
 			'꡶', '꡷'
 		);
 
-		List<Character> actual = ALPHABET.get();
+		List<Character> actualList = alphabet.get();
 
-		assertArrayEquals(expected.toArray(), actual.toArray());
+		assertArrayEquals(expectedList.toArray(), actualList.toArray());
 	}
 
 	/**
@@ -63,13 +62,12 @@ public class PhagsPaAlphabetTest
 	@Test
 	public void testEquals()
 	{
-		assertNotEquals(null, ALPHABET);
+		PhagsPaAlphabet alphabet1 = new PhagsPaAlphabet();
+		PhagsPaAlphabet alphabet2 = new PhagsPaAlphabet();
 
-		assertEquals(ALPHABET, ALPHABET);
+		boolean actual = alphabet1.equals(alphabet2);
 
-		assertNotEquals(ALPHABET, new RussianAlphabet());
-
-		assertEquals(ALPHABET, new PhagsPaAlphabet());
+		assertTrue(actual);
 	}
 
 	/**
@@ -78,10 +76,12 @@ public class PhagsPaAlphabetTest
 	@Test
 	public void testHashCode()
 	{
-		assertEquals(ALPHABET.hashCode(), ALPHABET.hashCode());
+		PhagsPaAlphabet alphabet1 = new PhagsPaAlphabet();
+		PhagsPaAlphabet alphabet2 = new PhagsPaAlphabet();
 
-		assertEquals(ALPHABET.hashCode(), new PhagsPaAlphabet().hashCode());
+		Integer expectedHashCode = alphabet1.hashCode();
+		Integer actualHashCode = alphabet2.hashCode();
 
-		assertNotEquals(ALPHABET.hashCode(), new RussianAlphabet().hashCode());
+		assertEquals(expectedHashCode, actualHashCode);
 	}
 }

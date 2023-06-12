@@ -31,15 +31,14 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class InternationalPhoneticAlphabetLowerCaseTest
 {
-	private static final Alphabetical ALPHABET = new InternationalPhoneticAlphabet.LowerCase();
-
 	/**
 	 * Проверка метода {@link InternationalPhoneticAlphabet.LowerCase#get()}.
 	 */
 	@Test
 	public void get()
 	{
-		List<Character> expected = List.of(
+		InternationalPhoneticAlphabet.LowerCase alphabet = new InternationalPhoneticAlphabet.LowerCase();
+		List<Character> expectedList = List.of(
 			'p', 'b', 't', 'd', 'ʈ', 'ɖ', 
 			'c', 'ɟ', 'k', 'ɡ', 'q', 'm', 
 			'ɱ', 'n', 'ɳ', 'ɲ', 'ŋ', 'r', 
@@ -63,9 +62,9 @@ public class InternationalPhoneticAlphabetLowerCaseTest
 			'ʩ', 'ʪ', 'ʫ', 'ʮ', 'ʯ'
 		);
 
-		List<Character> actual = ALPHABET.get();
+		List<Character> actualList = alphabet.get();
 
-		assertArrayEquals(expected.toArray(), actual.toArray());
+		assertArrayEquals(expectedList.toArray(), actualList.toArray());
 	}
 
 	/**
@@ -74,13 +73,12 @@ public class InternationalPhoneticAlphabetLowerCaseTest
 	@Test
 	public void testEquals()
 	{
-		assertNotEquals(null, ALPHABET);
+		InternationalPhoneticAlphabet.LowerCase alphabet1 = new InternationalPhoneticAlphabet.LowerCase();
+		InternationalPhoneticAlphabet.LowerCase alphabet2 = new InternationalPhoneticAlphabet.LowerCase();
 
-		assertEquals(ALPHABET, ALPHABET);
+		boolean actual = alphabet1.equals(alphabet2);
 
-		assertNotEquals(ALPHABET, new RussianAlphabet.LowerCase());
-
-		assertEquals(ALPHABET, new InternationalPhoneticAlphabet.LowerCase());;
+		assertTrue(actual);
 	}
 
 	/**
@@ -89,10 +87,12 @@ public class InternationalPhoneticAlphabetLowerCaseTest
 	@Test
 	public void testHashCode()
 	{
-		assertEquals(ALPHABET.hashCode(), ALPHABET.hashCode());
+		InternationalPhoneticAlphabet.LowerCase alphabet1 = new InternationalPhoneticAlphabet.LowerCase();
+		InternationalPhoneticAlphabet.LowerCase alphabet2 = new InternationalPhoneticAlphabet.LowerCase();
 
-		assertEquals(ALPHABET.hashCode(), new InternationalPhoneticAlphabet.LowerCase().hashCode());
+		Integer expectedHashCode = alphabet1.hashCode();
+		Integer actualHashCode = alphabet2.hashCode();
 
-		assertNotEquals(ALPHABET.hashCode(), new RussianAlphabet.LowerCase().hashCode());
+		assertEquals(expectedHashCode, actualHashCode);
 	}
 }

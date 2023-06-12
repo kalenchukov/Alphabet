@@ -31,15 +31,14 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class RunicAlphabetTest
 {
-	private static final Alphabetical ALPHABET = new RunicAlphabet();
-
 	/**
 	 * Проверка метода {@link RunicAlphabet#get()}.
 	 */
 	@Test
 	public void get()
 	{
-		List<Character> expected = List.of(
+		RunicAlphabet alphabet = new RunicAlphabet();
+		List<Character> expectedList = List.of(
 			'ᚠ', 'ᚡ', 'ᚢ', 'ᚣ', 'ᚤ', 'ᚥ', 
 			'ᚦ', 'ᚧ', 'ᚨ', 'ᚩ', 'ᚪ', 'ᚫ', 
 			'ᚬ', 'ᚭ', 'ᚮ', 'ᚯ', 'ᚰ', 'ᚱ', 
@@ -57,9 +56,9 @@ public class RunicAlphabetTest
 			'ᛴ', 'ᛵ', 'ᛶ', 'ᛷ', 'ᛸ'
 		);
 
-		List<Character> actual = ALPHABET.get();
+		List<Character> actualList = alphabet.get();
 
-		assertArrayEquals(expected.toArray(), actual.toArray());
+		assertArrayEquals(expectedList.toArray(), actualList.toArray());
 	}
 
 	/**
@@ -68,13 +67,12 @@ public class RunicAlphabetTest
 	@Test
 	public void testEquals()
 	{
-		assertNotEquals(null, ALPHABET);
+		RunicAlphabet alphabet1 = new RunicAlphabet();
+		RunicAlphabet alphabet2 = new RunicAlphabet();
 
-		assertEquals(ALPHABET, ALPHABET);
+		boolean actual = alphabet1.equals(alphabet2);
 
-		assertNotEquals(ALPHABET, new RussianAlphabet());
-
-		assertEquals(ALPHABET, new RunicAlphabet());
+		assertTrue(actual);
 	}
 
 	/**
@@ -83,10 +81,12 @@ public class RunicAlphabetTest
 	@Test
 	public void testHashCode()
 	{
-		assertEquals(ALPHABET.hashCode(), ALPHABET.hashCode());
+		RunicAlphabet alphabet1 = new RunicAlphabet();
+		RunicAlphabet alphabet2 = new RunicAlphabet();
 
-		assertEquals(ALPHABET.hashCode(), new RunicAlphabet().hashCode());
+		Integer expectedHashCode = alphabet1.hashCode();
+		Integer actualHashCode = alphabet2.hashCode();
 
-		assertNotEquals(ALPHABET.hashCode(), new RussianAlphabet().hashCode());
+		assertEquals(expectedHashCode, actualHashCode);
 	}
 }

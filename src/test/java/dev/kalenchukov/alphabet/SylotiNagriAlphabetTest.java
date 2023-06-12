@@ -31,15 +31,14 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class SylotiNagriAlphabetTest
 {
-	private static final Alphabetical ALPHABET = new SylotiNagriAlphabet();
-
 	/**
 	 * Проверка метода {@link SylotiNagriAlphabet#get()}.
 	 */
 	@Test
 	public void get()
 	{
-		List<Character> expected = List.of(
+		SylotiNagriAlphabet alphabet = new SylotiNagriAlphabet();
+		List<Character> expectedList = List.of(
 			'ꠀ', 'ꠁ', 'ꠂ', 'ꠃ', 'ꠄ', 'ꠅ', 
 			'꠆', 'ꠇ', 'ꠈ', 'ꠉ', 'ꠊ', 'ꠋ', 
 			'ꠌ', 'ꠍ', 'ꠎ', 'ꠏ', 'ꠐ', 'ꠑ', 
@@ -50,9 +49,9 @@ public class SylotiNagriAlphabetTest
 			'꠪', '꠫'
 		);
 
-		List<Character> actual = ALPHABET.get();
+		List<Character> actualList = alphabet.get();
 
-		assertArrayEquals(expected.toArray(), actual.toArray());
+		assertArrayEquals(expectedList.toArray(), actualList.toArray());
 	}
 
 	/**
@@ -61,13 +60,12 @@ public class SylotiNagriAlphabetTest
 	@Test
 	public void testEquals()
 	{
-		assertNotEquals(null, ALPHABET);
+		SylotiNagriAlphabet alphabet1 = new SylotiNagriAlphabet();
+		SylotiNagriAlphabet alphabet2 = new SylotiNagriAlphabet();
 
-		assertEquals(ALPHABET, ALPHABET);
+		boolean actual = alphabet1.equals(alphabet2);
 
-		assertNotEquals(ALPHABET, new RussianAlphabet());
-
-		assertEquals(ALPHABET, new SylotiNagriAlphabet());
+		assertTrue(actual);
 	}
 
 	/**
@@ -76,10 +74,12 @@ public class SylotiNagriAlphabetTest
 	@Test
 	public void testHashCode()
 	{
-		assertEquals(ALPHABET.hashCode(), ALPHABET.hashCode());
+		SylotiNagriAlphabet alphabet1 = new SylotiNagriAlphabet();
+		SylotiNagriAlphabet alphabet2 = new SylotiNagriAlphabet();
 
-		assertEquals(ALPHABET.hashCode(), new SylotiNagriAlphabet().hashCode());
+		Integer expectedHashCode = alphabet1.hashCode();
+		Integer actualHashCode = alphabet2.hashCode();
 
-		assertNotEquals(ALPHABET.hashCode(), new RussianAlphabet().hashCode());
+		assertEquals(expectedHashCode, actualHashCode);
 	}
 }

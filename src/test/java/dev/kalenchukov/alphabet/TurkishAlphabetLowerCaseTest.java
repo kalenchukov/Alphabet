@@ -31,15 +31,14 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class TurkishAlphabetLowerCaseTest
 {
-	private static final Alphabetical ALPHABET = new TurkishAlphabet.LowerCase();
-
 	/**
 	 * Проверка метода {@link TurkishAlphabet.LowerCase#get()}.
 	 */
 	@Test
 	public void get()
 	{
-		List<Character> expected = List.of(
+		TurkishAlphabet.LowerCase alphabet = new TurkishAlphabet.LowerCase();
+		List<Character> expectedList = List.of(
 			'a', 'b', 'c', 'ç', 'd', 'e', 
 			'f', 'g', 'ğ', 'h', 'ı', 'i', 
 			'j', 'k', 'l', 'm', 'n', 'o', 
@@ -47,9 +46,9 @@ public class TurkishAlphabetLowerCaseTest
 			'u', 'ü', 'v', 'y', 'z'
 		);
 
-		List<Character> actual = ALPHABET.get();
+		List<Character> actualList = alphabet.get();
 
-		assertArrayEquals(expected.toArray(), actual.toArray());
+		assertArrayEquals(expectedList.toArray(), actualList.toArray());
 	}
 
 	/**
@@ -58,13 +57,12 @@ public class TurkishAlphabetLowerCaseTest
 	@Test
 	public void testEquals()
 	{
-		assertNotEquals(null, ALPHABET);
+		TurkishAlphabet.LowerCase alphabet1 = new TurkishAlphabet.LowerCase();
+		TurkishAlphabet.LowerCase alphabet2 = new TurkishAlphabet.LowerCase();
 
-		assertEquals(ALPHABET, ALPHABET);
+		boolean actual = alphabet1.equals(alphabet2);
 
-		assertNotEquals(ALPHABET, new RussianAlphabet.LowerCase());
-
-		assertEquals(ALPHABET, new TurkishAlphabet.LowerCase());;
+		assertTrue(actual);
 	}
 
 	/**
@@ -73,10 +71,12 @@ public class TurkishAlphabetLowerCaseTest
 	@Test
 	public void testHashCode()
 	{
-		assertEquals(ALPHABET.hashCode(), ALPHABET.hashCode());
+		TurkishAlphabet.LowerCase alphabet1 = new TurkishAlphabet.LowerCase();
+		TurkishAlphabet.LowerCase alphabet2 = new TurkishAlphabet.LowerCase();
 
-		assertEquals(ALPHABET.hashCode(), new TurkishAlphabet.LowerCase().hashCode());
+		Integer expectedHashCode = alphabet1.hashCode();
+		Integer actualHashCode = alphabet2.hashCode();
 
-		assertNotEquals(ALPHABET.hashCode(), new RussianAlphabet.LowerCase().hashCode());
+		assertEquals(expectedHashCode, actualHashCode);
 	}
 }

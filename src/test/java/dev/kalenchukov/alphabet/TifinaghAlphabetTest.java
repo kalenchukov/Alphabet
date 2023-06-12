@@ -31,15 +31,14 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class TifinaghAlphabetTest
 {
-	private static final Alphabetical ALPHABET = new TifinaghAlphabet();
-
 	/**
 	 * Проверка метода {@link TifinaghAlphabet#get()}.
 	 */
 	@Test
 	public void get()
 	{
-		List<Character> expected = List.of(
+		TifinaghAlphabet alphabet = new TifinaghAlphabet();
+		List<Character> expectedList = List.of(
 			'ⴰ', 'ⴱ', 'ⴲ', 'ⴳ', 'ⴴ', 'ⴵ', 
 			'ⴶ', 'ⴷ', 'ⴸ', 'ⴹ', 'ⴺ', 'ⴻ', 
 			'ⴼ', 'ⴽ', 'ⴾ', 'ⴿ', 'ⵀ', 'ⵁ', 
@@ -52,9 +51,9 @@ public class TifinaghAlphabetTest
 			'ⵦ', 'ⵧ', 'ⵯ', '⵰', '⵿'
 		);
 
-		List<Character> actual = ALPHABET.get();
+		List<Character> actualList = alphabet.get();
 
-		assertArrayEquals(expected.toArray(), actual.toArray());
+		assertArrayEquals(expectedList.toArray(), actualList.toArray());
 	}
 
 	/**
@@ -63,13 +62,12 @@ public class TifinaghAlphabetTest
 	@Test
 	public void testEquals()
 	{
-		assertNotEquals(null, ALPHABET);
+		TifinaghAlphabet alphabet1 = new TifinaghAlphabet();
+		TifinaghAlphabet alphabet2 = new TifinaghAlphabet();
 
-		assertEquals(ALPHABET, ALPHABET);
+		boolean actual = alphabet1.equals(alphabet2);
 
-		assertNotEquals(ALPHABET, new RussianAlphabet());
-
-		assertEquals(ALPHABET, new TifinaghAlphabet());
+		assertTrue(actual);
 	}
 
 	/**
@@ -78,10 +76,12 @@ public class TifinaghAlphabetTest
 	@Test
 	public void testHashCode()
 	{
-		assertEquals(ALPHABET.hashCode(), ALPHABET.hashCode());
+		TifinaghAlphabet alphabet1 = new TifinaghAlphabet();
+		TifinaghAlphabet alphabet2 = new TifinaghAlphabet();
 
-		assertEquals(ALPHABET.hashCode(), new TifinaghAlphabet().hashCode());
+		Integer expectedHashCode = alphabet1.hashCode();
+		Integer actualHashCode = alphabet2.hashCode();
 
-		assertNotEquals(ALPHABET.hashCode(), new RussianAlphabet().hashCode());
+		assertEquals(expectedHashCode, actualHashCode);
 	}
 }

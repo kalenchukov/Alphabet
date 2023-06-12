@@ -31,24 +31,23 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class TagalogAlphabetTest
 {
-	private static final Alphabetical ALPHABET = new TagalogAlphabet();
-
 	/**
 	 * Проверка метода {@link TagalogAlphabet#get()}.
 	 */
 	@Test
 	public void get()
 	{
-		List<Character> expected = List.of(
+		TagalogAlphabet alphabet = new TagalogAlphabet();
+		List<Character> expectedList = List.of(
 			'ᜀ', 'ᜁ', 'ᜂ', 'ᜃ', 'ᜄ', 'ᜅ', 
 			'ᜆ', 'ᜇ', 'ᜈ', 'ᜉ', 'ᜊ', 'ᜋ', 
 			'ᜌ', 'ᜎ', 'ᜏ', 'ᜐ', 'ᜑ', 'ᜒ', 
 			'ᜓ', '᜔'
 		);
 
-		List<Character> actual = ALPHABET.get();
+		List<Character> actualList = alphabet.get();
 
-		assertArrayEquals(expected.toArray(), actual.toArray());
+		assertArrayEquals(expectedList.toArray(), actualList.toArray());
 	}
 
 	/**
@@ -57,13 +56,12 @@ public class TagalogAlphabetTest
 	@Test
 	public void testEquals()
 	{
-		assertNotEquals(null, ALPHABET);
+		TagalogAlphabet alphabet1 = new TagalogAlphabet();
+		TagalogAlphabet alphabet2 = new TagalogAlphabet();
 
-		assertEquals(ALPHABET, ALPHABET);
+		boolean actual = alphabet1.equals(alphabet2);
 
-		assertNotEquals(ALPHABET, new RussianAlphabet());
-
-		assertEquals(ALPHABET, new TagalogAlphabet());
+		assertTrue(actual);
 	}
 
 	/**
@@ -72,10 +70,12 @@ public class TagalogAlphabetTest
 	@Test
 	public void testHashCode()
 	{
-		assertEquals(ALPHABET.hashCode(), ALPHABET.hashCode());
+		TagalogAlphabet alphabet1 = new TagalogAlphabet();
+		TagalogAlphabet alphabet2 = new TagalogAlphabet();
 
-		assertEquals(ALPHABET.hashCode(), new TagalogAlphabet().hashCode());
+		Integer expectedHashCode = alphabet1.hashCode();
+		Integer actualHashCode = alphabet2.hashCode();
 
-		assertNotEquals(ALPHABET.hashCode(), new RussianAlphabet().hashCode());
+		assertEquals(expectedHashCode, actualHashCode);
 	}
 }

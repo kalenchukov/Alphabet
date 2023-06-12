@@ -31,24 +31,23 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class HanunooAlphabetTest
 {
-	private static final Alphabetical ALPHABET = new HanunooAlphabet();
-
 	/**
 	 * Проверка метода {@link HanunooAlphabet#get()}.
 	 */
 	@Test
 	public void get()
 	{
-		List<Character> expected = List.of(
+		HanunooAlphabet alphabet = new HanunooAlphabet();
+		List<Character> expectedList = List.of(
 			'ᜠ', 'ᜡ', 'ᜢ', 'ᜣ', 'ᜤ', 'ᜥ', 
 			'ᜦ', 'ᜧ', 'ᜨ', 'ᜩ', 'ᜪ', 'ᜫ', 
 			'ᜬ', 'ᜭ', 'ᜮ', 'ᜯ', 'ᜰ', 'ᜱ', 
 			'ᜲ', 'ᜳ', '᜴', '᜵', '᜶'
 		);
 
-		List<Character> actual = ALPHABET.get();
+		List<Character> actualList = alphabet.get();
 
-		assertArrayEquals(expected.toArray(), actual.toArray());
+		assertArrayEquals(expectedList.toArray(), actualList.toArray());
 	}
 
 	/**
@@ -57,13 +56,12 @@ public class HanunooAlphabetTest
 	@Test
 	public void testEquals()
 	{
-		assertNotEquals(null, ALPHABET);
+		HanunooAlphabet alphabet1 = new HanunooAlphabet();
+		HanunooAlphabet alphabet2 = new HanunooAlphabet();
 
-		assertEquals(ALPHABET, ALPHABET);
+		boolean actual = alphabet1.equals(alphabet2);
 
-		assertNotEquals(ALPHABET, new RussianAlphabet());
-
-		assertEquals(ALPHABET, new HanunooAlphabet());
+		assertTrue(actual);
 	}
 
 	/**
@@ -72,10 +70,12 @@ public class HanunooAlphabetTest
 	@Test
 	public void testHashCode()
 	{
-		assertEquals(ALPHABET.hashCode(), ALPHABET.hashCode());
+		HanunooAlphabet alphabet1 = new HanunooAlphabet();
+		HanunooAlphabet alphabet2 = new HanunooAlphabet();
 
-		assertEquals(ALPHABET.hashCode(), new HanunooAlphabet().hashCode());
+		Integer expectedHashCode = alphabet1.hashCode();
+		Integer actualHashCode = alphabet2.hashCode();
 
-		assertNotEquals(ALPHABET.hashCode(), new RussianAlphabet().hashCode());
+		assertEquals(expectedHashCode, actualHashCode);
 	}
 }

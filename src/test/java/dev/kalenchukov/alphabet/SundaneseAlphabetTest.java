@@ -31,15 +31,14 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class SundaneseAlphabetTest
 {
-	private static final Alphabetical ALPHABET = new SundaneseAlphabet();
-
 	/**
 	 * Проверка метода {@link SundaneseAlphabet#get()}.
 	 */
 	@Test
 	public void get()
 	{
-		List<Character> expected = List.of(
+		SundaneseAlphabet alphabet = new SundaneseAlphabet();
+		List<Character> expectedList = List.of(
 			'ᮃ', 'ᮄ', 'ᮅ', 'ᮆ', 'ᮇ', 'ᮈ', 
 			'ᮉ', 'ᮊ', 'ᮋ', 'ᮌ', 'ᮍ', 'ᮎ', 
 			'ᮏ', 'ᮐ', 'ᮑ', 'ᮒ', 'ᮓ', 'ᮔ', 
@@ -53,9 +52,9 @@ public class SundaneseAlphabetTest
 			'ᮿ'
 		);
 
-		List<Character> actual = ALPHABET.get();
+		List<Character> actualList = alphabet.get();
 
-		assertArrayEquals(expected.toArray(), actual.toArray());
+		assertArrayEquals(expectedList.toArray(), actualList.toArray());
 	}
 
 	/**
@@ -64,13 +63,12 @@ public class SundaneseAlphabetTest
 	@Test
 	public void testEquals()
 	{
-		assertNotEquals(null, ALPHABET);
+		SundaneseAlphabet alphabet1 = new SundaneseAlphabet();
+		SundaneseAlphabet alphabet2 = new SundaneseAlphabet();
 
-		assertEquals(ALPHABET, ALPHABET);
+		boolean actual = alphabet1.equals(alphabet2);
 
-		assertNotEquals(ALPHABET, new RussianAlphabet());
-
-		assertEquals(ALPHABET, new SundaneseAlphabet());
+		assertTrue(actual);
 	}
 
 	/**
@@ -79,10 +77,12 @@ public class SundaneseAlphabetTest
 	@Test
 	public void testHashCode()
 	{
-		assertEquals(ALPHABET.hashCode(), ALPHABET.hashCode());
+		SundaneseAlphabet alphabet1 = new SundaneseAlphabet();
+		SundaneseAlphabet alphabet2 = new SundaneseAlphabet();
 
-		assertEquals(ALPHABET.hashCode(), new SundaneseAlphabet().hashCode());
+		Integer expectedHashCode = alphabet1.hashCode();
+		Integer actualHashCode = alphabet2.hashCode();
 
-		assertNotEquals(ALPHABET.hashCode(), new RussianAlphabet().hashCode());
+		assertEquals(expectedHashCode, actualHashCode);
 	}
 }

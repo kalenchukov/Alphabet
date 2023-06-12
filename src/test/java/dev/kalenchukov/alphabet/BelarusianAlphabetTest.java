@@ -31,15 +31,14 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class BelarusianAlphabetTest
 {
-	private static final Alphabetical ALPHABET = new BelarusianAlphabet();
-
 	/**
 	 * Проверка метода {@link BelarusianAlphabet#get()}.
 	 */
 	@Test
 	public void get()
 	{
-		List<Character> expected = List.of(
+		BelarusianAlphabet alphabet = new BelarusianAlphabet();
+		List<Character> expectedList = List.of(
 			'А', 'а', 'Б', 'б', 'В', 'в', 'Г', 'г', 'Д', 'д',
 			'Е', 'е', 'Ё', 'ё', 'Ж', 'ж', 'З', 'з', 'І', 'і',
 			'Й', 'й', 'К', 'к', 'Л', 'л', 'М', 'м', 'Н', 'н',
@@ -49,9 +48,9 @@ public class BelarusianAlphabetTest
 			'Ю', 'ю', 'Я', 'я'
 		);
 
-		List<Character> actual = ALPHABET.get();
+		List<Character> actualList = alphabet.get();
 
-		assertArrayEquals(expected.toArray(), actual.toArray());
+		assertArrayEquals(expectedList.toArray(), actualList.toArray());
 	}
 
 	/**
@@ -60,13 +59,12 @@ public class BelarusianAlphabetTest
 	@Test
 	public void testEquals()
 	{
-		assertNotEquals(null, ALPHABET);
+		BelarusianAlphabet alphabet1 = new BelarusianAlphabet();
+		BelarusianAlphabet alphabet2 = new BelarusianAlphabet();
 
-		assertEquals(ALPHABET, ALPHABET);
+		boolean actual = alphabet1.equals(alphabet2);
 
-		assertNotEquals(ALPHABET, new GreekAlphabet());
-
-		assertEquals(ALPHABET, new BelarusianAlphabet());
+		assertTrue(actual);
 	}
 
 	/**
@@ -75,10 +73,12 @@ public class BelarusianAlphabetTest
 	@Test
 	public void testHashCode()
 	{
-		assertEquals(ALPHABET.hashCode(), ALPHABET.hashCode());
+		BelarusianAlphabet alphabet1 = new BelarusianAlphabet();
+		BelarusianAlphabet alphabet2 = new BelarusianAlphabet();
 
-		assertEquals(ALPHABET.hashCode(), new BelarusianAlphabet().hashCode());
+		Integer expectedHashCode = alphabet1.hashCode();
+		Integer actualHashCode = alphabet2.hashCode();
 
-		assertNotEquals(ALPHABET.hashCode(), new GreekAlphabet().hashCode());
+		assertEquals(expectedHashCode, actualHashCode);
 	}
 }

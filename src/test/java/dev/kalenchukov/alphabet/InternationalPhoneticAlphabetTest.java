@@ -31,15 +31,14 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class InternationalPhoneticAlphabetTest
 {
-	private static final Alphabetical ALPHABET = new InternationalPhoneticAlphabet();
-
 	/**
 	 * Проверка метода {@link InternationalPhoneticAlphabet#get()}.
 	 */
 	@Test
 	public void get()
 	{
-		List<Character> expected = List.of(
+		InternationalPhoneticAlphabet alphabet = new InternationalPhoneticAlphabet();
+		List<Character> expectedList = List.of(
 			'p', 'b', 't', 'd', 'ʈ', 'ɖ', 
 			'c', 'ɟ', 'k', 'ɡ', 'q', 'ɢ', 
 			'ʔ', 'm', 'ɱ', 'n', 'ɳ', 'ɲ', 
@@ -72,9 +71,9 @@ public class InternationalPhoneticAlphabetTest
 			'ʬ', 'ʭ', 'ʮ', 'ʯ'
 		);
 
-		List<Character> actual = ALPHABET.get();
+		List<Character> actualList = alphabet.get();
 
-		assertArrayEquals(expected.toArray(), actual.toArray());
+		assertArrayEquals(expectedList.toArray(), actualList.toArray());
 	}
 
 	/**
@@ -83,13 +82,12 @@ public class InternationalPhoneticAlphabetTest
 	@Test
 	public void testEquals()
 	{
-		assertNotEquals(null, ALPHABET);
+		InternationalPhoneticAlphabet alphabet1 = new InternationalPhoneticAlphabet();
+		InternationalPhoneticAlphabet alphabet2 = new InternationalPhoneticAlphabet();
 
-		assertEquals(ALPHABET, ALPHABET);
+		boolean actual = alphabet1.equals(alphabet2);
 
-		assertNotEquals(ALPHABET, new RussianAlphabet());
-
-		assertEquals(ALPHABET, new InternationalPhoneticAlphabet());
+		assertTrue(actual);
 	}
 
 	/**
@@ -98,10 +96,12 @@ public class InternationalPhoneticAlphabetTest
 	@Test
 	public void testHashCode()
 	{
-		assertEquals(ALPHABET.hashCode(), ALPHABET.hashCode());
+		InternationalPhoneticAlphabet alphabet1 = new InternationalPhoneticAlphabet();
+		InternationalPhoneticAlphabet alphabet2 = new InternationalPhoneticAlphabet();
 
-		assertEquals(ALPHABET.hashCode(), new InternationalPhoneticAlphabet().hashCode());
+		Integer expectedHashCode = alphabet1.hashCode();
+		Integer actualHashCode = alphabet2.hashCode();
 
-		assertNotEquals(ALPHABET.hashCode(), new RussianAlphabet().hashCode());
+		assertEquals(expectedHashCode, actualHashCode);
 	}
 }

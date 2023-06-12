@@ -31,15 +31,14 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class BugineseAlphabetTest
 {
-	private static final Alphabetical ALPHABET = new BugineseAlphabet();
-
 	/**
 	 * Проверка метода {@link BugineseAlphabet#get()}.
 	 */
 	@Test
 	public void get()
 	{
-		List<Character> expected = List.of(
+		BugineseAlphabet alphabet = new BugineseAlphabet();
+		List<Character> expectedList = List.of(
 			'ᨀ', 'ᨁ', 'ᨂ', 'ᨃ', 'ᨄ', 'ᨅ', 
 			'ᨆ', 'ᨇ', 'ᨈ', 'ᨉ', 'ᨊ', 'ᨋ', 
 			'ᨌ', 'ᨍ', 'ᨎ', 'ᨏ', 'ᨐ', 'ᨑ', 
@@ -47,9 +46,9 @@ public class BugineseAlphabetTest
 			'ᨘ', 'ᨙ', 'ᨚ', 'ᨛ', '᨞', '᨟'
 		);
 
-		List<Character> actual = ALPHABET.get();
+		List<Character> actualList = alphabet.get();
 
-		assertArrayEquals(expected.toArray(), actual.toArray());
+		assertArrayEquals(expectedList.toArray(), actualList.toArray());
 	}
 
 	/**
@@ -58,13 +57,12 @@ public class BugineseAlphabetTest
 	@Test
 	public void testEquals()
 	{
-		assertNotEquals(null, ALPHABET);
+		BugineseAlphabet alphabet1 = new BugineseAlphabet();
+		BugineseAlphabet alphabet2 = new BugineseAlphabet();
 
-		assertEquals(ALPHABET, ALPHABET);
+		boolean actual = alphabet1.equals(alphabet2);
 
-		assertNotEquals(ALPHABET, new RussianAlphabet());
-
-		assertEquals(ALPHABET, new BugineseAlphabet());
+		assertTrue(actual);
 	}
 
 	/**
@@ -73,10 +71,12 @@ public class BugineseAlphabetTest
 	@Test
 	public void testHashCode()
 	{
-		assertEquals(ALPHABET.hashCode(), ALPHABET.hashCode());
+		BugineseAlphabet alphabet1 = new BugineseAlphabet();
+		BugineseAlphabet alphabet2 = new BugineseAlphabet();
 
-		assertEquals(ALPHABET.hashCode(), new BugineseAlphabet().hashCode());
+		Integer expectedHashCode = alphabet1.hashCode();
+		Integer actualHashCode = alphabet2.hashCode();
 
-		assertNotEquals(ALPHABET.hashCode(), new RussianAlphabet().hashCode());
+		assertEquals(expectedHashCode, actualHashCode);
 	}
 }

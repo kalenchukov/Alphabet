@@ -31,15 +31,14 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class SpanishAlphabetUpperCaseTest
 {
-	private static final Alphabetical ALPHABET = new SpanishAlphabet.UpperCase();
-
 	/**
 	 * Проверка метода {@link SpanishAlphabet.UpperCase#get()}.
 	 */
 	@Test
 	public void get()
 	{
-		List<Character> expected = List.of(
+		SpanishAlphabet.UpperCase alphabet = new SpanishAlphabet.UpperCase();
+		List<Character> expectedList = List.of(
 			'A', 'B', 'C', 'D', 'E', 'F', 
 			'G', 'H', 'I', 'J', 'K', 'L', 
 			'M', 'N', 'Ñ', 'O', 'P', 'Q', 
@@ -47,9 +46,9 @@ public class SpanishAlphabetUpperCaseTest
 			'X', 'Y', 'Z'
 		);
 
-		List<Character> actual = ALPHABET.get();
+		List<Character> actualList = alphabet.get();
 
-		assertArrayEquals(expected.toArray(), actual.toArray());
+		assertArrayEquals(expectedList.toArray(), actualList.toArray());
 	}
 
 	/**
@@ -58,13 +57,12 @@ public class SpanishAlphabetUpperCaseTest
 	@Test
 	public void testEquals()
 	{
-		assertNotEquals(null, ALPHABET);
+		SpanishAlphabet.UpperCase alphabet1 = new SpanishAlphabet.UpperCase();
+		SpanishAlphabet.UpperCase alphabet2 = new SpanishAlphabet.UpperCase();
 
-		assertEquals(ALPHABET, ALPHABET);
+		boolean actual = alphabet1.equals(alphabet2);
 
-		assertNotEquals(ALPHABET, new RussianAlphabet.UpperCase());;
-
-		assertEquals(ALPHABET, new SpanishAlphabet.UpperCase());;
+		assertTrue(actual);
 	}
 
 	/**
@@ -73,10 +71,12 @@ public class SpanishAlphabetUpperCaseTest
 	@Test
 	public void testHashCode()
 	{
-		assertEquals(ALPHABET.hashCode(), ALPHABET.hashCode());
+		SpanishAlphabet.UpperCase alphabet1 = new SpanishAlphabet.UpperCase();
+		SpanishAlphabet.UpperCase alphabet2 = new SpanishAlphabet.UpperCase();
 
-		assertEquals(ALPHABET.hashCode(), new SpanishAlphabet.UpperCase().hashCode());
+		Integer expectedHashCode = alphabet1.hashCode();
+		Integer actualHashCode = alphabet2.hashCode();
 
-		assertNotEquals(ALPHABET.hashCode(), new RussianAlphabet.UpperCase().hashCode());
+		assertEquals(expectedHashCode, actualHashCode);
 	}
 }

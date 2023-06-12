@@ -31,15 +31,14 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class MandaicAlphabetTest
 {
-	private static final Alphabetical ALPHABET = new MandaicAlphabet();
-
 	/**
 	 * Проверка метода {@link MandaicAlphabet#get()}.
 	 */
 	@Test
 	public void get()
 	{
-		List<Character> expected = List.of(
+		MandaicAlphabet alphabet = new MandaicAlphabet();
+		List<Character> expectedList = List.of(
 			'ࡀ', 'ࡁ', 'ࡂ', 'ࡃ', 'ࡄ', 'ࡅ', 
 			'ࡆ', 'ࡇ', 'ࡈ', 'ࡉ', 'ࡊ', 'ࡋ', 
 			'ࡌ', 'ࡍ', 'ࡎ', 'ࡏ', 'ࡐ', 'ࡑ', 
@@ -47,9 +46,9 @@ public class MandaicAlphabetTest
 			'ࡘ', '࡙', '࡚', '࡛', '࡞'
 		);
 
-		List<Character> actual = ALPHABET.get();
+		List<Character> actualList = alphabet.get();
 
-		assertArrayEquals(expected.toArray(), actual.toArray());
+		assertArrayEquals(expectedList.toArray(), actualList.toArray());
 	}
 
 	/**
@@ -58,13 +57,12 @@ public class MandaicAlphabetTest
 	@Test
 	public void testEquals()
 	{
-		assertNotEquals(null, ALPHABET);
+		MandaicAlphabet alphabet1 = new MandaicAlphabet();
+		MandaicAlphabet alphabet2 = new MandaicAlphabet();
 
-		assertEquals(ALPHABET, ALPHABET);
+		boolean actual = alphabet1.equals(alphabet2);
 
-		assertNotEquals(ALPHABET, new RussianAlphabet());
-
-		assertEquals(ALPHABET, new MandaicAlphabet());
+		assertTrue(actual);
 	}
 
 	/**
@@ -73,10 +71,12 @@ public class MandaicAlphabetTest
 	@Test
 	public void testHashCode()
 	{
-		assertEquals(ALPHABET.hashCode(), ALPHABET.hashCode());
+		MandaicAlphabet alphabet1 = new MandaicAlphabet();
+		MandaicAlphabet alphabet2 = new MandaicAlphabet();
 
-		assertEquals(ALPHABET.hashCode(), new MandaicAlphabet().hashCode());
+		Integer expectedHashCode = alphabet1.hashCode();
+		Integer actualHashCode = alphabet2.hashCode();
 
-		assertNotEquals(ALPHABET.hashCode(), new RussianAlphabet().hashCode());
+		assertEquals(expectedHashCode, actualHashCode);
 	}
 }

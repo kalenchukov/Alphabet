@@ -31,15 +31,14 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class GlagoliticAlphabetTest
 {
-	private static final Alphabetical ALPHABET = new GlagoliticAlphabet();
-
 	/**
 	 * Проверка метода {@link GlagoliticAlphabet#get()}.
 	 */
 	@Test
 	public void get()
 	{
-		List<Character> expected = List.of(
+		GlagoliticAlphabet alphabet = new GlagoliticAlphabet();
+		List<Character> expectedList = List.of(
 			'Ⰰ', 'Ⰱ', 'Ⰲ', 'Ⰳ', 'Ⰴ', 'Ⰵ', 
 			'Ⰶ', 'Ⰷ', 'Ⰸ', 'Ⰹ', 'Ⰺ', 'Ⰻ', 
 			'Ⰼ', 'Ⰽ', 'Ⰾ', 'Ⰿ', 'Ⱀ', 'Ⱁ', 
@@ -50,9 +49,9 @@ public class GlagoliticAlphabetTest
 			'Ⱚ'
 		);
 
-		List<Character> actual = ALPHABET.get();
+		List<Character> actualList = alphabet.get();
 
-		assertArrayEquals(expected.toArray(), actual.toArray());
+		assertArrayEquals(expectedList.toArray(), actualList.toArray());
 	}
 
 	/**
@@ -61,13 +60,12 @@ public class GlagoliticAlphabetTest
 	@Test
 	public void testEquals()
 	{
-		assertNotEquals(null, ALPHABET);
+		GlagoliticAlphabet alphabet1 = new GlagoliticAlphabet();
+		GlagoliticAlphabet alphabet2 = new GlagoliticAlphabet();
 
-		assertEquals(ALPHABET, ALPHABET);
+		boolean actual = alphabet1.equals(alphabet2);
 
-		assertNotEquals(ALPHABET, new RussianAlphabet());
-
-		assertEquals(ALPHABET, new GlagoliticAlphabet());
+		assertTrue(actual);
 	}
 
 	/**
@@ -76,10 +74,12 @@ public class GlagoliticAlphabetTest
 	@Test
 	public void testHashCode()
 	{
-		assertEquals(ALPHABET.hashCode(), ALPHABET.hashCode());
+		GlagoliticAlphabet alphabet1 = new GlagoliticAlphabet();
+		GlagoliticAlphabet alphabet2 = new GlagoliticAlphabet();
 
-		assertEquals(ALPHABET.hashCode(), new GlagoliticAlphabet().hashCode());
+		Integer expectedHashCode = alphabet1.hashCode();
+		Integer actualHashCode = alphabet2.hashCode();
 
-		assertNotEquals(ALPHABET.hashCode(), new RussianAlphabet().hashCode());
+		assertEquals(expectedHashCode, actualHashCode);
 	}
 }

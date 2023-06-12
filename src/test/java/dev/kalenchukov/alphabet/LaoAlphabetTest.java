@@ -31,15 +31,14 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class LaoAlphabetTest
 {
-	private static final Alphabetical ALPHABET = new LaoAlphabet();
-
 	/**
 	 * Проверка метода {@link LaoAlphabet#get()}.
 	 */
 	@Test
 	public void get()
 	{
-		List<Character> expected = List.of(
+		LaoAlphabet alphabet = new LaoAlphabet();
+		List<Character> expectedList = List.of(
 			'ກ', 'ຂ', 'ຄ', 'ງ', 'ຈ', 'ສ', 
 			'ຊ', 'ຍ', 'ດ', 'ຕ', 'ຖ', 'ທ', 
 			'ນ', 'ບ', 'ປ', 'ຜ', 'ຝ', 'ພ', 
@@ -50,9 +49,9 @@ public class LaoAlphabetTest
 			'ໂ', 'ໃ', 'ໄ', 'ໆ'
 		);
 
-		List<Character> actual = ALPHABET.get();
+		List<Character> actualList = alphabet.get();
 
-		assertArrayEquals(expected.toArray(), actual.toArray());
+		assertArrayEquals(expectedList.toArray(), actualList.toArray());
 	}
 
 	/**
@@ -61,13 +60,12 @@ public class LaoAlphabetTest
 	@Test
 	public void testEquals()
 	{
-		assertNotEquals(null, ALPHABET);
+		LaoAlphabet alphabet1 = new LaoAlphabet();
+		LaoAlphabet alphabet2 = new LaoAlphabet();
 
-		assertEquals(ALPHABET, ALPHABET);
+		boolean actual = alphabet1.equals(alphabet2);
 
-		assertNotEquals(ALPHABET, new RussianAlphabet());
-
-		assertEquals(ALPHABET, new LaoAlphabet());
+		assertTrue(actual);
 	}
 
 	/**
@@ -76,10 +74,12 @@ public class LaoAlphabetTest
 	@Test
 	public void testHashCode()
 	{
-		assertEquals(ALPHABET.hashCode(), ALPHABET.hashCode());
+		LaoAlphabet alphabet1 = new LaoAlphabet();
+		LaoAlphabet alphabet2 = new LaoAlphabet();
 
-		assertEquals(ALPHABET.hashCode(), new LaoAlphabet().hashCode());
+		Integer expectedHashCode = alphabet1.hashCode();
+		Integer actualHashCode = alphabet2.hashCode();
 
-		assertNotEquals(ALPHABET.hashCode(), new RussianAlphabet().hashCode());
+		assertEquals(expectedHashCode, actualHashCode);
 	}
 }

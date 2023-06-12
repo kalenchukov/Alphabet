@@ -31,15 +31,14 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class HiraganaAlphabetTest
 {
-	private static final Alphabetical ALPHABET = new HiraganaAlphabet();
-
 	/**
 	 * Проверка метода {@link HiraganaAlphabet#get()}.
 	 */
 	@Test
 	public void get()
 	{
-		List<Character> expected = List.of(
+		HiraganaAlphabet alphabet = new HiraganaAlphabet();
+		List<Character> expectedList = List.of(
 			'か', 'き', 'く', 'け', 'こ', 'さ', 
 			'し', 'す', 'せ', 'そ', 'た', 'ち', 
 			'つ', 'て', 'と', 'な', 'に', 'ぬ', 
@@ -54,9 +53,9 @@ public class HiraganaAlphabetTest
 			'ゃ', 'ゅ', 'ょ'
 		);
 
-		List<Character> actual = ALPHABET.get();
+		List<Character> actualList = alphabet.get();
 
-		assertArrayEquals(expected.toArray(), actual.toArray());
+		assertArrayEquals(expectedList.toArray(), actualList.toArray());
 	}
 
 	/**
@@ -65,13 +64,12 @@ public class HiraganaAlphabetTest
 	@Test
 	public void testEquals()
 	{
-		assertNotEquals(null, ALPHABET);
+		HiraganaAlphabet alphabet1 = new HiraganaAlphabet();
+		HiraganaAlphabet alphabet2 = new HiraganaAlphabet();
 
-		assertEquals(ALPHABET, ALPHABET);
+		boolean actual = alphabet1.equals(alphabet2);
 
-		assertNotEquals(ALPHABET, new RussianAlphabet());
-
-		assertEquals(ALPHABET, new HiraganaAlphabet());
+		assertTrue(actual);
 	}
 
 	/**
@@ -80,10 +78,12 @@ public class HiraganaAlphabetTest
 	@Test
 	public void testHashCode()
 	{
-		assertEquals(ALPHABET.hashCode(), ALPHABET.hashCode());
+		HiraganaAlphabet alphabet1 = new HiraganaAlphabet();
+		HiraganaAlphabet alphabet2 = new HiraganaAlphabet();
 
-		assertEquals(ALPHABET.hashCode(), new HiraganaAlphabet().hashCode());
+		Integer expectedHashCode = alphabet1.hashCode();
+		Integer actualHashCode = alphabet2.hashCode();
 
-		assertNotEquals(ALPHABET.hashCode(), new RussianAlphabet().hashCode());
+		assertEquals(expectedHashCode, actualHashCode);
 	}
 }

@@ -18,6 +18,7 @@
 
 package dev.kalenchukov.alphabet.resources;
 
+import dev.kalenchukov.alphabet.Alphabetical;
 import dev.kalenchukov.alphabet.RussianAlphabet;
 import org.junit.jupiter.api.Test;
 
@@ -36,7 +37,12 @@ public class AlphabetTest
 	@Test
 	public void getAlphabet()
 	{
-		assertEquals(new RussianAlphabet(), Alphabet.RUSSIAN.getAlphabet());
+		Alphabet alphabet = Alphabet.RUSSIAN;
+		Alphabetical expectedAlphabet = new RussianAlphabet();
+
+		Alphabetical actualAlphabet = alphabet.getAlphabet();
+
+		assertEquals(expectedAlphabet, actualAlphabet);
 	}
 
 	/**
@@ -45,6 +51,10 @@ public class AlphabetTest
 	@Test
 	public void testToString()
 	{
-		assertEquals("SYLOTI NAGRI", Alphabet.SYLOTI_NAGRI.toString());
+		Alphabet alphabet = Alphabet.SYLOTI_NAGRI;
+
+		String actualString = alphabet.toString();
+
+		assertEquals("SYLOTI NAGRI", actualString);
 	}
 }

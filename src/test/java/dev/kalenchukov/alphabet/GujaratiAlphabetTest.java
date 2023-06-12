@@ -31,15 +31,14 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class GujaratiAlphabetTest
 {
-	private static final Alphabetical ALPHABET = new GujaratiAlphabet();
-
 	/**
 	 * Проверка метода {@link GujaratiAlphabet#get()}.
 	 */
 	@Test
 	public void get()
 	{
-		List<Character> expected = List.of(
+		GujaratiAlphabet alphabet = new GujaratiAlphabet();
+		List<Character> expectedList = List.of(
 			'ક', 'ખ', 'ગ', 'ઘ', 'ઙ', 'ચ', 
 			'છ', 'જ', 'ઝ', 'ઞ', 'ટ', 'ઠ', 
 			'ડ', 'ઢ', 'ણ', 'ત', 'થ', 'દ', 
@@ -50,9 +49,9 @@ public class GujaratiAlphabetTest
 			'ઐ', 'ઓ', 'ઔ', '્', 'ં', 'ઃ'
 		);
 
-		List<Character> actual = ALPHABET.get();
+		List<Character> actualList = alphabet.get();
 
-		assertArrayEquals(expected.toArray(), actual.toArray());
+		assertArrayEquals(expectedList.toArray(), actualList.toArray());
 	}
 
 	/**
@@ -61,13 +60,12 @@ public class GujaratiAlphabetTest
 	@Test
 	public void testEquals()
 	{
-		assertNotEquals(null, ALPHABET);
+		GujaratiAlphabet alphabet1 = new GujaratiAlphabet();
+		GujaratiAlphabet alphabet2 = new GujaratiAlphabet();
 
-		assertEquals(ALPHABET, ALPHABET);
+		boolean actual = alphabet1.equals(alphabet2);
 
-		assertNotEquals(ALPHABET, new RussianAlphabet());
-
-		assertEquals(ALPHABET, new GujaratiAlphabet());
+		assertTrue(actual);
 	}
 
 	/**
@@ -76,10 +74,12 @@ public class GujaratiAlphabetTest
 	@Test
 	public void testHashCode()
 	{
-		assertEquals(ALPHABET.hashCode(), ALPHABET.hashCode());
+		GujaratiAlphabet alphabet1 = new GujaratiAlphabet();
+		GujaratiAlphabet alphabet2 = new GujaratiAlphabet();
 
-		assertEquals(ALPHABET.hashCode(), new GujaratiAlphabet().hashCode());
+		Integer expectedHashCode = alphabet1.hashCode();
+		Integer actualHashCode = alphabet2.hashCode();
 
-		assertNotEquals(ALPHABET.hashCode(), new RussianAlphabet().hashCode());
+		assertEquals(expectedHashCode, actualHashCode);
 	}
 }

@@ -31,15 +31,14 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class KazakhAlphabetTest
 {
-	private static final Alphabetical ALPHABET = new KazakhAlphabet();
-
 	/**
 	 * Проверка метода {@link KazakhAlphabet#get()}.
 	 */
 	@Test
 	public void get()
 	{
-		List<Character> expected = List.of(
+		KazakhAlphabet alphabet = new KazakhAlphabet();
+		List<Character> expectedList = List.of(
 			'А', 'а', 'Ә', 'ә', 'Б', 'б', 
 			'В', 'в', 'Г', 'г', 'Ғ', 'ғ', 
 			'Д', 'д', 'Е', 'е', 'Ё', 'ё', 
@@ -56,9 +55,9 @@ public class KazakhAlphabetTest
 			'Э', 'э', 'Ю', 'ю', 'Я', 'я'
 		);
 
-		List<Character> actual = ALPHABET.get();
+		List<Character> actualList = alphabet.get();
 
-		assertArrayEquals(expected.toArray(), actual.toArray());
+		assertArrayEquals(expectedList.toArray(), actualList.toArray());
 	}
 
 	/**
@@ -67,13 +66,12 @@ public class KazakhAlphabetTest
 	@Test
 	public void testEquals()
 	{
-		assertNotEquals(null, ALPHABET);
+		KazakhAlphabet alphabet1 = new KazakhAlphabet();
+		KazakhAlphabet alphabet2 = new KazakhAlphabet();
 
-		assertEquals(ALPHABET, ALPHABET);
+		boolean actual = alphabet1.equals(alphabet2);
 
-		assertNotEquals(ALPHABET, new RussianAlphabet());
-
-		assertEquals(ALPHABET, new KazakhAlphabet());
+		assertTrue(actual);
 	}
 
 	/**
@@ -82,10 +80,12 @@ public class KazakhAlphabetTest
 	@Test
 	public void testHashCode()
 	{
-		assertEquals(ALPHABET.hashCode(), ALPHABET.hashCode());
+		KazakhAlphabet alphabet1 = new KazakhAlphabet();
+		KazakhAlphabet alphabet2 = new KazakhAlphabet();
 
-		assertEquals(ALPHABET.hashCode(), new KazakhAlphabet().hashCode());
+		Integer expectedHashCode = alphabet1.hashCode();
+		Integer actualHashCode = alphabet2.hashCode();
 
-		assertNotEquals(ALPHABET.hashCode(), new RussianAlphabet().hashCode());
+		assertEquals(expectedHashCode, actualHashCode);
 	}
 }

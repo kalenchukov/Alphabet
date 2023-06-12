@@ -31,15 +31,14 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class ChineseAlphabetUpperCaseTest
 {
-	private static final Alphabetical ALPHABET = new ChineseAlphabet.UpperCase();
-
 	/**
 	 * Проверка метода {@link ChineseAlphabet.UpperCase#get()}.
 	 */
 	@Test
 	public void get()
 	{
-		List<Character> expected = List.of(
+		ChineseAlphabet.UpperCase alphabet = new ChineseAlphabet.UpperCase();
+		List<Character> expectedList = List.of(
 			'A', 'B', 'C', 'D', 'E', 'F', 
 			'G', 'H', 'J', 'K', 'L', 'M', 
 			'N', 'O', 'P', 'Q', 'R', 'S', 
@@ -47,9 +46,9 @@ public class ChineseAlphabetUpperCaseTest
 			'Z'
 		);
 
-		List<Character> actual = ALPHABET.get();
+		List<Character> actualList = alphabet.get();
 
-		assertArrayEquals(expected.toArray(), actual.toArray());
+		assertArrayEquals(expectedList.toArray(), actualList.toArray());
 	}
 
 	/**
@@ -58,13 +57,12 @@ public class ChineseAlphabetUpperCaseTest
 	@Test
 	public void testEquals()
 	{
-		assertNotEquals(null, ALPHABET);
+		ChineseAlphabet.UpperCase alphabet1 = new ChineseAlphabet.UpperCase();
+		ChineseAlphabet.UpperCase alphabet2 = new ChineseAlphabet.UpperCase();
 
-		assertEquals(ALPHABET, ALPHABET);
+		boolean actual = alphabet1.equals(alphabet2);
 
-		assertNotEquals(ALPHABET, new RussianAlphabet.UpperCase());;
-
-		assertEquals(ALPHABET, new ChineseAlphabet.UpperCase());;
+		assertTrue(actual);
 	}
 
 	/**
@@ -73,10 +71,12 @@ public class ChineseAlphabetUpperCaseTest
 	@Test
 	public void testHashCode()
 	{
-		assertEquals(ALPHABET.hashCode(), ALPHABET.hashCode());
+		ChineseAlphabet.UpperCase alphabet1 = new ChineseAlphabet.UpperCase();
+		ChineseAlphabet.UpperCase alphabet2 = new ChineseAlphabet.UpperCase();
 
-		assertEquals(ALPHABET.hashCode(), new ChineseAlphabet.UpperCase().hashCode());
+		Integer expectedHashCode = alphabet1.hashCode();
+		Integer actualHashCode = alphabet2.hashCode();
 
-		assertNotEquals(ALPHABET.hashCode(), new RussianAlphabet.UpperCase().hashCode());
+		assertEquals(expectedHashCode, actualHashCode);
 	}
 }

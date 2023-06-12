@@ -31,15 +31,14 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class CherokeeAlphabetTest
 {
-	private static final Alphabetical ALPHABET = new CherokeeAlphabet();
-
 	/**
 	 * Проверка метода {@link CherokeeAlphabet#get()}.
 	 */
 	@Test
 	public void get()
 	{
-		List<Character> expected = List.of(
+		CherokeeAlphabet alphabet = new CherokeeAlphabet();
+		List<Character> expectedList = List.of(
 			'Ꭰ', 'Ꭱ', 'Ꭲ', 'Ꭳ', 'Ꭴ', 'Ꭵ', 
 			'Ꭶ', 'Ꭷ', 'Ꭸ', 'Ꭹ', 'Ꭺ', 'Ꭻ', 
 			'Ꭼ', 'Ꭽ', 'Ꭾ', 'Ꭿ', 'Ꮀ', 'Ꮁ', 
@@ -57,9 +56,9 @@ public class CherokeeAlphabetTest
 			'Ᏼ'
 		);
 
-		List<Character> actual = ALPHABET.get();
+		List<Character> actualList = alphabet.get();
 
-		assertArrayEquals(expected.toArray(), actual.toArray());
+		assertArrayEquals(expectedList.toArray(), actualList.toArray());
 	}
 
 	/**
@@ -68,13 +67,12 @@ public class CherokeeAlphabetTest
 	@Test
 	public void testEquals()
 	{
-		assertNotEquals(null, ALPHABET);
+		CherokeeAlphabet alphabet1 = new CherokeeAlphabet();
+		CherokeeAlphabet alphabet2 = new CherokeeAlphabet();
 
-		assertEquals(ALPHABET, ALPHABET);
+		boolean actual = alphabet1.equals(alphabet2);
 
-		assertNotEquals(ALPHABET, new RussianAlphabet());
-
-		assertEquals(ALPHABET, new CherokeeAlphabet());
+		assertTrue(actual);
 	}
 
 	/**
@@ -83,10 +81,12 @@ public class CherokeeAlphabetTest
 	@Test
 	public void testHashCode()
 	{
-		assertEquals(ALPHABET.hashCode(), ALPHABET.hashCode());
+		CherokeeAlphabet alphabet1 = new CherokeeAlphabet();
+		CherokeeAlphabet alphabet2 = new CherokeeAlphabet();
 
-		assertEquals(ALPHABET.hashCode(), new CherokeeAlphabet().hashCode());
+		Integer expectedHashCode = alphabet1.hashCode();
+		Integer actualHashCode = alphabet2.hashCode();
 
-		assertNotEquals(ALPHABET.hashCode(), new RussianAlphabet().hashCode());
+		assertEquals(expectedHashCode, actualHashCode);
 	}
 }

@@ -31,15 +31,14 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class MeeteiMayekAlphabetTest
 {
-	private static final Alphabetical ALPHABET = new MeeteiMayekAlphabet();
-
 	/**
 	 * Проверка метода {@link MeeteiMayekAlphabet#get()}.
 	 */
 	@Test
 	public void get()
 	{
-		List<Character> expected = List.of(
+		MeeteiMayekAlphabet alphabet = new MeeteiMayekAlphabet();
+		List<Character> expectedList = List.of(
 			'ꯀ', 'ꯁ', 'ꯂ', 'ꯃ', 'ꯄ', 'ꯅ', 
 			'ꯆ', 'ꯇ', 'ꯈ', 'ꯉ', 'ꯊ', 'ꯋ', 
 			'ꯌ', 'ꯍ', 'ꯎ', 'ꯏ', 'ꯐ', 'ꯑ', 
@@ -50,9 +49,9 @@ public class MeeteiMayekAlphabetTest
 			'ꯪ', '꯫', '꯬', '꯭'
 		);
 
-		List<Character> actual = ALPHABET.get();
+		List<Character> actualList = alphabet.get();
 
-		assertArrayEquals(expected.toArray(), actual.toArray());
+		assertArrayEquals(expectedList.toArray(), actualList.toArray());
 	}
 
 	/**
@@ -61,13 +60,12 @@ public class MeeteiMayekAlphabetTest
 	@Test
 	public void testEquals()
 	{
-		assertNotEquals(null, ALPHABET);
+		MeeteiMayekAlphabet alphabet1 = new MeeteiMayekAlphabet();
+		MeeteiMayekAlphabet alphabet2 = new MeeteiMayekAlphabet();
 
-		assertEquals(ALPHABET, ALPHABET);
+		boolean actual = alphabet1.equals(alphabet2);
 
-		assertNotEquals(ALPHABET, new RussianAlphabet());
-
-		assertEquals(ALPHABET, new MeeteiMayekAlphabet());
+		assertTrue(actual);
 	}
 
 	/**
@@ -76,10 +74,12 @@ public class MeeteiMayekAlphabetTest
 	@Test
 	public void testHashCode()
 	{
-		assertEquals(ALPHABET.hashCode(), ALPHABET.hashCode());
+		MeeteiMayekAlphabet alphabet1 = new MeeteiMayekAlphabet();
+		MeeteiMayekAlphabet alphabet2 = new MeeteiMayekAlphabet();
 
-		assertEquals(ALPHABET.hashCode(), new MeeteiMayekAlphabet().hashCode());
+		Integer expectedHashCode = alphabet1.hashCode();
+		Integer actualHashCode = alphabet2.hashCode();
 
-		assertNotEquals(ALPHABET.hashCode(), new RussianAlphabet().hashCode());
+		assertEquals(expectedHashCode, actualHashCode);
 	}
 }

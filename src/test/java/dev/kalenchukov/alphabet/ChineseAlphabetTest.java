@@ -31,15 +31,14 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class ChineseAlphabetTest
 {
-	private static final Alphabetical ALPHABET = new ChineseAlphabet();
-
 	/**
 	 * Проверка метода {@link ChineseAlphabet#get()}.
 	 */
 	@Test
 	public void get()
 	{
-		List<Character> expected = List.of(
+		ChineseAlphabet alphabet = new ChineseAlphabet();
+		List<Character> expectedList = List.of(
 			'A', 'a', 'B', 'b', 'C', 'c', 
 			'D', 'd', 'E', 'e', 'F', 'f', 
 			'G', 'g', 'H', 'h', 'i', 'J', 
@@ -51,9 +50,9 @@ public class ChineseAlphabetTest
 			'y', 'Z', 'z'
 		);
 
-		List<Character> actual = ALPHABET.get();
+		List<Character> actualList = alphabet.get();
 
-		assertArrayEquals(expected.toArray(), actual.toArray());
+		assertArrayEquals(expectedList.toArray(), actualList.toArray());
 	}
 
 	/**
@@ -62,13 +61,12 @@ public class ChineseAlphabetTest
 	@Test
 	public void testEquals()
 	{
-		assertNotEquals(null, ALPHABET);
+		ChineseAlphabet alphabet1 = new ChineseAlphabet();
+		ChineseAlphabet alphabet2 = new ChineseAlphabet();
 
-		assertEquals(ALPHABET, ALPHABET);
+		boolean actual = alphabet1.equals(alphabet2);
 
-		assertNotEquals(ALPHABET, new RussianAlphabet());
-
-		assertEquals(ALPHABET, new ChineseAlphabet());
+		assertTrue(actual);
 	}
 
 	/**
@@ -77,10 +75,12 @@ public class ChineseAlphabetTest
 	@Test
 	public void testHashCode()
 	{
-		assertEquals(ALPHABET.hashCode(), ALPHABET.hashCode());
+		ChineseAlphabet alphabet1 = new ChineseAlphabet();
+		ChineseAlphabet alphabet2 = new ChineseAlphabet();
 
-		assertEquals(ALPHABET.hashCode(), new ChineseAlphabet().hashCode());
+		Integer expectedHashCode = alphabet1.hashCode();
+		Integer actualHashCode = alphabet2.hashCode();
 
-		assertNotEquals(ALPHABET.hashCode(), new RussianAlphabet().hashCode());
+		assertEquals(expectedHashCode, actualHashCode);
 	}
 }

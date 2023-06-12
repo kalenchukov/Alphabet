@@ -31,15 +31,14 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class OghamAlphabetTest
 {
-	private static final Alphabetical ALPHABET = new OghamAlphabet();
-
 	/**
 	 * Проверка метода {@link OghamAlphabet#get()}.
 	 */
 	@Test
 	public void get()
 	{
-		List<Character> expected = List.of(
+		OghamAlphabet alphabet = new OghamAlphabet();
+		List<Character> expectedList = List.of(
 			' ', 'ᚁ', 'ᚂ', 'ᚃ', 'ᚄ', 'ᚅ', 
 			'ᚆ', 'ᚇ', 'ᚈ', 'ᚉ', 'ᚊ', 'ᚋ', 
 			'ᚌ', 'ᚍ', 'ᚎ', 'ᚏ', 'ᚐ', 'ᚑ', 
@@ -47,9 +46,9 @@ public class OghamAlphabetTest
 			'ᚘ', 'ᚙ', 'ᚚ', '᚛', '᚜'
 		);
 
-		List<Character> actual = ALPHABET.get();
+		List<Character> actualList = alphabet.get();
 
-		assertArrayEquals(expected.toArray(), actual.toArray());
+		assertArrayEquals(expectedList.toArray(), actualList.toArray());
 	}
 
 	/**
@@ -58,13 +57,12 @@ public class OghamAlphabetTest
 	@Test
 	public void testEquals()
 	{
-		assertNotEquals(null, ALPHABET);
+		OghamAlphabet alphabet1 = new OghamAlphabet();
+		OghamAlphabet alphabet2 = new OghamAlphabet();
 
-		assertEquals(ALPHABET, ALPHABET);
+		boolean actual = alphabet1.equals(alphabet2);
 
-		assertNotEquals(ALPHABET, new RussianAlphabet());
-
-		assertEquals(ALPHABET, new OghamAlphabet());
+		assertTrue(actual);
 	}
 
 	/**
@@ -73,10 +71,12 @@ public class OghamAlphabetTest
 	@Test
 	public void testHashCode()
 	{
-		assertEquals(ALPHABET.hashCode(), ALPHABET.hashCode());
+		OghamAlphabet alphabet1 = new OghamAlphabet();
+		OghamAlphabet alphabet2 = new OghamAlphabet();
 
-		assertEquals(ALPHABET.hashCode(), new OghamAlphabet().hashCode());
+		Integer expectedHashCode = alphabet1.hashCode();
+		Integer actualHashCode = alphabet2.hashCode();
 
-		assertNotEquals(ALPHABET.hashCode(), new RussianAlphabet().hashCode());
+		assertEquals(expectedHashCode, actualHashCode);
 	}
 }

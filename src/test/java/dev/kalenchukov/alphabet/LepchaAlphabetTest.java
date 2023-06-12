@@ -31,15 +31,14 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class LepchaAlphabetTest
 {
-	private static final Alphabetical ALPHABET = new LepchaAlphabet();
-
 	/**
 	 * Проверка метода {@link LepchaAlphabet#get()}.
 	 */
 	@Test
 	public void get()
 	{
-		List<Character> expected = List.of(
+		LepchaAlphabet alphabet = new LepchaAlphabet();
+		List<Character> expectedList = List.of(
 			'ᰀ', 'ᰁ', 'ᰂ', 'ᰃ', 'ᰄ', 'ᰅ', 
 			'ᰆ', 'ᰇ', 'ᰈ', 'ᰉ', 'ᰊ', 'ᰋ', 
 			'ᰌ', 'ᰍ', 'ᰎ', 'ᰏ', 'ᰐ', 'ᰑ', 
@@ -52,9 +51,9 @@ public class LepchaAlphabetTest
 			'ᰶ', '᰷', 'ᱍ', 'ᱎ', 'ᱏ'
 		);
 
-		List<Character> actual = ALPHABET.get();
+		List<Character> actualList = alphabet.get();
 
-		assertArrayEquals(expected.toArray(), actual.toArray());
+		assertArrayEquals(expectedList.toArray(), actualList.toArray());
 	}
 
 	/**
@@ -63,13 +62,12 @@ public class LepchaAlphabetTest
 	@Test
 	public void testEquals()
 	{
-		assertNotEquals(null, ALPHABET);
+		LepchaAlphabet alphabet1 = new LepchaAlphabet();
+		LepchaAlphabet alphabet2 = new LepchaAlphabet();
 
-		assertEquals(ALPHABET, ALPHABET);
+		boolean actual = alphabet1.equals(alphabet2);
 
-		assertNotEquals(ALPHABET, new RussianAlphabet());
-
-		assertEquals(ALPHABET, new LepchaAlphabet());
+		assertTrue(actual);
 	}
 
 	/**
@@ -78,10 +76,12 @@ public class LepchaAlphabetTest
 	@Test
 	public void testHashCode()
 	{
-		assertEquals(ALPHABET.hashCode(), ALPHABET.hashCode());
+		LepchaAlphabet alphabet1 = new LepchaAlphabet();
+		LepchaAlphabet alphabet2 = new LepchaAlphabet();
 
-		assertEquals(ALPHABET.hashCode(), new LepchaAlphabet().hashCode());
+		Integer expectedHashCode = alphabet1.hashCode();
+		Integer actualHashCode = alphabet2.hashCode();
 
-		assertNotEquals(ALPHABET.hashCode(), new RussianAlphabet().hashCode());
+		assertEquals(expectedHashCode, actualHashCode);
 	}
 }

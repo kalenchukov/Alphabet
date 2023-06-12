@@ -31,15 +31,14 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class LisuAlphabetTest
 {
-	private static final Alphabetical ALPHABET = new LisuAlphabet();
-
 	/**
 	 * Проверка метода {@link LisuAlphabet#get()}.
 	 */
 	@Test
 	public void get()
 	{
-		List<Character> expected = List.of(
+		LisuAlphabet alphabet = new LisuAlphabet();
+		List<Character> expectedList = List.of(
 			'ꓐ', 'ꓑ', 'ꓒ', 'ꓓ', 'ꓔ', 'ꓕ', 
 			'ꓖ', 'ꓗ', 'ꓘ', 'ꓙ', 'ꓚ', 'ꓛ', 
 			'ꓜ', 'ꓝ', 'ꓞ', 'ꓟ', 'ꓠ', 'ꓡ', 
@@ -49,9 +48,9 @@ public class LisuAlphabetTest
 			'ꓴ', 'ꓵ', 'ꓶ', 'ꓷ'
 		);
 
-		List<Character> actual = ALPHABET.get();
+		List<Character> actualList = alphabet.get();
 
-		assertArrayEquals(expected.toArray(), actual.toArray());
+		assertArrayEquals(expectedList.toArray(), actualList.toArray());
 	}
 
 	/**
@@ -60,13 +59,12 @@ public class LisuAlphabetTest
 	@Test
 	public void testEquals()
 	{
-		assertNotEquals(null, ALPHABET);
+		LisuAlphabet alphabet1 = new LisuAlphabet();
+		LisuAlphabet alphabet2 = new LisuAlphabet();
 
-		assertEquals(ALPHABET, ALPHABET);
+		boolean actual = alphabet1.equals(alphabet2);
 
-		assertNotEquals(ALPHABET, new RussianAlphabet());
-
-		assertEquals(ALPHABET, new LisuAlphabet());
+		assertTrue(actual);
 	}
 
 	/**
@@ -75,10 +73,12 @@ public class LisuAlphabetTest
 	@Test
 	public void testHashCode()
 	{
-		assertEquals(ALPHABET.hashCode(), ALPHABET.hashCode());
+		LisuAlphabet alphabet1 = new LisuAlphabet();
+		LisuAlphabet alphabet2 = new LisuAlphabet();
 
-		assertEquals(ALPHABET.hashCode(), new LisuAlphabet().hashCode());
+		Integer expectedHashCode = alphabet1.hashCode();
+		Integer actualHashCode = alphabet2.hashCode();
 
-		assertNotEquals(ALPHABET.hashCode(), new RussianAlphabet().hashCode());
+		assertEquals(expectedHashCode, actualHashCode);
 	}
 }

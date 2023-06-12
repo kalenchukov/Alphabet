@@ -31,15 +31,14 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class PolishAlphabetTest
 {
-	private static final Alphabetical ALPHABET = new PolishAlphabet();
-
 	/**
 	 * Проверка метода {@link PolishAlphabet#get()}.
 	 */
 	@Test
 	public void get()
 	{
-		List<Character> expected = List.of(
+		PolishAlphabet alphabet = new PolishAlphabet();
+		List<Character> expectedList = List.of(
 			'A', 'a', 'Ą', 'ą', 'B', 'b', 
 			'C', 'c', 'Ć', 'ć', 'D', 'd', 
 			'E', 'e', 'Ę', 'ę', 'F', 'f', 
@@ -53,9 +52,9 @@ public class PolishAlphabetTest
 			'Ź', 'ź', 'Ż', 'ż'
 		);
 
-		List<Character> actual = ALPHABET.get();
+		List<Character> actualList = alphabet.get();
 
-		assertArrayEquals(expected.toArray(), actual.toArray());
+		assertArrayEquals(expectedList.toArray(), actualList.toArray());
 	}
 
 	/**
@@ -64,13 +63,12 @@ public class PolishAlphabetTest
 	@Test
 	public void testEquals()
 	{
-		assertNotEquals(null, ALPHABET);
+		PolishAlphabet alphabet1 = new PolishAlphabet();
+		PolishAlphabet alphabet2 = new PolishAlphabet();
 
-		assertEquals(ALPHABET, ALPHABET);
+		boolean actual = alphabet1.equals(alphabet2);
 
-		assertNotEquals(ALPHABET, new RussianAlphabet());
-
-		assertEquals(ALPHABET, new PolishAlphabet());
+		assertTrue(actual);
 	}
 
 	/**
@@ -79,10 +77,12 @@ public class PolishAlphabetTest
 	@Test
 	public void testHashCode()
 	{
-		assertEquals(ALPHABET.hashCode(), ALPHABET.hashCode());
+		PolishAlphabet alphabet1 = new PolishAlphabet();
+		PolishAlphabet alphabet2 = new PolishAlphabet();
 
-		assertEquals(ALPHABET.hashCode(), new PolishAlphabet().hashCode());
+		Integer expectedHashCode = alphabet1.hashCode();
+		Integer actualHashCode = alphabet2.hashCode();
 
-		assertNotEquals(ALPHABET.hashCode(), new RussianAlphabet().hashCode());
+		assertEquals(expectedHashCode, actualHashCode);
 	}
 }

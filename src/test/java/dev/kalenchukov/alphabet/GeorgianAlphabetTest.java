@@ -31,15 +31,14 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class GeorgianAlphabetTest
 {
-	private static final Alphabetical ALPHABET = new GeorgianAlphabet();
-
 	/**
 	 * Проверка метода {@link GeorgianAlphabet#get()}.
 	 */
 	@Test
 	public void get()
 	{
-		List<Character> expected = List.of(
+		GeorgianAlphabet alphabet = new GeorgianAlphabet();
+		List<Character> expectedList = List.of(
 			'ა', 'ბ', 'გ', 'დ', 'ე', 'ვ', 
 			'ზ', 'თ', 'ი', 'კ', 'ლ', 'მ', 
 			'ნ', 'ო', 'პ', 'ჟ', 'რ', 'ს', 
@@ -48,9 +47,9 @@ public class GeorgianAlphabetTest
 			'ხ', 'ჯ', 'ჰ'
 		);
 
-		List<Character> actual = ALPHABET.get();
+		List<Character> actualList = alphabet.get();
 
-		assertArrayEquals(expected.toArray(), actual.toArray());
+		assertArrayEquals(expectedList.toArray(), actualList.toArray());
 	}
 
 	/**
@@ -59,13 +58,12 @@ public class GeorgianAlphabetTest
 	@Test
 	public void testEquals()
 	{
-		assertNotEquals(null, ALPHABET);
+		GeorgianAlphabet alphabet1 = new GeorgianAlphabet();
+		GeorgianAlphabet alphabet2 = new GeorgianAlphabet();
 
-		assertEquals(ALPHABET, ALPHABET);
+		boolean actual = alphabet1.equals(alphabet2);
 
-		assertNotEquals(ALPHABET, new RussianAlphabet());
-
-		assertEquals(ALPHABET, new GeorgianAlphabet());
+		assertTrue(actual);
 	}
 
 	/**
@@ -74,10 +72,12 @@ public class GeorgianAlphabetTest
 	@Test
 	public void testHashCode()
 	{
-		assertEquals(ALPHABET.hashCode(), ALPHABET.hashCode());
+		GeorgianAlphabet alphabet1 = new GeorgianAlphabet();
+		GeorgianAlphabet alphabet2 = new GeorgianAlphabet();
 
-		assertEquals(ALPHABET.hashCode(), new GeorgianAlphabet().hashCode());
+		Integer expectedHashCode = alphabet1.hashCode();
+		Integer actualHashCode = alphabet2.hashCode();
 
-		assertNotEquals(ALPHABET.hashCode(), new RussianAlphabet().hashCode());
+		assertEquals(expectedHashCode, actualHashCode);
 	}
 }

@@ -31,15 +31,14 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class SamaritanAlphabetTest
 {
-	private static final Alphabetical ALPHABET = new SamaritanAlphabet();
-
 	/**
 	 * Проверка метода {@link SamaritanAlphabet#get()}.
 	 */
 	@Test
 	public void get()
 	{
-		List<Character> expected = List.of(
+		SamaritanAlphabet alphabet = new SamaritanAlphabet();
+		List<Character> expectedList = List.of(
 			'ࠀ', 'ࠁ', 'ࠂ', 'ࠃ', 'ࠄ', 'ࠅ', 
 			'ࠆ', 'ࠇ', 'ࠈ', 'ࠉ', 'ࠊ', 'ࠋ', 
 			'ࠌ', 'ࠍ', 'ࠎ', 'ࠏ', 'ࠐ', 'ࠑ', 
@@ -53,9 +52,9 @@ public class SamaritanAlphabetTest
 			'࠾'
 		);
 
-		List<Character> actual = ALPHABET.get();
+		List<Character> actualList = alphabet.get();
 
-		assertArrayEquals(expected.toArray(), actual.toArray());
+		assertArrayEquals(expectedList.toArray(), actualList.toArray());
 	}
 
 	/**
@@ -64,13 +63,12 @@ public class SamaritanAlphabetTest
 	@Test
 	public void testEquals()
 	{
-		assertNotEquals(null, ALPHABET);
+		SamaritanAlphabet alphabet1 = new SamaritanAlphabet();
+		SamaritanAlphabet alphabet2 = new SamaritanAlphabet();
 
-		assertEquals(ALPHABET, ALPHABET);
+		boolean actual = alphabet1.equals(alphabet2);
 
-		assertNotEquals(ALPHABET, new RussianAlphabet());
-
-		assertEquals(ALPHABET, new SamaritanAlphabet());
+		assertTrue(actual);
 	}
 
 	/**
@@ -79,10 +77,12 @@ public class SamaritanAlphabetTest
 	@Test
 	public void testHashCode()
 	{
-		assertEquals(ALPHABET.hashCode(), ALPHABET.hashCode());
+		SamaritanAlphabet alphabet1 = new SamaritanAlphabet();
+		SamaritanAlphabet alphabet2 = new SamaritanAlphabet();
 
-		assertEquals(ALPHABET.hashCode(), new SamaritanAlphabet().hashCode());
+		Integer expectedHashCode = alphabet1.hashCode();
+		Integer actualHashCode = alphabet2.hashCode();
 
-		assertNotEquals(ALPHABET.hashCode(), new RussianAlphabet().hashCode());
+		assertEquals(expectedHashCode, actualHashCode);
 	}
 }

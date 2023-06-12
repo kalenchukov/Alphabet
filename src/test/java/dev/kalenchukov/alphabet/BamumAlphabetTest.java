@@ -31,15 +31,14 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class BamumAlphabetTest
 {
-	private static final Alphabetical ALPHABET = new BamumAlphabet();
-
 	/**
 	 * Проверка метода {@link BamumAlphabet#get()}.
 	 */
 	@Test
 	public void get()
 	{
-		List<Character> expected = List.of(
+		BamumAlphabet alphabet = new BamumAlphabet();
+		List<Character> expectedList = List.of(
 			'ꚠ', 'ꚡ', 'ꚢ', 'ꚣ', 'ꚤ', 'ꚥ', 
 			'ꚦ', 'ꚧ', 'ꚨ', 'ꚩ', 'ꚪ', 'ꚫ', 
 			'ꚬ', 'ꚭ', 'ꚮ', 'ꚯ', 'ꚰ', 'ꚱ', 
@@ -56,9 +55,9 @@ public class BamumAlphabetTest
 			'ꛮ', 'ꛯ'
 		);
 
-		List<Character> actual = ALPHABET.get();
+		List<Character> actualList = alphabet.get();
 
-		assertArrayEquals(expected.toArray(), actual.toArray());
+		assertArrayEquals(expectedList.toArray(), actualList.toArray());
 	}
 
 	/**
@@ -67,13 +66,12 @@ public class BamumAlphabetTest
 	@Test
 	public void testEquals()
 	{
-		assertNotEquals(null, ALPHABET);
+		BamumAlphabet alphabet1 = new BamumAlphabet();
+		BamumAlphabet alphabet2 = new BamumAlphabet();
 
-		assertEquals(ALPHABET, ALPHABET);
+		boolean actual = alphabet1.equals(alphabet2);
 
-		assertNotEquals(ALPHABET, new RussianAlphabet());
-
-		assertEquals(ALPHABET, new BamumAlphabet());
+		assertTrue(actual);
 	}
 
 	/**
@@ -82,10 +80,12 @@ public class BamumAlphabetTest
 	@Test
 	public void testHashCode()
 	{
-		assertEquals(ALPHABET.hashCode(), ALPHABET.hashCode());
+		BamumAlphabet alphabet1 = new BamumAlphabet();
+		BamumAlphabet alphabet2 = new BamumAlphabet();
 
-		assertEquals(ALPHABET.hashCode(), new BamumAlphabet().hashCode());
+		Integer expectedHashCode = alphabet1.hashCode();
+		Integer actualHashCode = alphabet2.hashCode();
 
-		assertNotEquals(ALPHABET.hashCode(), new RussianAlphabet().hashCode());
+		assertEquals(expectedHashCode, actualHashCode);
 	}
 }

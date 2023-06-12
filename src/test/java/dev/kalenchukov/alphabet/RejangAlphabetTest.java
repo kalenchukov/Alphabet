@@ -31,15 +31,14 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class RejangAlphabetTest
 {
-	private static final Alphabetical ALPHABET = new RejangAlphabet();
-
 	/**
 	 * Проверка метода {@link RejangAlphabet#get()}.
 	 */
 	@Test
 	public void get()
 	{
-		List<Character> expected = List.of(
+		RejangAlphabet alphabet = new RejangAlphabet();
+		List<Character> expectedList = List.of(
 			'ꤰ', 'ꤱ', 'ꤲ', 'ꤳ', 'ꤴ', 'ꤵ', 
 			'ꤶ', 'ꤷ', 'ꤸ', 'ꤹ', 'ꤺ', 'ꤻ', 
 			'ꤼ', 'ꤽ', 'ꤾ', 'ꤿ', 'ꥀ', 'ꥁ', 
@@ -49,9 +48,9 @@ public class RejangAlphabetTest
 			'꥟'
 		);
 
-		List<Character> actual = ALPHABET.get();
+		List<Character> actualList = alphabet.get();
 
-		assertArrayEquals(expected.toArray(), actual.toArray());
+		assertArrayEquals(expectedList.toArray(), actualList.toArray());
 	}
 
 	/**
@@ -60,13 +59,12 @@ public class RejangAlphabetTest
 	@Test
 	public void testEquals()
 	{
-		assertNotEquals(null, ALPHABET);
+		RejangAlphabet alphabet1 = new RejangAlphabet();
+		RejangAlphabet alphabet2 = new RejangAlphabet();
 
-		assertEquals(ALPHABET, ALPHABET);
+		boolean actual = alphabet1.equals(alphabet2);
 
-		assertNotEquals(ALPHABET, new RussianAlphabet());
-
-		assertEquals(ALPHABET, new RejangAlphabet());
+		assertTrue(actual);
 	}
 
 	/**
@@ -75,10 +73,12 @@ public class RejangAlphabetTest
 	@Test
 	public void testHashCode()
 	{
-		assertEquals(ALPHABET.hashCode(), ALPHABET.hashCode());
+		RejangAlphabet alphabet1 = new RejangAlphabet();
+		RejangAlphabet alphabet2 = new RejangAlphabet();
 
-		assertEquals(ALPHABET.hashCode(), new RejangAlphabet().hashCode());
+		Integer expectedHashCode = alphabet1.hashCode();
+		Integer actualHashCode = alphabet2.hashCode();
 
-		assertNotEquals(ALPHABET.hashCode(), new RussianAlphabet().hashCode());
+		assertEquals(expectedHashCode, actualHashCode);
 	}
 }

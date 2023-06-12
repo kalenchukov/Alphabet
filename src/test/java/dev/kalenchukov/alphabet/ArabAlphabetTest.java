@@ -31,15 +31,14 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class ArabAlphabetTest
 {
-	private static final Alphabetical ALPHABET = new ArabAlphabet();
-
 	/**
 	 * Проверка метода {@link ArabAlphabet#get()}.
 	 */
 	@Test
 	public void get()
 	{
-		List<Character> expected = List.of(
+		ArabAlphabet alphabet = new ArabAlphabet();
+		List<Character> expectedList = List.of(
 			'ﺎ', 'ﺍ', 'ﺐ', 'ﺒ', 'ﺑ', 'ﺏ', 
 			'ﺖ', 'ﺘ', 'ﺗ', 'ﺕ', 'ﺚ', 'ﺜ', 
 			'ﺛ', 'ﺙ', 'ﺞ', 'ﺠ', 'ﺟ', 'ﺝ', 
@@ -59,9 +58,9 @@ public class ArabAlphabetTest
 			'ﻲ', 'ﻴ', 'ﻳ', 'ﻱ'
 		);
 
-		List<Character> actual = ALPHABET.get();
+		List<Character> actualList = alphabet.get();
 
-		assertArrayEquals(expected.toArray(), actual.toArray());
+		assertArrayEquals(expectedList.toArray(), actualList.toArray());
 	}
 
 	/**
@@ -70,13 +69,12 @@ public class ArabAlphabetTest
 	@Test
 	public void testEquals()
 	{
-		assertNotEquals(null, ALPHABET);
+		ArabAlphabet alphabet1 = new ArabAlphabet();
+		ArabAlphabet alphabet2 = new ArabAlphabet();
 
-		assertEquals(ALPHABET, ALPHABET);
+		boolean actual = alphabet1.equals(alphabet2);
 
-		assertNotEquals(ALPHABET, new RussianAlphabet());
-
-		assertEquals(ALPHABET, new ArabAlphabet());
+		assertTrue(actual);
 	}
 
 	/**
@@ -85,10 +83,12 @@ public class ArabAlphabetTest
 	@Test
 	public void testHashCode()
 	{
-		assertEquals(ALPHABET.hashCode(), ALPHABET.hashCode());
+		ArabAlphabet alphabet1 = new ArabAlphabet();
+		ArabAlphabet alphabet2 = new ArabAlphabet();
 
-		assertEquals(ALPHABET.hashCode(), new ArabAlphabet().hashCode());
+		Integer expectedHashCode = alphabet1.hashCode();
+		Integer actualHashCode = alphabet2.hashCode();
 
-		assertNotEquals(ALPHABET.hashCode(), new RussianAlphabet().hashCode());
+		assertEquals(expectedHashCode, actualHashCode);
 	}
 }

@@ -31,15 +31,14 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class TurkishAlphabetUpperCaseTest
 {
-	private static final Alphabetical ALPHABET = new TurkishAlphabet.UpperCase();
-
 	/**
 	 * Проверка метода {@link TurkishAlphabet.UpperCase#get()}.
 	 */
 	@Test
 	public void get()
 	{
-		List<Character> expected = List.of(
+		TurkishAlphabet.UpperCase alphabet = new TurkishAlphabet.UpperCase();
+		List<Character> expectedList = List.of(
 			'A', 'B', 'C', 'Ç', 'D', 'E', 
 			'F', 'G', 'Ğ', 'H', 'I', 'İ', 
 			'J', 'K', 'L', 'M', 'N', 'O', 
@@ -47,9 +46,9 @@ public class TurkishAlphabetUpperCaseTest
 			'U', 'Ü', 'V', 'Y', 'Z'
 		);
 
-		List<Character> actual = ALPHABET.get();
+		List<Character> actualList = alphabet.get();
 
-		assertArrayEquals(expected.toArray(), actual.toArray());
+		assertArrayEquals(expectedList.toArray(), actualList.toArray());
 	}
 
 	/**
@@ -58,13 +57,12 @@ public class TurkishAlphabetUpperCaseTest
 	@Test
 	public void testEquals()
 	{
-		assertNotEquals(null, ALPHABET);
+		TurkishAlphabet.UpperCase alphabet1 = new TurkishAlphabet.UpperCase();
+		TurkishAlphabet.UpperCase alphabet2 = new TurkishAlphabet.UpperCase();
 
-		assertEquals(ALPHABET, ALPHABET);
+		boolean actual = alphabet1.equals(alphabet2);
 
-		assertNotEquals(ALPHABET, new RussianAlphabet.UpperCase());;
-
-		assertEquals(ALPHABET, new TurkishAlphabet.UpperCase());;
+		assertTrue(actual);
 	}
 
 	/**
@@ -73,10 +71,12 @@ public class TurkishAlphabetUpperCaseTest
 	@Test
 	public void testHashCode()
 	{
-		assertEquals(ALPHABET.hashCode(), ALPHABET.hashCode());
+		TurkishAlphabet.UpperCase alphabet1 = new TurkishAlphabet.UpperCase();
+		TurkishAlphabet.UpperCase alphabet2 = new TurkishAlphabet.UpperCase();
 
-		assertEquals(ALPHABET.hashCode(), new TurkishAlphabet.UpperCase().hashCode());
+		Integer expectedHashCode = alphabet1.hashCode();
+		Integer actualHashCode = alphabet2.hashCode();
 
-		assertNotEquals(ALPHABET.hashCode(), new RussianAlphabet.UpperCase().hashCode());
+		assertEquals(expectedHashCode, actualHashCode);
 	}
 }

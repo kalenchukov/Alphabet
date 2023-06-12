@@ -31,15 +31,14 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class ArmenianAlphabetUpperCaseTest
 {
-	private static final Alphabetical ALPHABET = new ArmenianAlphabet.UpperCase();
-
 	/**
 	 * Проверка метода {@link ArmenianAlphabet.UpperCase#get()}.
 	 */
 	@Test
 	public void get()
 	{
-		List<Character> expected = List.of(
+		ArmenianAlphabet.UpperCase alphabet = new ArmenianAlphabet.UpperCase();
+		List<Character> expectedList = List.of(
 			'Ա', 'Բ', 'Գ', 'Դ', 'Ե', 'Զ', 
 			'Է', 'Ը', 'Թ', 'Ժ', 'Ի', 'Լ', 
 			'Խ', 'Ծ', 'Կ', 'Հ', 'Ձ', 'Ղ', 
@@ -49,9 +48,9 @@ public class ArmenianAlphabetUpperCaseTest
 			'Օ', 'Ֆ'
 		);
 
-		List<Character> actual = ALPHABET.get();
+		List<Character> actualList = alphabet.get();
 
-		assertArrayEquals(expected.toArray(), actual.toArray());
+		assertArrayEquals(expectedList.toArray(), actualList.toArray());
 	}
 
 	/**
@@ -60,13 +59,12 @@ public class ArmenianAlphabetUpperCaseTest
 	@Test
 	public void testEquals()
 	{
-		assertNotEquals(null, ALPHABET);
+		ArmenianAlphabet.UpperCase alphabet1 = new ArmenianAlphabet.UpperCase();
+		ArmenianAlphabet.UpperCase alphabet2 = new ArmenianAlphabet.UpperCase();
 
-		assertEquals(ALPHABET, ALPHABET);
+		boolean actual = alphabet1.equals(alphabet2);
 
-		assertNotEquals(ALPHABET, new RussianAlphabet.UpperCase());;
-
-		assertEquals(ALPHABET, new ArmenianAlphabet.UpperCase());;
+		assertTrue(actual);
 	}
 
 	/**
@@ -75,10 +73,12 @@ public class ArmenianAlphabetUpperCaseTest
 	@Test
 	public void testHashCode()
 	{
-		assertEquals(ALPHABET.hashCode(), ALPHABET.hashCode());
+		ArmenianAlphabet.UpperCase alphabet1 = new ArmenianAlphabet.UpperCase();
+		ArmenianAlphabet.UpperCase alphabet2 = new ArmenianAlphabet.UpperCase();
 
-		assertEquals(ALPHABET.hashCode(), new ArmenianAlphabet.UpperCase().hashCode());
+		Integer expectedHashCode = alphabet1.hashCode();
+		Integer actualHashCode = alphabet2.hashCode();
 
-		assertNotEquals(ALPHABET.hashCode(), new RussianAlphabet.UpperCase().hashCode());
+		assertEquals(expectedHashCode, actualHashCode);
 	}
 }

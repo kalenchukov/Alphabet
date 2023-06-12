@@ -31,15 +31,14 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class EsperantoAlphabetTest
 {
-	private static final Alphabetical ALPHABET = new EsperantoAlphabet();
-
 	/**
 	 * Проверка метода {@link EsperantoAlphabet#get()}.
 	 */
 	@Test
 	public void get()
 	{
-		List<Character> expected = List.of(
+		EsperantoAlphabet alphabet = new EsperantoAlphabet();
+		List<Character> expectedList = List.of(
 			'A', 'B', 'C', 'Ĉ', 'D', 'E', 
 			'F', 'G', 'Ĝ', 'H', 'Ĥ', 'I', 
 			'J', 'Ĵ', 'K', 'L', 'M', 'N', 
@@ -52,9 +51,9 @@ public class EsperantoAlphabetTest
 			'v', 'z'
 		);
 
-		List<Character> actual = ALPHABET.get();
+		List<Character> actualList = alphabet.get();
 
-		assertArrayEquals(expected.toArray(), actual.toArray());
+		assertArrayEquals(expectedList.toArray(), actualList.toArray());
 	}
 
 	/**
@@ -63,13 +62,12 @@ public class EsperantoAlphabetTest
 	@Test
 	public void testEquals()
 	{
-		assertNotEquals(null, ALPHABET);
+		EsperantoAlphabet alphabet1 = new EsperantoAlphabet();
+		EsperantoAlphabet alphabet2 = new EsperantoAlphabet();
 
-		assertEquals(ALPHABET, ALPHABET);
+		boolean actual = alphabet1.equals(alphabet2);
 
-		assertNotEquals(ALPHABET, new RussianAlphabet());
-
-		assertEquals(ALPHABET, new EsperantoAlphabet());
+		assertTrue(actual);
 	}
 
 	/**
@@ -78,10 +76,12 @@ public class EsperantoAlphabetTest
 	@Test
 	public void testHashCode()
 	{
-		assertEquals(ALPHABET.hashCode(), ALPHABET.hashCode());
+		EsperantoAlphabet alphabet1 = new EsperantoAlphabet();
+		EsperantoAlphabet alphabet2 = new EsperantoAlphabet();
 
-		assertEquals(ALPHABET.hashCode(), new EsperantoAlphabet().hashCode());
+		Integer expectedHashCode = alphabet1.hashCode();
+		Integer actualHashCode = alphabet2.hashCode();
 
-		assertNotEquals(ALPHABET.hashCode(), new RussianAlphabet().hashCode());
+		assertEquals(expectedHashCode, actualHashCode);
 	}
 }

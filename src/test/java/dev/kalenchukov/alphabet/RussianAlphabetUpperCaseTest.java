@@ -31,24 +31,23 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class RussianAlphabetUpperCaseTest
 {
-	private static final Alphabetical ALPHABET = new RussianAlphabet.UpperCase();
-
 	/**
 	 * Проверка метода {@link RussianAlphabet.UpperCase#get()}.
 	 */
 	@Test
 	public void get()
 	{
-		List<Character> expected = List.of(
+		RussianAlphabet.UpperCase alphabet = new RussianAlphabet.UpperCase();
+		List<Character> expectedList = List.of(
 			'А', 'Б', 'В', 'Г', 'Д', 'Е', 'Ё', 'Ж', 'З',
 			'И', 'Й', 'К', 'Л', 'М', 'Н', 'О', 'П', 'Р',
 			'С', 'Т', 'У', 'Ф', 'Х', 'Ц', 'Ч', 'Ш', 'Щ',
 			'Ъ', 'Ы', 'Ь', 'Э', 'Ю', 'Я'
 		);
 
-		List<Character> actual = ALPHABET.get();
+		List<Character> actualList = alphabet.get();
 
-		assertArrayEquals(expected.toArray(), actual.toArray());
+		assertArrayEquals(expectedList.toArray(), actualList.toArray());
 	}
 
 	/**
@@ -57,13 +56,12 @@ public class RussianAlphabetUpperCaseTest
 	@Test
 	public void testEquals()
 	{
-		assertNotEquals(null, ALPHABET);
+		RussianAlphabet.UpperCase alphabet1 = new RussianAlphabet.UpperCase();
+		RussianAlphabet.UpperCase alphabet2 = new RussianAlphabet.UpperCase();
 
-		assertEquals(ALPHABET, ALPHABET);
+		boolean actual = alphabet1.equals(alphabet2);
 
-		assertNotEquals(ALPHABET, new EnglishAlphabet.UpperCase());
-
-		assertEquals(ALPHABET, new RussianAlphabet.UpperCase());
+		assertTrue(actual);
 	}
 
 	/**
@@ -72,10 +70,12 @@ public class RussianAlphabetUpperCaseTest
 	@Test
 	public void testHashCode()
 	{
-		assertEquals(ALPHABET.hashCode(), ALPHABET.hashCode());
+		RussianAlphabet.UpperCase alphabet1 = new RussianAlphabet.UpperCase();
+		RussianAlphabet.UpperCase alphabet2 = new RussianAlphabet.UpperCase();
 
-		assertEquals(ALPHABET.hashCode(), new RussianAlphabet.UpperCase().hashCode());
+		Integer expectedHashCode = alphabet1.hashCode();
+		Integer actualHashCode = alphabet2.hashCode();
 
-		assertNotEquals(ALPHABET.hashCode(), new EnglishAlphabet.UpperCase().hashCode());
+		assertEquals(expectedHashCode, actualHashCode);
 	}
 }

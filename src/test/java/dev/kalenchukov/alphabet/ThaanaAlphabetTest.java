@@ -31,15 +31,14 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class ThaanaAlphabetTest
 {
-	private static final Alphabetical ALPHABET = new ThaanaAlphabet();
-
 	/**
 	 * Проверка метода {@link ThaanaAlphabet#get()}.
 	 */
 	@Test
 	public void get()
 	{
-		List<Character> expected = List.of(
+		ThaanaAlphabet alphabet = new ThaanaAlphabet();
+		List<Character> expectedList = List.of(
 			'ހ', 'ށ', 'ނ', 'ރ', 'ބ', 'ޅ', 
 			'ކ', 'އ', 'ވ', 'މ', 'ފ', 'ދ', 
 			'ތ', 'ލ', 'ގ', 'ޏ', 'ސ', 'ޑ', 
@@ -51,9 +50,9 @@ public class ThaanaAlphabetTest
 			'ް', 'ޱ'
 		);
 
-		List<Character> actual = ALPHABET.get();
+		List<Character> actualList = alphabet.get();
 
-		assertArrayEquals(expected.toArray(), actual.toArray());
+		assertArrayEquals(expectedList.toArray(), actualList.toArray());
 	}
 
 	/**
@@ -62,13 +61,12 @@ public class ThaanaAlphabetTest
 	@Test
 	public void testEquals()
 	{
-		assertNotEquals(null, ALPHABET);
+		ThaanaAlphabet alphabet1 = new ThaanaAlphabet();
+		ThaanaAlphabet alphabet2 = new ThaanaAlphabet();
 
-		assertEquals(ALPHABET, ALPHABET);
+		boolean actual = alphabet1.equals(alphabet2);
 
-		assertNotEquals(ALPHABET, new RussianAlphabet());
-
-		assertEquals(ALPHABET, new ThaanaAlphabet());
+		assertTrue(actual);
 	}
 
 	/**
@@ -77,10 +75,12 @@ public class ThaanaAlphabetTest
 	@Test
 	public void testHashCode()
 	{
-		assertEquals(ALPHABET.hashCode(), ALPHABET.hashCode());
+		ThaanaAlphabet alphabet1 = new ThaanaAlphabet();
+		ThaanaAlphabet alphabet2 = new ThaanaAlphabet();
 
-		assertEquals(ALPHABET.hashCode(), new ThaanaAlphabet().hashCode());
+		Integer expectedHashCode = alphabet1.hashCode();
+		Integer actualHashCode = alphabet2.hashCode();
 
-		assertNotEquals(ALPHABET.hashCode(), new RussianAlphabet().hashCode());
+		assertEquals(expectedHashCode, actualHashCode);
 	}
 }

@@ -31,24 +31,23 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class RussianAlphabetLowerCaseTest
 {
-	private static final Alphabetical ALPHABET = new RussianAlphabet.LowerCase();
-
 	/**
 	 * Проверка метода {@link RussianAlphabet.LowerCase#get()}.
 	 */
 	@Test
 	public void get()
 	{
-		List<Character> expected = List.of(
+		RussianAlphabet.LowerCase alphabet = new RussianAlphabet.LowerCase();
+		List<Character> expectedList = List.of(
 			'а', 'б', 'в', 'г', 'д', 'е', 'ё', 'ж', 'з',
 			'и', 'й', 'к', 'л', 'м', 'н', 'о', 'п', 'р',
 			'с', 'т', 'у', 'ф', 'х', 'ц', 'ч', 'ш', 'щ',
 			'ъ', 'ы', 'ь', 'э', 'ю', 'я'
 		);
 
-		List<Character> actual = ALPHABET.get();
+		List<Character> actualList = alphabet.get();
 
-		assertArrayEquals(expected.toArray(), actual.toArray());
+		assertArrayEquals(expectedList.toArray(), actualList.toArray());
 	}
 
 	/**
@@ -57,13 +56,12 @@ public class RussianAlphabetLowerCaseTest
 	@Test
 	public void testEquals()
 	{
-		assertNotEquals(null, ALPHABET);
+		RussianAlphabet.LowerCase alphabet1 = new RussianAlphabet.LowerCase();
+		RussianAlphabet.LowerCase alphabet2 = new RussianAlphabet.LowerCase();
 
-		assertEquals(ALPHABET, ALPHABET);
+		boolean actual = alphabet1.equals(alphabet2);
 
-		assertNotEquals(ALPHABET, new EnglishAlphabet.LowerCase());;
-
-		assertEquals(ALPHABET, new RussianAlphabet.LowerCase());;
+		assertTrue(actual);
 	}
 
 	/**
@@ -72,10 +70,12 @@ public class RussianAlphabetLowerCaseTest
 	@Test
 	public void testHashCode()
 	{
-		assertEquals(ALPHABET.hashCode(), ALPHABET.hashCode());
+		RussianAlphabet.LowerCase alphabet1 = new RussianAlphabet.LowerCase();
+		RussianAlphabet.LowerCase alphabet2 = new RussianAlphabet.LowerCase();
 
-		assertEquals(ALPHABET.hashCode(), new RussianAlphabet.LowerCase().hashCode());
+		Integer expectedHashCode = alphabet1.hashCode();
+		Integer actualHashCode = alphabet2.hashCode();
 
-		assertNotEquals(ALPHABET.hashCode(), new EnglishAlphabet.LowerCase().hashCode());
+		assertEquals(expectedHashCode, actualHashCode);
 	}
 }

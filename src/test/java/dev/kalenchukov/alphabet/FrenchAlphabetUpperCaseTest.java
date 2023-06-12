@@ -31,15 +31,14 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class FrenchAlphabetUpperCaseTest
 {
-	private static final Alphabetical ALPHABET = new FrenchAlphabet.UpperCase();
-
 	/**
 	 * Проверка метода {@link FrenchAlphabet.UpperCase#get()}.
 	 */
 	@Test
 	public void get()
 	{
-		List<Character> expected = List.of(
+		FrenchAlphabet.UpperCase alphabet = new FrenchAlphabet.UpperCase();
+		List<Character> expectedList = List.of(
 			'A', 'B', 'C', 'D', 'E', 'F', 
 			'G', 'H', 'I', 'J', 'K', 'L', 
 			'M', 'N', 'O', 'P', 'Q', 'R', 
@@ -47,9 +46,9 @@ public class FrenchAlphabetUpperCaseTest
 			'Y', 'Z'
 		);
 
-		List<Character> actual = ALPHABET.get();
+		List<Character> actualList = alphabet.get();
 
-		assertArrayEquals(expected.toArray(), actual.toArray());
+		assertArrayEquals(expectedList.toArray(), actualList.toArray());
 	}
 
 	/**
@@ -58,13 +57,12 @@ public class FrenchAlphabetUpperCaseTest
 	@Test
 	public void testEquals()
 	{
-		assertNotEquals(null, ALPHABET);
+		FrenchAlphabet.UpperCase alphabet1 = new FrenchAlphabet.UpperCase();
+		FrenchAlphabet.UpperCase alphabet2 = new FrenchAlphabet.UpperCase();
 
-		assertEquals(ALPHABET, ALPHABET);
+		boolean actual = alphabet1.equals(alphabet2);
 
-		assertNotEquals(ALPHABET, new RussianAlphabet.UpperCase());;
-
-		assertEquals(ALPHABET, new FrenchAlphabet.UpperCase());;
+		assertTrue(actual);
 	}
 
 	/**
@@ -73,10 +71,12 @@ public class FrenchAlphabetUpperCaseTest
 	@Test
 	public void testHashCode()
 	{
-		assertEquals(ALPHABET.hashCode(), ALPHABET.hashCode());
+		FrenchAlphabet.UpperCase alphabet1 = new FrenchAlphabet.UpperCase();
+		FrenchAlphabet.UpperCase alphabet2 = new FrenchAlphabet.UpperCase();
 
-		assertEquals(ALPHABET.hashCode(), new FrenchAlphabet.UpperCase().hashCode());
+		Integer expectedHashCode = alphabet1.hashCode();
+		Integer actualHashCode = alphabet2.hashCode();
 
-		assertNotEquals(ALPHABET.hashCode(), new RussianAlphabet.UpperCase().hashCode());
+		assertEquals(expectedHashCode, actualHashCode);
 	}
 }

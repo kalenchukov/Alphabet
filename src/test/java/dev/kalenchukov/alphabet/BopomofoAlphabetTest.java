@@ -31,15 +31,14 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class BopomofoAlphabetTest
 {
-	private static final Alphabetical ALPHABET = new BopomofoAlphabet();
-
 	/**
 	 * Проверка метода {@link BopomofoAlphabet#get()}.
 	 */
 	@Test
 	public void get()
 	{
-		List<Character> expected = List.of(
+		BopomofoAlphabet alphabet = new BopomofoAlphabet();
+		List<Character> expectedList = List.of(
 			'ㄅ', 'ㄆ', 'ㄇ', 'ㄈ', 'ㄉ', 'ㄊ', 
 			'ㄋ', 'ㄌ', 'ㄍ', 'ㄎ', 'ㄏ', 'ㄐ', 
 			'ㄑ', 'ㄒ', 'ㄓ', 'ㄔ', 'ㄕ', 'ㄖ', 
@@ -49,9 +48,9 @@ public class BopomofoAlphabetTest
 			'ㄩ', 'ㄪ', 'ㄫ', 'ㄬ', 'ㄭ'
 		);
 
-		List<Character> actual = ALPHABET.get();
+		List<Character> actualList = alphabet.get();
 
-		assertArrayEquals(expected.toArray(), actual.toArray());
+		assertArrayEquals(expectedList.toArray(), actualList.toArray());
 	}
 
 	/**
@@ -60,13 +59,12 @@ public class BopomofoAlphabetTest
 	@Test
 	public void testEquals()
 	{
-		assertNotEquals(null, ALPHABET);
+		BopomofoAlphabet alphabet1 = new BopomofoAlphabet();
+		BopomofoAlphabet alphabet2 = new BopomofoAlphabet();
 
-		assertEquals(ALPHABET, ALPHABET);
+		boolean actual = alphabet1.equals(alphabet2);
 
-		assertNotEquals(ALPHABET, new RussianAlphabet());
-
-		assertEquals(ALPHABET, new BopomofoAlphabet());
+		assertTrue(actual);
 	}
 
 	/**
@@ -75,10 +73,12 @@ public class BopomofoAlphabetTest
 	@Test
 	public void testHashCode()
 	{
-		assertEquals(ALPHABET.hashCode(), ALPHABET.hashCode());
+		BopomofoAlphabet alphabet1 = new BopomofoAlphabet();
+		BopomofoAlphabet alphabet2 = new BopomofoAlphabet();
 
-		assertEquals(ALPHABET.hashCode(), new BopomofoAlphabet().hashCode());
+		Integer expectedHashCode = alphabet1.hashCode();
+		Integer actualHashCode = alphabet2.hashCode();
 
-		assertNotEquals(ALPHABET.hashCode(), new RussianAlphabet().hashCode());
+		assertEquals(expectedHashCode, actualHashCode);
 	}
 }

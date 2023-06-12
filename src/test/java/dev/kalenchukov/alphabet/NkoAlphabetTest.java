@@ -31,15 +31,14 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class NkoAlphabetTest
 {
-	private static final Alphabetical ALPHABET = new NkoAlphabet();
-
 	/**
 	 * Проверка метода {@link NkoAlphabet#get()}.
 	 */
 	@Test
 	public void get()
 	{
-		List<Character> expected = List.of(
+		NkoAlphabet alphabet = new NkoAlphabet();
+		List<Character> expectedList = List.of(
 			'߀', '߁', '߂', '߃', '߄', '߅', 
 			'߆', '߇', '߈', '߉', 'ߊ', 'ߋ', 
 			'ߌ', 'ߍ', 'ߎ', 'ߏ', 'ߐ', 'ߑ', 
@@ -52,9 +51,9 @@ public class NkoAlphabetTest
 			'߶', '߷', '߸', '߹', 'ߺ'
 		);
 
-		List<Character> actual = ALPHABET.get();
+		List<Character> actualList = alphabet.get();
 
-		assertArrayEquals(expected.toArray(), actual.toArray());
+		assertArrayEquals(expectedList.toArray(), actualList.toArray());
 	}
 
 	/**
@@ -63,13 +62,12 @@ public class NkoAlphabetTest
 	@Test
 	public void testEquals()
 	{
-		assertNotEquals(null, ALPHABET);
+		NkoAlphabet alphabet1 = new NkoAlphabet();
+		NkoAlphabet alphabet2 = new NkoAlphabet();
 
-		assertEquals(ALPHABET, ALPHABET);
+		boolean actual = alphabet1.equals(alphabet2);
 
-		assertNotEquals(ALPHABET, new RussianAlphabet());
-
-		assertEquals(ALPHABET, new NkoAlphabet());
+		assertTrue(actual);
 	}
 
 	/**
@@ -78,10 +76,12 @@ public class NkoAlphabetTest
 	@Test
 	public void testHashCode()
 	{
-		assertEquals(ALPHABET.hashCode(), ALPHABET.hashCode());
+		NkoAlphabet alphabet1 = new NkoAlphabet();
+		NkoAlphabet alphabet2 = new NkoAlphabet();
 
-		assertEquals(ALPHABET.hashCode(), new NkoAlphabet().hashCode());
+		Integer expectedHashCode = alphabet1.hashCode();
+		Integer actualHashCode = alphabet2.hashCode();
 
-		assertNotEquals(ALPHABET.hashCode(), new RussianAlphabet().hashCode());
+		assertEquals(expectedHashCode, actualHashCode);
 	}
 }

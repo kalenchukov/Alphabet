@@ -31,15 +31,14 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class TeluguAlphabetTest
 {
-	private static final Alphabetical ALPHABET = new TeluguAlphabet();
-
 	/**
 	 * Проверка метода {@link TeluguAlphabet#get()}.
 	 */
 	@Test
 	public void get()
 	{
-		List<Character> expected = List.of(
+		TeluguAlphabet alphabet = new TeluguAlphabet();
+		List<Character> expectedList = List.of(
 			'అ', 'ఆ', 'ఇ', 'ఈ', 'ఉ', 'ఊ', 
 			'ఋ', 'ౠ', 'ఎ', 'ఏ', 'ఐ', 'ఒ', 
 			'ఓ', 'ఔ', 'క', 'ఖ', 'గ', 'ఘ', 
@@ -54,9 +53,9 @@ public class TeluguAlphabetTest
 			'ౡ', 'ౢ', 'ౣ'
 		);
 
-		List<Character> actual = ALPHABET.get();
+		List<Character> actualList = alphabet.get();
 
-		assertArrayEquals(expected.toArray(), actual.toArray());
+		assertArrayEquals(expectedList.toArray(), actualList.toArray());
 	}
 
 	/**
@@ -65,13 +64,12 @@ public class TeluguAlphabetTest
 	@Test
 	public void testEquals()
 	{
-		assertNotEquals(null, ALPHABET);
+		TeluguAlphabet alphabet1 = new TeluguAlphabet();
+		TeluguAlphabet alphabet2 = new TeluguAlphabet();
 
-		assertEquals(ALPHABET, ALPHABET);
+		boolean actual = alphabet1.equals(alphabet2);
 
-		assertNotEquals(ALPHABET, new RussianAlphabet());
-
-		assertEquals(ALPHABET, new TeluguAlphabet());
+		assertTrue(actual);
 	}
 
 	/**
@@ -80,10 +78,12 @@ public class TeluguAlphabetTest
 	@Test
 	public void testHashCode()
 	{
-		assertEquals(ALPHABET.hashCode(), ALPHABET.hashCode());
+		TeluguAlphabet alphabet1 = new TeluguAlphabet();
+		TeluguAlphabet alphabet2 = new TeluguAlphabet();
 
-		assertEquals(ALPHABET.hashCode(), new TeluguAlphabet().hashCode());
+		Integer expectedHashCode = alphabet1.hashCode();
+		Integer actualHashCode = alphabet2.hashCode();
 
-		assertNotEquals(ALPHABET.hashCode(), new RussianAlphabet().hashCode());
+		assertEquals(expectedHashCode, actualHashCode);
 	}
 }

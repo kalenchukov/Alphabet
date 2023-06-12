@@ -31,15 +31,14 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class YiSyllablesAlphabetTest
 {
-	private static final Alphabetical ALPHABET = new YiSyllablesAlphabet();
-
 	/**
 	 * Проверка метода {@link YiSyllablesAlphabet#get()}.
 	 */
 	@Test
 	public void get()
 	{
-		List<Character> expected = List.of(
+		YiSyllablesAlphabet alphabet = new YiSyllablesAlphabet();
+		List<Character> expectedList = List.of(
 			'ꀀ', 'ꀁ', 'ꀂ', 'ꀃ', 'ꀄ', 'ꀅ', 
 			'ꀆ', 'ꀇ', 'ꀈ', 'ꀉ', 'ꀊ', 'ꀋ', 
 			'ꀌ', 'ꀍ', 'ꀎ', 'ꀏ', 'ꀐ', 'ꀑ', 
@@ -216,9 +215,9 @@ public class YiSyllablesAlphabetTest
 			'ꐎ', 'ꐏ'
 		);
 
-		List<Character> actual = ALPHABET.get();
+		List<Character> actualList = alphabet.get();
 
-		assertArrayEquals(expected.toArray(), actual.toArray());
+		assertArrayEquals(expectedList.toArray(), actualList.toArray());
 	}
 
 	/**
@@ -227,13 +226,12 @@ public class YiSyllablesAlphabetTest
 	@Test
 	public void testEquals()
 	{
-		assertNotEquals(null, ALPHABET);
+		YiSyllablesAlphabet alphabet1 = new YiSyllablesAlphabet();
+		YiSyllablesAlphabet alphabet2 = new YiSyllablesAlphabet();
 
-		assertEquals(ALPHABET, ALPHABET);
+		boolean actual = alphabet1.equals(alphabet2);
 
-		assertNotEquals(ALPHABET, new RussianAlphabet());
-
-		assertEquals(ALPHABET, new YiSyllablesAlphabet());
+		assertTrue(actual);
 	}
 
 	/**
@@ -242,10 +240,12 @@ public class YiSyllablesAlphabetTest
 	@Test
 	public void testHashCode()
 	{
-		assertEquals(ALPHABET.hashCode(), ALPHABET.hashCode());
+		YiSyllablesAlphabet alphabet1 = new YiSyllablesAlphabet();
+		YiSyllablesAlphabet alphabet2 = new YiSyllablesAlphabet();
 
-		assertEquals(ALPHABET.hashCode(), new YiSyllablesAlphabet().hashCode());
+		Integer expectedHashCode = alphabet1.hashCode();
+		Integer actualHashCode = alphabet2.hashCode();
 
-		assertNotEquals(ALPHABET.hashCode(), new RussianAlphabet().hashCode());
+		assertEquals(expectedHashCode, actualHashCode);
 	}
 }

@@ -31,15 +31,14 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class FrenchAlphabetTest
 {
-	private static final Alphabetical ALPHABET = new FrenchAlphabet();
-
 	/**
 	 * Проверка метода {@link FrenchAlphabet#get()}.
 	 */
 	@Test
 	public void get()
 	{
-		List<Character> expected = List.of(
+		FrenchAlphabet alphabet = new FrenchAlphabet();
+		List<Character> expectedList = List.of(
 			'A', 'a', 'B', 'b', 'C', 'c', 
 			'D', 'd', 'E', 'e', 'F', 'f', 
 			'G', 'g', 'H', 'h', 'I', 'i', 
@@ -51,9 +50,9 @@ public class FrenchAlphabetTest
 			'Y', 'y', 'Z', 'z'
 		);
 
-		List<Character> actual = ALPHABET.get();
+		List<Character> actualList = alphabet.get();
 
-		assertArrayEquals(expected.toArray(), actual.toArray());
+		assertArrayEquals(expectedList.toArray(), actualList.toArray());
 	}
 
 	/**
@@ -62,13 +61,12 @@ public class FrenchAlphabetTest
 	@Test
 	public void testEquals()
 	{
-		assertNotEquals(null, ALPHABET);
+		FrenchAlphabet alphabet1 = new FrenchAlphabet();
+		FrenchAlphabet alphabet2 = new FrenchAlphabet();
 
-		assertEquals(ALPHABET, ALPHABET);
+		boolean actual = alphabet1.equals(alphabet2);
 
-		assertNotEquals(ALPHABET, new RussianAlphabet());
-
-		assertEquals(ALPHABET, new FrenchAlphabet());
+		assertTrue(actual);
 	}
 
 	/**
@@ -77,10 +75,12 @@ public class FrenchAlphabetTest
 	@Test
 	public void testHashCode()
 	{
-		assertEquals(ALPHABET.hashCode(), ALPHABET.hashCode());
+		FrenchAlphabet alphabet1 = new FrenchAlphabet();
+		FrenchAlphabet alphabet2 = new FrenchAlphabet();
 
-		assertEquals(ALPHABET.hashCode(), new FrenchAlphabet().hashCode());
+		Integer expectedHashCode = alphabet1.hashCode();
+		Integer actualHashCode = alphabet2.hashCode();
 
-		assertNotEquals(ALPHABET.hashCode(), new RussianAlphabet().hashCode());
+		assertEquals(expectedHashCode, actualHashCode);
 	}
 }

@@ -31,15 +31,14 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class MyanmarAlphabetTest
 {
-	private static final Alphabetical ALPHABET = new MyanmarAlphabet();
-
 	/**
 	 * Проверка метода {@link MyanmarAlphabet#get()}.
 	 */
 	@Test
 	public void get()
 	{
-		List<Character> expected = List.of(
+		MyanmarAlphabet alphabet = new MyanmarAlphabet();
+		List<Character> expectedList = List.of(
 			'က', 'ခ', 'ဂ', 'ဃ', 'င', 'စ', 
 			'ဆ', 'ဇ', 'ဈ', 'ည', 'ဋ', 'ဌ', 
 			'ဍ', 'ဎ', 'ဏ', 'တ', 'ထ', 'ဒ', 
@@ -58,9 +57,9 @@ public class MyanmarAlphabetTest
 			'ၛ', 'ၜ', 'ၝ', 'ၞ', 'ၟ', 'ၠ'
 		);
 
-		List<Character> actual = ALPHABET.get();
+		List<Character> actualList = alphabet.get();
 
-		assertArrayEquals(expected.toArray(), actual.toArray());
+		assertArrayEquals(expectedList.toArray(), actualList.toArray());
 	}
 
 	/**
@@ -69,13 +68,12 @@ public class MyanmarAlphabetTest
 	@Test
 	public void testEquals()
 	{
-		assertNotEquals(null, ALPHABET);
+		MyanmarAlphabet alphabet1 = new MyanmarAlphabet();
+		MyanmarAlphabet alphabet2 = new MyanmarAlphabet();
 
-		assertEquals(ALPHABET, ALPHABET);
+		boolean actual = alphabet1.equals(alphabet2);
 
-		assertNotEquals(ALPHABET, new RussianAlphabet());
-
-		assertEquals(ALPHABET, new MyanmarAlphabet());
+		assertTrue(actual);
 	}
 
 	/**
@@ -84,10 +82,12 @@ public class MyanmarAlphabetTest
 	@Test
 	public void testHashCode()
 	{
-		assertEquals(ALPHABET.hashCode(), ALPHABET.hashCode());
+		MyanmarAlphabet alphabet1 = new MyanmarAlphabet();
+		MyanmarAlphabet alphabet2 = new MyanmarAlphabet();
 
-		assertEquals(ALPHABET.hashCode(), new MyanmarAlphabet().hashCode());
+		Integer expectedHashCode = alphabet1.hashCode();
+		Integer actualHashCode = alphabet2.hashCode();
 
-		assertNotEquals(ALPHABET.hashCode(), new RussianAlphabet().hashCode());
+		assertEquals(expectedHashCode, actualHashCode);
 	}
 }

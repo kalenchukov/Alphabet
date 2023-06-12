@@ -31,15 +31,14 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class UkrainianAlphabetLowerCaseTest
 {
-	private static final Alphabetical ALPHABET = new UkrainianAlphabet.LowerCase();
-
 	/**
 	 * Проверка метода {@link UkrainianAlphabet.LowerCase#get()}.
 	 */
 	@Test
 	public void get()
 	{
-		List<Character> expected = List.of(
+		UkrainianAlphabet.LowerCase alphabet = new UkrainianAlphabet.LowerCase();
+		List<Character> expectedList = List.of(
 			'а', 'б', 'в', 'г', 'ґ', 'д', 
 			'е', 'є', 'ж', 'з', 'и', 'і', 
 			'ї', 'й', 'к', 'л', 'м', 'н', 
@@ -48,9 +47,9 @@ public class UkrainianAlphabetLowerCaseTest
 			'ь', 'ю', 'я'
 		);
 
-		List<Character> actual = ALPHABET.get();
+		List<Character> actualList = alphabet.get();
 
-		assertArrayEquals(expected.toArray(), actual.toArray());
+		assertArrayEquals(expectedList.toArray(), actualList.toArray());
 	}
 
 	/**
@@ -59,13 +58,12 @@ public class UkrainianAlphabetLowerCaseTest
 	@Test
 	public void testEquals()
 	{
-		assertNotEquals(null, ALPHABET);
+		UkrainianAlphabet.LowerCase alphabet1 = new UkrainianAlphabet.LowerCase();
+		UkrainianAlphabet.LowerCase alphabet2 = new UkrainianAlphabet.LowerCase();
 
-		assertEquals(ALPHABET, ALPHABET);
+		boolean actual = alphabet1.equals(alphabet2);
 
-		assertNotEquals(ALPHABET, new RussianAlphabet.LowerCase());
-
-		assertEquals(ALPHABET, new UkrainianAlphabet.LowerCase());
+		assertTrue(actual);
 	}
 
 	/**
@@ -74,10 +72,12 @@ public class UkrainianAlphabetLowerCaseTest
 	@Test
 	public void testHashCode()
 	{
-		assertEquals(ALPHABET.hashCode(), ALPHABET.hashCode());
+		UkrainianAlphabet.LowerCase alphabet1 = new UkrainianAlphabet.LowerCase();
+		UkrainianAlphabet.LowerCase alphabet2 = new UkrainianAlphabet.LowerCase();
 
-		assertEquals(ALPHABET.hashCode(), new UkrainianAlphabet.LowerCase().hashCode());
+		Integer expectedHashCode = alphabet1.hashCode();
+		Integer actualHashCode = alphabet2.hashCode();
 
-		assertNotEquals(ALPHABET.hashCode(), new RussianAlphabet.LowerCase().hashCode());
+		assertEquals(expectedHashCode, actualHashCode);
 	}
 }

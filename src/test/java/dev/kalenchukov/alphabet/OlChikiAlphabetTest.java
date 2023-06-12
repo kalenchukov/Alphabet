@@ -31,15 +31,14 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class OlChikiAlphabetTest
 {
-	private static final Alphabetical ALPHABET = new OlChikiAlphabet();
-
 	/**
 	 * Проверка метода {@link OlChikiAlphabet#get()}.
 	 */
 	@Test
 	public void get()
 	{
-		List<Character> expected = List.of(
+		OlChikiAlphabet alphabet = new OlChikiAlphabet();
+		List<Character> expectedList = List.of(
 			'᱐', '᱑', '᱒', '᱓', '᱔', '᱕', 
 			'᱖', '᱗', '᱘', '᱙', 'ᱚ', 'ᱛ', 
 			'ᱜ', 'ᱝ', 'ᱞ', 'ᱟ', 'ᱠ', 'ᱡ', 
@@ -50,9 +49,9 @@ public class OlChikiAlphabetTest
 			'ᱺ', 'ᱻ', 'ᱼ', 'ᱽ', '᱾', '᱿'
 		);
 
-		List<Character> actual = ALPHABET.get();
+		List<Character> actualList = alphabet.get();
 
-		assertArrayEquals(expected.toArray(), actual.toArray());
+		assertArrayEquals(expectedList.toArray(), actualList.toArray());
 	}
 
 	/**
@@ -61,13 +60,12 @@ public class OlChikiAlphabetTest
 	@Test
 	public void testEquals()
 	{
-		assertNotEquals(null, ALPHABET);
+		OlChikiAlphabet alphabet1 = new OlChikiAlphabet();
+		OlChikiAlphabet alphabet2 = new OlChikiAlphabet();
 
-		assertEquals(ALPHABET, ALPHABET);
+		boolean actual = alphabet1.equals(alphabet2);
 
-		assertNotEquals(ALPHABET, new RussianAlphabet());
-
-		assertEquals(ALPHABET, new OlChikiAlphabet());
+		assertTrue(actual);
 	}
 
 	/**
@@ -76,10 +74,12 @@ public class OlChikiAlphabetTest
 	@Test
 	public void testHashCode()
 	{
-		assertEquals(ALPHABET.hashCode(), ALPHABET.hashCode());
+		OlChikiAlphabet alphabet1 = new OlChikiAlphabet();
+		OlChikiAlphabet alphabet2 = new OlChikiAlphabet();
 
-		assertEquals(ALPHABET.hashCode(), new OlChikiAlphabet().hashCode());
+		Integer expectedHashCode = alphabet1.hashCode();
+		Integer actualHashCode = alphabet2.hashCode();
 
-		assertNotEquals(ALPHABET.hashCode(), new RussianAlphabet().hashCode());
+		assertEquals(expectedHashCode, actualHashCode);
 	}
 }

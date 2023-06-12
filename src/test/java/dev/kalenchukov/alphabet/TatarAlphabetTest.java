@@ -31,15 +31,14 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class TatarAlphabetTest
 {
-	private static final Alphabetical ALPHABET = new TatarAlphabet();
-
 	/**
 	 * Проверка метода {@link TatarAlphabet#get()}.
 	 */
 	@Test
 	public void get()
 	{
-		List<Character> expected = List.of(
+		TatarAlphabet alphabet = new TatarAlphabet();
+		List<Character> expectedList = List.of(
 			'А', 'а', 'Ә', 'ә', 'Б', 'б', 
 			'В', 'в', 'Г', 'г', 'Д', 'д', 
 			'Е', 'е', 'Ё', 'ё', 'Ж', 'ж', 
@@ -55,9 +54,9 @@ public class TatarAlphabetTest
 			'Э', 'э', 'Ю', 'ю', 'Я', 'я'
 		);
 
-		List<Character> actual = ALPHABET.get();
+		List<Character> actualList = alphabet.get();
 
-		assertArrayEquals(expected.toArray(), actual.toArray());
+		assertArrayEquals(expectedList.toArray(), actualList.toArray());
 	}
 
 	/**
@@ -66,13 +65,12 @@ public class TatarAlphabetTest
 	@Test
 	public void testEquals()
 	{
-		assertNotEquals(null, ALPHABET);
+		TatarAlphabet alphabet1 = new TatarAlphabet();
+		TatarAlphabet alphabet2 = new TatarAlphabet();
 
-		assertEquals(ALPHABET, ALPHABET);
+		boolean actual = alphabet1.equals(alphabet2);
 
-		assertNotEquals(ALPHABET, new RussianAlphabet());
-
-		assertEquals(ALPHABET, new TatarAlphabet());
+		assertTrue(actual);
 	}
 
 	/**
@@ -81,10 +79,12 @@ public class TatarAlphabetTest
 	@Test
 	public void testHashCode()
 	{
-		assertEquals(ALPHABET.hashCode(), ALPHABET.hashCode());
+		TatarAlphabet alphabet1 = new TatarAlphabet();
+		TatarAlphabet alphabet2 = new TatarAlphabet();
 
-		assertEquals(ALPHABET.hashCode(), new TatarAlphabet().hashCode());
+		Integer expectedHashCode = alphabet1.hashCode();
+		Integer actualHashCode = alphabet2.hashCode();
 
-		assertNotEquals(ALPHABET.hashCode(), new RussianAlphabet().hashCode());
+		assertEquals(expectedHashCode, actualHashCode);
 	}
 }

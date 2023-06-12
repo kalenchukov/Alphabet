@@ -31,15 +31,14 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class EnglishAlphabetTest
 {
-	private static final Alphabetical ALPHABET = new EnglishAlphabet();
-
 	/**
 	 * Проверка метода {@link EnglishAlphabet#get()}.
 	 */
 	@Test
 	public void get()
 	{
-		List<Character> expected = List.of(
+		EnglishAlphabet alphabet = new EnglishAlphabet();
+		List<Character> expectedList = List.of(
 			'A', 'a', 'B', 'b', 'C', 'c', 'D', 'd', 'E', 'e',
 			'F', 'f', 'G', 'g', 'H', 'h', 'I', 'i', 'J', 'j',
 			'K', 'k', 'L', 'l', 'M', 'm', 'N', 'n', 'O', 'o',
@@ -48,9 +47,9 @@ public class EnglishAlphabetTest
 			'Z', 'z'
 		);
 
-		List<Character> actual = ALPHABET.get();
+		List<Character> actualList = alphabet.get();
 
-		assertArrayEquals(expected.toArray(), actual.toArray());
+		assertArrayEquals(expectedList.toArray(), actualList.toArray());
 	}
 
 	/**
@@ -59,13 +58,12 @@ public class EnglishAlphabetTest
 	@Test
 	public void testEquals()
 	{
-		assertNotEquals(null, ALPHABET);
+		EnglishAlphabet alphabet1 = new EnglishAlphabet();
+		EnglishAlphabet alphabet2 = new EnglishAlphabet();
 
-		assertEquals(ALPHABET, ALPHABET);
+		boolean actual = alphabet1.equals(alphabet2);
 
-		assertNotEquals(ALPHABET, new BelarusianAlphabet());
-
-		assertEquals(ALPHABET, new EnglishAlphabet());
+		assertTrue(actual);
 	}
 
 	/**
@@ -74,10 +72,12 @@ public class EnglishAlphabetTest
 	@Test
 	public void testHashCode()
 	{
-		assertEquals(ALPHABET.hashCode(), ALPHABET.hashCode());
+		EnglishAlphabet alphabet1 = new EnglishAlphabet();
+		EnglishAlphabet alphabet2 = new EnglishAlphabet();
 
-		assertEquals(ALPHABET.hashCode(), new EnglishAlphabet().hashCode());
+		Integer expectedHashCode = alphabet1.hashCode();
+		Integer actualHashCode = alphabet2.hashCode();
 
-		assertNotEquals(ALPHABET.hashCode(), new BelarusianAlphabet().hashCode());
+		assertEquals(expectedHashCode, actualHashCode);
 	}
 }

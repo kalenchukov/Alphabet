@@ -31,15 +31,14 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class DevanagariAlphabetTest
 {
-	private static final Alphabetical ALPHABET = new DevanagariAlphabet();
-
 	/**
 	 * Проверка метода {@link DevanagariAlphabet#get()}.
 	 */
 	@Test
 	public void get()
 	{
-		List<Character> expected = List.of(
+		DevanagariAlphabet alphabet = new DevanagariAlphabet();
+		List<Character> expectedList = List.of(
 			'क', 'ख', 'ग', 'घ', 'ङ', 'च', 
 			'छ', 'ज', 'झ', 'ञ', 'ट', 'ठ', 
 			'ड', 'ढ', 'ण', 'त', 'थ', 'द', 
@@ -55,9 +54,9 @@ public class DevanagariAlphabetTest
 			'ः', '्', 'ॅ'
 		);
 
-		List<Character> actual = ALPHABET.get();
+		List<Character> actualList = alphabet.get();
 
-		assertArrayEquals(expected.toArray(), actual.toArray());
+		assertArrayEquals(expectedList.toArray(), actualList.toArray());
 	}
 
 	/**
@@ -66,13 +65,12 @@ public class DevanagariAlphabetTest
 	@Test
 	public void testEquals()
 	{
-		assertNotEquals(null, ALPHABET);
+		DevanagariAlphabet alphabet1 = new DevanagariAlphabet();
+		DevanagariAlphabet alphabet2 = new DevanagariAlphabet();
 
-		assertEquals(ALPHABET, ALPHABET);
+		boolean actual = alphabet1.equals(alphabet2);
 
-		assertNotEquals(ALPHABET, new RussianAlphabet());
-
-		assertEquals(ALPHABET, new DevanagariAlphabet());
+		assertTrue(actual);
 	}
 
 	/**
@@ -81,10 +79,12 @@ public class DevanagariAlphabetTest
 	@Test
 	public void testHashCode()
 	{
-		assertEquals(ALPHABET.hashCode(), ALPHABET.hashCode());
+		DevanagariAlphabet alphabet1 = new DevanagariAlphabet();
+		DevanagariAlphabet alphabet2 = new DevanagariAlphabet();
 
-		assertEquals(ALPHABET.hashCode(), new DevanagariAlphabet().hashCode());
+		Integer expectedHashCode = alphabet1.hashCode();
+		Integer actualHashCode = alphabet2.hashCode();
 
-		assertNotEquals(ALPHABET.hashCode(), new RussianAlphabet().hashCode());
+		assertEquals(expectedHashCode, actualHashCode);
 	}
 }

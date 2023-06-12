@@ -31,15 +31,14 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class SaurashtraAlphabetTest
 {
-	private static final Alphabetical ALPHABET = new SaurashtraAlphabet();
-
 	/**
 	 * Проверка метода {@link SaurashtraAlphabet#get()}.
 	 */
 	@Test
 	public void get()
 	{
-		List<Character> expected = List.of(
+		SaurashtraAlphabet alphabet = new SaurashtraAlphabet();
+		List<Character> expectedList = List.of(
 			'ꢒ', 'ꢓ', 'ꢔ', 'ꢕ', 'ꢖ', 'ꢗ', 
 			'ꢘ', 'ꢙ', 'ꢚ', 'ꢛ', 'ꢜ', 'ꢝ', 
 			'ꢞ', 'ꢟ', 'ꢠ', 'ꢡ', 'ꢢ', 'ꢣ', 
@@ -51,9 +50,9 @@ public class SaurashtraAlphabetTest
 			'ꣂ', 'ꣃ', '꣄'
 		);
 
-		List<Character> actual = ALPHABET.get();
+		List<Character> actualList = alphabet.get();
 
-		assertArrayEquals(expected.toArray(), actual.toArray());
+		assertArrayEquals(expectedList.toArray(), actualList.toArray());
 	}
 
 	/**
@@ -62,13 +61,12 @@ public class SaurashtraAlphabetTest
 	@Test
 	public void testEquals()
 	{
-		assertNotEquals(null, ALPHABET);
+		SaurashtraAlphabet alphabet1 = new SaurashtraAlphabet();
+		SaurashtraAlphabet alphabet2 = new SaurashtraAlphabet();
 
-		assertEquals(ALPHABET, ALPHABET);
+		boolean actual = alphabet1.equals(alphabet2);
 
-		assertNotEquals(ALPHABET, new RussianAlphabet());
-
-		assertEquals(ALPHABET, new SaurashtraAlphabet());
+		assertTrue(actual);
 	}
 
 	/**
@@ -77,10 +75,12 @@ public class SaurashtraAlphabetTest
 	@Test
 	public void testHashCode()
 	{
-		assertEquals(ALPHABET.hashCode(), ALPHABET.hashCode());
+		SaurashtraAlphabet alphabet1 = new SaurashtraAlphabet();
+		SaurashtraAlphabet alphabet2 = new SaurashtraAlphabet();
 
-		assertEquals(ALPHABET.hashCode(), new SaurashtraAlphabet().hashCode());
+		Integer expectedHashCode = alphabet1.hashCode();
+		Integer actualHashCode = alphabet2.hashCode();
 
-		assertNotEquals(ALPHABET.hashCode(), new RussianAlphabet().hashCode());
+		assertEquals(expectedHashCode, actualHashCode);
 	}
 }

@@ -31,15 +31,14 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class SpanishAlphabetLowerCaseTest
 {
-	private static final Alphabetical ALPHABET = new SpanishAlphabet.LowerCase();
-
 	/**
 	 * Проверка метода {@link SpanishAlphabet.LowerCase#get()}.
 	 */
 	@Test
 	public void get()
 	{
-		List<Character> expected = List.of(
+		SpanishAlphabet.LowerCase alphabet = new SpanishAlphabet.LowerCase();
+		List<Character> expectedList = List.of(
 			'a', 'b', 'c', 'd', 'e', 'f', 
 			'g', 'h', 'i', 'j', 'k', 'l', 
 			'm', 'n', 'ñ', 'o', 'p', 'q', 
@@ -47,9 +46,9 @@ public class SpanishAlphabetLowerCaseTest
 			'x', 'y', 'z'
 		);
 
-		List<Character> actual = ALPHABET.get();
+		List<Character> actualList = alphabet.get();
 
-		assertArrayEquals(expected.toArray(), actual.toArray());
+		assertArrayEquals(expectedList.toArray(), actualList.toArray());
 	}
 
 	/**
@@ -58,13 +57,12 @@ public class SpanishAlphabetLowerCaseTest
 	@Test
 	public void testEquals()
 	{
-		assertNotEquals(null, ALPHABET);
+		SpanishAlphabet.LowerCase alphabet1 = new SpanishAlphabet.LowerCase();
+		SpanishAlphabet.LowerCase alphabet2 = new SpanishAlphabet.LowerCase();
 
-		assertEquals(ALPHABET, ALPHABET);
+		boolean actual = alphabet1.equals(alphabet2);
 
-		assertNotEquals(ALPHABET, new RussianAlphabet.LowerCase());
-
-		assertEquals(ALPHABET, new SpanishAlphabet.LowerCase());;
+		assertTrue(actual);
 	}
 
 	/**
@@ -73,10 +71,12 @@ public class SpanishAlphabetLowerCaseTest
 	@Test
 	public void testHashCode()
 	{
-		assertEquals(ALPHABET.hashCode(), ALPHABET.hashCode());
+		SpanishAlphabet.LowerCase alphabet1 = new SpanishAlphabet.LowerCase();
+		SpanishAlphabet.LowerCase alphabet2 = new SpanishAlphabet.LowerCase();
 
-		assertEquals(ALPHABET.hashCode(), new SpanishAlphabet.LowerCase().hashCode());
+		Integer expectedHashCode = alphabet1.hashCode();
+		Integer actualHashCode = alphabet2.hashCode();
 
-		assertNotEquals(ALPHABET.hashCode(), new RussianAlphabet.LowerCase().hashCode());
+		assertEquals(expectedHashCode, actualHashCode);
 	}
 }

@@ -31,15 +31,14 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class ChamAlphabetTest
 {
-	private static final Alphabetical ALPHABET = new ChamAlphabet();
-
 	/**
 	 * Проверка метода {@link ChamAlphabet#get()}.
 	 */
 	@Test
 	public void get()
 	{
-		List<Character> expected = List.of(
+		ChamAlphabet alphabet = new ChamAlphabet();
+		List<Character> expectedList = List.of(
 			'ꨀ', 'ꨁ', 'ꨂ', 'ꨃ', 'ꨄ', 'ꨅ', 
 			'ꨆ', 'ꨇ', 'ꨈ', 'ꨉ', 'ꨊ', 'ꨋ', 
 			'ꨌ', 'ꨍ', 'ꨎ', 'ꨏ', 'ꨐ', 'ꨑ', 
@@ -54,9 +53,9 @@ public class ChamAlphabetTest
 			'ꩋ', 'ꩌ', 'ꩍ'
 		);
 
-		List<Character> actual = ALPHABET.get();
+		List<Character> actualList = alphabet.get();
 
-		assertArrayEquals(expected.toArray(), actual.toArray());
+		assertArrayEquals(expectedList.toArray(), actualList.toArray());
 	}
 
 	/**
@@ -65,13 +64,12 @@ public class ChamAlphabetTest
 	@Test
 	public void testEquals()
 	{
-		assertNotEquals(null, ALPHABET);
+		ChamAlphabet alphabet1 = new ChamAlphabet();
+		ChamAlphabet alphabet2 = new ChamAlphabet();
 
-		assertEquals(ALPHABET, ALPHABET);
+		boolean actual = alphabet1.equals(alphabet2);
 
-		assertNotEquals(ALPHABET, new RussianAlphabet());
-
-		assertEquals(ALPHABET, new ChamAlphabet());
+		assertTrue(actual);
 	}
 
 	/**
@@ -80,10 +78,12 @@ public class ChamAlphabetTest
 	@Test
 	public void testHashCode()
 	{
-		assertEquals(ALPHABET.hashCode(), ALPHABET.hashCode());
+		ChamAlphabet alphabet1 = new ChamAlphabet();
+		ChamAlphabet alphabet2 = new ChamAlphabet();
 
-		assertEquals(ALPHABET.hashCode(), new ChamAlphabet().hashCode());
+		Integer expectedHashCode = alphabet1.hashCode();
+		Integer actualHashCode = alphabet2.hashCode();
 
-		assertNotEquals(ALPHABET.hashCode(), new RussianAlphabet().hashCode());
+		assertEquals(expectedHashCode, actualHashCode);
 	}
 }

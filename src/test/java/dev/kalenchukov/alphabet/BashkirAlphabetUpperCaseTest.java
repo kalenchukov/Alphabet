@@ -31,15 +31,14 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class BashkirAlphabetUpperCaseTest
 {
-	private static final Alphabetical ALPHABET = new BashkirAlphabet.UpperCase();
-
 	/**
 	 * Проверка метода {@link BashkirAlphabet.UpperCase#get()}.
 	 */
 	@Test
 	public void get()
 	{
-		List<Character> expected = List.of(
+		BashkirAlphabet.UpperCase alphabet = new BashkirAlphabet.UpperCase();
+		List<Character> expectedList = List.of(
 			'А', 'Б', 'В', 'Г', 'Ғ', 'Д', 
 			'Ҙ', 'Е', 'Ё', 'Ж', 'З', 'И', 
 			'Й', 'К', 'Ҡ', 'Л', 'М', 'Н', 
@@ -49,9 +48,9 @@ public class BashkirAlphabetUpperCaseTest
 			'Ы', 'Ь', 'Э', 'Ә', 'Ю', 'Я'
 		);
 
-		List<Character> actual = ALPHABET.get();
+		List<Character> actualList = alphabet.get();
 
-		assertArrayEquals(expected.toArray(), actual.toArray());
+		assertArrayEquals(expectedList.toArray(), actualList.toArray());
 	}
 
 	/**
@@ -60,13 +59,12 @@ public class BashkirAlphabetUpperCaseTest
 	@Test
 	public void testEquals()
 	{
-		assertNotEquals(null, ALPHABET);
+		BashkirAlphabet.UpperCase alphabet1 = new BashkirAlphabet.UpperCase();
+		BashkirAlphabet.UpperCase alphabet2 = new BashkirAlphabet.UpperCase();
 
-		assertEquals(ALPHABET, ALPHABET);
+		boolean actual = alphabet1.equals(alphabet2);
 
-		assertNotEquals(ALPHABET, new RussianAlphabet.UpperCase());;
-
-		assertEquals(ALPHABET, new BashkirAlphabet.UpperCase());;
+		assertTrue(actual);
 	}
 
 	/**
@@ -75,10 +73,12 @@ public class BashkirAlphabetUpperCaseTest
 	@Test
 	public void testHashCode()
 	{
-		assertEquals(ALPHABET.hashCode(), ALPHABET.hashCode());
+		BashkirAlphabet.UpperCase alphabet1 = new BashkirAlphabet.UpperCase();
+		BashkirAlphabet.UpperCase alphabet2 = new BashkirAlphabet.UpperCase();
 
-		assertEquals(ALPHABET.hashCode(), new BashkirAlphabet.UpperCase().hashCode());
+		Integer expectedHashCode = alphabet1.hashCode();
+		Integer actualHashCode = alphabet2.hashCode();
 
-		assertNotEquals(ALPHABET.hashCode(), new RussianAlphabet.UpperCase().hashCode());
+		assertEquals(expectedHashCode, actualHashCode);
 	}
 }

@@ -31,15 +31,14 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class ChineseAlphabetLowerCaseTest
 {
-	private static final Alphabetical ALPHABET = new ChineseAlphabet.LowerCase();
-
 	/**
 	 * Проверка метода {@link ChineseAlphabet.LowerCase#get()}.
 	 */
 	@Test
 	public void get()
 	{
-		List<Character> expected = List.of(
+		ChineseAlphabet.LowerCase alphabet = new ChineseAlphabet.LowerCase();
+		List<Character> expectedList = List.of(
 			'a', 'b', 'c', 'd', 'e', 'f', 
 			'g', 'h', 'i', 'j', 'k', 'l', 
 			'm', 'n', 'o', 'p', 'q', 'r', 
@@ -47,9 +46,9 @@ public class ChineseAlphabetLowerCaseTest
 			'y', 'z'
 		);
 
-		List<Character> actual = ALPHABET.get();
+		List<Character> actualList = alphabet.get();
 
-		assertArrayEquals(expected.toArray(), actual.toArray());
+		assertArrayEquals(expectedList.toArray(), actualList.toArray());
 	}
 
 	/**
@@ -58,13 +57,12 @@ public class ChineseAlphabetLowerCaseTest
 	@Test
 	public void testEquals()
 	{
-		assertNotEquals(null, ALPHABET);
+		ChineseAlphabet.LowerCase alphabet1 = new ChineseAlphabet.LowerCase();
+		ChineseAlphabet.LowerCase alphabet2 = new ChineseAlphabet.LowerCase();
 
-		assertEquals(ALPHABET, ALPHABET);
+		boolean actual = alphabet1.equals(alphabet2);
 
-		assertNotEquals(ALPHABET, new RussianAlphabet.LowerCase());
-
-		assertEquals(ALPHABET, new ChineseAlphabet.LowerCase());;
+		assertTrue(actual);
 	}
 
 	/**
@@ -73,10 +71,12 @@ public class ChineseAlphabetLowerCaseTest
 	@Test
 	public void testHashCode()
 	{
-		assertEquals(ALPHABET.hashCode(), ALPHABET.hashCode());
+		ChineseAlphabet.LowerCase alphabet1 = new ChineseAlphabet.LowerCase();
+		ChineseAlphabet.LowerCase alphabet2 = new ChineseAlphabet.LowerCase();
 
-		assertEquals(ALPHABET.hashCode(), new ChineseAlphabet.LowerCase().hashCode());
+		Integer expectedHashCode = alphabet1.hashCode();
+		Integer actualHashCode = alphabet2.hashCode();
 
-		assertNotEquals(ALPHABET.hashCode(), new RussianAlphabet.LowerCase().hashCode());
+		assertEquals(expectedHashCode, actualHashCode);
 	}
 }

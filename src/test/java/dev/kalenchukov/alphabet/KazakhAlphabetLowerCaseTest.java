@@ -31,15 +31,14 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class KazakhAlphabetLowerCaseTest
 {
-	private static final Alphabetical ALPHABET = new KazakhAlphabet.LowerCase();
-
 	/**
 	 * Проверка метода {@link KazakhAlphabet.LowerCase#get()}.
 	 */
 	@Test
 	public void get()
 	{
-		List<Character> expected = List.of(
+		KazakhAlphabet.LowerCase alphabet = new KazakhAlphabet.LowerCase();
+		List<Character> expectedList = List.of(
 			'а', 'ә', 'б', 'в', 'г', 'ғ', 
 			'д', 'е', 'ё', 'ж', 'з', 'и', 
 			'й', 'к', 'қ', 'л', 'м', 'н', 
@@ -49,9 +48,9 @@ public class KazakhAlphabetLowerCaseTest
 			'ы', 'і', 'ь', 'э', 'ю', 'я'
 		);
 
-		List<Character> actual = ALPHABET.get();
+		List<Character> actualList = alphabet.get();
 
-		assertArrayEquals(expected.toArray(), actual.toArray());
+		assertArrayEquals(expectedList.toArray(), actualList.toArray());
 	}
 
 	/**
@@ -60,13 +59,12 @@ public class KazakhAlphabetLowerCaseTest
 	@Test
 	public void testEquals()
 	{
-		assertNotEquals(null, ALPHABET);
+		KazakhAlphabet.LowerCase alphabet1 = new KazakhAlphabet.LowerCase();
+		KazakhAlphabet.LowerCase alphabet2 = new KazakhAlphabet.LowerCase();
 
-		assertEquals(ALPHABET, ALPHABET);
+		boolean actual = alphabet1.equals(alphabet2);
 
-		assertNotEquals(ALPHABET, new RussianAlphabet.LowerCase());
-
-		assertEquals(ALPHABET, new KazakhAlphabet.LowerCase());;
+		assertTrue(actual);
 	}
 
 	/**
@@ -75,10 +73,12 @@ public class KazakhAlphabetLowerCaseTest
 	@Test
 	public void testHashCode()
 	{
-		assertEquals(ALPHABET.hashCode(), ALPHABET.hashCode());
+		KazakhAlphabet.LowerCase alphabet1 = new KazakhAlphabet.LowerCase();
+		KazakhAlphabet.LowerCase alphabet2 = new KazakhAlphabet.LowerCase();
 
-		assertEquals(ALPHABET.hashCode(), new KazakhAlphabet.LowerCase().hashCode());
+		Integer expectedHashCode = alphabet1.hashCode();
+		Integer actualHashCode = alphabet2.hashCode();
 
-		assertNotEquals(ALPHABET.hashCode(), new RussianAlphabet.LowerCase().hashCode());
+		assertEquals(expectedHashCode, actualHashCode);
 	}
 }

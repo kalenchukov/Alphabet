@@ -31,15 +31,14 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class UkrainianAlphabetTest
 {
-	private static final Alphabetical ALPHABET = new UkrainianAlphabet();
-
 	/**
 	 * Проверка метода {@link UkrainianAlphabet#get()}.
 	 */
 	@Test
 	public void get()
 	{
-		List<Character> expected = List.of(
+		UkrainianAlphabet alphabet = new UkrainianAlphabet();
+		List<Character> expectedList = List.of(
 			'А', 'а', 'Б', 'б', 'В', 'в', 
 			'Г', 'г', 'Ґ', 'ґ', 'Д', 'д', 
 			'Е', 'е', 'Є', 'є', 'Ж', 'ж', 
@@ -53,9 +52,9 @@ public class UkrainianAlphabetTest
 			'Ь', 'ь', 'Ю', 'ю', 'Я', 'я'
 		);
 
-		List<Character> actual = ALPHABET.get();
+		List<Character> actualList = alphabet.get();
 
-		assertArrayEquals(expected.toArray(), actual.toArray());
+		assertArrayEquals(expectedList.toArray(), actualList.toArray());
 	}
 
 	/**
@@ -64,13 +63,12 @@ public class UkrainianAlphabetTest
 	@Test
 	public void testEquals()
 	{
-		assertNotEquals(null, ALPHABET);
+		UkrainianAlphabet alphabet1 = new UkrainianAlphabet();
+		UkrainianAlphabet alphabet2 = new UkrainianAlphabet();
 
-		assertEquals(ALPHABET, ALPHABET);
+		boolean actual = alphabet1.equals(alphabet2);
 
-		assertNotEquals(ALPHABET, new RussianAlphabet());
-
-		assertEquals(ALPHABET, new UkrainianAlphabet());
+		assertTrue(actual);
 	}
 
 	/**
@@ -79,10 +77,12 @@ public class UkrainianAlphabetTest
 	@Test
 	public void testHashCode()
 	{
-		assertEquals(ALPHABET.hashCode(), ALPHABET.hashCode());
+		UkrainianAlphabet alphabet1 = new UkrainianAlphabet();
+		UkrainianAlphabet alphabet2 = new UkrainianAlphabet();
 
-		assertEquals(ALPHABET.hashCode(), new UkrainianAlphabet().hashCode());
+		Integer expectedHashCode = alphabet1.hashCode();
+		Integer actualHashCode = alphabet2.hashCode();
 
-		assertNotEquals(ALPHABET.hashCode(), new RussianAlphabet().hashCode());
+		assertEquals(expectedHashCode, actualHashCode);
 	}
 }

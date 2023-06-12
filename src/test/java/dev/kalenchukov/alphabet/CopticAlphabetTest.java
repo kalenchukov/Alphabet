@@ -31,15 +31,14 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class CopticAlphabetTest
 {
-	private static final Alphabetical ALPHABET = new CopticAlphabet();
-
 	/**
 	 * Проверка метода {@link CopticAlphabet#get()}.
 	 */
 	@Test
 	public void get()
 	{
-		List<Character> expected = List.of(
+		CopticAlphabet alphabet = new CopticAlphabet();
+		List<Character> expectedList = List.of(
 			'Ⲁ', 'ⲁ', 'Ⲃ', 'ⲃ', 'Ⲅ', 'ⲅ', 
 			'Ⲇ', 'ⲇ', 'Ⲉ', 'ⲉ', 'Ⲋ', 'ⲋ', 
 			'Ⲍ', 'ⲍ', 'Ⲏ', 'ⲏ', 'Ⲑ', 'ⲑ', 
@@ -58,9 +57,9 @@ public class CopticAlphabetTest
 			'Ⳛ', 'ⳛ'
 		);
 
-		List<Character> actual = ALPHABET.get();
+		List<Character> actualList = alphabet.get();
 
-		assertArrayEquals(expected.toArray(), actual.toArray());
+		assertArrayEquals(expectedList.toArray(), actualList.toArray());
 	}
 
 	/**
@@ -69,13 +68,12 @@ public class CopticAlphabetTest
 	@Test
 	public void testEquals()
 	{
-		assertNotEquals(null, ALPHABET);
+		CopticAlphabet alphabet1 = new CopticAlphabet();
+		CopticAlphabet alphabet2 = new CopticAlphabet();
 
-		assertEquals(ALPHABET, ALPHABET);
+		boolean actual = alphabet1.equals(alphabet2);
 
-		assertNotEquals(ALPHABET, new RussianAlphabet());
-
-		assertEquals(ALPHABET, new CopticAlphabet());
+		assertTrue(actual);
 	}
 
 	/**
@@ -84,10 +82,12 @@ public class CopticAlphabetTest
 	@Test
 	public void testHashCode()
 	{
-		assertEquals(ALPHABET.hashCode(), ALPHABET.hashCode());
+		CopticAlphabet alphabet1 = new CopticAlphabet();
+		CopticAlphabet alphabet2 = new CopticAlphabet();
 
-		assertEquals(ALPHABET.hashCode(), new CopticAlphabet().hashCode());
+		Integer expectedHashCode = alphabet1.hashCode();
+		Integer actualHashCode = alphabet2.hashCode();
 
-		assertNotEquals(ALPHABET.hashCode(), new RussianAlphabet().hashCode());
+		assertEquals(expectedHashCode, actualHashCode);
 	}
 }

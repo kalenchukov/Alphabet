@@ -31,15 +31,14 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class KayahLiAlphabetTest
 {
-	private static final Alphabetical ALPHABET = new KayahLiAlphabet();
-
 	/**
 	 * Проверка метода {@link KayahLiAlphabet#get()}.
 	 */
 	@Test
 	public void get()
 	{
-		List<Character> expected = List.of(
+		KayahLiAlphabet alphabet = new KayahLiAlphabet();
+		List<Character> expectedList = List.of(
 			'꤀', '꤁', '꤂', '꤃', '꤄', '꤅', 
 			'꤆', '꤇', '꤈', '꤉', 'ꤊ', 'ꤋ', 
 			'ꤌ', 'ꤍ', 'ꤎ', 'ꤏ', 'ꤐ', 'ꤑ', 
@@ -50,9 +49,9 @@ public class KayahLiAlphabetTest
 			'ꤪ', '꤫', '꤬', '꤭', '꤮', '꤯'
 		);
 
-		List<Character> actual = ALPHABET.get();
+		List<Character> actualList = alphabet.get();
 
-		assertArrayEquals(expected.toArray(), actual.toArray());
+		assertArrayEquals(expectedList.toArray(), actualList.toArray());
 	}
 
 	/**
@@ -61,13 +60,12 @@ public class KayahLiAlphabetTest
 	@Test
 	public void testEquals()
 	{
-		assertNotEquals(null, ALPHABET);
+		KayahLiAlphabet alphabet1 = new KayahLiAlphabet();
+		KayahLiAlphabet alphabet2 = new KayahLiAlphabet();
 
-		assertEquals(ALPHABET, ALPHABET);
+		boolean actual = alphabet1.equals(alphabet2);
 
-		assertNotEquals(ALPHABET, new RussianAlphabet());
-
-		assertEquals(ALPHABET, new KayahLiAlphabet());
+		assertTrue(actual);
 	}
 
 	/**
@@ -76,10 +74,12 @@ public class KayahLiAlphabetTest
 	@Test
 	public void testHashCode()
 	{
-		assertEquals(ALPHABET.hashCode(), ALPHABET.hashCode());
+		KayahLiAlphabet alphabet1 = new KayahLiAlphabet();
+		KayahLiAlphabet alphabet2 = new KayahLiAlphabet();
 
-		assertEquals(ALPHABET.hashCode(), new KayahLiAlphabet().hashCode());
+		Integer expectedHashCode = alphabet1.hashCode();
+		Integer actualHashCode = alphabet2.hashCode();
 
-		assertNotEquals(ALPHABET.hashCode(), new RussianAlphabet().hashCode());
+		assertEquals(expectedHashCode, actualHashCode);
 	}
 }

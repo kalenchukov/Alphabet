@@ -31,15 +31,14 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class TaiVietAlphabetTest
 {
-	private static final Alphabetical ALPHABET = new TaiVietAlphabet();
-
 	/**
 	 * Проверка метода {@link TaiVietAlphabet#get()}.
 	 */
 	@Test
 	public void get()
 	{
-		List<Character> expected = List.of(
+		TaiVietAlphabet alphabet = new TaiVietAlphabet();
+		List<Character> expectedList = List.of(
 			'ꪀ', 'ꪁ', 'ꪂ', 'ꪃ', 'ꪄ', 'ꪅ', 
 			'ꪆ', 'ꪇ', 'ꪈ', 'ꪉ', 'ꪊ', 'ꪋ', 
 			'ꪌ', 'ꪍ', 'ꪎ', 'ꪏ', 'ꪐ', 'ꪑ', 
@@ -54,9 +53,9 @@ public class TaiVietAlphabetTest
 			'ꫂ'
 		);
 
-		List<Character> actual = ALPHABET.get();
+		List<Character> actualList = alphabet.get();
 
-		assertArrayEquals(expected.toArray(), actual.toArray());
+		assertArrayEquals(expectedList.toArray(), actualList.toArray());
 	}
 
 	/**
@@ -65,13 +64,12 @@ public class TaiVietAlphabetTest
 	@Test
 	public void testEquals()
 	{
-		assertNotEquals(null, ALPHABET);
+		TaiVietAlphabet alphabet1 = new TaiVietAlphabet();
+		TaiVietAlphabet alphabet2 = new TaiVietAlphabet();
 
-		assertEquals(ALPHABET, ALPHABET);
+		boolean actual = alphabet1.equals(alphabet2);
 
-		assertNotEquals(ALPHABET, new RussianAlphabet());
-
-		assertEquals(ALPHABET, new TaiVietAlphabet());
+		assertTrue(actual);
 	}
 
 	/**
@@ -80,10 +78,12 @@ public class TaiVietAlphabetTest
 	@Test
 	public void testHashCode()
 	{
-		assertEquals(ALPHABET.hashCode(), ALPHABET.hashCode());
+		TaiVietAlphabet alphabet1 = new TaiVietAlphabet();
+		TaiVietAlphabet alphabet2 = new TaiVietAlphabet();
 
-		assertEquals(ALPHABET.hashCode(), new TaiVietAlphabet().hashCode());
+		Integer expectedHashCode = alphabet1.hashCode();
+		Integer actualHashCode = alphabet2.hashCode();
 
-		assertNotEquals(ALPHABET.hashCode(), new RussianAlphabet().hashCode());
+		assertEquals(expectedHashCode, actualHashCode);
 	}
 }

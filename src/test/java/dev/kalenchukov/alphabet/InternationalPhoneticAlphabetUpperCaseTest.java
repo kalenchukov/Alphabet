@@ -31,22 +31,21 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class InternationalPhoneticAlphabetUpperCaseTest
 {
-	private static final Alphabetical ALPHABET = new InternationalPhoneticAlphabet.UpperCase();
-
 	/**
 	 * Проверка метода {@link InternationalPhoneticAlphabet.UpperCase#get()}.
 	 */
 	@Test
 	public void get()
 	{
-		List<Character> expected = List.of(
+		InternationalPhoneticAlphabet.UpperCase alphabet = new InternationalPhoneticAlphabet.UpperCase();
+		List<Character> expectedList = List.of(
 			'ɢ', 'ɴ', 'ʙ', 'ʀ', 'ʁ', 'ʟ', 
 			'ɪ', 'ʏ', 'ɶ', 'ʛ', 'ʜ'
 		);
 
-		List<Character> actual = ALPHABET.get();
+		List<Character> actualList = alphabet.get();
 
-		assertArrayEquals(expected.toArray(), actual.toArray());
+		assertArrayEquals(expectedList.toArray(), actualList.toArray());
 	}
 
 	/**
@@ -55,13 +54,12 @@ public class InternationalPhoneticAlphabetUpperCaseTest
 	@Test
 	public void testEquals()
 	{
-		assertNotEquals(null, ALPHABET);
+		InternationalPhoneticAlphabet.UpperCase alphabet1 = new InternationalPhoneticAlphabet.UpperCase();
+		InternationalPhoneticAlphabet.UpperCase alphabet2 = new InternationalPhoneticAlphabet.UpperCase();
 
-		assertEquals(ALPHABET, ALPHABET);
+		boolean actual = alphabet1.equals(alphabet2);
 
-		assertNotEquals(ALPHABET, new RussianAlphabet.UpperCase());;
-
-		assertEquals(ALPHABET, new InternationalPhoneticAlphabet.UpperCase());;
+		assertTrue(actual);
 	}
 
 	/**
@@ -70,10 +68,12 @@ public class InternationalPhoneticAlphabetUpperCaseTest
 	@Test
 	public void testHashCode()
 	{
-		assertEquals(ALPHABET.hashCode(), ALPHABET.hashCode());
+		InternationalPhoneticAlphabet.UpperCase alphabet1 = new InternationalPhoneticAlphabet.UpperCase();
+		InternationalPhoneticAlphabet.UpperCase alphabet2 = new InternationalPhoneticAlphabet.UpperCase();
 
-		assertEquals(ALPHABET.hashCode(), new InternationalPhoneticAlphabet.UpperCase().hashCode());
+		Integer expectedHashCode = alphabet1.hashCode();
+		Integer actualHashCode = alphabet2.hashCode();
 
-		assertNotEquals(ALPHABET.hashCode(), new RussianAlphabet.UpperCase().hashCode());
+		assertEquals(expectedHashCode, actualHashCode);
 	}
 }

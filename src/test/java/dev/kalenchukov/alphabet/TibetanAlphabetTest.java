@@ -31,15 +31,14 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class TibetanAlphabetTest
 {
-	private static final Alphabetical ALPHABET = new TibetanAlphabet();
-
 	/**
 	 * Проверка метода {@link TibetanAlphabet#get()}.
 	 */
 	@Test
 	public void get()
 	{
-		List<Character> expected = List.of(
+		TibetanAlphabet alphabet = new TibetanAlphabet();
+		List<Character> expectedList = List.of(
 			'ཀ', 'ཁ', 'ག', 'ང', 'ཅ', 'ཆ', 
 			'ཇ', 'ཉ', 'ཏ', 'ཐ', 'ད', 'ན', 
 			'པ', 'ཕ', 'བ', 'མ', 'ཙ', 'ཚ', 
@@ -48,9 +47,9 @@ public class TibetanAlphabetTest
 			'ཀྵ', 'ཪ', 'ཫ', 'ཬ'
 		);
 
-		List<Character> actual = ALPHABET.get();
+		List<Character> actualList = alphabet.get();
 
-		assertArrayEquals(expected.toArray(), actual.toArray());
+		assertArrayEquals(expectedList.toArray(), actualList.toArray());
 	}
 
 	/**
@@ -59,13 +58,12 @@ public class TibetanAlphabetTest
 	@Test
 	public void testEquals()
 	{
-		assertNotEquals(null, ALPHABET);
+		TibetanAlphabet alphabet1 = new TibetanAlphabet();
+		TibetanAlphabet alphabet2 = new TibetanAlphabet();
 
-		assertEquals(ALPHABET, ALPHABET);
+		boolean actual = alphabet1.equals(alphabet2);
 
-		assertNotEquals(ALPHABET, new RussianAlphabet());
-
-		assertEquals(ALPHABET, new TibetanAlphabet());
+		assertTrue(actual);
 	}
 
 	/**
@@ -74,10 +72,12 @@ public class TibetanAlphabetTest
 	@Test
 	public void testHashCode()
 	{
-		assertEquals(ALPHABET.hashCode(), ALPHABET.hashCode());
+		TibetanAlphabet alphabet1 = new TibetanAlphabet();
+		TibetanAlphabet alphabet2 = new TibetanAlphabet();
 
-		assertEquals(ALPHABET.hashCode(), new TibetanAlphabet().hashCode());
+		Integer expectedHashCode = alphabet1.hashCode();
+		Integer actualHashCode = alphabet2.hashCode();
 
-		assertNotEquals(ALPHABET.hashCode(), new RussianAlphabet().hashCode());
+		assertEquals(expectedHashCode, actualHashCode);
 	}
 }

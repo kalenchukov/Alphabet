@@ -22,10 +22,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
+import java.util.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -36,15 +33,17 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class AbstractAlphabetTest
 {
-	private static final Alphabetical ALPHABET = new RussianAlphabet();
-
 	/**
 	 * Проверка метода {@link AbstractAlphabet#getFirst()}.
 	 */
 	@Test
 	public void getFirst()
 	{
-		assertEquals('А', ALPHABET.getFirst());
+		RussianAlphabet alphabet = new RussianAlphabet();
+
+		Character actualLetter = alphabet.getFirst();
+
+		assertEquals('А', actualLetter);
 	}
 
 	/**
@@ -53,7 +52,11 @@ public class AbstractAlphabetTest
 	@Test
 	public void getLast()
 	{
-		assertEquals('я', ALPHABET.getLast());
+		RussianAlphabet alphabet = new RussianAlphabet();
+
+		Character actualLetter = alphabet.getLast();
+
+		assertEquals('я', actualLetter);
 	}
 
 	/**
@@ -62,7 +65,8 @@ public class AbstractAlphabetTest
 	@Test
 	public void getReverse()
 	{
-		List<Character> expected = List.of(
+		RussianAlphabet alphabet = new RussianAlphabet();
+		List<Character> expectedList = List.of(
 			'я', 'Я', 'ю', 'Ю', 'э', 'Э', 'ь', 'Ь', 'ы', 'Ы',
 			'ъ', 'Ъ', 'щ', 'Щ', 'ш', 'Ш', 'ч', 'Ч', 'ц', 'Ц', 'х', 'Х',
 			'ф', 'Ф', 'у', 'У', 'т', 'Т', 'с', 'С', 'р', 'Р', 'п', 'П',
@@ -71,74 +75,76 @@ public class AbstractAlphabetTest
 			'г', 'Г', 'в', 'В', 'б', 'Б', 'а', 'А'
 		);
 
-		assertArrayEquals(expected.toArray(), ALPHABET.getReverse().toArray());
+		List<Character> actualList = alphabet.getReverse();
 
-		assertEquals(Optional.of('А'), Optional.ofNullable(expected.get(65)));
-		assertEquals(Optional.of('а'), Optional.ofNullable(expected.get(64)));
-		assertEquals(Optional.of('Б'), Optional.ofNullable(expected.get(63)));
-		assertEquals(Optional.of('б'), Optional.ofNullable(expected.get(62)));
-		assertEquals(Optional.of('В'), Optional.ofNullable(expected.get(61)));
-		assertEquals(Optional.of('в'), Optional.ofNullable(expected.get(60)));
-		assertEquals(Optional.of('Г'), Optional.ofNullable(expected.get(59)));
-		assertEquals(Optional.of('г'), Optional.ofNullable(expected.get(58)));
-		assertEquals(Optional.of('Д'), Optional.ofNullable(expected.get(57)));
-		assertEquals(Optional.of('д'), Optional.ofNullable(expected.get(56)));
-		assertEquals(Optional.of('Е'), Optional.ofNullable(expected.get(55)));
-		assertEquals(Optional.of('е'), Optional.ofNullable(expected.get(54)));
-		assertEquals(Optional.of('Ё'), Optional.ofNullable(expected.get(53)));
-		assertEquals(Optional.of('ё'), Optional.ofNullable(expected.get(52)));
-		assertEquals(Optional.of('Ж'), Optional.ofNullable(expected.get(51)));
-		assertEquals(Optional.of('ж'), Optional.ofNullable(expected.get(50)));
-		assertEquals(Optional.of('З'), Optional.ofNullable(expected.get(49)));
-		assertEquals(Optional.of('з'), Optional.ofNullable(expected.get(48)));
-		assertEquals(Optional.of('И'), Optional.ofNullable(expected.get(47)));
-		assertEquals(Optional.of('и'), Optional.ofNullable(expected.get(46)));
-		assertEquals(Optional.of('Й'), Optional.ofNullable(expected.get(45)));
-		assertEquals(Optional.of('й'), Optional.ofNullable(expected.get(44)));
-		assertEquals(Optional.of('К'), Optional.ofNullable(expected.get(43)));
-		assertEquals(Optional.of('к'), Optional.ofNullable(expected.get(42)));
-		assertEquals(Optional.of('Л'), Optional.ofNullable(expected.get(41)));
-		assertEquals(Optional.of('л'), Optional.ofNullable(expected.get(40)));
-		assertEquals(Optional.of('М'), Optional.ofNullable(expected.get(39)));
-		assertEquals(Optional.of('м'), Optional.ofNullable(expected.get(38)));
-		assertEquals(Optional.of('Н'), Optional.ofNullable(expected.get(37)));
-		assertEquals(Optional.of('н'), Optional.ofNullable(expected.get(36)));
-		assertEquals(Optional.of('О'), Optional.ofNullable(expected.get(35)));
-		assertEquals(Optional.of('о'), Optional.ofNullable(expected.get(34)));
-		assertEquals(Optional.of('П'), Optional.ofNullable(expected.get(33)));
-		assertEquals(Optional.of('п'), Optional.ofNullable(expected.get(32)));
-		assertEquals(Optional.of('Р'), Optional.ofNullable(expected.get(31)));
-		assertEquals(Optional.of('р'), Optional.ofNullable(expected.get(30)));
-		assertEquals(Optional.of('С'), Optional.ofNullable(expected.get(29)));
-		assertEquals(Optional.of('с'), Optional.ofNullable(expected.get(28)));
-		assertEquals(Optional.of('Т'), Optional.ofNullable(expected.get(27)));
-		assertEquals(Optional.of('т'), Optional.ofNullable(expected.get(26)));
-		assertEquals(Optional.of('У'), Optional.ofNullable(expected.get(25)));
-		assertEquals(Optional.of('у'), Optional.ofNullable(expected.get(24)));
-		assertEquals(Optional.of('Ф'), Optional.ofNullable(expected.get(23)));
-		assertEquals(Optional.of('ф'), Optional.ofNullable(expected.get(22)));
-		assertEquals(Optional.of('Х'), Optional.ofNullable(expected.get(21)));
-		assertEquals(Optional.of('х'), Optional.ofNullable(expected.get(20)));
-		assertEquals(Optional.of('Ц'), Optional.ofNullable(expected.get(19)));
-		assertEquals(Optional.of('ц'), Optional.ofNullable(expected.get(18)));
-		assertEquals(Optional.of('Ч'), Optional.ofNullable(expected.get(17)));
-		assertEquals(Optional.of('ч'), Optional.ofNullable(expected.get(16)));
-		assertEquals(Optional.of('Ш'), Optional.ofNullable(expected.get(15)));
-		assertEquals(Optional.of('ш'), Optional.ofNullable(expected.get(14)));
-		assertEquals(Optional.of('Щ'), Optional.ofNullable(expected.get(13)));
-		assertEquals(Optional.of('щ'), Optional.ofNullable(expected.get(12)));
-		assertEquals(Optional.of('Ъ'), Optional.ofNullable(expected.get(11)));
-		assertEquals(Optional.of('ъ'), Optional.ofNullable(expected.get(10)));
-		assertEquals(Optional.of('Ы'), Optional.ofNullable(expected.get(9)));
-		assertEquals(Optional.of('ы'), Optional.ofNullable(expected.get(8)));
-		assertEquals(Optional.of('Ь'), Optional.ofNullable(expected.get(7)));
-		assertEquals(Optional.of('ь'), Optional.ofNullable(expected.get(6)));
-		assertEquals(Optional.of('Э'), Optional.ofNullable(expected.get(5)));
-		assertEquals(Optional.of('э'), Optional.ofNullable(expected.get(4)));
-		assertEquals(Optional.of('Ю'), Optional.ofNullable(expected.get(3)));
-		assertEquals(Optional.of('ю'), Optional.ofNullable(expected.get(2)));
-		assertEquals(Optional.of('Я'), Optional.ofNullable(expected.get(1)));
-		assertEquals(Optional.of('я'), Optional.ofNullable(expected.get(0)));
+		assertArrayEquals(expectedList.toArray(), actualList.toArray());
+
+		assertEquals('А', expectedList.get(65));
+		assertEquals('а', expectedList.get(64));
+		assertEquals('Б', expectedList.get(63));
+		assertEquals('б', expectedList.get(62));
+		assertEquals('В', expectedList.get(61));
+		assertEquals('в', expectedList.get(60));
+		assertEquals('Г', expectedList.get(59));
+		assertEquals('г', expectedList.get(58));
+		assertEquals('Д', expectedList.get(57));
+		assertEquals('д', expectedList.get(56));
+		assertEquals('Е', expectedList.get(55));
+		assertEquals('е', expectedList.get(54));
+		assertEquals('Ё', expectedList.get(53));
+		assertEquals('ё', expectedList.get(52));
+		assertEquals('Ж', expectedList.get(51));
+		assertEquals('ж', expectedList.get(50));
+		assertEquals('З', expectedList.get(49));
+		assertEquals('з', expectedList.get(48));
+		assertEquals('И', expectedList.get(47));
+		assertEquals('и', expectedList.get(46));
+		assertEquals('Й', expectedList.get(45));
+		assertEquals('й', expectedList.get(44));
+		assertEquals('К', expectedList.get(43));
+		assertEquals('к', expectedList.get(42));
+		assertEquals('Л', expectedList.get(41));
+		assertEquals('л', expectedList.get(40));
+		assertEquals('М', expectedList.get(39));
+		assertEquals('м', expectedList.get(38));
+		assertEquals('Н', expectedList.get(37));
+		assertEquals('н', expectedList.get(36));
+		assertEquals('О', expectedList.get(35));
+		assertEquals('о', expectedList.get(34));
+		assertEquals('П', expectedList.get(33));
+		assertEquals('п', expectedList.get(32));
+		assertEquals('Р', expectedList.get(31));
+		assertEquals('р', expectedList.get(30));
+		assertEquals('С', expectedList.get(29));
+		assertEquals('с', expectedList.get(28));
+		assertEquals('Т', expectedList.get(27));
+		assertEquals('т', expectedList.get(26));
+		assertEquals('У', expectedList.get(25));
+		assertEquals('у', expectedList.get(24));
+		assertEquals('Ф', expectedList.get(23));
+		assertEquals('ф', expectedList.get(22));
+		assertEquals('Х', expectedList.get(21));
+		assertEquals('х', expectedList.get(20));
+		assertEquals('Ц', expectedList.get(19));
+		assertEquals('ц', expectedList.get(18));
+		assertEquals('Ч', expectedList.get(17));
+		assertEquals('ч', expectedList.get(16));
+		assertEquals('Ш', expectedList.get(15));
+		assertEquals('ш', expectedList.get(14));
+		assertEquals('Щ', expectedList.get(13));
+		assertEquals('щ', expectedList.get(12));
+		assertEquals('Ъ', expectedList.get(11));
+		assertEquals('ъ', expectedList.get(10));
+		assertEquals('Ы', expectedList.get(9));
+		assertEquals('ы', expectedList.get(8));
+		assertEquals('Ь', expectedList.get(7));
+		assertEquals('ь', expectedList.get(6));
+		assertEquals('Э', expectedList.get(5));
+		assertEquals('э', expectedList.get(4));
+		assertEquals('Ю', expectedList.get(3));
+		assertEquals('ю', expectedList.get(2));
+		assertEquals('Я', expectedList.get(1));
+		assertEquals('я', expectedList.get(0));
 	}
 
 	/**
@@ -147,7 +153,8 @@ public class AbstractAlphabetTest
 	@Test
 	public void getShuffle()
 	{
-		List<Character> expected = List.of(
+		RussianAlphabet alphabet = new RussianAlphabet();
+		List<Character> expectedList = List.of(
 			'А', 'а', 'Б', 'б', 'В', 'в', 'Г', 'г', 'Д', 'д',
 			'Е', 'е', 'Ё', 'ё', 'Ж', 'ж', 'З', 'з', 'И', 'и',
 			'Й', 'й', 'К', 'к', 'Л', 'л', 'М', 'м', 'Н', 'н',
@@ -157,9 +164,9 @@ public class AbstractAlphabetTest
 			'Э', 'э', 'Ю', 'ю', 'Я', 'я'
 		);
 
-		List<Character> actual = ALPHABET.getShuffle();
+		List<Character> actualList = alphabet.getShuffle();
 
-		assertNotEquals(expected, actual);
+		assertNotEquals(expectedList, actualList);
 	}
 
 	/**
@@ -168,16 +175,17 @@ public class AbstractAlphabetTest
 	@Test
 	public void getRange()
 	{
-		List<Character> expected = List.of(
+		RussianAlphabet alphabet = new RussianAlphabet();
+		List<Character> expectedList = List.of(
 			'А', 'а', 'Б', 'б', 'В', 'в', 'Г', 'г', 'Д', 'д',
 			'Е', 'е', 'Ё', 'ё', 'Ж', 'ж', 'З', 'з', 'И', 'и',
 			'Й', 'й', 'К', 'к', 'Л', 'л', 'М', 'м', 'Н', 'н',
 			'О', 'о', 'П'
 		);
 
-		List<Character> actual = ALPHABET.get(1, 33);
+		List<Character> actualList = alphabet.get(1, 33);
 
-		assertArrayEquals(expected.toArray(), actual.toArray());
+		assertArrayEquals(expectedList.toArray(), actualList.toArray());
 	}
 
 	/**
@@ -186,8 +194,10 @@ public class AbstractAlphabetTest
 	@Test
 	public void getRangeOutOfBoundsMin()
 	{
+		RussianAlphabet alphabet = new RussianAlphabet();
+
 		assertThrows(IndexOutOfBoundsException.class, () -> {
-			ALPHABET.get(0, 33);
+			alphabet.get(0, 33);
 		});
 	}
 
@@ -197,8 +207,10 @@ public class AbstractAlphabetTest
 	@Test
 	public void getRangeOutOfBoundsMax()
 	{
+		RussianAlphabet alphabet = new RussianAlphabet();
+
 		assertThrows(IndexOutOfBoundsException.class, () -> {
-			ALPHABET.get(1, 67);
+			alphabet.get(1, 67);
 		});
 	}
 
@@ -208,8 +220,10 @@ public class AbstractAlphabetTest
 	@Test
 	public void getRangeInversion()
 	{
+		RussianAlphabet alphabet = new RussianAlphabet();
+
 		assertThrows(IllegalArgumentException.class, () -> {
-			ALPHABET.get(33, 20);
+			alphabet.get(33, 20);
 		});
 	}
 	/**
@@ -218,7 +232,11 @@ public class AbstractAlphabetTest
 	@Test
 	public void getPositionByLetter()
 	{
-		assertEquals(Optional.of(30), Optional.ofNullable(ALPHABET.getPosition('н')));
+		RussianAlphabet alphabet = new RussianAlphabet();
+
+		Integer actualPosition = alphabet.getPosition('н');
+
+		assertEquals(30, actualPosition);
 	}
 
 	/**
@@ -227,7 +245,11 @@ public class AbstractAlphabetTest
 	@Test
 	public void getPositionByLetterNotCorrect()
 	{
-		assertNull(ALPHABET.getPosition('W'));
+		RussianAlphabet alphabet = new RussianAlphabet();
+
+		Integer actualPosition = alphabet.getPosition('W');
+
+		assertNull(actualPosition);
 	}
 
 
@@ -237,7 +259,11 @@ public class AbstractAlphabetTest
 	@Test
 	public void getLetterByPosition()
 	{
-		assertEquals(Optional.of('м'), Optional.ofNullable(ALPHABET.get(28)));
+		RussianAlphabet alphabet = new RussianAlphabet();
+
+		Character actualLetter = alphabet.get(28);
+
+		assertEquals('м', actualLetter);
 	}
 
 	/**
@@ -246,7 +272,11 @@ public class AbstractAlphabetTest
 	@Test
 	public void getLetterByPositionNotCorrect()
 	{
-		assertNull(ALPHABET.get(0));
+		RussianAlphabet alphabet = new RussianAlphabet();
+
+		Character actualLetter = alphabet.get(0);
+
+		assertNull(actualLetter);
 	}
 
 	/**
@@ -255,20 +285,31 @@ public class AbstractAlphabetTest
 	@Test
 	public void allMatch()
 	{
-		assertTrue(ALPHABET.allMatch("Камчатка"));
+		RussianAlphabet alphabet = new RussianAlphabet();
+
+		boolean actual = alphabet.allMatch("Камчатка");
+
+		assertTrue(actual);
 	}
 
 	/**
 	 * Проверка метода {@link AbstractAlphabet#allMatch(String)} с некорректным значением.
 	 */
-	@Test
-	public void allMatchNotCorrect()
+	@ParameterizedTest
+	@ValueSource(strings = {
+		"",
+		"Kino",
+		"КиноW",
+		"Кино Камчатка",
+		"KinoКамчатка",
+	})
+	public void allMatchNotCorrect(String value)
 	{
-		assertFalse(ALPHABET.allMatch(""));
-		assertFalse(ALPHABET.allMatch("Kino"));
-		assertFalse(ALPHABET.allMatch("КиноW"));
-		assertFalse(ALPHABET.allMatch("Кино Камчатка"));
-		assertFalse(ALPHABET.allMatch("KinoКамчатка"));
+		RussianAlphabet alphabet = new RussianAlphabet();
+
+		boolean actual = alphabet.allMatch(value);
+
+		assertFalse(actual);
 	}
 
 	/**
@@ -277,36 +318,61 @@ public class AbstractAlphabetTest
 	@Test
 	public void anyMatch()
 	{
-		assertTrue(ALPHABET.anyMatch("Дождь для нас"));
+		RussianAlphabet alphabet = new RussianAlphabet();
+
+		boolean actual = alphabet.anyMatch("Дождь для нас");
+
+		assertTrue(actual);
 	}
 
 	/**
 	 * Проверка метода {@link AbstractAlphabet#anyMatch(String)} с некорректным значением.
 	 */
-	@Test
-	public void anyMatchNotCorrect()
+	@ParameterizedTest
+	@ValueSource(strings = {
+		"",
+		"Kino",
+	})
+	public void anyMatchNotCorrect(String value)
 	{
-		assertFalse(ALPHABET.anyMatch(""));
-		assertFalse(ALPHABET.anyMatch("Kino"));
+		RussianAlphabet alphabet = new RussianAlphabet();
+
+		boolean actual = alphabet.anyMatch("");
+
+		assertFalse(actual);
 	}
 
 	/**
 	 * Проверка метода {@link AbstractAlphabet#noneMatch(String)}.
 	 */
-	@Test
-	public void noneMatch()
+	@ParameterizedTest
+	@ValueSource(strings = {
+		"Kamchatka",
+	})
+	public void noneMatch(String value)
 	{
-		assertTrue(ALPHABET.noneMatch("Kamchatka"));
+		RussianAlphabet alphabet = new RussianAlphabet();
+
+		boolean actual = alphabet.noneMatch(value);
+
+		assertTrue(actual);
 	}
 
 	/**
 	 * Проверка метода {@link AbstractAlphabet#noneMatch(String)} с некорректным значением.
 	 */
-	@Test
-	public void noneMatchNotCorrect()
+	@ParameterizedTest
+	@ValueSource(strings = {
+		"",
+		"KinoЪ",
+	})
+	public void noneMatchNotCorrect(String value)
 	{
-		assertFalse(ALPHABET.noneMatch(""));
-		assertFalse(ALPHABET.noneMatch("KinoЪ"));
+		RussianAlphabet alphabet = new RussianAlphabet();
+
+		boolean actual = alphabet.noneMatch(value);
+
+		assertFalse(actual);
 	}
 
 	/**
@@ -315,7 +381,11 @@ public class AbstractAlphabetTest
 	@Test
 	public void contains()
 	{
-		assertTrue(ALPHABET.contains('У'));
+		RussianAlphabet alphabet = new RussianAlphabet();
+
+		boolean actual = alphabet.contains('У');
+
+		assertTrue(actual);
 	}
 
 	/**
@@ -324,7 +394,11 @@ public class AbstractAlphabetTest
 	@Test
 	public void containsNotCorrect()
 	{
-		assertFalse(ALPHABET.contains('W'));
+		RussianAlphabet alphabet = new RussianAlphabet();
+
+		boolean actual = alphabet.contains('W');
+
+		assertFalse(actual);
 	}
 
 	/**
@@ -333,10 +407,17 @@ public class AbstractAlphabetTest
 	@Test
 	public void getRandom()
 	{
-		assertEquals(0, ALPHABET.getRandom(0).size());
-		assertEquals(1, ALPHABET.getRandom(1).size());
-		assertEquals(20, ALPHABET.getRandom(20).size());
-		assertEquals(100, ALPHABET.getRandom(100).size());
+		RussianAlphabet alphabet = new RussianAlphabet();
+
+		List<Character> actualList1 = alphabet.getRandom(0);
+		List<Character> actualList2 = alphabet.getRandom(1);
+		List<Character> actualList3 = alphabet.getRandom(20);
+		List<Character> actualList4 = alphabet.getRandom(100);
+
+		assertEquals(0, actualList1.size());
+		assertEquals(1, actualList2.size());
+		assertEquals(20, actualList3.size());
+		assertEquals(100, actualList4.size());
 	}
 
 	/**
@@ -345,10 +426,13 @@ public class AbstractAlphabetTest
 	@Test
 	public void clearMismatches()
 	{
-		assertEquals(
-			"Солнцемоевзглянинаменяладоньпревратиласьвкулак",
-			ALPHABET.clearMismatches("Солнце мое, взгляни на меня - My ладонь превратилась в кулак")
+		RussianAlphabet alphabet = new RussianAlphabet();
+
+		String actualString = alphabet.clearMismatches(
+				"Солнце мое, взгляни на меня - My ладонь превратилась в кулак"
 		);
+
+		assertEquals("Солнцемоевзглянинаменяладоньпревратиласьвкулак", actualString);
 	}
 
 	/**
@@ -357,10 +441,13 @@ public class AbstractAlphabetTest
 	@Test
 	public void clearMatches()
 	{
-		assertEquals(
-			" ,    - My    ",
-			ALPHABET.clearMatches("Солнце мое, взгляни на меня - My ладонь превратилась в кулак")
+		RussianAlphabet alphabet = new RussianAlphabet();
+
+		String actualString = alphabet.clearMatches(
+				"Солнце мое, взгляни на меня - My ладонь превратилась в кулак"
 		);
+
+		assertEquals(" ,    - My    ", actualString);
 	}
 
 	/**
@@ -378,7 +465,11 @@ public class AbstractAlphabetTest
 	})
 	public void isSorted(String value)
 	{
-		assertTrue(ALPHABET.isSorted(value));
+		RussianAlphabet alphabet = new RussianAlphabet();
+
+		boolean actual = alphabet.isSorted(value);
+
+		assertTrue(actual);
 	}
 
 	/**
@@ -392,7 +483,11 @@ public class AbstractAlphabetTest
 	})
 	public void isSortedNotCorrect(String value)
 	{
-		assertFalse(ALPHABET.isSorted(value));
+		RussianAlphabet alphabet = new RussianAlphabet();
+
+		boolean actual = alphabet.isSorted(value);
+
+		assertFalse(actual);
 	}
 
 	/**
@@ -407,7 +502,11 @@ public class AbstractAlphabetTest
 	})
 	public void isSortedAsc(String value)
 	{
-		assertTrue(ALPHABET.isSortedAsc(value));
+		RussianAlphabet alphabet = new RussianAlphabet();
+
+		boolean actual = alphabet.isSortedAsc(value);
+
+		assertTrue(actual);
 	}
 
 	/**
@@ -420,7 +519,11 @@ public class AbstractAlphabetTest
 	})
 	public void isSortedAscNotCorrect(String value)
 	{
-		assertFalse(ALPHABET.isSortedAsc(value));
+		RussianAlphabet alphabet = new RussianAlphabet();
+
+		boolean actual = alphabet.isSortedAsc(value);
+
+		assertFalse(actual);
 	}
 
 	/**
@@ -435,7 +538,11 @@ public class AbstractAlphabetTest
 	})
 	public void isSortedDesc(String value)
 	{
-		assertTrue(ALPHABET.isSortedDesc(value));
+		RussianAlphabet alphabet = new RussianAlphabet();
+
+		boolean actual = alphabet.isSortedDesc(value);
+
+		assertTrue(actual);
 	}
 
 	/**
@@ -448,7 +555,11 @@ public class AbstractAlphabetTest
 	})
 	public void isSortedDescNotCorrect(String value)
 	{
-		assertFalse(ALPHABET.isSortedDesc(value));
+		RussianAlphabet alphabet = new RussianAlphabet();
+
+		boolean actual = alphabet.isSortedDesc(value);
+
+		assertFalse(actual);
 	}
 
 	/**
@@ -457,7 +568,8 @@ public class AbstractAlphabetTest
 	@Test
 	public void toArray()
 	{
-		Character[] letters = new Character[]{
+		RussianAlphabet alphabet = new RussianAlphabet();
+		Character[] expectedArray = new Character[]{
 			'А', 'а', 'Б', 'б', 'В', 'в', 'Г', 'г', 'Д', 'д',
 			'Е', 'е', 'Ё', 'ё', 'Ж', 'ж', 'З', 'з', 'И', 'и',
 			'Й', 'й', 'К', 'к', 'Л', 'л', 'М', 'м', 'Н', 'н',
@@ -467,7 +579,9 @@ public class AbstractAlphabetTest
 			'Э', 'э', 'Ю', 'ю', 'Я', 'я'
 		};
 
-		assertArrayEquals(letters, ALPHABET.toArray());
+		Character[] actualArray = alphabet.toArray();
+
+		assertArrayEquals(expectedArray, actualArray);
 	}
 
 	/**
@@ -476,11 +590,14 @@ public class AbstractAlphabetTest
 	@Test
 	public void toStringSeparator()
 	{
-		String expected = "А,а,Б,б,В,в,Г,г,Д,д,Е,е,Ё,ё,Ж,ж,З,з,И,и," +
+		RussianAlphabet alphabet = new RussianAlphabet();
+		String expectedString = "А,а,Б,б,В,в,Г,г,Д,д,Е,е,Ё,ё,Ж,ж,З,з,И,и," +
 			"Й,й,К,к,Л,л,М,м,Н,н,О,о,П,п,Р,р,С,с,Т,т,У,у,Ф,ф,Х,х," +
 			"Ц,ц,Ч,ч,Ш,ш,Щ,щ,Ъ,ъ,Ы,ы,Ь,ь,Э,э,Ю,ю,Я,я";
 
-		assertEquals(expected, ALPHABET.toString(","));
+		String actualString = alphabet.toString(",");
+
+		assertEquals(expectedString, actualString);
 	}
 
 	/**
@@ -489,9 +606,12 @@ public class AbstractAlphabetTest
 	@Test
 	public void testToString()
 	{
-		String expected = "АаБбВвГгДдЕеЁёЖжЗзИиЙйКкЛлМмНнОоПпРрСсТтУуФфХхЦцЧчШшЩщЪъЫыЬьЭэЮюЯя";
+		RussianAlphabet alphabet = new RussianAlphabet();
+		String expectedString = "АаБбВвГгДдЕеЁёЖжЗзИиЙйКкЛлМмНнОоПпРрСсТтУуФфХхЦцЧчШшЩщЪъЫыЬьЭэЮюЯя";
 
-		assertEquals(expected, ALPHABET.toString());
+		String actualString = alphabet.toString();
+
+		assertEquals(expectedString, actualString);
 	}
 
 	/**
@@ -500,36 +620,38 @@ public class AbstractAlphabetTest
 	@Test
 	public void statistics()
 	{
+		RussianAlphabet alphabet = new RussianAlphabet();
 		String value = """
 			Дом стоит, свет горит
 			Из окна видна даль
 			Так откуда взялась печаль?
 			""";
 
-		Map<Character, Integer> statistics = ALPHABET.statistics(value);
+		Map<Character, Integer> actualMap = alphabet.statistics(value);
 
-		assertEquals(1, statistics.get('Д').intValue());
-		assertEquals(1, statistics.get('Т').intValue());
-		assertEquals(1, statistics.get('п').intValue());
-		assertEquals(5, statistics.get('о').intValue());
+		assertEquals(1, actualMap.get('Д'));
+		assertEquals(1, actualMap.get('Т'));
+		assertEquals(1, actualMap.get('п'));
+		assertEquals(5, actualMap.get('о'));
 	}
 
 	/**
-	 * Проверка метода {@link AbstractAlphabet#statistics(String)} с некорректным значением.
+	 * Проверка метода {@link AbstractAlphabet#statistics(String)} с отсутствующими буквами в значении.
 	 */
 	@Test
-	public void statisticsNotCorrect()
+	public void statisticsNotLetter()
 	{
+		RussianAlphabet alphabet = new RussianAlphabet();
 		String value = """
 			И я должен прийти к девяти, на работу свою,
 			Но сейчас уже без десяти, а я только встаю
 			""";
 
-		Map<Character, Integer> statistics = ALPHABET.statistics(value);
+		Map<Character, Integer> actualMap = alphabet.statistics(value);
 
-		assertEquals(0, statistics.get('щ').intValue());
-		assertEquals(0, statistics.get('Я').intValue());
-		assertEquals(0, statistics.get('ъ').intValue());
-		assertEquals(0, statistics.get('Ж').intValue());
+		assertEquals(0, actualMap.get('щ'));
+		assertEquals(0, actualMap.get('Я'));
+		assertEquals(0, actualMap.get('ъ'));
+		assertEquals(0, actualMap.get('Ж'));
 	}
 }

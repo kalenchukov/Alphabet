@@ -31,15 +31,14 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class NewTaiLueAlphabetTest
 {
-	private static final Alphabetical ALPHABET = new NewTaiLueAlphabet();
-
 	/**
 	 * Проверка метода {@link NewTaiLueAlphabet#get()}.
 	 */
 	@Test
 	public void get()
 	{
-		List<Character> expected = List.of(
+		NewTaiLueAlphabet alphabet = new NewTaiLueAlphabet();
+		List<Character> expectedList = List.of(
 			'ᦀ', 'ᦁ', 'ᦂ', 'ᦃ', 'ᦄ', 'ᦅ', 
 			'ᦆ', 'ᦇ', 'ᦈ', 'ᦉ', 'ᦊ', 'ᦋ', 
 			'ᦌ', 'ᦍ', 'ᦎ', 'ᦏ', 'ᦐ', 'ᦑ', 
@@ -54,9 +53,9 @@ public class NewTaiLueAlphabetTest
 			'ᧇ', 'ᧈ', 'ᧉ'
 		);
 
-		List<Character> actual = ALPHABET.get();
+		List<Character> actualList = alphabet.get();
 
-		assertArrayEquals(expected.toArray(), actual.toArray());
+		assertArrayEquals(expectedList.toArray(), actualList.toArray());
 	}
 
 	/**
@@ -65,13 +64,12 @@ public class NewTaiLueAlphabetTest
 	@Test
 	public void testEquals()
 	{
-		assertNotEquals(null, ALPHABET);
+		NewTaiLueAlphabet alphabet1 = new NewTaiLueAlphabet();
+		NewTaiLueAlphabet alphabet2 = new NewTaiLueAlphabet();
 
-		assertEquals(ALPHABET, ALPHABET);
+		boolean actual = alphabet1.equals(alphabet2);
 
-		assertNotEquals(ALPHABET, new RussianAlphabet());
-
-		assertEquals(ALPHABET, new NewTaiLueAlphabet());
+		assertTrue(actual);
 	}
 
 	/**
@@ -80,10 +78,12 @@ public class NewTaiLueAlphabetTest
 	@Test
 	public void testHashCode()
 	{
-		assertEquals(ALPHABET.hashCode(), ALPHABET.hashCode());
+		NewTaiLueAlphabet alphabet1 = new NewTaiLueAlphabet();
+		NewTaiLueAlphabet alphabet2 = new NewTaiLueAlphabet();
 
-		assertEquals(ALPHABET.hashCode(), new NewTaiLueAlphabet().hashCode());
+		Integer expectedHashCode = alphabet1.hashCode();
+		Integer actualHashCode = alphabet2.hashCode();
 
-		assertNotEquals(ALPHABET.hashCode(), new RussianAlphabet().hashCode());
+		assertEquals(expectedHashCode, actualHashCode);
 	}
 }

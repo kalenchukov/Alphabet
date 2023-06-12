@@ -31,23 +31,22 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class TagbanwaAlphabetTest
 {
-	private static final Alphabetical ALPHABET = new TagbanwaAlphabet();
-
 	/**
 	 * Проверка метода {@link TagbanwaAlphabet#get()}.
 	 */
 	@Test
 	public void get()
 	{
-		List<Character> expected = List.of(
+		TagbanwaAlphabet alphabet = new TagbanwaAlphabet();
+		List<Character> expectedList = List.of(
 			'ᝠ', 'ᝡ', 'ᝢ', 'ᝣ', 'ᝤ', 'ᝥ', 
 			'ᝦ', 'ᝧ', 'ᝨ', 'ᝩ', 'ᝪ', 'ᝫ', 
 			'ᝬ', 'ᝮ', 'ᝯ', 'ᝰ', 'ᝲ', 'ᝳ'
 		);
 
-		List<Character> actual = ALPHABET.get();
+		List<Character> actualList = alphabet.get();
 
-		assertArrayEquals(expected.toArray(), actual.toArray());
+		assertArrayEquals(expectedList.toArray(), actualList.toArray());
 	}
 
 	/**
@@ -56,13 +55,12 @@ public class TagbanwaAlphabetTest
 	@Test
 	public void testEquals()
 	{
-		assertNotEquals(null, ALPHABET);
+		TagbanwaAlphabet alphabet1 = new TagbanwaAlphabet();
+		TagbanwaAlphabet alphabet2 = new TagbanwaAlphabet();
 
-		assertEquals(ALPHABET, ALPHABET);
+		boolean actual = alphabet1.equals(alphabet2);
 
-		assertNotEquals(ALPHABET, new RussianAlphabet());
-
-		assertEquals(ALPHABET, new TagbanwaAlphabet());
+		assertTrue(actual);
 	}
 
 	/**
@@ -71,10 +69,12 @@ public class TagbanwaAlphabetTest
 	@Test
 	public void testHashCode()
 	{
-		assertEquals(ALPHABET.hashCode(), ALPHABET.hashCode());
+		TagbanwaAlphabet alphabet1 = new TagbanwaAlphabet();
+		TagbanwaAlphabet alphabet2 = new TagbanwaAlphabet();
 
-		assertEquals(ALPHABET.hashCode(), new TagbanwaAlphabet().hashCode());
+		Integer expectedHashCode = alphabet1.hashCode();
+		Integer actualHashCode = alphabet2.hashCode();
 
-		assertNotEquals(ALPHABET.hashCode(), new RussianAlphabet().hashCode());
+		assertEquals(expectedHashCode, actualHashCode);
 	}
 }

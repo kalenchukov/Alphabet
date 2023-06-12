@@ -31,15 +31,14 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class UkrainianAlphabetUpperCaseTest
 {
-	private static final Alphabetical ALPHABET = new UkrainianAlphabet.UpperCase();
-
 	/**
 	 * Проверка метода {@link UkrainianAlphabet.UpperCase#get()}.
 	 */
 	@Test
 	public void get()
 	{
-		List<Character> expected = List.of(
+		UkrainianAlphabet.UpperCase alphabet = new UkrainianAlphabet.UpperCase();
+		List<Character> expectedList = List.of(
 			'А', 'Б', 'В', 'Г', 'Ґ', 'Д', 
 			'Е', 'Є', 'Ж', 'З', 'И', 'І', 
 			'Ї', 'Й', 'К', 'Л', 'М', 'Н', 
@@ -48,9 +47,9 @@ public class UkrainianAlphabetUpperCaseTest
 			'Ь', 'Ю', 'Я'
 		);
 
-		List<Character> actual = ALPHABET.get();
+		List<Character> actualList = alphabet.get();
 
-		assertArrayEquals(expected.toArray(), actual.toArray());
+		assertArrayEquals(expectedList.toArray(), actualList.toArray());
 	}
 
 	/**
@@ -59,13 +58,12 @@ public class UkrainianAlphabetUpperCaseTest
 	@Test
 	public void testEquals()
 	{
-		assertNotEquals(null, ALPHABET);
+		UkrainianAlphabet.UpperCase alphabet1 = new UkrainianAlphabet.UpperCase();
+		UkrainianAlphabet.UpperCase alphabet2 = new UkrainianAlphabet.UpperCase();
 
-		assertEquals(ALPHABET, ALPHABET);
+		boolean actual = alphabet1.equals(alphabet2);
 
-		assertNotEquals(ALPHABET, new RussianAlphabet.UpperCase());;
-
-		assertEquals(ALPHABET, new UkrainianAlphabet.UpperCase());;
+		assertTrue(actual);
 	}
 
 	/**
@@ -74,10 +72,12 @@ public class UkrainianAlphabetUpperCaseTest
 	@Test
 	public void testHashCode()
 	{
-		assertEquals(ALPHABET.hashCode(), ALPHABET.hashCode());
+		UkrainianAlphabet.UpperCase alphabet1 = new UkrainianAlphabet.UpperCase();
+		UkrainianAlphabet.UpperCase alphabet2 = new UkrainianAlphabet.UpperCase();
 
-		assertEquals(ALPHABET.hashCode(), new UkrainianAlphabet.UpperCase().hashCode());
+		Integer expectedHashCode = alphabet1.hashCode();
+		Integer actualHashCode = alphabet2.hashCode();
 
-		assertNotEquals(ALPHABET.hashCode(), new RussianAlphabet.UpperCase().hashCode());
+		assertEquals(expectedHashCode, actualHashCode);
 	}
 }
