@@ -22,7 +22,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
 /**
  * Класс проверки методов класса {@link ItalianAlphabet.LowerCase}.
@@ -47,7 +47,7 @@ public class ItalianAlphabetLowerCaseTest
 
 		List<Character> actualList = alphabet.get();
 
-		assertArrayEquals(expectedList.toArray(), actualList.toArray());
+		assertThat(actualList).containsSequence(expectedList);
 	}
 
 	/**
@@ -61,7 +61,7 @@ public class ItalianAlphabetLowerCaseTest
 
 		boolean actual = alphabet1.equals(alphabet2);
 
-		assertTrue(actual);
+		assertThat(actual).isTrue();
 	}
 
 	/**
@@ -73,9 +73,9 @@ public class ItalianAlphabetLowerCaseTest
 		ItalianAlphabet.LowerCase alphabet1 = new ItalianAlphabet.LowerCase();
 		ItalianAlphabet.LowerCase alphabet2 = new ItalianAlphabet.LowerCase();
 
-		Integer expectedHashCode = alphabet1.hashCode();
-		Integer actualHashCode = alphabet2.hashCode();
+		int expectedHashCode = alphabet1.hashCode();
+		int actualHashCode = alphabet2.hashCode();
 
-		assertEquals(expectedHashCode, actualHashCode);
+		assertThat(actualHashCode).isEqualTo(expectedHashCode);
 	}
 }

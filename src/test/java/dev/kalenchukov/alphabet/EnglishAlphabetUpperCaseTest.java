@@ -22,7 +22,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
 /**
  * Класс проверки методов класса {@link EnglishAlphabet.UpperCase}.
@@ -46,7 +46,7 @@ public class EnglishAlphabetUpperCaseTest
 
 		List<Character> actualList = alphabet.get();
 
-		assertArrayEquals(expectedList.toArray(), actualList.toArray());
+		assertThat(actualList).containsSequence(expectedList);
 	}
 
 	/**
@@ -60,7 +60,7 @@ public class EnglishAlphabetUpperCaseTest
 
 		boolean actual = alphabet1.equals(alphabet2);
 
-		assertTrue(actual);
+		assertThat(actual).isTrue();
 	}
 
 	/**
@@ -72,9 +72,9 @@ public class EnglishAlphabetUpperCaseTest
 		EnglishAlphabet.UpperCase alphabet1 = new EnglishAlphabet.UpperCase();
 		EnglishAlphabet.UpperCase alphabet2 = new EnglishAlphabet.UpperCase();
 
-		Integer expectedHashCode = alphabet1.hashCode();
-		Integer actualHashCode = alphabet2.hashCode();
+		int expectedHashCode = alphabet1.hashCode();
+		int actualHashCode = alphabet2.hashCode();
 
-		assertEquals(expectedHashCode, actualHashCode);
+		assertThat(actualHashCode).isEqualTo(expectedHashCode);
 	}
 }

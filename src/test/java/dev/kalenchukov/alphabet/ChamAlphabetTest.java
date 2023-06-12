@@ -22,7 +22,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
 /**
  * Класс проверки методов класса {@link ChamAlphabet}.
@@ -55,7 +55,7 @@ public class ChamAlphabetTest
 
 		List<Character> actualList = alphabet.get();
 
-		assertArrayEquals(expectedList.toArray(), actualList.toArray());
+		assertThat(actualList).containsSequence(expectedList);
 	}
 
 	/**
@@ -69,7 +69,7 @@ public class ChamAlphabetTest
 
 		boolean actual = alphabet1.equals(alphabet2);
 
-		assertTrue(actual);
+		assertThat(actual).isTrue();
 	}
 
 	/**
@@ -81,9 +81,9 @@ public class ChamAlphabetTest
 		ChamAlphabet alphabet1 = new ChamAlphabet();
 		ChamAlphabet alphabet2 = new ChamAlphabet();
 
-		Integer expectedHashCode = alphabet1.hashCode();
-		Integer actualHashCode = alphabet2.hashCode();
+		int expectedHashCode = alphabet1.hashCode();
+		int actualHashCode = alphabet2.hashCode();
 
-		assertEquals(expectedHashCode, actualHashCode);
+		assertThat(actualHashCode).isEqualTo(expectedHashCode);
 	}
 }

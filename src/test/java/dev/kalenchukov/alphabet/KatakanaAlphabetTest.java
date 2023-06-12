@@ -22,7 +22,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
 /**
  * Класс проверки методов класса {@link KatakanaAlphabet}.
@@ -51,7 +51,7 @@ public class KatakanaAlphabetTest
 
 		List<Character> actualList = alphabet.get();
 
-		assertArrayEquals(expectedList.toArray(), actualList.toArray());
+		assertThat(actualList).containsSequence(expectedList);
 	}
 
 	/**
@@ -65,7 +65,7 @@ public class KatakanaAlphabetTest
 
 		boolean actual = alphabet1.equals(alphabet2);
 
-		assertTrue(actual);
+		assertThat(actual).isTrue();
 	}
 
 	/**
@@ -77,9 +77,9 @@ public class KatakanaAlphabetTest
 		KatakanaAlphabet alphabet1 = new KatakanaAlphabet();
 		KatakanaAlphabet alphabet2 = new KatakanaAlphabet();
 
-		Integer expectedHashCode = alphabet1.hashCode();
-		Integer actualHashCode = alphabet2.hashCode();
+		int expectedHashCode = alphabet1.hashCode();
+		int actualHashCode = alphabet2.hashCode();
 
-		assertEquals(expectedHashCode, actualHashCode);
+		assertThat(actualHashCode).isEqualTo(expectedHashCode);
 	}
 }

@@ -22,7 +22,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
 /**
  * Класс проверки методов класса {@link JavaneseAlphabet}.
@@ -56,7 +56,7 @@ public class JavaneseAlphabetTest
 
 		List<Character> actualList = alphabet.get();
 
-		assertArrayEquals(expectedList.toArray(), actualList.toArray());
+		assertThat(actualList).containsSequence(expectedList);
 	}
 
 	/**
@@ -70,7 +70,7 @@ public class JavaneseAlphabetTest
 
 		boolean actual = alphabet1.equals(alphabet2);
 
-		assertTrue(actual);
+		assertThat(actual).isTrue();
 	}
 
 	/**
@@ -82,9 +82,9 @@ public class JavaneseAlphabetTest
 		JavaneseAlphabet alphabet1 = new JavaneseAlphabet();
 		JavaneseAlphabet alphabet2 = new JavaneseAlphabet();
 
-		Integer expectedHashCode = alphabet1.hashCode();
-		Integer actualHashCode = alphabet2.hashCode();
+		int expectedHashCode = alphabet1.hashCode();
+		int actualHashCode = alphabet2.hashCode();
 
-		assertEquals(expectedHashCode, actualHashCode);
+		assertThat(actualHashCode).isEqualTo(expectedHashCode);
 	}
 }

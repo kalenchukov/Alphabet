@@ -22,7 +22,7 @@ import dev.kalenchukov.alphabet.Alphabetical;
 import dev.kalenchukov.alphabet.RussianAlphabet;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
 /**
  * Класс проверки констант и методов перечисления {@link Alphabet}.
@@ -42,7 +42,7 @@ public class AlphabetTest
 
 		Alphabetical actualAlphabet = alphabet.getAlphabet();
 
-		assertEquals(expectedAlphabet, actualAlphabet);
+		assertThat(actualAlphabet).isEqualTo(expectedAlphabet);
 	}
 
 	/**
@@ -55,6 +55,6 @@ public class AlphabetTest
 
 		String actualString = alphabet.toString();
 
-		assertEquals("SYLOTI NAGRI", actualString);
+		assertThat(actualString).isEqualTo("SYLOTI NAGRI");
 	}
 }
