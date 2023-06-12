@@ -50,33 +50,4 @@ public class GermanAlphabetLowerCaseTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link GermanAlphabet.LowerCase#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		GermanAlphabet.LowerCase alphabet1 = new GermanAlphabet.LowerCase();
-		GermanAlphabet.LowerCase alphabet2 = new GermanAlphabet.LowerCase();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link GermanAlphabet.LowerCase#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		GermanAlphabet.LowerCase alphabet1 = new GermanAlphabet.LowerCase();
-		GermanAlphabet.LowerCase alphabet2 = new GermanAlphabet.LowerCase();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

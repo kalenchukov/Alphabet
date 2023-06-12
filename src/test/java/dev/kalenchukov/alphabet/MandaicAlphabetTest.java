@@ -50,33 +50,4 @@ public class MandaicAlphabetTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link MandaicAlphabet#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		MandaicAlphabet alphabet1 = new MandaicAlphabet();
-		MandaicAlphabet alphabet2 = new MandaicAlphabet();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link MandaicAlphabet#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		MandaicAlphabet alphabet1 = new MandaicAlphabet();
-		MandaicAlphabet alphabet2 = new MandaicAlphabet();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

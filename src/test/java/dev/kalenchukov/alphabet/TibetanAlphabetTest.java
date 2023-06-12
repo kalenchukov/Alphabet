@@ -51,33 +51,4 @@ public class TibetanAlphabetTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link TibetanAlphabet#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		TibetanAlphabet alphabet1 = new TibetanAlphabet();
-		TibetanAlphabet alphabet2 = new TibetanAlphabet();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link TibetanAlphabet#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		TibetanAlphabet alphabet1 = new TibetanAlphabet();
-		TibetanAlphabet alphabet2 = new TibetanAlphabet();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

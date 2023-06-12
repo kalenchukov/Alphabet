@@ -56,33 +56,4 @@ public class UkrainianAlphabetTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link UkrainianAlphabet#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		UkrainianAlphabet alphabet1 = new UkrainianAlphabet();
-		UkrainianAlphabet alphabet2 = new UkrainianAlphabet();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link UkrainianAlphabet#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		UkrainianAlphabet alphabet1 = new UkrainianAlphabet();
-		UkrainianAlphabet alphabet2 = new UkrainianAlphabet();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

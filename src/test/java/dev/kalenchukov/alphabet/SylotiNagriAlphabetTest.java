@@ -53,33 +53,4 @@ public class SylotiNagriAlphabetTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link SylotiNagriAlphabet#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		SylotiNagriAlphabet alphabet1 = new SylotiNagriAlphabet();
-		SylotiNagriAlphabet alphabet2 = new SylotiNagriAlphabet();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link SylotiNagriAlphabet#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		SylotiNagriAlphabet alphabet1 = new SylotiNagriAlphabet();
-		SylotiNagriAlphabet alphabet2 = new SylotiNagriAlphabet();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

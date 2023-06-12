@@ -52,33 +52,4 @@ public class RejangAlphabetTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link RejangAlphabet#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		RejangAlphabet alphabet1 = new RejangAlphabet();
-		RejangAlphabet alphabet2 = new RejangAlphabet();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link RejangAlphabet#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		RejangAlphabet alphabet1 = new RejangAlphabet();
-		RejangAlphabet alphabet2 = new RejangAlphabet();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

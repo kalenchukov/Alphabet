@@ -50,33 +50,4 @@ public class FrenchAlphabetUpperCaseTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link FrenchAlphabet.UpperCase#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		FrenchAlphabet.UpperCase alphabet1 = new FrenchAlphabet.UpperCase();
-		FrenchAlphabet.UpperCase alphabet2 = new FrenchAlphabet.UpperCase();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link FrenchAlphabet.UpperCase#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		FrenchAlphabet.UpperCase alphabet1 = new FrenchAlphabet.UpperCase();
-		FrenchAlphabet.UpperCase alphabet2 = new FrenchAlphabet.UpperCase();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

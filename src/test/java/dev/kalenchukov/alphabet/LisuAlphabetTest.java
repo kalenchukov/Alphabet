@@ -52,33 +52,4 @@ public class LisuAlphabetTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link LisuAlphabet#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		LisuAlphabet alphabet1 = new LisuAlphabet();
-		LisuAlphabet alphabet2 = new LisuAlphabet();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link LisuAlphabet#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		LisuAlphabet alphabet1 = new LisuAlphabet();
-		LisuAlphabet alphabet2 = new LisuAlphabet();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

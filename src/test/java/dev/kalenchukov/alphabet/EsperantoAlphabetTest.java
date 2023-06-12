@@ -55,33 +55,4 @@ public class EsperantoAlphabetTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link EsperantoAlphabet#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		EsperantoAlphabet alphabet1 = new EsperantoAlphabet();
-		EsperantoAlphabet alphabet2 = new EsperantoAlphabet();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link EsperantoAlphabet#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		EsperantoAlphabet alphabet1 = new EsperantoAlphabet();
-		EsperantoAlphabet alphabet2 = new EsperantoAlphabet();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

@@ -52,33 +52,4 @@ public class BelarusianAlphabetTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link BelarusianAlphabet#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		BelarusianAlphabet alphabet1 = new BelarusianAlphabet();
-		BelarusianAlphabet alphabet2 = new BelarusianAlphabet();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link BelarusianAlphabet#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		BelarusianAlphabet alphabet1 = new BelarusianAlphabet();
-		BelarusianAlphabet alphabet2 = new BelarusianAlphabet();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

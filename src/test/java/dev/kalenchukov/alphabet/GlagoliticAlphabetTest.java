@@ -53,33 +53,4 @@ public class GlagoliticAlphabetTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link GlagoliticAlphabet#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		GlagoliticAlphabet alphabet1 = new GlagoliticAlphabet();
-		GlagoliticAlphabet alphabet2 = new GlagoliticAlphabet();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link GlagoliticAlphabet#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		GlagoliticAlphabet alphabet1 = new GlagoliticAlphabet();
-		GlagoliticAlphabet alphabet2 = new GlagoliticAlphabet();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

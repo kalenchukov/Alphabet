@@ -52,33 +52,4 @@ public class ArmenianAlphabetLowerCaseTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link ArmenianAlphabet.LowerCase#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		ArmenianAlphabet.LowerCase alphabet1 = new ArmenianAlphabet.LowerCase();
-		ArmenianAlphabet.LowerCase alphabet2 = new ArmenianAlphabet.LowerCase();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link ArmenianAlphabet.LowerCase#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		ArmenianAlphabet.LowerCase alphabet1 = new ArmenianAlphabet.LowerCase();
-		ArmenianAlphabet.LowerCase alphabet2 = new ArmenianAlphabet.LowerCase();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

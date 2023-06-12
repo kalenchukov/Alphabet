@@ -57,33 +57,4 @@ public class ChamAlphabetTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link ChamAlphabet#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		ChamAlphabet alphabet1 = new ChamAlphabet();
-		ChamAlphabet alphabet2 = new ChamAlphabet();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link ChamAlphabet#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		ChamAlphabet alphabet1 = new ChamAlphabet();
-		ChamAlphabet alphabet2 = new ChamAlphabet();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

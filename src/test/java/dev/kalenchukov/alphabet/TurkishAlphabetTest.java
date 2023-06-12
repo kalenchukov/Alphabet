@@ -55,33 +55,4 @@ public class TurkishAlphabetTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link TurkishAlphabet#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		TurkishAlphabet alphabet1 = new TurkishAlphabet();
-		TurkishAlphabet alphabet2 = new TurkishAlphabet();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link TurkishAlphabet#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		TurkishAlphabet alphabet1 = new TurkishAlphabet();
-		TurkishAlphabet alphabet2 = new TurkishAlphabet();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

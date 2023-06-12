@@ -47,33 +47,4 @@ public class InternationalPhoneticAlphabetUpperCaseTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link InternationalPhoneticAlphabet.UpperCase#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		InternationalPhoneticAlphabet.UpperCase alphabet1 = new InternationalPhoneticAlphabet.UpperCase();
-		InternationalPhoneticAlphabet.UpperCase alphabet2 = new InternationalPhoneticAlphabet.UpperCase();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link InternationalPhoneticAlphabet.UpperCase#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		InternationalPhoneticAlphabet.UpperCase alphabet1 = new InternationalPhoneticAlphabet.UpperCase();
-		InternationalPhoneticAlphabet.UpperCase alphabet2 = new InternationalPhoneticAlphabet.UpperCase();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

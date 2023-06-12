@@ -49,33 +49,4 @@ public class TagalogAlphabetTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link TagalogAlphabet#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		TagalogAlphabet alphabet1 = new TagalogAlphabet();
-		TagalogAlphabet alphabet2 = new TagalogAlphabet();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link TagalogAlphabet#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		TagalogAlphabet alphabet1 = new TagalogAlphabet();
-		TagalogAlphabet alphabet2 = new TagalogAlphabet();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

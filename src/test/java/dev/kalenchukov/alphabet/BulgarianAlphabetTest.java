@@ -55,33 +55,4 @@ public class BulgarianAlphabetTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link BulgarianAlphabet#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		BulgarianAlphabet alphabet1 = new BulgarianAlphabet();
-		BulgarianAlphabet alphabet2 = new BulgarianAlphabet();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link BulgarianAlphabet#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		BulgarianAlphabet alphabet1 = new BulgarianAlphabet();
-		BulgarianAlphabet alphabet2 = new BulgarianAlphabet();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

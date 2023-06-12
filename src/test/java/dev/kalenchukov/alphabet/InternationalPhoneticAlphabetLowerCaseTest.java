@@ -66,33 +66,4 @@ public class InternationalPhoneticAlphabetLowerCaseTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link InternationalPhoneticAlphabet.LowerCase#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		InternationalPhoneticAlphabet.LowerCase alphabet1 = new InternationalPhoneticAlphabet.LowerCase();
-		InternationalPhoneticAlphabet.LowerCase alphabet2 = new InternationalPhoneticAlphabet.LowerCase();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link InternationalPhoneticAlphabet.LowerCase#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		InternationalPhoneticAlphabet.LowerCase alphabet1 = new InternationalPhoneticAlphabet.LowerCase();
-		InternationalPhoneticAlphabet.LowerCase alphabet2 = new InternationalPhoneticAlphabet.LowerCase();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

@@ -53,33 +53,4 @@ public class OlChikiAlphabetTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link OlChikiAlphabet#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		OlChikiAlphabet alphabet1 = new OlChikiAlphabet();
-		OlChikiAlphabet alphabet2 = new OlChikiAlphabet();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link OlChikiAlphabet#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		OlChikiAlphabet alphabet1 = new OlChikiAlphabet();
-		OlChikiAlphabet alphabet2 = new OlChikiAlphabet();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

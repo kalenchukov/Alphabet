@@ -51,33 +51,4 @@ public class MongolianAlphabetTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link MongolianAlphabet#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		MongolianAlphabet alphabet1 = new MongolianAlphabet();
-		MongolianAlphabet alphabet2 = new MongolianAlphabet();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link MongolianAlphabet#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		MongolianAlphabet alphabet1 = new MongolianAlphabet();
-		MongolianAlphabet alphabet2 = new MongolianAlphabet();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

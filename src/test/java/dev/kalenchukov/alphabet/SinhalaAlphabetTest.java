@@ -58,33 +58,4 @@ public class SinhalaAlphabetTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link SinhalaAlphabet#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		SinhalaAlphabet alphabet1 = new SinhalaAlphabet();
-		SinhalaAlphabet alphabet2 = new SinhalaAlphabet();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link SinhalaAlphabet#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		SinhalaAlphabet alphabet1 = new SinhalaAlphabet();
-		SinhalaAlphabet alphabet2 = new SinhalaAlphabet();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

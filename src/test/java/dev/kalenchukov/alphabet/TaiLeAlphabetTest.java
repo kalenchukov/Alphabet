@@ -51,33 +51,4 @@ public class TaiLeAlphabetTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link TaiLeAlphabet#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		TaiLeAlphabet alphabet1 = new TaiLeAlphabet();
-		TaiLeAlphabet alphabet2 = new TaiLeAlphabet();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link TaiLeAlphabet#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		TaiLeAlphabet alphabet1 = new TaiLeAlphabet();
-		TaiLeAlphabet alphabet2 = new TaiLeAlphabet();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

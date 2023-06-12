@@ -50,33 +50,4 @@ public class GreekAlphabetTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link GreekAlphabet#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		GreekAlphabet alphabet1 = new GreekAlphabet();
-		GreekAlphabet alphabet2 = new GreekAlphabet();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link GreekAlphabet#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		GreekAlphabet alphabet1 = new GreekAlphabet();
-		GreekAlphabet alphabet2 = new GreekAlphabet();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

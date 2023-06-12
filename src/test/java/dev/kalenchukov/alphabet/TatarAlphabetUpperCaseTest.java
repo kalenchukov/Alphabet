@@ -52,33 +52,4 @@ public class TatarAlphabetUpperCaseTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link TatarAlphabet.UpperCase#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		TatarAlphabet.UpperCase alphabet1 = new TatarAlphabet.UpperCase();
-		TatarAlphabet.UpperCase alphabet2 = new TatarAlphabet.UpperCase();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link TatarAlphabet.UpperCase#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		TatarAlphabet.UpperCase alphabet1 = new TatarAlphabet.UpperCase();
-		TatarAlphabet.UpperCase alphabet2 = new TatarAlphabet.UpperCase();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

@@ -49,33 +49,4 @@ public class ItalianAlphabetLowerCaseTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link ItalianAlphabet.LowerCase#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		ItalianAlphabet.LowerCase alphabet1 = new ItalianAlphabet.LowerCase();
-		ItalianAlphabet.LowerCase alphabet2 = new ItalianAlphabet.LowerCase();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link ItalianAlphabet.LowerCase#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		ItalianAlphabet.LowerCase alphabet1 = new ItalianAlphabet.LowerCase();
-		ItalianAlphabet.LowerCase alphabet2 = new ItalianAlphabet.LowerCase();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

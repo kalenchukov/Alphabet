@@ -51,33 +51,4 @@ public class UkrainianAlphabetLowerCaseTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link UkrainianAlphabet.LowerCase#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		UkrainianAlphabet.LowerCase alphabet1 = new UkrainianAlphabet.LowerCase();
-		UkrainianAlphabet.LowerCase alphabet2 = new UkrainianAlphabet.LowerCase();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link UkrainianAlphabet.LowerCase#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		UkrainianAlphabet.LowerCase alphabet1 = new UkrainianAlphabet.LowerCase();
-		UkrainianAlphabet.LowerCase alphabet2 = new UkrainianAlphabet.LowerCase();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

@@ -48,33 +48,4 @@ public class EnglishAlphabetLowerCaseTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link EnglishAlphabet.LowerCase#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		EnglishAlphabet.LowerCase alphabet1 = new EnglishAlphabet.LowerCase();
-		EnglishAlphabet.LowerCase alphabet2 = new EnglishAlphabet.LowerCase();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link EnglishAlphabet.LowerCase#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		EnglishAlphabet.LowerCase alphabet1 = new EnglishAlphabet.LowerCase();
-		EnglishAlphabet.LowerCase alphabet2 = new EnglishAlphabet.LowerCase();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

@@ -52,33 +52,4 @@ public class ItalianAlphabetTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link ItalianAlphabet#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		ItalianAlphabet alphabet1 = new ItalianAlphabet();
-		ItalianAlphabet alphabet2 = new ItalianAlphabet();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link ItalianAlphabet#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		ItalianAlphabet alphabet1 = new ItalianAlphabet();
-		ItalianAlphabet alphabet2 = new ItalianAlphabet();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

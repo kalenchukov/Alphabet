@@ -50,33 +50,4 @@ public class BulgarianAlphabetLowerCaseTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link BulgarianAlphabet.LowerCase#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		BulgarianAlphabet.LowerCase alphabet1 = new BulgarianAlphabet.LowerCase();
-		BulgarianAlphabet.LowerCase alphabet2 = new BulgarianAlphabet.LowerCase();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link BulgarianAlphabet.LowerCase#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		BulgarianAlphabet.LowerCase alphabet1 = new BulgarianAlphabet.LowerCase();
-		BulgarianAlphabet.LowerCase alphabet2 = new BulgarianAlphabet.LowerCase();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

@@ -49,33 +49,4 @@ public class BuhidAlphabetTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link BuhidAlphabet#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		BuhidAlphabet alphabet1 = new BuhidAlphabet();
-		BuhidAlphabet alphabet2 = new BuhidAlphabet();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link BuhidAlphabet#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		BuhidAlphabet alphabet1 = new BuhidAlphabet();
-		BuhidAlphabet alphabet2 = new BuhidAlphabet();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

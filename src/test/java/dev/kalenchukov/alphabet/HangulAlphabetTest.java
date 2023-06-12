@@ -54,33 +54,4 @@ public class HangulAlphabetTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link HangulAlphabet#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		HangulAlphabet alphabet1 = new HangulAlphabet();
-		HangulAlphabet alphabet2 = new HangulAlphabet();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link HangulAlphabet#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		HangulAlphabet alphabet1 = new HangulAlphabet();
-		HangulAlphabet alphabet2 = new HangulAlphabet();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

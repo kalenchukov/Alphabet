@@ -50,33 +50,4 @@ public class FrenchAlphabetLowerCaseTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link FrenchAlphabet.LowerCase#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		FrenchAlphabet.LowerCase alphabet1 = new FrenchAlphabet.LowerCase();
-		FrenchAlphabet.LowerCase alphabet2 = new FrenchAlphabet.LowerCase();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link FrenchAlphabet.LowerCase#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		FrenchAlphabet.LowerCase alphabet1 = new FrenchAlphabet.LowerCase();
-		FrenchAlphabet.LowerCase alphabet2 = new FrenchAlphabet.LowerCase();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

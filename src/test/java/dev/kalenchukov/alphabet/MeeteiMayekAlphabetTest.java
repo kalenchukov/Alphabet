@@ -53,33 +53,4 @@ public class MeeteiMayekAlphabetTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link MeeteiMayekAlphabet#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		MeeteiMayekAlphabet alphabet1 = new MeeteiMayekAlphabet();
-		MeeteiMayekAlphabet alphabet2 = new MeeteiMayekAlphabet();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link MeeteiMayekAlphabet#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		MeeteiMayekAlphabet alphabet1 = new MeeteiMayekAlphabet();
-		MeeteiMayekAlphabet alphabet2 = new MeeteiMayekAlphabet();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

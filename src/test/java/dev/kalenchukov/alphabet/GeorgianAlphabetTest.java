@@ -51,33 +51,4 @@ public class GeorgianAlphabetTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link GeorgianAlphabet#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		GeorgianAlphabet alphabet1 = new GeorgianAlphabet();
-		GeorgianAlphabet alphabet2 = new GeorgianAlphabet();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link GeorgianAlphabet#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		GeorgianAlphabet alphabet1 = new GeorgianAlphabet();
-		GeorgianAlphabet alphabet2 = new GeorgianAlphabet();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

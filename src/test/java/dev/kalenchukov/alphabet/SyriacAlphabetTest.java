@@ -49,33 +49,4 @@ public class SyriacAlphabetTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link SyriacAlphabet#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		SyriacAlphabet alphabet1 = new SyriacAlphabet();
-		SyriacAlphabet alphabet2 = new SyriacAlphabet();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link SyriacAlphabet#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		SyriacAlphabet alphabet1 = new SyriacAlphabet();
-		SyriacAlphabet alphabet2 = new SyriacAlphabet();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

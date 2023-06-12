@@ -49,33 +49,4 @@ public class CyrillicAlphabetTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link CyrillicAlphabet#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		CyrillicAlphabet alphabet1 = new CyrillicAlphabet();
-		CyrillicAlphabet alphabet2 = new CyrillicAlphabet();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link CyrillicAlphabet#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		CyrillicAlphabet alphabet1 = new CyrillicAlphabet();
-		CyrillicAlphabet alphabet2 = new CyrillicAlphabet();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

@@ -49,33 +49,4 @@ public class RussianAlphabetLowerCaseTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link RussianAlphabet.LowerCase#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		RussianAlphabet.LowerCase alphabet1 = new RussianAlphabet.LowerCase();
-		RussianAlphabet.LowerCase alphabet2 = new RussianAlphabet.LowerCase();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link RussianAlphabet.LowerCase#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		RussianAlphabet.LowerCase alphabet1 = new RussianAlphabet.LowerCase();
-		RussianAlphabet.LowerCase alphabet2 = new RussianAlphabet.LowerCase();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

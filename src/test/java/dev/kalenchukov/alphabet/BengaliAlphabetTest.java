@@ -54,33 +54,4 @@ public class BengaliAlphabetTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link BengaliAlphabet#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		BengaliAlphabet alphabet1 = new BengaliAlphabet();
-		BengaliAlphabet alphabet2 = new BengaliAlphabet();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link BengaliAlphabet#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		BengaliAlphabet alphabet1 = new BengaliAlphabet();
-		BengaliAlphabet alphabet2 = new BengaliAlphabet();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

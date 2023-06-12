@@ -60,47 +60,6 @@ public final class BelarusianAlphabet extends AbstractAlphabet implements Alphab
 	}
 
 	/**
-	 * {@inheritDoc}
-	 *
-	 * @param obj {@inheritDoc}
-	 * @return {@inheritDoc}
-	 */
-	@Override
-	public boolean equals(@Nullable final Object obj)
-	{
-		if (obj == null) {
-			return false;
-		}
-
-		if (this == obj) {
-			return true;
-		}
-
-		if (!this.getClass().equals(obj.getClass())) {
-			return false;
-		}
-
-		final BelarusianAlphabet alphabet = (BelarusianAlphabet) obj;
-
-		if (!Objects.equals(this.get(), alphabet.get())) {
-			return false;
-		}
-
-		return true;
-	}
-
-	/**
-	 * {@inheritDoc}
-	 *
-	 * @return {@inheritDoc}
-	 */
-	@Override
-	public int hashCode()
-	{
-		return this.get().hashCode();
-	}
-
-	/**
 	 * Класс прописных букв белорусского алфавита.
 	 *
 	 * @author Алексей Каленчуков
@@ -127,47 +86,6 @@ public final class BelarusianAlphabet extends AbstractAlphabet implements Alphab
 		public UpperCase()
 		{
 			super(BelarusianAlphabet.UpperCase.LETTERS);
-		}
-
-		/**
-		 * {@inheritDoc}
-		 *
-		 * @param obj {@inheritDoc}
-		 * @return {@inheritDoc}
-		 */
-		@Override
-		public boolean equals(@Nullable final Object obj)
-		{
-			if (obj == null) {
-				return false;
-			}
-
-			if (this == obj) {
-				return true;
-			}
-
-			if (!this.getClass().equals(obj.getClass())) {
-				return false;
-			}
-
-			final BelarusianAlphabet.UpperCase alphabet = (BelarusianAlphabet.UpperCase) obj;
-
-			if (!Objects.equals(this.get(), alphabet.get())) {
-				return false;
-			}
-
-			return true;
-		}
-
-		/**
-		 * {@inheritDoc}
-		 *
-		 * @return {@inheritDoc}
-		 */
-		@Override
-		public int hashCode()
-		{
-			return this.get().hashCode();
 		}
 	}
 
@@ -198,47 +116,6 @@ public final class BelarusianAlphabet extends AbstractAlphabet implements Alphab
 		public LowerCase()
 		{
 			super(BelarusianAlphabet.LowerCase.LETTERS);
-		}
-
-		/**
-		 * {@inheritDoc}
-		 *
-		 * @param obj {@inheritDoc}
-		 * @return {@inheritDoc}
-		 */
-		@Override
-		public boolean equals(@Nullable final Object obj)
-		{
-			if (obj == null) {
-				return false;
-			}
-
-			if (this == obj) {
-				return true;
-			}
-
-			if (!this.getClass().equals(obj.getClass())) {
-				return false;
-			}
-
-			final BelarusianAlphabet.LowerCase alphabet = (BelarusianAlphabet.LowerCase) obj;
-
-			if (!Objects.equals(this.get(), alphabet.get())) {
-				return false;
-			}
-
-			return true;
-		}
-
-		/**
-		 * {@inheritDoc}
-		 *
-		 * @return {@inheritDoc}
-		 */
-		@Override
-		public int hashCode()
-		{
-			return this.get().hashCode();
 		}
 	}
 }

@@ -54,33 +54,4 @@ public class BatakAlphabetTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link BatakAlphabet#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		BatakAlphabet alphabet1 = new BatakAlphabet();
-		BatakAlphabet alphabet2 = new BatakAlphabet();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link BatakAlphabet#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		BatakAlphabet alphabet1 = new BatakAlphabet();
-		BatakAlphabet alphabet2 = new BatakAlphabet();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

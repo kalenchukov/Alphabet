@@ -50,33 +50,4 @@ public class OghamAlphabetTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link OghamAlphabet#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		OghamAlphabet alphabet1 = new OghamAlphabet();
-		OghamAlphabet alphabet2 = new OghamAlphabet();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link OghamAlphabet#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		OghamAlphabet alphabet1 = new OghamAlphabet();
-		OghamAlphabet alphabet2 = new OghamAlphabet();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

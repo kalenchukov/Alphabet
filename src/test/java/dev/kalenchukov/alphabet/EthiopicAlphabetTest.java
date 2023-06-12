@@ -86,33 +86,4 @@ public class EthiopicAlphabetTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link EthiopicAlphabet#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		EthiopicAlphabet alphabet1 = new EthiopicAlphabet();
-		EthiopicAlphabet alphabet2 = new EthiopicAlphabet();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link EthiopicAlphabet#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		EthiopicAlphabet alphabet1 = new EthiopicAlphabet();
-		EthiopicAlphabet alphabet2 = new EthiopicAlphabet();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

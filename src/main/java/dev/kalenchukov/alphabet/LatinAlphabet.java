@@ -58,47 +58,6 @@ public final class LatinAlphabet extends AbstractAlphabet implements Alphabetica
 	}
 
 	/**
-	 * {@inheritDoc}
-	 *
-	 * @param obj {@inheritDoc}
-	 * @return {@inheritDoc}
-	 */
-	@Override
-	public boolean equals(@Nullable final Object obj)
-	{
-		if (obj == null) {
-			return false;
-		}
-
-		if (this == obj) {
-			return true;
-		}
-
-		if (this.getClass() != obj.getClass()) {
-			return false;
-		}
-
-		final LatinAlphabet alphabet = (LatinAlphabet) obj;
-
-		if (!Objects.equals(this.get(), alphabet.get())) {
-			return false;
-		}
-
-		return true;
-	}
-
-	/**
-	 * {@inheritDoc}
-	 *
-	 * @return {@inheritDoc}
-	 */
-	@Override
-	public int hashCode()
-	{
-		return this.get().hashCode();
-	}
-
-	/**
 	 * Класс прописных букв Латинский алфавит алфавита.
 	 *
 	 * @author Алексей Каленчуков
@@ -124,47 +83,6 @@ public final class LatinAlphabet extends AbstractAlphabet implements Alphabetica
 		public UpperCase()
 		{
 			super(LatinAlphabet.UpperCase.LETTERS);
-		}
-
-		/**
-		 * {@inheritDoc}
-		 *
-		 * @param obj {@inheritDoc}
-		 * @return {@inheritDoc}
-		 */
-		@Override
-		public boolean equals(@Nullable final Object obj)
-		{
-			if (obj == null) {
-				return false;
-			}
-
-			if (this == obj) {
-				return true;
-			}
-
-			if (this.getClass() != obj.getClass()) {
-				return false;
-			}
-
-			final LatinAlphabet.UpperCase alphabet = (LatinAlphabet.UpperCase) obj;
-
-			if (!Objects.equals(this.get(), alphabet.get())) {
-				return false;
-			}
-
-			return true;
-		}
-
-		/**
-		 * {@inheritDoc}
-		 *
-		 * @return {@inheritDoc}
-		 */
-		@Override
-		public int hashCode()
-		{
-			return this.get().hashCode();
 		}
 	}
 
@@ -194,47 +112,6 @@ public final class LatinAlphabet extends AbstractAlphabet implements Alphabetica
 		public LowerCase()
 		{
 			super(LatinAlphabet.LowerCase.LETTERS);
-		}
-
-		/**
-		 * {@inheritDoc}
-		 *
-		 * @param obj {@inheritDoc}
-		 * @return {@inheritDoc}
-		 */
-		@Override
-		public boolean equals(@Nullable final Object obj)
-		{
-			if (obj == null) {
-				return false;
-			}
-
-			if (this == obj) {
-				return true;
-			}
-
-			if (this.getClass() != obj.getClass()) {
-				return false;
-			}
-
-			final LatinAlphabet.LowerCase alphabet = (LatinAlphabet.LowerCase) obj;
-
-			if (!Objects.equals(this.get(), alphabet.get())) {
-				return false;
-			}
-
-			return true;
-		}
-
-		/**
-		 * {@inheritDoc}
-		 *
-		 * @return {@inheritDoc}
-		 */
-		@Override
-		public int hashCode()
-		{
-			return this.get().hashCode();
 		}
 	}
 }

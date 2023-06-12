@@ -55,33 +55,4 @@ public class NkoAlphabetTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link NkoAlphabet#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		NkoAlphabet alphabet1 = new NkoAlphabet();
-		NkoAlphabet alphabet2 = new NkoAlphabet();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link NkoAlphabet#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		NkoAlphabet alphabet1 = new NkoAlphabet();
-		NkoAlphabet alphabet2 = new NkoAlphabet();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

@@ -51,33 +51,4 @@ public class HungarianAlphabetTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link HungarianAlphabet#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		HungarianAlphabet alphabet1 = new HungarianAlphabet();
-		HungarianAlphabet alphabet2 = new HungarianAlphabet();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link HungarianAlphabet#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		HungarianAlphabet alphabet1 = new HungarianAlphabet();
-		HungarianAlphabet alphabet2 = new HungarianAlphabet();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

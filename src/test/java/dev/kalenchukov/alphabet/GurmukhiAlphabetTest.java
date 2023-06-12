@@ -55,33 +55,4 @@ public class GurmukhiAlphabetTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link GurmukhiAlphabet#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		GurmukhiAlphabet alphabet1 = new GurmukhiAlphabet();
-		GurmukhiAlphabet alphabet2 = new GurmukhiAlphabet();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link GurmukhiAlphabet#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		GurmukhiAlphabet alphabet1 = new GurmukhiAlphabet();
-		GurmukhiAlphabet alphabet2 = new GurmukhiAlphabet();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

@@ -49,33 +49,4 @@ public class RussianAlphabetUpperCaseTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link RussianAlphabet.UpperCase#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		RussianAlphabet.UpperCase alphabet1 = new RussianAlphabet.UpperCase();
-		RussianAlphabet.UpperCase alphabet2 = new RussianAlphabet.UpperCase();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link RussianAlphabet.UpperCase#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		RussianAlphabet.UpperCase alphabet1 = new RussianAlphabet.UpperCase();
-		RussianAlphabet.UpperCase alphabet2 = new RussianAlphabet.UpperCase();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

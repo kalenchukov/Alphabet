@@ -57,33 +57,4 @@ public class HiraganaAlphabetTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link HiraganaAlphabet#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		HiraganaAlphabet alphabet1 = new HiraganaAlphabet();
-		HiraganaAlphabet alphabet2 = new HiraganaAlphabet();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link HiraganaAlphabet#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		HiraganaAlphabet alphabet1 = new HiraganaAlphabet();
-		HiraganaAlphabet alphabet2 = new HiraganaAlphabet();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

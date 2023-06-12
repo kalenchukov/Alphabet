@@ -56,33 +56,4 @@ public class PolishAlphabetTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link PolishAlphabet#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		PolishAlphabet alphabet1 = new PolishAlphabet();
-		PolishAlphabet alphabet2 = new PolishAlphabet();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link PolishAlphabet#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		PolishAlphabet alphabet1 = new PolishAlphabet();
-		PolishAlphabet alphabet2 = new PolishAlphabet();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

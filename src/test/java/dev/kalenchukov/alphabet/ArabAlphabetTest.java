@@ -62,33 +62,4 @@ public class ArabAlphabetTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link ArabAlphabet#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		ArabAlphabet alphabet1 = new ArabAlphabet();
-		ArabAlphabet alphabet2 = new ArabAlphabet();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link ArabAlphabet#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		ArabAlphabet alphabet1 = new ArabAlphabet();
-		ArabAlphabet alphabet2 = new ArabAlphabet();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

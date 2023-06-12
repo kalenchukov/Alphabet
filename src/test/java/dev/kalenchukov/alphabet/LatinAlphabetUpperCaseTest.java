@@ -50,33 +50,4 @@ public class LatinAlphabetUpperCaseTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link LatinAlphabet.UpperCase#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		LatinAlphabet.UpperCase alphabet1 = new LatinAlphabet.UpperCase();
-		LatinAlphabet.UpperCase alphabet2 = new LatinAlphabet.UpperCase();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link LatinAlphabet.UpperCase#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		LatinAlphabet.UpperCase alphabet1 = new LatinAlphabet.UpperCase();
-		LatinAlphabet.UpperCase alphabet2 = new LatinAlphabet.UpperCase();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

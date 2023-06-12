@@ -59,47 +59,6 @@ public final class EsperantoAlphabet extends AbstractAlphabet implements Alphabe
 	}
 
 	/**
-	 * {@inheritDoc}
-	 *
-	 * @param obj {@inheritDoc}
-	 * @return {@inheritDoc}
-	 */
-	@Override
-	public boolean equals(@Nullable final Object obj)
-	{
-		if (obj == null) {
-			return false;
-		}
-
-		if (this == obj) {
-			return true;
-		}
-
-		if (this.getClass() != obj.getClass()) {
-			return false;
-		}
-
-		final EsperantoAlphabet alphabet = (EsperantoAlphabet) obj;
-
-		if (!Objects.equals(this.get(), alphabet.get())) {
-			return false;
-		}
-
-		return true;
-	}
-
-	/**
-	 * {@inheritDoc}
-	 *
-	 * @return {@inheritDoc}
-	 */
-	@Override
-	public int hashCode()
-	{
-		return this.get().hashCode();
-	}
-
-	/**
 	 * Класс прописных букв алфавита эсперанто.
 	 *
 	 * @author Алексей Каленчуков
@@ -125,47 +84,6 @@ public final class EsperantoAlphabet extends AbstractAlphabet implements Alphabe
 		public UpperCase()
 		{
 			super(EsperantoAlphabet.UpperCase.LETTERS);
-		}
-
-		/**
-		 * {@inheritDoc}
-		 *
-		 * @param obj {@inheritDoc}
-		 * @return {@inheritDoc}
-		 */
-		@Override
-		public boolean equals(@Nullable final Object obj)
-		{
-			if (obj == null) {
-				return false;
-			}
-
-			if (this == obj) {
-				return true;
-			}
-
-			if (this.getClass() != obj.getClass()) {
-				return false;
-			}
-
-			final EsperantoAlphabet.UpperCase alphabet = (EsperantoAlphabet.UpperCase) obj;
-
-			if (!Objects.equals(this.get(), alphabet.get())) {
-				return false;
-			}
-
-			return true;
-		}
-
-		/**
-		 * {@inheritDoc}
-		 *
-		 * @return {@inheritDoc}
-		 */
-		@Override
-		public int hashCode()
-		{
-			return this.get().hashCode();
 		}
 	}
 
@@ -195,47 +113,6 @@ public final class EsperantoAlphabet extends AbstractAlphabet implements Alphabe
 		public LowerCase()
 		{
 			super(EsperantoAlphabet.LowerCase.LETTERS);
-		}
-
-		/**
-		 * {@inheritDoc}
-		 *
-		 * @param obj {@inheritDoc}
-		 * @return {@inheritDoc}
-		 */
-		@Override
-		public boolean equals(@Nullable final Object obj)
-		{
-			if (obj == null) {
-				return false;
-			}
-
-			if (this == obj) {
-				return true;
-			}
-
-			if (this.getClass() != obj.getClass()) {
-				return false;
-			}
-
-			final EsperantoAlphabet.LowerCase alphabet = (EsperantoAlphabet.LowerCase) obj;
-
-			if (!Objects.equals(this.get(), alphabet.get())) {
-				return false;
-			}
-
-			return true;
-		}
-
-		/**
-		 * {@inheritDoc}
-		 *
-		 * @return {@inheritDoc}
-		 */
-		@Override
-		public int hashCode()
-		{
-			return this.get().hashCode();
 		}
 	}
 }

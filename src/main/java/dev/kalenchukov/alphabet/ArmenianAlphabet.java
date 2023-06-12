@@ -62,47 +62,6 @@ public final class ArmenianAlphabet extends AbstractAlphabet implements Alphabet
 	}
 
 	/**
-	 * {@inheritDoc}
-	 *
-	 * @param obj {@inheritDoc}
-	 * @return {@inheritDoc}
-	 */
-	@Override
-	public boolean equals(@Nullable final Object obj)
-	{
-		if (obj == null) {
-			return false;
-		}
-
-		if (this == obj) {
-			return true;
-		}
-
-		if (this.getClass() != obj.getClass()) {
-			return false;
-		}
-
-		final ArmenianAlphabet alphabet = (ArmenianAlphabet) obj;
-
-		if (!Objects.equals(this.get(), alphabet.get())) {
-			return false;
-		}
-
-		return true;
-	}
-
-	/**
-	 * {@inheritDoc}
-	 *
-	 * @return {@inheritDoc}
-	 */
-	@Override
-	public int hashCode()
-	{
-		return this.get().hashCode();
-	}
-
-	/**
 	 * Класс прописных букв армянского алфавита.
 	 *
 	 * @author Алексей Каленчуков
@@ -130,47 +89,6 @@ public final class ArmenianAlphabet extends AbstractAlphabet implements Alphabet
 		public UpperCase()
 		{
 			super(ArmenianAlphabet.UpperCase.LETTERS);
-		}
-
-		/**
-		 * {@inheritDoc}
-		 *
-		 * @param obj {@inheritDoc}
-		 * @return {@inheritDoc}
-		 */
-		@Override
-		public boolean equals(@Nullable final Object obj)
-		{
-			if (obj == null) {
-				return false;
-			}
-
-			if (this == obj) {
-				return true;
-			}
-
-			if (this.getClass() != obj.getClass()) {
-				return false;
-			}
-
-			final ArmenianAlphabet.UpperCase alphabet = (ArmenianAlphabet.UpperCase) obj;
-
-			if (!Objects.equals(this.get(), alphabet.get())) {
-				return false;
-			}
-
-			return true;
-		}
-
-		/**
-		 * {@inheritDoc}
-		 *
-		 * @return {@inheritDoc}
-		 */
-		@Override
-		public int hashCode()
-		{
-			return this.get().hashCode();
 		}
 	}
 
@@ -202,47 +120,6 @@ public final class ArmenianAlphabet extends AbstractAlphabet implements Alphabet
 		public LowerCase()
 		{
 			super(ArmenianAlphabet.LowerCase.LETTERS);
-		}
-
-		/**
-		 * {@inheritDoc}
-		 *
-		 * @param obj {@inheritDoc}
-		 * @return {@inheritDoc}
-		 */
-		@Override
-		public boolean equals(@Nullable final Object obj)
-		{
-			if (obj == null) {
-				return false;
-			}
-
-			if (this == obj) {
-				return true;
-			}
-
-			if (this.getClass() != obj.getClass()) {
-				return false;
-			}
-
-			final ArmenianAlphabet.LowerCase alphabet = (ArmenianAlphabet.LowerCase) obj;
-
-			if (!Objects.equals(this.get(), alphabet.get())) {
-				return false;
-			}
-
-			return true;
-		}
-
-		/**
-		 * {@inheritDoc}
-		 *
-		 * @return {@inheritDoc}
-		 */
-		@Override
-		public int hashCode()
-		{
-			return this.get().hashCode();
 		}
 	}
 }

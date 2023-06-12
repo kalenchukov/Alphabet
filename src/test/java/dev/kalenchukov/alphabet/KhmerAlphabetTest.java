@@ -60,33 +60,4 @@ public class KhmerAlphabetTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link KhmerAlphabet#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		KhmerAlphabet alphabet1 = new KhmerAlphabet();
-		KhmerAlphabet alphabet2 = new KhmerAlphabet();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link KhmerAlphabet#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		KhmerAlphabet alphabet1 = new KhmerAlphabet();
-		KhmerAlphabet alphabet2 = new KhmerAlphabet();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

@@ -53,33 +53,4 @@ public class TamilAlphabetTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link TamilAlphabet#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		TamilAlphabet alphabet1 = new TamilAlphabet();
-		TamilAlphabet alphabet2 = new TamilAlphabet();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link TamilAlphabet#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		TamilAlphabet alphabet1 = new TamilAlphabet();
-		TamilAlphabet alphabet2 = new TamilAlphabet();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

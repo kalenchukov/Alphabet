@@ -57,33 +57,4 @@ public class TeluguAlphabetTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link TeluguAlphabet#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		TeluguAlphabet alphabet1 = new TeluguAlphabet();
-		TeluguAlphabet alphabet2 = new TeluguAlphabet();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link TeluguAlphabet#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		TeluguAlphabet alphabet1 = new TeluguAlphabet();
-		TeluguAlphabet alphabet2 = new TeluguAlphabet();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

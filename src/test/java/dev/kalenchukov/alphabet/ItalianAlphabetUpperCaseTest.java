@@ -49,33 +49,4 @@ public class ItalianAlphabetUpperCaseTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link ItalianAlphabet.UpperCase#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		ItalianAlphabet.UpperCase alphabet1 = new ItalianAlphabet.UpperCase();
-		ItalianAlphabet.UpperCase alphabet2 = new ItalianAlphabet.UpperCase();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link ItalianAlphabet.UpperCase#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		ItalianAlphabet.UpperCase alphabet1 = new ItalianAlphabet.UpperCase();
-		ItalianAlphabet.UpperCase alphabet2 = new ItalianAlphabet.UpperCase();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

@@ -49,33 +49,4 @@ public class HanunooAlphabetTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link HanunooAlphabet#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		HanunooAlphabet alphabet1 = new HanunooAlphabet();
-		HanunooAlphabet alphabet2 = new HanunooAlphabet();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link HanunooAlphabet#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		HanunooAlphabet alphabet1 = new HanunooAlphabet();
-		HanunooAlphabet alphabet2 = new HanunooAlphabet();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

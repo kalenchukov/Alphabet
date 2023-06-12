@@ -59,33 +59,4 @@ public class KazakhAlphabetTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link KazakhAlphabet#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		KazakhAlphabet alphabet1 = new KazakhAlphabet();
-		KazakhAlphabet alphabet2 = new KazakhAlphabet();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link KazakhAlphabet#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		KazakhAlphabet alphabet1 = new KazakhAlphabet();
-		KazakhAlphabet alphabet2 = new KazakhAlphabet();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

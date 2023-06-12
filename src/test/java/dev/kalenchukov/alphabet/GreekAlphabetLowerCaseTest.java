@@ -48,33 +48,4 @@ public class GreekAlphabetLowerCaseTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link GreekAlphabet.LowerCase#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		GreekAlphabet.LowerCase alphabet1 = new GreekAlphabet.LowerCase();
-		GreekAlphabet.LowerCase alphabet2 = new GreekAlphabet.LowerCase();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link GreekAlphabet.LowerCase#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		GreekAlphabet.LowerCase alphabet1 = new GreekAlphabet.LowerCase();
-		GreekAlphabet.LowerCase alphabet2 = new GreekAlphabet.LowerCase();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

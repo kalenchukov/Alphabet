@@ -61,33 +61,4 @@ public class MyanmarAlphabetTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link MyanmarAlphabet#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		MyanmarAlphabet alphabet1 = new MyanmarAlphabet();
-		MyanmarAlphabet alphabet2 = new MyanmarAlphabet();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link MyanmarAlphabet#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		MyanmarAlphabet alphabet1 = new MyanmarAlphabet();
-		MyanmarAlphabet alphabet2 = new MyanmarAlphabet();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

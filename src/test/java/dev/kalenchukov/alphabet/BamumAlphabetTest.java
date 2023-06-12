@@ -59,33 +59,4 @@ public class BamumAlphabetTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link BamumAlphabet#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		BamumAlphabet alphabet1 = new BamumAlphabet();
-		BamumAlphabet alphabet2 = new BamumAlphabet();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link BamumAlphabet#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		BamumAlphabet alphabet1 = new BamumAlphabet();
-		BamumAlphabet alphabet2 = new BamumAlphabet();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

@@ -57,33 +57,4 @@ public class TaiVietAlphabetTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link TaiVietAlphabet#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		TaiVietAlphabet alphabet1 = new TaiVietAlphabet();
-		TaiVietAlphabet alphabet2 = new TaiVietAlphabet();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link TaiVietAlphabet#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		TaiVietAlphabet alphabet1 = new TaiVietAlphabet();
-		TaiVietAlphabet alphabet2 = new TaiVietAlphabet();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

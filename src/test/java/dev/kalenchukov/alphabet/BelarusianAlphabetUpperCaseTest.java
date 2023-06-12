@@ -49,33 +49,4 @@ public class BelarusianAlphabetUpperCaseTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link BelarusianAlphabet.UpperCase#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		BelarusianAlphabet.UpperCase alphabet1 = new BelarusianAlphabet.UpperCase();
-		BelarusianAlphabet.UpperCase alphabet2 = new BelarusianAlphabet.UpperCase();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link BelarusianAlphabet.UpperCase#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		BelarusianAlphabet.UpperCase alphabet1 = new BelarusianAlphabet.UpperCase();
-		BelarusianAlphabet.UpperCase alphabet2 = new BelarusianAlphabet.UpperCase();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

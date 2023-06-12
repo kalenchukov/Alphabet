@@ -58,33 +58,4 @@ public class ArmenianAlphabetTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link ArmenianAlphabet#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		ArmenianAlphabet alphabet1 = new ArmenianAlphabet();
-		ArmenianAlphabet alphabet2 = new ArmenianAlphabet();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link ArmenianAlphabet#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		ArmenianAlphabet alphabet1 = new ArmenianAlphabet();
-		ArmenianAlphabet alphabet2 = new ArmenianAlphabet();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

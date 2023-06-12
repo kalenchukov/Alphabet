@@ -56,33 +56,4 @@ public class SamaritanAlphabetTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link SamaritanAlphabet#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		SamaritanAlphabet alphabet1 = new SamaritanAlphabet();
-		SamaritanAlphabet alphabet2 = new SamaritanAlphabet();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link SamaritanAlphabet#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		SamaritanAlphabet alphabet1 = new SamaritanAlphabet();
-		SamaritanAlphabet alphabet2 = new SamaritanAlphabet();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

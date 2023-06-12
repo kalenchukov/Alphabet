@@ -57,33 +57,4 @@ public class ThaiAlphabetTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link ThaiAlphabet#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		ThaiAlphabet alphabet1 = new ThaiAlphabet();
-		ThaiAlphabet alphabet2 = new ThaiAlphabet();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link ThaiAlphabet#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		ThaiAlphabet alphabet1 = new ThaiAlphabet();
-		ThaiAlphabet alphabet2 = new ThaiAlphabet();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

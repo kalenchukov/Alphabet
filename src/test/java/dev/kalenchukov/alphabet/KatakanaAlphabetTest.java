@@ -53,33 +53,4 @@ public class KatakanaAlphabetTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link KatakanaAlphabet#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		KatakanaAlphabet alphabet1 = new KatakanaAlphabet();
-		KatakanaAlphabet alphabet2 = new KatakanaAlphabet();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link KatakanaAlphabet#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		KatakanaAlphabet alphabet1 = new KatakanaAlphabet();
-		KatakanaAlphabet alphabet2 = new KatakanaAlphabet();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

@@ -219,33 +219,4 @@ public class YiSyllablesAlphabetTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link YiSyllablesAlphabet#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		YiSyllablesAlphabet alphabet1 = new YiSyllablesAlphabet();
-		YiSyllablesAlphabet alphabet2 = new YiSyllablesAlphabet();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link YiSyllablesAlphabet#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		YiSyllablesAlphabet alphabet1 = new YiSyllablesAlphabet();
-		YiSyllablesAlphabet alphabet2 = new YiSyllablesAlphabet();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

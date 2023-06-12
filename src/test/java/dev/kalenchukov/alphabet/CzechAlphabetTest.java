@@ -52,33 +52,4 @@ public class CzechAlphabetTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link CzechAlphabet#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		CzechAlphabet alphabet1 = new CzechAlphabet();
-		CzechAlphabet alphabet2 = new CzechAlphabet();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link CzechAlphabet#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		CzechAlphabet alphabet1 = new CzechAlphabet();
-		CzechAlphabet alphabet2 = new CzechAlphabet();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

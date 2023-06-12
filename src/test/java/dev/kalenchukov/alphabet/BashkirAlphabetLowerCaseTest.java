@@ -52,33 +52,4 @@ public class BashkirAlphabetLowerCaseTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link BashkirAlphabet.LowerCase#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		BashkirAlphabet.LowerCase alphabet1 = new BashkirAlphabet.LowerCase();
-		BashkirAlphabet.LowerCase alphabet2 = new BashkirAlphabet.LowerCase();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link BashkirAlphabet.LowerCase#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		BashkirAlphabet.LowerCase alphabet1 = new BashkirAlphabet.LowerCase();
-		BashkirAlphabet.LowerCase alphabet2 = new BashkirAlphabet.LowerCase();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

@@ -55,33 +55,4 @@ public class GermanAlphabetTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link GermanAlphabet#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		GermanAlphabet alphabet1 = new GermanAlphabet();
-		GermanAlphabet alphabet2 = new GermanAlphabet();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link GermanAlphabet#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		GermanAlphabet alphabet1 = new GermanAlphabet();
-		GermanAlphabet alphabet2 = new GermanAlphabet();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

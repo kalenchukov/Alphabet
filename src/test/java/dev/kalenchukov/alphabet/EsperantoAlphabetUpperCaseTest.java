@@ -50,33 +50,4 @@ public class EsperantoAlphabetUpperCaseTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link EsperantoAlphabet.UpperCase#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		EsperantoAlphabet.UpperCase alphabet1 = new EsperantoAlphabet.UpperCase();
-		EsperantoAlphabet.UpperCase alphabet2 = new EsperantoAlphabet.UpperCase();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link EsperantoAlphabet.UpperCase#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		EsperantoAlphabet.UpperCase alphabet1 = new EsperantoAlphabet.UpperCase();
-		EsperantoAlphabet.UpperCase alphabet2 = new EsperantoAlphabet.UpperCase();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

@@ -58,33 +58,4 @@ public class BalineseAlphabetTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link BalineseAlphabet#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		BalineseAlphabet alphabet1 = new BalineseAlphabet();
-		BalineseAlphabet alphabet2 = new BalineseAlphabet();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link BalineseAlphabet#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		BalineseAlphabet alphabet1 = new BalineseAlphabet();
-		BalineseAlphabet alphabet2 = new BalineseAlphabet();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

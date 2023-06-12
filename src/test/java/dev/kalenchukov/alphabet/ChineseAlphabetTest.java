@@ -54,33 +54,4 @@ public class ChineseAlphabetTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link ChineseAlphabet#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		ChineseAlphabet alphabet1 = new ChineseAlphabet();
-		ChineseAlphabet alphabet2 = new ChineseAlphabet();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link ChineseAlphabet#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		ChineseAlphabet alphabet1 = new ChineseAlphabet();
-		ChineseAlphabet alphabet2 = new ChineseAlphabet();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

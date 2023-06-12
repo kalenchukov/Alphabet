@@ -56,33 +56,4 @@ public class SundaneseAlphabetTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link SundaneseAlphabet#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		SundaneseAlphabet alphabet1 = new SundaneseAlphabet();
-		SundaneseAlphabet alphabet2 = new SundaneseAlphabet();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link SundaneseAlphabet#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		SundaneseAlphabet alphabet1 = new SundaneseAlphabet();
-		SundaneseAlphabet alphabet2 = new SundaneseAlphabet();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

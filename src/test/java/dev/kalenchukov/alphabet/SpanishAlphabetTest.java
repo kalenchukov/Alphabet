@@ -54,33 +54,4 @@ public class SpanishAlphabetTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link SpanishAlphabet#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		SpanishAlphabet alphabet1 = new SpanishAlphabet();
-		SpanishAlphabet alphabet2 = new SpanishAlphabet();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link SpanishAlphabet#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		SpanishAlphabet alphabet1 = new SpanishAlphabet();
-		SpanishAlphabet alphabet2 = new SpanishAlphabet();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

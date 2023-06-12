@@ -60,33 +60,4 @@ public class RunicAlphabetTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link RunicAlphabet#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		RunicAlphabet alphabet1 = new RunicAlphabet();
-		RunicAlphabet alphabet2 = new RunicAlphabet();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link RunicAlphabet#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		RunicAlphabet alphabet1 = new RunicAlphabet();
-		RunicAlphabet alphabet2 = new RunicAlphabet();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

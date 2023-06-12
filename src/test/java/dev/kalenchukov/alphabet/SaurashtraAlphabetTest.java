@@ -54,33 +54,4 @@ public class SaurashtraAlphabetTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link SaurashtraAlphabet#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		SaurashtraAlphabet alphabet1 = new SaurashtraAlphabet();
-		SaurashtraAlphabet alphabet2 = new SaurashtraAlphabet();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link SaurashtraAlphabet#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		SaurashtraAlphabet alphabet1 = new SaurashtraAlphabet();
-		SaurashtraAlphabet alphabet2 = new SaurashtraAlphabet();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

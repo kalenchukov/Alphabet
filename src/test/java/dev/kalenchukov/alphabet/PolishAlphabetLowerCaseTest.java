@@ -51,33 +51,4 @@ public class PolishAlphabetLowerCaseTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link PolishAlphabet.LowerCase#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		PolishAlphabet.LowerCase alphabet1 = new PolishAlphabet.LowerCase();
-		PolishAlphabet.LowerCase alphabet2 = new PolishAlphabet.LowerCase();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link PolishAlphabet.LowerCase#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		PolishAlphabet.LowerCase alphabet1 = new PolishAlphabet.LowerCase();
-		PolishAlphabet.LowerCase alphabet2 = new PolishAlphabet.LowerCase();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

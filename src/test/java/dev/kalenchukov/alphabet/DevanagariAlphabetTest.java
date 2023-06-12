@@ -58,33 +58,4 @@ public class DevanagariAlphabetTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link DevanagariAlphabet#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		DevanagariAlphabet alphabet1 = new DevanagariAlphabet();
-		DevanagariAlphabet alphabet2 = new DevanagariAlphabet();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link DevanagariAlphabet#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		DevanagariAlphabet alphabet1 = new DevanagariAlphabet();
-		DevanagariAlphabet alphabet2 = new DevanagariAlphabet();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

@@ -56,33 +56,4 @@ public class KannadaAlphabetTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link KannadaAlphabet#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		KannadaAlphabet alphabet1 = new KannadaAlphabet();
-		KannadaAlphabet alphabet2 = new KannadaAlphabet();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link KannadaAlphabet#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		KannadaAlphabet alphabet1 = new KannadaAlphabet();
-		KannadaAlphabet alphabet2 = new KannadaAlphabet();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

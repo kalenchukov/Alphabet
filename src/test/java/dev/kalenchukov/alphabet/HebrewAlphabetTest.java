@@ -50,33 +50,4 @@ public class HebrewAlphabetTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link HebrewAlphabet#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		HebrewAlphabet alphabet1 = new HebrewAlphabet();
-		HebrewAlphabet alphabet2 = new HebrewAlphabet();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link HebrewAlphabet#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		HebrewAlphabet alphabet1 = new HebrewAlphabet();
-		HebrewAlphabet alphabet2 = new HebrewAlphabet();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

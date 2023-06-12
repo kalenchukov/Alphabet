@@ -50,33 +50,4 @@ public class BugineseAlphabetTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link BugineseAlphabet#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		BugineseAlphabet alphabet1 = new BugineseAlphabet();
-		BugineseAlphabet alphabet2 = new BugineseAlphabet();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link BugineseAlphabet#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		BugineseAlphabet alphabet1 = new BugineseAlphabet();
-		BugineseAlphabet alphabet2 = new BugineseAlphabet();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

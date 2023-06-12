@@ -48,33 +48,4 @@ public class EnglishAlphabetUpperCaseTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link EnglishAlphabet.UpperCase#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		EnglishAlphabet.UpperCase alphabet1 = new EnglishAlphabet.UpperCase();
-		EnglishAlphabet.UpperCase alphabet2 = new EnglishAlphabet.UpperCase();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link EnglishAlphabet.UpperCase#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		EnglishAlphabet.UpperCase alphabet1 = new EnglishAlphabet.UpperCase();
-		EnglishAlphabet.UpperCase alphabet2 = new EnglishAlphabet.UpperCase();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

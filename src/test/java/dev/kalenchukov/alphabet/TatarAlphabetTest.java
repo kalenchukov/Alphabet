@@ -58,33 +58,4 @@ public class TatarAlphabetTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link TatarAlphabet#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		TatarAlphabet alphabet1 = new TatarAlphabet();
-		TatarAlphabet alphabet2 = new TatarAlphabet();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link TatarAlphabet#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		TatarAlphabet alphabet1 = new TatarAlphabet();
-		TatarAlphabet alphabet2 = new TatarAlphabet();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

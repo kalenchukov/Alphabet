@@ -52,33 +52,4 @@ public class TatarAlphabetLowerCaseTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link TatarAlphabet.LowerCase#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		TatarAlphabet.LowerCase alphabet1 = new TatarAlphabet.LowerCase();
-		TatarAlphabet.LowerCase alphabet2 = new TatarAlphabet.LowerCase();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link TatarAlphabet.LowerCase#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		TatarAlphabet.LowerCase alphabet1 = new TatarAlphabet.LowerCase();
-		TatarAlphabet.LowerCase alphabet2 = new TatarAlphabet.LowerCase();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

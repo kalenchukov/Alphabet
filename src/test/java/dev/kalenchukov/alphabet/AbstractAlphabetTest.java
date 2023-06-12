@@ -655,4 +655,33 @@ public class AbstractAlphabetTest
 		assertThat(actualMap.get('ъ')).isEqualTo(0);
 		assertThat(actualMap.get('Ж')).isEqualTo(0);
 	}
+
+	/**
+	 * Проверка метода {@link AbstractAlphabet#equals(Object)}.
+	 */
+	@Test
+	public void testEquals()
+	{
+		RussianAlphabet alphabet1 = new RussianAlphabet();
+		RussianAlphabet alphabet2 = new RussianAlphabet();
+
+		boolean actual = alphabet1.equals(alphabet2);
+
+		assertThat(actual).isTrue();
+	}
+
+	/**
+	 * Проверка метода {@link AbstractAlphabet#hashCode()}.
+	 */
+	@Test
+	public void testHashCode()
+	{
+		RussianAlphabet alphabet1 = new RussianAlphabet();
+		RussianAlphabet alphabet2 = new RussianAlphabet();
+
+		int expectedHashCode = alphabet1.hashCode();
+		int actualHashCode = alphabet2.hashCode();
+
+		assertThat(actualHashCode).isEqualTo(expectedHashCode);
+	}
 }

@@ -52,33 +52,4 @@ public class KazakhAlphabetLowerCaseTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link KazakhAlphabet.LowerCase#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		KazakhAlphabet.LowerCase alphabet1 = new KazakhAlphabet.LowerCase();
-		KazakhAlphabet.LowerCase alphabet2 = new KazakhAlphabet.LowerCase();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link KazakhAlphabet.LowerCase#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		KazakhAlphabet.LowerCase alphabet1 = new KazakhAlphabet.LowerCase();
-		KazakhAlphabet.LowerCase alphabet2 = new KazakhAlphabet.LowerCase();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

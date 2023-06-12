@@ -53,33 +53,4 @@ public class KayahLiAlphabetTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link KayahLiAlphabet#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		KayahLiAlphabet alphabet1 = new KayahLiAlphabet();
-		KayahLiAlphabet alphabet2 = new KayahLiAlphabet();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link KayahLiAlphabet#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		KayahLiAlphabet alphabet1 = new KayahLiAlphabet();
-		KayahLiAlphabet alphabet2 = new KayahLiAlphabet();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

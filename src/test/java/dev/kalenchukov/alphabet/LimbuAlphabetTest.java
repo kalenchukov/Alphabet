@@ -55,33 +55,4 @@ public class LimbuAlphabetTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link LimbuAlphabet#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		LimbuAlphabet alphabet1 = new LimbuAlphabet();
-		LimbuAlphabet alphabet2 = new LimbuAlphabet();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link LimbuAlphabet#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		LimbuAlphabet alphabet1 = new LimbuAlphabet();
-		LimbuAlphabet alphabet2 = new LimbuAlphabet();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

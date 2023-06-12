@@ -59,33 +59,4 @@ public class BashkirAlphabetTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link BashkirAlphabet#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		BashkirAlphabet alphabet1 = new BashkirAlphabet();
-		BashkirAlphabet alphabet2 = new BashkirAlphabet();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link BashkirAlphabet#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		BashkirAlphabet alphabet1 = new BashkirAlphabet();
-		BashkirAlphabet alphabet2 = new BashkirAlphabet();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

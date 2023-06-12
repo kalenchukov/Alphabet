@@ -52,33 +52,4 @@ public class KazakhAlphabetUpperCaseTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link KazakhAlphabet.UpperCase#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		KazakhAlphabet.UpperCase alphabet1 = new KazakhAlphabet.UpperCase();
-		KazakhAlphabet.UpperCase alphabet2 = new KazakhAlphabet.UpperCase();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link KazakhAlphabet.UpperCase#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		KazakhAlphabet.UpperCase alphabet1 = new KazakhAlphabet.UpperCase();
-		KazakhAlphabet.UpperCase alphabet2 = new KazakhAlphabet.UpperCase();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

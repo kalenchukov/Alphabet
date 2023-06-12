@@ -95,33 +95,4 @@ public class VaiAlphabetTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link VaiAlphabet#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		VaiAlphabet alphabet1 = new VaiAlphabet();
-		VaiAlphabet alphabet2 = new VaiAlphabet();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link VaiAlphabet#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		VaiAlphabet alphabet1 = new VaiAlphabet();
-		VaiAlphabet alphabet2 = new VaiAlphabet();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

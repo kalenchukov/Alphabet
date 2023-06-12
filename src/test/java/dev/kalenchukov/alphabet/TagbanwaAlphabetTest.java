@@ -48,33 +48,4 @@ public class TagbanwaAlphabetTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link TagbanwaAlphabet#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		TagbanwaAlphabet alphabet1 = new TagbanwaAlphabet();
-		TagbanwaAlphabet alphabet2 = new TagbanwaAlphabet();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link TagbanwaAlphabet#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		TagbanwaAlphabet alphabet1 = new TagbanwaAlphabet();
-		TagbanwaAlphabet alphabet2 = new TagbanwaAlphabet();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

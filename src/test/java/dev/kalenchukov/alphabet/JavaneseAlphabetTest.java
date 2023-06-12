@@ -58,33 +58,4 @@ public class JavaneseAlphabetTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link JavaneseAlphabet#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		JavaneseAlphabet alphabet1 = new JavaneseAlphabet();
-		JavaneseAlphabet alphabet2 = new JavaneseAlphabet();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link JavaneseAlphabet#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		JavaneseAlphabet alphabet1 = new JavaneseAlphabet();
-		JavaneseAlphabet alphabet2 = new JavaneseAlphabet();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

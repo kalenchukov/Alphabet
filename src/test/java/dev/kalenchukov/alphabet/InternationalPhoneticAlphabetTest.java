@@ -75,33 +75,4 @@ public class InternationalPhoneticAlphabetTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link InternationalPhoneticAlphabet#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		InternationalPhoneticAlphabet alphabet1 = new InternationalPhoneticAlphabet();
-		InternationalPhoneticAlphabet alphabet2 = new InternationalPhoneticAlphabet();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link InternationalPhoneticAlphabet#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		InternationalPhoneticAlphabet alphabet1 = new InternationalPhoneticAlphabet();
-		InternationalPhoneticAlphabet alphabet2 = new InternationalPhoneticAlphabet();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

@@ -53,33 +53,4 @@ public class LaoAlphabetTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link LaoAlphabet#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		LaoAlphabet alphabet1 = new LaoAlphabet();
-		LaoAlphabet alphabet2 = new LaoAlphabet();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link LaoAlphabet#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		LaoAlphabet alphabet1 = new LaoAlphabet();
-		LaoAlphabet alphabet2 = new LaoAlphabet();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

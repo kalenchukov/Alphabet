@@ -55,33 +55,4 @@ public class TaiThamAlphabetTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link TaiThamAlphabet#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		TaiThamAlphabet alphabet1 = new TaiThamAlphabet();
-		TaiThamAlphabet alphabet2 = new TaiThamAlphabet();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link TaiThamAlphabet#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		TaiThamAlphabet alphabet1 = new TaiThamAlphabet();
-		TaiThamAlphabet alphabet2 = new TaiThamAlphabet();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

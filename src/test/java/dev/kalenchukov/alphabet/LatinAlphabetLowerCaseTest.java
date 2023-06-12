@@ -50,33 +50,4 @@ public class LatinAlphabetLowerCaseTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link LatinAlphabet.LowerCase#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		LatinAlphabet.LowerCase alphabet1 = new LatinAlphabet.LowerCase();
-		LatinAlphabet.LowerCase alphabet2 = new LatinAlphabet.LowerCase();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link LatinAlphabet.LowerCase#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		LatinAlphabet.LowerCase alphabet1 = new LatinAlphabet.LowerCase();
-		LatinAlphabet.LowerCase alphabet2 = new LatinAlphabet.LowerCase();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

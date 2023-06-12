@@ -496,6 +496,43 @@ public abstract class AbstractAlphabet implements Alphabetical
 	}
 
 	/**
+	 * {@inheritDoc}
+	 *
+	 * @param obj {@inheritDoc}
+	 * @return {@inheritDoc}
+	 */
+	@Override
+	public boolean equals(@Nullable final Object obj)
+	{
+		if (this == obj) {
+			return true;
+		}
+
+		if (!(obj instanceof Alphabetical)) {
+			return false;
+		}
+
+		final Alphabetical alphabetical = (Alphabetical) obj;
+
+		if (!Objects.equals(this.get(), alphabetical.get())) {
+			return false;
+		}
+
+		return true;
+	}
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * @return {@inheritDoc}
+	 */
+	@Override
+	public int hashCode()
+	{
+		return this.get().hashCode();
+	}
+
+	/**
 	 * Преобразовывает строку в массив символов.
 	 *
 	 * @param string строка.

@@ -51,33 +51,4 @@ public class EnglishAlphabetTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link EnglishAlphabet#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		EnglishAlphabet alphabet1 = new EnglishAlphabet();
-		EnglishAlphabet alphabet2 = new EnglishAlphabet();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link EnglishAlphabet#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		EnglishAlphabet alphabet1 = new EnglishAlphabet();
-		EnglishAlphabet alphabet2 = new EnglishAlphabet();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

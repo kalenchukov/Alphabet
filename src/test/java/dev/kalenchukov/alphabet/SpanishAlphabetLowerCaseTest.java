@@ -50,33 +50,4 @@ public class SpanishAlphabetLowerCaseTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link SpanishAlphabet.LowerCase#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		SpanishAlphabet.LowerCase alphabet1 = new SpanishAlphabet.LowerCase();
-		SpanishAlphabet.LowerCase alphabet2 = new SpanishAlphabet.LowerCase();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link SpanishAlphabet.LowerCase#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		SpanishAlphabet.LowerCase alphabet1 = new SpanishAlphabet.LowerCase();
-		SpanishAlphabet.LowerCase alphabet2 = new SpanishAlphabet.LowerCase();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

@@ -57,33 +57,4 @@ public class NewTaiLueAlphabetTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link NewTaiLueAlphabet#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		NewTaiLueAlphabet alphabet1 = new NewTaiLueAlphabet();
-		NewTaiLueAlphabet alphabet2 = new NewTaiLueAlphabet();
-
-		boolean actual = alphabet1.equals(alphabet2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link NewTaiLueAlphabet#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		NewTaiLueAlphabet alphabet1 = new NewTaiLueAlphabet();
-		NewTaiLueAlphabet alphabet2 = new NewTaiLueAlphabet();
-
-		int expectedHashCode = alphabet1.hashCode();
-		int actualHashCode = alphabet2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }
