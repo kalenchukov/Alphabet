@@ -37,7 +37,7 @@ public class TeluguAlphabetTest
 	@Test
 	public void get()
 	{
-		TeluguAlphabet alphabet = new TeluguAlphabet();
+		Alphabetical alphabet = new TeluguAlphabet();
 		List<Character> expectedList = List.of(
 			'అ', 'ఆ', 'ఇ', 'ఈ', 'ఉ', 'ఊ', 
 			'ఋ', 'ౠ', 'ఎ', 'ఏ', 'ఐ', 'ఒ', 

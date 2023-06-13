@@ -37,7 +37,7 @@ public class ItalianAlphabetLowerCaseTest
 	@Test
 	public void get()
 	{
-		ItalianAlphabet.LowerCase alphabet = new ItalianAlphabet.LowerCase();
+		Alphabetical alphabet = new ItalianAlphabet.LowerCase();
 		List<Character> expectedList = List.of(
 			'a', 'b', 'c', 'd', 'e', 'f', 
 			'g', 'h', 'i', 'l', 'm', 'n', 

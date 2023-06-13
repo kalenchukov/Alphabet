@@ -37,7 +37,7 @@ public class YiSyllablesAlphabetTest
 	@Test
 	public void get()
 	{
-		YiSyllablesAlphabet alphabet = new YiSyllablesAlphabet();
+		Alphabetical alphabet = new YiSyllablesAlphabet();
 		List<Character> expectedList = List.of(
 			'ꀀ', 'ꀁ', 'ꀂ', 'ꀃ', 'ꀄ', 'ꀅ', 
 			'ꀆ', 'ꀇ', 'ꀈ', 'ꀉ', 'ꀊ', 'ꀋ', 

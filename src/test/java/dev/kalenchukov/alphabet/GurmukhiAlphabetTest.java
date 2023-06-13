@@ -37,7 +37,7 @@ public class GurmukhiAlphabetTest
 	@Test
 	public void get()
 	{
-		GurmukhiAlphabet alphabet = new GurmukhiAlphabet();
+		Alphabetical alphabet = new GurmukhiAlphabet();
 		List<Character> expectedList = List.of(
 			'ੳ', 'ਅ', 'ੲ', 'ਸ', 'ਹ', 'ਕ', 
 			'ਖ', 'ਗ', 'ਘ', 'ਙ', 'ਚ', 'ਛ', 

@@ -37,7 +37,7 @@ public class EthiopicAlphabetTest
 	@Test
 	public void get()
 	{
-		EthiopicAlphabet alphabet = new EthiopicAlphabet();
+		Alphabetical alphabet = new EthiopicAlphabet();
 		List<Character> expectedList = List.of(
 			'ሀ', 'ሁ', 'ሂ', 'ሃ', 'ሄ', 'ህ', 
 			'ሆ', 'ለ', 'ሉ', 'ሊ', 'ላ', 'ሌ', 

@@ -37,7 +37,7 @@ public class GermanAlphabetTest
 	@Test
 	public void get()
 	{
-		GermanAlphabet alphabet = new GermanAlphabet();
+		Alphabetical alphabet = new GermanAlphabet();
 		List<Character> expectedList = List.of(
 			'A', 'a', 'B', 'b', 'C', 'c', 
 			'D', 'd', 'E', 'e', 'F', 'f', 

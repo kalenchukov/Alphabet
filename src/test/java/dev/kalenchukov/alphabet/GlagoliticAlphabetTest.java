@@ -37,7 +37,7 @@ public class GlagoliticAlphabetTest
 	@Test
 	public void get()
 	{
-		GlagoliticAlphabet alphabet = new GlagoliticAlphabet();
+		Alphabetical alphabet = new GlagoliticAlphabet();
 		List<Character> expectedList = List.of(
 			'Ⰰ', 'Ⰱ', 'Ⰲ', 'Ⰳ', 'Ⰴ', 'Ⰵ', 
 			'Ⰶ', 'Ⰷ', 'Ⰸ', 'Ⰹ', 'Ⰺ', 'Ⰻ', 

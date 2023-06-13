@@ -37,7 +37,7 @@ public class EnglishAlphabetTest
 	@Test
 	public void get()
 	{
-		EnglishAlphabet alphabet = new EnglishAlphabet();
+		Alphabetical alphabet = new EnglishAlphabet();
 		List<Character> expectedList = List.of(
 			'A', 'a', 'B', 'b', 'C', 'c', 'D', 'd', 'E', 'e',
 			'F', 'f', 'G', 'g', 'H', 'h', 'I', 'i', 'J', 'j',

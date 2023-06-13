@@ -37,7 +37,7 @@ public class UkrainianAlphabetUpperCaseTest
 	@Test
 	public void get()
 	{
-		UkrainianAlphabet.UpperCase alphabet = new UkrainianAlphabet.UpperCase();
+		Alphabetical alphabet = new UkrainianAlphabet.UpperCase();
 		List<Character> expectedList = List.of(
 			'А', 'Б', 'В', 'Г', 'Ґ', 'Д', 
 			'Е', 'Є', 'Ж', 'З', 'И', 'І', 

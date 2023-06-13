@@ -37,7 +37,7 @@ public class TibetanAlphabetTest
 	@Test
 	public void get()
 	{
-		TibetanAlphabet alphabet = new TibetanAlphabet();
+		Alphabetical alphabet = new TibetanAlphabet();
 		List<Character> expectedList = List.of(
 			'ཀ', 'ཁ', 'ག', 'ང', 'ཅ', 'ཆ', 
 			'ཇ', 'ཉ', 'ཏ', 'ཐ', 'ད', 'ན', 

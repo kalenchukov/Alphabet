@@ -37,7 +37,7 @@ public class BulgarianAlphabetUpperCaseTest
 	@Test
 	public void get()
 	{
-		BulgarianAlphabet.UpperCase alphabet = new BulgarianAlphabet.UpperCase();
+		Alphabetical alphabet = new BulgarianAlphabet.UpperCase();
 		List<Character> expectedList = List.of(
 			'А', 'Б', 'В', 'Г', 'Д', 'Е', 
 			'Ж', 'З', 'И', 'Й', 'К', 'Л', 

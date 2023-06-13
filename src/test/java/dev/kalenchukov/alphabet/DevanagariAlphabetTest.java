@@ -37,7 +37,7 @@ public class DevanagariAlphabetTest
 	@Test
 	public void get()
 	{
-		DevanagariAlphabet alphabet = new DevanagariAlphabet();
+		Alphabetical alphabet = new DevanagariAlphabet();
 		List<Character> expectedList = List.of(
 			'क', 'ख', 'ग', 'घ', 'ङ', 'च', 
 			'छ', 'ज', 'झ', 'ञ', 'ट', 'ठ', 

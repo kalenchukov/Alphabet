@@ -37,7 +37,7 @@ public class RussianAlphabetUpperCaseTest
 	@Test
 	public void get()
 	{
-		RussianAlphabet.UpperCase alphabet = new RussianAlphabet.UpperCase();
+		Alphabetical alphabet = new RussianAlphabet.UpperCase();
 		List<Character> expectedList = List.of(
 			'А', 'Б', 'В', 'Г', 'Д', 'Е', 'Ё', 'Ж', 'З',
 			'И', 'Й', 'К', 'Л', 'М', 'Н', 'О', 'П', 'Р',

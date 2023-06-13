@@ -37,7 +37,7 @@ public class VaiAlphabetTest
 	@Test
 	public void get()
 	{
-		VaiAlphabet alphabet = new VaiAlphabet();
+		Alphabetical alphabet = new VaiAlphabet();
 		List<Character> expectedList = List.of(
 			'ꔀ', 'ꔁ', 'ꔂ', 'ꔃ', 'ꔄ', 'ꔅ', 
 			'ꔆ', 'ꔇ', 'ꔈ', 'ꔉ', 'ꔊ', 'ꔋ', 

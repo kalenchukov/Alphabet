@@ -37,7 +37,7 @@ public class BashkirAlphabetUpperCaseTest
 	@Test
 	public void get()
 	{
-		BashkirAlphabet.UpperCase alphabet = new BashkirAlphabet.UpperCase();
+		Alphabetical alphabet = new BashkirAlphabet.UpperCase();
 		List<Character> expectedList = List.of(
 			'А', 'Б', 'В', 'Г', 'Ғ', 'Д', 
 			'Ҙ', 'Е', 'Ё', 'Ж', 'З', 'И', 

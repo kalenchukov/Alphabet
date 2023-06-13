@@ -37,7 +37,7 @@ public class CopticAlphabetLowerCaseTest
 	@Test
 	public void get()
 	{
-		CopticAlphabet.LowerCase alphabet = new CopticAlphabet.LowerCase();
+		Alphabetical alphabet = new CopticAlphabet.LowerCase();
 		List<Character> expectedList = List.of(
 			'ⲁ', 'ⲃ', 'ⲅ', 'ⲇ', 'ⲉ', 'ⲋ', 
 			'ⲍ', 'ⲏ', 'ⲑ', 'ⲓ', 'ⲕ', 'ⲗ', 

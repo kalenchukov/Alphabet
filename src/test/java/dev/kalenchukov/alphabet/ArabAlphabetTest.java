@@ -37,7 +37,7 @@ public class ArabAlphabetTest
 	@Test
 	public void get()
 	{
-		ArabAlphabet alphabet = new ArabAlphabet();
+		Alphabetical alphabet = new ArabAlphabet();
 		List<Character> expectedList = List.of(
 			'ﺎ', 'ﺍ', 'ﺐ', 'ﺒ', 'ﺑ', 'ﺏ', 
 			'ﺖ', 'ﺘ', 'ﺗ', 'ﺕ', 'ﺚ', 'ﺜ', 

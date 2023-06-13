@@ -37,7 +37,7 @@ public class HiraganaAlphabetTest
 	@Test
 	public void get()
 	{
-		HiraganaAlphabet alphabet = new HiraganaAlphabet();
+		Alphabetical alphabet = new HiraganaAlphabet();
 		List<Character> expectedList = List.of(
 			'か', 'き', 'く', 'け', 'こ', 'さ', 
 			'し', 'す', 'せ', 'そ', 'た', 'ち', 

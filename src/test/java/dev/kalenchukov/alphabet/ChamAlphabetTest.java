@@ -37,7 +37,7 @@ public class ChamAlphabetTest
 	@Test
 	public void get()
 	{
-		ChamAlphabet alphabet = new ChamAlphabet();
+		Alphabetical alphabet = new ChamAlphabet();
 		List<Character> expectedList = List.of(
 			'ꨀ', 'ꨁ', 'ꨂ', 'ꨃ', 'ꨄ', 'ꨅ', 
 			'ꨆ', 'ꨇ', 'ꨈ', 'ꨉ', 'ꨊ', 'ꨋ', 

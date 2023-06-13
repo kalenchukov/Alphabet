@@ -37,7 +37,7 @@ public class ThaanaAlphabetTest
 	@Test
 	public void get()
 	{
-		ThaanaAlphabet alphabet = new ThaanaAlphabet();
+		Alphabetical alphabet = new ThaanaAlphabet();
 		List<Character> expectedList = List.of(
 			'ހ', 'ށ', 'ނ', 'ރ', 'ބ', 'ޅ', 
 			'ކ', 'އ', 'ވ', 'މ', 'ފ', 'ދ', 

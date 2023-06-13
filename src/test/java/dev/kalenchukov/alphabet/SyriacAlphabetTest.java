@@ -37,7 +37,7 @@ public class SyriacAlphabetTest
 	@Test
 	public void get()
 	{
-		SyriacAlphabet alphabet = new SyriacAlphabet();
+		Alphabetical alphabet = new SyriacAlphabet();
 		List<Character> expectedList = List.of(
 			'ܐ', 'ܒ', 'ܓ', 'ܕ', 'ܗ', 'ܘ', 
 			'ܙ', 'ܚ', 'ܛ', 'ܝ', 'ܟ', 'ܠ', 

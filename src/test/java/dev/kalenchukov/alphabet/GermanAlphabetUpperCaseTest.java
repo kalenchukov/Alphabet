@@ -37,7 +37,7 @@ public class GermanAlphabetUpperCaseTest
 	@Test
 	public void get()
 	{
-		GermanAlphabet.UpperCase alphabet = new GermanAlphabet.UpperCase();
+		Alphabetical alphabet = new GermanAlphabet.UpperCase();
 		List<Character> expectedList = List.of(
 			'A', 'B', 'C', 'D', 'E', 'F', 
 			'G', 'H', 'I', 'J', 'K', 'L', 

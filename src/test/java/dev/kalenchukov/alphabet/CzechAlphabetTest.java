@@ -37,7 +37,7 @@ public class CzechAlphabetTest
 	@Test
 	public void get()
 	{
-		CzechAlphabet alphabet = new CzechAlphabet();
+		Alphabetical alphabet = new CzechAlphabet();
 		List<Character> expectedList = List.of(
 			'A', 'Á', 'B', 'C', 'Č', 'D', 
 			'Ď', 'E', 'É', 'Ě', 'F', 'G', 

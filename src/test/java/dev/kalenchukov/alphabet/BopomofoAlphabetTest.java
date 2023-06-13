@@ -37,7 +37,7 @@ public class BopomofoAlphabetTest
 	@Test
 	public void get()
 	{
-		BopomofoAlphabet alphabet = new BopomofoAlphabet();
+		Alphabetical alphabet = new BopomofoAlphabet();
 		List<Character> expectedList = List.of(
 			'ㄅ', 'ㄆ', 'ㄇ', 'ㄈ', 'ㄉ', 'ㄊ', 
 			'ㄋ', 'ㄌ', 'ㄍ', 'ㄎ', 'ㄏ', 'ㄐ', 

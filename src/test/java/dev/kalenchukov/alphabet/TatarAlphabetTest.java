@@ -37,7 +37,7 @@ public class TatarAlphabetTest
 	@Test
 	public void get()
 	{
-		TatarAlphabet alphabet = new TatarAlphabet();
+		Alphabetical alphabet = new TatarAlphabet();
 		List<Character> expectedList = List.of(
 			'А', 'а', 'Ә', 'ә', 'Б', 'б', 
 			'В', 'в', 'Г', 'г', 'Д', 'д', 

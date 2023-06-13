@@ -37,7 +37,7 @@ public class TamilAlphabetTest
 	@Test
 	public void get()
 	{
-		TamilAlphabet alphabet = new TamilAlphabet();
+		Alphabetical alphabet = new TamilAlphabet();
 		List<Character> expectedList = List.of(
 			'அ', 'ஆ', 'இ', 'ஈ', 'உ', 'ஊ', 
 			'எ', 'ஏ', 'ஐ', 'ஒ', 'ஓ', 'ஔ', 

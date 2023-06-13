@@ -37,7 +37,7 @@ public class MyanmarAlphabetTest
 	@Test
 	public void get()
 	{
-		MyanmarAlphabet alphabet = new MyanmarAlphabet();
+		Alphabetical alphabet = new MyanmarAlphabet();
 		List<Character> expectedList = List.of(
 			'က', 'ခ', 'ဂ', 'ဃ', 'င', 'စ', 
 			'ဆ', 'ဇ', 'ဈ', 'ည', 'ဋ', 'ဌ', 

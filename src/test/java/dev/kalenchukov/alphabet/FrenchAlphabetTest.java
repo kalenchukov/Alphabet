@@ -37,7 +37,7 @@ public class FrenchAlphabetTest
 	@Test
 	public void get()
 	{
-		FrenchAlphabet alphabet = new FrenchAlphabet();
+		Alphabetical alphabet = new FrenchAlphabet();
 		List<Character> expectedList = List.of(
 			'A', 'a', 'B', 'b', 'C', 'c', 
 			'D', 'd', 'E', 'e', 'F', 'f', 

@@ -37,7 +37,7 @@ public class EsperantoAlphabetTest
 	@Test
 	public void get()
 	{
-		EsperantoAlphabet alphabet = new EsperantoAlphabet();
+		Alphabetical alphabet = new EsperantoAlphabet();
 		List<Character> expectedList = List.of(
 			'A', 'B', 'C', 'Ĉ', 'D', 'E', 
 			'F', 'G', 'Ĝ', 'H', 'Ĥ', 'I', 

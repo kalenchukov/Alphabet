@@ -37,7 +37,7 @@ public class TaiThamAlphabetTest
 	@Test
 	public void get()
 	{
-		TaiThamAlphabet alphabet = new TaiThamAlphabet();
+		Alphabetical alphabet = new TaiThamAlphabet();
 		List<Character> expectedList = List.of(
 			'ᨠ', 'ᨡ', 'ᨢ', 'ᨣ', 'ᨤ', 'ᨥ', 
 			'ᨦ', 'ᨧ', 'ᨨ', 'ᨩ', 'ᨪ', 'ᨫ', 

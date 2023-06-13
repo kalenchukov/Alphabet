@@ -37,7 +37,7 @@ public class PolishAlphabetTest
 	@Test
 	public void get()
 	{
-		PolishAlphabet alphabet = new PolishAlphabet();
+		Alphabetical alphabet = new PolishAlphabet();
 		List<Character> expectedList = List.of(
 			'A', 'a', 'Ą', 'ą', 'B', 'b', 
 			'C', 'c', 'Ć', 'ć', 'D', 'd', 

@@ -37,7 +37,7 @@ public class UkrainianAlphabetTest
 	@Test
 	public void get()
 	{
-		UkrainianAlphabet alphabet = new UkrainianAlphabet();
+		Alphabetical alphabet = new UkrainianAlphabet();
 		List<Character> expectedList = List.of(
 			'А', 'а', 'Б', 'б', 'В', 'в', 
 			'Г', 'г', 'Ґ', 'ґ', 'Д', 'д', 

@@ -37,7 +37,7 @@ public class JavaneseAlphabetTest
 	@Test
 	public void get()
 	{
-		JavaneseAlphabet alphabet = new JavaneseAlphabet();
+		Alphabetical alphabet = new JavaneseAlphabet();
 		List<Character> expectedList = List.of(
 			'ꦀ', 'ꦁ', 'ꦂ', 'ꦃ', 'ꦄ', 'ꦅ', 
 			'ꦆ', 'ꦇ', 'ꦈ', 'ꦉ', 'ꦊ', 'ꦋ', 

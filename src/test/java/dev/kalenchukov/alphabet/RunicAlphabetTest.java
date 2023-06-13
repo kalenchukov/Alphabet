@@ -37,7 +37,7 @@ public class RunicAlphabetTest
 	@Test
 	public void get()
 	{
-		RunicAlphabet alphabet = new RunicAlphabet();
+		Alphabetical alphabet = new RunicAlphabet();
 		List<Character> expectedList = List.of(
 			'ᚠ', 'ᚡ', 'ᚢ', 'ᚣ', 'ᚤ', 'ᚥ', 
 			'ᚦ', 'ᚧ', 'ᚨ', 'ᚩ', 'ᚪ', 'ᚫ', 

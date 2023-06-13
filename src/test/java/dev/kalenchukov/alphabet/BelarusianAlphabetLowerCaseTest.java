@@ -37,7 +37,7 @@ public class BelarusianAlphabetLowerCaseTest
 	@Test
 	public void get()
 	{
-		BelarusianAlphabet.LowerCase alphabet = new BelarusianAlphabet.LowerCase();
+		Alphabetical alphabet = new BelarusianAlphabet.LowerCase();
 		List<Character> expectedList = List.of(
 			'а', 'б', 'в', 'г', 'д', 'е', 'ё', 'ж', 'з',
 			'і', 'й', 'к', 'л', 'м', 'н', 'о', 'п', 'р',

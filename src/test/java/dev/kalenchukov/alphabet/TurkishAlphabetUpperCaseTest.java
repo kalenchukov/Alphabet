@@ -37,7 +37,7 @@ public class TurkishAlphabetUpperCaseTest
 	@Test
 	public void get()
 	{
-		TurkishAlphabet.UpperCase alphabet = new TurkishAlphabet.UpperCase();
+		Alphabetical alphabet = new TurkishAlphabet.UpperCase();
 		List<Character> expectedList = List.of(
 			'A', 'B', 'C', 'Ç', 'D', 'E', 
 			'F', 'G', 'Ğ', 'H', 'I', 'İ', 

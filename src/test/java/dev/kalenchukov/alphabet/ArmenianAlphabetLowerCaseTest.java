@@ -37,7 +37,7 @@ public class ArmenianAlphabetLowerCaseTest
 	@Test
 	public void get()
 	{
-		ArmenianAlphabet.LowerCase alphabet = new ArmenianAlphabet.LowerCase();
+		Alphabetical alphabet = new ArmenianAlphabet.LowerCase();
 		List<Character> expectedList = List.of(
 			'ա', 'բ', 'գ', 'դ', 'ե', 'զ', 
 			'է', 'ը', 'թ', 'ժ', 'ի', 'լ', 

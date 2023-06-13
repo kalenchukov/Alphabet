@@ -37,7 +37,7 @@ public class BalineseAlphabetTest
 	@Test
 	public void get()
 	{
-		BalineseAlphabet alphabet = new BalineseAlphabet();
+		Alphabetical alphabet = new BalineseAlphabet();
 		List<Character> expectedList = List.of(
 			'ᬅ', 'ᬆ', 'ᬇ', 'ᬈ', 'ᬉ', 'ᬊ', 
 			'ᬋ', 'ᬌ', 'ᬍ', 'ᬎ', 'ᬏ', 'ᬐ', 

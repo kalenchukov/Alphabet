@@ -37,7 +37,7 @@ public class ArmenianAlphabetTest
 	@Test
 	public void get()
 	{
-		ArmenianAlphabet alphabet = new ArmenianAlphabet();
+		Alphabetical alphabet = new ArmenianAlphabet();
 		List<Character> expectedList = List.of(
 			'Ա', 'ա', 'Բ', 'բ', 'Գ', 'գ', 
 			'Դ', 'դ', 'Ե', 'ե', 'Զ', 'զ', 

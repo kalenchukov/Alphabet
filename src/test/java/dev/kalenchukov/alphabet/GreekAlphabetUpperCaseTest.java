@@ -37,7 +37,7 @@ public class GreekAlphabetUpperCaseTest
 	@Test
 	public void get()
 	{
-		GreekAlphabet.UpperCase alphabet = new GreekAlphabet.UpperCase();
+		Alphabetical alphabet = new GreekAlphabet.UpperCase();
 		List<Character> expectedList = List.of(
 			'Α', 'Β', 'Γ', 'Δ', 'Ε', 'Ζ', 'Η', 'Θ', 'Ι',
 			'Κ', 'Λ', 'Μ', 'Ν', 'Ξ', 'Ο', 'Π', 'Ρ', 'Σ',

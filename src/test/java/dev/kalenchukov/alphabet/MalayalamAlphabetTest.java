@@ -37,7 +37,7 @@ public class MalayalamAlphabetTest
 	@Test
 	public void get()
 	{
-		MalayalamAlphabet alphabet = new MalayalamAlphabet();
+		Alphabetical alphabet = new MalayalamAlphabet();
 		List<Character> expectedList = List.of(
 			'അ', 'ആ', 'ഇ', 'ഈ', 'ഉ', 'ഊ', 
 			'ഋ', 'ഌ', 'എ', 'ഏ', 'ഐ', 'ഒ', 

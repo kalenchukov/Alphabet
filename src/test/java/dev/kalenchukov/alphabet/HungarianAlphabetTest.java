@@ -37,7 +37,7 @@ public class HungarianAlphabetTest
 	@Test
 	public void get()
 	{
-		HungarianAlphabet alphabet = new HungarianAlphabet();
+		Alphabetical alphabet = new HungarianAlphabet();
 		List<Character> expectedList = List.of(
 			'A', 'Á', 'B', 'C', 'D', 'E', 
 			'É', 'F', 'G', 'H', 'I', 'Í', 

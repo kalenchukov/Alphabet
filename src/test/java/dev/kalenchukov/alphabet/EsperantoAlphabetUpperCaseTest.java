@@ -37,7 +37,7 @@ public class EsperantoAlphabetUpperCaseTest
 	@Test
 	public void get()
 	{
-		EsperantoAlphabet.UpperCase alphabet = new EsperantoAlphabet.UpperCase();
+		Alphabetical alphabet = new EsperantoAlphabet.UpperCase();
 		List<Character> expectedList = List.of(
 			'A', 'B', 'C', 'Ĉ', 'D', 'E', 
 			'F', 'G', 'Ĝ', 'H', 'Ĥ', 'I', 

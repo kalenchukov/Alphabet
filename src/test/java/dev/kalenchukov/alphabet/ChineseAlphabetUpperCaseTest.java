@@ -37,7 +37,7 @@ public class ChineseAlphabetUpperCaseTest
 	@Test
 	public void get()
 	{
-		ChineseAlphabet.UpperCase alphabet = new ChineseAlphabet.UpperCase();
+		Alphabetical alphabet = new ChineseAlphabet.UpperCase();
 		List<Character> expectedList = List.of(
 			'A', 'B', 'C', 'D', 'E', 'F', 
 			'G', 'H', 'J', 'K', 'L', 'M', 

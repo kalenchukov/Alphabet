@@ -37,7 +37,7 @@ public class InternationalPhoneticAlphabetLowerCaseTest
 	@Test
 	public void get()
 	{
-		InternationalPhoneticAlphabet.LowerCase alphabet = new InternationalPhoneticAlphabet.LowerCase();
+		Alphabetical alphabet = new InternationalPhoneticAlphabet.LowerCase();
 		List<Character> expectedList = List.of(
 			'p', 'b', 't', 'd', 'ʈ', 'ɖ', 
 			'c', 'ɟ', 'k', 'ɡ', 'q', 'm', 

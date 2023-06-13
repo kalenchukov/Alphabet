@@ -37,7 +37,7 @@ public class SinhalaAlphabetTest
 	@Test
 	public void get()
 	{
-		SinhalaAlphabet alphabet = new SinhalaAlphabet();
+		Alphabetical alphabet = new SinhalaAlphabet();
 		List<Character> expectedList = List.of(
 			'අ', 'ආ', 'ඇ', 'ඈ', 'ඉ', 'ඊ', 
 			'උ', 'ඌ', 'ඍ', 'ඎ', 'ඏ', 'ඐ', 

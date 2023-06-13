@@ -37,7 +37,7 @@ public class SaurashtraAlphabetTest
 	@Test
 	public void get()
 	{
-		SaurashtraAlphabet alphabet = new SaurashtraAlphabet();
+		Alphabetical alphabet = new SaurashtraAlphabet();
 		List<Character> expectedList = List.of(
 			'ꢒ', 'ꢓ', 'ꢔ', 'ꢕ', 'ꢖ', 'ꢗ', 
 			'ꢘ', 'ꢙ', 'ꢚ', 'ꢛ', 'ꢜ', 'ꢝ', 

@@ -37,7 +37,7 @@ public class FrenchAlphabetUpperCaseTest
 	@Test
 	public void get()
 	{
-		FrenchAlphabet.UpperCase alphabet = new FrenchAlphabet.UpperCase();
+		Alphabetical alphabet = new FrenchAlphabet.UpperCase();
 		List<Character> expectedList = List.of(
 			'A', 'B', 'C', 'D', 'E', 'F', 
 			'G', 'H', 'I', 'J', 'K', 'L', 

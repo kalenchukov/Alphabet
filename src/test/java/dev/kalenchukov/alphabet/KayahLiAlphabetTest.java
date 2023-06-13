@@ -37,7 +37,7 @@ public class KayahLiAlphabetTest
 	@Test
 	public void get()
 	{
-		KayahLiAlphabet alphabet = new KayahLiAlphabet();
+		Alphabetical alphabet = new KayahLiAlphabet();
 		List<Character> expectedList = List.of(
 			'꤀', '꤁', '꤂', '꤃', '꤄', '꤅', 
 			'꤆', '꤇', '꤈', '꤉', 'ꤊ', 'ꤋ', 

@@ -37,7 +37,7 @@ public class PolishAlphabetUpperCaseTest
 	@Test
 	public void get()
 	{
-		PolishAlphabet.UpperCase alphabet = new PolishAlphabet.UpperCase();
+		Alphabetical alphabet = new PolishAlphabet.UpperCase();
 		List<Character> expectedList = List.of(
 			'A', 'Ą', 'B', 'C', 'Ć', 'D', 
 			'E', 'Ę', 'F', 'G', 'H', 'I', 

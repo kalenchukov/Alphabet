@@ -37,7 +37,7 @@ public class CopticAlphabetTest
 	@Test
 	public void get()
 	{
-		CopticAlphabet alphabet = new CopticAlphabet();
+		Alphabetical alphabet = new CopticAlphabet();
 		List<Character> expectedList = List.of(
 			'Ⲁ', 'ⲁ', 'Ⲃ', 'ⲃ', 'Ⲅ', 'ⲅ', 
 			'Ⲇ', 'ⲇ', 'Ⲉ', 'ⲉ', 'Ⲋ', 'ⲋ', 

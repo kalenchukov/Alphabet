@@ -37,7 +37,7 @@ public class MongolianAlphabetTest
 	@Test
 	public void get()
 	{
-		MongolianAlphabet alphabet = new MongolianAlphabet();
+		Alphabetical alphabet = new MongolianAlphabet();
 		List<Character> expectedList = List.of(
 			'ᠠ', 'ᠡ', 'ᠢ', 'ᠣ', 'ᠤ', 'ᠥ', 
 			'ᠦ', 'ᠧ', 'ᠨ', 'ᠩ', 'ᠪ', 'ᠫ', 

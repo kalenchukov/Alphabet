@@ -37,7 +37,7 @@ public class CyrillicAlphabetTest
 	@Test
 	public void get()
 	{
-		CyrillicAlphabet alphabet = new CyrillicAlphabet();
+		Alphabetical alphabet = new CyrillicAlphabet();
 		List<Character> expectedList = List.of(
 			'А', 'Б', 'В', 'Г', 'Д', 'Е', 'Ж', 'Ѕ', 'З', 'И', 'І',
 			'К', 'Л', 'М', 'Н', 'О', 'П', 'Р', 'С', 'Т', 'Ꙋ', 'Ф',

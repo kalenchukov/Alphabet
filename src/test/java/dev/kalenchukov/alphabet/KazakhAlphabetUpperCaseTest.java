@@ -37,7 +37,7 @@ public class KazakhAlphabetUpperCaseTest
 	@Test
 	public void get()
 	{
-		KazakhAlphabet.UpperCase alphabet = new KazakhAlphabet.UpperCase();
+		Alphabetical alphabet = new KazakhAlphabet.UpperCase();
 		List<Character> expectedList = List.of(
 			'А', 'Ә', 'Б', 'В', 'Г', 'Ғ', 
 			'Д', 'Е', 'Ё', 'Ж', 'З', 'И', 

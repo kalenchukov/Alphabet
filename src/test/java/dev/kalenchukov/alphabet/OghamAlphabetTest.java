@@ -37,7 +37,7 @@ public class OghamAlphabetTest
 	@Test
 	public void get()
 	{
-		OghamAlphabet alphabet = new OghamAlphabet();
+		Alphabetical alphabet = new OghamAlphabet();
 		List<Character> expectedList = List.of(
 			' ', 'ᚁ', 'ᚂ', 'ᚃ', 'ᚄ', 'ᚅ', 
 			'ᚆ', 'ᚇ', 'ᚈ', 'ᚉ', 'ᚊ', 'ᚋ', 

@@ -37,7 +37,7 @@ public class ArmenianAlphabetUpperCaseTest
 	@Test
 	public void get()
 	{
-		ArmenianAlphabet.UpperCase alphabet = new ArmenianAlphabet.UpperCase();
+		Alphabetical alphabet = new ArmenianAlphabet.UpperCase();
 		List<Character> expectedList = List.of(
 			'Ա', 'Բ', 'Գ', 'Դ', 'Ե', 'Զ', 
 			'Է', 'Ը', 'Թ', 'Ժ', 'Ի', 'Լ', 

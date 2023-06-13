@@ -37,7 +37,7 @@ public class RussianAlphabetLowerCaseTest
 	@Test
 	public void get()
 	{
-		RussianAlphabet.LowerCase alphabet = new RussianAlphabet.LowerCase();
+		Alphabetical alphabet = new RussianAlphabet.LowerCase();
 		List<Character> expectedList = List.of(
 			'а', 'б', 'в', 'г', 'д', 'е', 'ё', 'ж', 'з',
 			'и', 'й', 'к', 'л', 'м', 'н', 'о', 'п', 'р',

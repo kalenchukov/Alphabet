@@ -37,7 +37,7 @@ public class SpanishAlphabetUpperCaseTest
 	@Test
 	public void get()
 	{
-		SpanishAlphabet.UpperCase alphabet = new SpanishAlphabet.UpperCase();
+		Alphabetical alphabet = new SpanishAlphabet.UpperCase();
 		List<Character> expectedList = List.of(
 			'A', 'B', 'C', 'D', 'E', 'F', 
 			'G', 'H', 'I', 'J', 'K', 'L', 

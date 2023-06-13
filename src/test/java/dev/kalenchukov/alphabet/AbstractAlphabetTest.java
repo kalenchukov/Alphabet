@@ -40,7 +40,7 @@ public class AbstractAlphabetTest
 	@Test
 	public void getFirst()
 	{
-		RussianAlphabet alphabet = new RussianAlphabet();
+		Alphabetical alphabet = new RussianAlphabet();
 
 		char actualLetter = alphabet.getFirst();
 
@@ -53,7 +53,7 @@ public class AbstractAlphabetTest
 	@Test
 	public void getLast()
 	{
-		RussianAlphabet alphabet = new RussianAlphabet();
+		Alphabetical alphabet = new RussianAlphabet();
 
 		char actualLetter = alphabet.getLast();
 
@@ -66,7 +66,7 @@ public class AbstractAlphabetTest
 	@Test
 	public void getReverse()
 	{
-		RussianAlphabet alphabet = new RussianAlphabet();
+		Alphabetical alphabet = new RussianAlphabet();
 		List<Character> expectedList = List.of(
 			'я', 'Я', 'ю', 'Ю', 'э', 'Э', 'ь', 'Ь', 'ы', 'Ы',
 			'ъ', 'Ъ', 'щ', 'Щ', 'ш', 'Ш', 'ч', 'Ч', 'ц', 'Ц', 'х', 'Х',
@@ -154,7 +154,7 @@ public class AbstractAlphabetTest
 	@Test
 	public void getShuffle()
 	{
-		RussianAlphabet alphabet = new RussianAlphabet();
+		Alphabetical alphabet = new RussianAlphabet();
 		List<Character> expectedList = List.of(
 			'А', 'а', 'Б', 'б', 'В', 'в', 'Г', 'г', 'Д', 'д',
 			'Е', 'е', 'Ё', 'ё', 'Ж', 'ж', 'З', 'з', 'И', 'и',
@@ -176,7 +176,7 @@ public class AbstractAlphabetTest
 	@Test
 	public void getRange()
 	{
-		RussianAlphabet alphabet = new RussianAlphabet();
+		Alphabetical alphabet = new RussianAlphabet();
 		List<Character> expectedList = List.of(
 			'А', 'а', 'Б', 'б', 'В', 'в', 'Г', 'г', 'Д', 'д',
 			'Е', 'е', 'Ё', 'ё', 'Ж', 'ж', 'З', 'з', 'И', 'и',
@@ -195,7 +195,7 @@ public class AbstractAlphabetTest
 	@Test
 	public void getRangeOutOfBoundsMin()
 	{
-		RussianAlphabet alphabet = new RussianAlphabet();
+		Alphabetical alphabet = new RussianAlphabet();
 
 		assertThatExceptionOfType(IndexOutOfBoundsException.class).isThrownBy(() -> {
 			alphabet.get(0, 33);
@@ -208,7 +208,7 @@ public class AbstractAlphabetTest
 	@Test
 	public void getRangeOutOfBoundsMax()
 	{
-		RussianAlphabet alphabet = new RussianAlphabet();
+		Alphabetical alphabet = new RussianAlphabet();
 
 		assertThatExceptionOfType(IndexOutOfBoundsException.class).isThrownBy(() -> {
 			alphabet.get(1, 67);
@@ -221,7 +221,7 @@ public class AbstractAlphabetTest
 	@Test
 	public void getRangeInversion()
 	{
-		RussianAlphabet alphabet = new RussianAlphabet();
+		Alphabetical alphabet = new RussianAlphabet();
 
 		assertThatExceptionOfType(IllegalArgumentException.class).isThrownBy(() -> {
 			alphabet.get(33, 20);
@@ -233,7 +233,7 @@ public class AbstractAlphabetTest
 	@Test
 	public void getPositionByLetter()
 	{
-		RussianAlphabet alphabet = new RussianAlphabet();
+		Alphabetical alphabet = new RussianAlphabet();
 
 		Integer actualPosition = alphabet.getPosition('н');
 
@@ -246,7 +246,7 @@ public class AbstractAlphabetTest
 	@Test
 	public void getPositionByLetterNotCorrect()
 	{
-		RussianAlphabet alphabet = new RussianAlphabet();
+		Alphabetical alphabet = new RussianAlphabet();
 
 		Integer actualPosition = alphabet.getPosition('W');
 
@@ -260,7 +260,7 @@ public class AbstractAlphabetTest
 	@Test
 	public void getLetterByPosition()
 	{
-		RussianAlphabet alphabet = new RussianAlphabet();
+		Alphabetical alphabet = new RussianAlphabet();
 
 		Character actualLetter = alphabet.get(28);
 
@@ -273,7 +273,7 @@ public class AbstractAlphabetTest
 	@Test
 	public void getLetterByPositionNotCorrect()
 	{
-		RussianAlphabet alphabet = new RussianAlphabet();
+		Alphabetical alphabet = new RussianAlphabet();
 
 		Character actualLetter = alphabet.get(0);
 
@@ -286,7 +286,7 @@ public class AbstractAlphabetTest
 	@Test
 	public void allMatch()
 	{
-		RussianAlphabet alphabet = new RussianAlphabet();
+		Alphabetical alphabet = new RussianAlphabet();
 
 		boolean actual = alphabet.allMatch("Камчатка");
 
@@ -306,7 +306,7 @@ public class AbstractAlphabetTest
 	})
 	public void allMatchNotCorrect(String value)
 	{
-		RussianAlphabet alphabet = new RussianAlphabet();
+		Alphabetical alphabet = new RussianAlphabet();
 
 		boolean actual = alphabet.allMatch(value);
 
@@ -319,7 +319,7 @@ public class AbstractAlphabetTest
 	@Test
 	public void anyMatch()
 	{
-		RussianAlphabet alphabet = new RussianAlphabet();
+		Alphabetical alphabet = new RussianAlphabet();
 
 		boolean actual = alphabet.anyMatch("Дождь для нас");
 
@@ -336,7 +336,7 @@ public class AbstractAlphabetTest
 	})
 	public void anyMatchNotCorrect(String value)
 	{
-		RussianAlphabet alphabet = new RussianAlphabet();
+		Alphabetical alphabet = new RussianAlphabet();
 
 		boolean actual = alphabet.anyMatch("");
 
@@ -352,7 +352,7 @@ public class AbstractAlphabetTest
 	})
 	public void noneMatch(String value)
 	{
-		RussianAlphabet alphabet = new RussianAlphabet();
+		Alphabetical alphabet = new RussianAlphabet();
 
 		boolean actual = alphabet.noneMatch(value);
 
@@ -369,7 +369,7 @@ public class AbstractAlphabetTest
 	})
 	public void noneMatchNotCorrect(String value)
 	{
-		RussianAlphabet alphabet = new RussianAlphabet();
+		Alphabetical alphabet = new RussianAlphabet();
 
 		boolean actual = alphabet.noneMatch(value);
 
@@ -382,7 +382,7 @@ public class AbstractAlphabetTest
 	@Test
 	public void contains()
 	{
-		RussianAlphabet alphabet = new RussianAlphabet();
+		Alphabetical alphabet = new RussianAlphabet();
 
 		boolean actual = alphabet.contains('У');
 
@@ -395,7 +395,7 @@ public class AbstractAlphabetTest
 	@Test
 	public void containsNotCorrect()
 	{
-		RussianAlphabet alphabet = new RussianAlphabet();
+		Alphabetical alphabet = new RussianAlphabet();
 
 		boolean actual = alphabet.contains('W');
 
@@ -408,7 +408,7 @@ public class AbstractAlphabetTest
 	@Test
 	public void getRandom()
 	{
-		RussianAlphabet alphabet = new RussianAlphabet();
+		Alphabetical alphabet = new RussianAlphabet();
 
 		List<Character> actualList1 = alphabet.getRandom(0);
 		List<Character> actualList2 = alphabet.getRandom(1);
@@ -427,7 +427,7 @@ public class AbstractAlphabetTest
 	@Test
 	public void clearMismatches()
 	{
-		RussianAlphabet alphabet = new RussianAlphabet();
+		Alphabetical alphabet = new RussianAlphabet();
 
 		String actualString = alphabet.clearMismatches(
 				"Солнце мое, взгляни на меня - My ладонь превратилась в кулак"
@@ -442,7 +442,7 @@ public class AbstractAlphabetTest
 	@Test
 	public void clearMatches()
 	{
-		RussianAlphabet alphabet = new RussianAlphabet();
+		Alphabetical alphabet = new RussianAlphabet();
 
 		String actualString = alphabet.clearMatches(
 				"Солнце мое, взгляни на меня - My ладонь превратилась в кулак"
@@ -466,7 +466,7 @@ public class AbstractAlphabetTest
 	})
 	public void isSorted(String value)
 	{
-		RussianAlphabet alphabet = new RussianAlphabet();
+		Alphabetical alphabet = new RussianAlphabet();
 
 		boolean actual = alphabet.isSorted(value);
 
@@ -484,7 +484,7 @@ public class AbstractAlphabetTest
 	})
 	public void isSortedNotCorrect(String value)
 	{
-		RussianAlphabet alphabet = new RussianAlphabet();
+		Alphabetical alphabet = new RussianAlphabet();
 
 		boolean actual = alphabet.isSorted(value);
 
@@ -503,7 +503,7 @@ public class AbstractAlphabetTest
 	})
 	public void isSortedAsc(String value)
 	{
-		RussianAlphabet alphabet = new RussianAlphabet();
+		Alphabetical alphabet = new RussianAlphabet();
 
 		boolean actual = alphabet.isSortedAsc(value);
 
@@ -520,7 +520,7 @@ public class AbstractAlphabetTest
 	})
 	public void isSortedAscNotCorrect(String value)
 	{
-		RussianAlphabet alphabet = new RussianAlphabet();
+		Alphabetical alphabet = new RussianAlphabet();
 
 		boolean actual = alphabet.isSortedAsc(value);
 
@@ -539,7 +539,7 @@ public class AbstractAlphabetTest
 	})
 	public void isSortedDesc(String value)
 	{
-		RussianAlphabet alphabet = new RussianAlphabet();
+		Alphabetical alphabet = new RussianAlphabet();
 
 		boolean actual = alphabet.isSortedDesc(value);
 
@@ -556,7 +556,7 @@ public class AbstractAlphabetTest
 	})
 	public void isSortedDescNotCorrect(String value)
 	{
-		RussianAlphabet alphabet = new RussianAlphabet();
+		Alphabetical alphabet = new RussianAlphabet();
 
 		boolean actual = alphabet.isSortedDesc(value);
 
@@ -569,7 +569,7 @@ public class AbstractAlphabetTest
 	@Test
 	public void toArray()
 	{
-		RussianAlphabet alphabet = new RussianAlphabet();
+		Alphabetical alphabet = new RussianAlphabet();
 		Character[] expectedArray = new Character[]{
 			'А', 'а', 'Б', 'б', 'В', 'в', 'Г', 'г', 'Д', 'д',
 			'Е', 'е', 'Ё', 'ё', 'Ж', 'ж', 'З', 'з', 'И', 'и',
@@ -591,7 +591,7 @@ public class AbstractAlphabetTest
 	@Test
 	public void toStringSeparator()
 	{
-		RussianAlphabet alphabet = new RussianAlphabet();
+		Alphabetical alphabet = new RussianAlphabet();
 		String expectedString = "А,а,Б,б,В,в,Г,г,Д,д,Е,е,Ё,ё,Ж,ж,З,з,И,и," +
 			"Й,й,К,к,Л,л,М,м,Н,н,О,о,П,п,Р,р,С,с,Т,т,У,у,Ф,ф,Х,х," +
 			"Ц,ц,Ч,ч,Ш,ш,Щ,щ,Ъ,ъ,Ы,ы,Ь,ь,Э,э,Ю,ю,Я,я";
@@ -607,7 +607,7 @@ public class AbstractAlphabetTest
 	@Test
 	public void testToString()
 	{
-		RussianAlphabet alphabet = new RussianAlphabet();
+		Alphabetical alphabet = new RussianAlphabet();
 		String expectedString = "АаБбВвГгДдЕеЁёЖжЗзИиЙйКкЛлМмНнОоПпРрСсТтУуФфХхЦцЧчШшЩщЪъЫыЬьЭэЮюЯя";
 
 		String actualString = alphabet.toString();
@@ -621,7 +621,7 @@ public class AbstractAlphabetTest
 	@Test
 	public void statistics()
 	{
-		RussianAlphabet alphabet = new RussianAlphabet();
+		Alphabetical alphabet = new RussianAlphabet();
 		String value = """
 			Дом стоит, свет горит
 			Из окна видна даль
@@ -642,7 +642,7 @@ public class AbstractAlphabetTest
 	@Test
 	public void statisticsNotLetter()
 	{
-		RussianAlphabet alphabet = new RussianAlphabet();
+		Alphabetical alphabet = new RussianAlphabet();
 		String value = """
 			И я должен прийти к девяти, на работу свою,
 			Но сейчас уже без десяти, а я только встаю
@@ -662,12 +662,40 @@ public class AbstractAlphabetTest
 	@Test
 	public void testEquals()
 	{
-		RussianAlphabet alphabet1 = new RussianAlphabet();
-		RussianAlphabet alphabet2 = new RussianAlphabet();
+		Alphabetical alphabet1 = new RussianAlphabet();
+		Alphabetical alphabet2 = new RussianAlphabet();
 
 		boolean actual = alphabet1.equals(alphabet2);
 
 		assertThat(actual).isTrue();
+	}
+
+	/**
+	 * Проверка метода {@link AbstractAlphabet#equals(Object)} с {@code null}.
+	 */
+	@Test
+	public void testEqualsNull()
+	{
+		Alphabetical alphabet1 = new RussianAlphabet();
+		Alphabetical alphabet2 = null;
+
+		boolean actual = alphabet1.equals(alphabet2);
+
+		assertThat(actual).isFalse();
+	}
+
+	/**
+	 * Проверка метода {@link AbstractAlphabet#equals(Object)} с разными классами.
+	 */
+	@Test
+	public void testEqualsDifferentClass()
+	{
+		Alphabetical alphabet1 = new RussianAlphabet();
+		Alphabetical alphabet2 = new EnglishAlphabet();
+
+		boolean actual = alphabet1.equals(alphabet2);
+
+		assertThat(actual).isFalse();
 	}
 
 	/**
@@ -676,8 +704,8 @@ public class AbstractAlphabetTest
 	@Test
 	public void testHashCode()
 	{
-		RussianAlphabet alphabet1 = new RussianAlphabet();
-		RussianAlphabet alphabet2 = new RussianAlphabet();
+		Alphabetical alphabet1 = new RussianAlphabet();
+		Alphabetical alphabet2 = new RussianAlphabet();
 
 		int expectedHashCode = alphabet1.hashCode();
 		int actualHashCode = alphabet2.hashCode();

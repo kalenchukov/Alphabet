@@ -37,7 +37,7 @@ public class TurkishAlphabetLowerCaseTest
 	@Test
 	public void get()
 	{
-		TurkishAlphabet.LowerCase alphabet = new TurkishAlphabet.LowerCase();
+		Alphabetical alphabet = new TurkishAlphabet.LowerCase();
 		List<Character> expectedList = List.of(
 			'a', 'b', 'c', 'ç', 'd', 'e', 
 			'f', 'g', 'ğ', 'h', 'ı', 'i', 

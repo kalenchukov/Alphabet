@@ -37,7 +37,7 @@ public class BulgarianAlphabetLowerCaseTest
 	@Test
 	public void get()
 	{
-		BulgarianAlphabet.LowerCase alphabet = new BulgarianAlphabet.LowerCase();
+		Alphabetical alphabet = new BulgarianAlphabet.LowerCase();
 		List<Character> expectedList = List.of(
 			'а', 'б', 'в', 'г', 'д', 'е', 
 			'ж', 'з', 'и', 'й', 'к', 'л', 

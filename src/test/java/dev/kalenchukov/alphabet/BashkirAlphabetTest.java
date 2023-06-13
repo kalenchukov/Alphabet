@@ -37,7 +37,7 @@ public class BashkirAlphabetTest
 	@Test
 	public void get()
 	{
-		BashkirAlphabet alphabet = new BashkirAlphabet();
+		Alphabetical alphabet = new BashkirAlphabet();
 		List<Character> expectedList = List.of(
 			'А', 'а', 'Б', 'б', 'В', 'в', 
 			'Г', 'г', 'Ғ', 'ғ', 'Д', 'д', 

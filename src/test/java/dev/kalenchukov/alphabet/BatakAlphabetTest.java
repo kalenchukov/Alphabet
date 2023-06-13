@@ -37,7 +37,7 @@ public class BatakAlphabetTest
 	@Test
 	public void get()
 	{
-		BatakAlphabet alphabet = new BatakAlphabet();
+		Alphabetical alphabet = new BatakAlphabet();
 		List<Character> expectedList = List.of(
 			'ᯀ', 'ᯁ', 'ᯂ', 'ᯃ', 'ᯄ', 'ᯅ', 
 			'ᯆ', 'ᯇ', 'ᯈ', 'ᯉ', 'ᯊ', 'ᯋ', 

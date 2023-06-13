@@ -37,7 +37,7 @@ public class CopticAlphabetUpperCaseTest
 	@Test
 	public void get()
 	{
-		CopticAlphabet.UpperCase alphabet = new CopticAlphabet.UpperCase();
+		Alphabetical alphabet = new CopticAlphabet.UpperCase();
 		List<Character> expectedList = List.of(
 			'Ⲁ', 'Ⲃ', 'Ⲅ', 'Ⲇ', 'Ⲉ', 'Ⲋ', 
 			'Ⲍ', 'Ⲏ', 'Ⲑ', 'Ⲓ', 'Ⲕ', 'Ⲗ', 

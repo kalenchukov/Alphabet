@@ -37,7 +37,7 @@ public class BamumAlphabetTest
 	@Test
 	public void get()
 	{
-		BamumAlphabet alphabet = new BamumAlphabet();
+		Alphabetical alphabet = new BamumAlphabet();
 		List<Character> expectedList = List.of(
 			'ꚠ', 'ꚡ', 'ꚢ', 'ꚣ', 'ꚤ', 'ꚥ', 
 			'ꚦ', 'ꚧ', 'ꚨ', 'ꚩ', 'ꚪ', 'ꚫ', 

@@ -37,7 +37,7 @@ public class FrenchAlphabetLowerCaseTest
 	@Test
 	public void get()
 	{
-		FrenchAlphabet.LowerCase alphabet = new FrenchAlphabet.LowerCase();
+		Alphabetical alphabet = new FrenchAlphabet.LowerCase();
 		List<Character> expectedList = List.of(
 			'a', 'b', 'c', 'd', 'e', 'f', 
 			'g', 'h', 'i', 'j', 'k', 'l', 

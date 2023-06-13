@@ -37,7 +37,7 @@ public class BengaliAlphabetTest
 	@Test
 	public void get()
 	{
-		BengaliAlphabet alphabet = new BengaliAlphabet();
+		Alphabetical alphabet = new BengaliAlphabet();
 		List<Character> expectedList = List.of(
 			'অ', 'আ', 'ই', 'ঈ', 'উ', 'ঊ', 
 			'ঋ', 'এ', 'ঐ', 'ও', 'ঔ', 'ক', 

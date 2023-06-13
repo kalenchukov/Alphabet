@@ -37,7 +37,7 @@ public class BashkirAlphabetLowerCaseTest
 	@Test
 	public void get()
 	{
-		BashkirAlphabet.LowerCase alphabet = new BashkirAlphabet.LowerCase();
+		Alphabetical alphabet = new BashkirAlphabet.LowerCase();
 		List<Character> expectedList = List.of(
 			'а', 'б', 'в', 'г', 'ғ', 'д', 
 			'ҙ', 'е', 'ё', 'ж', 'з', 'и', 

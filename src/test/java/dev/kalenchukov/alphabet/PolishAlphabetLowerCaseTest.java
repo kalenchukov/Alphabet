@@ -37,7 +37,7 @@ public class PolishAlphabetLowerCaseTest
 	@Test
 	public void get()
 	{
-		PolishAlphabet.LowerCase alphabet = new PolishAlphabet.LowerCase();
+		Alphabetical alphabet = new PolishAlphabet.LowerCase();
 		List<Character> expectedList = List.of(
 			'a', 'ą', 'b', 'c', 'ć', 'd', 
 			'e', 'ę', 'f', 'g', 'h', 'i', 

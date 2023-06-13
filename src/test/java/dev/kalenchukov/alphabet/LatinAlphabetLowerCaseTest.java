@@ -37,7 +37,7 @@ public class LatinAlphabetLowerCaseTest
 	@Test
 	public void get()
 	{
-		LatinAlphabet.LowerCase alphabet = new LatinAlphabet.LowerCase();
+		Alphabetical alphabet = new LatinAlphabet.LowerCase();
 		List<Character> expectedList = List.of(
 			'a', 'b', 'c', 'd', 'e', 'f', 
 			'g', 'h', 'i', 'j', 'k', 'l', 

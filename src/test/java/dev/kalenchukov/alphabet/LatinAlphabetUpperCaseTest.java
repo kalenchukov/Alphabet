@@ -37,7 +37,7 @@ public class LatinAlphabetUpperCaseTest
 	@Test
 	public void get()
 	{
-		LatinAlphabet.UpperCase alphabet = new LatinAlphabet.UpperCase();
+		Alphabetical alphabet = new LatinAlphabet.UpperCase();
 		List<Character> expectedList = List.of(
 			'A', 'B', 'C', 'D', 'E', 'F', 
 			'G', 'H', 'I', 'J', 'K', 'L', 

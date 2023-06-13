@@ -37,7 +37,7 @@ public class GermanAlphabetLowerCaseTest
 	@Test
 	public void get()
 	{
-		GermanAlphabet.LowerCase alphabet = new GermanAlphabet.LowerCase();
+		Alphabetical alphabet = new GermanAlphabet.LowerCase();
 		List<Character> expectedList = List.of(
 			'a', 'b', 'c', 'd', 'e', 'f', 
 			'g', 'h', 'i', 'j', 'k', 'l', 

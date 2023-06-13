@@ -37,7 +37,7 @@ public class OriyaAlphabetTest
 	@Test
 	public void get()
 	{
-		OriyaAlphabet alphabet = new OriyaAlphabet();
+		Alphabetical alphabet = new OriyaAlphabet();
 		List<Character> expectedList = List.of(
 			'ଅ', 'ଆ', 'ଇ', 'ଈ', 'ଉ', 'ଊ', 
 			'ଋ', 'ୠ', 'ଌ', 'ୡ', 'ଏ', 'ଐ', 

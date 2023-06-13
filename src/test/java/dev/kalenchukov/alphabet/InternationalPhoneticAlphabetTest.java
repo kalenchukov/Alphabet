@@ -37,7 +37,7 @@ public class InternationalPhoneticAlphabetTest
 	@Test
 	public void get()
 	{
-		InternationalPhoneticAlphabet alphabet = new InternationalPhoneticAlphabet();
+		Alphabetical alphabet = new InternationalPhoneticAlphabet();
 		List<Character> expectedList = List.of(
 			'p', 'b', 't', 'd', 'ʈ', 'ɖ', 
 			'c', 'ɟ', 'k', 'ɡ', 'q', 'ɢ', 

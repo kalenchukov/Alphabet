@@ -37,7 +37,7 @@ public class TaiLeAlphabetTest
 	@Test
 	public void get()
 	{
-		TaiLeAlphabet alphabet = new TaiLeAlphabet();
+		Alphabetical alphabet = new TaiLeAlphabet();
 		List<Character> expectedList = List.of(
 			'ᥐ', 'ᥑ', 'ᥒ', 'ᥓ', 'ᥔ', 'ᥕ', 
 			'ᥖ', 'ᥗ', 'ᥘ', 'ᥙ', 'ᥚ', 'ᥛ', 

@@ -37,7 +37,7 @@ public class HangulAlphabetTest
 	@Test
 	public void get()
 	{
-		HangulAlphabet alphabet = new HangulAlphabet();
+		Alphabetical alphabet = new HangulAlphabet();
 		List<Character> expectedList = List.of(
 			'ㄱ', 'ㄴ', 'ㄷ', 'ㄹ', 'ㅁ', 'ㅂ', 
 			'ㅅ', 'ㅇ', 'ㅈ', 'ㅊ', 'ㅋ', 'ㅌ', 

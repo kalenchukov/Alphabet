@@ -37,7 +37,7 @@ public class RejangAlphabetTest
 	@Test
 	public void get()
 	{
-		RejangAlphabet alphabet = new RejangAlphabet();
+		Alphabetical alphabet = new RejangAlphabet();
 		List<Character> expectedList = List.of(
 			'ꤰ', 'ꤱ', 'ꤲ', 'ꤳ', 'ꤴ', 'ꤵ', 
 			'ꤶ', 'ꤷ', 'ꤸ', 'ꤹ', 'ꤺ', 'ꤻ', 

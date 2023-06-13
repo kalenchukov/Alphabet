@@ -37,7 +37,7 @@ public class MeeteiMayekAlphabetTest
 	@Test
 	public void get()
 	{
-		MeeteiMayekAlphabet alphabet = new MeeteiMayekAlphabet();
+		Alphabetical alphabet = new MeeteiMayekAlphabet();
 		List<Character> expectedList = List.of(
 			'ꯀ', 'ꯁ', 'ꯂ', 'ꯃ', 'ꯄ', 'ꯅ', 
 			'ꯆ', 'ꯇ', 'ꯈ', 'ꯉ', 'ꯊ', 'ꯋ', 

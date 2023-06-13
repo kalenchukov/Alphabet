@@ -37,7 +37,7 @@ public class BelarusianAlphabetTest
 	@Test
 	public void get()
 	{
-		BelarusianAlphabet alphabet = new BelarusianAlphabet();
+		Alphabetical alphabet = new BelarusianAlphabet();
 		List<Character> expectedList = List.of(
 			'А', 'а', 'Б', 'б', 'В', 'в', 'Г', 'г', 'Д', 'д',
 			'Е', 'е', 'Ё', 'ё', 'Ж', 'ж', 'З', 'з', 'І', 'і',

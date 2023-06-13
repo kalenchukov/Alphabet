@@ -37,7 +37,7 @@ public class RussianAlphabetTest
 	@Test
 	public void get()
 	{
-		RussianAlphabet alphabet = new RussianAlphabet();
+		Alphabetical alphabet = new RussianAlphabet();
 		List<Character> expectedList = List.of(
 			'А', 'а', 'Б', 'б', 'В', 'в', 'Г', 'г', 'Д', 'д',
 			'Е', 'е', 'Ё', 'ё', 'Ж', 'ж', 'З', 'з', 'И', 'и',

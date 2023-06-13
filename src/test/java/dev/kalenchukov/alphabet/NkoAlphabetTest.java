@@ -37,7 +37,7 @@ public class NkoAlphabetTest
 	@Test
 	public void get()
 	{
-		NkoAlphabet alphabet = new NkoAlphabet();
+		Alphabetical alphabet = new NkoAlphabet();
 		List<Character> expectedList = List.of(
 			'߀', '߁', '߂', '߃', '߄', '߅', 
 			'߆', '߇', '߈', '߉', 'ߊ', 'ߋ', 

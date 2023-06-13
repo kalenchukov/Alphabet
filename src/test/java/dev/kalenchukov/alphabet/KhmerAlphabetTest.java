@@ -37,7 +37,7 @@ public class KhmerAlphabetTest
 	@Test
 	public void get()
 	{
-		KhmerAlphabet alphabet = new KhmerAlphabet();
+		Alphabetical alphabet = new KhmerAlphabet();
 		List<Character> expectedList = List.of(
 			'ក', 'ខ', 'គ', 'ឃ', 'ង', 'ច', 
 			'ឆ', 'ជ', 'ឈ', 'ញ', 'ដ', 'ឋ', 

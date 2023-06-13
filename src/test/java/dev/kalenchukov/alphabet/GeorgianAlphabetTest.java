@@ -37,7 +37,7 @@ public class GeorgianAlphabetTest
 	@Test
 	public void get()
 	{
-		GeorgianAlphabet alphabet = new GeorgianAlphabet();
+		Alphabetical alphabet = new GeorgianAlphabet();
 		List<Character> expectedList = List.of(
 			'ა', 'ბ', 'გ', 'დ', 'ე', 'ვ', 
 			'ზ', 'თ', 'ი', 'კ', 'ლ', 'მ', 

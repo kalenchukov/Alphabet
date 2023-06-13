@@ -37,7 +37,7 @@ public class TatarAlphabetUpperCaseTest
 	@Test
 	public void get()
 	{
-		TatarAlphabet.UpperCase alphabet = new TatarAlphabet.UpperCase();
+		Alphabetical alphabet = new TatarAlphabet.UpperCase();
 		List<Character> expectedList = List.of(
 			'А', 'Ә', 'Б', 'В', 'Г', 'Д', 
 			'Е', 'Ё', 'Ж', 'Җ', 'З', 'И', 

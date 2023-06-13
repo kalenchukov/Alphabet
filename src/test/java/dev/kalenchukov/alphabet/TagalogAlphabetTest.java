@@ -37,7 +37,7 @@ public class TagalogAlphabetTest
 	@Test
 	public void get()
 	{
-		TagalogAlphabet alphabet = new TagalogAlphabet();
+		Alphabetical alphabet = new TagalogAlphabet();
 		List<Character> expectedList = List.of(
 			'ᜀ', 'ᜁ', 'ᜂ', 'ᜃ', 'ᜄ', 'ᜅ', 
 			'ᜆ', 'ᜇ', 'ᜈ', 'ᜉ', 'ᜊ', 'ᜋ', 

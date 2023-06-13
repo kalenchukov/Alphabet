@@ -37,7 +37,7 @@ public class NewTaiLueAlphabetTest
 	@Test
 	public void get()
 	{
-		NewTaiLueAlphabet alphabet = new NewTaiLueAlphabet();
+		Alphabetical alphabet = new NewTaiLueAlphabet();
 		List<Character> expectedList = List.of(
 			'ᦀ', 'ᦁ', 'ᦂ', 'ᦃ', 'ᦄ', 'ᦅ', 
 			'ᦆ', 'ᦇ', 'ᦈ', 'ᦉ', 'ᦊ', 'ᦋ', 

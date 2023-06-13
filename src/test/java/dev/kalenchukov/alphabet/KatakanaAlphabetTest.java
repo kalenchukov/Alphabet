@@ -37,7 +37,7 @@ public class KatakanaAlphabetTest
 	@Test
 	public void get()
 	{
-		KatakanaAlphabet alphabet = new KatakanaAlphabet();
+		Alphabetical alphabet = new KatakanaAlphabet();
 		List<Character> expectedList = List.of(
 			'ン', 'ワ', 'ラ', 'ヤ', 'マ', 'ハ', 
 			'ナ', 'タ', 'サ', 'カ', 'ア', 'リ', 

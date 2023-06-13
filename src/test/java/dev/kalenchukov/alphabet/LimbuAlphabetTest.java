@@ -37,7 +37,7 @@ public class LimbuAlphabetTest
 	@Test
 	public void get()
 	{
-		LimbuAlphabet alphabet = new LimbuAlphabet();
+		Alphabetical alphabet = new LimbuAlphabet();
 		List<Character> expectedList = List.of(
 			'ᤀ', 'ᤁ', 'ᤂ', 'ᤃ', 'ᤄ', 'ᤅ', 
 			'ᤆ', 'ᤇ', 'ᤈ', 'ᤉ', 'ᤊ', 'ᤋ', 

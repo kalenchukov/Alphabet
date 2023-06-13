@@ -37,7 +37,7 @@ public class TagbanwaAlphabetTest
 	@Test
 	public void get()
 	{
-		TagbanwaAlphabet alphabet = new TagbanwaAlphabet();
+		Alphabetical alphabet = new TagbanwaAlphabet();
 		List<Character> expectedList = List.of(
 			'ᝠ', 'ᝡ', 'ᝢ', 'ᝣ', 'ᝤ', 'ᝥ', 
 			'ᝦ', 'ᝧ', 'ᝨ', 'ᝩ', 'ᝪ', 'ᝫ', 

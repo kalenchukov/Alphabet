@@ -37,7 +37,7 @@ public class LisuAlphabetTest
 	@Test
 	public void get()
 	{
-		LisuAlphabet alphabet = new LisuAlphabet();
+		Alphabetical alphabet = new LisuAlphabet();
 		List<Character> expectedList = List.of(
 			'ꓐ', 'ꓑ', 'ꓒ', 'ꓓ', 'ꓔ', 'ꓕ', 
 			'ꓖ', 'ꓗ', 'ꓘ', 'ꓙ', 'ꓚ', 'ꓛ', 

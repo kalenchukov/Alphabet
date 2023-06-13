@@ -37,7 +37,7 @@ public class TatarAlphabetLowerCaseTest
 	@Test
 	public void get()
 	{
-		TatarAlphabet.LowerCase alphabet = new TatarAlphabet.LowerCase();
+		Alphabetical alphabet = new TatarAlphabet.LowerCase();
 		List<Character> expectedList = List.of(
 			'а', 'ә', 'б', 'в', 'г', 'д', 
 			'е', 'ё', 'ж', 'җ', 'з', 'и', 

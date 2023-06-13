@@ -37,7 +37,7 @@ public class InternationalPhoneticAlphabetUpperCaseTest
 	@Test
 	public void get()
 	{
-		InternationalPhoneticAlphabet.UpperCase alphabet = new InternationalPhoneticAlphabet.UpperCase();
+		Alphabetical alphabet = new InternationalPhoneticAlphabet.UpperCase();
 		List<Character> expectedList = List.of(
 			'ɢ', 'ɴ', 'ʙ', 'ʀ', 'ʁ', 'ʟ', 
 			'ɪ', 'ʏ', 'ɶ', 'ʛ', 'ʜ'

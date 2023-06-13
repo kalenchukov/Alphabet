@@ -37,7 +37,7 @@ public class TifinaghAlphabetTest
 	@Test
 	public void get()
 	{
-		TifinaghAlphabet alphabet = new TifinaghAlphabet();
+		Alphabetical alphabet = new TifinaghAlphabet();
 		List<Character> expectedList = List.of(
 			'ⴰ', 'ⴱ', 'ⴲ', 'ⴳ', 'ⴴ', 'ⴵ', 
 			'ⴶ', 'ⴷ', 'ⴸ', 'ⴹ', 'ⴺ', 'ⴻ', 

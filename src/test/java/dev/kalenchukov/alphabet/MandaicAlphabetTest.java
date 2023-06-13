@@ -37,7 +37,7 @@ public class MandaicAlphabetTest
 	@Test
 	public void get()
 	{
-		MandaicAlphabet alphabet = new MandaicAlphabet();
+		Alphabetical alphabet = new MandaicAlphabet();
 		List<Character> expectedList = List.of(
 			'ࡀ', 'ࡁ', 'ࡂ', 'ࡃ', 'ࡄ', 'ࡅ', 
 			'ࡆ', 'ࡇ', 'ࡈ', 'ࡉ', 'ࡊ', 'ࡋ', 

@@ -37,7 +37,7 @@ public class GreekAlphabetTest
 	@Test
 	public void get()
 	{
-		GreekAlphabet alphabet = new GreekAlphabet();
+		Alphabetical alphabet = new GreekAlphabet();
 		List<Character> expectedList = List.of(
 			'Α', 'α', 'Β', 'β', 'Γ', 'γ', 'Δ', 'δ', 'Ε', 'ε',
 			'Ζ', 'ζ', 'Η', 'η', 'Θ', 'θ', 'Ι', 'ι', 'Κ', 'κ',

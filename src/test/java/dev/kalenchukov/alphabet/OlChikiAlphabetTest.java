@@ -37,7 +37,7 @@ public class OlChikiAlphabetTest
 	@Test
 	public void get()
 	{
-		OlChikiAlphabet alphabet = new OlChikiAlphabet();
+		Alphabetical alphabet = new OlChikiAlphabet();
 		List<Character> expectedList = List.of(
 			'᱐', '᱑', '᱒', '᱓', '᱔', '᱕', 
 			'᱖', '᱗', '᱘', '᱙', 'ᱚ', 'ᱛ', 

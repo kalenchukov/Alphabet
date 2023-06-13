@@ -37,7 +37,7 @@ public class UkrainianAlphabetLowerCaseTest
 	@Test
 	public void get()
 	{
-		UkrainianAlphabet.LowerCase alphabet = new UkrainianAlphabet.LowerCase();
+		Alphabetical alphabet = new UkrainianAlphabet.LowerCase();
 		List<Character> expectedList = List.of(
 			'а', 'б', 'в', 'г', 'ґ', 'д', 
 			'е', 'є', 'ж', 'з', 'и', 'і', 

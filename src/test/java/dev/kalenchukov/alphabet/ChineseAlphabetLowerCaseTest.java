@@ -37,7 +37,7 @@ public class ChineseAlphabetLowerCaseTest
 	@Test
 	public void get()
 	{
-		ChineseAlphabet.LowerCase alphabet = new ChineseAlphabet.LowerCase();
+		Alphabetical alphabet = new ChineseAlphabet.LowerCase();
 		List<Character> expectedList = List.of(
 			'a', 'b', 'c', 'd', 'e', 'f', 
 			'g', 'h', 'i', 'j', 'k', 'l', 

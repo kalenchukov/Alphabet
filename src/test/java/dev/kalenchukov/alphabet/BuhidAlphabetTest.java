@@ -37,7 +37,7 @@ public class BuhidAlphabetTest
 	@Test
 	public void get()
 	{
-		BuhidAlphabet alphabet = new BuhidAlphabet();
+		Alphabetical alphabet = new BuhidAlphabet();
 		List<Character> expectedList = List.of(
 			'ᝀ', 'ᝁ', 'ᝂ', 'ᝃ', 'ᝄ', 'ᝅ', 
 			'ᝆ', 'ᝇ', 'ᝈ', 'ᝉ', 'ᝊ', 'ᝋ', 

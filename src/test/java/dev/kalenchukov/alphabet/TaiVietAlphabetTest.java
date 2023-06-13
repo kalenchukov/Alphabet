@@ -37,7 +37,7 @@ public class TaiVietAlphabetTest
 	@Test
 	public void get()
 	{
-		TaiVietAlphabet alphabet = new TaiVietAlphabet();
+		Alphabetical alphabet = new TaiVietAlphabet();
 		List<Character> expectedList = List.of(
 			'ꪀ', 'ꪁ', 'ꪂ', 'ꪃ', 'ꪄ', 'ꪅ', 
 			'ꪆ', 'ꪇ', 'ꪈ', 'ꪉ', 'ꪊ', 'ꪋ', 

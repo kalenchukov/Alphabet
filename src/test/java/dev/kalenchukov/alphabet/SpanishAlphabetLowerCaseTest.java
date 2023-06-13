@@ -37,7 +37,7 @@ public class SpanishAlphabetLowerCaseTest
 	@Test
 	public void get()
 	{
-		SpanishAlphabet.LowerCase alphabet = new SpanishAlphabet.LowerCase();
+		Alphabetical alphabet = new SpanishAlphabet.LowerCase();
 		List<Character> expectedList = List.of(
 			'a', 'b', 'c', 'd', 'e', 'f', 
 			'g', 'h', 'i', 'j', 'k', 'l', 

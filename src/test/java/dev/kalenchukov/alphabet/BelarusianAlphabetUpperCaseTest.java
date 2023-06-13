@@ -37,7 +37,7 @@ public class BelarusianAlphabetUpperCaseTest
 	@Test
 	public void get()
 	{
-		BelarusianAlphabet.UpperCase alphabet = new BelarusianAlphabet.UpperCase();
+		Alphabetical alphabet = new BelarusianAlphabet.UpperCase();
 		List<Character> expectedList = List.of(
 			'А', 'Б', 'В', 'Г', 'Д', 'Е', 'Ё', 'Ж', 'З',
 			'І', 'Й', 'К', 'Л', 'М', 'Н', 'О', 'П', 'Р',

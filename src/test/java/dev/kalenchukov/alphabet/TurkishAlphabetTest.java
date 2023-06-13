@@ -37,7 +37,7 @@ public class TurkishAlphabetTest
 	@Test
 	public void get()
 	{
-		TurkishAlphabet alphabet = new TurkishAlphabet();
+		Alphabetical alphabet = new TurkishAlphabet();
 		List<Character> expectedList = List.of(
 			'A', 'a', 'B', 'b', 'C', 'c', 
 			'Ç', 'ç', 'D', 'd', 'E', 'e', 

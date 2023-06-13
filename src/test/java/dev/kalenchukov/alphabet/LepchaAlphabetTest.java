@@ -37,7 +37,7 @@ public class LepchaAlphabetTest
 	@Test
 	public void get()
 	{
-		LepchaAlphabet alphabet = new LepchaAlphabet();
+		Alphabetical alphabet = new LepchaAlphabet();
 		List<Character> expectedList = List.of(
 			'ᰀ', 'ᰁ', 'ᰂ', 'ᰃ', 'ᰄ', 'ᰅ', 
 			'ᰆ', 'ᰇ', 'ᰈ', 'ᰉ', 'ᰊ', 'ᰋ', 

@@ -37,7 +37,7 @@ public class HebrewAlphabetTest
 	@Test
 	public void get()
 	{
-		HebrewAlphabet alphabet = new HebrewAlphabet();
+		Alphabetical alphabet = new HebrewAlphabet();
 		List<Character> expectedList = List.of(
 			'א', 'ב', 'ג', 'ד', 'ה', 'ו', 
 			'ז', 'ח', 'ט', 'י', 'כ', 'ך', 

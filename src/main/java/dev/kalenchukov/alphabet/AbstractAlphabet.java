@@ -512,9 +512,9 @@ public abstract class AbstractAlphabet implements Alphabetical
 			return false;
 		}
 
-		final Alphabetical alphabetical = (Alphabetical) obj;
+		final Alphabetical alphabet = (Alphabetical) obj;
 
-		if (!Objects.equals(this.get(), alphabetical.get())) {
+		if (!Objects.equals(this.get(), alphabet.get())) {
 			return false;
 		}
 

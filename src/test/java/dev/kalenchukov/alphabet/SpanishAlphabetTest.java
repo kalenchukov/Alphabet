@@ -37,7 +37,7 @@ public class SpanishAlphabetTest
 	@Test
 	public void get()
 	{
-		SpanishAlphabet alphabet = new SpanishAlphabet();
+		Alphabetical alphabet = new SpanishAlphabet();
 		List<Character> expectedList = List.of(
 			'A', 'a', 'B', 'b', 'C', 'c', 
 			'D', 'd', 'E', 'e', 'F', 'f', 

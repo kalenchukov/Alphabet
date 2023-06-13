@@ -37,7 +37,7 @@ public class ItalianAlphabetTest
 	@Test
 	public void get()
 	{
-		ItalianAlphabet alphabet = new ItalianAlphabet();
+		Alphabetical alphabet = new ItalianAlphabet();
 		List<Character> expectedList = List.of(
 			'A', 'a', 'B', 'b', 'C', 'c', 
 			'D', 'd', 'E', 'e', 'F', 'f', 

@@ -37,7 +37,7 @@ public class BulgarianAlphabetTest
 	@Test
 	public void get()
 	{
-		BulgarianAlphabet alphabet = new BulgarianAlphabet();
+		Alphabetical alphabet = new BulgarianAlphabet();
 		List<Character> expectedList = List.of(
 			'А', 'а', 'Б', 'б', 'В', 'в', 
 			'Г', 'г', 'Д', 'д', 'Е', 'е', 

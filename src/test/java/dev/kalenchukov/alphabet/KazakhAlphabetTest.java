@@ -37,7 +37,7 @@ public class KazakhAlphabetTest
 	@Test
 	public void get()
 	{
-		KazakhAlphabet alphabet = new KazakhAlphabet();
+		Alphabetical alphabet = new KazakhAlphabet();
 		List<Character> expectedList = List.of(
 			'А', 'а', 'Ә', 'ә', 'Б', 'б', 
 			'В', 'в', 'Г', 'г', 'Ғ', 'ғ', 

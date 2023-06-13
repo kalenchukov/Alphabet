@@ -37,7 +37,7 @@ public class LaoAlphabetTest
 	@Test
 	public void get()
 	{
-		LaoAlphabet alphabet = new LaoAlphabet();
+		Alphabetical alphabet = new LaoAlphabet();
 		List<Character> expectedList = List.of(
 			'ກ', 'ຂ', 'ຄ', 'ງ', 'ຈ', 'ສ', 
 			'ຊ', 'ຍ', 'ດ', 'ຕ', 'ຖ', 'ທ', 

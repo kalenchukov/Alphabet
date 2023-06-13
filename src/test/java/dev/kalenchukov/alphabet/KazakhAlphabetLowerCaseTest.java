@@ -37,7 +37,7 @@ public class KazakhAlphabetLowerCaseTest
 	@Test
 	public void get()
 	{
-		KazakhAlphabet.LowerCase alphabet = new KazakhAlphabet.LowerCase();
+		Alphabetical alphabet = new KazakhAlphabet.LowerCase();
 		List<Character> expectedList = List.of(
 			'а', 'ә', 'б', 'в', 'г', 'ғ', 
 			'д', 'е', 'ё', 'ж', 'з', 'и', 

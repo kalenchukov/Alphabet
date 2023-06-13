@@ -37,7 +37,7 @@ public class GreekAlphabetLowerCaseTest
 	@Test
 	public void get()
 	{
-		GreekAlphabet.LowerCase alphabet = new GreekAlphabet.LowerCase();
+		Alphabetical alphabet = new GreekAlphabet.LowerCase();
 		List<Character> expectedList = List.of(
 			'α', 'β', 'γ', 'δ', 'ε', 'ζ', 'η', 'θ', 'ι',
 			'κ', 'λ', 'μ', 'ν', 'ξ', 'ο', 'π', 'ρ', 'σ',

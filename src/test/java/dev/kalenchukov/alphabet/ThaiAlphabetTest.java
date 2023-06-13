@@ -37,7 +37,7 @@ public class ThaiAlphabetTest
 	@Test
 	public void get()
 	{
-		ThaiAlphabet alphabet = new ThaiAlphabet();
+		Alphabetical alphabet = new ThaiAlphabet();
 		List<Character> expectedList = List.of(
 			'ก', 'ข', 'ฃ', 'ค', 'ฅ', 'ฆ', 
 			'ง', 'จ', 'ฉ', 'ช', 'ซ', 'ฌ', 

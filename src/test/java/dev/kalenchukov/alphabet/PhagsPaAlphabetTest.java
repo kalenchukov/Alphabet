@@ -37,7 +37,7 @@ public class PhagsPaAlphabetTest
 	@Test
 	public void get()
 	{
-		PhagsPaAlphabet alphabet = new PhagsPaAlphabet();
+		Alphabetical alphabet = new PhagsPaAlphabet();
 		List<Character> expectedList = List.of(
 			'ꡀ', 'ꡁ', 'ꡂ', 'ꡃ', 'ꡄ', 'ꡅ', 
 			'ꡆ', 'ꡇ', 'ꡈ', 'ꡉ', 'ꡊ', 'ꡋ', 

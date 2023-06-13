@@ -37,7 +37,7 @@ public class SundaneseAlphabetTest
 	@Test
 	public void get()
 	{
-		SundaneseAlphabet alphabet = new SundaneseAlphabet();
+		Alphabetical alphabet = new SundaneseAlphabet();
 		List<Character> expectedList = List.of(
 			'ᮃ', 'ᮄ', 'ᮅ', 'ᮆ', 'ᮇ', 'ᮈ', 
 			'ᮉ', 'ᮊ', 'ᮋ', 'ᮌ', 'ᮍ', 'ᮎ', 

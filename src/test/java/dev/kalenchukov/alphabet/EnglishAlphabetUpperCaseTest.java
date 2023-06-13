@@ -37,7 +37,7 @@ public class EnglishAlphabetUpperCaseTest
 	@Test
 	public void get()
 	{
-		EnglishAlphabet.UpperCase alphabet = new EnglishAlphabet.UpperCase();
+		Alphabetical alphabet = new EnglishAlphabet.UpperCase();
 		List<Character> expectedList = List.of(
 			'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I',
 			'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R',

@@ -37,7 +37,7 @@ public class CherokeeAlphabetTest
 	@Test
 	public void get()
 	{
-		CherokeeAlphabet alphabet = new CherokeeAlphabet();
+		Alphabetical alphabet = new CherokeeAlphabet();
 		List<Character> expectedList = List.of(
 			'Ꭰ', 'Ꭱ', 'Ꭲ', 'Ꭳ', 'Ꭴ', 'Ꭵ', 
 			'Ꭶ', 'Ꭷ', 'Ꭸ', 'Ꭹ', 'Ꭺ', 'Ꭻ', 

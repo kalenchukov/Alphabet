@@ -37,7 +37,7 @@ public class GujaratiAlphabetTest
 	@Test
 	public void get()
 	{
-		GujaratiAlphabet alphabet = new GujaratiAlphabet();
+		Alphabetical alphabet = new GujaratiAlphabet();
 		List<Character> expectedList = List.of(
 			'ક', 'ખ', 'ગ', 'ઘ', 'ઙ', 'ચ', 
 			'છ', 'જ', 'ઝ', 'ઞ', 'ટ', 'ઠ', 

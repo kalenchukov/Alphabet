@@ -37,7 +37,7 @@ public class HanunooAlphabetTest
 	@Test
 	public void get()
 	{
-		HanunooAlphabet alphabet = new HanunooAlphabet();
+		Alphabetical alphabet = new HanunooAlphabet();
 		List<Character> expectedList = List.of(
 			'ᜠ', 'ᜡ', 'ᜢ', 'ᜣ', 'ᜤ', 'ᜥ', 
 			'ᜦ', 'ᜧ', 'ᜨ', 'ᜩ', 'ᜪ', 'ᜫ', 

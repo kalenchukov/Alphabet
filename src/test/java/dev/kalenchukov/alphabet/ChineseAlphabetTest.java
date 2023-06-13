@@ -37,7 +37,7 @@ public class ChineseAlphabetTest
 	@Test
 	public void get()
 	{
-		ChineseAlphabet alphabet = new ChineseAlphabet();
+		Alphabetical alphabet = new ChineseAlphabet();
 		List<Character> expectedList = List.of(
 			'A', 'a', 'B', 'b', 'C', 'c', 
 			'D', 'd', 'E', 'e', 'F', 'f', 

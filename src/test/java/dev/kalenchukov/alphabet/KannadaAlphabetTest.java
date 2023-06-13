@@ -37,7 +37,7 @@ public class KannadaAlphabetTest
 	@Test
 	public void get()
 	{
-		KannadaAlphabet alphabet = new KannadaAlphabet();
+		Alphabetical alphabet = new KannadaAlphabet();
 		List<Character> expectedList = List.of(
 			'ಅ', 'ಆ', 'ಇ', 'ಈ', 'ಉ', 'ಊ', 
 			'ಋ', 'ೠ', 'ಎ', 'ಏ', 'ಐ', 'ಒ', 

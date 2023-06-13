@@ -37,7 +37,7 @@ public class BugineseAlphabetTest
 	@Test
 	public void get()
 	{
-		BugineseAlphabet alphabet = new BugineseAlphabet();
+		Alphabetical alphabet = new BugineseAlphabet();
 		List<Character> expectedList = List.of(
 			'ᨀ', 'ᨁ', 'ᨂ', 'ᨃ', 'ᨄ', 'ᨅ', 
 			'ᨆ', 'ᨇ', 'ᨈ', 'ᨉ', 'ᨊ', 'ᨋ', 

@@ -37,7 +37,7 @@ public class SylotiNagriAlphabetTest
 	@Test
 	public void get()
 	{
-		SylotiNagriAlphabet alphabet = new SylotiNagriAlphabet();
+		Alphabetical alphabet = new SylotiNagriAlphabet();
 		List<Character> expectedList = List.of(
 			'ꠀ', 'ꠁ', 'ꠂ', 'ꠃ', 'ꠄ', 'ꠅ', 
 			'꠆', 'ꠇ', 'ꠈ', 'ꠉ', 'ꠊ', 'ꠋ', 

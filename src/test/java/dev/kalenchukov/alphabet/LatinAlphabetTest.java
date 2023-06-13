@@ -37,7 +37,7 @@ public class LatinAlphabetTest
 	@Test
 	public void get()
 	{
-		LatinAlphabet alphabet = new LatinAlphabet();
+		Alphabetical alphabet = new LatinAlphabet();
 		List<Character> expectedList = List.of(
 			'A', 'a', 'B', 'b', 'C', 'c', 
 			'D', 'd', 'E', 'e', 'F', 'f', 

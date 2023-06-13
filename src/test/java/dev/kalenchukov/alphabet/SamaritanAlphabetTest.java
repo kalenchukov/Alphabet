@@ -37,7 +37,7 @@ public class SamaritanAlphabetTest
 	@Test
 	public void get()
 	{
-		SamaritanAlphabet alphabet = new SamaritanAlphabet();
+		Alphabetical alphabet = new SamaritanAlphabet();
 		List<Character> expectedList = List.of(
 			'ࠀ', 'ࠁ', 'ࠂ', 'ࠃ', 'ࠄ', 'ࠅ', 
 			'ࠆ', 'ࠇ', 'ࠈ', 'ࠉ', 'ࠊ', 'ࠋ', 

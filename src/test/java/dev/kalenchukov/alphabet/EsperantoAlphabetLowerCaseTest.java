@@ -37,7 +37,7 @@ public class EsperantoAlphabetLowerCaseTest
 	@Test
 	public void get()
 	{
-		EsperantoAlphabet.LowerCase alphabet = new EsperantoAlphabet.LowerCase();
+		Alphabetical alphabet = new EsperantoAlphabet.LowerCase();
 		List<Character> expectedList = List.of(
 			'a', 'b', 'c', 'ĉ', 'd', 'e', 
 			'f', 'g', 'ĝ', 'h', 'ĥ', 'i', 
