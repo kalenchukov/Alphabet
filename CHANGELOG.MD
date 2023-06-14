@@ -4,7 +4,8 @@
 * Добавлен модуль assertj-core версии 3.24.2.
 
 ### Изменено
-* Переименован метод Alphabetical.get() -> Alphabetical.toList()
+* Переименован метод Alphabetical.get() -> Alphabetical.toList().
+* Переименован метод Alphabetical.get(Integer, Integer) -> Alphabetical.toList(Integer, Integer).
 
 ### Исправлено
 *

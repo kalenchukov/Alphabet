@@ -171,10 +171,10 @@ public class AbstractAlphabetTest
 	}
 
 	/**
-	 * Проверка метода {@link AbstractAlphabet#get(Integer, Integer)}.
+	 * Проверка метода {@link AbstractAlphabet#toList(Integer, Integer)}.
 	 */
 	@Test
-	public void getRange()
+	public void toListRange()
 	{
 		Alphabetical alphabet = new RussianAlphabet();
 		List<Character> expectedList = List.of(
@@ -184,47 +184,47 @@ public class AbstractAlphabetTest
 			'О', 'о', 'П'
 		);
 
-		List<Character> actualList = alphabet.get(1, 33);
+		List<Character> actualList = alphabet.toList(1, 33);
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
 
 	/**
-	 * Проверка метода {@link AbstractAlphabet#get(Integer, Integer)} c выходом за минимальную границу.
+	 * Проверка метода {@link AbstractAlphabet#toList(Integer, Integer)} c выходом за минимальную границу.
 	 */
 	@Test
-	public void getRangeOutOfBoundsMin()
+	public void toListRangeOutOfBoundsMin()
 	{
 		Alphabetical alphabet = new RussianAlphabet();
 
 		assertThatExceptionOfType(IndexOutOfBoundsException.class).isThrownBy(() -> {
-			alphabet.get(0, 33);
+			alphabet.toList(0, 33);
 		});
 	}
 
 	/**
-	 * Проверка метода {@link AbstractAlphabet#get(Integer, Integer)}c выходом за максимальную границу.
+	 * Проверка метода {@link AbstractAlphabet#toList(Integer, Integer)}c выходом за максимальную границу.
 	 */
 	@Test
-	public void getRangeOutOfBoundsMax()
+	public void toListRangeOutOfBoundsMax()
 	{
 		Alphabetical alphabet = new RussianAlphabet();
 
 		assertThatExceptionOfType(IndexOutOfBoundsException.class).isThrownBy(() -> {
-			alphabet.get(1, 67);
+			alphabet.toList(1, 67);
 		});
 	}
 
 	/**
-	 * Проверка метода {@link AbstractAlphabet#get(Integer, Integer)} с инвертированной границей.
+	 * Проверка метода {@link AbstractAlphabet#toList(Integer, Integer)} с инвертированной границей.
 	 */
 	@Test
-	public void getRangeInversion()
+	public void toListRangeInversion()
 	{
 		Alphabetical alphabet = new RussianAlphabet();
 
 		assertThatExceptionOfType(IllegalArgumentException.class).isThrownBy(() -> {
-			alphabet.get(33, 20);
+			alphabet.toList(33, 20);
 		});
 	}
 	/**

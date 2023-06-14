@@ -34,20 +34,6 @@ import java.util.Map;
 public interface Alphabetical
 {
 	/**
-	 * Возвращает срез букв алфавита.
-	 *
-	 * @param from начальная позиция букв в алфавите.
-	 * @param to конечная позиция букв в алфавите.
-	 * @return коллекция из среза букв алфавита.
-	 * @throws IllegalArgumentException если начальная позиция {@code from} больше {@code to}.
-	 * @throws IndexOutOfBoundsException если позиция {@code from} или {@code to} выходят за пределы алфавита.
-	 */
-	@Unmodifiable
-	@NotNull
-	List<@NotNull Character> get(@NotNull @Range(from = 1, to = Integer.MAX_VALUE) Integer from,
-								 @NotNull @Range(from = 1, to = Integer.MAX_VALUE) Integer to);
-
-	/**
 	 * Возвращает букву алфавита.
 	 *
 	 * @param position позиция буквы в алфавите.
@@ -207,9 +193,23 @@ public interface Alphabetical
 	List<@NotNull Character> toList();
 
 	/**
+	 * Возвращает коллекцию из среза букв алфавита.
+	 *
+	 * @param from начальная позиция букв в алфавите.
+	 * @param to конечная позиция букв в алфавите.
+	 * @return коллекция из среза букв алфавита.
+	 * @throws IllegalArgumentException если начальная позиция {@code from} больше {@code to}.
+	 * @throws IndexOutOfBoundsException если позиция {@code from} или {@code to} выходят за пределы алфавита.
+	 */
+	@Unmodifiable
+	@NotNull
+	List<@NotNull Character> toList(@NotNull @Range(from = 1, to = Integer.MAX_VALUE) Integer from,
+									@NotNull @Range(from = 1, to = Integer.MAX_VALUE) Integer to);
+
+	/**
 	 * Возвращает массив из букв алфавита.
 	 *
-	 * @return массив букв алфавита..
+	 * @return массив букв алфавита.
 	 */
 	@NotNull
 	Character @NotNull [] toArray();

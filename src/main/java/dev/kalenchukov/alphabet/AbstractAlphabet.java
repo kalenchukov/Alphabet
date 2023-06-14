@@ -72,8 +72,8 @@ public abstract class AbstractAlphabet implements Alphabetical
 	@Unmodifiable
 	@NotNull
 	@Override
-	public List<@NotNull Character> get(@NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer from,
-										@NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer to)
+	public List<@NotNull Character> toList(@NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer from,
+										   @NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer to)
 	{
 		Objects.requireNonNull(from);
 		Objects.requireNonNull(to);

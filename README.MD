@@ -135,10 +135,10 @@ alphabet.toList();
 RussianAlphabet.LETTERS;
 ```
 
-#### Получение среза букв алфавита
+#### Получение среза букв алфавита в виде коллекции
 ```java
 Alphabetical alphabet = new RussianAlphabet();
-alphabet.get(1, 3);
+alphabet.toList(1, 3);
 ```
 
 Результат выполнения:
