@@ -57,7 +57,7 @@ public abstract class AbstractAlphabet implements Alphabetical
 	@Unmodifiable
 	@NotNull
 	@Override
-	public List<@NotNull Character> get()
+	public List<@NotNull Character> toList()
 	{
 		return Collections.unmodifiableList(this.letters);
 	}
@@ -514,7 +514,7 @@ public abstract class AbstractAlphabet implements Alphabetical
 
 		final Alphabetical alphabet = (Alphabetical) obj;
 
-		if (!Objects.equals(this.get(), alphabet.get())) {
+		if (!Objects.equals(this.toList(), alphabet.toList())) {
 			return false;
 		}
 
@@ -529,7 +529,7 @@ public abstract class AbstractAlphabet implements Alphabetical
 	@Override
 	public int hashCode()
 	{
-		return this.get().hashCode();
+		return this.toList().hashCode();
 	}
 
 	/**

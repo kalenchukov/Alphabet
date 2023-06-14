@@ -32,10 +32,10 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class CopticAlphabetTest
 {
 	/**
-	 * Проверка метода {@link CopticAlphabet#get()}.
+	 * Проверка метода {@link CopticAlphabet#toList()}.
 	 */
 	@Test
-	public void get()
+	public void toList()
 	{
 		Alphabetical alphabet = new CopticAlphabet();
 		List<Character> expectedList = List.of(
@@ -57,7 +57,7 @@ public class CopticAlphabetTest
 			'Ⳛ', 'ⳛ'
 		);
 
-		List<Character> actualList = alphabet.get();
+		List<Character> actualList = alphabet.toList();
 
 		assertThat(actualList).containsSequence(expectedList);
 	}

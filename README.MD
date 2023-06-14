@@ -112,10 +112,10 @@ new RussianAlphabet.LowerCase();
 ```
 
 ### Буквы алфавита
-#### Получение букв алфавита
+#### Получение букв алфавита в виде коллекции
 ```java
 Alphabetical alphabet = new RussianAlphabet();
-alphabet.get();
+alphabet.toList();
 ```
 
 Результат выполнения:

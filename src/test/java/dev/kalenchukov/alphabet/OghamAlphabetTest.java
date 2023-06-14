@@ -32,10 +32,10 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class OghamAlphabetTest
 {
 	/**
-	 * Проверка метода {@link OghamAlphabet#get()}.
+	 * Проверка метода {@link OghamAlphabet#toList()}.
 	 */
 	@Test
-	public void get()
+	public void toList()
 	{
 		Alphabetical alphabet = new OghamAlphabet();
 		List<Character> expectedList = List.of(
@@ -46,7 +46,7 @@ public class OghamAlphabetTest
 			'ᚘ', 'ᚙ', 'ᚚ', '᚛', '᚜'
 		);
 
-		List<Character> actualList = alphabet.get();
+		List<Character> actualList = alphabet.toList();
 
 		assertThat(actualList).containsSequence(expectedList);
 	}

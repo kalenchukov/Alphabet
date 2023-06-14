@@ -34,15 +34,6 @@ import java.util.Map;
 public interface Alphabetical
 {
 	/**
-	 * Возвращает буквы алфавита.
-	 *
-	 * @return коллекция букв алфавита.
-	 */
-	@Unmodifiable
-	@NotNull
-	List<@NotNull Character> get();
-
-	/**
 	 * Возвращает срез букв алфавита.
 	 *
 	 * @param from начальная позиция букв в алфавите.
@@ -207,9 +198,18 @@ public interface Alphabetical
 	boolean isSortedDesc(@NotNull String string);
 
 	/**
+	 * Возвращает коллекция из букв алфавита.
+	 *
+	 * @return коллекция букв алфавита.
+	 */
+	@Unmodifiable
+	@NotNull
+	List<@NotNull Character> toList();
+
+	/**
 	 * Возвращает массив из букв алфавита.
 	 *
-	 * @return массив.
+	 * @return массив букв алфавита..
 	 */
 	@NotNull
 	Character @NotNull [] toArray();

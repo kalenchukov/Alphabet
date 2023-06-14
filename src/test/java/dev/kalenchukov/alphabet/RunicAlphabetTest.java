@@ -32,10 +32,10 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class RunicAlphabetTest
 {
 	/**
-	 * Проверка метода {@link RunicAlphabet#get()}.
+	 * Проверка метода {@link RunicAlphabet#toList()}.
 	 */
 	@Test
-	public void get()
+	public void toList()
 	{
 		Alphabetical alphabet = new RunicAlphabet();
 		List<Character> expectedList = List.of(
@@ -56,7 +56,7 @@ public class RunicAlphabetTest
 			'ᛴ', 'ᛵ', 'ᛶ', 'ᛷ', 'ᛸ'
 		);
 
-		List<Character> actualList = alphabet.get();
+		List<Character> actualList = alphabet.toList();
 
 		assertThat(actualList).containsSequence(expectedList);
 	}

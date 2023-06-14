@@ -32,10 +32,10 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class EsperantoAlphabetUpperCaseTest
 {
 	/**
-	 * Проверка метода {@link EsperantoAlphabet.UpperCase#get()}.
+	 * Проверка метода {@link EsperantoAlphabet.UpperCase#toList()}.
 	 */
 	@Test
-	public void get()
+	public void toList()
 	{
 		Alphabetical alphabet = new EsperantoAlphabet.UpperCase();
 		List<Character> expectedList = List.of(
@@ -46,7 +46,7 @@ public class EsperantoAlphabetUpperCaseTest
 			'U', 'Ŭ', 'V', 'Z'
 		);
 
-		List<Character> actualList = alphabet.get();
+		List<Character> actualList = alphabet.toList();
 
 		assertThat(actualList).containsSequence(expectedList);
 	}

@@ -32,10 +32,10 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class InternationalPhoneticAlphabetLowerCaseTest
 {
 	/**
-	 * Проверка метода {@link InternationalPhoneticAlphabet.LowerCase#get()}.
+	 * Проверка метода {@link InternationalPhoneticAlphabet.LowerCase#toList()}.
 	 */
 	@Test
-	public void get()
+	public void toList()
 	{
 		Alphabetical alphabet = new InternationalPhoneticAlphabet.LowerCase();
 		List<Character> expectedList = List.of(
@@ -62,7 +62,7 @@ public class InternationalPhoneticAlphabetLowerCaseTest
 			'ʩ', 'ʪ', 'ʫ', 'ʮ', 'ʯ'
 		);
 
-		List<Character> actualList = alphabet.get();
+		List<Character> actualList = alphabet.toList();
 
 		assertThat(actualList).containsSequence(expectedList);
 	}

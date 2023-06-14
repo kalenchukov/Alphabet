@@ -32,10 +32,10 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class EnglishAlphabetLowerCaseTest
 {
 	/**
-	 * Проверка метода {@link EnglishAlphabet.LowerCase#get()}.
+	 * Проверка метода {@link EnglishAlphabet.LowerCase#toList()}.
 	 */
 	@Test
-	public void get()
+	public void toList()
 	{
 		Alphabetical alphabet = new EnglishAlphabet.LowerCase();
 		List<Character> expectedList = List.of(
@@ -44,7 +44,7 @@ public class EnglishAlphabetLowerCaseTest
 			's', 't', 'u', 'v', 'w', 'x', 'y', 'z'
 		);
 
-		List<Character> actualList = alphabet.get();
+		List<Character> actualList = alphabet.toList();
 
 		assertThat(actualList).containsSequence(expectedList);
 	}

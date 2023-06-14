@@ -32,10 +32,10 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class GreekAlphabetLowerCaseTest
 {
 	/**
-	 * Проверка метода {@link GreekAlphabet.LowerCase#get()}.
+	 * Проверка метода {@link GreekAlphabet.LowerCase#toList()}.
 	 */
 	@Test
-	public void get()
+	public void toList()
 	{
 		Alphabetical alphabet = new GreekAlphabet.LowerCase();
 		List<Character> expectedList = List.of(
@@ -44,7 +44,7 @@ public class GreekAlphabetLowerCaseTest
 			'ς', 'τ', 'υ', 'φ', 'χ', 'ψ', 'ω'
 		);
 
-		List<Character> actualList = alphabet.get();
+		List<Character> actualList = alphabet.toList();
 
 		assertThat(actualList).containsSequence(expectedList);
 	}

@@ -32,10 +32,10 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class ChamAlphabetTest
 {
 	/**
-	 * Проверка метода {@link ChamAlphabet#get()}.
+	 * Проверка метода {@link ChamAlphabet#toList()}.
 	 */
 	@Test
-	public void get()
+	public void toList()
 	{
 		Alphabetical alphabet = new ChamAlphabet();
 		List<Character> expectedList = List.of(
@@ -53,7 +53,7 @@ public class ChamAlphabetTest
 			'ꩋ', 'ꩌ', 'ꩍ'
 		);
 
-		List<Character> actualList = alphabet.get();
+		List<Character> actualList = alphabet.toList();
 
 		assertThat(actualList).containsSequence(expectedList);
 	}

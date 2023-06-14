@@ -32,10 +32,10 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class PhagsPaAlphabetTest
 {
 	/**
-	 * Проверка метода {@link PhagsPaAlphabet#get()}.
+	 * Проверка метода {@link PhagsPaAlphabet#toList()}.
 	 */
 	@Test
-	public void get()
+	public void toList()
 	{
 		Alphabetical alphabet = new PhagsPaAlphabet();
 		List<Character> expectedList = List.of(
@@ -51,7 +51,7 @@ public class PhagsPaAlphabetTest
 			'꡶', '꡷'
 		);
 
-		List<Character> actualList = alphabet.get();
+		List<Character> actualList = alphabet.toList();
 
 		assertThat(actualList).containsSequence(expectedList);
 	}

@@ -32,10 +32,10 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class CopticAlphabetLowerCaseTest
 {
 	/**
-	 * Проверка метода {@link CopticAlphabet.LowerCase#get()}.
+	 * Проверка метода {@link CopticAlphabet.LowerCase#toList()}.
 	 */
 	@Test
-	public void get()
+	public void toList()
 	{
 		Alphabetical alphabet = new CopticAlphabet.LowerCase();
 		List<Character> expectedList = List.of(
@@ -49,7 +49,7 @@ public class CopticAlphabetLowerCaseTest
 			'ⳕ', 'ⳗ', 'ⳙ', 'ⳛ'
 		);
 
-		List<Character> actualList = alphabet.get();
+		List<Character> actualList = alphabet.toList();
 
 		assertThat(actualList).containsSequence(expectedList);
 	}

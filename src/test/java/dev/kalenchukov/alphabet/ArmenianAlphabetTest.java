@@ -32,10 +32,10 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class ArmenianAlphabetTest
 {
 	/**
-	 * Проверка метода {@link ArmenianAlphabet#get()}.
+	 * Проверка метода {@link ArmenianAlphabet#toList()}.
 	 */
 	@Test
-	public void get()
+	public void toList()
 	{
 		Alphabetical alphabet = new ArmenianAlphabet();
 		List<Character> expectedList = List.of(
@@ -54,7 +54,7 @@ public class ArmenianAlphabetTest
 			'Օ', 'օ', 'Ֆ', 'ֆ'
 		);
 
-		List<Character> actualList = alphabet.get();
+		List<Character> actualList = alphabet.toList();
 
 		assertThat(actualList).containsSequence(expectedList);
 	}

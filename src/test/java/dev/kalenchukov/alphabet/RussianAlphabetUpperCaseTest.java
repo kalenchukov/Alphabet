@@ -32,10 +32,10 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class RussianAlphabetUpperCaseTest
 {
 	/**
-	 * Проверка метода {@link RussianAlphabet.UpperCase#get()}.
+	 * Проверка метода {@link RussianAlphabet.UpperCase#toList()}.
 	 */
 	@Test
-	public void get()
+	public void toList()
 	{
 		Alphabetical alphabet = new RussianAlphabet.UpperCase();
 		List<Character> expectedList = List.of(
@@ -45,7 +45,7 @@ public class RussianAlphabetUpperCaseTest
 			'Ъ', 'Ы', 'Ь', 'Э', 'Ю', 'Я'
 		);
 
-		List<Character> actualList = alphabet.get();
+		List<Character> actualList = alphabet.toList();
 
 		assertThat(actualList).containsSequence(expectedList);
 	}

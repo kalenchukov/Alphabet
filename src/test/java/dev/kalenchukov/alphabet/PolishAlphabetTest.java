@@ -32,10 +32,10 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class PolishAlphabetTest
 {
 	/**
-	 * Проверка метода {@link PolishAlphabet#get()}.
+	 * Проверка метода {@link PolishAlphabet#toList()}.
 	 */
 	@Test
-	public void get()
+	public void toList()
 	{
 		Alphabetical alphabet = new PolishAlphabet();
 		List<Character> expectedList = List.of(
@@ -52,7 +52,7 @@ public class PolishAlphabetTest
 			'Ź', 'ź', 'Ż', 'ż'
 		);
 
-		List<Character> actualList = alphabet.get();
+		List<Character> actualList = alphabet.toList();
 
 		assertThat(actualList).containsSequence(expectedList);
 	}

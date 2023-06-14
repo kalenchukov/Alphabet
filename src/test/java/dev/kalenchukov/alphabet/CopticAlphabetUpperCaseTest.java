@@ -32,10 +32,10 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class CopticAlphabetUpperCaseTest
 {
 	/**
-	 * Проверка метода {@link CopticAlphabet.UpperCase#get()}.
+	 * Проверка метода {@link CopticAlphabet.UpperCase#toList()}.
 	 */
 	@Test
-	public void get()
+	public void toList()
 	{
 		Alphabetical alphabet = new CopticAlphabet.UpperCase();
 		List<Character> expectedList = List.of(
@@ -49,7 +49,7 @@ public class CopticAlphabetUpperCaseTest
 			'Ⳕ', 'Ⳗ', 'Ⳙ', 'Ⳛ'
 		);
 
-		List<Character> actualList = alphabet.get();
+		List<Character> actualList = alphabet.toList();
 
 		assertThat(actualList).containsSequence(expectedList);
 	}

@@ -32,10 +32,10 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class LisuAlphabetTest
 {
 	/**
-	 * Проверка метода {@link LisuAlphabet#get()}.
+	 * Проверка метода {@link LisuAlphabet#toList()}.
 	 */
 	@Test
-	public void get()
+	public void toList()
 	{
 		Alphabetical alphabet = new LisuAlphabet();
 		List<Character> expectedList = List.of(
@@ -48,7 +48,7 @@ public class LisuAlphabetTest
 			'ꓴ', 'ꓵ', 'ꓶ', 'ꓷ'
 		);
 
-		List<Character> actualList = alphabet.get();
+		List<Character> actualList = alphabet.toList();
 
 		assertThat(actualList).containsSequence(expectedList);
 	}

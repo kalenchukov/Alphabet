@@ -32,10 +32,10 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class InternationalPhoneticAlphabetUpperCaseTest
 {
 	/**
-	 * Проверка метода {@link InternationalPhoneticAlphabet.UpperCase#get()}.
+	 * Проверка метода {@link InternationalPhoneticAlphabet.UpperCase#toList()}.
 	 */
 	@Test
-	public void get()
+	public void toList()
 	{
 		Alphabetical alphabet = new InternationalPhoneticAlphabet.UpperCase();
 		List<Character> expectedList = List.of(
@@ -43,7 +43,7 @@ public class InternationalPhoneticAlphabetUpperCaseTest
 			'ɪ', 'ʏ', 'ɶ', 'ʛ', 'ʜ'
 		);
 
-		List<Character> actualList = alphabet.get();
+		List<Character> actualList = alphabet.toList();
 
 		assertThat(actualList).containsSequence(expectedList);
 	}

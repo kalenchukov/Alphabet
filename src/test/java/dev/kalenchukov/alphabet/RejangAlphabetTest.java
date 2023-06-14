@@ -32,10 +32,10 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class RejangAlphabetTest
 {
 	/**
-	 * Проверка метода {@link RejangAlphabet#get()}.
+	 * Проверка метода {@link RejangAlphabet#toList()}.
 	 */
 	@Test
-	public void get()
+	public void toList()
 	{
 		Alphabetical alphabet = new RejangAlphabet();
 		List<Character> expectedList = List.of(
@@ -48,7 +48,7 @@ public class RejangAlphabetTest
 			'꥟'
 		);
 
-		List<Character> actualList = alphabet.get();
+		List<Character> actualList = alphabet.toList();
 
 		assertThat(actualList).containsSequence(expectedList);
 	}

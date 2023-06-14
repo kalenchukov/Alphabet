@@ -32,10 +32,10 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class GreekAlphabetTest
 {
 	/**
-	 * Проверка метода {@link GreekAlphabet#get()}.
+	 * Проверка метода {@link GreekAlphabet#toList()}.
 	 */
 	@Test
-	public void get()
+	public void toList()
 	{
 		Alphabetical alphabet = new GreekAlphabet();
 		List<Character> expectedList = List.of(
@@ -46,7 +46,7 @@ public class GreekAlphabetTest
 			'υ', 'Φ', 'φ', 'Χ', 'χ', 'Ψ', 'ψ', 'Ω', 'ω'
 		);
 
-		List<Character> actualList = alphabet.get();
+		List<Character> actualList = alphabet.toList();
 
 		assertThat(actualList).containsSequence(expectedList);
 	}

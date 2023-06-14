@@ -32,10 +32,10 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class YiSyllablesAlphabetTest
 {
 	/**
-	 * Проверка метода {@link YiSyllablesAlphabet#get()}.
+	 * Проверка метода {@link YiSyllablesAlphabet#toList()}.
 	 */
 	@Test
-	public void get()
+	public void toList()
 	{
 		Alphabetical alphabet = new YiSyllablesAlphabet();
 		List<Character> expectedList = List.of(
@@ -215,7 +215,7 @@ public class YiSyllablesAlphabetTest
 			'ꐎ', 'ꐏ'
 		);
 
-		List<Character> actualList = alphabet.get();
+		List<Character> actualList = alphabet.toList();
 
 		assertThat(actualList).containsSequence(expectedList);
 	}

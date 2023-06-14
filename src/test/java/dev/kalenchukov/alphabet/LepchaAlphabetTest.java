@@ -32,10 +32,10 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class LepchaAlphabetTest
 {
 	/**
-	 * Проверка метода {@link LepchaAlphabet#get()}.
+	 * Проверка метода {@link LepchaAlphabet#toList()}.
 	 */
 	@Test
-	public void get()
+	public void toList()
 	{
 		Alphabetical alphabet = new LepchaAlphabet();
 		List<Character> expectedList = List.of(
@@ -51,7 +51,7 @@ public class LepchaAlphabetTest
 			'ᰶ', '᰷', 'ᱍ', 'ᱎ', 'ᱏ'
 		);
 
-		List<Character> actualList = alphabet.get();
+		List<Character> actualList = alphabet.toList();
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
