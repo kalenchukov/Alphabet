@@ -98,20 +98,20 @@ public interface Alphabetical
 	/**
 	 * Возвращает строку в которой удалены все символы не принадлежащие алфавиту.
 	 *
-	 * @param value строка.
+	 * @param string строка.
 	 * @return строку.
 	 */
 	@NotNull
-	String clearMismatches(@NotNull String value);
+	String clearMismatches(@NotNull String string);
 
 	/**
 	 * Возвращает строку в которой удалены все символы принадлежащие алфавиту.
 	 *
-	 * @param value строка.
+	 * @param string строка.
 	 * @return строку.
 	 */
 	@NotNull
-	String clearMatches(@NotNull String value);
+	String clearMatches(@NotNull String string);
 
 	/**
 	 * Подсчитывает количество вхождений каждой буквы в строку.

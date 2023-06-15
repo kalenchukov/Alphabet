@@ -149,7 +149,7 @@ public abstract class AbstractAlphabet implements Alphabetical
 			return false;
 		}
 
-		return Arrays.stream(this.stringToArrayCharacter(string))
+		return Arrays.stream(Stringi.toCharArray(string))
 					 .allMatch(this.letters::contains);
 	}
 
@@ -168,7 +168,7 @@ public abstract class AbstractAlphabet implements Alphabetical
 			return false;
 		}
 
-		return Arrays.stream(this.stringToArrayCharacter(string))
+		return Arrays.stream(Stringi.toCharArray(string))
 					 .anyMatch(this.letters::contains);
 	}
 
@@ -187,7 +187,7 @@ public abstract class AbstractAlphabet implements Alphabetical
 			return false;
 		}
 
-		return Arrays.stream(this.stringToArrayCharacter(string))
+		return Arrays.stream(Stringi.toCharArray(string))
 					 .noneMatch(this.letters::contains);
 	}
 
@@ -301,43 +301,43 @@ public abstract class AbstractAlphabet implements Alphabetical
 	/**
 	 * {@inheritDoc}
 	 *
-	 * @param value {@inheritDoc}
+	 * @param string {@inheritDoc}
 	 * @return {@inheritDoc}
 	 */
 	@NotNull
 	@Override
-	public String clearMismatches(@NotNull final String value)
+	public String clearMismatches(@NotNull final String string)
 	{
-		StringBuilder string = new StringBuilder();
+		StringBuilder newString = new StringBuilder();
 
-		Stream.of(this.stringToArrayCharacter(value)).forEach(character -> {
+		Stream.of(Stringi.toCharArray(string)).forEach(character -> {
 			if (this.letters.contains(character)) {
-				string.append(character);
+				newString.append(character);
 			}
 		});
 
-		return string.toString();
+		return newString.toString();
 	}
 
 	/**
 	 * {@inheritDoc}
 	 *
-	 * @param value {@inheritDoc}
+	 * @param string {@inheritDoc}
 	 * @return {@inheritDoc}
 	 */
 	@NotNull
 	@Override
-	public String clearMatches(@NotNull final String value)
+	public String clearMatches(@NotNull final String string)
 	{
-		StringBuilder string = new StringBuilder();
+		StringBuilder newString = new StringBuilder();
 
-		Stream.of(this.stringToArrayCharacter(value)).forEach(character -> {
+		Stream.of(Stringi.toCharArray(string)).forEach(character -> {
 			if (!this.letters.contains(character)) {
-				string.append(character);
+				newString.append(character);
 			}
 		});
 
-		return string.toString();
+		return newString.toString();
 	}
 
 	/**
@@ -354,7 +354,7 @@ public abstract class AbstractAlphabet implements Alphabetical
 
 		this.letters.forEach(letter -> statistics.put(letter, 0));
 
-		Arrays.stream(this.stringToArrayCharacter(string))
+		Arrays.stream(Stringi.toCharArray(string))
 			  .forEach(symbol -> {
 					if (statistics.containsKey(symbol)) {
 						statistics.put(symbol, statistics.get(symbol) + 1);
@@ -520,19 +520,5 @@ public abstract class AbstractAlphabet implements Alphabetical
 	public int hashCode()
 	{
 		return this.toList().hashCode();
-	}
-
-	/**
-	 * Преобразовывает строку в массив символов.
-	 *
-	 * @param string строка.
-	 * @return массив символов.
-	 */
-	@NotNull
-	private Character @NotNull [] stringToArrayCharacter(@NotNull final String string)
-	{
-		return string.chars()
-					 .mapToObj(i -> (char) i)
-					 .toArray(Character[]::new);
 	}
 }
