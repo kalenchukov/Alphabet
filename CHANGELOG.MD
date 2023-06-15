@@ -2,6 +2,7 @@
 ## vX.X.X - XX.XX.XXXX
 ### Добавлено
 * Добавлен модуль assertj-core версии 3.24.2.
+* Добавлен модуль stringi версии 1.5.0.
 
 ### Изменено
 * Переименован метод Alphabetical.get() -> Alphabetical.toList().

@@ -18,6 +18,7 @@
 
 package dev.kalenchukov.alphabet;
 
+import dev.kalenchukov.stringi.Stringi;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jetbrains.annotations.Range;
@@ -469,18 +470,7 @@ public abstract class AbstractAlphabet implements Alphabetical
 	@NotNull
 	public String toString(@NotNull final String separator)
 	{
-		StringBuilder string = new StringBuilder();
-
-		for (int index = 0; index < this.letters.size(); index++)
-		{
-			string.append(this.letters.get(index));
-
-			if (index != this.letters.size() - 1) {
-				string.append(separator);
-			}
-		}
-
-		return string.toString();
+		return Stringi.glue(this.letters, separator);
 	}
 
 	/**
