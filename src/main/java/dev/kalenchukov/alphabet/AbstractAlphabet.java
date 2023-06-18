@@ -68,19 +68,15 @@ public abstract class AbstractAlphabet implements Alphabetical
 	 *
 	 * @param from {@inheritDoc}
 	 * @param to {@inheritDoc}
+	 * @return {@inheritDoc}
 	 * @throws IllegalArgumentException если начальная позиция {@code from} больше {@code to}.
 	 * @throws IndexOutOfBoundsException если позиция {@code from} или {@code to} выходят за пределы алфавита.
-	 * @return {@inheritDoc}
 	 */
 	@Unmodifiable
 	@NotNull
 	@Override
-	public List<@NotNull Character> toList(@NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer from,
-										   @NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer to)
+	public List<@NotNull Character> toList(final int from, final int to)
 	{
-		Objects.requireNonNull(from);
-		Objects.requireNonNull(to);
-
 		if (from > to) {
 			throw new IllegalArgumentException();
 		}
@@ -100,10 +96,8 @@ public abstract class AbstractAlphabet implements Alphabetical
 	 */
 	@Nullable
 	@Override
-	public Character get(@NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer position)
+	public Character get(final int position)
 	{
-		Objects.requireNonNull(position);
-
 		try {
 			return this.letters.get(position - 1);
 		}
@@ -117,9 +111,8 @@ public abstract class AbstractAlphabet implements Alphabetical
 	 *
 	 * @return {@inheritDoc}
 	 */
-	@NotNull
 	@Override
-	public Character getFirst()
+	public char getFirst()
 	{
 		return this.letters.get(0);
 	}
@@ -129,9 +122,8 @@ public abstract class AbstractAlphabet implements Alphabetical
 	 *
 	 * @return {@inheritDoc}
 	 */
-	@NotNull
 	@Override
-	public Character getLast()
+	public char getLast()
 	{
 		return this.letters.get(this.letters.size() - 1);
 	}
@@ -200,7 +192,7 @@ public abstract class AbstractAlphabet implements Alphabetical
 	 * @return {@inheritDoc}
 	 */
 	@Override
-	public boolean contains(@NotNull final Character letter)
+	public boolean contains(final char letter)
 	{
 		Objects.requireNonNull(letter);
 
@@ -215,7 +207,7 @@ public abstract class AbstractAlphabet implements Alphabetical
 	 */
 	@Nullable
 	@Override
-	public Integer getPosition(@NotNull final Character letter)
+	public Integer getPosition(final char letter)
 	{
 		Objects.requireNonNull(letter);
 
@@ -283,10 +275,8 @@ public abstract class AbstractAlphabet implements Alphabetical
 	@Unmodifiable
 	@NotNull
 	@Override
-	public List<@NotNull Character> getRandom(@NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer count)
+	public List<@NotNull Character> getRandom(final int count)
 	{
-		Objects.requireNonNull(count);
-
 		List<Character> letters = new ArrayList<>(count);
 		Random random = new Random();
 

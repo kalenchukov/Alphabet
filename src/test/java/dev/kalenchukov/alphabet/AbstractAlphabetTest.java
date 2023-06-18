@@ -36,7 +36,7 @@ import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
 public class AbstractAlphabetTest
 {
 	/**
-	 * Класс проверки метода {@link AbstractAlphabet#toList(Integer, Integer)}.
+	 * Класс проверки метода {@link AbstractAlphabet#toList(int, int)}.
 	 *
 	 * @author Алексей Каленчуков
 	 */
@@ -44,7 +44,7 @@ public class AbstractAlphabetTest
 	public class ToList
 	{
 		/**
-		 * Проверка метода {@link AbstractAlphabet#toList(Integer, Integer)}.
+		 * Проверка метода {@link AbstractAlphabet#toList(int, int)}.
 		 */
 		@Test
 		public void toListRange()
@@ -62,7 +62,7 @@ public class AbstractAlphabetTest
 		}
 
 		/**
-		 * Проверка метода {@link AbstractAlphabet#toList(Integer, Integer)} c выходом за минимальную границу.
+		 * Проверка метода {@link AbstractAlphabet#toList(int, int)} с выходом за минимальную границу.
 		 */
 		@Test
 		public void toListRangeOutOfBoundsMin()
@@ -75,7 +75,7 @@ public class AbstractAlphabetTest
 		}
 
 		/**
-		 * Проверка метода {@link AbstractAlphabet#toList(Integer, Integer)}c выходом за максимальную границу.
+		 * Проверка метода {@link AbstractAlphabet#toList(int, int)}c выходом за максимальную границу.
 		 */
 		@Test
 		public void toListRangeOutOfBoundsMax()
@@ -88,7 +88,7 @@ public class AbstractAlphabetTest
 		}
 
 		/**
-		 * Проверка метода {@link AbstractAlphabet#toList(Integer, Integer)} с инвертированной границей.
+		 * Проверка метода {@link AbstractAlphabet#toList(int, int)} с инвертированной границей.
 		 */
 		@Test
 		public void toListRangeInversion()
@@ -102,7 +102,7 @@ public class AbstractAlphabetTest
 	}
 
 	/**
-	 * Класс проверки метода {@link AbstractAlphabet#getPosition(Character)}.
+	 * Класс проверки метода {@link AbstractAlphabet#getPosition(char)}.
 	 *
 	 * @author Алексей Каленчуков
 	 */
@@ -110,7 +110,7 @@ public class AbstractAlphabetTest
 	public class GetPosition
 	{
 		/**
-		 * Проверка метода {@link AbstractAlphabet#getPosition(Character)}.
+		 * Проверка метода {@link AbstractAlphabet#getPosition(char)}.
 		 */
 		@Test
 		public void getPositionByLetter()
@@ -123,7 +123,7 @@ public class AbstractAlphabetTest
 		}
 
 		/**
-		 * Проверка метода {@link AbstractAlphabet#getPosition(Character)} с некорректным значением.
+		 * Проверка метода {@link AbstractAlphabet#getPosition(char)} с некорректным значением.
 		 */
 		@Test
 		public void getPositionByLetterNotCorrect()
@@ -137,7 +137,7 @@ public class AbstractAlphabetTest
 	}
 
 	/**
-	 * Класс проверки метода {@link AbstractAlphabet#get(Integer)}.
+	 * Класс проверки метода {@link AbstractAlphabet#get(int)}.
 	 *
 	 * @author Алексей Каленчуков
 	 */
@@ -145,7 +145,7 @@ public class AbstractAlphabetTest
 	public class Get
 	{
 		/**
-		 * Проверка метода {@link AbstractAlphabet#get(Integer)}.
+		 * Проверка метода {@link AbstractAlphabet#get(int)}.
 		 */
 		@Test
 		public void get()
@@ -158,7 +158,7 @@ public class AbstractAlphabetTest
 		}
 
 		/**
-		 * Проверка метода {@link AbstractAlphabet#get(Integer)} с некорректным значением.
+		 * Проверка метода {@link AbstractAlphabet#get(int)} с некорректным значением.
 		 */
 		@Test
 		public void getNotCorrect()
@@ -241,7 +241,7 @@ public class AbstractAlphabetTest
 		{
 			Alphabetical alphabet = new RussianAlphabet();
 
-			boolean actual = alphabet.anyMatch("");
+			boolean actual = alphabet.anyMatch(value);
 
 			assertThat(actual).isFalse();
 		}
@@ -289,7 +289,7 @@ public class AbstractAlphabetTest
 	}
 
 	/**
-	 * Класс проверки метода {@link AbstractAlphabet#contains(Character)}.
+	 * Класс проверки метода {@link AbstractAlphabet#contains(char)}.
 	 *
 	 * @author Алексей Каленчуков
 	 */
@@ -297,7 +297,7 @@ public class AbstractAlphabetTest
 	public class Contains
 	{
 		/**
-		 * Проверка метода {@link AbstractAlphabet#contains(Character)}.
+		 * Проверка метода {@link AbstractAlphabet#contains(char)}.
 		 */
 		@Test
 		public void contains()
@@ -310,7 +310,7 @@ public class AbstractAlphabetTest
 		}
 
 		/**
-		 * Проверка метода {@link AbstractAlphabet#contains(Character)} с некорректным значением.
+		 * Проверка метода {@link AbstractAlphabet#contains(char)} с некорректным значением.
 		 */
 		@Test
 		public void containsNotCorrect()
@@ -694,7 +694,7 @@ public class AbstractAlphabetTest
 	}
 
 	/**
-	 * Проверка метода {@link AbstractAlphabet#getRandom(Integer)}.
+	 * Проверка метода {@link AbstractAlphabet#getRandom(int)}.
 	 */
 	@Test
 	public void getRandom()

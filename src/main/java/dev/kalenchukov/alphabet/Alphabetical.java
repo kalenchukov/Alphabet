@@ -20,7 +20,6 @@ package dev.kalenchukov.alphabet;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import org.jetbrains.annotations.Range;
 import org.jetbrains.annotations.Unmodifiable;
 
 import java.util.List;
@@ -40,23 +39,21 @@ public interface Alphabetical
 	 * @return буква алфавита или {@code null} если буквы в позиции нет.
 	 */
 	@Nullable
-	Character get(@NotNull @Range(from = 1, to = Integer.MAX_VALUE) Integer position);
+	Character get(int position);
 
 	/**
 	 * Возвращает первую букву алфавита.
 	 *
 	 * @return буква алфавита.
 	 */
-	@NotNull
-	Character getFirst();
+	char getFirst();
 
 	/**
 	 * Возвращает последнюю букву алфавита.
 	 *
 	 * @return буква алфавита.
 	 */
-	@NotNull
-	Character getLast();
+	char getLast();
 
 	/**
 	 * Возвращает буквы алфавита в обратном порядке.
@@ -84,7 +81,7 @@ public interface Alphabetical
 	 */
 	@Unmodifiable
 	@NotNull
-	List<@NotNull Character> getRandom(@NotNull @Range(from = 1, to = Integer.MAX_VALUE) Integer count);
+	List<@NotNull Character> getRandom(int count);
 
 	/**
 	 * Возвращает позицию буквы в алфавите.
@@ -93,7 +90,7 @@ public interface Alphabetical
 	 * @return позицию буквы в алфавите или {@code null} если буквы нет в алфавите.
 	 */
 	@Nullable
-	Integer getPosition(@NotNull Character letter);
+	Integer getPosition(char letter);
 
 	/**
 	 * Возвращает строку в которой удалены все символы не принадлежащие алфавиту.
@@ -156,7 +153,7 @@ public interface Alphabetical
 	 * @param letter буква.
 	 * @return {@code true}, если буква содержится в алфавите, иначе {@code false}.
 	 */
-	boolean contains(@NotNull Character letter);
+	boolean contains(char letter);
 
 	/**
 	 * Проверяет, расположены ли буквы в алфавитном порядке или обратном алфавитном порядке.
@@ -201,8 +198,7 @@ public interface Alphabetical
 	 */
 	@Unmodifiable
 	@NotNull
-	List<@NotNull Character> toList(@NotNull @Range(from = 1, to = Integer.MAX_VALUE) Integer from,
-									@NotNull @Range(from = 1, to = Integer.MAX_VALUE) Integer to);
+	List<@NotNull Character> toList(int from, int to);
 
 	/**
 	 * Возвращает массив из букв алфавита.
