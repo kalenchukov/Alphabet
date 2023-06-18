@@ -281,7 +281,7 @@ public abstract class AbstractAlphabet implements Alphabetical
 	@Unmodifiable
 	@NotNull
 	@Override
-	public List<@NotNull Character> getRandom(@NotNull @Range(from = 0, to = Integer.MAX_VALUE) final Integer count)
+	public List<@NotNull Character> getRandom(@NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer count)
 	{
 		Objects.requireNonNull(count);
 

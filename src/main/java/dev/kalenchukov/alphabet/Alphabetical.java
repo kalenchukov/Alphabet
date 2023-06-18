@@ -40,7 +40,7 @@ public interface Alphabetical
 	 * @return буква алфавита или {@code null} если буквы в позиции нет.
 	 */
 	@Nullable
-	Character get(@NotNull @Range(from = 0, to = Integer.MAX_VALUE) Integer position);
+	Character get(@NotNull @Range(from = 1, to = Integer.MAX_VALUE) Integer position);
 
 	/**
 	 * Возвращает первую букву алфавита.
@@ -84,7 +84,7 @@ public interface Alphabetical
 	 */
 	@Unmodifiable
 	@NotNull
-	List<@NotNull Character> getRandom(@NotNull @Range(from = 0, to = Integer.MAX_VALUE) Integer count);
+	List<@NotNull Character> getRandom(@NotNull @Range(from = 1, to = Integer.MAX_VALUE) Integer count);
 
 	/**
 	 * Возвращает позицию буквы в алфавите.
