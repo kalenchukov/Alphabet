@@ -68,6 +68,8 @@ public abstract class AbstractAlphabet implements Alphabetical
 	 *
 	 * @param from {@inheritDoc}
 	 * @param to {@inheritDoc}
+	 * @throws IllegalArgumentException если начальная позиция {@code from} больше {@code to}.
+	 * @throws IndexOutOfBoundsException если позиция {@code from} или {@code to} выходят за пределы алфавита.
 	 * @return {@inheritDoc}
 	 */
 	@Unmodifiable

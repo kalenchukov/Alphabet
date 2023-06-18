@@ -198,8 +198,6 @@ public interface Alphabetical
 	 * @param from начальная позиция букв в алфавите.
 	 * @param to конечная позиция букв в алфавите.
 	 * @return коллекция из среза букв алфавита.
-	 * @throws IllegalArgumentException если начальная позиция {@code from} больше {@code to}.
-	 * @throws IndexOutOfBoundsException если позиция {@code from} или {@code to} выходят за пределы алфавита.
 	 */
 	@Unmodifiable
 	@NotNull
