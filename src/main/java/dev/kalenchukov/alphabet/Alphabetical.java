@@ -127,7 +127,7 @@ public interface Alphabetical
 	 * Проверяет принадлежность всех букв алфавиту.
 	 *
 	 * @param string строка.
-	 * @return {@code true}, если все буквы принадлежат алфавиту, иначе {@code false}.
+	 * @return {@code true}, если все буквы из {@code string} принадлежат алфавиту, иначе {@code false}.
 	 */
 	boolean allMatch(@NotNull String string);
 
@@ -135,7 +135,7 @@ public interface Alphabetical
 	 * Проверяет принадлежность хотя бы одной буквы алфавиту.
 	 *
 	 * @param string строка.
-	 * @return {@code true}, если хотя бы одна буква принадлежит алфавиту, иначе {@code false}.
+	 * @return {@code true}, если хотя бы одна буква из {@code string} принадлежит алфавиту, иначе {@code false}.
 	 */
 	boolean anyMatch(@NotNull String string);
 
@@ -143,7 +143,7 @@ public interface Alphabetical
 	 * Проверяет не принадлежность всех букв алфавиту.
 	 *
 	 * @param string строка.
-	 * @return {@code true}, если все буквы не принадлежат алфавиту, иначе {@code false}.
+	 * @return {@code true}, если все буквы из {@code string} не принадлежат алфавиту, иначе {@code false}.
 	 */
 	boolean noneMatch(@NotNull String string);
 
@@ -151,7 +151,7 @@ public interface Alphabetical
 	 * Проверяет содержание буквы в алфавите.
 	 *
 	 * @param letter буква.
-	 * @return {@code true}, если буква содержится в алфавите, иначе {@code false}.
+	 * @return {@code true}, если буква {@code letter} содержится в алфавите, иначе {@code false}.
 	 */
 	boolean contains(char letter);
 
@@ -159,7 +159,7 @@ public interface Alphabetical
 	 * Проверяет, расположены ли буквы в алфавитном порядке или обратном алфавитном порядке.
 	 *
 	 * @param string строка.
-	 * @return {@code true}, если буквы расположены в алфавитном порядке или
+	 * @return {@code true}, если буквы из {@code string} расположены в алфавитном порядке или
 	 * обратном алфавитном порядке, иначе {@code false}.
 	 */
 	boolean isSorted(@NotNull String string);
@@ -168,7 +168,7 @@ public interface Alphabetical
 	 * Проверяет, расположены ли буквы в алфавитном порядке.
 	 *
 	 * @param string строка.
-	 * @return {@code true}, если буквы расположены в алфавитном порядке, иначе {@code false}.
+	 * @return {@code true}, если буквы из {@code string} расположены в алфавитном порядке, иначе {@code false}.
 	 */
 	boolean isSortedAsc(@NotNull String string);
 
@@ -176,7 +176,7 @@ public interface Alphabetical
 	 * Проверяет, расположены ли буквы в обратном алфавитном порядке.
 	 *
 	 * @param string строка.
-	 * @return {@code true}, если буквы расположены в обратном алфавитном порядке, иначе {@code false}.
+	 * @return {@code true}, если буквы из {@code string} расположены в обратном алфавитном порядке, иначе {@code false}.
 	 */
 	boolean isSortedDesc(@NotNull String string);
 
@@ -212,7 +212,7 @@ public interface Alphabetical
 	 * Проверяет равенство объектов.
 	 *
 	 * @param obj сравниваемый объект.
-	 * @return {@code true}, если объекты равны, иначе {@code false}.
+	 * @return {@code true}, если данный объект равен {@code obj}, иначе {@code false}.
 	 * @see Object#equals(Object)
 	 */
 	boolean equals(@Nullable Object obj);
