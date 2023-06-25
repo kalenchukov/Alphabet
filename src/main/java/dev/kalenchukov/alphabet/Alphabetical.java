@@ -36,7 +36,7 @@ public interface Alphabetical
 	 * Возвращает букву алфавита.
 	 *
 	 * @param position позиция буквы в алфавите.
-	 * @return буква алфавита или {@code null} если буквы в позиции нет.
+	 * @return буква алфавита или {@code null} если буквы в позиции {@code position} нет.
 	 */
 	@Nullable
 	Character get(int position);
