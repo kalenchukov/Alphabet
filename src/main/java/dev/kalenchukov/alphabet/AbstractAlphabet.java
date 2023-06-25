@@ -334,6 +334,7 @@ public abstract class AbstractAlphabet implements Alphabetical
 	 * @param string {@inheritDoc}
 	 * @return {@inheritDoc}
 	 */
+	@Unmodifiable
 	@NotNull
 	@Override
 	public Map<@NotNull Character, @NotNull Integer> statistics(@NotNull final String string)
@@ -349,7 +350,7 @@ public abstract class AbstractAlphabet implements Alphabetical
 					}
 			  });
 
-		return statistics;
+		return Collections.unmodifiableMap(statistics);
 	}
 
 	/**
