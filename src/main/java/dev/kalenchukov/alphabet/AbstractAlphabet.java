@@ -209,8 +209,6 @@ public abstract class AbstractAlphabet implements Alphabetical
 	@Override
 	public Integer getPosition(final char letter)
 	{
-		Objects.requireNonNull(letter);
-
 		if (this.letters.contains(letter)) {
 			return this.letters.indexOf(letter) + 1;
 		}
