@@ -36,6 +36,7 @@ public abstract class AbstractAlphabet implements Alphabetical
 	/**
 	 * Буквы алфавита.
 	 */
+	@Unmodifiable
 	@NotNull
 	private final List<@NotNull Character> letters;
 
@@ -59,7 +60,7 @@ public abstract class AbstractAlphabet implements Alphabetical
 	@Override
 	public List<@NotNull Character> toList()
 	{
-		return Collections.unmodifiableList(this.letters);
+		return this.letters;
 	}
 
 	/**
@@ -218,8 +219,8 @@ public abstract class AbstractAlphabet implements Alphabetical
 	 *
 	 * @return {@inheritDoc}
 	 */
-	@NotNull
 	@Unmodifiable
+	@NotNull
 	@Override
 	public List<@NotNull Character> getReverse()
 	{
@@ -237,8 +238,8 @@ public abstract class AbstractAlphabet implements Alphabetical
 	 *
 	 * @return {@inheritDoc}
 	 */
-	@NotNull
 	@Unmodifiable
+	@NotNull
 	@Override
 	public List<@NotNull Character> getShuffle()
 	{
