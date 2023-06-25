@@ -194,8 +194,6 @@ public abstract class AbstractAlphabet implements Alphabetical
 	@Override
 	public boolean contains(final char letter)
 	{
-		Objects.requireNonNull(letter);
-
 		return this.letters.contains(letter);
 	}
 
