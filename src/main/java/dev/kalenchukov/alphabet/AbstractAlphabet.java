@@ -44,6 +44,7 @@ public abstract class AbstractAlphabet implements Alphabetical
 	 * Конструктор для {@code AbstractAlphabet}.
 	 *
 	 * @param letters буквы алфавита.
+	 * @throws NullPointerException если в качестве {@code letters} передан {@code null}.
 	 */
 	protected AbstractAlphabet(@NotNull final List<@NotNull Character> letters)
 	{
@@ -70,7 +71,7 @@ public abstract class AbstractAlphabet implements Alphabetical
 	 * @param to {@inheritDoc}
 	 * @return {@inheritDoc}
 	 * @throws IllegalArgumentException если {@code from} больше {@code to}.
-	 * @throws IndexOutOfBoundsException если {@code from} или {@code to} выходят за пределы алфавита.
+	 * @throws IndexOutOfBoundsException если {@code from} или {@code to} выходят за пределы количества букв в алфавите.
 	 */
 	@Unmodifiable
 	@NotNull
@@ -133,6 +134,7 @@ public abstract class AbstractAlphabet implements Alphabetical
 	 *
 	 * @param string {@inheritDoc}
 	 * @return {@inheritDoc}
+	 * @throws NullPointerException если в качестве {@code string} передан {@code null}.
 	 */
 	@Override
 	public boolean allMatch(@NotNull final String string)
@@ -152,6 +154,7 @@ public abstract class AbstractAlphabet implements Alphabetical
 	 *
 	 * @param string {@inheritDoc}
 	 * @return {@inheritDoc}
+	 * @throws NullPointerException если в качестве {@code string} передан {@code null}.
 	 */
 	@Override
 	public boolean anyMatch(@NotNull final String string)
@@ -171,6 +174,7 @@ public abstract class AbstractAlphabet implements Alphabetical
 	 *
 	 * @param string {@inheritDoc}
 	 * @return {@inheritDoc}
+	 * @throws NullPointerException если в качестве {@code string} передан {@code null}.
 	 */
 	@Override
 	public boolean noneMatch(@NotNull final String string)
@@ -358,6 +362,7 @@ public abstract class AbstractAlphabet implements Alphabetical
 	 *
 	 * @param string {@inheritDoc}
 	 * @return {@inheritDoc}
+	 * @throws NullPointerException если в качестве {@code string} передан {@code null}.
 	 */
 	@Override
 	public boolean isSorted(@NotNull final String string)
@@ -372,6 +377,7 @@ public abstract class AbstractAlphabet implements Alphabetical
 	 *
 	 * @param string {@inheritDoc}
 	 * @return {@inheritDoc}
+	 * @throws NullPointerException если в качестве {@code string} передан {@code null}.
 	 */
 	@Override
 	public boolean isSortedAsc(@NotNull final String string)
@@ -407,6 +413,7 @@ public abstract class AbstractAlphabet implements Alphabetical
 	 *
 	 * @param string {@inheritDoc}
 	 * @return {@inheritDoc}
+	 * @throws NullPointerException если в качестве {@code string} передан {@code null}.
 	 */
 	@Override
 	public boolean isSortedDesc(@NotNull final String string)
