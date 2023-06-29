@@ -24,6 +24,7 @@ import org.jetbrains.annotations.Nullable;
 import org.jetbrains.annotations.Unmodifiable;
 
 import java.util.*;
+import java.util.concurrent.ThreadLocalRandom;
 import java.util.stream.Stream;
 
 /**
@@ -248,15 +249,12 @@ public abstract class AbstractAlphabet implements Alphabetical
 	public List<@NotNull Character> getShuffle()
 	{
 		final int coefficient = (int) (this.letters.size() * 2.5);
-
-		List<Character> letters = new ArrayList<>(this.letters);
-		Random random = new Random();
+		final List<Character> letters = new ArrayList<>(this.letters);
 
 		for (int iterationShuffle = 0; iterationShuffle < coefficient; iterationShuffle++)
 		{
-			int indexFrom = random.nextInt(this.letters.size());
-			int indexIn = random.nextInt(this.letters.size());
-
+			int indexFrom = ThreadLocalRandom.current().nextInt(this.letters.size());
+			int indexIn = ThreadLocalRandom.current().nextInt(this.letters.size());
 			final char charTemp = letters.get(indexIn);
 
 			letters.set(indexIn, letters.get(indexFrom));
