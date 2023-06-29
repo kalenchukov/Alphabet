@@ -275,12 +275,11 @@ public abstract class AbstractAlphabet implements Alphabetical
 	@Override
 	public List<@NotNull Character> getRandom(final int count)
 	{
-		List<Character> letters = new ArrayList<>(count);
-		Random random = new Random();
+		final List<Character> letters = new ArrayList<>(count);
 
 		for (int iteration = 1; iteration <= count; iteration++)
 		{
-			final int rnd = random.nextInt(this.letters.size()) + 1;
+			final int rnd = ThreadLocalRandom.current().nextInt(this.letters.size()) + 1;
 
 			letters.add(this.get(rnd));
 		}
