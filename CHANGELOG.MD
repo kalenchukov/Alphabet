@@ -8,6 +8,7 @@
 * Переименован метод Alphabetical.get() -> Alphabetical.toList().
 * Переименован метод Alphabetical.get(Integer, Integer) -> Alphabetical.toList(Integer, Integer).
 * Изменена версия требуемого модуля annotations до 24.0.1.
+* Изменена версия Java на 17.
 
 ### Исправлено
 *
