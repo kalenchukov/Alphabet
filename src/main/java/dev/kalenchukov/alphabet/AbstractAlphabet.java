@@ -253,12 +253,12 @@ public abstract class AbstractAlphabet implements Alphabetical
 
 		for (int iterationShuffle = 0; iterationShuffle < coefficient; iterationShuffle++)
 		{
-			int indexFrom = ThreadLocalRandom.current().nextInt(this.letters.size());
-			int indexIn = ThreadLocalRandom.current().nextInt(this.letters.size());
-			final char charTemp = letters.get(indexIn);
+			int rndIndexFrom = ThreadLocalRandom.current().nextInt(this.letters.size());
+			int rndIndexIn = ThreadLocalRandom.current().nextInt(this.letters.size());
+			final char charTemp = letters.get(rndIndexIn);
 
-			letters.set(indexIn, letters.get(indexFrom));
-			letters.set(indexFrom, charTemp);
+			letters.set(rndIndexIn, letters.get(rndIndexFrom));
+			letters.set(rndIndexFrom, charTemp);
 		}
 
 		return Collections.unmodifiableList(letters);
@@ -277,11 +277,9 @@ public abstract class AbstractAlphabet implements Alphabetical
 	{
 		final List<Character> letters = new ArrayList<>(count);
 
-		for (int iteration = 1; iteration <= count; iteration++)
-		{
-			final int rnd = ThreadLocalRandom.current().nextInt(this.letters.size()) + 1;
-
-			letters.add(this.get(rnd));
+		for (int i = 1; i <= count; i++) {
+			final int rndIndex = ThreadLocalRandom.current().nextInt(this.letters.size());
+			letters.add(this.get(rndIndex + 1));
 		}
 
 		return Collections.unmodifiableList(letters);
