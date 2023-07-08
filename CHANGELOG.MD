@@ -1,18 +1,9 @@
 # Журнал изменений
-## vX.X.X - XX.XX.XXXX
-### Добавлено
-*
-
+## v2.8.0 - 08.07.2023
 ### Изменено
 * Переименован метод Alphabetical.get() -> Alphabetical.toList().
 * Переименован метод Alphabetical.get(Integer, Integer) -> Alphabetical.toList(Integer, Integer).
 * Изменена версия Java на 17.
-
-### Исправлено
-*
-
-### Удалено
-*
 
 ## v2.7.0 - 14.05.2023
 ### Добавлено
