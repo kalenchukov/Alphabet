@@ -1,13 +1,11 @@
 # Журнал изменений
 ## vX.X.X - XX.XX.XXXX
 ### Добавлено
-* Добавлен модуль assertj-core версии 3.24.2.
-* Добавлен модуль stringi версии 1.5.0.
+*
 
 ### Изменено
 * Переименован метод Alphabetical.get() -> Alphabetical.toList().
 * Переименован метод Alphabetical.get(Integer, Integer) -> Alphabetical.toList(Integer, Integer).
-* Изменена версия требуемого модуля annotations до 24.0.1.
 * Изменена версия Java на 17.
 
 ### Исправлено
