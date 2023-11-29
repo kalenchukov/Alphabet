@@ -7,5 +7,5 @@ module dev.kalenchukov.alphabet
 	requires dev.kalenchukov.stringi;
 
 	exports dev.kalenchukov.alphabet;
-	exports dev.kalenchukov.alphabet.resources;
+	exports dev.kalenchukov.alphabet.types;
 }

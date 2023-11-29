@@ -19,4 +19,4 @@
 /**
  * Предоставляет перечисления, необходимые для определения типов.
  */
-package dev.kalenchukov.alphabet.resources;
+package dev.kalenchukov.alphabet.types;

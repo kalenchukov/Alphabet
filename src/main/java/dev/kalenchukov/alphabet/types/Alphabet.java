@@ -16,7 +16,7 @@
  * limitations under the License.
  */
 
-package dev.kalenchukov.alphabet.resources;
+package dev.kalenchukov.alphabet.types;
 
 import dev.kalenchukov.alphabet.*;
 import org.jetbrains.annotations.NotNull;

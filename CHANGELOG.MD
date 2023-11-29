@@ -1,4 +1,8 @@
 # Журнал изменений
+## vX.X.X - XX.XX.XXXX
+### Изменено
+* Переименован пакет resources -> types.
+
 ## v2.8.0 - 08.07.2023
 ### Изменено
 * Переименован метод Alphabetical.get() -> Alphabetical.toList().
